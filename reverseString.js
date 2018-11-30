@@ -7,15 +7,107 @@
 
 
 ///// USE CASES //////////////////////////////////////////////////////
-/// ...
+// One of the most frequently asked questions on technical interview round questions.
+// You might be asked to write down different ways to reverse a string, or reverse a string without using built-in methods, or use recursion.
+//
 
+
+///// EXAMPLE 1: BUILT-IN METHODS: 
+               
+                function reverseString1(string) {
+                    const array =  string.split('');
+                    array.reverse();
+                    return array.join('')
+                }
+
+
+
+///// EXAMPLE 2: CHAINING METHODS TOGETHER: 
+                
+                function reverseString2(string) {
+                    return string.split('').reverse().join('');
+                }
+
+
+
+///// EXAMPLE 3: DECREMENTING LOOP: 
+
+                function reverseString3(string) {
+                    let newString = '';
+                    for (let i = string.length - 1; i >= 0; i-- ) {
+                        newString += string[i];
+                    }
+                    return newString;
+                }
+
+
+///// EXAMPLE 4:   
+
+                function reverseString4(string) {
+                    let reversed = '';                   
+                    for (let character of string) {      
+                        reversed = character + reversed;
+                    }
+                    return reversed;
+                }
+
+
+///// EXAMPLE 5:
+
+                function reverseString5(string) {
+                    return [...string].reverse().join('');
+                }
+
+
+///// EXAMPLE 6:
+                function reverse6(string) {
+                    return string.split('').reduce((reversed, character) => {
+                        return character + reversed;
+                    }, '');
+                }
+
+
+///// EXAMPLE 7:
+                function reverseString7(string) {
+                    return string.split('').reduce((reversed, character) => character + reversed, '');
+                }
+
+
+////// EXAMPLE 8:
+
+                function reverseString(str) {
+                    if (str === "")
+                    return "";
+                    else
+                    return reverseString(str.substr(1)) + str.charAt(0);
+                }
+                reverseString("hello");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///// SOLUTIONS WITH COMMENTS ////////////////////////////////////////////////////////////////////////////////////////
 
 
 ///// SOLUTION 1 /////////////////////////////////////////////////////
 //
 /* 
 1. take string.
-2. wehat do i need to do to get to the end.
+2. what do i need to do to get to the end.
 
 last, i need it to be reversed.
 
@@ -38,13 +130,11 @@ function reverse2(string) {
 
 
 
-///// SOLUTION 3 /////////////////////////////////////////////////////
-    // for (let{variable of declaration} character{temporary variable that is redeclared EVERY time through the loop} of string{iterable object we want to iterate through})
-    // so we'll iterate through every character of string one by one and set each character equal to thie temporary variable "character".
-    // we then take that character and add it on to the start of the string reversed 
-    // then after the entire for loop, we reutrn reversed
+////// SOLUTION 3 /////////////////////////////////////////////////////
+    // 
 
 function reverse3(string) {
+//  STEP 1: Create an empty string that will host the new created string.
     let newString = '';
     for (let i = string.length - 1; i >= 0; i-- ) {
         newString += string[i];
@@ -55,7 +145,12 @@ function reverse3(string) {
 
 
 ///// SOLUTION 4 /////////////////////////////////////////////////////
-function reverse4(string) {
+    // for (let{variable of declaration} character{temporary variable that is redeclared EVERY time through the loop} of string{iterable object we want to iterate through})
+    // so we'll iterate through every character of string one by one and set each character equal to thie temporary variable "character".
+    // we then take that character and add it on to the start of the string reversed 
+    // then after the entire for loop, we reutrn reversed
+
+    function reverse4(string) {
     let reversed = '';                   // string that will be assembled over time
     for (let character of string) {      
         reversed = character + reversed;
@@ -95,11 +190,11 @@ function reverse7(string) {
 
 
 ///// Output //////////////////////////////////////////////////////////
-console.log(reverse1("hello"));
-console.log(reverse2("hello"));
-console.log(reverse3("hello"));
-console.log(reverse4("hello"));
-console.log(reverse5("hello"));
-console.log(reverse6("hello"));
-console.log(reverse7("hello"));
-
+console.log(reverseString1("hello"));
+console.log(reverseString2("hello"));
+console.log(reverseString3("hello"));
+console.log(reverseString4("hello"));
+console.log(reverseString5("hello"));
+console.log(reverseString6("hello"));
+console.log(reverseString7("hello"));
+console.log(reverseString8("hello"));
