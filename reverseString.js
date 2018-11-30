@@ -2,6 +2,8 @@
 // Question: Given a string, return a new string with a reverded order of characters.
 // Examples: reverse('hello') => 'olleh'
 
+// think interms of steps.
+
 
 
 ///// USE CASES //////////////////////////////////////////////////////
@@ -11,6 +13,16 @@
 
 ///// SOLUTION 1 /////////////////////////////////////////////////////
 //
+/* 
+1. take string.
+2. wehat do i need to do to get to the end.
+
+last, i need it to be reversed.
+
+
+
+*/
+
 function reverse1(string) {
     const array =  string.split('');
     array.reverse();
@@ -50,6 +62,7 @@ function reverse4(string) {
     }
     return reversed;
 }
+
 
 
 
