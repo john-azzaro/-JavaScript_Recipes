@@ -41,6 +41,7 @@
                 }
 
 
+
 ///// EXAMPLE 4:   
 
                 function reverseString4(string) {
@@ -52,6 +53,7 @@
                 }
 
 
+
 ///// EXAMPLE 5:
 
                 function reverseString5(string) {
@@ -59,29 +61,41 @@
                 }
 
 
+
 ///// EXAMPLE 6:
-                function reverse6(string) {
+
+                function reverseString6(string) {
                     return string.split('').reduce((reversed, character) => {
                         return character + reversed;
                     }, '');
                 }
 
 
+
 ///// EXAMPLE 7:
+
                 function reverseString7(string) {
                     return string.split('').reduce((reversed, character) => character + reversed, '');
                 }
 
 
+
 ////// EXAMPLE 8:
 
-                function reverseString(str) {
-                    if (str === "")
+                function reverseString8(string) {
+                    if (string === "")
                     return "";
                     else
-                    return reverseString(str.substr(1)) + str.charAt(0);
+                    return reverseString(string.substr(1)) + string.charAt(0);
                 }
-                reverseString("hello");
+
+                
+
+/////// EXAMPLE 9:
+
+                function reverseString9(string) {
+                    return (string === '') ? '' : reverseString(string.substr(1)) + string.charAt(0);
+                }
 
 
 
@@ -198,3 +212,4 @@ console.log(reverseString5("hello"));
 console.log(reverseString6("hello"));
 console.log(reverseString7("hello"));
 console.log(reverseString8("hello"));
+console.log(reverseString9("hello"));
