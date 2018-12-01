@@ -84,18 +84,19 @@
                 }
 
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///// SOLUTIONS WITH COMMENTS ////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 ///// Example 1 (comments):
 
                 function reverse1(string) {
-                    // Step 1: Use the split() method to return a new array, which results in  ["h", "e", "l", "l", "o"].
+                        // Step 1: Use the split() method to return a new array, which results in  ["h", "e", "l", "l", "o"].
                     const array =  string.split('');
-                    // Step 2: Use the reverse() method to reverse the new created array, which results in ["o", "l", "l", "e", "h"].
+                        // Step 2: Use the reverse() method to reverse the new created array, which results in ["o", "l", "l", "e", "h"].
                     array.reverse();
-                    // Step 3: Use the join() method to join all elements of the array into a string, which results in "olleh".
+                        // Step 3: Use the join() method to join all elements of the array into a string, which results in "olleh".
                     return array.join('')
                 }
 
@@ -104,7 +105,7 @@
 ///// Example 2 (comments):
 
                 function reverse2(string) {
-                    // STEP 1: Take the argument (i.e. string) and simply chain the methods you want.
+                        // STEP 1: Take the argument (i.e. string) and simply chain the methods you want.
                     return string.split('').reverse().join('');
                 }
 
@@ -113,28 +114,32 @@
 ///// Example 3 (comments):
 
                 function reverse3(string) {
-                    //  STEP 1: Create an empty string that will host the new created string.
-                        let newString = '';
-                        for (let i = string.length - 1; i >= 0; i-- ) {
-                            newString += string[i];
-                        }
-                        return newString;
-                    }        
+                        // STEP 1: Create an empty string that will host the new created string.
+                    let newString = '';
+                        // Step 2. Create the FOR loop
+                            // The starting point of the loop will be (str.length - 1) which corresponds to the last character of the string, "o".
+                            // As long as i is greater than or equals 0, the loop will go on.  
+                            // We decrement i after each iteration        
+                            /* Here hello's length equals 5
+                                For each iteration: i = str.length - 1 and newString = newString + str[i]
+                                    First iteration:    i = 5 - 1 = 4,         newString = "" + "o" = "o"
+                                    Second iteration:   i = 4 - 1 = 3,         newString = "o" + "l" = "ol"
+                                    Third iteration:    i = 3 - 1 = 2,         newString = "ol" + "l" = "oll"
+                                    Fourth iteration:   i = 2 - 1 = 1,         newString = "oll" + "e" = "olle"
+                                    Fifth iteration:    i = 1 - 1 = 0,         newString = "olle" + "h" = "olleh"
+                            End of the FOR Loop*/
+                    for (let i = string.length - 1; i >= 0; i-- ) {
+                        newString + string[i];
+                    }
+                        // Step 3. Return the reversed string
+                    return newString;
+                }
 
 
 
+////// Example 4 (comments):
 
-////// SOLUTION 3 /////////////////////////////////////////////////////
-    // 
 
-function reverse3(string) {
-//  STEP 1: Create an empty string that will host the new created string.
-    let newString = '';
-    for (let i = string.length - 1; i >= 0; i-- ) {
-        newString += string[i];
-    }
-    return newString;
-}
 
 
 
