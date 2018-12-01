@@ -2,7 +2,7 @@
 // Question: Given a string, return a new string with a reverded order of characters.
 // Examples: reverse('hello') => 'olleh'
 
-// think interms of steps.
+// think in terms of steps.
 
 
 
@@ -10,6 +10,11 @@
 // One of the most frequently asked questions on technical interview round questions.
 // You might be asked to write down different ways to reverse a string, or reverse a string without using built-in methods, or use recursion.
 //
+
+
+
+
+///// SOLUTIONS ///////////////////////////////////////////////////////
 
 
 ///// EXAMPLE 1: BUILT-IN METHODS: 
@@ -80,67 +85,33 @@
 
 
 
-////// EXAMPLE 8:
-
-                function reverseString8(string) {
-                    if (string === "")
-                    return "";
-                    else
-                    return reverseString(string.substr(1)) + string.charAt(0);
-                }
-
-                
-
-/////// EXAMPLE 9:
-
-                function reverseString9(string) {
-                    return (string === '') ? '' : reverseString(string.substr(1)) + string.charAt(0);
-                }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ///// SOLUTIONS WITH COMMENTS ////////////////////////////////////////////////////////////////////////////////////////
 
 
-///// SOLUTION 1 /////////////////////////////////////////////////////
-//
-/* 
-1. take string.
-2. what do i need to do to get to the end.
+///// Example 1 (comments):
 
-last, i need it to be reversed.
+                function reverse1(string) {
+                    // Step 1: Use the split() method to return a new array, which results in  ["h", "e", "l", "l", "o"].
+                    const array =  string.split('');
+                    // Step 2: Use the reverse() method to reverse the new created array, which results in ["o", "l", "l", "e", "h"].
+                    array.reverse();
+                    // Step 3: Use the join() method to join all elements of the array into a string, which results in "olleh".
+                    return array.join('')
+                }
 
 
 
-*/
+///// Example 2 (comments):
 
-function reverse1(string) {
-    const array =  string.split('');
-    array.reverse();
-    return array.join('')
-}
+                function reverse2(string) {
+                    // STEP 1: Take the argument (i.e. string) and simply chain the methods you want.
+                    return string.split('').reverse().join('');
+                }
 
 
 
 ///// SOLUTION 2 /////////////////////////////////////////////////////
-function reverse2(string) {
-    return string.split('').reverse().join('');
-}
+
 
 
 
@@ -204,12 +175,12 @@ function reverse7(string) {
 
 
 ///// Output //////////////////////////////////////////////////////////
-console.log(reverseString1("hello"));
-console.log(reverseString2("hello"));
-console.log(reverseString3("hello"));
-console.log(reverseString4("hello"));
-console.log(reverseString5("hello"));
-console.log(reverseString6("hello"));
-console.log(reverseString7("hello"));
-console.log(reverseString8("hello"));
-console.log(reverseString9("hello"));
+console.log(reverseString1("hello 1"));
+console.log(reverseString2("hello 2"));
+console.log(reverseString3("hello 3"));
+console.log(reverseString4("hello 4"));
+console.log(reverseString5("hello 5"));
+console.log(reverseString6("hello 6"));
+console.log(reverseString7("hello 7"));
+
+
