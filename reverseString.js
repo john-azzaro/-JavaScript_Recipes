@@ -110,7 +110,16 @@
 
 
 
-///// SOLUTION 2 /////////////////////////////////////////////////////
+///// Example 3 (comments):
+
+                function reverse3(string) {
+                    //  STEP 1: Create an empty string that will host the new created string.
+                        let newString = '';
+                        for (let i = string.length - 1; i >= 0; i-- ) {
+                            newString += string[i];
+                        }
+                        return newString;
+                    }        
 
 
 
@@ -129,16 +138,44 @@ function reverse3(string) {
 
 
 
+
+
+
+
+                    function reverse4(string) {
+    ///// STEP 1: Create a temporay variable called reverse and assign it an empty string.  
+    /////         This is the string that will be assembled over time as we iterate through the string.
+                        let reversed = '';
+    ///// STEP 2: Using a for loop, we take each character out of the original string and stick it in a new one, one at a time.
+    /////         This is saying: 
+    /////         1. "for",
+    /////         2.  Inside parentheses, create a temporary variable (i.e. "let character") that is redeclared every time through the loop.
+    /////         3. "if"
+    /////         4.  The iterable object we want to iterate through (i.e. "string").                                  
+                    for (let character of string) {      
+                    reversed = character + reversed;
+                    }
+                    return reversed;
+}
+
+
+
+
+
+
+
+
 ///// SOLUTION 4 /////////////////////////////////////////////////////
     // for (let{variable of declaration} character{temporary variable that is redeclared EVERY time through the loop} of string{iterable object we want to iterate through})
     // so we'll iterate through every character of string one by one and set each character equal to thie temporary variable "character".
     // we then take that character and add it on to the start of the string reversed 
     // then after the entire for loop, we reutrn reversed
 
-    function reverse4(string) {
+function reverse4(string) {
+    
     let reversed = '';                   // string that will be assembled over time
     for (let character of string) {      
-        reversed = character + reversed;
+    reversed = character + reversed;
     }
     return reversed;
 }
