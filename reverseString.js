@@ -9,7 +9,7 @@
 ///// USE CASES //////////////////////////////////////////////////////
 // One of the most frequently asked questions on technical interview round questions.
 // You might be asked to write down different ways to reverse a string, or reverse a string without using built-in methods, or use recursion.
-//
+
 
 
 
@@ -17,7 +17,7 @@
 ///// SOLUTIONS ///////////////////////////////////////////////////////
 
 
-///// EXAMPLE 1: BUILT-IN METHODS: 
+///// Solution 1: BUILT-IN METHODS: 
                
                 function reverseString1(string) {
                     const array =  string.split('');
@@ -27,7 +27,7 @@
 
 
 
-///// EXAMPLE 2: CHAINING METHODS TOGETHER: 
+///// Solution 2: CHAINING METHODS TOGETHER: 
                 
                 function reverseString2(string) {
                     return string.split('').reverse().join('');
@@ -35,7 +35,7 @@
 
 
 
-///// EXAMPLE 3: DECREMENTING LOOP: 
+///// Solution 3: DECREMENTING LOOP: 
 
                 function reverseString3(string) {
                     let newString = '';
@@ -47,7 +47,7 @@
 
 
 
-///// EXAMPLE 4:   
+///// Solution 4:   
 
                 function reverseString4(string) {
                     let reversed = '';                   
@@ -59,17 +59,9 @@
 
 
 
-///// EXAMPLE 5:
+///// Solution 5:
 
                 function reverseString5(string) {
-                    return [...string].reverse().join('');
-                }
-
-
-
-///// EXAMPLE 6:
-
-                function reverseString6(string) {
                     return string.split('').reduce((reversed, character) => {
                         return character + reversed;
                     }, '');
@@ -77,19 +69,33 @@
 
 
 
-///// EXAMPLE 7:
+///// Solution 6:
 
-                function reverseString7(string) {
+                function reverseString6(string) {
                     return string.split('').reduce((reversed, character) => character + reversed, '');
                 }
 
 
+
+///// Solution 7:
+
+                function reverseString7(string) {
+                    return [...string].reverse().join('');
+                }
+
+
+
+
+
+
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///// SOLUTIONS WITH COMMENTS ////////////////////////////////////////////////////////////////////////////////////////
+///// SOLUTIONS STEP-BY-STEP  ////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-///// Example 1 (comments):
+///// Solution 1: BUILT-IN METHODS (:
 
                 function reverse1(string) {
                         // Step 1: Use the split() method to return a new array, which results in  ["h", "e", "l", "l", "o"].
@@ -102,7 +108,7 @@
 
 
 
-///// Example 2 (comments):
+///// Solution 2 (comments):
 
                 function reverse2(string) {
                         // STEP 1: Take the argument (i.e. string) and simply chain the methods you want.
@@ -111,7 +117,7 @@
 
 
 
-///// Example 3 (comments):
+///// Solution 3 (comments):
 
                 function reverse3(string) {
                         // STEP 1: Create an empty string that will host the new created string.
@@ -137,7 +143,7 @@
 
 
 
-////// Example 4 (comments):
+////// Solution 4 (comments):
 
 
 
