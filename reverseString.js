@@ -125,8 +125,8 @@
                         // Step 2. Create the FOR loop
                             // The starting point of the loop will be (str.length - 1) which corresponds to the last character of the string, "o".
                             // As long as i is greater than or equals 0, the loop will go on.  
-                            // We decrement i after each iteration        
-                            /* Here hello's length equals 5
+                            // We decrement i after each iteration .       
+                            /* Here, hello's length equals 5.
                                 For each iteration: i = str.length - 1 and newString = newString + str[i]
                                     First iteration:    i = 5 - 1 = 4,         newString = "" + "o" = "o"
                                     Second iteration:   i = 4 - 1 = 3,         newString = "o" + "l" = "ol"
@@ -145,52 +145,23 @@
 
 ////// Solution 4 (comments):
 
-
-
-
-
-
-
-
-
-                    function reverse4(string) {
-    ///// STEP 1: Create a temporay variable called reverse and assign it an empty string.  
-    /////         This is the string that will be assembled over time as we iterate through the string.
-                        let reversed = '';
-    ///// STEP 2: Using a for loop, we take each character out of the original string and stick it in a new one, one at a time.
-    /////         This is saying: 
-    /////         1. "for",
-    /////         2.  Inside parentheses, create a temporary variable (i.e. "let character") that is redeclared every time through the loop.
-    /////         3. "if"
-    /////         4.  The iterable object we want to iterate through (i.e. "string").                                  
-                    for (let character of string) {      
+                function reverse4(string) {
+                        // STEP 1: Create a temporay variable called reverse and assign it an empty string.  
+                        // (This is the string that will be assembled over time as we iterate through the string).
+                    let reversed = '';
+                        // STEP 2: Using a for loop, we take each character out of the original string and stick it in a new one, one at a time.
+                        // This is saying: 
+                        // 1. "for"...
+                        // 2.  Inside parentheses, create a temporary variable (i.e. "let character") that is redeclared every time through the loop.
+                        // 3. "of"...
+                        // 4.  The iterable object we want to iterate through (i.e. "string") passed in as an argument.                                  
+                    for (let character of string) {  
+                        // STEP 3: In the body of the loop, we add "character" added on to the start of the string reversed.
                     reversed = character + reversed;
                     }
+                        // STEP 4: After the entire for loop, we return "reversed".
                     return reversed;
 }
-
-
-
-
-
-
-
-
-///// SOLUTION 4 /////////////////////////////////////////////////////
-    // for (let{variable of declaration} character{temporary variable that is redeclared EVERY time through the loop} of string{iterable object we want to iterate through})
-    // so we'll iterate through every character of string one by one and set each character equal to thie temporary variable "character".
-    // we then take that character and add it on to the start of the string reversed 
-    // then after the entire for loop, we reutrn reversed
-
-function reverse4(string) {
-    
-    let reversed = '';                   // string that will be assembled over time
-    for (let character of string) {      
-    reversed = character + reversed;
-    }
-    return reversed;
-}
-
 
 
 
