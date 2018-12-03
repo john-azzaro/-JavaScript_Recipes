@@ -166,6 +166,7 @@
 
 
 ///// SOLUTION 5 /////////////////////////////////////////////////////
+
 function reverse5(string) {
     return [...string].reverse().join('');
 }
@@ -173,8 +174,10 @@ function reverse5(string) {
 
 
 ///// SOLUTION 6 /////////////////////////////////////////////////////
+
 function reverse6(string) {
-    return string.split('').reduce((reversed, character) => {
+
+    return string.split('').reduce(function (reversed, character) {
         return character + reversed;
     }, '');
 }
@@ -182,15 +185,28 @@ function reverse6(string) {
 
 
 ///// SOLUTION 7 /////////////////////////////////////////////////////
+
+function reverse7(string) {
+        // STEP 1: Turn the string into an array (by calling split function on it).
+        // STEP 2: Then use Reduce Helper.
+        //         Reduce takes all the different values within an array and condense them down to a single string value.
+        //         Reduce takes two seperate arguments, the arrow function and starting intial value for our function which is an empty string.
+        // STEP 3: When reduce runs, it will take the starting argument (i.e. '') and then pass it into the arrow function as the first argument.
+        // STEP 4:  
+    return string.split('').reduce((reversed, character) => character + reversed, '');
+}
+
+
+
 // Reduce helper
 // STEP 1: string.split turns this into an array,
 // STEP 2: Then we set up the reduce helper function,
 //         Note on reduce: Reduce is used to take all the different values within an array and condense it down to one singular value.
 //         So what we're doing here is taking all the values in the array "string.split('')" and then condense (.reduce) to a single string value.
 // STEP 3: 
-function reverse7(string) {
-    return string.split('').reduce((reversed, character) => character + reversed, '');
-}
+
+
+
 
 
 ///// Output //////////////////////////////////////////////////////////
