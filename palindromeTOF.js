@@ -1,0 +1,1 @@
+// palindrome True or false

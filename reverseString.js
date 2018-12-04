@@ -1,14 +1,14 @@
 ///// THE PROBLEM ///////////////////////////////////////////////////
-// Question: Given a string, return a new string with a reverded order of characters.
-// Examples: reverse('hello') => 'olleh'
+//-- Question: Given a string, return a new string with a reverded order of characters.
+//-- Examples: reverse('hello') => 'olleh'
 
-// think in terms of steps.
+
 
 
 
 ///// USE CASES //////////////////////////////////////////////////////
-// One of the most frequently asked questions on technical interview round questions.
-// You might be asked to write down different ways to reverse a string, or reverse a string without using built-in methods, or use recursion.
+//-- One of the most frequently asked questions on technical interview round questions.
+//-- You might be asked to write down different ways to reverse a string, or reverse a string without using built-in methods, or use recursion.
 
 
 
