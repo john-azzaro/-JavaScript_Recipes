@@ -77,11 +77,11 @@
 
 
 
-///// Solution 7:
+// ///// Solution 7:
 
-                function reverseString7(string) {
-                    return [...string].reverse().join('');
-                }
+//                 function reverseString7(string) {
+//                     return [...string].reverse().join('');
+//                 }
 
 
 
@@ -176,7 +176,6 @@ function reverse5(string) {
 ///// SOLUTION 6 /////////////////////////////////////////////////////
 
 function reverse6(string) {
-
     return string.split('').reduce(function (reversed, character) {
         return character + reversed;
     }, '');
@@ -191,8 +190,8 @@ function reverse7(string) {
         // STEP 2: Then use Reduce Helper.
         //         Reduce takes all the different values within an array and condense them down to a single string value.
         //         Reduce takes two seperate arguments, the arrow function and starting intial value for our function which is an empty string.
-        // STEP 3: When reduce runs, it will take the starting argument (i.e. '') and then pass it into the arrow function as the first argument.
-        // STEP 4:  
+        // STEP 3: Reduce will cycle through each number in the array (like a for loop).
+        // STEP 4: 
     return string.split('').reduce((reversed, character) => character + reversed, '');
 }
 
