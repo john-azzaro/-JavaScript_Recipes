@@ -51,7 +51,7 @@
                                     first, we take the array and we would call the .every() function on it.
                                     second, we would pass in a function to invoke for every element within the array.
                         3. So the first time this function is executed, we pas in the first element as val (i.e. 0).
-                            in this case, 0 is not greater than 5, so it woudl return FALSE.
+                            In this case, 0 is not greater than 5, so it would return FALSE.
                             When the .every() function runs, it checks to see if the return value of .every() function.
                             If any function returns false then the overall expression will return false as well.
                             But if the inner function (i.e. the > sign) returns true for every element, then the entire function is true.
