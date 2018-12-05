@@ -1,5 +1,7 @@
 
-// palindrome True or false
+///// palindrome True or false /////////////////////////////////////////
+
+
 //-- Question: Given a string, return true if the string is a palindrome or false if it is not.
 //-- Palindromes are strings that form the same word if it is reversed.
 //-- Example: abba === true
@@ -10,9 +12,16 @@
 
 function palindrome(string) {
     const reversed = string.split('').reverse().join('');
+    return string === reversed;
 }
 
-console.log()
+
+
+
+
+///// Solutions with comments /////////////////////////////////////////
+
+
 
 
 function palindrome(string) {
@@ -26,5 +35,5 @@ function palindrome(string) {
     return string === reversed;
 }
 
-console.log(palindrome("abba"));
-console.log(palindrome("wakka"));
+console.log(palindrome("abba"));     // true
+console.log(palindrome("wakka"));    // false
