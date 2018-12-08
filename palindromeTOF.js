@@ -17,7 +17,9 @@
 
 
         function plaindrome2(string) {
+            string.split('').every(() => {
 
+            });
         }
 
 
@@ -34,6 +36,24 @@
                 // Now you need a direct comparison between the reverse of the string and the return result.  If the two are equal, great!  if not, then false. 
             return string === reversed;
         }
+
+
+
+        function plaindrome2(string) {
+            // STEP 1: Turn the string into an array.
+            // STEP 2: Then we call .every().
+            // STEP 3: The first argument that we pass to .every() is a function that will be called for every element in the array.
+            //         We will recieve the first argument to this function which is each character from the array as as an argument 
+            //         that will call "character".  Then, because we want to compare each element to its mirror on the other side,
+            //         we need to figure out how to get access to the other side of the array.  So as a second argument to this 
+            //         function, we are given the index of the element.  so the second argument of the function is the index of the element
+            //         we are currently iterating over which will record as "i".  The first time the inner function is called, i will be 
+            //         equal to zero because we are operating on the first element in the array
+            string.split('').every((character, i) => {
+                
+            });
+        }
+
 
 
 
