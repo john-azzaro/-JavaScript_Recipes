@@ -29,4 +29,4 @@ function tester(string) {
     }
     return reversed;
 }
-
+console.log(tester('this is a test'));
