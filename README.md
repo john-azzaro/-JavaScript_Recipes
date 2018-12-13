@@ -6,7 +6,7 @@ JavaScript Recipes are a collection of inetresting probelm solving tutorials, te
 
 * [For Loop Recipes](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/loops.js)
 
-## Problem Solving R
+## Problem Solving 
 
 * [Reverse String Recipes](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/reverseString.js)
 * [PalindromeTOF Recipes](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/palindromeTOF.js)
