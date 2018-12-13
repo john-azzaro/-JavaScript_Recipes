@@ -13,4 +13,4 @@
 * [Max Characters](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/maxCharacter.js)
 
 ## Methods
-* [Integer Reversal Recipes](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/integerReversal.js)
+* [Array Spread Operator](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/arraySpreadOperator.js)
