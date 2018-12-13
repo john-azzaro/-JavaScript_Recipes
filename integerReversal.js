@@ -50,7 +50,7 @@ Math.sign(-4000)  // returns -1
 
 
 
-// Trick 2: parseInt ////////////////////////////////////////////////////////////
+// Trick 2 & 3: parseInt and toString ////////////////////////////////////////////////////////////
 
 // When using the toString() to turn a number into a string using a string.  
 // For example...
@@ -59,6 +59,25 @@ const myNumer2 = 400;
 // again, using toString by splitting it and joining it back together, we are still working with a string.
 // To turn all of this back into a number, you can use the parseInt() function.
 
-parseInt(myNumber2.toString())
+///////// parseInt(myNumber2.toString());
 
-// parseInt() takes a string (specifically, myNumber2.toString()) and it returns a number.
+// parseInt() takes a string (specifically, myNumber2.toString()) and it returns a number, or at least what it thinks is a number inside the string
+// once its turned back into a number, we can add something to it.
+
+//////// parseInt(myNumber2.toString()) + 4000;
+
+
+///// solution /////////////////////////////////////////////////////////////////////////////////////
+
+
+// Step 1: inside the function body, the first thing we need to do is have the ability to reverse the number.
+// to reverse the number, we can use the same methodology as the reverse string method.
+// first, we use toString, which means we are working with a string as opposed to a number.
+
+function reverseInt(n) {
+   const reversed = n
+    .toString().split('').reverse().join('');
+    return parseInt(reversed);
+}
+
+console.log(reverseInt(56789));
