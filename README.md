@@ -10,7 +10,7 @@
 * [Reverse String Recipes](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/reverseString.js)
 * [PalindromeTOF Recipes](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/palindromeTOF.js)
 * [Integer Reversal Recipes](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/integerReversal.js)
-* [Integer Reversal Recipes](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/integerReversal.js)
+* [Max Characters](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/maxCharacter.js)
 
 ## Methods
 * [Integer Reversal Recipes](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/integerReversal.js)
