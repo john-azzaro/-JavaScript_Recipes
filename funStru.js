@@ -1,4 +1,4 @@
-
+// structure example
 
 function flip(string) {
     return string.split('').reverse().join('');
