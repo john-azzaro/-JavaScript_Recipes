@@ -1,6 +1,23 @@
 // Short function examples
 
 
+// Example that demonstrates the interconnectivity of a function
+
+function addSubtract(number, numberToAdd, numberToSubtract) {
+    let start = number;
+        console.log(`first, we start with the number ${start}`);
+    let add = start + numberToAdd;
+        console.log(`second, when we add ${start} to ${numberToAdd} we get ${add}`);
+    let subtract = add - numberToSubtract;
+    console.log(`and last, when we subtract ${numberToSubtract} from ${add}, we get ${subtract}`);
+}
+
+console.log(addSubtract(6,4,2))
+
+
+
+
+
 
 // Objective: Take a string, replace a word in that string, reverse that string using seperated functions
 
