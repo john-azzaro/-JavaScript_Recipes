@@ -6,6 +6,7 @@ multiplier = [6,7];
 
 console.log(numbers.push(multiplier));
 
+// includes the multiplier with the numbers
 console.log(numbers.push(...multiplier));
 
 
