@@ -1,6 +1,14 @@
 // Short function examples
 
-// problem solving strategies
+// TO-DO List
+// * incorporate a good problem solving methedology into this document using the example below.
+
+
+
+
+
+
+// useful problem solving strategies
 
 // 1. Always have a plan
 // 2. Restate the problem
