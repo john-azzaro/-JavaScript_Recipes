@@ -47,14 +47,23 @@ of the object with a value greater than 1, we can see from the key/value pairs t
 
 
 
-
 So setting up an object like that above is a strong tool for problem solving with any type of question around for producing some counts or
 verification of a word.
 
 
-
 */
 
+// 1. take a new string:
+
+const string = "Hello There!";
+
+// 2. Then we need to iterate through the string and add that character to a new object
+
+
+
+
+
+//// First solution ////////////
 function maxChar(string) {
 
 }
