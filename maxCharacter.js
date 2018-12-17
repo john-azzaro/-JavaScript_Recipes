@@ -57,13 +57,69 @@ verification of a word.
 
 const string = "Hello There!";
 
-// 2. Then we need to iterate through the string and add that character to a new object
+// 2. Then we need to iterate through the string and add that character to a new object.
+//    To do this, we need to create a new object that we will call chars.
+
+const chars = {};
+
+// At this point there are a few ways we can take these charcters and add them to the object.
+// First way is to split the string into an array and then use forEach helper to loop over all the characters.
+// Second is to use a for...of loop to loop through all of the characters inside there and do the same thing.
+
+// 3. using the for...of method.
+// First we'll iterate through the variable "string" and then for every character there we will either ass the character
+// as a property and assign it and assign it a value of 1 or if we;ve already seen that character before we will add 1 to it.
+
+
+    for (let char of string) {
+    if(!chars[char]) {
+        chars[char] = 1;
+    } else {
+        chars[char]++;
+    }
+    }
+chars;
 
 
 
 
+/* 
+////////////////////////////
+Walkthough---
+////////////////////////////
 
-//// First solution ////////////
-function maxChar(string) {
-
+for (let char of string) {
+// for every character (char) that we find in string...
+    if(!chars[char]) {
+// char[char] will return a reference to that particular character or at leasdt it value.
+// if it is the first tim (which this line reference), we want to set that value as 1.
+// the line above says that "if nothing exists here now, set chars[char] to 1 "
+        chars[char] = 1;
+    } else {
+// otherwise (else), assume that there is a number already there and increment by 1.
+        chars[char]++;
+    }
 }
+// then print chars object.
+chars;
+
+*/
+
+
+// //// alternate version ///////////////
+
+// for (let char of string) {
+//     chars[char] = chars[char] + 1 || 1;
+
+
+
+
+
+
+
+
+
+// //// First solution ////////////
+// function maxChar(string) {
+
+// }
