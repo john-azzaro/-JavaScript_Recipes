@@ -1,7 +1,23 @@
 // Short function examples
 
+// problem solving strategies
+
+// 1. Always have a plan
+// 2. Restate the problem
+// 3. Divide the Problem
+// 5. Start with what you know
+// 6. Reduce the Problem
+// 7. Look for Analogies
+// 8. Experiment
+// 9. Dont get frustrated
+// 10.
+
+
+
 
 // Example that demonstrates the interconnectivity of a function
+// first pay attention tot he arguments in the call signtature.  These are "slots".  In this case, number = 6, numberToAdd = 4, and numberToSubtract = 2.
+//also, pay attention to how the variables are chained together and work off the previous one.
 
 function addSubtract(number, numberToAdd, numberToSubtract) {
     let start = number;
@@ -9,7 +25,7 @@ function addSubtract(number, numberToAdd, numberToSubtract) {
     let add = start + numberToAdd;
         console.log(`second, when we add ${start} to ${numberToAdd} we get ${add}`);
     let subtract = add - numberToSubtract;
-    console.log(`and last, when we subtract ${numberToSubtract} from ${add}, we get ${subtract}`);
+        console.log(`and last, when we subtract ${numberToSubtract} from ${add}, we get ${subtract}`);
 }
 
 console.log(addSubtract(6,4,2))
