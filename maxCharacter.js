@@ -71,7 +71,7 @@ const chars = {};
 // as a property and assign it and assign it a value of 1 or if we;ve already seen that character before we will add 1 to it.
 
 
-    for (let char of string) {
+for (let char of string) {
     if(!chars[char]) {
         chars[char] = 1;
     } else {

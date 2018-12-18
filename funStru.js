@@ -5,6 +5,24 @@
 
 
 
+// multiplyt and divide a number.
+
+function minus() {
+    
+}
+
+
+function multiplyDivide(number, numberToMultiply, numberToDivide) {
+    const start = number;
+    const multiply = start * numberToMultiply;
+    const divide = multiply / numberToDivide;
+    return divide;
+}
+
+console.log(multiplyDivide(2,5,2));
+
+
+
 
 
 
