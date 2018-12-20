@@ -1,3 +1,21 @@
+"use strict";
+// WHAT IS THIS DOCUMENT? ////////////////////////////////////////////////////////////////////////////////////////////////
+// Summary: 
+// Purpose: 
+// Objective:  
+
+// WHAT DOES THIS DOCUMENT DO? ///////////////////////////////////////////////////////////////////////////////////////////
+// What is the problem?:  
+// Why hasn't the problem  
+// What is possible?: 
+// What is different?: 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
 /*
 Q: Given an integer, return an integer that is the reverse ordering of numbers.
 -- examples
@@ -74,9 +92,8 @@ const myNumer2 = 400;
 // to reverse the number, we can use the same methodology as the reverse string method.
 // first, we use toString, which means we are working with a string as opposed to a number.
 
-function reverseInt(n) {
-   const reversed = n
-    .toString().split('').reverse().join('');
+function reverseInt(number) {
+   const reversed = number.toString().split('').reverse().join('');
     return parseInt(reversed);
 }
 

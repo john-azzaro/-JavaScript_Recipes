@@ -1,3 +1,21 @@
+"use strict";
+// WHAT IS THIS DOCUMENT? /////////////////////////////////////////////////////////////////////////////////////////////////
+// Summary: 
+// Purpose: 
+// Objective:
+
+// WHAT DOES THIS DOCUMENT DO? ////////////////////////////////////////////////////////////////////////////////////////////
+// What is the problem?:  
+// Why hasn't the problem been solved?: 
+// What is possible?: 
+// What is different?: 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
 /// max characters /////////////
 /* 
 given a string, return the character that is most commonly used in the string.
@@ -152,6 +170,7 @@ the value for each key is the number of times that letter has been found in that
 
     console.log(macChar("Hello there"));
 
+   
 
 */
 

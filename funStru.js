@@ -1,18 +1,17 @@
-
-// ABSTRACT ////////////////////////////////////////////////////////////////////////////////////////////
-// Product: Rough outline of general function structure and problem solving examples, notes, musings, etc.
+"use strict";
+// WHAT IS THIS DOCUMENT? /////////////////////////////////////////////////////////////////////////////////////////////////
+// Summary: Rough outline of general function structure and problem solving examples, notes, musings, etc.
 // Purpose: Experiment with structural examples and make concise models for beginners.
 // Objective: Create concise tutorials for beginners on practical problem solving methdologies 
 
-
-// SYNOPSIS ////////////////////////////////////////////////////////////////////////////////////////////
+// WHAT DOES THIS DOCUMENT DO? ////////////////////////////////////////////////////////////////////////////////////////////
 // What is the problem?: Concise problem solving examples, strategies, models, etc. are very few and far between. 
 // Why hasn't the problem been solved?: Difficult to communicate ingrained problem solving experience to beginners. 
-// What is possible?: Take basic examples, communicate problem solving strategies, provide common patterns to follow, build from there.
-// What is different now?: You should have a better understand of problem solving and what is possible so your own methdology can grow.
-// What should you do now?: 
+// What is possible?: Take basic examples from research, communicate problem solving strategies, provide common patterns to follow, etc.
+// What is different?: You should have a better understand of problem solving and what is possible so your own methdology can grow.
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -33,7 +32,7 @@
 
 
 
-// multiply and divide and number, use another function in operation
+// multiply and divide and number, using another function in operation
 
 function minus(divide) {
     return divide - 1;
