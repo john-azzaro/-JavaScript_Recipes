@@ -80,6 +80,7 @@ for (let char of string) {
     }
 chars;
 
+console.log(chars);
 
 
 
@@ -113,13 +114,64 @@ chars;
 
 
 
+//// Solution 2 ////////////////////
+/* 
+So here we are still using a character map, where we take every character out of the string, add it as a key to the object, and then
+the value for each key is the number of times that letter has been found in that string. So there would be 1 "H", 3 lower case "e", etc.
+
+1. we start out with the function:
+
+        function maxChar(string) {
+
+        }
+
+2. Then we declare a new variable called charMap (i.e. character map) with an empty object (i.e. {} )
+        
+        function maxChar(string) {
+            const charMap = {};
+        }
+
+3. Then we iterate over our source string and use that to build out the character map.
+   For every character of string, we will add a character to character map.
+   If an entry already exists there, we will add 1 on, so an entry already exists (i.e. charMap[char]), we increment by 1.
+   Otherwsie (else), set character map at 1.
+   Note that this is flipped compared to the example before.
+
+        function maxChar(string) {
+            const charMap = {};
+            for (let char of string) {
+                if (charMap[char]) {
+                    charMap[char]++;
+                } else {
+                    charMap[char] = 1;
+                }
+            }
+            return charMap;
+        }
+
+    console.log(macChar("Hello there"));
+
+*/
+
+
+function maxChar(string) {
+    const charMap = {};
+    for (let char of string) {
+        if (charMap[char]) {
+            charMap[char]++;
+        } else {
+            charMap[char] = 1;
+        }
+    }
+    return charMap;
+}
+
+console.log(maxChar("Hello there"));
 
 
 
 
 
 
-// //// First solution ////////////
-// function maxChar(string) {
 
-// }
+
