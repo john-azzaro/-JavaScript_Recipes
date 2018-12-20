@@ -133,7 +133,8 @@ the value for each key is the number of times that letter has been found in that
 
 3. Then we iterate over our source string and use that to build out the character map.
    For every character of string, we will add a character to character map.
-   If an entry already exists there, we will add 1 on, so an entry already exists (i.e. charMap[char]), we increment by 1.
+   If an entry already exists there, we will add 1 on.
+   So if an entry already exists at this particualr character (i.e. charMap[char]), we increment by 1.
    Otherwsie (else), set character map at 1.
    Note that this is flipped compared to the example before.
 
@@ -151,8 +152,8 @@ the value for each key is the number of times that letter has been found in that
 
     console.log(macChar("Hello there"));
 
-*/
 
+*/
 
 function maxChar(string) {
     const charMap = {};
@@ -169,7 +170,87 @@ function maxChar(string) {
 console.log(maxChar("Hello there"));
 
 
+// Solution for finding the max character /////////////
 
+/*
+
+
+
+        function maxCharMax(string) {
+            // we iterate through the character map
+            const charMap = {};
+            // if we come across a character that has more uses then max, then we set max equal to that new value.
+            let max = 0;
+            // then we set maxChar to the character responsible for that number of uses.
+            // so what happens is when we iterate through the object and we come acorrss "H", which is 1.
+            // 1 is greater then max (which is 0), so that is a new maximum.
+            // when we go on to the next value, "e", which has 3, maxChar is updated to "e" rather than "H" which has only 1.
+            let maxChar = '';
+
+            for (let char of string) {
+                if (charMap[char]) {
+                    charMap[char]++;
+                } else {
+                    charMap[char] = 1;
+                }
+            }
+            // now here we need a new loop to iterate through our character map.
+            // note the for...in loop.  
+            // for...of loop is used to iterate through an array or a string or any type of iterable object.
+            // but in this case, we are iterating through an actual object (i.e. charMap = {}) with a collection of key/value pairs.
+            // so to iterate through the object (or any other javascript object) as opposed to an array or a string, we use a slightly different loop
+
+
+            for (let char in charMap) {
+                // if charMap at char (i.e. this particualr character) is greater than max, then...
+                if (charMap[char] > max) {
+                    // max will become char map at char and max char will become char.
+                    max = charMap[char];
+                    maxChar = char;
+                }
+            }
+            return maxChar;
+            
+        }
+
+        console.log(maxCharMax("Hello there"));
+
+            // so when we iterate through a for..in loop, char in i.e. (let char in charMap) at the beginning, char is assigned the keys
+            // inside the object.  So not the values, its the keys.
+
+
+*/
+
+
+
+
+
+
+
+function maxCharMax(string) {
+    const charMap = {};
+    let max = 0;
+    let maxChar = '';
+
+    for (let char of string) {
+        if (charMap[char]) {
+            charMap[char]++;
+        } else {
+            charMap[char] = 1;
+        }
+    }
+    
+    for (let char in charMap) {
+        if (charMap[char] > max) {
+            max = charMap[char];
+            maxChar = char;
+        }
+    }
+    return maxChar;
+    
+}
+
+console.log(maxCharMax("Hello there"));
 
 
 
