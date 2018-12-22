@@ -265,7 +265,7 @@ function maxCharMax(string) {
             maxChar = char;
         }
     }
-    return maxChar;
+    return `the maxChar is "${maxChar}" with a count of ${max}`;
     
 }
 

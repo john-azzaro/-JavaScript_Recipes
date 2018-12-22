@@ -52,7 +52,7 @@ console.log(multiplyDivide2(2,5,2));
 
 
 
-// multiplyt and divide a number.
+// multiplyt and divide a number via chaining variables.
 
 
 function multiplyDivide(number, numberToMultiply, numberToDivide) {

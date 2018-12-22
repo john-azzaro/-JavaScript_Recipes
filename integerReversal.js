@@ -1,14 +1,14 @@
 "use strict";
-// WHAT IS THIS DOCUMENT? ////////////////////////////////////////////////////////////////////////////////////////////////
-// Summary: 
-// Purpose: 
-// Objective:  
+// WHAT IS THIS DOCUMENT ABOUT? ////////////////////////////////////////////////////////////////////////////////////////////////
+// OBJECTIVE: Reverse a string of numbers.
+// SUMMARY: This is a variation of the reverseString study using integer specfic methods.
 
-// WHAT DOES THIS DOCUMENT DO? ///////////////////////////////////////////////////////////////////////////////////////////
-// What is the problem?:  
-// Why hasn't the problem  
-// What is possible?: 
-// What is different?: 
+// WHAT WILL I LEARN? ///////////////////////////////////////////////////////////////////////////////////////////
+// What is the problem?:  Given an integer, return an integer that is the reverse ordering of numbers
+// What is the solution?:  
+//     1. use .toString() to turn an integer into a string (then use the classic .split('')reverse().join('')).
+//     2. use Math.sign() to maintain the sign of the number.
+//     3. use .parseInt() to take a string and return it to a number.
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -73,16 +73,25 @@ Math.sign(-4000)  // returns -1
 // When using the toString() to turn a number into a string using a string.  
 // For example...
 
-const myNumer2 = 400;
+// const myNumer2 = 400;
+
 // again, using toString by splitting it and joining it back together, we are still working with a string.
 // To turn all of this back into a number, you can use the parseInt() function.
 
-///////// parseInt(myNumber2.toString());
+// parseInt(myNumber2.toString());
 
 // parseInt() takes a string (specifically, myNumber2.toString()) and it returns a number, or at least what it thinks is a number inside the string
 // once its turned back into a number, we can add something to it.
 
 //////// parseInt(myNumber2.toString()) + 4000;
+
+function parIntToString(number) {
+    const myNumber3 = 400;
+    const result = parseInt(myNumber3.toString()) + number;
+    return result;
+}
+console.log(parIntToString(3000))
+
 
 
 ///// solution /////////////////////////////////////////////////////////////////////////////////////
@@ -91,10 +100,23 @@ const myNumer2 = 400;
 // Step 1: inside the function body, the first thing we need to do is have the ability to reverse the number.
 // to reverse the number, we can use the same methodology as the reverse string method.
 // first, we use toString, which means we are working with a string as opposed to a number.
+// second, we split the string (as a string)...
+// third, we reverse it...
+// fourth, we put it back together (as a string)...
+// Fifth, we return reversed but using parseInt(), we take that string and RETURN IT BACK TO A NUMBER.
 
 function reverseInt(number) {
    const reversed = number.toString().split('').reverse().join('');
     return parseInt(reversed);
 }
-
 console.log(reverseInt(56789));
+
+
+function reverseInt2(number) {
+    const reversed = number.split('').reverse().join('');
+     return reversed;
+ }
+ console.log(reverseInt2("000111"));
+
+
+
