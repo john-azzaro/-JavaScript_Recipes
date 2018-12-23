@@ -1,16 +1,20 @@
 "use strict";
-// WHAT IS THIS DOCUMENT? /////////////////////////////////////////////////////////////////////////////////////////////////
-// Summary: 
-// Purpose: 
-// Objective:
+// OBJECTIVE ////////////////////////////////////////////////////////////////////////////////////////////////
+//    Find out whether or not a word is a palindrome (i.e. form same word if it is reversed i.e. abba === abba).
 
-// WHAT DOES THIS DOCUMENT DO? ////////////////////////////////////////////////////////////////////////////////////////////
+// SUMMARY //////////////////////////////////////////////////////////////////////////////////////////////////
 // What is the problem?:  
-// Why hasn't the problem been solved?: 
-// What is possible?: 
-// What is different?: 
+//    Common question: Given a string, return true if the string is a palindrome or false if it is not.
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// What is the BEST solution? 
+//     
+
+// What are the special components of these solutions?:  
+//     1. use .toString() to turn an integer into a string (then use the classic .split('')reverse().join('')).
+//     2. use Math.sign() to maintain the sign of the number.
+//     3. use .parseInt() to take a string and return it to a number.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -19,7 +23,7 @@
 ///// palindrome True or false /////////////////////////////////////////
 
 
-//-- Question: Given a string, return true if the string is a palindrome or false if it is not.
+//-- 
 //-- Palindromes are strings that form the same word if it is reversed.
 //-- Example: abba === true
 //            abcd === false
@@ -32,8 +36,8 @@
             return string === reversed;
         }
 
-
-        // function plaindrome2(string) {
+        // RESOLVE ERROR //////////////////////////////////////
+        // function plaindrome3(string) {
         //     return string.split('').every((character, i) => {
         //         return character === string[string.length - i - 1]
         //     });
@@ -44,7 +48,7 @@
 
         
 
-        function palindrome(string) {
+        function palindrome2(string) {
                 // we create a variable that just much the same thing that the reverse string problem does, specfically:
                 // string.split('') gives you an array...
                 // .reverse() reversed the order of the string...
@@ -114,5 +118,6 @@
 
     console.log(palindrome("abba"));     // true
     console.log(palindrome("wakka"));    // false
-    // console.log(palindrome2("baab"));     // true
-    // console.log(palindrome2("fizzbuzz"));    // false
+
+    console.log(palindrome2("abba"));     // true
+    console.log(palindrome2("wakka"));    // false
