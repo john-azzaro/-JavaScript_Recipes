@@ -1,7 +1,6 @@
 "use strict";
 // OBJECTIVE ////////////////////////////////////////////////////////////////////////////////////////////////
 //    Reverse a string of numbers.
-
 // SUMMARY //////////////////////////////////////////////////////////////////////////////////////////////////
 // What is the problem?:  
 //    Given an integer, return an integer that is the reverse ordering of numbers.
@@ -16,7 +15,19 @@
 //     2. use Math.sign() to maintain the sign of the number.
 //     3. use .parseInt() to take a string and return it to a number.
 
+// What needs work?
+//     1. Add Math.sign example.
+//     2. Add use case scenarios.
+//     3. clean up instructions.
+//     
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
 
 // APPLICATION ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -45,26 +56,25 @@ The solution is very stright forward but its all about understanding the trick t
 
 
 // HOW TO USE: toString() /////////////////////////////////////////////////////
-// We know how to reverse a string... (i.e. return string.split('').reverse().join('')).
-// But numbers are different in this case.
-// We CAN turn a number into a string by using a function called toString().
-// As an example:
+    // We know how to reverse a string... (i.e. return string.split('').reverse().join('')).
+    // But numbers are different in this case.
+    // We CAN turn a number into a string by using a function called toString().
+    // As an example:
 
 const myNumber = 200;
-// if I want to turn the number above into a string, I call... 
+    // if I want to turn the number above into a string, I call... 
 
 myNumber.toString().split('').join('');
-// This returns a string of 200.
-// At this point, I can use familiar functions like split, which turns it into an array of strings (i.e. ) ["2""0""0"], reverse, and join.
-
-// SO IN SUM: we can use the toString() to turn our number into a string and then work on it as though it was a string.
+    // This returns a string of 200.
+    // At this point, I can use familiar functions like split, which turns it into an array of strings (i.e. ) ["2""0""0"], reverse, and join.
+    // SO IN SUM: we can use the toString() to turn our number into a string and then work on it as though it was a string.
 
 
 
 // HOW TO USE: Math.sign() ////////////////////////////////////////////////////////
-// This method uses a function in the math library included with JavaScript called Math.sign().
-// With Math.sign() we can pass in a number. If that number is positive, Math.sign() will return 1.  If negative, will return -1.
-// So as an example:
+    // This method uses a function in the math library included with JavaScript called Math.sign().
+    // With Math.sign() we can pass in a number. If that number is positive, Math.sign() will return 1.  If negative, will return -1.
+    // So as an example:
 
 Math.sign(4000) // returns 1
 Math.sign(-4000)  // returns -1
@@ -73,14 +83,14 @@ Math.sign(-4000)  // returns -1
 
 
 // HOW TO USE: parseInt() and toString() //////////////////////////////////////////////////////////////////////////////////
-// When using the toString() to turn a number into a string using a string.  
-// For example...
-//      const myNumer2 = 400;
-// again, using toString by splitting it and joining it back together, we are still working with a string.
-// To turn all of this back into a number, you can use the parseInt() function.
-//      parseInt(myNumber2.toString());
-// parseInt() takes a string (specifically, myNumber2.toString()) and it returns a number, or at least what it thinks is a number inside the string
-// once its turned back into a number, we can add something to it.
+    // When using the toString() to turn a number into a string using a string.  
+    // For example...
+    //      const myNumer2 = 400;
+    // again, using toString by splitting it and joining it back together, we are still working with a string.
+    // To turn all of this back into a number, you can use the parseInt() function.
+    //      parseInt(myNumber2.toString());
+    // parseInt() takes a string (specifically, myNumber2.toString()) and it returns a number, or at least what it thinks is a number inside the string
+    // once its turned back into a number, we can add something to it.
 
 // Example using parseInt and toString
 
@@ -92,9 +102,9 @@ function parIntToString(number) {
 console.log(parIntToString(3000))
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 ///// BEST solution ///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 // STEP-BY-STEP SOLUTION //////////////////////////////////////////////////////////////////////////////////////////////////
 // Step 1: inside the function body, the first thing we need to do is have the ability to reverse the number.
@@ -112,8 +122,8 @@ function reverseInt(number) {
 console.log(reverseInt(56789));
 
 
-// Now looking back at the earlier version from reverseInteger for context, it is practically the same EXCEPT for the fact that
-// we need to input the numbers 000111 as a STRING (i.e. "000111"), not as naked integers (i.e. 56789).  
+    // Now looking back at the earlier version from reverseInteger for context, it is practically the same EXCEPT for the fact that
+    // we need to input the numbers 000111 as a STRING (i.e. "000111"), not as naked integers (i.e. 56789).  
 
 function reverseInt2(number) {
     const reversed = number.split('').reverse().join('');
