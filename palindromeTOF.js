@@ -7,12 +7,13 @@
 //    Common question: Given a string, return true if the string is a palindrome or false if it is not.
 
 // What is the BEST solution? 
-//     
+//    The current best solution involves using the reverseInteger (i.e. split, reverse, and join).
+//    Then when we return, we compare the string to reversed using the strict equality operator.
+//    If string = reversed, then TRUE (this is a palindrome).  If string =/= reversed, then FALSE
 
 // What are the special components of these solutions?:  
-//     1. use .toString() to turn an integer into a string (then use the classic .split('')reverse().join('')).
-//     2. use Math.sign() to maintain the sign of the number.
-//     3. use .parseInt() to take a string and return it to a number.
+//    1. for finding the palindrome, we use the strict equality operator(i.e. ===) in the best solution.
+//    2. Resolve error for second method
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
