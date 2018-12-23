@@ -1,13 +1,12 @@
 "use strict";
 // OBJECTIVE ////////////////////////////////////////////////////////////////////////////////////////////////
 //    Study Loops, how they work, what use cases do they have, etc.
-
 // SUMMARY //////////////////////////////////////////////////////////////////////////////////////////////////
 // What is the problem?:  
 //    Study loops
 
 // What is the BEST solution? 
-//     Find the most efficient wat to use a loop.
+//     Find the most efficient way to use a loop.
 
 // What are the special components of these solutions?:  
 //     1. "for" statment -- loop repeats until a specified condition is true.
@@ -18,6 +17,8 @@
 //     2. "for... of" -- creates a loop through iterable objects like arrays, maps, etc.
 
 // What needs work?
+//     1. Add more loop examples (i.e for...in, etc.) from research.
+//     2. Add use case scenarios.
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
