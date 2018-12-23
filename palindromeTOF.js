@@ -13,7 +13,9 @@
 
 // What are the special components of these solutions?:  
 //    1. for finding the palindrome, we use the strict equality operator(i.e. ===) in the best solution.
-//    2. Resolve error for second method
+// 
+// What needs work?
+//    1. resolve error on palindrome3
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

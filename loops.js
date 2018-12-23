@@ -17,6 +17,8 @@
 //                           for (let i = countFrom; i >= 0; i-- ) {code looped through}
 //     2. "for... of" -- creates a loop through iterable objects like arrays, maps, etc.
 
+// What needs work?
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
