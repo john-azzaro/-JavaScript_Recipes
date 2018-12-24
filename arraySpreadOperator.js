@@ -1,21 +1,22 @@
 "use strict";
 // OBJECTIVE ////////////////////////////////////////////////////////////////////////////////////////////////
-//    Using the array spread operator
+//    Using the array spread operator (...)
 // SUMMARY //////////////////////////////////////////////////////////////////////////////////////////////////
 // What is the problem?:  
 //    
 
 // What is the BEST solution? 
-//     
+//     1. well... use the array spread operator when you can.
 
 // What are the special components of these solutions?:  
-//     1. combining arrays
+//     1. arrary spread operator (...)
 
 // What needs work?
-//     1. copying arrays
 //     2. convert arguments to array
-//     3. using math functions
 //     4. destructuring
+
+// Links of interest
+// https://davidwalsh.name/spread-operator
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
