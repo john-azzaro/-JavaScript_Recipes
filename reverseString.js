@@ -1,35 +1,21 @@
 "use strict";
-// WHAT IS THIS DOCUMENT? /////////////////////////////////////////////////////////////////////////////////////////////////
-// Summary: 
-// Purpose: 
-// Objective:
-
-// WHAT DOES THIS DOCUMENT DO? ////////////////////////////////////////////////////////////////////////////////////////////
+// OBJECTIVE ////////////////////////////////////////////////////////////////////////////////////////////////
+//    Given a string, return a new string with a reversed order of characters.
+//    -- Examples: reverse('hello') => 'olleh'
+// SUMMARY //////////////////////////////////////////////////////////////////////////////////////////////////
 // What is the problem?:  
-// Why hasn't the problem been solved?: 
-// What is possible?: 
-// What is different?: 
+//    You need to take a string and reverse it. 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// What is the BEST solution? 
+//     1. 
 
+// What are the special components of these solutions?:  
+//     1. 
 
+// What needs work?
+//     1. solution 7
 
-
-
-
-///// THE PROBLEM ///////////////////////////////////////////////////
-//-- Question: Given a string, return a new string with a reverded order of characters.
-//-- Examples: reverse('hello') => 'olleh'
-
-
-
-
-
-///// USE CASES //////////////////////////////////////////////////////
-//-- One of the most frequently asked questions on technical interview round questions.
-//-- You might be asked to write down different ways to reverse a string, or reverse a string without using built-in methods, or use recursion.
-
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -98,14 +84,9 @@
 
 // ///// Solution 7:
 
-
 //                 function reverseString7(string) {
 //                     return [...string].reverse().join('');
 //                 }
-
-
-
-
 
 
 
@@ -204,16 +185,16 @@ function reverse6(string) {
 
 
 ///// SOLUTION 7 /////////////////////////////////////////////////////
-
-function reverse7(string) {
-        // STEP 1: Turn the string into an array (by calling split function on it).
-        // STEP 2: Then use Reduce Helper.
-        //         Reduce takes all the different values within an array and condense them down to a single string value.
-        //         Reduce takes two seperate arguments, the arrow function and starting intial value for our function which is an empty string.
-        // STEP 3: Reduce will cycle through each number in the array (like a for loop).
-        // STEP 4: 
-    return string.split('').reduce((reversed, character) => character + reversed, '');
-}
+// fix error
+// function reverse7(string) {
+//         // STEP 1: Turn the string into an array (by calling split function on it).
+//         // STEP 2: Then use Reduce Helper.
+//         //         Reduce takes all the different values within an array and condense them down to a single string value.
+//         //         Reduce takes two seperate arguments, the arrow function and starting intial value for our function which is an empty string.
+//         // STEP 3: Reduce will cycle through each number in the array (like a for loop).
+//         // STEP 4: 
+//     return string.split('').reduce((reversed, character) => character + reversed, '');
+// }
 
 
 
@@ -235,6 +216,6 @@ console.log(reverseString3("hello 3"));
 console.log(reverseString4("hello 4"));
 console.log(reverseString5("hello 5"));
 console.log(reverseString6("hello 6"));
-console.log(reverseString7("hello 7"));
+// console.log(reverseString7("hello 7"));
 
 
