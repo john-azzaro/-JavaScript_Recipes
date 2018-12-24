@@ -42,9 +42,6 @@ console.log(numbersCA.push(...multiplierCA));
 
 let numbersMF = [9, 4, 7, 1];
 
-// WITH
-
-
 console.log(Math.min(...numbersMF));
 console.log(Math.max(...numbersMF));
 
