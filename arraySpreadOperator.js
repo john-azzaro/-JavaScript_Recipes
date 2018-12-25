@@ -3,13 +3,13 @@
 //    Using the array spread operator (...)
 // SUMMARY //////////////////////////////////////////////////////////////////////////////////////////////////
 // What is the problem?:  
-//    
+//    You need to take the items from one array and push them into another array.
 
 // What is the BEST solution? 
-//     1. well... use the array spread operator when you can.
+//     Use the Array Spread operator when you want to push ALL the items from one array into the other.
 
 // What are the special components of these solutions?:  
-//     1. arrary spread operator (...)
+//     1. array spread operator (...)
 
 // What needs work?
 //     2. convert arguments to array
