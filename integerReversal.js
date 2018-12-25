@@ -71,6 +71,9 @@ myNumber.toString().split('').join('');
 
 
 
+
+
+    
 // HOW TO USE: Math.sign() ////////////////////////////////////////////////////////
     // This method uses a function in the math library included with JavaScript called Math.sign().
     // With Math.sign() we can pass in a number. If that number is positive, Math.sign() will return 1.  If negative, will return -1.
