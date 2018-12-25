@@ -30,12 +30,12 @@ const multiplierCA = [6,7,8,9];
 // WITHOUT ARRAY SPREAD OPERATOR //
 // includes the mulitplier as a single array added to numbers
 // So bascially when you push multiplierCA into numbersCA, the multiplierCA is simply pushed into the array as a single entity.
-console.log(numbersCA.push(multiplierCA));
+console.log(numbersCA.push(multiplierCA));  // 6
 
 // WITH ARRAY SPREAD OPERATOR //
 // includes the multiplier numbers with the numbers
 // However, when you use the array spread operator, each item in the multiplierCA array is pushed into the numbersCA array.
-console.log(numbersCA.push(...multiplierCA));
+console.log(numbersCA.push(...multiplierCA)); // 10
 
 
 
@@ -43,6 +43,6 @@ console.log(numbersCA.push(...multiplierCA));
 
 let numbersMF = [9, 4, 7, 1];
 
-console.log(Math.min(...numbersMF));
-console.log(Math.max(...numbersMF));
+console.log(Math.min(...numbersMF));   // 1
+console.log(Math.max(...numbersMF));   // 9
 
