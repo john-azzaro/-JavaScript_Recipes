@@ -1,17 +1,70 @@
 "use strict";
-// WHAT IS THIS DOCUMENT? /////////////////////////////////////////////////////////////////////////////////////////////////
-// Summary: Rough outline of general function structure and problem solving examples, notes, musings, etc.
-// Purpose: Experiment with structural examples and make concise models for beginners.
-// Objective: Create concise tutorials for beginners on practical problem solving methdologies 
 
-// WHAT DOES THIS DOCUMENT DO? ////////////////////////////////////////////////////////////////////////////////////////////
-// What is the problem?: Concise problem solving examples, strategies, models, etc. are very few and far between. 
-// Why hasn't the problem been solved?: Difficult to communicate ingrained problem solving experience to beginners. 
-// What is possible?: Take basic examples from research, communicate problem solving strategies, provide common patterns to follow, etc.
-// What is different?: You should have a better understand of problem solving and what is possible so your own methdology can grow.
+// OBJECTIVE ////////////////////////////////////////////////////////////////////////////////////////////////
+//     1. Outline of interesting scripting structures and problem solving methodologies from research, discussions, etc.
+// SUMMARY //////////////////////////////////////////////////////////////////////////////////////////////////
+// What is the problem?:  
+//    1. There are many ways to solve a problem in JavaScript, but very few resources that give basic strucutural examples for beginners.
+
+// What is the BEST solution? 
+//     1. Currently, the best solution seems to be that which reduces functions to a single responsibility to make your code more versatile.
+
+// What are the special components of these solutions?:  
+//     1. First and foremost, the general structure of a function itself, including ...
+
+// What needs work?
+//     1. more interesting ways to think about scripting strucuture 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+///// ANATOMY OF A FUNCTION //////////////////////////////////////
+
+// WHAT IS A FUNCTION?:
+// A function is a repeatable (i.e. can be called multiple times) and determinate (i.e. predictable) process or behavior.
+
+// WHAT COMPRISES A FUNCTION?:
+
+
+                function add(num1, num2) {                  
+                    return num1 + num2;                           
+                }
+                console.log(add(2,3));     // 5
+
+
+//              1. "function" referes to the JavaScript keyword about to be described.
+//              2. "add" is the name of the function we can invoke elsewhere in the code.
+//              3. "(num1, num2)" is comprised of a call signature (i.e. () ) and two parameters (i.e. num1, num2).
+//              4. "{ ... }" brackets are the main block of the function to be executed.
+//              5. "console.log(add(2,3))" is the line that invokes the function, the numbers in the callsignature inserted into num1 and num2.
+
+// Function 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
