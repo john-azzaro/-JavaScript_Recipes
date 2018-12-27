@@ -18,6 +18,7 @@
 
 // What are the special components of these solutions?:  
 //     1. for...of loop.
+//     2. for...in loop.
 
 // What needs work?
 //     1. Simplify steps and identify best solution method.
