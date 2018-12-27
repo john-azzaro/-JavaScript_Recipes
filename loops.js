@@ -9,12 +9,13 @@
 //     Find the most efficient way to use a loop.
 
 // What are the special components of these solutions?:  
-//     1. "for" statment -- loop repeats until a specified condition is true.
+//     1. "for" statment -- meant to iterate while incrementing or decrementing.
 //             example: [counts up] 
 //                           for (let i=0; i <= countTo; i++) {code looped through}
 //             example: [counts down] 
 //                           for (let i = countFrom; i >= 0; i-- ) {code looped through}
 //     2. "for... of" -- creates a loop through iterable objects like arrays, maps, etc.
+//     3. "for... in" -- meant to enumerate through object properties.
 
 // What needs work?
 //     1. Add more loop examples (i.e for...in, etc.) from research.
@@ -25,14 +26,21 @@
 
 
 
+///// STANDARD FOR LOOP UP (INCREMENTING) //////////////////////////////////////////////
+
 function countUp() {
     const countTo = 10;
     for (let i=0; i <= countTo; i++) {
         console.log(i);
     }
 }
+console.log("FOR loop incrementing UP")
 console.log(countUp());
 
+
+
+
+///// STANDARD FOR LOOP DOWN (DECREMENTING) //////////////////////////////////////////////
 
 function countDown() {
     const countFrom = 10;
@@ -40,7 +48,37 @@ function countDown() {
         console.log(i);
     }
 }
+console.log("FOR loop decrementing DOWN")
 console.log(countDown());
+
+
+
+
+///// FOR...IN... LOOP ITERATING OVER KEY/VALUE //////////////////////////////////////////
+
+
+var object = { "key1" : "one", "key2" : "two", "key3" : "three" },
+    key = "";
+
+for (key in object) {
+    console.log(key);             // "key1", "key2", "key3"
+    console.log( object[key] );   // "one", "two", "three"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // for (let{variable of declaration} character{temporary variable that is redeclared EVERY time through the loop} of string{iterable object we want to iterate through})
 // so we'll iterate through every character of string one by one and set each character equal to the temporary variable "character".
