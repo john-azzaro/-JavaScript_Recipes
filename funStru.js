@@ -6,21 +6,22 @@
 //    1. There are many ways to solve a problem in JavaScript, but very few resources that give basic strucutural examples for beginners.
 
 // What is the BEST solution? 
-//     1. Currently, the best solution seems to be that which reduces functions to a single responsibility to make your code more versatile.
+//     1. On strucutre, the best solution seems to be that which reduces functions to a single responsibility to make your code more versatile.
+//     2. On problem solving techniques, looking into it.
 
 // What are the special components of these solutions?:  
-//     1. First and foremost, the general structure of a function itself, including ...
+//     1. Ways to define a structure (i.e. declaration, expression, and es6 fat arrow function)
 
 // What needs work?
-//     1. FAQ section (neat questions and answers I come across I'll just add to the list)
-//     2. More interesting ways to think about scripting strucuture 
+//     1. FAQ section (questions and answers I think of or come across whihc I'll just add to the list and organize later)
+//     2. More interesting ways to think about scripting structure 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
 
-// WHAT ARE THE BASIC COMPONENTS OF A FUNCTION?:
+// WHAT ARE THE BASICS OF A FUNCTION?:
 //              A function is a repeatable (i.e. can be called multiple times) and determinate (i.e. predictable) process or behavior.
 //              In the example function below we are creating a function that simply adds two numbers together. 
 //              Inside the call signature, we have two parameters, num1 and num2.  These are the two numbers that we add together.
@@ -36,6 +37,26 @@
 //              3. "(num1, num2)" is comprised of a call signature (i.e. () ) and two parameters (i.e. num1, num2).
 //              4. "{ ... }" brackets are the main block of the function to be executed.
 //              5. "console.log(add(2,3))" is the line that invokes the function, the numbers in the callsignature inserted into num1 and num2.
+
+
+// IMPORTANT INFO ON FUNCTION NAMES:
+//   1. ALWAYS use camelcasing which is where we capitalize the second word in each function name (i.e. thisNameIsGood).
+//   2. DONT use reserved word slike let, const, or return.
+//   3. ONLY use uppercase, lowercase, or underscore at the beginning of a function name.  $() is also acceptable.
+//   4. ALWAYS use meaningful names that describe what the function does.
+
+
+// IMPORTANT INFO ON CALL SIGNATURES AND PARAMETERS/ARGUMENTS:
+//   1. 
+
+
+// good resource: https://codeburst.io/parameters-arguments-in-javascript-eb1d8bd0ef04
+
+
+
+
+
+
 
 
 
@@ -63,6 +84,12 @@
 
 
 
+
+
+
+
+
+///// HOW CAN YOU STRUCTURE A FUNCTION?:
 
 
 
