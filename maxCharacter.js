@@ -84,7 +84,7 @@
                     }
                 chars;
 
-                console.log("Basic example");     // { H: 1, e: 3, l: 2, o: 1, ' ': 1, T: 1, h: 1, r: 1, '!': 1 }
+                console.log(">> Basic example");     // { H: 1, e: 3, l: 2, o: 1, ' ': 1, T: 1, h: 1, r: 1, '!': 1 }
                 console.log(chars);
 
 
@@ -162,7 +162,7 @@
                 return charMap;
             }
 
-            console.log("Converting string to an object")      //   { H: 1, e: 3, l: 2, o: 1, ' ': 1, t: 1, h: 1, r: 1 }
+            console.log(">> Converting string to an object")      //   { H: 1, e: 3, l: 2, o: 1, ' ': 1, t: 1, h: 1, r: 1 }
             console.log(maxChar("Hello there"));
 
 
@@ -236,7 +236,7 @@ the value for each key is the number of times that letter has been found in that
                 
             }
 
-            console.log("Finding the Max Character")
+            console.log(">> Finding the Max Character")
             console.log(maxCharMax("Hello there"));
 
 
