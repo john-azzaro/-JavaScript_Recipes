@@ -21,8 +21,18 @@
 
 
 
+// HOW TO THINK ABOUT JAVASCRIPT?:
+//    1. A function is a repeatable (i.e. can be called multiple times) and determinate (i.e. predictable) process or behavior.
+//    2. Javascript is a functional language meaning that functions are the primary modular units of execution. so functions are 
+//     obviously very important in Javascript. 
+//    3. Functions in JavaScript are what we call first-class entities.
+//    4. We treat functions as values.
+//      
+
+
+
+
 // WHAT ARE THE BASICS OF A FUNCTION?:
-//              A function is a repeatable (i.e. can be called multiple times) and determinate (i.e. predictable) process or behavior.
 //              In the example function below we are creating a function that simply adds two numbers together. 
 //              Inside the call signature, we have two parameters, num1 and num2.  These are the two numbers that we add together.
 //              Inside the block of the function, we have a simple goal... to return the value of num1 plus num2. 
@@ -38,6 +48,10 @@
 //              4. "{ ... }" brackets are the main block of the function to be executed.
 //              5. "console.log(add(2,3))" is the line that invokes the function, the numbers in the callsignature inserted into num1 and num2.
 
+// good resources: https://blogg.bekk.no/function-creation-in-detail-9d5e754afce4
+
+
+
 
 // IMPORTANT INFO ON FUNCTION NAMES:
 //   1. ALWAYS use camelcasing which is where we capitalize the second word in each function name (i.e. thisNameIsGood).
@@ -46,31 +60,38 @@
 //   4. ALWAYS use meaningful names that describe what the function does.
 
 
+
+
 // IMPORTANT INFO ON CALL SIGNATURES AND PARAMETERS/ARGUMENTS:
-//   1. 
+//   1. When talking about functions, the terms parameters and arguments are often interchangeably used as if it were one and the 
+//      same thing but there is a very subtle difference.  
+//           A. Parameters are variables listed as a part of the function definition.
+//           B. Arguments are values passed to the function when it is invoked.  
+//      Its important to know the difference because JavaScript does not throw an error if the number of arguments passed during a function 
+//      invocation are different than the number of parameters listed during function definition. This should make it clear that parameters 
+//      and arguments should be treated as two different entities.
 
 
 // good resource: https://codeburst.io/parameters-arguments-in-javascript-eb1d8bd0ef04
-
-
-
-
-
-
+//                https://blogg.bekk.no/function-parameters-in-detail-b0f0d971bec3
 
 
 
 
 ///// HOW CAN YOU DEFINE A FUNCTION?:
 
-    // Function Declaration:
+    // Function Declaration: 1. Hoisted with contents (hoisting is how the browser parses Javascript, reads through once then executes second pass).
+    //                       2. Function declarations are hoisted to the top of the top-level or if you have a function declaration inside 
+    //                            a function, to the top of that function. 
+    //                       3. With function declarations, you can use them above where they are declared.
 
                     function addDeclaration(num1, num2) {
                         return num1 + num2;
                     }
                     console.log(addDeclaration(2,2))     // 4
 
-    // Function Expression:
+    // Function Expression: 1. Not hoisted with contents, but the reference to it may be hoisted if we assign it as a variable.
+    //                      2. Functions defined as arguments to functions are expressions.
 
                     const addExpression = function(num1, num2) {
                         return num1 + num2;
@@ -85,13 +106,7 @@
 
 
 
-
-
-
-
-///// HOW CAN YOU STRUCTURE A FUNCTION?:
-
-
+///// HOW CAN YOU STRUCTURE A FUNCTION?: ////////////////////////////////////////////////
 
 // CHAIN OF VARIABLES EXAMPLE:
 // first pay attention to the arguments in the call signtature.  These are "slots".  In this case, number = 6, numberToAdd = 4, and numberToSubtract = 2.
