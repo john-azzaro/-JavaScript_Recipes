@@ -53,8 +53,30 @@ console.log(countDown());
 
 
 
+///// LOOP USING THE forEach() METHOD ////////////////////////////////////////////////////
 
-///// FOR...IN... LOOP ITERATING OVER KEY/VALUE //////////////////////////////////////////
+function arrayLoop () {
+    const myArray = ["Tom", "Dick", "Harry"];
+    return myArray.forEach((element, index) => console.log(`the element ${index} is ${element}`));
+}
+console.log("FOR Loop iterating through an array");
+console.log(arrayLoop());
+
+
+
+
+///// FOR...IN... LOOPING THROUGH AN OBJECT ///////////////////////////////////////////////////////////
+
+const myObject = {
+    fruit: "apple",
+    drink: "water",
+    desert: "cookie",
+}
+
+for (let key in myObject) {
+    console.log(`the key ${key} is ${myObject[key]}`);
+}
+
 
 
 var object = { "key1" : "one", "key2" : "two", "key3" : "three" },
@@ -66,6 +88,15 @@ for (key in object) {
 }
 
 
+///// LOOPING THROUGH AN OBJECT USING OBJECT.KEYS ////////////////////////////////////////////////////
+
+const mySecondObject = {
+    hat: "baseball cap",
+    shirt: "long sleeves",
+    pants: "jeans",
+}
+
+Object.keys(mySecondObject)
 
 
 
@@ -92,3 +123,7 @@ function tester(string) {
     return reversed;
 }
 console.log(tester('this is a test'));
+
+
+
+
