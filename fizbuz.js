@@ -21,6 +21,10 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// about the modulo
+// although modulo is rearely used in the javascript world, we use it to determine the remainder of a number during division.
+
+
 
 
 function fizzBuzz(countTo) {
