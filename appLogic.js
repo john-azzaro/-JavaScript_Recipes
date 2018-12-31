@@ -14,11 +14,14 @@
 // What needs work?
 //     1. 
 
+
+// Resource links
+// https://medium.freecodecamp.org/a-definitive-guide-to-conditional-logic-in-javascript-23fa234d2ca3
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-// ABOUT APPLICATION, CONTROL FLOW, AND CONDITIONAL LOGIC...
+// ABOUT LOGICAL OPERATORS...
 // 1. There are three essential logical operators: &&, ||, and !.
 //    
 //       && -- "and" evaluates as true if both values are true.
@@ -45,3 +48,18 @@
 //     
 //                           foo;             // true
 //                           !foo;            // false
+//
+//   Notes on Logical operators and 
+//  
+
+
+
+// ABOUT TRUTH TABLES...
+ 
+//   A  B       !A        A && B       A || B         A -> B       A === B
+// ------------------------------------------------------------------------
+//   T  T        F          T            T              T             T
+//   T  F        F          F            T              F             F
+//   F  T        T          T            T              T             F
+//   F  F        T          F            F              T             T
+// 
