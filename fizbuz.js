@@ -22,12 +22,11 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // about the modulo
-// although modulo is rearely used in the javascript world, we use it to determine the remainder of a number during division.
+// although modulo (i.e. %) is rearely used in the javascript world, we use it to determine the remainder of a number during division.
 // so if you took 9 % 3, it would return 0.  Thats because if we divide 9 by 3, 3 goes into 9 EXACTLY 3 times and there is no remainder left over.
 // but if you divide 10 % 3, 3 still goes into 10 3 times but we have a remainder of 1.
 // if we divide 11 % 3, we get a remainder of 2.
 // However, if we divide 12 % 3, we get a remainder of 0 because 3 goes into 12 exactly 4 times.
-
 // In the problem below, we also add the strict equality operator (i.e. ===).  
 // When we say 12 % 3 === 0, this would evaluate TRUE
 
