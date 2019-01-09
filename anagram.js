@@ -17,10 +17,26 @@
 //     1. 
 
 // What are the special components of these solutions?:  
-//     1. 
+//     1. RegExp (i.e. )
 
 // What needs work?
 //     1. 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Notes on edge cases: 
+//       Only consider characters, not spaces or punctuation.
+//       Capital letters are considered the same as lower case.
+// 
+// RegExp (regular expressions) can be used to manipulate strings and very easily remove all spaces and exclaimation marks from a string.
+// 
+
+
+    const word = "HI THERE!!!!";
+    word.replace(/[^\w]/g, "").toLowerCase();
+
+word;
+
+
 
