@@ -1,4 +1,7 @@
 # JavaScript Recipes
+
 ### What are JavaScript Recipes?
-JavaScript Recipes are a collection of interesting problems and solutions.
+JavaScript Recipes interesting problems/concepts from research, tutorials, mentor sessions, peer discussions, requested problem explainations, etc.
+
+### Why JavaScript Recipes?
 
