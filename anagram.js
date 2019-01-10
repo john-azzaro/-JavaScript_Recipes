@@ -69,3 +69,20 @@
 
 
 
+
+// SOLUTION 1 ///////////////////////////////////////
+// For a solution involving character maps, we need to first:
+//  1. build a charater map out of string A and string B.
+//  2. compare all the characters inside the two maps.
+
+// so first we need to make a character map out of both stringA and stringB
+
+
+function anagrams(stringA, stringB) {
+
+
+
+}
+
+
+
