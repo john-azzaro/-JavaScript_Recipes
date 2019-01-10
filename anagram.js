@@ -107,6 +107,24 @@
 
 // Solution 1 /////////////////////////////////
 
+const numbers = [10,270, 376, -4, 277];
+numbers.sort();
+
+console.log(numbers);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function anagrams(stringA, stringB) {
-    
+
 }
