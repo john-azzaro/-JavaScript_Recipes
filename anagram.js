@@ -75,13 +75,24 @@
 //  1. build a charater map out of string A and string B.
 //  2. compare all the characters inside the two maps.
 
-// so first we need to make a character map out of both stringA and stringB
+// so first we need to make a character map out of both stringA and stringB.
+// However, we dont want to build two for loops.
+// Instead, we need to write a helper function (a seperate function that works with the main anagrams function) to build 
+// a character map for us. 
+
+// the helper function is going to build a character map for a given string.
+// we only have to write this logic one time and reuse it when we need it.
+// we create the function buildCharMap and pass a string into that function.
+// Inisde the helper function, we first create an empty object that will serve as out character map 
+// We then iterate through our string.
 
 
 function anagrams(stringA, stringB) {
 
+}
 
-
+function buildCharMap(string) {
+    const charMap = {};
 }
 
 
