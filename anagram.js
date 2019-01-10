@@ -18,6 +18,7 @@
 
 // What are the special components of these solutions?:  
 //     1. RegExp (i.e. )
+//     2. character maps
 
 // What needs work?
 //     1. 
@@ -58,8 +59,12 @@
 // other one.
 
 // one gotcha though when using character maps like this.
-// when you want to compare the two character maps of "hello" and "lleho",
+// when you want to compare the two character maps of "hello" and "lleho", you might think first iterate through the object with 
+// the letters and then compare all the properties and values of "lleho"
 
+// If you had "hellos" (with an added s) and "lleho" (no s), and you loop through the "hellos" object, the loop would gop through 
+// letter, BUT when it came to the s in "hellos", it would essentially be missed.  The basic solution would be to count the characters
+// or the keys in the object.
 
 
 
