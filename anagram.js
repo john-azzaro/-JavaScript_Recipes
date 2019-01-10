@@ -107,3 +107,6 @@
 
 // Solution 1 /////////////////////////////////
 
+function anagrams(stringA, stringB) {
+    
+}
