@@ -32,11 +32,35 @@
 // RegExp (regular expressions) can be used to manipulate strings and very easily remove all spaces and exclaimation marks from a string.
 // 
 
-
     const word = "HI THERE!!!!";
     word.replace(/[^\w]/g, "").toLowerCase();
 
-word;
+
+
+// Another thing is to rememebr how we generally solve any question that involves strings and comparisons between them
+// is to generate character maps.  Character maps looks something like this:
+
+//                             {                                
+//                               H: 1,             
+//                               e: 3,
+//                               l: 2,
+//                               o: 1,
+//          "hello there" -->   "": 1,
+//                               t: 1,
+//                               h: 1,
+//                               r: 1,
+//                               !: 1
+//                              }
+
+//  One possible way to solve this question is to generate a character map out of both the strings you are given.
+// so if you are given the strings "hello" and "lleho", you would get the same character map.
+// so you could iterate over one fo the character maps and compare all the letters inside of it and then with all the ones in the 
+// other one.
+
+// one gotcha though when using character maps like this.
+// when you want to compare the two character maps of "hello" and "lleho",
+
+
 
 
 
