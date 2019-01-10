@@ -21,7 +21,7 @@
 //     2. character maps
 
 // What needs work?
-//     1. 
+//     1. RegExp dont seem to work correctly in VSCode.  Second solution carries until this is hammered out.
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -84,16 +84,26 @@
 // we only have to write this logic one time and reuse it when we need it.
 // we create the function buildCharMap and pass a string into that function.
 // Inisde the helper function, we first create an empty object that will serve as out character map 
-// We then iterate through our string.
+// We then iterate through our string, and for every character in our string we will add it to our character map.
+
+// but also remember that the string needs to be lowercase and needs to strip out spaces and any punctuation.
 
 
-function anagrams(stringA, stringB) {
+// function anagrams(stringA, stringB) {
 
-}
+// }
 
-function buildCharMap(string) {
-    const charMap = {};
-}
+// function buildCharMap(string) {
+//     const charMap = {};
+//     for (char of string.replace(/[^\w]/g), '').toLowerCase() {
+
+//     }
+// }
 
 
+
+
+
+
+// Solution 1 /////////////////////////////////
 
