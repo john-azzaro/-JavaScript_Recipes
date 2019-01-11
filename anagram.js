@@ -1,6 +1,6 @@
 "use strict";
 // OBJECTIVE ////////////////////////////////////////////////////////////////////////////////////////////////
-//     1. 
+//     1. check to see if two sentences have the same amount of characters.
 // SUMMARY //////////////////////////////////////////////////////////////////////////////////////////////////
 // What is the problem?:  
 //    1. Check to see if two provided strings are anagrams of each other.
@@ -21,7 +21,7 @@
 //     2. character maps
 
 // What needs work?
-//     1. RegExp dont seem to work correctly in VSCode.  Second solution carries until this is hammered out.
+//     1. RegExp dont seem to work correctly in VSCode.  Works in repl.it though, see right side for answers.
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -129,7 +129,7 @@ console.log(numbers);    // [ -4, 10, 270, 277, 376 ]
 
 
 function anagrams(stringA, stringB) {
-
+    return cleanString(stringA) === cleanString(stringB);            // true
 }
 
 function cleanString(string) {
