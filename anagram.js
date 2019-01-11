@@ -105,26 +105,26 @@
 
 
 
-// Solution 1 /////////////////////////////////
+// Solution 2 /////////////////////////////////
+
+// using .sort()
+// sort orders lowest to highest (default) and can be used not only with numbers but character as well.
+
 
 const numbers = [10,270, 376, -4, 277];
 numbers.sort();
 
-console.log(numbers);
+console.log(numbers);    // [ -4, 10, 270, 277, 376 ]
 
 
+// so for this solution, we'll take our two inputs, clean up both strings and punctuation, lowercase them, then sort them.
+// if the two sorted strings are identical then we can say we have an anagram.
 
-
-
-
-
-
-
-
-
+// first, we need 
 
 
 
 function anagrams(stringA, stringB) {
 
 }
+
