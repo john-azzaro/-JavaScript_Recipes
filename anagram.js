@@ -120,7 +120,11 @@ console.log(numbers);    // [ -4, 10, 270, 277, 376 ]
 // so for this solution, we'll take our two inputs, clean up both strings and punctuation, lowercase them, then sort them.
 // if the two sorted strings are identical then we can say we have an anagram.
 
-// first, we need 
+// first, we need make a function called cleanString, called with a string, and it will return the string
+// we use replace to clean the string up (i the first argument), then empty string as a second argument.
+// then toLowerCase().
+// now at this point, using .sort() is a method that belongs to arrays, not strings so we will have to temporarily convert to an array.
+// so we use .split() to turn into an array, sort it, then join it back together.
 
 
 
@@ -128,3 +132,6 @@ function anagrams(stringA, stringB) {
 
 }
 
+function cleanString(string) {
+    return string.replace(/[^\w]/g, "").toLowerCase().split('').sort('').join('');             // eeehhllort (in repl.it)
+}
