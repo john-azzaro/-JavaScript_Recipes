@@ -92,6 +92,7 @@ Math.sign(-4000)  // returns -1
     // again, using toString by splitting it and joining it back together, we are still working with a string.
     // To turn all of this back into a number, you can use the parseInt() function.
     //      parseInt(myNumber2.toString());
+    //
     // parseInt() takes a string (specifically, myNumber2.toString()) and it returns a number, or at least what it thinks is a number inside the string
     // once its turned back into a number, we can add something to it.
 
