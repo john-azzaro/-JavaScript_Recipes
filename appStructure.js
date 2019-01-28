@@ -63,6 +63,53 @@
 
 
 // IN JS ///////////////////////////////////////////////////////////////////////////
+/*
+
+
+
+function generateSectionOne()
+
+function displaySectionTwo(container) {
+    $(container).append(generateSectionTwo());
+}
+
+function displaySectionOne(container) {
+    $(container).append(generateSectionOne());
+}
+
+function displayMainPage() {
+    const main = $('main);
+    main.empty();
+    displaySectionOne(main);
+    displaySectionTwo(main);
+}
+
+function setUpEventHandlers() {
+    // for any buttons you have.
+}
+
+function initialize() {
+    setupEventHandlers();
+    displayMainPage();
+}
+
+$(initialize);
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
 
 
 
