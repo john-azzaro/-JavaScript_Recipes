@@ -65,9 +65,17 @@
 // IN JS ///////////////////////////////////////////////////////////////////////////
 /*
 
+function generateSectionTwo() {
+    return `
+        <section class="section-two">This is the content in the second section element</section>
+    `
+}
 
-
-function generateSectionOne()
+function generateSectionOne() {
+    return `
+        <section class="section-one">This is the content in the first section element</section>
+    `
+}
 
 function displaySectionTwo(container) {
     $(container).append(generateSectionTwo());
