@@ -114,11 +114,11 @@
 
 function addSubtract(number, numberToAdd, numberToSubtract) {
     let start = number;
-        console.log(`first, we start with the number ${start}`);
+        console.log(`First, we start with the number ${start}, which is the first slot of the call signature`);
     let add = start + numberToAdd;
-        console.log(`second, when we add ${start} to ${numberToAdd} we get ${add}`);
+        console.log(`Second, when we add ${start} to ${numberToAdd} (the second slot in the call signature), which gives us ${add}`);
     let subtract = add - numberToSubtract;
-        console.log(`and last, when we subtract ${numberToSubtract} from ${add}, we get ${subtract}`);
+        console.log(`Last, when we subtract ${numberToSubtract} (the third slot in the call signature) from ${add}, where we get ${subtract}`);
 }
 
 console.log(addSubtract(6,4,2))        //  first, we start with the number 6
