@@ -14,5 +14,11 @@
 //     1. jQuery
 
 // What needs work?
-//     1. 
+//     1. Currently, this is just a catch-all for interesting application structure examples from mentor meetings, research, discussions, etc.
+//        When the document is more rounded out, I'll organize it better.
 
+
+
+// Basic Structure from concept to code ////////////////////////////////////////
+
+// 
