@@ -20,5 +20,25 @@
 
 
 // Basic Structure from concept to code ////////////////////////////////////////
+/*
+    1. Initialization 
+    2. Initialize the application
+        2A. run setup event handlers
+        2B. run display main page
+    4. display main page
+        4A. run display header
+        4B. run display section
+        4C. run display footer
+    5. display header, section, and footer.
+    6. generate header, section, and footer.
 
-// 
+    
+
+
+
+
+
+
+
+
+*/
