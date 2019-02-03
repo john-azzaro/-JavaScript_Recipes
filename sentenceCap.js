@@ -49,4 +49,23 @@ SPECIAL METHODS IN THE JAVASCRIPT LIBRARY WE CAN POTENTIALLY USE:
             
             console.log(sliceItUp("take"));   
            
-         
+
+
+
+///// FIRST SOLUTION ///////////////////////////////////////
+/*
+    1. make an empty array of words.
+    2. split the input string by spaces to get an array.
+    3. for each word in the array:
+        3A. upper case the first letter in the word.
+        3B. join the first letter with the rest of the word
+        3C. Push result into 'words'
+
+
+
+
+*/
+
+      function capitalization(string) {
+
+      }
