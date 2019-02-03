@@ -83,11 +83,16 @@ SPECIAL METHODS IN THE JAVASCRIPT LIBRARY WE CAN POTENTIALLY USE:
         3C. Push result into 'words'
     4. Join 'words' into a string and return it.
 
-
-
 */
 
         function capitalization(string) {
             const words = [];
-        
+            for (let word of string.split(' ')) {
+                // this is saying the first word (which has been previously split) is uppercase, the following letters in the word
+                // (i.e. 1 onwards) are added to the end of it.
+            words.push(word[0].toUpperCase() + word.slice(1));
+            }
+            // once you iterate through each word in the array, you need to join them all together (remember to add that space!).
+            return words.join(' ');
         }
+        console.log(capitalization("nice weather we're having isnt it?"));
