@@ -15,7 +15,8 @@
 //     1. 
 
 // What are the special components of these solutions?:  
-//     1. .slice()
+//     1. .slice() - also note the difference between word.slice('') and word.slice(' ') i.e. the space between the quotatation.
+//                   to put a space between the qutation will seperate the WORD while no space will seperate all the letters.
 
 // What needs work?
 //     1. 
@@ -55,17 +56,38 @@ SPECIAL METHODS IN THE JAVASCRIPT LIBRARY WE CAN POTENTIALLY USE:
 ///// FIRST SOLUTION ///////////////////////////////////////
 /*
     1. make an empty array of words.
+            first we start with an empty array called words which will store the end result of the capitalized word 
+            we are looking for.
     2. split the input string by spaces to get an array.
+            when we loop through our string so we need to split it by spaces.
+            the way we can do this is with:
+                string.split(" ") // note the space between the quotation marks.
+                so in the example below:
+*/
+            function splitSentenceUp(string) {
+               const sentence = string;
+               return sentence.split("");
+            }
+            console.log(splitSentenceUp("Hi there fellas!"));   
+
+            function splitSentenceUpByWords(string) {
+                const sentence = string;
+                return sentence.split(" ");
+            }
+            console.log(splitSentenceUpByWords("Hi there again fellas!"));
+
+/*                
     3. for each word in the array:
         3A. upper case the first letter in the word.
         3B. join the first letter with the rest of the word
         3C. Push result into 'words'
-
+    4. Join 'words' into a string and return it.
 
 
 
 */
 
-      function capitalization(string) {
-
-      }
+        function capitalization(string) {
+            const words = [];
+        
+        }
