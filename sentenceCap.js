@@ -37,10 +37,16 @@ SPECIAL METHODS IN THE JAVASCRIPT LIBRARY WE CAN POTENTIALLY USE:
             - it can take anumber of elements out of a string.
 
             The way we use a string is using the arguments in that method to isolate sections of the string.
-            So in string.slice(begin index) 
-
-
-
-
-
+            So in string.slice(begin, end).
 */
+//         In the example:
+           
+            function sliceItUp(word) {
+               const remainder = word.slice(1);
+               const upper = word[0].toUpperCase();
+               return upper + remainder;
+            }
+            
+            console.log(sliceItUp("take"));   
+           
+         
