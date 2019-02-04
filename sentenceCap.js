@@ -96,3 +96,25 @@ SPECIAL METHODS IN THE JAVASCRIPT LIBRARY WE CAN POTENTIALLY USE:
             return words.join(' ');
         }
         console.log(capitalization("nice weather we're having isnt it?"));
+
+
+//// SECOND SOLUTION //////////////////////////////////////
+/*
+    1. create an empty string called 'result'.
+    2. for each character in the string:
+        2A. IF the character to the left is a space, then... capitalize and add to result.
+        2B. ELSE add to result.
+            
+
+
+
+
+*/
+
+
+
+
+
+        function capitalization2(string) {
+
+        }
