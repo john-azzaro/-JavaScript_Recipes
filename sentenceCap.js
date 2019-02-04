@@ -132,3 +132,5 @@ SPECIAL METHODS IN THE JAVASCRIPT LIBRARY WE CAN POTENTIALLY USE:
             }
             return result;
         }
+
+        console.log(capitalization2("the cat in the hat"));
