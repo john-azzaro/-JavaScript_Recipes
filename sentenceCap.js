@@ -107,7 +107,7 @@ SPECIAL METHODS IN THE JAVASCRIPT LIBRARY WE CAN POTENTIALLY USE:
 
 */
 
-        function capitalization2(string) {
+        function capitalization2DEMO(string) {
             // below, for the first letter in the string it needs to be capitalized, so the 0 index is upper cased...
             let result = string[0].toUpperCase();
             // then we iterate through our string...
@@ -118,6 +118,19 @@ SPECIAL METHODS IN THE JAVASCRIPT LIBRARY WE CAN POTENTIALLY USE:
                     result += string[i].toUpperCase();
                 } 
                 // if the character is not a space, then just add it to the result.
+                else {
+                    result += string[i];
+                }
+            }
+            return result;
+        }
+
+        function capitalization2DEMO(string) {
+            let result = string[0].toUpperCase();
+            for (let i=1; i <= string.length; i++) {
+                if (string[i - 1] === ' ') {
+                     result += string[i].toUpperCase();
+                } 
                 else {
                     result += string[i];
                 }
