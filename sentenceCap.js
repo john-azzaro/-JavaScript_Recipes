@@ -104,16 +104,8 @@ SPECIAL METHODS IN THE JAVASCRIPT LIBRARY WE CAN POTENTIALLY USE:
     2. for each character in the string:
         2A. IF the character to the left is a space, then... capitalize and add to result.
         2B. ELSE add to result.
-            
-
-
-
 
 */
-
-
-
-
 
         function capitalization2(string) {
             // below, for the first letter in the string it needs to be capitalized, so the 0 index is upper cased...
