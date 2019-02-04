@@ -12,7 +12,7 @@
 //                capitalize('a lazy fox')        =>  A Lazy Fox
 
 // What is the BEST solution? 
-//     1. 
+//     1. first solution seesm to be the most straight forward
 
 // What are the special components of these solutions?:  
 //     1. .slice() - also note the difference between word.slice('') and word.slice(' ') i.e. the space between the quotatation.
