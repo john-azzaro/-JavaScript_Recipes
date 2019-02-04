@@ -100,7 +100,7 @@ SPECIAL METHODS IN THE JAVASCRIPT LIBRARY WE CAN POTENTIALLY USE:
 
 //// SECOND SOLUTION //////////////////////////////////////
 /*
-    1. create an empty string called 'result'.
+    1. create 'result' which is the first character of the input string capitalized.
     2. for each character in the string:
         2A. IF the character to the left is a space, then... capitalize and add to result.
         2B. ELSE add to result.
@@ -116,5 +116,19 @@ SPECIAL METHODS IN THE JAVASCRIPT LIBRARY WE CAN POTENTIALLY USE:
 
 
         function capitalization2(string) {
-
+            // below, for the first letter in the string it needs to be capitalized, so the 0 index is upper cased...
+            let result = string[0].toUpperCase();
+            // then we iterate through our string...
+            for (let i=1; i <= string.length; i++) {
+                // if the the letter to the left of the current character (i.e. i minus 1) is (i.e. ===) a space (i.e. ' ')
+                if (string[i - 1] === ' ') {
+                    // then take the current character (i.e. string[i]) and uppercase it (i.e. toUpperCase()) and add it to result (result +=)...
+                    result += string[i].toUpperCase();
+                } 
+                // if the character is not a space, then just add it to the result.
+                else {
+                    result += string[i];
+                }
+            }
+            return result;
         }
