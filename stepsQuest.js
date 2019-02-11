@@ -32,6 +32,33 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+///// SOLUTION 1   ////////////////
+/* 
+    1. from 0 to n,
+        2. create an empty string, 'stair'.
+        3. from 0 to n,
+            4. IF the current column is equal to or less than the current row...
+                5. add a '#' to 'stair'.
+            6. ELSE, add a space to "stair".
+        7. console.log 'stair.'
+
+*/
+
+
+
 function steps(n) {
-    
+    for (let row = 0; row < n; row++) {
+        let stair = "";
+
+        for (let column = 0; column < n; column++) {
+            if (column <= row) {
+                stair += '#';
+            } else {
+                stair += " ";
+            }
+        }
+        console.log(stair);
+    }
 }
+
+console.log(steps(12));
