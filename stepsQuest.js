@@ -24,7 +24,8 @@
 //     1. 
 
 // What are the special components of these solutions?:  
-//     1. 
+//     1. for loop (nested)
+//     2. (small note) incrementing string by +=
 
 // What needs work?
 //     1. 
