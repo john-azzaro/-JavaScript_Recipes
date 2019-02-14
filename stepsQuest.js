@@ -82,10 +82,24 @@ console.log(steps(12));
 // so lets pass in the number "n"
 // in the first "if" statement, IF n is equal to 0, then we simply RETURN... we want to do NO MORE WORK during the recursion process.
 
+// nailing your base case like this is absolutely critical during the recursion process.
+// its important to think about your base case in general.
+// some people try to do the base case at the end and it will end up in an infinite recursive solution that difficult to debug.
+
+// so after we do the initial if statement, we do some amount of work and then call the function again.
+// in this case, the work that we want to do is to print out the current number.
+// THEN, we call the function again.
+
+// When we call the function again, it is critical to make sure that we have changed the arguments is some fashion.
+
 function printNumber(n) {
+    // if we meet the base case (i.e. if n is equal to zero, do no more work in the recursive process)
     if (n === 0) {
         return;
     }
+    // the work we want to do is print out the current number.
+    console.log(n);
+    // then call our function again.
 }
 
 printNumber(10);
