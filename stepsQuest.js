@@ -66,4 +66,10 @@ console.log(steps(12));
 
 
 /////// SOLUTION 2 (recursive) //////////
+// REFRESHER ON RECURSION: With recursion, we start off with a function of some type, in this case "printNumber"
+
+function printNumber() {
+
+}
+
 
