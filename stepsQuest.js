@@ -66,10 +66,14 @@ console.log(steps(12));
 
 
 /////// SOLUTION 2 (recursive) //////////
-// REFRESHER ON RECURSION: With recursion, we start off with a function of some type, in this case "printNumber"
+// REFRESHER ON RECURSION: 
+
+// USING RECURSION IN A FUNCTION ////////
+//With recursion, we start off with a function of some type, in this case "printNumber"
 // Now lets imagine that we want to make a recursive function called printNumber and that we should be able to pass this function
 // a number and it will print from that number down to zero (i.e. printNumber(10).
 
+// IDENTIFYING THE BASE /////////////////
 // So the first thing we always do with a recursive solution is to identify a "base".
 // a base case is a case in which we decide there is no more work for us to do and its time to return and stop the recursion process.
 // so without thinking about the term base case or anything like that, think back to the description 
@@ -79,18 +83,21 @@ console.log(steps(12));
 // so to think of a base case situation, if the number that is being passed to the function (i.e. what argument we are passing is) is equal to zero, 
 // that means there is nothing else we need to do, we have hit the base case and we want to STOP RECURSION.
 
+// SETTING UP OUR FUNCTION /////////////
 // so lets pass in the number "n"
 // in the first "if" statement, IF n is equal to 0, then we simply RETURN... we want to do NO MORE WORK during the recursion process.
-
 // nailing your base case like this is absolutely critical during the recursion process.
 // its important to think about your base case in general.
 // some people try to do the base case at the end and it will end up in an infinite recursive solution that difficult to debug.
 
+// AFTER THE FIRST IF STATMENT /////////
 // so after we do the initial if statement, we do some amount of work and then call the function again.
 // in this case, the work that we want to do is to print out the current number.
 // THEN, we call the function again.
 
 // When we call the function again, it is critical to make sure that we have changed the arguments is some fashion.
+// so if we call printNumber again with n, we are going to enter an infinite loop because we have not chnaged the arguments and the exact same code 
+// path will occur
 
 function printNumber(n) {
     // if we meet the base case (i.e. if n is equal to zero, do no more work in the recursive process)
