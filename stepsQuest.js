@@ -63,3 +63,7 @@ function steps(n) {
 }
 
 console.log(steps(12));
+
+
+/////// SOLUTION 2 (recursive) //////////
+
