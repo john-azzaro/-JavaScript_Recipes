@@ -67,9 +67,18 @@ console.log(steps(12));
 
 /////// SOLUTION 2 (recursive) //////////
 // REFRESHER ON RECURSION: With recursion, we start off with a function of some type, in this case "printNumber"
+// Now lets imagine that we want to make a recursive function called printNumber and that we should be able to pass this function
+// a number and it will print from that number down to zero (i.e. printNumber(10).
+
+
+// So the first thing we always do with a recursive solution is to identify a "base".
+// a base case is a case in which we decide there is no more work for us to do and its time to return and stop the recursion process.
+// so without thinking about the term base case or anything like that, think back to the description 
 
 function printNumber() {
 
 }
+
+printNumber(10);
 
 
