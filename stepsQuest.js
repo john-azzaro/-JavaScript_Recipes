@@ -70,13 +70,22 @@ console.log(steps(12));
 // Now lets imagine that we want to make a recursive function called printNumber and that we should be able to pass this function
 // a number and it will print from that number down to zero (i.e. printNumber(10).
 
-
 // So the first thing we always do with a recursive solution is to identify a "base".
 // a base case is a case in which we decide there is no more work for us to do and its time to return and stop the recursion process.
 // so without thinking about the term base case or anything like that, think back to the description 
+// so when we evoke the function printNumber, we want to go from whatever number is passed (i.e. 10) and then go all the way down to zero
+// and then at zero we stop and we do no more work.
 
-function printNumber() {
+// so to think of a base case situation, if the number that is being passed to the function (i.e. what argument we are passing is) is equal to zero, 
+// that means there is nothing else we need to do, we have hit the base case and we want to STOP RECURSION.
 
+// so lets pass in the number "n"
+// in the first "if" statement, IF n is equal to 0, then we simply RETURN... we want to do NO MORE WORK during the recursion process.
+
+function printNumber(n) {
+    if (n === 0) {
+        return;
+    }
 }
 
 printNumber(10);
