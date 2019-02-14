@@ -118,7 +118,9 @@ printNumber(10);
 // THINGS TO KEEP IN MIND ABOUT RECUSION //////////////
 // 1. figure out the bare minium pieces of information to represetn your problem (i.e. the current counter which is n - 1).
 // 2. give reasonable defaults to the bare minimum pieces of info (i.e. we provided the number 10 and we want to subtract 1 from that number).
-// 3. check the base case
+// 3. check the base case.  is there any work to do? if not, return.
+// 4. if we do NOT meet the base case, we do some work (i.e. console.log(n)).  Then we call the function again, making sure the arguments have 
+//    changed in some fashion (otherwise we end up in an inifinte recursive issue and it crashes the browser).
 
 
 
