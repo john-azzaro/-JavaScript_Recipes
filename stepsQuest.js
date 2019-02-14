@@ -42,7 +42,6 @@
                 5. add a '#' to 'stair'.
             6. ELSE, add a space to "stair".
         7. console.log 'stair.'
-
 */
 
 
