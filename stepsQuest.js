@@ -95,9 +95,12 @@ console.log(steps(12));
 // in this case, the work that we want to do is to print out the current number.
 // THEN, we call the function again.
 
+// MAKE SURE TO CHANGE ARGUMENTS WHEN WE CALL FUNCTION AGAIN ///////////
 // When we call the function again, it is critical to make sure that we have changed the arguments is some fashion.
 // so if we call printNumber again with n, we are going to enter an infinite loop because we have not chnaged the arguments and the exact same code 
 // path will occur
+
+
 
 function printNumber(n) {
     // if we meet the base case (i.e. if n is equal to zero, do no more work in the recursive process)
@@ -106,9 +109,31 @@ function printNumber(n) {
     }
     // the work we want to do is print out the current number.
     console.log(n);
-    // then call our function again.
+    // then call our function again but chnage the argument to n MINUS 1 (i.e. the the argument has been changed).
+    printNumber(n - 1);
 }
 
 printNumber(10);
 
+// THINGS TO KEEP IN MIND ABOUT RECUSION //////////////
+// 1. figure out the bare minium pieces of information to represetn your problem (i.e. the current counter which is n - 1).
+// 2. give reasonable defaults to the bare minimum pieces of info (i.e. we provided the number 10 and we want to subtract 1 from that number).
+// 3. check the base case
 
+
+
+
+
+// ON REASONABLE DEFAULTS /////////////
+// if there are any optional inputs, like passing decriment with a default of 1 (i.e. dec = 1) give some reasonable default input to them.
+// in this case, the dec is 1 and we use dec in our counter.
+
+function printNumber2(n, dec = 1) {
+    if (n === 0) {
+        return;
+    }
+    console.log(n);
+    printNumber(n - dec);
+}
+
+printNumber2(10);
