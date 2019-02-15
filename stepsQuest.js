@@ -146,14 +146,50 @@ printNumber2(10);
 // if the 'stair' string has a length === n, then we are at the then of a row.
 // if the length of the stair string is less than or equal to the row number we're working on, we add a '#', otherwise add a space.
 
-function steps2(n, row = 0, stair = '') {
+
+
+
+
+function stepsDemo(n, row = 0, stair = '') {
     if (n === row) {
         return;
     }
-    
     else if (n === stair.length) {
         console.log(stair);
         steps2(n, row + 1);
         return;
     }
+    else if (stair.length <= row) {
+        stair += '#'
+    }
+    else {
+        stair += '';
+    }
+    steps2(n, row, stair);
+}
+
+
+
+
+
+
+
+
+
+function steps2(n, row = 0, stair = '') {
+    if (n === row) {
+        return;
+    }
+    else if (n === stair.length) {
+        console.log(stair);
+        steps2(n, row + 1);
+        return;
+    }
+    else if (stair.length <= row) {
+        stair += '#'
+    }
+    else {
+        stair += '';
+    }
+    steps2(n, row, stair);
 }
