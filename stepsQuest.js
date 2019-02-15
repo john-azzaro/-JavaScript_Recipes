@@ -142,9 +142,9 @@ printNumber2(10);
 
 ///// SOLUTION 2 /////////////////////////////////////
 
-//
-
-
+// if (row === n), then we have hit the end of our problem.
+// if the 'stair' string has a length === n, then we are at the then of a row.
+// if the length of the stair string is less than or equal to the row number we're working on, we add a '#', otherwise add a space.
 
 function steps2(n, row = 0, stair = '') {
     if (n === row) {
