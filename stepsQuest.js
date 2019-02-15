@@ -149,16 +149,19 @@ printNumber2(10);
 
 
 
-
+// the first time we call steps, we have n (i.e. 1,2,3,4 or whatever) but for now its 0, we have a row of 0, and a stair of empty string.
 function stepsDemo(n, row = 0, stair = '') {
+    // then we ask "is n equal to row?".  in this case no its not because n is equal to some number we put in.  but remember this is the BASE.   
     if (n === row) {
         return;
     }
+    // then we ask "is n equal to stair.length".  no its not, because as of now stair is equal to empty string (last parameter in the arguments)
     else if (n === stair.length) {
         console.log(stair);
         steps2(n, row + 1);
         return;
     }
+   // then we ask "is stair.length less than or equal to row".  At this point, it IS (row is still 0 and stair is still an empty string)!  
     else if (stair.length <= row) {
         stair += '#'
     }
