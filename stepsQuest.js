@@ -146,6 +146,26 @@ printNumber2(10);
 // if the 'stair' string has a length === n, then we are at the then of a row.
 // if the length of the stair string is less than or equal to the row number we're working on, we add a '#', otherwise add a space.
 
+function steps2(n, row = 0, stair = '') {
+    if (n === row) {
+        return;
+    }
+    else if (n === stair.length) {
+        console.log(stair);
+        steps2(n, row + 1);
+        return;
+    }
+    else if (stair.length <= row) {
+        stair += '#'
+    }
+    else {
+        stair += '';
+    }
+    steps2(n, row, stair);
+}
+
+
+
 
 
 // FIRST PASS //
@@ -174,6 +194,9 @@ function stepsDemo(n, row = 0, stair = '') {
     steps2(n, row, stair);
 }
 
+// so the result so far is a '#'.
+
+
 
 // SECOND PASS //
 
@@ -186,7 +209,7 @@ function stepsDEMO(n, row = 0, stair = '') {
     // This does not apply, move on...
     else if (n === stair.length) {
         console.log(stair);
-        steps2(n, row + 1);
+        stepsDemo(n, row + 1);
         return;
     }
     // Now when we get here, stair has a length of 1, which is NOT less than or equal to row (which is still 0)
@@ -198,26 +221,51 @@ function stepsDEMO(n, row = 0, stair = '') {
         stair += '';
     }
     // then we call steps again.
-    steps2(n, row, stair);
+    stepsDemo(n, row, stair);
 }
 
+// the result on this second pass is a '# ' (and a space!).
+
 // THIRD PASS //
-
-
-
-
-
-
-
-
-
-
-function steps2(n, row = 0, stair = '') {
+// so at this point we have '# ' (with a space).
+function stepsDemo(n, row = 0, stair = '') {
+    // not relevant...
     if (n === row) {
         return;
     }
+    // not relevant...
     else if (n === stair.length) {
         console.log(stair);
+        steps2(n, row + 1);
+        return;
+    }
+    // here, stair.length is equal to 2 (so NOT relevant since 2 is NOT less than or equal to row), so we push down to the ending else...
+    else if (stair.length <= row) {
+        stair += '#'
+    }
+    // we add on an additional space...
+    else {
+        stair += '';
+    }
+    // call stepsDemo again...
+    stepsDemo(n, row, stair);
+}
+
+// the result of this third pass is a '#  ' (this time with 2 spaces!).
+
+
+// FOURTH PASS //
+// now suppose that n is equal to 3...
+function stepsDemo(n, row = 0, stair = '') {
+    // does not apply...
+    if (n === row) {
+        return;
+    }
+    // This DOES apply since n (which we say is 3) is equal to stair.length (i.e. the pound with two spaces).
+    else if (n === stair.length) {
+        // we log out stair (i.e. new line)...
+        console.log(stair);
+        // cwe then return from this function (do no other work), call the function with the n being 3 (i.e. what we stipulate) and add a row!
         steps2(n, row + 1);
         return;
     }
@@ -227,5 +275,11 @@ function steps2(n, row = 0, stair = '') {
     else {
         stair += '';
     }
-    steps2(n, row, stair);
+    stepsDemo(n, row, stair);
 }
+
+
+
+
+
+
