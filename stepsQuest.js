@@ -148,6 +148,7 @@ printNumber2(10);
 
 
 
+// FIRST PASS //
 
 // the first time we call steps, we have n (i.e. 1,2,3,4 or whatever) but for now its 0, we have a row of 0, and a stair of empty string.
 function stepsDemo(n, row = 0, stair = '') {
@@ -163,13 +164,45 @@ function stepsDemo(n, row = 0, stair = '') {
     }
    // then we ask "is stair.length less than or equal to row".  At this point, it IS (row is still 0 and stair is still an empty string)!  
     else if (stair.length <= row) {
+        // because it is, we add a '#'
         stair += '#'
     }
     else {
         stair += '';
     }
+    // then we call steps again but this time n (of whatever it is), a row still = 0, but now a stair with a '#' instead of being empty.
     steps2(n, row, stair);
 }
+
+
+// SECOND PASS //
+
+// then we call steps again but this time n (of whatever it is), a row still = 0, but now a stair with a '#' instead of being empty.
+function stepsDEMO(n, row = 0, stair = '') {
+    // This does not apply, move on...
+    if (n === row) {
+        return;
+    }
+    // This does not apply, move on...
+    else if (n === stair.length) {
+        console.log(stair);
+        steps2(n, row + 1);
+        return;
+    }
+    // Now when we get here, stair has a length of 1, which is NOT less than or equal to row (which is still 0)
+    else if (stair.length <= row) {
+        stair += '#'
+    }
+    // since all of the above do not apply, we add a space to stair!
+    else {
+        stair += '';
+    }
+    // then we call steps again.
+    steps2(n, row, stair);
+}
+
+// THIRD PASS //
+
 
 
 
