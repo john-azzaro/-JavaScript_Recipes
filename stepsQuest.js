@@ -64,7 +64,7 @@ function steps(n) {
 console.log(steps(12));
 
 
-/////// SOLUTION 2 (recursive) //////////
+/////// SOLUTION 2 PRIMER (recursive) //////////
 // REFRESHER ON RECURSION: 
 
 // USING RECURSION IN A FUNCTION ////////
@@ -123,8 +123,6 @@ printNumber(10);
 
 
 
-
-
 // ON REASONABLE DEFAULTS /////////////
 // if there are any optional inputs, like passing decriment with a default of 1 (i.e. dec = 1) give some reasonable default input to them.
 // in this case, the dec is 1 and we use dec in our counter.
@@ -138,3 +136,24 @@ function printNumber2(n, dec = 1) {
 }
 
 printNumber2(10);
+
+
+
+
+///// SOLUTION 2 /////////////////////////////////////
+
+//
+
+
+
+function steps2(n, row = 0, stair = '') {
+    if (n === row) {
+        return;
+    }
+    
+    else if (n === stair.length) {
+        console.log(stair);
+        steps2(n, row + 1);
+        return;
+    }
+}
