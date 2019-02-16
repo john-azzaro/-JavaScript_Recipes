@@ -224,6 +224,7 @@ function variablesReplaceFlipPrint(string) {
     print(flipped); 
 }
 
+console.log("// variablesReplaceFlipPrint result:")
 variablesReplaceFlipPrint("this is a tester string for variablesReplaceFlipString");
 
 
