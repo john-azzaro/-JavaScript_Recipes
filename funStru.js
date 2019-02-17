@@ -197,6 +197,7 @@ function replaceFlipPrint(string) {
     print(flip(replace(string)));
 }
 
+console.log("// RFP RESULT:")
 replaceFlipPrint("this is a tester string for replaceFlipPrint");
 
 
@@ -219,16 +220,13 @@ function replace(string) {
  }
 
 function variablesReplaceFlipPrint(string) {
-    let replaced = replace(string);
-    let flipped = flip(replaced);
+    // let replaced = replace(string);     // replaced is not used in this example
+    let flipped = flip(string);
     print(flipped); 
 }
 
-console.log("// variablesReplaceFlipPrint result:")
+console.log("// VRP RESULT:")
 variablesReplaceFlipPrint("this is a tester string for variablesReplaceFlipString");
-
-
-
 
 
 
