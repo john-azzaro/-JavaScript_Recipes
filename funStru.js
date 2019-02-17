@@ -203,6 +203,26 @@ replaceFlipPrint("this is a tester string for replaceFlipPrint");
 
 
 
+/// EXAMPLE 2 /////////////////
+
+function replaceIt(string) {
+    return string.replace("this", "that");
+}
+
+function capitalizeIt(string) {
+    return string.toUpperCase();
+}
+
+function printIt(string) {
+    return console.log(string)
+}
+
+function repAndCap(string) {
+    printIt(capitalizeIt(replaceIt(string)));
+}
+
+console.log(repAndCap("this is a test"))
+
 
 
 
