@@ -203,7 +203,11 @@ replaceFlipPrint("this is a tester string for replaceFlipPrint");
 
 
 
-/// EXAMPLE 2 /////////////////
+
+
+
+
+/// EXAMPLE 2 /////////////////////////
 
 function replaceIt(string) {
     return string.replace("this", "that");
@@ -226,6 +230,10 @@ console.log(repAndCap("this is a test"))
 
 
 
+
+
+/// EXAMPLE 3 ///////////////////////////
+// note: replaced is not used in the example
 
 function flip(string) {
     return string.split('').reverse().join('');
@@ -250,6 +258,52 @@ variablesReplaceFlipPrint("this is a tester string for variablesReplaceFlipStrin
 
 
 
+
+
+
+
+
+///// EXAMPLE 4 //////////////////////////////
+
+function print(string) {
+    console.log(string)
+}
+
+function capitalize(string) {
+    return string.toUpperCase();
+}
+
+function replaceIt(string) {
+    return string.replace('this', 'that');
+}
+
+function reverse(string) {
+    return string.split('').reverse().join('');
+}
+
+function replaceAndCapIt(string) {
+    return capitalize(replaceIt(string))
+}
+
+function reverseAndPrint(string) {
+    print(reverse(string));
+}
+
+
+console.log("// step 1: test replace a word")
+console.log(replaceIt("this is a test of replace"))
+
+console.log("// step 2: test capitalize a string");
+console.log(capitalize("this is a test of capitalization"));
+
+console.log("// step 3: test of reverse a string");
+console.log(reverse("this is a test of reverse"));
+
+console.log("// step 4: test replace and Capitalization");
+console.log(replaceAndCapIt("this is a test of replace and cap"));
+
+console.log("// step 5 test reverse and print");
+console.log(reverseAndPrint("This is a test of reverse and print"));
 
 
 
