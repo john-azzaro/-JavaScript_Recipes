@@ -306,6 +306,32 @@ console.log("// step 5 test reverse and print");
 console.log(reverseAndPrint("This is a test of reverse and print"));
 
 
+///// EXAMPLE 5 //////////////////////////////////
+
+
+function theGrade(num) {              
+    let input = num;                  
+    let storedGrade = "F";            
+    if (input >= 90) {
+        storedGrade = "A"
+    } else {
+        storedGrade = "Below A"
+    }
+    console.log(`you scored ${input} which ranks ${storedGrade}`);
+    return storedGrade;
+    
+}
+
+function gradeQuote(num) {
+    if (num === "A") {
+        console.log("You got an A (score greate than 90)!")
+    } else {
+        console.log("you got below an A, which is still great!")
+    } 
+}
+
+gradeQuote(theGrade(90))
+gradeQuote(theGrade(85))
 
 
 
@@ -343,14 +369,6 @@ console.log(replaceFlipPrint2("This is a tester 2"))
 
 // scratch
 
-// function collectData() {
-//     const numbers = [1,2,3,4,5];
-//     const string = "This is a mighty string";
-//     const putEmTogether = [...numbers] + [...string];
-//     console.log(putEmTogether);
-// }
-
-// console.log(collectData());
 
 // useful problem solving strategies
 
