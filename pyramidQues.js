@@ -46,4 +46,15 @@ Solving the problem
   7.         Add a space to 'Level'
   8.    Console lod 'stair'
 
+
+ The general algorithm we used in steps will still be useful here.
+
+ 1. First, we iterate through the number of rows we have.  If there are three rows (i.e. n=3), we start off at 0, then 1 and 2.
+ 2. Second, for each one of those rows we'll create an empty string.
+ 3. For the columns, you need to decide if that column should be given a # so we create an inner for-loop.
+ 4. ...
+
 */
+
+
+
