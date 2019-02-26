@@ -2,6 +2,8 @@
 // OBJECTIVE ////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. write a function that accepts a positive number N.  The function should console lof a pyramid style
 //        shape with N levels using the # character.  Make sure the pyramid has spacies on both the left and right sides.
+//        Note: This question is closely related to the steps question
+
 //
 //        Example 1:
 //                   pyramid(1)
@@ -16,7 +18,6 @@
 //                         " ### "
 //                         "#####"
 //                       
-
 
 // SUMMARY //////////////////////////////////////////////////////////////////////////////////////////////////
 // What is the problem?:  
@@ -34,6 +35,15 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /* 
-Note that this is related to the steps question
+Solving the problem
+
+  1. From 0 to n (iterate through the rows)
+  2.    Create  an empty string called "level"
+  3.    From 0 to ?? (columns)...
+  4.      IF the column should have a #...
+  5.         Add a '#' to 'Level'
+  6.      ELSE
+  7.         Add a space to 'Level'
+  8.    Console lod 'stair'
 
 */
