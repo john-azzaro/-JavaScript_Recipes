@@ -52,9 +52,22 @@ Solving the problem
  1. First, we iterate through the number of rows we have.  If there are three rows (i.e. n=3), we start off at 0, then 1 and 2.
  2. Second, for each one of those rows we'll create an empty string.
  3. For the columns, you need to decide if that column should be given a # so we create an inner for-loop.
- 4. ...
+ 4. for the logic to come, we take n, double it, then subtract 1.
 
 */
 
 
+function pyramid(n) {
+    for (let row = 0; row < n; row++ ) {              // First, we iterate through the number of rows we have. 
+        let level = '';                               // for each row that we create (i.e. level)...
+                                                    
+        for (let column = 0; column < 2 * n - 1; column++) {          // take care of the correct number of columns but taking n x2 plus 1...
 
+        }
+    }
+}
+
+
+
+
+console.log(pyramid())
