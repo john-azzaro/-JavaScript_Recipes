@@ -53,7 +53,15 @@ Solving the problem
  2. Second, for each one of those rows we'll create an empty string.
  3. For the columns, you need to decide if that column should be given a # so we create an inner for-loop.
  4. for the logic to come, we take n, double it, then subtract 1.
+ 5. then find the mid point of the columns (i.e. the midpoint index of [1,2,3,4,5] which would be 3) 
+        //  for example:       const columns = [0,1,2,3,4];
+        //                     const row = 0;
+        //
+        //                      Math.floor(5/2)     
 
+
+
+        
 */
 
 
@@ -71,3 +79,5 @@ function pyramid(n) {
 
 
 console.log(pyramid())
+
+
