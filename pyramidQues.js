@@ -87,4 +87,17 @@ console.log(pyramid(10));
 
 
 
+// SOLUTION 2 (using recursion) //////////////////////////////
+
+
+// function pyramid2(n, row = 0, level = "") {     // we use n, which row we are currently looking at, and some given level (as an empty string).
+//     if (row === n) {                             // first we make sure we set up our base case correctly.  when row is equal to n...
+//        return;                                   // we return and stop calling pyramid.
+    
+//     // if (level.length === 2 * n - 1 ) {           // this next if statement will detect when we are et the end of a level.
+//     //     console.log(level);                      
+//     // }
+// }
+
+// console.log(pyramid2(10));
 
