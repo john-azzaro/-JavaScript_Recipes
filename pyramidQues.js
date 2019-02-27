@@ -61,23 +61,30 @@ Solving the problem
 
 
 
-        
+
 */
 
 
 function pyramid(n) {
+    const midpoint = Math.floor((2 * n - 1) / 2)      // calculate the midpoint of the row (which changes depending on n)
     for (let row = 0; row < n; row++ ) {              // First, we iterate through the number of rows we have. 
-        let level = '';                               // for each row that we create (i.e. level)...
-                                                    
-        for (let column = 0; column < 2 * n - 1; column++) {          // take care of the correct number of columns but taking n x2 plus 1...
-
+        let level = '';                               // for each row that we create (i.e. level)...                                              
+        for (let column = 0; column < 2 * n - 1; column++) {          // iterating through list of columns (take care of the correct number of columns but taking n x2 plus 1)...
+        //    const midpoint = Math.floor((2 * n - 1) / 2)               // we calculate n at the top of our function 
+            if (midpoint - row <= column && midpoint + row >= column)   {      // now we need row elements to left and right of midpoint  
+                level += '#';
+            } else {
+                level += '';
+            }
         }
+        console.log(level);
     }
 }
 
+console.log(pyramid(10));
+
+// however, this solution does not seem to return the desired results.
 
 
-
-console.log(pyramid())
 
 
