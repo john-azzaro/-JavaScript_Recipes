@@ -68,7 +68,7 @@ console.log(vowels("hello there"));  // 4
 
 function vowels2(str) {
     let count = 0;
-    const checkVowels = ["a", "e", "i", "o", "u"];
+    const checkVowels = ["a", "e", "i", "o", "u"];    // also keep in mind that you can also use discrete substrings like "abc" as well.
     for (let char of str.toLowerCase()) {
         if (checkVowels.includes(char)) {
             count++;
