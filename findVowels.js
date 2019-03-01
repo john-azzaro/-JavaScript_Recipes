@@ -44,26 +44,33 @@ console.log(vowels("hello there"));  // 4
 
 
 
-// Solution 1.2 - ITERATIVE SOLUTION USING .INCLUDE ////////////////
+// Solution 1.2 - ITERATIVE SOLUTION USING .INCLUDES ////////////////
 // function below uses a helper method called .includes() that works with strings and arrays.
 
                 function includeTest() {    
-                const word = 'Hello there';
-                return word.includes("o");     // the method the string had is called includes, and then we pass in some substring and see if it is included.
+                    const word = 'Hello there';
+                    return word.includes("o");     // the method the string had is called includes, and then we pass in some substring and see if it is included.
                 }
                         
                 console.log(includeTest());;  // true
 
                 // you can also use it on an array.
 
-// 
+                function includeTest2() {    
+                    const word = ["a", "b", "c"];
+                    return word.includes("c");     // the method the string had is called includes, and then we pass in some substring and see if it is included.
+                    }
+                            
+                    console.log(includeTest2());;  // true
+
+
 
 
 function vowels2(str) {
     let count = 0;
-    const checkVowels = "aeiou";
+    const checkVowels = ["a", "e", "i", "o", "u"];
     for (let char of str.toLowerCase()) {
-        if (checker.includes(char)) {
+        if (checkVowels.includes(char)) {
             count++;
         }
     }
