@@ -19,3 +19,22 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+// SOLUTION 1 - ITERATIVE APPROACH ////////////// 
+// 1. Create a counter variable with a default of zero (to store our count).
+// 2. Then we'll iterate through all the characters in the string.
+// 3. if the character is a vowel, then increment the counter by 1.
+// 4. at the end of the function, return the counter variable.
+
+// function below uses longer but less efficient if statement.
+function vowels(str) {
+    let count = 0;
+    for (let char of str.toLowerCase()) {
+        if (char === "a" || char === "e" || char === "i" || char === "o" || char === "u") {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(vowels("hello there"));
