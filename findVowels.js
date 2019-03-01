@@ -8,11 +8,12 @@
 //    1. take a string and count the total vowels to output.
 
 // What is the BEST solution? 
-//     1. iterative
+//     1. iterative (2 versions)
 //     2. regular expression
 
 // What are the special components of these solutions?:  
-//     1. 
+//     1. for...of loop
+//     2. .includes() -- 
 
 // What needs work?
 //     1. 
@@ -37,4 +38,36 @@ function vowels(str) {
     return count;
 }
 
-console.log(vowels("hello there"));
+console.log(vowels("hello there"));  // 4
+
+
+
+
+
+// Solution 1.2 - ITERATIVE SOLUTION USING .INCLUDE ////////////////
+// function below uses a helper method called .includes() that works with strings and arrays.
+
+                function includeTest() {    
+                const word = 'Hello there';
+                return word.includes("o");     // the method the string had is called includes, and then we pass in some substring and see if it is included.
+                }
+                        
+                console.log(includeTest());;  // true
+
+                // you can also use it on an array.
+
+// 
+
+
+function vowels2(str) {
+    let count = 0;
+    const checkVowels = "aeiou";
+    for (let char of str.toLowerCase()) {
+        if (checker.includes(char)) {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(vowels2("hello there again"));   // 7
