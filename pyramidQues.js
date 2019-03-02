@@ -21,16 +21,18 @@
 
 // SUMMARY //////////////////////////////////////////////////////////////////////////////////////////////////
 // What is the problem?:  
-//    1. 
+//    1. building a log of pounds that form a pyramid
 
 // What is the BEST solution? 
-//     1. 
+//     1. just the one solution right now.
 
 // What are the special components of these solutions?:  
-//     1. 
+//     1. iteration 
+//     2. intermediate core logic
+//     3. math.floor
 
 // What needs work?
-//     1. 
+//     1. For some reason the return solution does not show a proper pyramid shape, need to investigate the issue.
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
