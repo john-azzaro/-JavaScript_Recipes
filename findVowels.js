@@ -78,3 +78,14 @@ function vowels2(str) {
 }
 
 console.log(vowels2("hello there again"));   // 7
+
+
+///// SOlUTION 1.2.2 ///////////////////////////////////////
+// with this solution, which should be a bit cleaner than the one above, we'll use a regular expression and the method .match().
+
+
+function vowels3(str) {
+
+}
+
+console.log(vowels3("hello there for the third time"));   // 7
