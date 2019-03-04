@@ -64,6 +64,13 @@ Important for solution:
 
         * after the first loop (step #4(5 > 6)) THEN you increment (add) the start value row. 
 
-
-
 */
+
+function matrix(n) {
+    const results = [];                     // create empty array.  Note the number of sub-arrays is dependant on the number n.
+   for (let i=0; i < n; i++) {              // now we need to iterate with a for loop from 0 up to n and for each step we are going to push in an empty substrate into results.
+        results.push([]);                   // for each step we take the results array and push in an empty array.  at this point with with logged
+    }
+}
+
+console.log(matrix())
