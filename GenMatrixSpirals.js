@@ -27,3 +27,33 @@
 //     1. 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Solution breakdown /////////////////
+/*
+    1. create empty array of arrays called 'results'.
+    2. create a counter variable, starting at 1.
+    3. As long as (start column <= end column) AND (start row <= end row):
+        4. Loop from start column to end column...
+            5. At results[start_row][i] assign counter variable... 
+            6. Increment counter.
+        7. Increment start row.
+        8. Loop from start row to end row:
+            9. At results[i][end_column] assign coutner variable...
+            10. increment counter.
+        11. Decrement end row.
+        12. repeat for other two sides.
+
+
+                    start column             end column
+        start row        1          2           3
+                         8          9           4
+        end row          7          6           5
+
+
+
+
+
+
+
+*/
