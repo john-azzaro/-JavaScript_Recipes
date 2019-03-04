@@ -51,8 +51,18 @@
         end row          7          6           5
 
 
+Important for solution:
+        * the solution is predicated on the idea of maintaining some counter variables that reflect what starter column we are workig on 
+          and what end column we are working on along with the starting row and ending row.
 
+        * The idea is that we are going to have some integer values that keep track of the current index that we are trying to fill inside our matrix.
+          - so for example we'l would start off with a star row = 0, which means that when the alogrithm first starts off we want to look at the row 0
+            and start attempting to fill values inside of that row.
 
+        * so if you reference th example above, we start at start column=0 and end (in the #4 psudocode step) at column=2.
+          at every step of that loop, we attempt to insert some value on the first starting row.
+
+        * after the first loop (step #4(5 > 6)) THEN you increment (add) the start value row. 
 
 
 
