@@ -41,15 +41,24 @@ What are talking baout when we ask about Runtime complexity?
         - we'll look at the iterative example and the  
 */
 
-                function revStrIter(str) {
+                function revStrIter(str) {                    // for this problem, we would have some input string...
                     let reversed = '';
-                    for (let character of string) {
-                        reversed = character + reversed;
+                    for (let character of str) {           // then execute our algorithm or solution here (i.e. the for-loop).
+                        reversed = character + reversed;      // -- here we iterated through each character of that string exactly one time
                     }
                     return reversed;
                 }
+
+                console.log(revStrIter("this is a reversed iterative string"))
 /*
-    - for this problem, we would have some input string
+      - so in the example above, it would be fair to say that as we started to add one additional character to the input of the algorithm, 
+        like the the actual input string (i.e. "this is a reversed iterative string"), we had to do one additional step of work. So for each
+        one character one additional step.  
+
+      - What this means is that we had  a very LINEAR RUNTIME.
+      - we would refer to this as a LINEAR RUNTIME because there is a direct one-to-one relationship between the number of input elements
+        that we got into our algorithm.
+
 
 */
 
