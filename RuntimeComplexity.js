@@ -64,23 +64,22 @@ What are talking baout when we ask about Runtime complexity?
       - the pyramid question is a good example for something that is NOT linear.
 */
 
-            function steps2(n, row = 0, stair = '') {
-                if (n === row) {
-                    return;
-                }
-                else if (n === stair.length) {
-                    console.log(stair);
-                    steps2(n, row + 1);
-                    return;
-                }
-                else if (stair.length <= row) {
-                    stair += '#'
-                }
-                else {
-                    stair += '';
-                }
-                steps2(n, row, stair);
+function steps(n) {
+    for (let row = 0; row < n; row++) {
+        let stair = "";
+
+        for (let column = 0; column < n; column++) {
+            if (column <= row) {
+                stair += '#';
+            } else {
+                stair += " ";
             }
+        }
+        console.log(stair);
+    }
+}
+
+console.log(steps(12));
 
 
 
