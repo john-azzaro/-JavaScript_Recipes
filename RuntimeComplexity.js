@@ -4,13 +4,13 @@
 
 // SUMMARY //////////////////////////////////////////////////////////////////////////////////////////////////
 // What is the problem?:  
-//    1. 
+//    1. How to identify the runtime complexity of a given problem
 
 // What is the BEST solution? 
 //     1. 
 
 // What are the special components of these solutions?:  
-//     1. 
+//     1. linear runtime - 
 
 // What needs work?
 //     1. 
@@ -45,7 +45,7 @@ What are talking baout when we ask about Runtime complexity?
                     let reversed = '';
                     for (let character of str) {           // then execute our algorithm or solution here (i.e. the for-loop).
                         reversed = character + reversed;      // -- here we iterated through each character of that string exactly one time
-                    }
+                    }                                         // -- each additional character = 1 step through 1 loop.  This would be 'N', or linear runtime.
                     return reversed;
                 }
 
@@ -57,10 +57,31 @@ What are talking baout when we ask about Runtime complexity?
 
       - What this means is that we had  a very LINEAR RUNTIME.
       - we would refer to this as a LINEAR RUNTIME because there is a direct one-to-one relationship between the number of input elements
-        that we got into our algorithm.
+        that we got into our algorithm and the amount of work we had to use to process it.
 
+      - a lot of the examples so far have been linear runtime but also some that had different runtimes, that is, some that were NOT linear.
 
+      - the pyramid question is a good example for something that is NOT linear.
 */
+
+            function steps2(n, row = 0, stair = '') {
+                if (n === row) {
+                    return;
+                }
+                else if (n === stair.length) {
+                    console.log(stair);
+                    steps2(n, row + 1);
+                    return;
+                }
+                else if (stair.length <= row) {
+                    stair += '#'
+                }
+                else {
+                    stair += '';
+                }
+                steps2(n, row, stair);
+            }
+
 
 
 
