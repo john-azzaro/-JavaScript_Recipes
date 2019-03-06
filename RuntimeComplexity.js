@@ -11,7 +11,8 @@
 
 // What are the special components of these solutions?:  
 //     1. linear runtime - 
-//     2. non-linear runtime
+//     2. non-linear runtime - 
+//     3. Quaradic runtime - 
 
 // What needs work?
 //     1. 
@@ -73,7 +74,7 @@ so as we increase the value n, w ehad to do signifigantly more things each time 
 - so when n was equal to 2, we had 4 things to do (produce 4 characters).
 - when we do n = 3, we had nine things to do (and so on).
 
-main thing-- As 'n'
+main thing-- As 'n' increased by one, we have to do much more stuff (n*n) things... this would be N^2, or QUADRATIC RUNTIME.
 
 
 
