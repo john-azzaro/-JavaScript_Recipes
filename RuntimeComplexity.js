@@ -11,6 +11,7 @@
 
 // What are the special components of these solutions?:  
 //     1. linear runtime - 
+//     2. non-linear runtime
 
 // What needs work?
 //     1. 
@@ -62,6 +63,20 @@ What are talking baout when we ask about Runtime complexity?
       - a lot of the examples so far have been linear runtime but also some that had different runtimes, that is, some that were NOT linear.
 
       - the pyramid question is a good example for something that is NOT linear.
+*/
+
+//// NON-LINEAR RUNTIME ////////////////////////
+/* 
+with the for-loop, we had a numbe r(n) and then two nested for-loops.
+the key thing to see here is that there is one for loop nested inside the other.
+so as we increase the value n, w ehad to do signifigantly more things each time as it was increased by 1.
+- so when n was equal to 2, we had 4 things to do (produce 4 characters).
+- when we do n = 3, we had nine things to do (and so on).
+
+main thing-- As 'n'
+
+
+
 */
 
 function steps(n) {
