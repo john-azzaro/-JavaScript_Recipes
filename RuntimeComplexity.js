@@ -76,8 +76,6 @@ so as we increase the value n, w ehad to do signifigantly more things each time 
 
 main thing-- As 'n' increased by one, we have to do much more stuff (n*n) things... this would be N^2, or QUADRATIC RUNTIME.
 
-
-
 */
 
 function steps(n) {
@@ -98,15 +96,21 @@ function steps(n) {
 console.log(steps(12));
 
 
+/* 
+///// COMMON RUNTIMES ////////////
+
+    Constant Time        -    1        -     No mateer how many elements we are working with, the alo/operation/whatever will always take 
+                                             the same amount of time.
+    Logarithmic Time     -    log(n)   -     You have to do this if doubling the number of elements you are iterating over doesnt double the 
+                                             amount of work.  Always assume that searching operation are log(n).
+
+
+
+
+*/
 
 
 
 
 
 
-
-
-    function revStr(str) {
-        return str.split("").reverse().join("")
-    }
-    console.log(revStr("this is string"));
