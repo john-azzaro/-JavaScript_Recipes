@@ -99,10 +99,19 @@ console.log(steps(12));
 /* 
 ///// COMMON RUNTIMES ////////////
 
+
     Constant Time        -    1        -     No mateer how many elements we are working with, the alo/operation/whatever will always take 
-                                             the same amount of time.
+                                             the same amount of time.  So no matter what our input set is (i.e. no matter what input we give to 
+                                             the algorithm), it will take the exact amoutn of time to execute the algorithm.  An interviewer might
+                                             want you to solve a problem in constant time.
     Logarithmic Time     -    log(n)   -     You have to do this if doubling the number of elements you are iterating over doesnt double the 
-                                             amount of work.  Always assume that searching operation are log(n).
+                                             amount of work.  Always assume that searching operation are log(n).  Log stands for logorithm, which is 
+                                             the math term of taking the logarithm of a number we have.  we have logarithmic time if we doubel the number
+                                             the number of elements but doesnt exactly double the amount of work we have to do.  This is important when we
+                                             start looking at search algorithms, like searching through a sorted array of data we can assume runs with 
+                                             logorithmic time.
+
+    Linear Time          -      n      -     Iterating through all the elements
 
 
 
