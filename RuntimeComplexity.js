@@ -136,7 +136,29 @@ console.log(steps(12));
 
 */
 
+/*
+///// ODDS AND ENDS AROUND RUNTIME COMPLEXITY ////////////
 
+                        Big O Notation
+
+                        O(n)   --> Linear
+                        O(1)   --> Constant
+                        O(n^2) --> Quadratic
+
+Big 'O' Notation    -   Big O is another way of referencing runtime complexity.  So after you finish some algorithm, you might be asked what the runtim 
+                        complexity of your solution (above).  They may also ask you what the big O of your solution is.  In both cases what they
+                        are asking for is the efficientcy of your solution... what is the runtime of your algorithm.
+
+                        Big O notation is a way of writing out this runtime complexity that is commonly seen in the academic world.
+
+
+
+
+
+
+
+
+*/
 
 
 
