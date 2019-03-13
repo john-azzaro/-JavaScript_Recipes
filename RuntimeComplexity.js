@@ -130,7 +130,9 @@ console.log(steps(12));
                                             that would be essentially an end squared complexity. Each additional element that we add to a given colleciton has
                                             to touch or somehow iterate over every element in the colleciton.
 
-    Exponential Time    -                   If you add a *single* element to a collection, the processing power required doubles.
+    Exponential Time    -   2^n        -    If you add a *single* element to a collection, the processing power required doubles.  You really want to 
+                                            avoid this.  If you suggest an exponential time solution to a problem in an interview, its a big BAD deal.
+                                            Important to recognize a solution as inefficient and suggest something more efficient.
 
 */
 
