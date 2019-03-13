@@ -119,8 +119,16 @@ console.log(steps(12));
     Quasilinear Time     -  n * log(n) -     You have this if doubling the number of elements you are iterating over doesnt double the amount of 
                                              work.  Alsways assume that any sorting operation is a n*log(n).  This type of runtime complexity is what
                                              we would see if you start to increase the output set to our algorithm but increasing that input set by 1.
-                                             so increase the amount of time it took to execture the algorithm by one plus a little bit.
+                                             so increase the amount of time it took to execture the algorithm by one plus a little bit.  SOOO one PLUS
+                                             a little bit for every element we add to out input set.  This is common in sorting algorithms 
                 
+    Quadratic Time      -   2^n        -    Every eleent in a collection has to be compared to every other element.  This is the 'handshake' problem. 
+                                            Like the steps example, as soon as we increase or add one element to our input to the algorithm,it started
+                                            to take a lot more time to produce the result set.  The best way to identify a problem like this is to 
+                                            picture the 'handshake' problem.  so imagine a group of people standing in a room,if you send an additonal
+                                            person into the room and you introduced that new persont o everyone else in the room and you had them shake hands,
+                                            that would be essentially an end squared complexity. Each additional element that we add to a given colleciton has
+                                            to touch or somehow iterate over every element in the colleciton.
 
 
 */
