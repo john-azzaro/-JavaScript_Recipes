@@ -150,7 +150,14 @@ Big 'O' Notation    -   Big O is another way of referencing runtime complexity. 
                         are asking for is the efficientcy of your solution... what is the runtime of your algorithm.
 
                         Big O notation is a way of writing out this runtime complexity that is commonly seen in the academic world.
+                            - So linear notation can be written as O(n) (i.e. O of n)... this indicated linear time.
+                            - O(1) (O of 1) would be constant time.
+                            - O(n^2) (i.e. O of n squared) would be quadratic.
 
+                            essentially, when you see big O's with an equation in we're talking about run times.
+                                
+                        The term "Big O" means something different in the academic world but for an interview, runtime complexity and Big-O will
+                        ALWAYS be "what is the efficientcy of your algorithm"
 
 
 
