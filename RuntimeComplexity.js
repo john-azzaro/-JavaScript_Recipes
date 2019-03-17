@@ -170,6 +170,13 @@ Iterating with a simple loop though a single colleciton                    -->  
       we has a single for loop.  Chances are this is Linear runtime.
 
 Iterating though half a collection                                         -->    Still O(n). ThereThere are no constants in runtime.
+    - If we're only iterating through HALF a collection, like only 
+      looking at half a string, does that mean n divided by 2?  No.
+      Every time you have a for loop iterating over a closed set of 
+      data, even if it stops early or stops at half the string, it is
+      STILL LINEAR RUNTIME.
+
+
 Iterating through two *different* collections with seperate for loops      -->    O(n + m)
 Two nested for loops iterating over the same collection                    -->    O(n^2)
 Two nested for loops iterating over different collections                  -->    O(n*m)
