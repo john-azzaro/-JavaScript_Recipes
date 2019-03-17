@@ -166,7 +166,11 @@ Big 'O' Notation    -   Big O is another way of referencing runtime complexity. 
 
 Iterating with a simple loop though a single colleciton                    -->    Probably O(n)
 Iterating though half a collection                                         -->    Still O(n). ThereThere are no constants in runtime.
-Iterating through two *different* collections with seperate for loops     
+Iterating through two *different* collections with seperate for loops      -->    O(n + m)
+Two nested for loops iterating over the same collection                    -->    O(n^2)
+Two nested for loops iterating over different collections                  -->    O(n*m)
+sorting?                                                                   -->    O(n*log(n))
+Searching a sorted Array                                                   -->    O(log(n))
 
 
 
