@@ -164,7 +164,9 @@ Big 'O' Notation    -   Big O is another way of referencing runtime complexity. 
 /* 
 ////// IDENTIFYING RUNTIME COMPLEXITY /////////////////////
 
-
+Iterating with a simple loop though a single colleciton                    -->    Probably O(n)
+Iterating though half a collection                                         -->    Still O(n). ThereThere are no constants in runtime.
+Iterating through two *different* collections with seperate for loops     
 
 
 
