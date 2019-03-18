@@ -197,10 +197,16 @@ Iterating through two *different* collections with seperate for loops      -->  
 
 
 Two nested for loops iterating over the same collection                    -->    O(n^2)
-    - 
+    - closely related to the previous, if you see nested for loops 
+      iterating over the same colleciton, chances are you have quadratic
+      runtime or n squared complexity (i.e. n^2). -- see stair and pyramid 
+      algo.
+
 
 
 Two nested for loops iterating over different collections                  -->    O(n*m)
+    - just like 
+
 sorting?                                                                   -->    O(n*log(n))
 Searching a sorted Array                                                   -->    O(log(n))
 
