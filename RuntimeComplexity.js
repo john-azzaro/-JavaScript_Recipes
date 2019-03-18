@@ -248,6 +248,11 @@ need to compleet a given task.
 In general you can apply a lot of the same rules of runtime complexity to space complexity.
 For example:
 
+In the string reverse example, for every character we added into our input we had one additional character that we needed\
+to return in the output set of data.  The amoutn of memory that we spent was LINEAR because for every one additional character
+we need one additional element in our string to be added.
+
+Space and runtime complexity are not always going to be identical in many cases they might be different
 
 
 
