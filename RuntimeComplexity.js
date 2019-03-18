@@ -164,6 +164,9 @@ Big 'O' Notation    -   Big O is another way of referencing runtime complexity. 
 /* 
 ////// IDENTIFYING RUNTIME COMPLEXITY /////////////////////
 
+Note: note on reading: O(n*m) is "n times m complexity"
+
+
 Iterating with a simple loop though a single colleciton                    -->    Probably O(n)
     - in other words, iterating through a simple for loop.
     - good example is the string reverse example earlier where
@@ -203,9 +206,16 @@ Two nested for loops iterating over the same collection                    -->  
       algo.
 
 
-
 Two nested for loops iterating over different collections                  -->    O(n*m)
-    - just like 
+    - just like the previous again, if you have two nested for loops
+      but each one is iterating over a different collection.  Again you 
+      might have one collection that is very short and one that is long so
+      it would no long be n^2 because we have two DIFFERENT collections
+      of data and they might and they might have different lengths in 
+      each of them.  This would be refelcted as n*m... not so much different
+      then n^2 but here we say "there is this other set of data that is not
+      related".
+
 
 sorting?                                                                   -->    O(n*log(n))
 Searching a sorted Array                                                   -->    O(log(n))
