@@ -78,22 +78,21 @@ main thing-- As 'n' increased by one, we have to do much more stuff (n*n) things
 
 */
 
-function steps(n) {
-    for (let row = 0; row < n; row++) {
-        let stair = "";
+        function steps(n) {
+            for (let row = 0; row < n; row++) {
+                let stair = "";
 
-        for (let column = 0; column < n; column++) {
-            if (column <= row) {
-                stair += '#';
-            } else {
-                stair += " ";
+                for (let column = 0; column < n; column++) {
+                    if (column <= row) {
+                        stair += '#';
+                    } else {
+                        stair += " ";
+                    }
+                }
+                console.log(stair);
             }
         }
-        console.log(stair);
-    }
-}
-
-console.log(steps(12));
+        console.log(steps(12));
 
 
 /* 
