@@ -218,6 +218,13 @@ Two nested for loops iterating over different collections                  -->  
 
 
 sorting?                                                                   -->    O(n*log(n))
+    - commonly used, any time you see any requirement in assorting or a
+    a problem for sorting any requirement whatsoever, you can essentially 
+    assume it will be n log n runtime.  the best runtime complexity we have
+    for sorting something is a log.  If the algo has to sort something, 
+    chances are you'll see a term like this in there.
+
+    
 Searching a sorted Array                                                   -->    O(log(n))
 
 
