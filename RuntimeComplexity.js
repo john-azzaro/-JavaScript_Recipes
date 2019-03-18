@@ -232,6 +232,24 @@ Searching a sorted Array                                                   -->  
     searching will likely have a log in it.
 
 
+*/
+
+
+/* 
+///// SPACE COMPLEXITY ///////////////////////////////////
+
+So runtime complexity is a reference to the performance of an algorithm in terms of processing power.
+
+The SPACE COMPLEXITY of an algorithm is "how much more memory is required by doubling the problem set"?
+
+Space complextiy is similar in performance but is a reference to how much RAM (or memory) or space an algorithm
+need to compleet a given task.
+
+In general you can apply a lot of the same rules of runtime complexity to space complexity.
+For example:
+
+
+
 
 */
 
