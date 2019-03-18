@@ -224,9 +224,12 @@ sorting?                                                                   -->  
     for sorting something is a log.  If the algo has to sort something, 
     chances are you'll see a term like this in there.
 
-    
-Searching a sorted Array                                                   -->    O(log(n))
 
+Searching a sorted Array                                                   -->    O(log(n))
+    - if you have an array of numbers or a collection of anything that 
+    is sorted in some fashion and you have to search through it, chnaces
+    are you have a log n complexity from that operation.  so sorting or
+    searching will likely have a log in it.
 
 
 
