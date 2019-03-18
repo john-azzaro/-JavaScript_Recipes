@@ -169,6 +169,7 @@ Iterating with a simple loop though a single colleciton                    -->  
     - good example is the string reverse example earlier where
       we has a single for loop.  Chances are this is Linear runtime.
 
+
 Iterating though half a collection                                         -->    Still O(n). ThereThere are no constants in runtime.
     - If we're only iterating through HALF a collection, like only 
       looking at half a string, does that mean n divided by 2?  No.
@@ -178,7 +179,27 @@ Iterating though half a collection                                         -->  
 
 
 Iterating through two *different* collections with seperate for loops      -->    O(n + m)
+    - take for example an algorithm that reverses two different strings
+      in one function call.  This would be an example of iteration over
+      two different collections of data into seperate for loops, 
+      spcifically one for loop to reverse the first string and one for
+      loop to reverse the other string.  Two seperate for loops.
+      So when this happens we add an additonal term to our runtime 
+      complexity(i.e. a runtime complexity of n plus m).  The n represents
+      the performance impact of the first string and the m represents
+      the performance impact of the second string.  We could be passed a 
+      very short string as the frst argument for the dual reverse function 
+      and then a very complex and long string as the second string.
+
+      In general, anytime you are iterating two completely different sets 
+      of data you'll frequently see the runtime complextiy split out to
+      two seperate terms.
+
+
 Two nested for loops iterating over the same collection                    -->    O(n^2)
+    - 
+
+
 Two nested for loops iterating over different collections                  -->    O(n*m)
 sorting?                                                                   -->    O(n*log(n))
 Searching a sorted Array                                                   -->    O(log(n))
