@@ -11,10 +11,11 @@
 //    1. Profile differences in runtime complextiy between different solutions
 
 // What is the BEST solution? 
-//     1. 
+//     1. The best way is to generate the entire series up to the nth entry and return the last entry.
 
 // What are the special components of these solutions?:  
-//     1. 
+//     1. iterative
+//     2. recursive
 
 // What needs work?
 //     1. 
