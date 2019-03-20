@@ -44,7 +44,11 @@ Basically with a fibonacci sequence, you take the first two numbers, add them to
 function fib(n) {
     const result = [0, 1];
     for (let i = 2; i <= n; i++) {
-
+        const a = result[result.length - 1];   // first time the loop runs, i will be be equal to 2... so A will be recieving the second element.
+        const b = result[result.length - 2];   // second time the loop runs, i will be equal to 2 - 2, which will initially give us 0.
+        result.push(a + b)                     // push a + b into result.
     }
-
+    return result[result.length - 1];
 }
+
+console.log(fib(4));
