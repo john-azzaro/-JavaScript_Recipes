@@ -58,3 +58,14 @@ Now the runtime complexity of this is as follows...
     - For every increase in n, we have to calculate one additional number.  so as n increases by one, we have to do one more calculation.
     - Thus, this problem is LINEAR run time
 */
+
+
+
+///// RECURSIVE SOLUTION /////////////////////////////////////////
+/* Whats interesting about this solution is that its a seen or not seen problem and if youve seen it, you know how to solve it*/
+
+
+
+function fib2(n) {
+
+}
