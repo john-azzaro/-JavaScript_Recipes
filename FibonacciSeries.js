@@ -67,5 +67,9 @@ Now the runtime complexity of this is as follows...
 
 
 function fib2(n) {
-
+    if (n < 2) {
+        return n;
+    }
+    return fib2(n - 1) + fib2(n - 2);
 }
+console.log(fib2(4))
