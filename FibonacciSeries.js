@@ -62,8 +62,23 @@ Now the runtime complexity of this is as follows...
 
 
 ///// RECURSIVE SOLUTION /////////////////////////////////////////
-/* Whats interesting about this solution is that its a seen or not seen problem and if youve seen it, you know how to solve it*/
+/* Whats interesting about this solution is that its a seen or not seen problem and if youve seen it, you know how to solve it
 
+So why does this solution work?
+
+Suppose we have a fib number of 5.
+
+    function fib2(n) {                      // n = 5
+        if (n < 2) {                        // is 5 less than 2?  No...
+            return n;
+        }
+        return fib2(n - 1) + fib2(n - 2);   // so we call fib with 4 (i.e. 5 - 1 = 4) and fib with 3 (i.e. 5 - 2 = 3), this is TWO function calls.
+    }                                       // then we go back to the top with 4 and repeat again.
+    console.log(fib2(4))
+
+
+
+*/
 
 
 function fib2(n) {
@@ -73,3 +88,5 @@ function fib2(n) {
     return fib2(n - 1) + fib2(n - 2);
 }
 console.log(fib2(4))
+
+
