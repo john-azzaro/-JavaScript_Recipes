@@ -101,6 +101,29 @@ required doubles.  Each additional element here would refer to each increment in
 
 This is an exponential time solution.
 
+But to be clear, any exponential time solution is not good.
+
+so in an interview, if you wrote down the fibonacci solution above and were asked what the runtime would be, you would
+say "the runtime would be exponential because for every increase in n we will have a dramtic increase in the amount
+of function calls that we get.  A fib of 50 for example would take an extremely long time (seriously dont do it, it will 
+crash the program. "
+
+the next thing an interviewer will ask is "is there any way to improve this recursive solution not to be exponential runtime?"
+You could do an itrative solution, but what if you had to improve the existing recursive solution?
+
+The answer is MEMOIZATION.
+
+
+
+
+
+
+
+
+
+
+
+
 
 */
 
