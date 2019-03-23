@@ -113,18 +113,19 @@ You could do an itrative solution, but what if you had to improve the existing r
 
 The answer is MEMOIZATION.
 
+Memoization stores the arguments of each function call along with the result.  If the function is called again with the 
+same arguments, return the precomputed result, rather than running the function again.
 
-
-
-
-
-
-
-
-
-
-
+So bascially, when we memoize a function we record the arguments of each function call.  So record the arguments, run the
+function, then store the result of that function call.  if the function ever gets called again with the exact arguments,
+rather than running the function again instead we return the result we had computed previously.
 
 */
 
-
+function fib3(n) {
+    if (n < 2) {
+        return n;
+    }
+    return fib2(n - 1) + fib2(n - 2);
+}
+console.log(fib3(5))
