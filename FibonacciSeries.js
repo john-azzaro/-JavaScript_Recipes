@@ -78,19 +78,28 @@ Suppose we have a fib number of 5.
 
 */
 
-function fib2(n) {
-    if (n < 2) {
-        return n;
-    }
-    return fib2(n - 1) + fib2(n - 2);
-}
-console.log(fib2(15))
+        function fib2(n) {
+            if (n < 2) {
+                return n;
+            }
+            return fib2(n - 1) + fib2(n - 2);
+        }
+        console.log(fib2(5))
 
 /*
-Note that in the above example, a fibonacci of 15 takes a much longer time than 1,2,3, or 4.
+Note that in the above example, a fibonacci of 5 takes a much longer time than 1,2,3, or 4.
 in fact the time difference is around 1-2ms as opposed to 1000ms.
 
-So whats going on here?
+So whats going on here?  why is there such a dramatic increase in time for such as small increase in value?
+
+the answer has something to do with the number we call with fibonacci. when we call fib(5), the fibonnaci function
+itself is being invoked many many times automatically.  And it get increasingly more complex the higher the number gets.
+For example, if fib(5) which has 15 calls became fib(6), that becomes 27 calls!
+
+This is an example of EXPONENTIAL runtime (2^n) where if you add a single element to a collection, the processing power 
+required doubles.  Each additional element here would refer to each increment in the value of n (i.e. 4,5,6 etc.).
+
+This is an exponential time solution.
 
 
 */
