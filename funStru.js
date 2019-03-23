@@ -357,9 +357,21 @@ function doesItInclude(str) {
 console.log(doesItInclude("CHOColate"));
 console.log(doesItInclude("watermelon"));
 
+////// EXAMPLE 6.1 (same as above but with if/else) //////////////////
 
 
+function doesItInclude2(str) {
+    let ingredient = str.toLowerCase();
+    if (ingredient === "strawberries") {
+        console.log(`warning: this recipe contains chocolate`);
+    } else if (ingredient === "blueberries") {
+        console.log(`warning: this recipe contains blueberries`);
+    } else {
+        console.log(`great news: this recipes is delicious!`);
+    }
+}
 
+console.log(doesItInclude2("blueberries"));
 
 
 
