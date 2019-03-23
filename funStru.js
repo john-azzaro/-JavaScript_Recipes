@@ -336,6 +336,30 @@ gradeQuote(theGrade(85))
 
 
 
+///// EXAMPLE 6 (swtich) //////////////////////////////
+
+function doesItInclude(str) {
+    let ingredient = str.toLowerCase();
+    let replacement = "love and care"
+        switch (ingredient) {
+        case "chocolate":
+            console.log(`warning: this recipe contains chocolate, please replace with ${replacement}`);
+            break;
+        case "vanilla":
+            console.log(`warning: this recipe contains vanilla, please replace with ${replacement}`);
+            break;
+        default:
+            console.log(`good news: this recipes is safe to eat`)
+    } 
+    return `this is amazing`;
+}
+
+console.log(doesItInclude("CHOColate"));
+console.log(doesItInclude("watermelon"));
+
+
+
+
 
 
 
