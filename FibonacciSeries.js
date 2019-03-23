@@ -76,10 +76,7 @@ Suppose we have a fib number of 5.
     }                                       // then we go back to the top with 4 and repeat again.
     console.log(fib2(4))
 
-
-
 */
-
 
 function fib2(n) {
     if (n < 2) {
@@ -87,6 +84,15 @@ function fib2(n) {
     }
     return fib2(n - 1) + fib2(n - 2);
 }
-console.log(fib2(4))
+console.log(fib2(15))
+
+/*
+Note that in the above example, a fibonacci of 15 takes a much longer time than 1,2,3, or 4.
+in fact the time difference is around 1-2ms as opposed to 1000ms.
+
+So whats going on here?
+
+
+*/
 
 
