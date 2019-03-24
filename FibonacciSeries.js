@@ -17,9 +17,6 @@
 //     1. iterative
 //     2. recursive
 
-// What needs work?
-//     1. 
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /* 
@@ -87,6 +84,8 @@ Suppose we have a fib number of 5.
         console.log(fib2(5))
 
 /*
+
+
 Note that in the above example, a fibonacci of 5 takes a much longer time than 1,2,3, or 4.
 in fact the time difference is around 1-2ms as opposed to 1000ms.
 
