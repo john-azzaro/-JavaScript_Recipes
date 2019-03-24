@@ -102,7 +102,6 @@ What is the difference between a dynamically typed language like JavaScript and 
         This will evaluate as 'string'.  
         But if we then CHANGE the value from string to a number (i.e. 'point' the name to the value to a number), it will
         evaluate as a 'number'.  It DYNAMICALLY changes at runtime.
-
 */
 
 
@@ -131,12 +130,59 @@ What does 'use strict;' do?
     -- strict mode allows you to place a program or a function in a strict operating context.
     -- strcit mode makes debugging easier, errors will be easier to find.
     -- It is a string because when it was first implemented only new browsers supported it, so a string
-       was used and when a new browser reads the string, it knows to turn itself into strict mode operating context.
-    
-
-
-
+       was used and when a new browser reads the string, it knows to turn itself into strict mode operating context.    
 */
 
 
+/* 
+Does JavaScript pass parameters by value or reference?
+////////////////////////////////////////////////////////////
 
+In the example below, we have a variable (a) and function with (a) as the parameter.
+The question here is whether you are pasing the variable (a) by its value OR reference?
+
+The Answer:
+    -- Passing PRIMITIVE types such as strings, numbers, booleans are passed by VALUE. 
+    -- Objects are passed by REFERENCE.
+
+
+
+
+What is pass-by value?
+///////////////////////////
+    -- pass-by value means that if you change the value in the function, it will NOT effect the outer scope.
+*/  
+            var a = 1;
+            function foo(a) {    
+                a = 2;
+            }
+            console.log(foo(a))   // 1
+            console.log(a)
+/*
+    -- for primitive types, they are passed in by value... in this case they are passing in a copy of a.
+       Anything you do to (a) INSIDE the body of the function 
+
+
+       
+What is pass-by reference?
+//////////////////////////////
+     -- pass-b reference means you are passing something that POINTS to something else (vs a copy of the object).
+     -- since JavaScript passes an object by reference, when you change a property of that object from within the 
+        function, the change will be REFLECTED in the outer scopes.
+*/
+
+            var b = {};
+            function bar(b) {    
+                b.moo = false;
+            }
+            console.log(bar(b))     // { moo: true}  a key of moo with a value of false.
+            console.log(b)
+/*
+     -- so when you pass in an object into a function, you are not passing in a reference, you are passing in a copy,
+        you are passing in something that POINTS to the (b) object.
+     -- When you chnage a property of that object in the function you are changing a property of that (b) object in
+        the outer scope.
+     -- you cant change what a points to, only a PROPERTY of (b). 
+
+
+*/
