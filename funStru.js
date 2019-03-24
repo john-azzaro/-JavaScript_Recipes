@@ -333,6 +333,12 @@ function gradeQuote(num) {
 gradeQuote(theGrade(90))
 gradeQuote(theGrade(85))
 
+//  Important to keep in mind is the nesting of the functions being called.  In the example above,
+//  we have two functions, one that determines what the numerical grade would be when coverted to 
+// numerical and the second gives a congratulatory sentence either if they had an A or other.
+    
+
+
 
 
 
