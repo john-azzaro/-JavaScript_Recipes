@@ -12,6 +12,7 @@
 //    10. -- Pass-by Reference
 //    11. What is NaN
 //    12. Checking for NaN
+//    13. Coercion
 //
 
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -30,8 +31,26 @@
         -- i.e. let clickCount = 2.
     - a variable uses the equal sign (=) to assign a value to a variable.
         -- i.e let name = 'john'
-*/
+    - a variable WITHOUT a value is called an empty variable.
     
+    Important things to keep in mind with variables:
+        - You CANNOT use a reserved word (i.e. let let, var var, let return, etc.).
+        - You CANNOT start with a number (i.e. 1name).
+        - you CANNOT use a space or a hyphen (i.e. -).
+
+        - You SHOULD NOT declare multiple variables in the same .  
+             -- you can use a shorthand method for declaring multiple variables in one statement but it is NOT best practice.
+                  --  var person = "john", 
+                          place = "park", 
+                          thing = "watermellon";
+
+        - You SHOULD use meaningful names.
+        - You SHOULD use camel casing (i.e. thisIsAnExample).
+        - You SHOULD either Uppercase, LowerCase, underscore, or cashsign for the first letter.
+*/
+
+
+
 /*
 2. What is the basic structure of a variable?
 ////////////////////////////////////////////
@@ -40,13 +59,14 @@
          let                    name                  =                'john'
 */
 
+
 /*
 3. What are the THREE commands used to create variable?
 //////////////////////////////////////////////////////
     - var    -- value can be changed.
     - let    -- value can be changed.
-    - const  -- value CANNOT be changed.
-
+    - const  -- value CANNOT be changed (i.e. const interestRate = 0.3 --then--> interestRate = 1 //-> error )
+                
     For example: 
     */
         var redFruit = 'apple';
@@ -67,15 +87,15 @@ What are the different types in JavaScript?
     - A data type is a kind of value that is assigned to a variable.
     - there are 6 (or really 7 if you count functions) data types    */
 
-//    1. string     -     A string is a series of characters within single or double quotes.
+//    1. string     -     A string (literal) is a series of characters within single or double quotes.
                           console.log(typeof('Hello'))    
                           //-> "string"
 
-//    2. number     -     A number is used to represent numbers, both integers an floating point decimals numbers.
+//    2. number     -     A number (literal) is used to represent numbers, both integers an floating point decimals numbers.
                           console.log(typeof(23))         
                           //-> "number"
 
-//    3. Boolean    -     A Boolean evaluates either true or false.
+//    3. Boolean    -     A Boolean (literal) evaluates either true or false.
                           console.log(typeof(true))       
                           //-> "boolean"
 
@@ -98,14 +118,14 @@ What are the different types in JavaScript?
 /* 
 5. What is the difference between a dynamically typed language like JavaScript and a staticly typed language like Java?
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    -- In Java code, we would define a string like this:   
+    -- In a STATIC language (like Java), the type of that variable is set and CANNOT be changed    
 
             String a = 'cat';  
 
        In a statically typed language like Java we are saying that this varibale 'a' holes strings and ONLY strings.  
        So in Java you have to specify what EXACT types each variable will hold.
     
-    -- In JavaScript, the typeof variables are determined DYNAMICALLY at the runtime.  So if you have this:
+    -- In a DYNAMIC language like JavaScript, the typeof variables are determined DYNAMICALLY at the runtime.  So if you have this:
           
             let a = 'cat';
     
@@ -138,7 +158,7 @@ between the two.  What are the subtle differences?
 7. What does 'use strict;' do?
 /////////////////////////////
     -- strict mode allows you to place a program or a function in a strict operating context.
-    -- strcit mode makes debugging easier, errors will be easier to find.
+    -- strict mode makes debugging easier, errors will be easier to find.
     -- It is a string because when it was first implemented only new browsers supported it, so a string
        was used and when a new browser reads the string, it knows to turn itself into strict mode operating context.    
 */
@@ -178,7 +198,7 @@ The Answer:
 /*
 10. What is pass-by reference?
 /////////////////////////////
-     -- pass-b reference means you are passing something that POINTS to something else (vs a copy of the object).
+     -- pass-by reference means you are passing something that POINTS to something else (vs a copy of the object).
      -- since JavaScript passes an object by reference, when you change a property of that object from within the 
         function, the change will be REFLECTED in the outer scopes.
 */
@@ -198,7 +218,7 @@ The Answer:
 */
 
 /* 
-What is NaN?
+11. What is NaN?
 ///////////////////////////////////////
     -- NaN stands for "not a number" and its used to define a number that's not really a number, like a bad calculation.
     -- NaN compared to any other value is FALSE.
@@ -212,7 +232,7 @@ What is NaN?
 
 
 /* 
-How do you check for NaN?
+12. How do you check for NaN?
 ////////////////////////
       -- There is an inbuilt function called "isNaN"
             
@@ -222,3 +242,23 @@ How do you check for NaN?
       -- However, there are some drawbacks, specifically if you pass "A" (i.e. isNaN("A")) you will get true.
 */
                
+
+/*
+What is Coercion?
+////////////////
+    -- Coercion is simply adding two variables together    
+    -- Because JavaScript is dyamically types, the type associated with the runtime values and not the variables.
+    -- We can concatenate multiple string values (i.e. add them together).
+*/
+            let greeting = 'hello ' + 'there ' + 'friend';
+            console.log(greeting);
+
+/* 
+    -- IMPORTANT: the JavaScript engine will coerce left to right. 
+                  if a string comes before the numbers, it will treat everything after as a string.  
+*/ 
+            let stringLast = 5 + 10 + 15 + 'howdy';
+            console.log(stringLast);                 //-> 30howdy (this will add 5+10+15 and then add on 'howdy').
+
+            let stringFirst = 'howdy' + 5 + 10 + 15;
+            console.log(stringFirst);                 //-> howdy51015 (this will coerce everything as a string).
