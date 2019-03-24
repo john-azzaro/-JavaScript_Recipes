@@ -107,7 +107,9 @@ What is the difference between a dynamically typed language like JavaScript and 
 /* 
 Null and Undefined seem to mean the same thing, that there is no value.  However, there is a subtle difference
 between the two.  What are the subtle differences?
-////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 
 
