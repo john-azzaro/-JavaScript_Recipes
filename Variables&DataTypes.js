@@ -1,38 +1,48 @@
 "use strict";
 // TOPIC /////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Variables 
-//     2. Data Types
-//     3 use strict mode
+//     2. Variable Structure
+//     3. Variable Commands
+//     4. Data Types
+//     5. Dynamic vs. Static Lang. types
+//     6. Null vs. Undefined
+//     7. Strict mode
+//     8. Pass-by Value or Reference
+//     9. -- Pass-by Value
+//    10. -- Pass-by Reference
+//    11. What is NaN
+//    12. Checking for NaN
 //
 
-// TOPIC NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
+// NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on  on variables and data types taken from study, research, tutorials, 
 //        mentor meetings, peer discussions, and good ole' fashioned curiosity.  I've put the document in Question
 //        and Answer format for improved readability.
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 /* 
-
-
-What is a variable?
-////////////////////
+1. What is a variable?
+/////////////////////
     - a variable is a name attached to a variable.
     - a variable stores and keeps track of information within a program.
     - a variable manages the state of a program.
         -- i.e. let clickCount = 2.
     - a variable uses the equal sign (=) to assign a value to a variable.
         -- i.e let name = 'john'
+*/
     
-
-What is the basic structure of a variable?
-//////////////////////////////////////////
+/*
+2. What is the basic structure of a variable?
+////////////////////////////////////////////
     JavaScript Keyword      Variable Name     Assinment Operator        Value
     __________________      _____________     __________________      ________
          let                    name                  =                'john'
+*/
 
-
-What are the THREE commands used to create variable?
-////////////////////////////////////////////////////
+/*
+3. What are the THREE commands used to create variable?
+//////////////////////////////////////////////////////
     - var    -- value can be changed.
     - let    -- value can be changed.
     - const  -- value CANNOT be changed.
@@ -48,12 +58,12 @@ What are the THREE commands used to create variable?
         const greenFruit = 'kiwi'
             console.log(greenFruit)   //-> kiwi
 
-    /* 
-
-
-What is a Data Type?
+    
+    
+/* 
+4. What is a Data Type?
 What are the different types in JavaScript?
-////////////////////////////////////////////
+//////////////////////////////////////////
     - A data type is a kind of value that is assigned to a variable.
     - there are 6 (or really 7 if you count functions) data types    */
 
@@ -86,8 +96,8 @@ What are the different types in JavaScript?
                         
                     
 /* 
-What is the difference between a dynamically typed language like JavaScript and a staticly typed language like Java?
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+5. What is the difference between a dynamically typed language like JavaScript and a staticly typed language like Java?
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     -- In Java code, we would define a string like this:   
 
             String a = 'cat';  
@@ -106,9 +116,9 @@ What is the difference between a dynamically typed language like JavaScript and 
 
 
 /* 
-Null and Undefined seem to mean the same thing, that there is no value.  However, there is a subtle difference
+6. Null and Undefined seem to mean the same thing, that there is no value.  However, there is a subtle difference
 between the two.  What are the subtle differences?
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////
 
     SHORT ANSWER: JavaScript will use Undefined by default for uninitialized variables.  Null is set by humans.
 
@@ -125,8 +135,8 @@ between the two.  What are the subtle differences?
 
 
 /* 
-What does 'use strict;' do?
-////////////////////////////////
+7. What does 'use strict;' do?
+/////////////////////////////
     -- strict mode allows you to place a program or a function in a strict operating context.
     -- strcit mode makes debugging easier, errors will be easier to find.
     -- It is a string because when it was first implemented only new browsers supported it, so a string
@@ -135,8 +145,8 @@ What does 'use strict;' do?
 
 
 /* 
-Does JavaScript pass parameters by value or reference?
-////////////////////////////////////////////////////////////
+8. Does JavaScript pass parameters by value or reference?
+////////////////////////////////////////////////////////
 
 In the example below, we have a variable (a) and function with (a) as the parameter.
 The question here is whether you are pasing the variable (a) by its value OR reference?
@@ -144,12 +154,13 @@ The question here is whether you are pasing the variable (a) by its value OR ref
 The Answer:
     -- Passing PRIMITIVE types such as strings, numbers, booleans are passed by VALUE. 
     -- Objects are passed by REFERENCE.
+*/
 
 
 
-
-What is pass-by value?
-///////////////////////////
+/*
+9. What is pass-by value?
+////////////////////////
     -- pass-by value means that if you change the value in the function, it will NOT effect the outer scope.
 */  
             var a = 1;
@@ -161,11 +172,12 @@ What is pass-by value?
 /*
     -- for primitive types, they are passed in by value... in this case they are passing in a copy of a.
        Anything you do to (a) INSIDE the body of the function 
+*/
 
 
-       
-What is pass-by reference?
-//////////////////////////////
+/*
+10. What is pass-by reference?
+/////////////////////////////
      -- pass-b reference means you are passing something that POINTS to something else (vs a copy of the object).
      -- since JavaScript passes an object by reference, when you change a property of that object from within the 
         function, the change will be REFLECTED in the outer scopes.
@@ -183,6 +195,30 @@ What is pass-by reference?
      -- When you chnage a property of that object in the function you are changing a property of that (b) object in
         the outer scope.
      -- you cant change what a points to, only a PROPERTY of (b). 
-
-
 */
+
+/* 
+What is NaN?
+///////////////////////////////////////
+    -- NaN stands for "not a number" and its used to define a number that's not really a number, like a bad calculation.
+    -- NaN compared to any other value is FALSE.
+    -- Confusingly, NaN compared to NaN (i.e. NaN == NaN) is also FALSE.
+*/
+             console.log(typeof(NaN))      
+             //-> "number"    
+
+             console.log("abc"/4);
+             //-> "NaN"
+
+
+/* 
+How do you check for NaN?
+////////////////////////
+      -- There is an inbuilt function called "isNaN"
+            
+            // console.log(isNaN(NaN))      
+            //-> true  
+
+      -- However, there are some drawbacks, specifically if you pass "A" (i.e. isNaN("A")) you will get true.
+*/
+               
