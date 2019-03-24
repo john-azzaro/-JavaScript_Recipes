@@ -2,11 +2,13 @@
 // TOPIC /////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Variables 
 //     2. Data Types
+//     3 use strict mode
 //
 
 // TOPIC NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on  on variables and data types taken from study, research, tutorials, 
-//        mentor meetings, peer discussions, and good ole' fashioned curiosity.  
+//        mentor meetings, peer discussions, and good ole' fashioned curiosity.  I've put the document in Question
+//        and Answer format for improved readability.
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* 
@@ -109,10 +111,32 @@ Null and Undefined seem to mean the same thing, that there is no value.  However
 between the two.  What are the subtle differences?
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    SHORT ANSWER: JavaScript will use Undefined by default for uninitialized variables.  Null is set by humans.
 
+    -- Undefined is used by JavaScript to be NO VALUE.
+    -- Undefined is used for uninitialized variables (i.e. let a;) without a value.
+    -- Undefined is used for unknown variables, unknown properties, 
+    -- Undefined is a core JavaScript function that informs you it is either an uninitialized variable, a parameter
+       that is missing from the function parameter list, or an unknown property of an object.
+
+    -- Null is used by programmers to indicate NO VALUE.
+    -- Null will never be used by JavaScript for you... it will always use undefined.
+    -- Only a programmer will ever set a variable to Null.
 */
 
 
+/* 
+What does 'use strict;' do?
+////////////////////////////////
+    -- strict mode allows you to place a program or a function in a strict operating context.
+    -- strcit mode makes debugging easier, errors will be easier to find.
+    -- It is a string because when it was first implemented only new browsers supported it, so a string
+       was used and when a new browser reads the string, it knows to turn itself into strict mode operating context.
+    
+
+
+
+*/
 
 
 
