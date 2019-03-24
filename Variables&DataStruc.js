@@ -11,7 +11,9 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* 
 
+
 What is a variable?
+////////////////////
     - a variable is a name attached to a variable.
     - a variable stores and keeps track of information within a program.
     - a variable manages the state of a program.
@@ -21,12 +23,14 @@ What is a variable?
     
 
 What is the basic structure of a variable?
+//////////////////////////////////////////
     JavaScript Keyword      Variable Name     Assinment Operator        Value
     __________________      _____________     __________________      ________
          let                    name                  =                'john'
 
 
 What are the THREE commands used to create variable?
+////////////////////////////////////////////////////
     - var    -- value can be changed.
     - let    -- value can be changed.
     - const  -- value CANNOT be changed.
@@ -47,6 +51,7 @@ What are the THREE commands used to create variable?
 
 What is a Data Type?
 What are the different types in JavaScript?
+////////////////////////////////////////////
     - A data type is a kind of value that is assigned to a variable.
     - there are 6 (or really 7 if you count functions) data types    */
 
@@ -80,6 +85,7 @@ What are the different types in JavaScript?
                     
 /* 
 What is the difference between a dynamically typed language like JavaScript and a staticly typed language like Java?
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     -- In Java code, we would define a string like this:   
 
             String a = 'cat';  
@@ -98,6 +104,11 @@ What is the difference between a dynamically typed language like JavaScript and 
 */
 
 
+/* 
+Null and Undefined seem to mean the same thing, that there is no value.  However, there is a subtle difference
+between the two.  What are the subtle differences?
+////////////////////////////////////////////////////
 
+*/
 
 
