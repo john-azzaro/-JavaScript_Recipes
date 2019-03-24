@@ -41,30 +41,30 @@ What are the THREE Commands used to create variable?
 
 What is a Data Type?
     - A data type is a kind of value that is assigned to a variable.
-    - there are 6 (or really 7) data types.
+    - there are 6 (or really 7) data types    */
 
-    1. string     -     A string is a series of characters within single or double quotes.
-                        -- 'Hello my name is Bill'
-                        -- "How now brown cow"
+//    1. string     -     A string is a series of characters within single or double quotes.
+                          console.log(typeof('Hello there'))   //-> "string"
 
-    2. number     -     A number is used to represent numbers, both integers an floating point decimals numbers.
-                        -- 23
-                        -- 1.387
+//    2. number     -     A number is used to represent numbers, both integers an floating point decimals numbers.
+                          console.log(typeof(23))               //-> "number"
 
-    3. Boolean    -     A Boolean evaluates either true or false.
-                        -- true
-                        -- false
+//    3. Boolean    -     A Boolean evaluates either true or false.
+                          console.log(typeof(true))         //-> "boolean"
 
-    4. Null       -     Null is a special value used to indicate that the variable has no value.
-                        -- null
+//    5. Undedined  -     Special value that declares variable before assigning a value to them.
+                          console.log(typeof(true))         //-> "boolean"
 
-    5. Undedined  -     Special value that declares variable before assigning a value to them.
-                        Assigned by the browser when first created in memory.
+//    4. Null       -     Null is a special value used to indicate that the variable has no value.
+                          console.log(typeof(null))         //-> "boolean" but this is incorrect
+
+
                         
-    6. 
+                        
+//    6. 
 
 
 
 
-*/
+
 
