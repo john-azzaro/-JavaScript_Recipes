@@ -1,5 +1,7 @@
 "use strict";
 // TOPIC /////////////////////////////////////////////////////////////////////////////////////////////////////
+//     Variables & Data Types
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Variables 
 //     2. Variable Structure
 //     3. Variable Commands
@@ -16,7 +18,7 @@
 //
 
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
-//     1. Useful overview of information on  on variables and data types taken from study, research, tutorials, 
+//     1. Useful overview of information on variables and data types taken from study, research, tutorials, 
 //        mentor meetings, peer discussions, and good ole' fashioned curiosity.  I've put the document in Question
 //        and Answer format for improved readability.
 
