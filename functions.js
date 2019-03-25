@@ -2,8 +2,8 @@
 // TOPIC /////////////////////////////////////////////////////////////////////////////////////////////////////
 //     Functions
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//     1. What is the definition of a function?
-//     2. What is a function?
+//     1. What is a function?
+//     2. What are the components of a function?
 //     3. What is the difference between arguments and parameters
 //
 
@@ -15,8 +15,8 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
-1. What is the definition of a function?
-///////////////////
+1. What is a function?
+///////////////////////////////////////
     - A function is one of the fundamental building blocks of JavaScript.
     - A function is a repeatable (i.e. can be called multiple times) and determinate (i.e. predictable) process or behavior.
     - A function performs a task or calculates a value.
@@ -28,62 +28,61 @@
     
 
 /* 
-2. What is a function?
-//////////////////////////////////////
-    
-Function Basics:
-    Function Keyword  - Functions are "DEFINED" with the function keyword (regardless of how they are used or invoked).
-                      - Defining a function is sometimes called "DECLARING" a function.
+2. What are the components of a function?
+////////////////////////////////////////
+ */
 
-                NAME  - The "NAME" of the code that can be invoked or called elsewhere in our code.
-                      - Sometimesd the name can be "OPTIONAL".
-                      - You can use the following to name a function:
+            //    FUNCTION KEYWORD         NAME        CALL SIGNATURE
+            //                   \           |         /
+                                function myFunction(str) {
+                                return str;                     //- MAIN BLOCK of function
+                                }
+                                console.log(myFunction("Hello!"));  //- CALL
+/*
+Example     
+ 
+function    > Keyword    - Functions are `DEFINED` with the function keyword (regardless of how they are used or invoked).
+                         - Defining a function is sometimes called "DECLARING" a function.
+
+myFunction     > NAME    - The `NAME` of the code that can be invoked or called elsewhere in our code.
+                         - Sometimesd the name can be `OPTIONAL`.
+                         - You can use the following to name a function:
                             -- a to z (upper and lower case)
                             -- 0 to 9
                             -- _ (underscore)
                             -- $ (cash sign)
                             -- special characters
 
-           Parameters  - "PARAMETERS" go inside the call signature parentheses (i.e. (...)).
-                       - Multiple parameters are seperated by commas (i.e. (num1, num2, num3)).
-                       - You can have as many parameters as you want.
-                       - Parameters are variables that are local and ONLY available inside the function.
+(str)    > Parameters     - `PARAMETERS` go inside the call signature parentheses (i.e. (...) ).
+                          - Multiple parameters are seperated by commas (i.e. (num1, num2, num3) ).
+                          - You can have as many parameters as you want.
+                          - Parameters are variables that are local and ONLY available inside the function.
 
-           Main Block  -
+{...}    > Main Block     - Since the function has to do something, the main block of the function has a series of `INSTRUCTIONS`.
+                          - Those instructions are called `STATEMENTS`.
+                          - Statements go inside curly braces (i.e. {...} ).
+                          - Statements are seperated by semicolons (i.e. ; ).
+
+                          - The 'RETURN' statement can return a result, object, or even another function.
+                            This lets JavaScript do things that are very difficult in other languages.
+
+console.log  >  Invoke    - This invokes (or calls) the function to be used elsewhere in the code by name.
+                          - console.log will print the result of the function to the browser console.
+                          - myFunction("string") will call the function.
 
 */
-
-
-
-
-
-
-
-
-
-//    FUNCTION KEYWORD         NAME        CALL SIGNATURE
-//                   \           |         /
-                    function myFunction(str) {
-                       return str;                     //- MAIN BLOCK of function
-                    }
-                    console.log(myFunction('Hello'));  //- CALL
-
-
-
-
-
-
 
 
  /* 
  3. What is the difference between arguments and parameters?
  ///////////////////////////////////////////////////////
- IMPORTANT INFO ON CALL SIGNATURES AND PARAMETERS/ARGUMENTS:
       When talking about functions, the terms parameters and arguments are often interchangeably used as if it were one and the 
       same thing but there is a very subtle difference.  
 
-           A. Parameters are variables listed as a part of the function definition.
-           B. Arguments are values passed to the function when it is invoked.  
+           A. Parameters are variables listed as a part of the function definition 
+                -- i.e. function(num1, num2) {...} where num1 and num2 are the paramter
+           B. Arguments are values passed to the function when it is invoked 
+                -- i.e. console.log(myFunction(1,2)) where 1 and 2 are the arguments.  
       
            Its important to know the difference because JavaScript does not throw an error if the number of arguments passed during a function 
       invocation are different than the number of parameters listed during function definition. This should make it clear that parameters 
@@ -107,10 +106,13 @@ Function Basics:
                         console.log(addDeclaration(2,2))     // 4
 
 
-        // Function Expression: 1. Not hoisted with contents, but the reference to it may be hoisted if we assign it as a variable.
-        //                      2. Functions defined as arguments to functions are expressions.
-        //                      3. IMPORTANT: Because of an issue with hoisting, if you invoke a function expression before the function iteslef, you
-        //                                    get an error.
+        // Function Expression:          1. Not hoisted with contents, but the reference to it may be hoisted if we assign it as a variable.
+        // (or) Definition Expression    2. Functions defined as arguments to functions are expressions.
+        // (or) Function literal         3. This is also known as an anonymous function because you dont need a name for it.
+        //                               4. VERY useful because we can use it everywhere a variable can go.
+        //                               4. IMPORTANT: Because of an issue with hoisting, if you invoke a function expression before the function iteslef, you
+        //                                             get an error.
+        //                           
 
                         let addExpression = function(num1, num2) {
                             return num1 + num2;
@@ -124,5 +126,19 @@ Function Basics:
                         console.log(addFatArrow(4,4))       // 8   
    
 
+
+/*
+How do you invoke a function?
+////////////////////////////
+        There are 4 ways to invoke a function:
+                1. Invoke as a function.
+                2. Invoke as a method.
+                3. Invoke as a constructor.
+                4. Invoke with call and apply methods.
+
+            - Invoking as a FUNCTION and METHOD are the most common.
+            - function also get a few extra parameters.
+
+*/
 
 
