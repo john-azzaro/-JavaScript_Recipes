@@ -4,7 +4,9 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. What is a function?
 //     2. What are the components of a function?
-//     3. What is the difference between arguments and parameters
+//     3. What is the difference between arguments and parameters?
+//     4. How do you define a function?
+//     5. How do you invoke a function?
 //
 
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -139,7 +141,7 @@ console.log  >  Invoke    - This invokes (or calls) the function to be used else
 
 
 /*
-How do you invoke a function?
+5. How do you invoke a function?
 ////////////////////////////
         There are 4 ways to invoke a function:
                 1. Invoke as a function.
@@ -172,6 +174,42 @@ How do you invoke a function?
                                                         //    { '0': 2, '1': 3 }
 
 
+/* 
+How do you use functions as objects?
+///////////////////////////////////
 
+NOTE: This section is on functions in objects, but first a brief overview.
 
-           
+        - in addition ot calling functions using the Traditional way (i.e. call name and pass along parameters), we can also invoke them by METHODS.
+        - A METHOD is a function that has been assigned as a property of an OBJECT (i.e. myObject.firstName where .firstName is the method).
+        - An OBJECT is a complex data type that brings together properties and behaviors into a single entity.
+        - An OBJECT always begins and ends with curly braces.
+        - Inside an object, we have name:value pairs.
+        - An OBJECT can have:
+                -- variables  -- (i.e. let car = "Honda"; ).
+                -- lists (aka arrays)  --   (i.e. let cars = ["Toyota", "BMW", "Mercedes"]; ).
+                -- any data type (including other objects).
+        */
+        // The example below is a normal function with key/value pairs:
+                
+                let info = {
+                    firstName : 'John',                     // a name/value pair
+                    lastName : 'Smith',
+                    occupation : 'soldier'
+                }                                   
+                console.log(info.firstName);                 //-> John   ()
+        
+        // The example below shows a function as a property of an object
+               
+                let report = {
+                    status: 'Awesome',                  // property called status with a value called Awesome.  NOTE COMMA!
+                    plus: function(a,b)  {              // this is an anonymous function assigned to an element.  It is called with the 'plus' identifier
+                        return (
+                            console.log(this),          // check the value of the `this` attribute.
+                            console.log(a + b),         // return result of the function.
+                            console.log(arguments),     // find out what the arguments are (i.e. values of a and b).
+                            console.log(this.status)    // ask for the `this` attribute and then ask for the status variable.
+                        );
+                    }                      
+                }
+                
