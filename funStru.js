@@ -92,8 +92,10 @@
 
     // Function Expression: 1. Not hoisted with contents, but the reference to it may be hoisted if we assign it as a variable.
     //                      2. Functions defined as arguments to functions are expressions.
+    //                      3. IMPORTANT: Because of an issue with hoisting, if you invoke a function expression before the function iteslef, you
+    //                                    get an error.
 
-                    const addExpression = function(num1, num2) {
+                    let addExpression = function(num1, num2) {
                         return num1 + num2;
                     }
                     console.log(addExpression(3,3));    // 6
