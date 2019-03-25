@@ -64,7 +64,18 @@ myFunction     > NAME    - The `NAME` of the code that can be invoked or called 
                           - Statements are seperated by semicolons (i.e. ; ).
 
                           - The 'RETURN' statement can return a result, object, or even another function.
-                            This lets JavaScript do things that are very difficult in other languages.
+                               This lets JavaScript do things that are very difficult in other languages.
+                            In fact, `RETURN` is a function in its own right and you can return a series of parameters in 
+                               the parentheses (i.e. return (...) ).  For example:
+
+                                                    function example(a,b) {
+                                                        return (
+                                                            console.log(a + b),
+                                                            console.log(a - b),
+                                                            console.log(a * b)
+                                                        );
+                                                    }
+
 
 console.log  >  Invoke    - This invokes (or calls) the function to be used elsewhere in the code by name.
                           - console.log will print the result of the function to the browser console.
@@ -137,8 +148,30 @@ How do you invoke a function?
                 4. Invoke with call and apply methods.
 
             - Invoking as a FUNCTION and METHOD are the most common.
-            - function also get a few extra parameters.
+            - functions also get a few extra parameters, like arguments and THIS.
+            
+            IMPORTANT: A property of functions is that invoking them passes control of the program to the function we are calling.
 
-*/
+            - A common way to invoke a function is TRADITIONAL INVOCATION.
+                 - so if a function has a name, you can call it by its name and pass along 0 to as many parameters as you need (i.e. myFunction(a,b,c); ).
+
+*/                    
+                function addItUp(num1, num2) {                    // plus is passed two parameters, a and b.
+                    return (                             // return is used as a function (return IS a function so it can be passed parameters).
+                        console.log(num1 + num2),        // here we have num1 + num2, which the result of our operation. NOTE THE COMMA!
+                        console.log(num1 * num2),        // here we have num1 * num2, which is another result of our operation. NOTE THE COMMA!!
+                        console.log(arguments)           // here we pass the `arguments` parameter (this will restate our parameters).      
+                    );                                   // Thus everything above is a straight function call.     
+                }
+                
+                console.log(`results of Return as function example below`);
+
+                addItUp(2, 3);                          // now we INVOKE the function and PASS the parameters we want.  We have two slots, so two numbers.
+                                                        //->  5
+                                                        //    6
+                                                        //    { '0': 2, '1': 3 }
 
 
+
+
+           
