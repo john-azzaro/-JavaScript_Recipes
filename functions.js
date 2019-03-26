@@ -13,6 +13,7 @@
 //     9. How do you invoke through Call and Apply?
 //    10. How do you use the arguments parameter?
 //    11. Can you explain the return statement?
+//    12. How do you use an anaonymous closure?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on functions taken from study, research, tutorials, 
@@ -126,7 +127,8 @@ console.log  >  Invoke    - This invokes (or calls) the function to be used else
                         console.log(addDeclaration(2,2))     // 4
 
 
-        // Function Expression:          1. Not hoisted with contents, but the reference to it may be hoisted if we assign it as a variable.
+        // Function Expression:          1. A JavaScript pattern that lets you create a variable and execute it as a function.
+        //                               12. Not hoisted with contents, but the reference to it may be hoisted if we assign it as a variable.
         // (or) Definition Expression    2. Functions defined as arguments to functions are expressions.
         // (or) Function literal         3. This is also known as an anonymous function because you dont need a name for it.
         //                               4. VERY useful because we can use it everywhere a variable can go.
@@ -400,3 +402,40 @@ NOTE: This section is on functions in objects, but first a brief overview.
         - the return statement is usually the last statement in a function (stops execution).
         - the return statement can be anything or return nothing
 */
+
+
+/* 
+12. How do you use an anonymous closure?
+////////////////////////////////////////
+        - a typical function definition can be invoked by calling the function name anywhere in the code.  For example:
+*/
+                    let cat = function() {
+                        console.log('meow')
+                    }
+                    console.log(cat());
+/*
+        - However, there is a way to invoke a function and NOT call it manually.  
+        - Anonymous closures can be used to invoke a function automatically by adding parentheses AFTER the function body.
+        - the () at the end of the function change the function declaration to a function expression.
+            -- when you use the function keyword, JavaScript assumes you want to create a function with a name.  But it will not run it.
+            -- 
+*/
+                    let cat2 = function() {
+                        console.log('meow meow')
+                    }();
+/*
+        - You can also instantiate the function by passing parameters into those parentheses.
+*/
+                    let addTheCats = function(message) {        // Second, the string is passed (via message) to the function.
+                        console.log(message);                   // Third, the string finally is passed to the console.log statement.
+                    }("Good evening, I am a cat");              // First, a string is passed.
+/*
+        - You can also make the function completely anaonymous.
+        - You make a function completely anonymous by wrapping the ENTIRE function in parentheses.
+            -- what this does is ask JavaScript to comvert this function into a value and then use the last set of parentheses to
+               pass in any parameters (if needed).
+            -- important to remember, you dont need to have any parameters in the last parentheses, just that this example has one.
+*/
+                    (function(message) {
+                        console.log(message)
+                    })("I am an anonymous function");
