@@ -1,20 +1,22 @@
 "use strict";
 // TOPIC /////////////////////////////////////////////////////////////////////////////////////////////////////
-//     Functions
+//     Functions (broad overview)
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. What is a function?
 //     2. What are the components of a function?
 //     3. What is the difference between arguments and parameters?
 //     4. How do you define a function?
 //     5. How do you invoke a function?
+//     6. How do you use functions in objects?
+//     7. How do you invoke a function through a constructor?
 //
-
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on functions taken from study, research, tutorials, 
 //        mentor meetings, peer discussions, and good ole' fashioned curiosity.  I've put the document in Question
 //        and Answer format for improved readability.
-
+//
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 /*
 1. What is a function?
@@ -64,6 +66,7 @@ myFunction     > NAME    - The `NAME` of the code that can be invoked or called 
                           - Those instructions are called `STATEMENTS`.
                           - Statements go inside curly braces (i.e. {...} ).
                           - Statements are seperated by semicolons (i.e. ; ).
+                          - Also remember NOT to add a semicolon after the main block (i.e. {}; )
 
                           - The 'RETURN' statement can return a result, object, or even another function.
                                This lets JavaScript do things that are very difficult in other languages.
@@ -196,10 +199,12 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     firstName : 'John',                     // a name/value pair
                     lastName : 'Smith',
                     occupation : 'soldier'
-                }                                   
+                }
+                console.log(`result of normal function test:`)                                   
                 console.log(info.firstName);                 //-> John   ()
         
         // The example below shows a function as a property of an object
+        //   - Here we create an object called 'report' and add 2 properties, status and a method called plus (which is function).
                
                 let report = {
                     status: 'Awesome',                  // property called status with a value called Awesome.  NOTE COMMA!
@@ -212,4 +217,51 @@ NOTE: This section is on functions in objects, but first a brief overview.
                         );
                     }                      
                 }
-                
+                console.log(`results of function in object example:`)
+                report.plus(2,3);                       //-> { status: 'Awesome', plus: [Function: plus] }
+                                                        //   5
+                                                        //   { '0': 2, '1': 3 }
+                                                        //   Awesome
+
+
+/*
+How do you invoke a function through a constructor?
+///////////////////////////////////////////////////
+        - functions can construct objects as well.
+        - you can create an object with the `new` keyword.
+             -- this method of creating an object is called a CONSTRUCTOR INVOCATION.
+             -- a constrcutor builds on object based on the original function
+             -- each instance will have its own set of properties (see example below).
+             -- A CONSTRUCTOR INVOCATION can use the function keyword to create an object with the variable from the function.
+             -- By convention, constructor functions should always be CAPITALIZED.
+
+            IMPORTANT NOTE: This does not seem to work correctly in VSCode, but in chrome it works.
+
+             */           
+             
+            // 1. So first we create a function. 
+            //      -- "dog" is essentially an object. 
+            //      -- this dog function only had 2 variables, name and breed.
+
+                           var Dog = function() {     
+                               var name, breed;
+                               console.dir(this);     
+                           }
+    
+            // 2. Next, we'll create a new instance of this with a new constructor.
+            //        -- this creates a new object based on the `dog` function.
+            //        -- the NEW keyword create a new instance of the object (like a copy or reproduction).
+            //        -- 
+
+                        //    firstDog = new Dog;       
+
+            // 3. Now that the new object has been created, we can assign a name and a breed.
+
+                        //    firstDog.name = "bowser";
+                        //    firstDog.breed = "Yorkie";
+
+            // 4. Now you can ask for the dogs first name.
+
+                        // console.log(firstDog);          //-> dog {name: "bowser", breed: "yorkie"}
+            
+            // 5. 
