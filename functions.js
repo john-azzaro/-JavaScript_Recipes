@@ -11,6 +11,7 @@
 //     7. How do you invoke a function through a constructor?
 //     8. How do you use prototypes?
 //     9. How do you invoke through Call and Apply?
+//    10. How do you use the arguments parameter?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on functions taken from study, research, tutorials, 
@@ -180,8 +181,8 @@ console.log  >  Invoke    - This invokes (or calls) the function to be used else
 
 
 /* 
-How do you use functions as objects?
-///////////////////////////////////
+6. How do you use functions as objects?
+//////////////////////////////////////
 
 NOTE: This section is on functions in objects, but first a brief overview.
 
@@ -227,8 +228,8 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /*
-How do you invoke a function through a constructor?
-///////////////////////////////////////////////////
+7. How do you invoke a function through a constructor?
+/////////////////////////////////////////////////////
         - functions can construct objects as well.
         - in other words, the function itself BECOMES the constructor.
         - you can create an object with the `new` keyword.
@@ -269,8 +270,8 @@ How do you invoke a function through a constructor?
                         
 
 /* 
-How do you expand objects through prototypes?
-////////////////////////////////////////////
+8. How do you expand objects through prototypes?
+///////////////////////////////////////////////
         -- JavaScript is known as a prototypal inheritance langauge, which means you can base the functionality of an
            object on ANOTHER object,
         -- EVERY object in JavaScript can be based on another object.
@@ -308,3 +309,73 @@ How do you expand objects through prototypes?
 
                 firstDog.speak('I go bark sometimes')
     */ 
+
+/*
+9. How do you invoke through Call & Apply?
+/////////////////////////////////////////
+        - Call & Apply is sometimes refered to as "indirect invocation".
+        - Call & Apply can define the value of `this` argument.
+        - Call & Apply can control `this` and `arguments`.
+        - Call passes a VALUE.
+        - APPLY passes an ARRAY.
+  */
+
+                let talk = function() {
+                    console.log(this.loud);                             
+                }
+                let talkOutLoud = {normal: "whisper", loud: "yell"}
+
+                talk.call(talkOutLoud);                             //-> yell
+                                                                    //   we invoke the function call...
+                                                                    //   use the .call method...
+                                                                    //   pass-in the talkOutLoud     
+                                                                    //   console.log runs this(i.e. talk) dot loud(from talkOutLoud)
+                 
+               
+                // Another way to do the same thing above is like this:
+                let talk2 = function(what) {
+                    console.log(what);                             
+                }
+                let talkOutLoud2 = {normal: "whisper", loud: "yell"}
+
+                talk2.call(talkOutLoud2, talkOutLoud2.normal);      //-> whisper    
+                                                                    // normal is being passed into the what variable in the function.
+                                                                    // which is then passed into the console.log.
+
+/* 
+        - Now the difference between call and apply is that apply can pass an ARRAY.
+
+*/                let talk3 = function(what) {
+                    console.log(what);                             
+                }
+                let talkOutLoud3 = {normal: "whisper", loud: "yell"}
+
+                talk3.apply(talkOutLoud3, ['roar']);                  //-> roar 
+                                                                      // instead of normal (previous), we pass in an array with 'roar'.
+                                                                      //   we change call to apply...
+                                                                      //   roar is passed to the what variable and the console.log.
+
+
+
+/*
+10. What is the arguments parameter?
+///////////////////////////////
+        - Although we've been passing elements to functions, but often we dont know how many elements we will be needing.
+        - You want your function to be able to accept an number of elements.
+        - The ARGUMENTS PARAMETER is used to hold a list of all the elements passed as arguments to the function.
+        - The arguments parameter is an array-like object becasue it looks like an array and we can do some things we do to arrays.
+                -- for example, we can call the numerical index(i.e. arguments[x] ).
+                -- we can also get the arguments.length (i.e. the amount of elements we pass to the function).
+                -- because we have these properties, we can loop through the arguments with a for-loop.
+                -- however, we CANNOT use array methods (i.e. pop, push, shift, etc. ).            
+*/
+                let addSomething = function() {
+                    let sum = 0;                                         // sum initialized to 0.
+                    for (let i=arguments.length - 1; i >= 0; i--) {      // for-loop will go through all the arguments in the arguments array
+                        sum += arguments[i];                             // increment the arguments so they add themselves together.
+                    }
+                    return sum;
+                }
+
+                console.log(addSomething(4,4,4));            //-> 12     // because we use `arguments`, we can pass in as many
+                console.log(addSomething(5,5,5,5,5,5,5,5));  //-> 40           // arguments as we want. 
