@@ -12,6 +12,7 @@
 //     8. How do you use prototypes?
 //     9. How do you invoke through Call and Apply?
 //    10. How do you use the arguments parameter?
+//    11. Can you explain the return statement?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on functions taken from study, research, tutorials, 
@@ -379,3 +380,23 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
                 console.log(addSomething(4,4,4));            //-> 12     // because we use `arguments`, we can pass in as many
                 console.log(addSomething(5,5,5,5,5,5,5,5));  //-> 40           // arguments as we want. 
+
+
+/*
+11. Can you explain the return statement?
+////////////////////////////////////////
+        - When you invoke a function, its like generating an equation, which usually have results.
+        - The return statement is to express the result of the operation we perform in our function.  For example:
+*/
+                let addTheThing = function(a,b) {
+                    return a + b;                 // the job of the return function here is to return the result of a + b.
+                }
+                console.log(addTheThing(4,5))     //-> 9
+/*
+        - the return statement is optional.  that is to say, if you do not include it in your code, the function will return something.
+        - the return statement is only in the function body.
+        - the return statement can be used to return something back to the caller.
+                -- so you could assign it to a variable and it will place a value in the variable when the function returns.
+        - the return statement is usually the last statement in a function (stops execution).
+        - the return statement can be anything or return nothing
+*/
