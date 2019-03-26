@@ -9,6 +9,8 @@
 //     5. How do you invoke a function?
 //     6. How do you use functions in objects?
 //     7. How do you invoke a function through a constructor?
+//     8. How do you use prototypes?
+//     9. How do you invoke through Call and Apply?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on functions taken from study, research, tutorials, 
@@ -228,40 +230,81 @@ NOTE: This section is on functions in objects, but first a brief overview.
 How do you invoke a function through a constructor?
 ///////////////////////////////////////////////////
         - functions can construct objects as well.
+        - in other words, the function itself BECOMES the constructor.
         - you can create an object with the `new` keyword.
              -- this method of creating an object is called a CONSTRUCTOR INVOCATION.
-             -- a constrcutor builds on object based on the original function
+             -- a constructor builds on object based on the original function
              -- each instance will have its own set of properties (see example below).
              -- A CONSTRUCTOR INVOCATION can use the function keyword to create an object with the variable from the function.
              -- By convention, constructor functions should always be CAPITALIZED.
 
             IMPORTANT NOTE: This does not seem to work correctly in VSCode, but in chrome it works.
 
-             */           
-             
-            // 1. So first we create a function. 
-            //      -- "dog" is essentially an object. 
-            //      -- this dog function only had 2 variables, name and breed.
+                                   
+            1. So first we create a function. 
+                 -- "dog" is essentially an object. 
+                 -- this dog function only had 2 variables, name and breed.
 
                            var Dog = function() {     
                                var name, breed;
                                console.dir(this);     
                            }
     
-            // 2. Next, we'll create a new instance of this with a new constructor.
-            //        -- this creates a new object based on the `dog` function.
-            //        -- the NEW keyword create a new instance of the object (like a copy or reproduction).
-            //        -- 
+            2. Next, we'll create a new instance of this with a new constructor.
+                   -- this creates a new object based on the `dog` function.
+                   -- the NEW keyword create a new instance of the object (like a copy or reproduction).
+                   -- 
 
-                        //    firstDog = new Dog;       
+                           firstDog = new Dog;       
 
-            // 3. Now that the new object has been created, we can assign a name and a breed.
+            3. Now that the new object has been created, we can assign a name and a breed.
 
-                        //    firstDog.name = "bowser";
-                        //    firstDog.breed = "Yorkie";
+                           firstDog.name = "bowser";
+                           firstDog.breed = "Yorkie";
 
-            // 4. Now you can ask for the dogs first name.
+            4. Now you can ask for the dogs first name.
 
-                        // console.log(firstDog);          //-> dog {name: "bowser", breed: "yorkie"}
-            
-            // 5. 
+                        console.log(firstDog);          //-> dog {name: "bowser", breed: "yorkie"}
+ */             
+                        
+
+/* 
+How do you expand objects through prototypes?
+////////////////////////////////////////////
+        -- JavaScript is known as a prototypal inheritance langauge, which means you can base the functionality of an
+           object on ANOTHER object,
+        -- EVERY object in JavaScript can be based on another object.
+        -- With the prototype object create relationships in JavaScript and we can expand anything in JavaScript.
+                - this is convienent because we dont have to build the same functionality for different things.
+                - the way this is done is by linking the prototype object to another.  For example:
+
+
+        1. First, we create out constructor function for 'Dog' and create a dog (i.e. firstDog).
+
+                let Dog = function() {
+                    let name, breed;
+                }
+
+                firstDog = new Dog;
+                firstDog.name = 'bowser';
+                firstDog.breed = 'collie'
+
+
+        2. To add functionality to the Dog obejct.  For this example, we'll create a function called 'speak'.
+
+                let speak = function(sayWhat) {
+                    console.log(sayWhat);
+                }
+
+
+        3. To expand on Dog by accessing on its prototype and setting a method of Dog to be the same as the speak function.
+
+                Dog.prototype.speak = speak;
+
+                         - what this does is give a Dog the ability (or method) to speak.
+
+
+        4. then we attach the speak method to firstDog and pass along something to say.
+
+                firstDog.speak('I go bark sometimes')
+    */ 
