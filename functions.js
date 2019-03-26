@@ -13,7 +13,8 @@
 //     9. How do you invoke through Call and Apply?
 //    10. How do you use the arguments parameter?
 //    11. Can you explain the return statement?
-//    12. How do you use an anaonymous closure?
+//    12. How do you use an anaonymous closure (or self executing function)?
+//    13. What is variable hoisting and scope?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on functions taken from study, research, tutorials, 
@@ -405,7 +406,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /* 
-12. How do you use an anonymous closure?
+12. How do you use an anonymous closure (or self executing function)?
 ////////////////////////////////////////
         - a typical function definition can be invoked by calling the function name anywhere in the code.  For example:
 */
@@ -415,7 +416,10 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     console.log(cat());
 /*
         - However, there is a way to invoke a function and NOT call it manually.  
+
         - Anonymous closures can be used to invoke a function automatically by adding parentheses AFTER the function body.
+        - Anonymous closures DO NOT have a name... they dont need it since they run automatically.
+        - Any variables INSIDE the function body will NOT be known outside the anonymous closure.
         - the () at the end of the function change the function declaration to a function expression.
             -- when you use the function keyword, JavaScript assumes you want to create a function with a name.  But it will not run it.
             -- 
@@ -439,3 +443,34 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     (function(message) {
                         console.log(message)
                     })("I am an anonymous function");
+
+
+/*
+13. What is variable hoisting and scope?
+///////////////////////////////////////
+        - HOISTING refers to how browsers parse JavaScript.
+                    -First pass, the browser reads through the code once, setting aside space for variables, functions, etc.
+                    -Second pass, the browser reads through AGAIN and executes the code.
+                        -- this is how the browser knows what is what.
+
+        - VARIABLE SCOPE defines how the variables declared CAN or CANNOT be accessed at different places in your code.
+
+        - GLOBAL SCOPE means that the variable is available EVERYWHERE in the code.
+
+        - BLOCK (LOCAL) SCOPE means that the variable is only available within the confines of the function.
+
+        - SCOPE CHAIN refers to the way the JavaScript interpreter determines the value of a variable.
+                    - first, the interpreter looks locally for the variable.
+                    - if it is not there, then the interpreter will look UP THE SCOPE CHAIN until it reaches GLOBAL SCOPE.
+                    
+        - VARIABLE SHADOWING means that if there is a global AND block scope variable, the local block variable will take precedence.
+
+        - GLOBAL variables have some negative attributes.
+                    - GLOBALS tend to have unintended SIDE EFFECTS.
+                    - SIDE EFFECTS occur when a local scope variable reaches into global and changes a value there.
+                    - Side Effects are UNINTENDED since it can change an outside variable to carry out its instructions.
+                    - When this happens, a code is INDETERMINATE.
+
+                    - A function should be DETERMINATE, meaning that it should always return the same value and have NO side effects.
+                    - A function that is determinate is a PURE function.
+*/
