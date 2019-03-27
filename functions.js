@@ -513,4 +513,7 @@ How do you create and namespace modules?
                         }
                     })();
 
-                    myLibrary.book();
+                    myLibrary.book();                          // call function with name space (i.e. myLibrary) and method (i.e. book).
+/*
+        - main thing is that the name space protects the variables inside from global variables.
+*/
