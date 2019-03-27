@@ -15,6 +15,7 @@
 //    11. Can you explain the return statement?
 //    12. How do you use an anaonymous closure (or self executing function)?
 //    13. What is variable hoisting and scope?
+//    14. How do you create and namespace modules?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on functions taken from study, research, tutorials, 
@@ -42,12 +43,12 @@
 ////////////////////////////////////////
  */
 
-            //    FUNCTION KEYWORD         NAME        CALL SIGNATURE
+            //    FUNCTION KEYWORD         NAME        CALL SIGNATURE (W/PARAMETER)
             //                   \           |         /
                                 function myFunction(str) {
                                 return str;                     //- MAIN BLOCK of function
                                 }
-                                console.log(myFunction("Hello!"));  //- CALL
+                                console.log(myFunction("Hello!"));  //- CALL (W/ARGUMENT)
 /*
 Example     
  
@@ -73,20 +74,6 @@ myFunction     > NAME    - The `NAME` of the code that can be invoked or called 
                           - Statements go inside curly braces (i.e. {...} ).
                           - Statements are seperated by semicolons (i.e. ; ).
                           - Also remember NOT to add a semicolon after the main block (i.e. {}; )
-
-                          - The 'RETURN' statement can return a result, object, or even another function.
-                               This lets JavaScript do things that are very difficult in other languages.
-                            In fact, `RETURN` is a function in its own right and you can return a series of parameters in 
-                               the parentheses (i.e. return (...) ).  For example:
-
-                                                    function example(a,b) {
-                                                        return (
-                                                            console.log(a + b),
-                                                            console.log(a - b),
-                                                            console.log(a * b)
-                                                        );
-                                                    }
-
 
 console.log  >  Invoke    - This invokes (or calls) the function to be used elsewhere in the code by name.
                           - console.log will print the result of the function to the browser console.
@@ -243,7 +230,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
              -- A CONSTRUCTOR INVOCATION can use the function keyword to create an object with the variable from the function.
              -- By convention, constructor functions should always be CAPITALIZED.
 
-            IMPORTANT NOTE: This does not seem to work correctly in VSCode, but in chrome it works.
+            IMPORTANT NOTE: This does not seem to work correctly in VSCode, but in chrome it does.
 
                                    
             1. So first we create a function. 
@@ -382,14 +369,28 @@ NOTE: This section is on functions in objects, but first a brief overview.
                 }
 
                 console.log(addSomething(4,4,4));            //-> 12     // because we use `arguments`, we can pass in as many
-                console.log(addSomething(5,5,5,5,5,5,5,5));  //-> 40           // arguments as we want. 
+                console.log(addSomething(5,5,5,5,5,5,5,5));  //-> 40     // arguments as we want. 
 
 
 /*
 11. Can you explain the return statement?
 ////////////////////////////////////////
         - When you invoke a function, its like generating an equation, which usually have results.
-        - The return statement is to express the result of the operation we perform in our function.  For example:
+        - The 'RETURN' statement can return a result, object, or even another function.
+               -- This lets JavaScript do things that are very difficult in other languages.
+               -- In fact, `RETURN` is a function in its own right and you can return a series of parameters in 
+                  the parentheses (i.e. return (...) ).  For example:
+
+                             function example(a,b) {
+                                return (
+                                    console.log(a + b),
+                                    console.log(a - b),
+                                    console.log(a * b)
+                                );
+                            }
+                                                    
+        - So to put it simply, the return statement expresses the result of the operation we perform in our function.  
+               -- For example:
 */
                 let addTheThing = function(a,b) {
                     return a + b;                 // the job of the return function here is to return the result of a + b.
@@ -474,3 +475,42 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     - A function should be DETERMINATE, meaning that it should always return the same value and have NO side effects.
                     - A function that is determinate is a PURE function.
 */
+
+
+/*
+How do you create and namespace modules?
+///////////////////////////////////////
+        - modules let you reuse code across apps.
+            - when you just start coding, you are coding just for that program.  However, when you start a new project you
+              might tend to look around your old code to find bits and peices to use.
+            - modules will allow you to start reusing those bits and peices without having to capy-and-paste.
+            - in a way, modules is like creating a library for you to use on any project. 
+
+        - To create a module, you need to create a NAME SPACE.
+            - namespacing allows you to protect variables that you have in your modules from any global scoped variables.
+            - this is important because you might have variables in your module that are in the application.
+            - so we know we can create a self executing function (within parentheses) which protects all the variables inside from global scope.
+                    -- but what if we want access to those variables OUTSIDE the closure but INSIDE our application?
+                    -- to do this, we need to create a variable and assign it to our self executing function.
+*/
+
+                    let myLibraryDemo = (function() {
+                        let myBook = "Moby Dick";
+                    })();
+/*
+                    -- inside the function we have a private variable (i.e. myBook).
+                    -- the variables in this function would NOT be accessible outside the function (i.e. protected from global scope).
+        
+        - Now if you want to access a variable from OUTSIDE the function, you need a RETURN statement to commicate back with the
+          rest of the application.
+*/
+
+                    let myLibrary = (function() {
+                        return {                               // Here we return an object.
+                            book: function() {                 // Then, we have an element with the name 'book' and a method (i.e. function).
+                                console.log('Moby Dick')
+                            }
+                        }
+                    })();
+
+                    myLibrary.book();
