@@ -478,7 +478,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /*
-How do you create and namespace modules?
+14. How do you create and namespace modules?
 ///////////////////////////////////////
         - modules let you reuse code across apps.
             - when you just start coding, you are coding just for that program.  However, when you start a new project you
@@ -512,8 +512,9 @@ How do you create and namespace modules?
                             }
                         }
                     })();
-
                     myLibrary.book();                          // call function with name space (i.e. myLibrary) and method (i.e. book).
 /*
-        - main thing is that the name space protects the variables inside from global variables.
+        - main thing is that the name space protects the variables inside from global scope.
+        - So what we've done is create a module and used name spacing to protect that module's internal variables from global scope.
+        
 */
