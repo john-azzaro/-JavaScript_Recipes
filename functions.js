@@ -536,7 +536,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
         - but suppose you forget to initialize the bookCollection function?
             - you will get an error because its asking to read an argument with nothing in it.
-            
+
         - To fix this, we need to do a SHORT CIRCUIT EVALUATION.
 */                    
                     let myLibrary3 = (function() {
@@ -552,7 +552,23 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     myLibrary3.bookCollection({ book: 'Persuasion'}); //-> Persuasion   // because we now have a key value pair.
 
 /*
-        - Now
+        - Now what if we have a bunch of variables everywhere within a much larger function?
+        - it would NOT be efficient to have these values scattered all over the place.
+        - To avoid this, we need a DEFAULT OBJECT for the function.
 */
 
+                    let myLibrary4 = (function() {
+                        let DEFAULT = {
+                            book: 'Northanger Abbey'                                  // 2. this is good if you need to modify your defaults in one place.
+                        }
+                        
+                        return {                               
+                            bookCollection: function() { 
+                                let myArguments = arguments[0] || '';            
+                                let statement = myArguments.book || DEFAULT.book;     // 1. instead of inserting the default value here, you can relocate to a seperate variable.
+                                console.log(statement);       
+                            }
+                        }
+                    })(); 
+                    myLibrary4.bookCollection();
 
