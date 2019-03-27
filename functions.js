@@ -16,6 +16,7 @@
 //    12. How do you use an anaonymous closure (or self executing function)?
 //    13. What is variable hoisting and scope?
 //    14. How do you create and namespace modules?
+//    15. How do you chain method calls?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on functions taken from study, research, tutorials, 
@@ -572,3 +573,35 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     })(); 
                     myLibrary4.bookCollection();
 
+
+/* 
+14. How do you chain method calls?
+/////////////////////////////////
+        - CHAINING makes it easy to work with multiple methods and it allows one function to call another.
+        - similar to jQuery.
+        - 
+*/
+
+                let cars = (function() {
+                    let DEFAULT = {
+                        car: 'Ferrari', 
+                        speed: 'normal'                                 
+                    }
+                    
+                    return {                               
+                        carCollection: function() { 
+                            let myArguments = arguments[0] || '';            
+                            let statement = myArguments.car || DEFAULT.car;     
+                            console.log(statement);       
+                        },                                                             // 1. add another item to our obkect (i.e. run).
+                        run: function() {
+                            let myArguments = arguments[0] || '';            
+                            let running = myArguments.speed || DEFAULT.speed;          // 2. running is either the argument or default (in DEFAULT).
+                            console.log(`running...` + running);                       // 3. output will be running plus either argument OR default.
+                        }
+                    }
+                })(); 
+
+               cars.carCollection();           //-> Ferrari
+               cars.run();                     //-> speed...normal
+               cars.run( { speed: 'fast'});    //-> speed...fast
