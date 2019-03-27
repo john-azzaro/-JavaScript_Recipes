@@ -496,7 +496,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
                     let myLibraryDemo = (function() {
                         let myBook = "Moby Dick";
-                    })();
+                    })();                                    //-> 
 /*
                     -- inside the function we have a private variable (i.e. myBook).
                     -- the variables in this function would NOT be accessible outside the function (i.e. protected from global scope).
@@ -508,13 +508,51 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     let myLibrary = (function() {
                         return {                               // Here we return an object.
                             book: function() {                 // Then, we have an element with the name 'book' and a method (i.e. function).
-                                console.log('Moby Dick')
+                                console.log('Pride and Prejudice')
                             }
                         }
                     })();
-                    myLibrary.book();                          // call function with name space (i.e. myLibrary) and method (i.e. book).
+                    myLibrary.book();       //-> Moby Dick     // call function with name space (i.e. myLibrary) and method (i.e. book).
 /*
         - main thing is that the name space protects the variables inside from global scope.
-        - So what we've done is create a module and used name spacing to protect that module's internal variables from global scope.
-        
+        - So what we've done is create a module and used name spacing to protect that module's internal variables from global scope.       
 */
+/* 
+        - What if we want to send infromation TO our function using an object and how to set defaults just in case the user calls a method without
+          initializing it?
+        - To send information, we use an object.
+        - it s good to use an object because we can pass in multiple key/value pairs to the function and then parse each of the values out.
+
+*/
+                    let myLibrary2 = (function() {
+                        return {                               
+                            bookCollection: function() {                 
+                                console.log(arguments[0].book);       // Capture the argument as arguments[0] (i.e. the 0th argument)
+                            }
+                        }
+                    })();
+                    myLibrary2.bookCollection({ book: 'Jane Eyre'});   //-> Jabe Eyre
+/*
+
+        - but suppose you forget to initialize the bookCollection function?
+            - you will get an error because its asking to read an argument with nothing in it.
+            
+        - To fix this, we need to do a SHORT CIRCUIT EVALUATION.
+*/                    
+                    let myLibrary3 = (function() {
+                        return {                               
+                            bookCollection: function() { 
+                                let myArguments = arguments[0] || '';             // so here if the user forgets to set the argument, myArguments will be set to nothing.
+                                let statement = myArguments.book || 'nothing';    // this is setup to only be the `say` parameter... but if it is empty, then it says 'nothing'.
+                                console.log(statement);       
+                            }
+                        }
+                    })(); 
+                    myLibrary3.bookCollection();                      //-> nothing      // because no arguments are given, you will get 'nothing'.
+                    myLibrary3.bookCollection({ book: 'Persuasion'}); //-> Persuasion   // because we now have a key value pair.
+
+/*
+        - Now
+*/
+
+
