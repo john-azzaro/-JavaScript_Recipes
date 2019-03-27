@@ -35,7 +35,8 @@
     - A function is the primary modular unit of execution in JavaScript (which is a functional language).
     - A function (in JavaScript) are called first-class entities.
     - A function is treaded as a value.
-    - A function is a series of statements that are grouped into a special package.   
+    - A function is a series of statements that are grouped into a special package.
+    - A function is JavaScripts paragraph
     */
     
 
@@ -581,7 +582,6 @@ NOTE: This section is on functions in objects, but first a brief overview.
         - similar to jQuery.
         - 
 */
-
                 let cars = (function() {
                     let DEFAULT = {
                         car: 'Ferrari', 
@@ -605,3 +605,38 @@ NOTE: This section is on functions in objects, but first a brief overview.
                cars.carCollection();           //-> Ferrari
                cars.run();                     //-> speed...normal
                cars.run( { speed: 'fast'});    //-> speed...fast
+
+/*
+       - Now you can use DOT NOTATION to chain one call to another.
+       - However, you need to understand WHY it is working.
+       - what is important is we have to make sure each function returns the calling object... which is exactly what the `this` argument does, 
+         specifically, return the object that contains it.
+                -- why is this working?  The `this` parameter is goign to return the instance of the object.
+                -- in other words, in the example below the `this` is going to return the cars2 object.
+                -- normally return would exit the current function, but in this case the `this` returns the carCollection (or run) and returns the
+                   cars2 object where you have access to carCollection AND run.
+*/
+
+                let cars2 = (function() {
+                    let DEFAULT = {
+                        car: 'Ferrari', 
+                        speed: 'normal'                                 
+                    }
+                    
+                    return {                               
+                        carCollection: function() { 
+                            let myArguments = arguments[0] || '';            
+                            let statement = myArguments.car || DEFAULT.car;     
+                            console.log(statement);
+                            return this;       
+                        },                                                             
+                        run: function() {
+                            let myArguments = arguments[0] || '';            
+                            let running = myArguments.speed || DEFAULT.speed;          
+                            console.log(`running...` + running);
+                            return this;                       
+                        }
+                    }
+                })(); 
+
+                cars2.carCollection({ car: 'Porsche'}).run({ speed: 'Super Fast'});
