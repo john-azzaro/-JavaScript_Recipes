@@ -64,9 +64,27 @@
                 console.log(x ** y);      //-> 100000
                 console.log(x % y === 0); //-> true (i.e. 0)
 
+/*
+        -- There are also INCREMENT and DECREMENT operators that add or subtract from the a current count.
+                -- INCREMENT uses a double-plus (i.e. ++) to add to a current count.
+                -- DECREMENT uses a double-minus (i.e. --) to subract from a current count.
 
+ */
+                let a = 10;
+                let b = 10;
 
+                console.log(a);    //-> 10     This will show the value of x, which we have set to 10.
+                console.log(++a);  //-> 11     This will add an increment of 1 to the value of x for a sum of 11.
+                console.log(b++);  //-> 10     Because the increment is AFTER x, you will print the value of X first, but then...
+                console.log(b);    //-> 11     ... when you log the value of x again, it will show 11.
 
+                let c = 10;
+                let d = 10;
+
+                console.log(c);    //-> 10     The value of C is 10.
+                console.log(--c);  //-> 9      Using decrement, the value of c is subtracted by 1 for a value of 9.
+                console.log(d--);  //-> 10     Same as with the increment, putting the decrement symbols after will return 10...
+                console.log(d);    //-> 9      ... but when you call d again, it will show it was decremented by 1 for a total of 9.
 
 
 
