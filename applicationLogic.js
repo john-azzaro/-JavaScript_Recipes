@@ -5,6 +5,7 @@
 //     1. What are logical assertions?
 //     2. What are operators?
 //       3. What is an arithmatic operator?
+//       4. What are increment and decrement operators?
 //       4. What is an assignment operator?
 //       5. What is a comparison operator?
 //       6. What is a logical operator?
@@ -64,10 +65,20 @@
                 console.log(x ** y);      //-> 100000
                 console.log(x % y === 0); //-> true (i.e. 0)
 
+
+
 /*
+What are increment and decrement operators?
+///////////////////////////////////////////
         -- There are also INCREMENT and DECREMENT operators that add or subtract from the a current count.
+
                 -- INCREMENT uses a double-plus (i.e. ++) to add to a current count.
+                        -- remember, x++ is equivalent to x = x + 1.
+                        -- in other words, we read the value of x, then add 1, then assign it to the variable x.
+
                 -- DECREMENT uses a double-minus (i.e. --) to subract from a current count.
+                        -- remember, x-- is equivalent to x = x - 1.
+                        -- in other words, we read the value of x, then subtract 1, then assign it to the variable x.
 
  */
                 let a = 10;
@@ -88,9 +99,26 @@
 
 
 
+/*
+2. What is an assignment operator?
+/////////////////////////////////
+        - With increment and decrement operators, you are able to add and subtract by 1.
+        - However, if you wish to add or subtract more, you need an ASSIGNMENT OPERATOR.
+*/
+                let e = 10;
+                let f = 10;
+                let g = 10;
 
+                console.log(e += 5);  //-> 15     10 + 5 = 15
+                console.log(f -= 5);  //-> 5      10 - 5 = 5
+                console.log(g *= 5);  //-> 50     10 * 5 = 50
+                
 
-
+/*
+2. What is a comparison operator?
+/////////////////////////////////
+        - a comparison operator is used to compare the value of a variable with something else.
+*/
 
 
 
