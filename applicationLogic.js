@@ -32,7 +32,7 @@
 /////////////////////
      - OPERATORS are used along with variables and constants to create EXPRESSIONS.
      - EXPRESSIONS can implement logic and algorithms.
-     - There are 5 operators in JavaScript:
+     - There are 5 important operators in JavaScript:
         -- Arithmatic       
         -- Assignment 
         -- Comparison 
@@ -161,11 +161,47 @@
 
 
 
+
+/*
+What is control flow?
+/////////////////////
+        - control flow allows your code to take certain actions based on certain scenarios.
+        - control flow allows you to dictate how your code runs under different conditions or until a certain condition is met.
+        - control flow can be achieved in 2 ways:
+                -- conditional (if, else-if, else),
+                -- try/catch/finally
+*/
+
+/*
+what is a conditional statement?
+////////////////////////////////
+*/
+
+/*
+What is a switch statement?
+///////////////////////////
+https://www.kirupa.com/html5/conditional_statements_if_else_switch_javascript.htm
+*/
+
+
 /*
 8. What is a ternary operator?
 //////////////////////////////
-        - 
+        - A TERNARY OPERATOR is short-cut conditional statement.
+        - a ternary operator is the only JavaScript operator that takes three operands. 
+        - in the example below, we want to determine whether a person can drink (or not).
+                --    let canIDrink        -- is the keyword and variable name.
+                --     (age >= 21)         -- This is the logical expression, specifically IF age is greater or equal to 21...
+                --          ?              -- This is the operator that links the conditional of the value to canIDrink.
+                -- 'Yes, you can drink'    -- The value of canIDrink
+                --          :              -- otherwise...
+                -- 'No, you cannot drink'  -- The value returned if the condition is not true.
 */
+        let age = 21;
+        let canIDrink = (age >= 21) ? 'Yes, you can drink' : 'No, you cannot drink';
+
+        console.log()
+
 
 
 
