@@ -68,7 +68,7 @@
 
 
 /*
-What are increment and decrement operators?
+4. What are increment and decrement operators?
 ///////////////////////////////////////////
         -- There are also INCREMENT and DECREMENT operators that add or subtract from the a current count.
 
@@ -100,7 +100,7 @@ What are increment and decrement operators?
 
 
 /*
-2. What is an assignment operator?
+5. What is an assignment operator?
 /////////////////////////////////
         - With increment and decrement operators, you are able to add and subtract by 1.
         - However, if you wish to add or subtract more, you need an ASSIGNMENT OPERATOR.
@@ -115,9 +115,56 @@ What are increment and decrement operators?
                 
 
 /*
-2. What is a comparison operator?
+6. What is a comparison operator?
 /////////////////////////////////
         - a comparison operator is used to compare the value of a variable with something else.
+        - a comparison operator will evaluate either TRUE or FALSE.
+        - a RELATIONAL operator uses >, <. >=, <+.
+*/
+                let h = 1;
+
+                console.log(h > 1);   //-> false     If h=1 and we ask if h is greater than 1, this is FALSE.
+                console.log(h < 1);   //-> false     If h=1 and we ask if h is less than 1, this is FALSE.
+                console.log(h >= 1);  //-> true      If h=1 and we ask if h is greater than or equal to 1, this is TRUE.
+                console.log(h <= 1);  //-> ture      If h=1 and we ask if h is less than or equal to 1, this is TRUE.
+
+
+
+/*
+7. What is an equality operator and what are the difference between strict and loose?
+////////////////////////////////////////////////////////////////////////////////////
+        - There are also EQUALITY OPERATORS.
+        - There are two types of equality operators: 
+                -- STRICT equality.
+                -- LOOSE equalosty.
+*/
+/*              -- STRICT equality compares the data type of the two items being compared.
+                        -- If the two data types are NOT the same, then it returns FALSE.
+                        -- If the two data types ARE the same, then it checks to see if they are the same value.
+                                -- If the two data types are BOTH the same AND have the same value, then TRUE.
+                                -- If the two data types are BOTH the same BUT are NOT the same value, then FALSE.
+*/
+                                   console.log(25 === 25);   //-> true     This is true because both operands are the same data type (number) and value (25);
+                                   console.log(14 === 25);   //-> false    This is false because although they are both numbers, they have different values.
+                                   console.log('1' === 1);   //-> false    Theis is false because although they are the same value, they are different types.
+                                   console.log('hi' === 25); //-> false    This is false because they are different data types AND different values.
+
+                                   console.log(25 == 25);    //-> true     This is true because they are both the same value.
+                                   console.log('25' == 25);  //-> true     This is true because although they have different data types, loose equality
+                                                             //            coeerce (convert) the data type so that they are the same and THEN compare values.
+
+ /*
+                        -- If you want to check if something is not equal to a given value, you add an exclaimation point to the beginning of it.
+*/
+                                   let i = 1
+                                   console.log(i !== 1);     //-> false    This is false because i is NOT equal to 
+
+
+
+/*
+8. What is a ternary operator?
+//////////////////////////////
+        - 
 */
 
 
@@ -125,8 +172,15 @@ What are increment and decrement operators?
 
 
 
+
+
+
+
+
+
+
 /*
-2. What are the 3 Logical Operators?
+7. What are the 3 Logical Operators?
 ///////////////////////////////////
     - There are three essential logical operators: &&, ||, and !.
    
