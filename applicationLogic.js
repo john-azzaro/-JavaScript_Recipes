@@ -4,8 +4,13 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. What are logical assertions?
 //     2. What are operators?
-//     3. What are the 3 logical assertions?
-//     4. What is the difference between strict and loose equality?
+//       3. What is an arithmatic operator?
+//       4. What is an assignment operator?
+//       5. What is a comparison operator?
+//       6. What is a logical operator?
+//       7. What is a bitwise operator?
+//     8. What are the 3 logical assertions?
+//     9. What is the difference between strict and loose equality?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful information about application logic from study, research, tutorials, 
@@ -27,17 +32,52 @@
      - OPERATORS are used along with variables and constants to create EXPRESSIONS.
      - EXPRESSIONS can implement logic and algorithms.
      - There are 5 operators in JavaScript:
-                -- Arithmatic 
-                -- Assignment 
-                -- Comparison 
-                -- Logical 
-                -- Bitwise 
-
-
-
-
-
+        -- Arithmatic       
+        -- Assignment 
+        -- Comparison 
+        -- Logical 
+        -- Bitwise 
 */
+
+/*
+3. What is an Arithmatic operator?
+//////////////////////////////
+        -- Arithmatic operators are used for performing calculations.
+        -- Arithmatic operators are just like mathmatical calculations.
+        -- There are 6 important arithmatic operators to know:
+
+                Addition         +       -- adds numbers together.
+                Subtraction      -       -- subracts numbers.
+                Multiplication   *       -- multiplies numbers.
+                Division         /       -- divides numbers
+                Exponentation    **      -- to the nth power.
+                Remainder        %       -- dividing something and there is no decimal point.
+
+        -- The arithmatic operators are demonstrated below:
+*/
+                let x = 10;
+                let y = 5;
+
+                console.log(x + y);       //-> 15    
+                console.log(x - y);       //-> 5
+                console.log(x * y);       //-> 50
+                console.log(x ** y);      //-> 100000
+                console.log(x % y === 0); //-> true (i.e. 0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 2. What are the 3 Logical Operators?
