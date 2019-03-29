@@ -190,13 +190,14 @@ https://www.kirupa.com/html5/conditional_statements_if_else_switch_javascript.ht
         - A TERNARY OPERATOR is short-cut conditional statement.
         - A ternary operator is the only JavaScript operator that takes three operands. 
         - In the example below, we want to determine whether a person can drink (or not).
+        - Also note that although you dont need the parentheses fro the logical expression, it does help in visual identification.
 
                 --    let canIDrink        -- is the keyword and variable name.
                 --     (age >= 21)         -- This is the logical expression, specifically IF age is greater or equal to 21...
                 --          ?              -- This is the operator that links the conditional of the value to canIDrink.
-                -- 'Yes, you can drink'    -- The value of canIDrink
-                --          :              -- otherwise...
-                -- 'No, you cannot drink'  -- The value returned if the condition is not true.
+                -- 'Yes, you can drink'    -- The value of canIDrink if the condition is true.
+                --          :              -- otherwise (if no previous match)...
+                -- 'No, you cannot drink'  -- The value returned if the condition is false.
 */
                 let age = 21;
                 let canIDrink = (age >= 21) ? 'Yes, you can drink' : 'No, you cannot drink';    
@@ -206,16 +207,16 @@ https://www.kirupa.com/html5/conditional_statements_if_else_switch_javascript.ht
         - note that the format can be a single line or multiple lines depending on your format preference.
 */
                 let direction = 'right'
-                let myDirection = direction == 'left' ? 'wrong direction' : direction == 'right' ? 'right!' : 'where are you going?';
+                let myDirection = (direction == 'left') ? 'wrong direction' : (direction == 'right') ? 'right!' : 'where are you going?';
                 console.log(myDirection);
                 
                 //or//
 
                 let myNumber = 4;
-                let result = myNumber == 1 ? "a" 
-                           : myNumber == 2 ? "b" 
-                           : myNumber == 3 ? "c" 
-                           : myNumber == 4 ? "d" 
+                let result = (myNumber == 1) ? "a" 
+                           : (myNumber == 2) ? "b" 
+                           : (myNumber == 3) ? "c" 
+                           : (myNumber == 4) ? "d" 
                            : "e";
                 console.log(result);
               
