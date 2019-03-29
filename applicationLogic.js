@@ -160,8 +160,6 @@
                                    console.log(i !== 1);     //-> false    This is false because i is NOT equal to 
 
 
-
-
 /*
 What is control flow?
 /////////////////////
@@ -171,6 +169,50 @@ What is control flow?
                 -- conditional (if, else-if, else),
                 -- try/catch/finally
 */
+
+
+/*
+What is a logical operator?
+//////////////////////////
+        - logical operators are used to make assertions about 2 (or more) statments.
+        - logical operators can be used with non-boolean values (i.e. strings and numbers).
+        - we use logical operators to make decisions based on mulitple conditions.
+
+        - There are three essential logical operators: &&, ||, and !.
+   
+                && -- "and" evaluates as true if both values are true.
+                        for example: 
+                                        const foo = true
+                                        const bar = false
+                                        const ree = true
+                                        
+                                        foo && bar;     // false
+                                        foo && ree;     // true
+
+                || -- "or" evaluates as true if one of the values evaluates as true.
+                        for example:                             
+                                        const foo = true
+                                        const bar = false
+                                        const ree = true
+
+                                        foo || bar       // true
+                                        foo || ree       // false
+
+                !  -- "exclamation" negates a boolean value.
+                        for example:
+                                        const foo = true
+                
+                                        foo;             // true
+                                        !foo;            // false
+*/
+
+
+
+
+
+
+
+
 
 /*
 what is a conditional statement?
