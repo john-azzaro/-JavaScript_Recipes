@@ -12,6 +12,8 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// toolkit
+
 /*
 1. What is a program?
 ////////////////////
@@ -29,4 +31,19 @@
     - JavaScript is used in two ways:
         -- First, modeling and manipulating data and proceses.
         -- Second, interacting with browser elements.
+*/
+
+/*
+What is the history of JavaScript?
+/////////////////////////////////
+    - when JavaScript first became a thing, resources seemed to be very limited (take JS code and alter).
+    - Initially, JavaScript was not properly standardized and browsers were problematic (IE, netscape) and all of them had different
+      ways of dealing with the langauge.
+    - when the web standardization movement came around (and html5 became accepted), browsers became standards-based and JavaScript 
+      language development did not need to chase after the browser standards. 
+    - jQuery initially became a way to level the playing field, but now browsers are good and standards have improved so much to
+      the point where that you may not even need to use jQuery because you are adding extra code for an enviroment that doesnt exist
+      anymore.
+
+
 */
