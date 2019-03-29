@@ -6,11 +6,11 @@
 //     2. What are operators?
 //     3. What is an arithmatic operator?
 //     4. What are increment and decrement operators?
-//     4. What is an assignment operator?
-//     5. What is a comparison operator?
-//     6. What is a logical operator?
-//     8. What are the 3 logical assertions?
-//     9. What is the difference between strict and loose equality?
+//     5. What is an assignment operator?
+//     6. What is a comparison operator?
+//     7. What is a logical operator?
+//     8. What is the difference between strict and loose equality?
+//     9. What is operator precedence?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful information about application logic from study, research, tutorials, 
@@ -36,7 +36,7 @@
         -- Assignment 
         -- Comparison 
         -- Logical 
-        -- Bitwise 
+        -- Bitwise (further investigation)
 */
 
 /*
@@ -129,7 +129,7 @@
 
 
 /*
-What is a logical operator?
+7. What is a logical operator?
 //////////////////////////
         - logical operators are used to make assertions about 2 (or more) statments.
         - logical operators can be used with non-boolean values (i.e. strings and numbers).
@@ -176,8 +176,8 @@ What is a logical operator?
 
 
 /*
-7. What is an equality operator and what are the difference between strict and loose?
-////////////////////////////////////////////////////////////////////////////////////
+8. What is the difference between strict and loose equality?
+///////////////////////////////////////////////////////////
         - There are also EQUALITY OPERATORS.
         - There are two types of equality operators: 
                 -- STRICT equality.
@@ -208,7 +208,7 @@ What is a logical operator?
 
 
 /*
-What is operator precedence?
+9. What is operator precedence?
 ////////////////////////////
         - operators with high precedence will be evaluated first.
         - to make you choose the priority in which the operators are applied with parentheses.
@@ -223,106 +223,3 @@ What is operator precedence?
 
 
 
-
-
-/*
-What is control flow?
-/////////////////////
-        - control flow allows your code to take certain actions based on certain scenarios.
-        - control flow allows you to dictate how your code runs under different conditions or until a certain condition is met.
-        - control flow can be achieved in 2 ways:
-                -- conditional (if, else-if, else),
-                -- try/catch/finally
-*/
-
-/*
-What is a switch statement?
-///////////////////////////
-https://www.kirupa.com/html5/conditional_statements_if_else_switch_javascript.htm
-*/
-
-
-/*
-8. What is a ternary operator?
-//////////////////////////////
-        - A TERNARY OPERATOR is short-cut conditional statement.
-        - A ternary operator is the only JavaScript operator that takes three operands. 
-        - In the example below, we want to determine whether a person can drink (or not).
-        - Also note that although you dont need the parentheses fro the logical expression, it does help in visual identification.
-
-                --    let canIDrink        -- is the keyword and variable name.
-                --     (age >= 21)         -- This is the logical expression, specifically IF age is greater or equal to 21...
-                --          ?              -- If this condition is true...
-                -- 'Yes, you can drink'    -- Return this.
-                --          :              -- If the condition is false...
-                -- 'No, you cannot drink'  -- The value returned if the condition is false.
-*/
-                let age = 21;
-                let canIDrink = (age >= 21) ? 'Yes, you can drink' : 'No, you cannot drink';    
-                console.log(canIDrink);   //-> Yes, you can drink
-/* 
-        - Additionally, a ternary operator is right-associative, so conditions can be chained together.
-        - note that the format can be a single line or multiple lines depending on your format preference.
-*/
-                let direction = 'right'
-                let myDirection = (direction == 'left') ? 'wrong direction' : (direction == 'right') ? 'right!' : 'where are you going?';
-                console.log(myDirection);
-                
-                //or//
-
-                let myNumber = 4;
-                let result = (myNumber == 1) ? "a" 
-                           : (myNumber == 2) ? "b" 
-                           : (myNumber == 3) ? "c" 
-                           : (myNumber == 4) ? "d" 
-                           : "e";
-                console.log(result);
-              
-
-
-/*
-7. What are the 3 Logical Operators?
-///////////////////////////////////
-    - There are three essential logical operators: &&, ||, and !.
-   
-            && -- "and" evaluates as true if both values are true.
-                    for example: 
-                                const foo = true
-                                const bar = false
-                                const ree = true
-                                
-                                foo && bar;     // false
-                                foo && ree;     // true
-
-            || -- "or" evaluates as true if one of the values evaluates as true.
-                    for example:                             
-                                const foo = true
-                                const bar = false
-                                const ree = true
-
-                                foo || bar       // true
-                                foo || ree       // false
-
-            !  -- "exclamation" negates a boolean value.
-                    for example:
-                                const foo = true
-            
-                                foo;             // true
-                                !foo;            // false
-*/
-
-
-
-
-
-/*
-        ABOUT TRUTH TABLES...
-        
-        A  B       !A        A && B       A || B         A -> B       A === B
-        ------------------------------------------------------------------------
-        T  T        F          T            T              T             T
-        T  F        F          F            T              F             F
-        F  T        T          T            T              T             F
-        F  F        T          F            F              T             T
- 
-*/
