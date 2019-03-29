@@ -61,10 +61,10 @@ What is an if...else conditional statement?
                     }
                 }
 
-                guessPrimaryColor("red");
-                guessPrimaryColor("blue");
-                guessPrimaryColor("green");
-                guessPrimaryColor("yellow");
+                guessPrimaryColor("red");      //-> correct! One of the primary colors is red!
+                guessPrimaryColor("blue");     //-> correct! One of the primary colors is blue!
+                guessPrimaryColor("green");    //-> correct! One of the primary colors is green
+                guessPrimaryColor("yellow");   //-> sorry, that's not a primary color.  Try again!
 
 /*   
         - in another example using more complex conditional logic:
@@ -87,9 +87,38 @@ What is an if...else conditional statement?
                 greeting(2);
 
 
-
-
-
+/*
+What is a switch...case statement?
+//////////////////////////////////
+        - A SWITCH statement os a conditional statement that tests whether something is true or false. 
+        - a switch statement contains a collection of case blocks.
+        - when a switch statement runs, ONLY ONE will get hit and have thier code executed.
+        
+        - a switch statment works like this:
+                - a switch statement starts with the statement itself (i.e. switch ).
+                - the statement is followed by parentheses.  HOWEVER, instead of a conditional statement (if..then) we add a VARIABLE.
+                - this variable will be compared to each case statement in the code block.
+                - inside the body of the switch statement, we have one or more CASE STATEMENTS.
+                - each case statement will be compared to the variable at the beginning of the case statement.
+                
+*/
+                function role(str) {
+                        let user = str;                               // the input is assigned to the `user` variable that we will use from now on.
+                            switch (user) {                           // we start the switch statement with keyword and the variable to compare.
+                            case "guest":                             // the first case we compare is `admin` to the value of `user`...
+                                console.log(`Guest User`);            // ... if `admin` equals the value of `user` execute this code ONLY...
+                                break;                                // ... and if this case was TRUE, then we BREAK out of the switch statement.
+                            case "moderator":
+                                console.log(`Moderator!`);
+                                break;
+                            default:
+                                console.log(`Unknown User!`);
+                        } 
+                    }
+                    
+                    console.log(role("guest"));
+                    console.log(role("moderator"));
+                    console.log(role("Tom"));
 
 
 
