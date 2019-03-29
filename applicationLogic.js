@@ -4,12 +4,11 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. What are logical assertions?
 //     2. What are operators?
-//       3. What is an arithmatic operator?
-//       4. What are increment and decrement operators?
-//       4. What is an assignment operator?
-//       5. What is a comparison operator?
-//       6. What is a logical operator?
-//       7. What is a bitwise operator?
+//     3. What is an arithmatic operator?
+//     4. What are increment and decrement operators?
+//     4. What is an assignment operator?
+//     5. What is a comparison operator?
+//     6. What is a logical operator?
 //     8. What are the 3 logical assertions?
 //     9. What is the difference between strict and loose equality?
 //
@@ -129,48 +128,6 @@
                 console.log(h <= 1);  //-> ture      If h=1 and we ask if h is less than or equal to 1, this is TRUE.
 
 
-
-/*
-7. What is an equality operator and what are the difference between strict and loose?
-////////////////////////////////////////////////////////////////////////////////////
-        - There are also EQUALITY OPERATORS.
-        - There are two types of equality operators: 
-                -- STRICT equality.
-                -- LOOSE equalosty.
-*/
-/*              -- STRICT equality compares the data type of the two items being compared.
-                        -- If the two data types are NOT the same, then it returns FALSE.
-                        -- If the two data types ARE the same, then it checks to see if they are the same value.
-                                -- If the two data types are BOTH the same AND have the same value, then TRUE.
-                                -- If the two data types are BOTH the same BUT are NOT the same value, then FALSE.
-*/
-                                   console.log(25 === 25);   //-> true     This is true because both operands are the same data type (number) and value (25);
-                                   console.log(14 === 25);   //-> false    This is false because although they are both numbers, they have different values.
-                                   console.log('1' === 1);   //-> false    Theis is false because although they are the same value, they are different types.
-                                   console.log('hi' === 25); //-> false    This is false because they are different data types AND different values.
-
-                                   console.log(25 == 25);    //-> true     This is true because they are both the same value.
-                                   console.log('25' == 25);  //-> true     This is true because although they have different data types, loose equality
-                                                             //            coeerce (convert) the data type so that they are the same and THEN compare values.
-
- /*
-                        -- If you want to check if something is not equal to a given value, you add an exclaimation point to the beginning of it.
-*/
-                                   let i = 1
-                                   console.log(i !== 1);     //-> false    This is false because i is NOT equal to 
-
-
-/*
-What is control flow?
-/////////////////////
-        - control flow allows your code to take certain actions based on certain scenarios.
-        - control flow allows you to dictate how your code runs under different conditions or until a certain condition is met.
-        - control flow can be achieved in 2 ways:
-                -- conditional (if, else-if, else),
-                -- try/catch/finally
-*/
-
-
 /*
 What is a logical operator?
 //////////////////////////
@@ -205,8 +162,62 @@ What is a logical operator?
                                         foo;             // true
                                         !foo;            // false
 */
+/*
+                ABOUT TRUTH TABLES...
+                
+                A  B       !A        A && B       A || B         A -> B       A === B
+                ------------------------------------------------------------------------
+                T  T        F          T            T              T             T
+                T  F        F          F            T              F             F
+                F  T        T          T            T              T             F
+                F  F        T          F            F              T             T
+ 
+*/
 
 
+/*
+7. What is an equality operator and what are the difference between strict and loose?
+////////////////////////////////////////////////////////////////////////////////////
+        - There are also EQUALITY OPERATORS.
+        - There are two types of equality operators: 
+                -- STRICT equality.
+                -- LOOSE equalosty.
+*/
+/*              -- STRICT equality compares the data type of the two items being compared.
+                        -- If the two data types are NOT the same, then it returns FALSE.
+                        -- If the two data types ARE the same, then it checks to see if they are the same value.
+                                -- If the two data types are BOTH the same AND have the same value, then TRUE.
+                                -- If the two data types are BOTH the same BUT are NOT the same value, then FALSE.
+*/
+                                   console.log(25 === 25);   //-> true     This is true because both operands are the same data type (number) and value (25);
+                                   console.log(14 === 25);   //-> false    This is false because although they are both numbers, they have different values.
+                                   console.log('1' === 1);   //-> false    Theis is false because although they are the same value, they are different types.
+                                   console.log('hi' === 25); //-> false    This is false because they are different data types AND different values.
+
+                                   console.log(25 == 25);    //-> true     This is true because they are both the same value.
+                                   console.log('25' == 25);  //-> true     This is true because although they have different data types, loose equality
+                                                             //            coeerce (convert) the data type so that they are the same and THEN compare values.
+
+ /*
+                        -- If you want to check if something is not equal to a given value, you add an exclaimation point to the beginning of it.
+*/
+                                   let i = 1
+                                   console.log(i !== 1);     //-> false    This is false because i is NOT equal to 
+
+
+
+
+/*
+What is operator precedence?
+////////////////////////////
+        - operators with high precedence will be evaluated first.
+        - to make you choose the priority in which the operators are applied with parentheses.
+*/
+        let xp = 2 + 3 * 4;
+        console.log(xp);      //-> 14     The sum is 14 because the multiplication number has higher precedence so it is evaluated first.
+
+        let xp2 = (2 + 3) * 4;
+        console.log(xp2);     //-> 20     since we added 2 plus 3 first and then multiplied by 4, we determined the order
 
 
 
@@ -215,8 +226,13 @@ What is a logical operator?
 
 
 /*
-what is a conditional statement?
-////////////////////////////////
+What is control flow?
+/////////////////////
+        - control flow allows your code to take certain actions based on certain scenarios.
+        - control flow allows you to dictate how your code runs under different conditions or until a certain condition is met.
+        - control flow can be achieved in 2 ways:
+                -- conditional (if, else-if, else),
+                -- try/catch/finally
 */
 
 /*
@@ -236,9 +252,9 @@ https://www.kirupa.com/html5/conditional_statements_if_else_switch_javascript.ht
 
                 --    let canIDrink        -- is the keyword and variable name.
                 --     (age >= 21)         -- This is the logical expression, specifically IF age is greater or equal to 21...
-                --          ?              -- This is the operator that links the conditional of the value to canIDrink.
-                -- 'Yes, you can drink'    -- The value of canIDrink if the condition is true.
-                --          :              -- otherwise (if no previous match)...
+                --          ?              -- If this condition is true...
+                -- 'Yes, you can drink'    -- Return this.
+                --          :              -- If the condition is false...
                 -- 'No, you cannot drink'  -- The value returned if the condition is false.
 */
                 let age = 21;
@@ -262,18 +278,6 @@ https://www.kirupa.com/html5/conditional_statements_if_else_switch_javascript.ht
                            : "e";
                 console.log(result);
               
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*
@@ -307,27 +311,18 @@ https://www.kirupa.com/html5/conditional_statements_if_else_switch_javascript.ht
                                 !foo;            // false
 */
 
-/*
-3. What is the difference between strict and loose equality?
-///////////////////////////////////////////////////////////
-
-*/
-
-
 
 
 
 
 /*
-
- 
-ABOUT TRUTH TABLES...
- 
-   A  B       !A        A && B       A || B         A -> B       A === B
-------------------------------------------------------------------------
-   T  T        F          T            T              T             T
-   T  F        F          F            T              F             F
-   F  T        T          T            T              T             F
-   F  F        T          F            F              T             T
+        ABOUT TRUTH TABLES...
+        
+        A  B       !A        A && B       A || B         A -> B       A === B
+        ------------------------------------------------------------------------
+        T  T        F          T            T              T             T
+        T  F        F          F            T              F             F
+        F  T        T          T            T              T             F
+        F  F        T          F            F              T             T
  
 */
