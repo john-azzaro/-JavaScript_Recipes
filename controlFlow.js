@@ -122,6 +122,26 @@ What is a switch...case statement?
 
 
 
+/*
+What is iteration (aka loop)?
+/////////////////////////////
+        - loops allow you to repeat a set of instructions a set number of times UNTIL the expression you specify returns false.
+        - loops are a generic way for repeating code with control over how many times the code repeats.
+        - There are three kinds of loops you can create in JavaScript:
+                -- for loops
+                -- while loops
+                -- do...while loops
+        - each of these loops allow you to specify the code we want to preat and a way to stop the repitition when a condition is met.
+*/
+
+
+/*
+What is a for-loop?
+///////////////////
+        - A for loop repeats an action a number of times
+
+*/
+
 
 
 
