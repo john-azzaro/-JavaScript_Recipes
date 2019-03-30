@@ -143,14 +143,38 @@ What is a for-loop?
         - A for loop repeats an action a number of times
         - A for loop allows you to repeat a set of instructions a set number of times UNTIL the expression you specify returns false.
         - A standard for loop code would look like this:
-*/
-        const countTo = 10                          //This is the variable that we want to count up to, specifically 10.
-
-        for (let i = 1; i <= countTo; i++) {        // Starting at 1, if `i` is less-than or equal-to the value of countTo (i.e.10), increment by one.
-            console.log(i)                          //this block of code executes EACH TIME the through the loop, specifically printing the value of i.
-        }
-
         
+                for (initialization; continued condition on being true; final expression) {...}
+                for (    i = 1)    ;          i <= countTo            ;       i++       ) {...}
+
+        - to INCREMENT a loop:
+*/
+ 
+                ///// STANDARD FOR LOOP UP (INCREMENTING) //////////////////////////////////////////////
+
+                function countUp() {
+                        const countTo = 10;
+                        for (let i=0; i <= countTo; i++) {
+                        console.log(i);
+                        }
+                }
+                console.log("FOR loop incrementing UP")
+                console.log(countUp());
+    
+    
+    
+    
+                ///// STANDARD FOR LOOP DOWN (DECREMENTING) ///////////////////////////////////////////
+                
+                function countDown() {
+                        const countFrom = 10;
+                        for (let i = countFrom; i >= 0; i-- ) {
+                        console.log(i);
+                        }
+                }
+                console.log("FOR loop decrementing DOWN")
+                console.log(countDown());
+
 
 
 
