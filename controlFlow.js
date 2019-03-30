@@ -169,13 +169,11 @@ What is a for-loop?
                         
                         - Remember, terminate the statement with a semi-colon.
                 
-                - FINAL EXPRESSION (aka increment or decrement expression) adds (or subtracts) what you specify as the loop goes through.
-                                   
-
-                - to INCREMENT a loop:
+                - FINAL EXPRESSION (aka increment or decrement expression) adds (or subtracts) what you specify as the loop goes through.                                  
 */
- 
-                ///// STANDARD FOR LOOP UP (INCREMENTING) //////////////////////////////////////////////
+
+
+         ///// STANDARD FOR LOOP UP (INCREMENTING) //////////////////////////////////////////////
 
                 function countUp() {
                         const countTo = 10;
@@ -187,11 +185,11 @@ What is a for-loop?
                 console.log(countUp());
     
     
-                ///// STANDARD FOR LOOP DOWN (DECREMENTING) ///////////////////////////////////////////
+        ///// STANDARD FOR LOOP DOWN (DECREMENTING) ///////////////////////////////////////////
 
                 function countDown() {
                         const countFrom = 10;
-                        for (let i = countFrom; i >= 0; i-- ) {
+                        for (let i = countFrom; i >= 0; i-- ) {       // note that the decrement inverts the initialization and conditional.
                         console.log(i);
                         }
                 }
@@ -199,7 +197,7 @@ What is a for-loop?
                 console.log(countDown());
 
 
-                ///// STANDARD INCREMENTING LOOP (LABEL EVEN OR ODD) ////////////////////////////////
+        ///// STANDARD INCREMENTING LOOP (LABEL EVEN OR ODD) ////////////////////////////////
 
                 function countUpEvensAndOdds() {
                         const theCount = 10;
@@ -215,7 +213,7 @@ What is a for-loop?
                 console.log(countUpEvensAndOdds());
 
                                 
-                ///// STANDARD INCREMENTING LOOP (PRINT ONLY ODDS) ////////////////////////////////
+        ///// STANDARD INCREMENTING LOOP (PRINT ONLY ODDS) ////////////////////////////////
 
                 function printOddsOnly() {
                         const pod = 10;
