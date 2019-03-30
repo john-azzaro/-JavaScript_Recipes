@@ -143,18 +143,43 @@ What is a for-loop?
         - A for loop repeats an action a number of times
         - A for loop allows you to repeat a set of instructions a set number of times UNTIL the expression you specify returns false.
         - A standard for loop code would look like this:
-        
-                for (initialization; continued condition on being true; final expression) {...}
-                for (    i = 1)    ;          i <= countTo            ;       i++       ) {...}
 
-        - to INCREMENT a loop:
+                for (initialization; continued condition on being true; final expression) {...}
+                for (let  i = 1    ;          i <= countTo            ;       i++       ) {...}     
+                
+        - from the example above, you have 3 statements:
+                1. initialization.
+                2. continued condition being true.
+                3. final expression
+
+                - INITIALIZATION is the initial expression where we start the loop.
+                        - so you declare your LOOP VARIABLE with `let` and name it i (short for index) and set it to what you need.
+                        - if you want to increment, you start at the lowest number (i.e. 1 or 0).
+                        - if you want to decrement, you start with the value or the variable count you have in a seperate variable.
+                        - in the example above, we have initialized the variable to 1.
+                        - at the end, use a semi-colon to terminate the statement.
+
+                - CONDITIONAL compares i to something else.
+                        - the loop will run as long as this condition is TRUE.
+                        - for example:
+                                -- i < 5            //-> 1,2,3,4     - as long as the loop is LESS than 5, the loop will execute.
+                                -- i <= 5           //-> 1,2,3,4,5   - as long as the loop is less than or equal to 5, the loop will execute.
+                                -- countTo = 4     
+                                   i <= countTo     //-> 1,2,3,4,5   - as long as the loop is less than or equal to countTo (4), the loop will execute.
+                        
+                        - Remember, terminate the statement with a semi-colon.
+                
+                - FINAL EXPRESSION (aka increment or decrement expression) adds (or subtracts) what you specify as the loop goes through.
+                                   
+
+                - to INCREMENT a loop:
 */
  
                 ///// STANDARD FOR LOOP UP (INCREMENTING) //////////////////////////////////////////////
 
                 function countUp() {
                         const countTo = 10;
-                        for (let i=0; i <= countTo; i++) {
+                        for (let i = 0; i <= countTo; i++) {
                         console.log(i);
                         }
                 }
@@ -162,10 +187,8 @@ What is a for-loop?
                 console.log(countUp());
     
     
-    
-    
                 ///// STANDARD FOR LOOP DOWN (DECREMENTING) ///////////////////////////////////////////
-                
+
                 function countDown() {
                         const countFrom = 10;
                         for (let i = countFrom; i >= 0; i-- ) {
@@ -176,10 +199,34 @@ What is a for-loop?
                 console.log(countDown());
 
 
+                ///// STANDARD INCREMENTING LOOP (LABEL EVEN OR ODD) ////////////////////////////////
 
+                function countUpEvensAndOdds() {
+                        const theCount = 10;
+                        for (let i = 1; i <= theCount; i++) {
+                             if (i % 2 === 0) {
+                                console.log(`the number ${i} is even`);
+                             } else {
+                                console.log(`the number ${i} is odd`);
+                             }
+                        }
+                }
+                console.log("FOR loop incrementing up counting evens and odds")
+                console.log(countUpEvensAndOdds());
 
+                                
+                ///// STANDARD INCREMENTING LOOP (PRINT ONLY ODDS) ////////////////////////////////
 
-
+                function printOddsOnly() {
+                        const pod = 10;
+                        for (let i = 1; i <= pod; i++) {
+                            if (i % 2 !== 0) {
+                                console.log(`the number ${i} is odd`);
+                            } 
+                        }
+                }
+                console.log("FOR loop incrementing up counting odds only")
+                console.log(printOddsOnly());
 
 
 
