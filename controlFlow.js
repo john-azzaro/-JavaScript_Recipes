@@ -235,10 +235,22 @@ What is a for-loop?
 /*
 What is a while loop?
 /////////////////////
-
-
+        - while loops are used to run a block of code a set number of times as long as some logical condition is true.
+        - the key difference between a for loop and a while loop is that for loops is that the loop variable (i.e. i = 0) is part of the loop itself.
+        - in while loops, that variable has to be decalred EXTERNALLY.
 */
+        // For reference:        for ( let  i = 1; i <= 5; i++ ) {
+        //                         console.log(i)
+        //                       }  
 
+        function whileLoop() {
+            let i = 0;             //-> the variable in the while loop is declared EXTERNALLY.
+            while (i <= 5) {       //-> the condition goes in the parentheses...
+                console.log(i);    //-> all statements go in the code block...
+                i++                //-> finally, at the end of the block we need to increment i.
+            }
+        }
+        console.log(whileLoop());  //-> 0,1,2,3,4,5
 
 
 
