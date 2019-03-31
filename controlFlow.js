@@ -160,17 +160,23 @@ What is a switch...case statement?
 
 
 /*
-What is iteration (aka loop)?
+What are loops and what kind of loops can we use?
 /////////////////////////////
-        - loops allow you to repeat a set of instructions a set number of times OR until a specific condition is true.
+        - loops allow you to iterate (repeat) a set of instructions a set number of times OR until a specific condition is true.
         - loops are a generic way for repeating code with control over how many times the code repeats.
-        - There are three kinds of loops you can create in JavaScript:
+        - There are THREE kinds of loops you can create in JavaScript:
 
                 -- for loops
                 -- while loops
                 -- do...while loops
 
-        - each of these loops allow you to specify the code we want to repeat and a way to stop the repitition when a condition is met.
+        - each of these loops allow you to specify the code we want to repeat a number fo times and a way to stop 
+          the repitition when a condition is met.
+
+        - there are also TWO kinds of loops we can use to iterate over the properties of an object or elements in an array.
+
+                -- for...in loops
+                -- for...of loops
 */
 
 
@@ -325,7 +331,41 @@ What is an infinite loop?
 */
 
 
+/*
+What is a for...in loop?
+///////////////////////
+        - a for...in iterates over the properties of an object.
+        - we start out with an object (person) with two properties (name and age).
+*/
+                const person = {
+                name: 'john',
+                age: 30.
+                }
+/*  
+        - if we want to display all the properties of this object, we use the for..in loop.
+        - a for...in loop we dont have the classic three part design (i.e. (initial expression; condition; increment) ).
+        - instead we only have TWO parts:
 
+                properties    (in)   object
+                        \           /        
+                for (let key in person) 
 
+        - essentially, we are looping through the properties (i.e. key) in the object (person).     
+*/      
+                for (let key in person) {     
+                        console.log(key);
+                }
+/*
+        - Now suppose you want to display the value of the obejcts.
+        - There are two ways to do this:
+                -- Dot notation (i.e. person.name).
+                -- Bracket notation (i.e. person ['name']) where the target of the property is a STRING.
+                        -- we can use bracket notation when we dont know ahead of time what property we are going to access.
+                        -- in this example below, the name of the target property is calculated at runtime.
+*/
+
+                for (let key in person) {                   // so when we iterate over the properties of the person object each value of key will be different.
+                        console.log(key, person[key]);      //
+                }
 
 
