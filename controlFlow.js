@@ -253,6 +253,12 @@ What is a while loop?
         console.log(whileLoop());  //-> 0,1,2,3,4,5
 
 
+/*
+What is a do...while loop?
+//////////////////////////
+        - 
+*/
+
 
 
 
