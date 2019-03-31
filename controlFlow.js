@@ -145,21 +145,24 @@ What is a for-loop?
         - A standard for loop code would look like this:
 
                 for (initialization; continued condition on being true; final expression) {...}
-                for (let  i = 1    ;          i <= countTo            ;       i++       ) {...}     
+
+                for ( let  i = 1; i <= countTo; i++ ) {...}     
                 
         - from the example above, you have 3 statements:
                 1. initialization.
                 2. continued condition being true.
                 3. final expression
 
-                - INITIALIZATION is the initial expression where we start the loop.
+                - INITIALIZATION 
+                    - initialization is where the initial expression where we start the loop.
                         - so you declare your LOOP VARIABLE with `let` and name it i (short for index) and set it to what you need.
                         - if you want to increment, you start at the lowest number (i.e. 1 or 0).
                         - if you want to decrement, you start with the value or the variable count you have in a seperate variable.
                         - in the example above, we have initialized the variable to 1.
                         - at the end, use a semi-colon to terminate the statement.
 
-                - CONDITIONAL compares i to something else.
+                - CONDITIONAL 
+                    - conditional compares i to something else.
                         - the loop will run as long as this condition is TRUE.
                         - for example:
                                 -- i < 5            //-> 1,2,3,4     - as long as the loop is LESS than 5, the loop will execute.
@@ -169,7 +172,8 @@ What is a for-loop?
                         
                         - Remember, terminate the statement with a semi-colon.
                 
-                - FINAL EXPRESSION (aka increment or decrement expression) adds (or subtracts) what you specify as the loop goes through.                                  
+                - FINAL EXPRESSION 
+                     - (aka increment or decrement expression) adds (or subtracts) what you specify as the loop goes through.                                  
 */
 
 
@@ -181,7 +185,7 @@ What is a for-loop?
                         console.log(i);
                         }
                 }
-                console.log("FOR loop incrementing UP")
+                console.log("FOR loop -- incrementing UP")
                 console.log(countUp());
     
     
@@ -193,7 +197,7 @@ What is a for-loop?
                         console.log(i);
                         }
                 }
-                console.log("FOR loop decrementing DOWN")
+                console.log("FOR loop -- decrementing DOWN")
                 console.log(countDown());
 
 
@@ -209,7 +213,7 @@ What is a for-loop?
                              }
                         }
                 }
-                console.log("FOR loop incrementing up counting evens and odds")
+                console.log("FOR loop -- incrementing up counting evens and odds")
                 console.log(countUpEvensAndOdds());
 
                                 
@@ -223,22 +227,21 @@ What is a for-loop?
                             } 
                         }
                 }
-                console.log("FOR loop incrementing up counting odds only")
+                console.log("FOR loop -- incrementing up counting odds only")
                 console.log(printOddsOnly());
 
 
 
-
-
-
-
-
-
 /*
-What is a switch statement?
-///////////////////////////
-https://www.kirupa.com/html5/conditional_statements_if_else_switch_javascript.htm
+What is a while loop?
+/////////////////////
+
+
 */
+
+
+
+
 
 
 /*
