@@ -247,17 +247,29 @@ What is a while loop?
             let i = 0;             //-> the variable in the while loop is declared EXTERNALLY.
             while (i <= 5) {       //-> the condition goes in the parentheses...
                 console.log(i);    //-> all statements go in the code block...
-                i++                //-> finally, at the end of the block we need to increment i.
+                i++;               //-> finally, at the end of the block we need to increment i.
             }
         }
+        console.log("this is a while loop:")
         console.log(whileLoop());  //-> 0,1,2,3,4,5
 
 
 /*
 What is a do...while loop?
 //////////////////////////
+        - do...while loops are similar to while loops but are slightly different.
+        - a do...while loop variable must be declared externally like a while loop.
         - 
 */
+        function doWhileLoop() {
+            let i = 0;
+            do {
+                console.log(i);
+                i++;
+            } while (i <= 5);
+        }
+        console.log(`this is a do..while loop:`)
+        console.log(doWhileLoop());
 
 
 
