@@ -335,12 +335,14 @@ What is an infinite loop?
 What is a for...in loop?
 ///////////////////////
         - a for...in iterates over the properties of an object.
+        - a for...in loop can also be used to iterate over an array, but it is not an ideal way.
         - we start out with an object (person) with two properties (name and age).
 */
-                const person = {
-                name: 'john',
-                age: 30.
-                }
+
+                var myObject = { "key1" : "value1", 
+                                 "key2" : "value2", 
+                                 "key3" : "value3" }
+
 /*  
         - if we want to display all the properties of this object, we use the for..in loop.
         - a for...in loop we dont have the classic three part design (i.e. (initial expression; condition; increment) ).
@@ -350,22 +352,53 @@ What is a for...in loop?
                         \           /        
                 for (let key in person) 
 
-        - essentially, we are looping through the properties (i.e. key) in the object (person).     
+        - essentially, we are looping through the properties (i.e. key) in the object (person).    
+        - below, we loop through the properties of 'forInObject' 
 */      
-                for (let key in person) {     
-                        console.log(key);
-                }
+                for (let key in myObject) {     
+                        console.log(key);           
+                }                                //-> key1 
+                                                 //   key2 
+                                                 //   key3
 /*
-        - Now suppose you want to display the value of the obejcts.
-        - There are two ways to do this:
-                -- Dot notation (i.e. person.name).
-                -- Bracket notation (i.e. person ['name']) where the target of the property is a STRING.
-                        -- we can use bracket notation when we dont know ahead of time what property we are going to access.
-                        -- in this example below, the name of the target property is calculated at runtime.
+        - to display the values of an object, we can use either:
+
+                --  dot notation (i.e. person.name)
+                        /or/
+                --  bracket notation (person['name'])
+
+        - remember that if you dont know ahead of time what property we want to access, use bracket notation with is calculated at runtime.
+        - also remember to add quotes
+*/
+                for (let key in myObject) {     
+                        console.log(myObject[key]);           
+                }                                       //-> value1 
+                                                        //   value2
+                                                        //   value3
+
+/*
+        - and then if we want to print out the key AND value, all we need to do is specify that in the console.log.
+*/
+                for (let key in myObject) {     
+                        console.log(key, myObject[key]);           
+                }                                             //-> key1 value1 
+                                                              //   key2 value2
+                                                              //   key3 value3
+
+/*
+        - now suppose you wanted to use a for...in loop to iterate over an ARRAY.
+        - to do this, instead of using 'key' you would use 'index':
+        - HOWEVER, using a for...of loop is more ideal for iterating over arrays.
 */
 
-                for (let key in person) {                   // so when we iterate over the properties of the person object each value of key will be different.
-                        console.log(key, person[key]);      //
-                }
+                let colors = ['red', 'green', 'blue'];
+
+                for (let index in colors) {
+                        console.log(index, colors[index]);
+                }                                              //-> 0 red
+                                                               //   1 green
+                                                               //   2 blue
+
+
 
 
