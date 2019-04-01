@@ -118,12 +118,12 @@ console.log  >  Invoke    - This invokes (or calls) the function to be used else
 
 
         // Function Expression:          1. A JavaScript pattern that lets you create a variable and execute it as a function.
-        //                               12. Not hoisted with contents, but the reference to it may be hoisted if we assign it as a variable.
-        // (or) Definition Expression    2. Functions defined as arguments to functions are expressions.
-        // (or) Function literal         3. This is also known as an anonymous function because you dont need a name for it.
-        //                               4. VERY useful because we can use it everywhere a variable can go.
-        //                               4. IMPORTANT: Because of an issue with hoisting, if you invoke a function expression before the function iteslef, you
-        //                                             get an error.
+        //                               2. Not hoisted with contents, but the reference to it may be hoisted if we assign it as a variable.
+        // (or) Definition Expression    3. Functions defined as arguments to functions are expressions.
+        // (or) Function literal         4. This is also known as an anonymous function because you dont need a name for it.
+        //                               5. VERY useful because we can use it everywhere a variable can go.
+        //                               6. IMPORTANT: Because of an issue with hoisting, if you invoke a function expression before the function itself, you
+        //                                             you will get an error.
         //                           
 
                         let addExpression = function(num1, num2) {
@@ -640,3 +640,37 @@ NOTE: This section is on functions in objects, but first a brief overview.
                 })(); 
 
                 cars2.carCollection({ car: 'Porsche'}).run({ speed: 'Super Fast'});
+
+
+/*
+What is a Rest Operator?
+////////////////////////
+                - if you want a function with varying numbers of parameters, you can use the rest operator.
+                - this is not to be confused with the spread operator because it is used with arrays.
+                    - with a spread operator, we can spread an array which means take it individual elements.
+                - but when we use the ... along with a parameter of a function, it is refered to as a spread operator.
+                - when you apply the rest operator to a parameter of a function, we pass a varying number of arguments and the rest 
+                  operator will take all of them and put them in an array.
+*/
+                
+
+                function sum1(...args) {
+                    let total = 0;
+                    for (let value of arguments) {
+                        total += value;
+                    }
+                    return total;
+                }
+                console.log(sum1(1,2,3,4,5,10));
+
+
+
+
+                function sum2(...args) {
+                    return args.reduce((a, b) => a + b);
+                }
+                console.log(sum2(1,2,3,4,5,10));
+
+
+
+           
