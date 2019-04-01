@@ -651,8 +651,11 @@ What is a Rest Operator?
                 - but when we use the ... along with a parameter of a function, it is refered to as a spread operator.
                 - when you apply the rest operator to a parameter of a function, we pass a varying number of arguments and the rest 
                   operator will take all of them and put them in an array.
+                - remember, rest operator must be LAST formal parameter (i.e. function sum(var1, var2, ...var3) {...}).
+                - because it is always at the end, we have as many parameters as we want but we use the ... for the REST of the parameters.
 */
                 
+                // classic was of getting the sum with rest operator
 
                 function sum1(...args) {
                     let total = 0;
@@ -664,7 +667,7 @@ What is a Rest Operator?
                 console.log(sum1(1,2,3,4,5,10));
 
 
-
+                // more modern way of getting the sum with rest operator
 
                 function sum2(...args) {
                     return args.reduce((a, b) => a + b);
@@ -672,5 +675,12 @@ What is a Rest Operator?
                 console.log(sum2(1,2,3,4,5,10));
 
 
+                // more complex example
 
+                function sum3(discount, ...prices) {
+                    const total = prices.reduce((a,b) => a + b);
+                    return total * (1 - discount);                   // if dicount is .01 subtracted from 1 is 0.9 multiplied by total will... 
+                }                                                    // ...return final price after discount.
+                console.log(sum3(0.1, 20, 30));                      // 0.1 is the discount, 20 and 30 are the prices.
+                                                                     //-> 45
            
