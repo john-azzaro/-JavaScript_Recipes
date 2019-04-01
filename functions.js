@@ -5,6 +5,7 @@
 //     1. What is a function?
 //     2. What are the components of a function?
 //     3. What is the difference between arguments and parameters?
+//     4. What is a default parameter?
 //     4. How do you define a function?
 //     5. How do you invoke a function?
 //     6. How do you use functions in objects?
@@ -85,6 +86,8 @@ console.log  >  Invoke    - This invokes (or calls) the function to be used else
 */
 
 
+
+
  /* 
  3. What is the difference between arguments and parameters?
  ///////////////////////////////////////////////////////
@@ -99,7 +102,51 @@ console.log  >  Invoke    - This invokes (or calls) the function to be used else
            Its important to know the difference because JavaScript does not throw an error if the number of arguments passed during a function 
       invocation are different than the number of parameters listed during function definition. This should make it clear that parameters 
       and arguments should be treated as two different entities.
- */                   
+*/
+
+
+
+
+
+
+/*
+What is a default parameter?
+///////////////////////////
+        - a default parameter is a specified parameter that we specify in the call signature parentheses of the function.
+        - below we have a normal function BEFORE default parameters:
+*/
+                function interest(principal, rate, years) {
+                    return principal * rate / 100 * years;
+                }
+                console.log(`default parameter example before default:`);
+                console.log(interest(10000, 3.5, 5));                     //-> 1750
+/*
+
+        - However, we can use a variable to provide a default value with the or operator (i.e. ||).
+        - note that you DO NOT instantiate the default parameters as variables.
+*/
+                function interest2(principal, rate, years) {
+                    rate = rate || 3.5;
+                    years = years || 5;
+                    return principal * rate / 100 * years;
+                }
+                console.log(`default parameter example with default variable:`);
+                console.log(interest2(10000));                           //-> 1750
+/*
+
+        - With ES6, you can do it in amuch cleaner way by inserting it inside the call signature itself.
+        - HOWEVER, once you give a default parameter, every parameter after that should also have a default as well, otherwise
+          you get a NaN (not a number).
+*/
+                function interest3(principal, rate = 3.5, years = 5) {
+                    return principal * rate / 100 * years;
+                }
+                console.log(`default parameter example with default variable in call signature:`);
+                console.log(interest3(10000));                           //-> 1750
+
+
+
+                
 
 
 /*
@@ -154,6 +201,9 @@ console.log  >  Invoke    - This invokes (or calls) the function to be used else
    
 
 
+
+
+
 /*
 5. How do you invoke a function?
 ////////////////////////////
@@ -186,6 +236,10 @@ console.log  >  Invoke    - This invokes (or calls) the function to be used else
                                                         //->  5
                                                         //    6
                                                         //    { '0': 2, '1': 3 }
+
+
+
+
 
 
 /* 
@@ -235,6 +289,10 @@ NOTE: This section is on functions in objects, but first a brief overview.
                                                         //   Awesome
 
 
+
+
+
+
 /*
 7. How do you invoke a function through a constructor?
 /////////////////////////////////////////////////////
@@ -275,7 +333,12 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
                         console.log(firstDog);          //-> dog {name: "bowser", breed: "yorkie"}
  */             
-                        
+ 
+ 
+
+
+
+
 
 /* 
 8. How do you expand objects through prototypes?
@@ -317,6 +380,11 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
                 firstDog.speak('I go bark sometimes')
     */ 
+
+
+
+
+
 
 /*
 9. How do you invoke through Call & Apply?
@@ -365,6 +433,11 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 
+
+
+
+
+
 /*
 10. What is the arguments parameter?
 ///////////////////////////////
@@ -405,6 +478,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 
+
 /*
 11. Can you explain the return statement?
 ////////////////////////////////////////
@@ -437,6 +511,10 @@ NOTE: This section is on functions in objects, but first a brief overview.
         - the return statement is usually the last statement in a function (stops execution).
         - the return statement can be anything or return nothing
 */
+
+
+
+
 
 
 /* 
@@ -479,6 +557,11 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     })("I am an anonymous function");
 
 
+
+
+
+
+
 /*
 13. What is variable hoisting and scope?
 ///////////////////////////////////////
@@ -508,6 +591,11 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     - A function should be DETERMINATE, meaning that it should always return the same value and have NO side effects.
                     - A function that is determinate is a PURE function.
 */
+
+
+
+
+
 
 
 /*
@@ -606,6 +694,11 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     myLibrary4.bookCollection();
 
 
+
+
+
+
+
 /* 
 14. How do you chain method calls?
 /////////////////////////////////
@@ -624,7 +717,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
                             let myArguments = arguments[0] || '';            
                             let statement = myArguments.car || DEFAULT.car;     
                             console.log(statement);       
-                        },                                                             // 1. add another item to our obkect (i.e. run).
+                        },                                                             // 1. add another item to our object (i.e. run).
                         run: function() {
                             let myArguments = arguments[0] || '';            
                             let running = myArguments.speed || DEFAULT.speed;          // 2. running is either the argument or default (in DEFAULT).
@@ -671,6 +764,11 @@ NOTE: This section is on functions in objects, but first a brief overview.
                 })(); 
 
                 cars2.carCollection({ car: 'Porsche'}).run({ speed: 'Super Fast'});
+
+
+
+
+
 
 
 /*
