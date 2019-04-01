@@ -417,4 +417,51 @@ what is a for...of loop?
 
                 
 
-
+/*
+What are the uses of the keywords break and continue in loops?
+/////////////////////////////////////////////////////////////
+        - the keywords break and continue can change how the loop behaves.
+        - for example, suppose we want to jump out of a loop when a condition is true (i.e. i === 5).
+                -- in this case, we would use a `break`
+*/
+                function breakOut() { 
+                        let i = 0;                          // the initial value of i is equal to 0.
+                        while (i <= 10) {                   // the loop runs as long as i is less than or equal to 10...
+                        if (i === 5) {                   // HOWEVER, if i = 5... 
+                                break;                      // BREAK out of the loop.
+                        }
+                        console.log(i);                  // print i and increment as long as i <= 10 AND as long as i is NOT equal to 10.
+                        i++;     
+                        }
+                }
+                console.log(`below is an example of break`);      
+                console.log(breakOut());                             //-> 0
+                                                                        //   1
+                                                                        //   2
+                                                                        //   3
+                                                                        //   4
+/* 
+        - with the keyword `continue`m we can jump back to the beginning of the loop when a certain condition is true.
+        - below, when we are going through the while loop, IF the number is an odd number (i.e. 2,4,6,8) with the code i % 2 === 0, the loop
+          will increment.  BUT!  when we insert `continue` as the last bit of our code, we jump back to the beginning of the while loop.
+        - by doing this, we DO NOT print the odd numbers... only the even ones.
+        - so after the 2 is skipped, the next step of the iteration occurs (i.e. 3) and the if statement does not execute because 3 is not odd.
+*/
+                function continueOn() { 
+                        let i = 0;                          // the initial value of i is equal to 0.
+                        while (i <= 10) {                   // the loop runs as long as i is less than or equal to 10...
+                           if (i % 2 === 0) {               // when it shows an odd numnber (i.e. 2,4,6,8)
+                                i++;                        
+                                continue;
+                           }     
+                        console.log(i);                     // print i and increment as long as i <= 10 AND as long as i is NOT equal to 10.
+                        i++;     
+                        }
+                }
+                console.log(`below is an example of continue`);      
+                console.log(continueOn());                              //-> 1
+                                                                        //   3
+                                                                        //   5
+                                                                        //   7
+                                                                        //   9
+                                                                
