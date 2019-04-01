@@ -334,16 +334,17 @@ What is an infinite loop?
 /*
 What is a for...in loop?
 ///////////////////////
+
         - a for...in iterates over the properties of an object.
         - a for...in loop can also be used to iterate over an array, but it is not an ideal way.
         - we start out with an object (person) with two properties (name and age).
+  
+        - we start out with an object (person) with two properties (name and age).
 */
-
                 var myObject = { "key1" : "value1", 
                                  "key2" : "value2", 
                                  "key3" : "value3" }
-
-/*  
+/*
         - if we want to display all the properties of this object, we use the for..in loop.
         - a for...in loop we dont have the classic three part design (i.e. (initial expression; condition; increment) ).
         - instead we only have TWO parts:
@@ -400,5 +401,18 @@ What is a for...in loop?
                                                                //   2 blue
 
 
+/*
+what is a for...of loop?
+////////////////////////
+        - for...of loops ere introduced in ecma6 and function just like the for...in loop.
+        - with the for...of loop, we dont have to deal with the index (from the example above) or access the element at the given index.
+*/
+                for (let color of colors) {
+                        console.log(color);
+                }                                             //-> red
+                                                              //   green
+                                                              //   blue
+
+                
 
 
