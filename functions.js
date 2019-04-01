@@ -18,6 +18,8 @@
 //    13. What is variable hoisting and scope?
 //    14. How do you create and namespace modules?
 //    15. How do you chain method calls?
+//    16. What is a rest operator?
+//    17. What are getters and setters?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on functions taken from study, research, tutorials, 
@@ -25,6 +27,8 @@
 //        and Answer format for improved readability.
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 
 /*
@@ -41,6 +45,8 @@
     - A function is considered an object
     */
     
+
+
 
 /* 
 2. What are the components of a function?
@@ -107,8 +113,6 @@ console.log  >  Invoke    - This invokes (or calls) the function to be used else
 
 
 
-
-
 /*
 What is a default parameter?
 ///////////////////////////
@@ -135,8 +139,10 @@ What is a default parameter?
 /*
 
         - With ES6, you can do it in amuch cleaner way by inserting it inside the call signature itself.
-        - HOWEVER, once you give a default parameter, every parameter after that should also have a default as well, otherwise
-          you get a NaN (not a number).
+        - Once you give a default parameter, every parameter after that should also have a default as well, otherwise
+          you get a NaN (not a number).  
+              -- HOWEVER, if you pass in undefined (i.e. console.log(interest3(principle, rate = 3.5, undefined))), you will be able
+                 to use default parameters at whichever point you wish... but try not to because it is not good practice.
 */
                 function interest3(principal, rate = 3.5, years = 5) {
                     return principal * rate / 100 * years;
@@ -146,7 +152,6 @@ What is a default parameter?
 
 
 
-                
 
 
 /*
@@ -202,8 +207,6 @@ What is a default parameter?
 
 
 
-
-
 /*
 5. How do you invoke a function?
 ////////////////////////////
@@ -236,7 +239,6 @@ What is a default parameter?
                                                         //->  5
                                                         //    6
                                                         //    { '0': 2, '1': 3 }
-
 
 
 
@@ -292,7 +294,6 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 
-
 /*
 7. How do you invoke a function through a constructor?
 /////////////////////////////////////////////////////
@@ -338,8 +339,6 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 
-
-
 /* 
 8. How do you expand objects through prototypes?
 ///////////////////////////////////////////////
@@ -379,9 +378,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
         4. then we attach the speak method to firstDog and pass along something to say.
 
                 firstDog.speak('I go bark sometimes')
-    */ 
-
-
+*/ 
 
 
 
@@ -436,8 +433,6 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 
-
-
 /*
 10. What is the arguments parameter?
 ///////////////////////////////
@@ -478,7 +473,6 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 
-
 /*
 11. Can you explain the return statement?
 ////////////////////////////////////////
@@ -511,7 +505,6 @@ NOTE: This section is on functions in objects, but first a brief overview.
         - the return statement is usually the last statement in a function (stops execution).
         - the return statement can be anything or return nothing
 */
-
 
 
 
@@ -561,7 +554,6 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 
-
 /*
 13. What is variable hoisting and scope?
 ///////////////////////////////////////
@@ -591,8 +583,6 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     - A function should be DETERMINATE, meaning that it should always return the same value and have NO side effects.
                     - A function that is determinate is a PURE function.
 */
-
-
 
 
 
@@ -698,9 +688,8 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 
-
 /* 
-14. How do you chain method calls?
+15. How do you chain method calls?
 /////////////////////////////////
         - CHAINING makes it easy to work with multiple methods and it allows one function to call another.
         - similar to jQuery.
@@ -769,10 +758,8 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 
-
-
 /*
-What is a Rest Operator?
+16. What is a Rest Operator?
 ////////////////////////
                 - if you want a function with varying numbers of parameters, you can use the rest operator.
                 - this is not to be confused with the spread operator because it is used with arrays.
