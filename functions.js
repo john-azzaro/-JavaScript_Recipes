@@ -387,6 +387,22 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
                 console.log(addSomething(4,4,4));            //-> 12     // because we use `arguments`, we can pass in as many
                 console.log(addSomething(5,5,5,5,5,5,5,5));  //-> 40     // arguments as we want. 
+/*
+        - To pass as many arguments as we want (and in this case get the sum), we use the special object called object again.
+*/
+                function addSomething2() {
+                    let total = 0;
+                    for (let value of arguments) {
+                        total += value;
+                    }
+                    return total;
+                }
+                console.log(`example with arguments object:`)
+                console.log(addSomething2(1,2,3,4,5,10));     //-> 25
+
+
+
+
 
 
 /*
