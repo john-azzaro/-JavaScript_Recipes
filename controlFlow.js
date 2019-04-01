@@ -442,10 +442,12 @@ What are the uses of the keywords break and continue in loops?
                                                                         //   4
 /* 
         - with the keyword `continue`m we can jump back to the beginning of the loop when a certain condition is true.
-        - below, when we are going through the while loop, IF the number is an odd number (i.e. 2,4,6,8) with the code i % 2 === 0, the loop
-          will increment.  BUT!  when we insert `continue` as the last bit of our code, we jump back to the beginning of the while loop.
-        - by doing this, we DO NOT print the odd numbers... only the even ones.
-        - so after the 2 is skipped, the next step of the iteration occurs (i.e. 3) and the if statement does not execute because 3 is not odd.
+
+        - below, when we are going through the while loop.
+                - IF the number is an odd number (i.e. 2,4,6,8) with the code i % 2 === 0, the loop will increment.  
+                - HOWEVER! When we insert `continue` as the last bit of our code, we jump back to the beginning of the while loop.
+                 - by doing this, we DO NOT print the odd numbers... only the even ones.
+                 - so after the 2 is skipped, the next step of the iteration occurs (i.e. 3) and the if statement does not execute because 3 is not odd.
 */
                 function continueOn() { 
                         let i = 0;                          // the initial value of i is equal to 0.
