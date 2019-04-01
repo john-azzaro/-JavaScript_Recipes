@@ -403,9 +403,11 @@ What is a for...in loop?
 
 /*
 what is a for...of loop?
-////////////////////////
-        - for...of loops ere introduced in ecma6 and function just like the for...in loop.
+////////////////////////      
+        - for...of loops are used to iterate over the items in an array
+        - for...of loops are introduced in ecma6 and function just like the for...in loop.
         - with the for...of loop, we dont have to deal with the index (from the example above) or access the element at the given index.
+        - in the example below, color (our loop variable) will hold one of the items in the array.
 */
                 for (let color of colors) {
                         console.log(color);
