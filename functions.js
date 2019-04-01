@@ -36,7 +36,8 @@
     - A function (in JavaScript) are called first-class entities.
     - A function is treaded as a value.
     - A function is a series of statements that are grouped into a special package.
-    - A function is JavaScripts paragraph
+    - A function is JavaScripts paragraph.
+    - A function is considered an object
     */
     
 
@@ -105,32 +106,46 @@ console.log  >  Invoke    - This invokes (or calls) the function to be used else
 4. How do you define a function?
 ////////////////////////////
 */
-
-        // Function Declaration: 1. Hoisted with contents (hoisting is how the browser parses Javascript, reads through once then executes second pass).
-        //                       2. Function declarations are hoisted to the top of the top-level or if you have a function declaration inside 
-        //                            a function, to the top of that function. 
-        //                       3. With function declarations, you can use them above where they are declared.
-
+/*
+        Function Declaration: 1. Hoisted with contents (hoisting is how the browser parses Javascript, reads through once then executes second pass).
+                              2. Function declarations are hoisted to the top of the top-level or if you have a function declaration inside 
+                                   a function, to the top of that function. 
+                              3. With function declarations, you can use them above where they are declared.
+*/
                         function addDeclaration(num1, num2) {
                             return num1 + num2;
                         }
+                        console.log(`function declaration example:`)
                         console.log(addDeclaration(2,2))     // 4
 
+/*
+        Function Expression:          1. A JavaScript pattern that lets you create a variable and execute it as a function.
+                                      2. Remember: a variable can be set to a number, a string, an object, or even a function (seen here). 
+                                      3. Not hoisted with contents, but the reference to it may be hoisted if we assign it as a variable.
+        (or) Definition Expression    4. Functions defined as arguments to functions are expressions.
+        (or) Function literal         5. This is also known as an anonymous function because you dont need a name for it.
+                                      6. Function expressions are useful because we can use it everywhere a variable can go.
+                                      7. Since this is a variable (or if it is a const), we need to terminate the function with a semi-colon.
+                                      8. If you DO NOT have a name for the function (seen below), you have an ANONYMOUS function.
+                                      9. If you add a name to the function (i.e. let run = function walk() {...}), it is a NAMED function expression.
+                                      10. IMPORTANT: Because of an issue with hoisting, if you invoke a function expression before the function itself, 
+                                                     you will get an error.
+                                      11. You can also run the function through another declared variable.             
+ */                                 
 
-        // Function Expression:          1. A JavaScript pattern that lets you create a variable and execute it as a function.
-        //                               2. Not hoisted with contents, but the reference to it may be hoisted if we assign it as a variable.
-        // (or) Definition Expression    3. Functions defined as arguments to functions are expressions.
-        // (or) Function literal         4. This is also known as an anonymous function because you dont need a name for it.
-        //                               5. VERY useful because we can use it everywhere a variable can go.
-        //                               6. IMPORTANT: Because of an issue with hoisting, if you invoke a function expression before the function itself, you
-        //                                             you will get an error.
-        //                           
+                    // function expression:
 
                         let addExpression = function(num1, num2) {
                             return num1 + num2;
-                        }
+                        };                                                 // note the semi-colon that terminates the variable.
+                        console.log(`function expression example:`)
                         console.log(addExpression(3,3));    // 6
 
+                    //function expression called through another variable:
+
+                        let variableWithAddExpression = addExpression;
+                        console.log(`function expression called via another variable:`);
+                        variableWithAddExpression();
 
         // ES6 Fat Arrow Function:
 
