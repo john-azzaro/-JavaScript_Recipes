@@ -5,6 +5,8 @@
 //     1. What is an Object?
 //     2. What are the components of an object?
 //     3. Why use objects?
+//     4. How do you add, update, and delete key/value pairs?
+//     5. What is self-reference in an object and what is the function of `this`?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on objects taken from study, research, tutorials, 
@@ -110,9 +112,9 @@
 
 
 /*
-How do you add, update, and delete key/value pairs?
+4. How do you add, update, and delete key/value pairs?
 ///////////////////////////////////////////////////
-*/
+*/    
                 let colorsAndItems = {
                     yellow: 'banana',
                     red: 'apple',
@@ -143,3 +145,18 @@ How do you add, update, and delete key/value pairs?
                     delete colorsAndItems.purple;
                     console.log(colorsAndItems);             //-> purple: 'eggplant'
 
+
+
+/*
+5. What is self-reference in an object and what is the function of `this`?
+//////////////////////////////////////////////////////////////////////////
+        - Self-reference is when you mention the object name again inside a function.
+        - self-reference is achieved by repeating the object variable name inside a method
+*/
+                const dogCaller = {
+                    dog: 'Mr. Barksy',
+                    message: function() {
+                        console.log(`Hello from ${this.dog}`);
+                    }
+                }
+                console.log(dogCaller.message());
