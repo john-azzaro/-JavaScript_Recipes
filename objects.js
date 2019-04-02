@@ -7,6 +7,7 @@
 //     3. Why use objects?
 //     4. How do you add, update, and delete key/value pairs?
 //     5. What is self-reference in an object and what is the function of `this`?
+//     6. What is a factory function?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on objects taken from study, research, tutorials, 
@@ -120,7 +121,6 @@
                     red: 'apple',
                     green: 'kiwi'
                 }
-
 /*
         - To ADD a new key/value pair to an existing object:
 
@@ -156,7 +156,36 @@
                 const dogCaller = {
                     dog: 'Mr. Barksy',
                     message: function() {
-                        console.log(`Hello from ${this.dog}`);
+                        console.log(`Hello from ${this.dog}`);      //  this template literal uses the `this` to access the value of dog.
                     }
                 }
                 console.log(dogCaller.message());
+
+
+
+            
+/*
+6. What is a factory function?
+//////////////////////////////
+        - Just like a factory produces products, factory functions produce objects.
+*/
+
+            function createCake(name, layers) {
+                return {
+                    name: name,
+                    layers: layers,
+                    addLayer: function() {
+                        console.log(`You've added another layer!`);
+                        this.layers++;
+                    },
+                    cakeStatus: function() {
+                        console.log(`the ${this.name} has ${this.layers} layers`);
+                    }
+                }
+            }
+
+            const superCake = createCake('Super Cake', 2);
+            superCake.cakeStatus();
+            superCake.addLayer();
+            superCake.cakeStatus();
+            
