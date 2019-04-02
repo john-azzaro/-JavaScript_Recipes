@@ -4,11 +4,12 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. What is an Object?
 //     2. What are the components of an object?
-//     3. Why use objects?
-//     4. How do you add, update, and delete key/value pairs?
+//     3. How do you use objects?
+//     4. How do you add, update, and delete key/value pairs from dynmaic objects?
 //     5. What is self-reference in an object and what is the function of `this`?
 //     6. What is a factory function?
 //     7. What is a constructor function?
+//     8. WHat is a constructor property?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on objects taken from study, research, tutorials, 
@@ -34,7 +35,7 @@
 
 /*
 2. What are the components of an object?
-/////////////////////////////////////
+///////////////////////////////////////
     - an OBJECT LITERAL is a comma seperated list of name/value pairs wrapped inside curly braces.
     - inside the object literal are key/value pairs.
     - each key/value pair has a name followed by a colon and a value followed by a comma.
@@ -56,8 +57,8 @@
 
 
 /*
-3. why use objects?
-///////////////////
+3. How do you use objects?
+/////////////////////////
     - the purpose of an object is to group related variables.
     - if we have properties that are highly related, we want to encapsulate them inside an object.
     - we want to create an object with these related properties because the alternative is inefficient.  
@@ -67,7 +68,7 @@
             let weapon = 'sword';
             let shield = 'round';
 /*
-    - we are declaring variable, but all of these variables are highly related.
+    - in the example above, we are declaring variables, but all of these variables are highly related.
     - BUT if we encapsulate those variables in an object, we can send that object anywhere in our program.
     - so we create an object using "object literal syntax" to hold those related variables:
 */
@@ -115,7 +116,11 @@
 
 /*
 4. How do you add, update, and delete key/value pairs?
-///////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+    - OBJECTS ARE DYNAMIC, meaning that once you create them you can:
+            -- Create new properties (i.e. insert a key/value pair into your existing object).
+            -- Update existing properties (i.e. change the value of a property to anything else).
+            -- Delete existing properties (i.e. remove the property from the object).
 */    
                 let colorsAndItems = {
                     yellow: 'banana',
@@ -123,7 +128,7 @@
                     green: 'kiwi'
                 }
 /*
-        - To ADD a new key/value pair to an existing object:
+        - To CREATE a new properties:
 
              existing object name      new key         new value
 *///               \                  |              /         
@@ -131,7 +136,7 @@
                     console.log(colorsAndItems);             //-> purple: 'eggplant'
 
 /*
-        - To UPDATE a new key/value pair to an existing object:
+        - To UPDATE existing properties:
 
            existing object name     key           new value
 *///               \                 |               /         
@@ -139,7 +144,7 @@
                      console.log(colorsAndItems);                 //->   new key/value:   red: 'strawberry'
 
 /*
-        - To ADD a new key/value pair to an existing object:
+        - To DELETE existing properties:
 
              delete keyword     existing object     key to delete         
 *///                   \                |           /         
@@ -219,3 +224,9 @@
 */
             const circle = new Circle(1);           
             console.log(circle);
+
+
+/*
+8. What is a constructor property?
+///////////////////////////////
+*/
