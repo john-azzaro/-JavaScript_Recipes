@@ -226,7 +226,7 @@
             -- third, it will return the object from the Circle function.
 */
             const circle = new Circle(1);           
-            console.log(`==> Example of a constrcutor function`)
+            console.log(`==> Example of a constructor function`)
             console.log(circle);
 
 
@@ -283,6 +283,7 @@
 */
                 let xa = 10;      
                 let ya = xa;
+                console.log(`==> Examples of value types`)
                 console.log(xa);    //-> 10
                 console.log(ya);    //-> 10
 /*
@@ -295,9 +296,23 @@
             -- when you work with primitives, the value (i.e. 10) is stored in the variable (i.e. xa).
             -- when you copy that variable (i.e. xa as a value of ya), that exact value (10) is copied into the new variable (ya).
             -- MAIN POINT: Each variable is completely independant of each other.
+                           For the variable xa, the value of 10 is stored INSIDE the variable.
+                           When you copy that variable again, you are using the stored value UNLESS you change that value BEFORE you copy it.
 */
                 console.log(ya);     //-> 10
-                
+
 /*
-    - for REFERENCE types
+    - For REFERENCE types
 */
+            let xb = {value: 10};   // so the immediate difference is that the value is now an object with a property called value.
+            let yb = xb;
+            console.log(`==> Example of Reference types`);
+            console.log(xb);        //-> { value: 10 }
+            console.log(yb);        //-> { value: 10 }
+            
+/*
+    - HOWEVER, when the object is a value, that object is NOT stored in the variable (i.e. xb)...
+            -- that object is stored SOMEWHERE ELSE in memory and the ADDRESS is stored in that memory variable.
+*/
+            xb.value = 20;
+            console.log(yb);        //-> { value: 20 }
