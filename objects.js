@@ -168,24 +168,25 @@
 6. What is a factory function?
 //////////////////////////////
         - Just like a factory produces products, factory functions produce objects.
+        - the job of a factory is to create an individual instance of some model.
+        - in a factory function, we 
 */
-
             function createCake(name, layers) {
                 return {
-                    name: name,
-                    layers: layers,
-                    addLayer: function() {
+                    name: name,                                                        // starting name key and value
+                    layers: layers,                                                    // starting layer key and value
+                    addLayer: function() {                                             // function that adds a layer to your cake.
                         console.log(`You've added another layer!`);
                         this.layers++;
                     },
-                    cakeStatus: function() {
+                    cakeStatus: function() {                                           // function that summarizes the object (i.e. name and layer)
                         console.log(`the ${this.name} has ${this.layers} layers`);
                     }
                 }
             }
 
-            const superCake = createCake('Super Cake', 2);
-            superCake.cakeStatus();
-            superCake.addLayer();
-            superCake.cakeStatus();
+            const superCake = createCake('Super Cake', 2);       // first we define a constant, call createCake function and pass name and layer parameters.       
+            superCake.cakeStatus();                              // log cake status set to 1.
+            superCake.addLayer();                                // run the object method addlayer (which adds 1 layer)
+            superCake.cakeStatus();                              // log again and now the layers are set to 2!
             
