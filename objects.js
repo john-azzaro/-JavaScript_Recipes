@@ -368,20 +368,31 @@ How do you iterate over the properties of an object?
 /*
     - ITERATION METHOD 1: Using Object.keys
     =======================================
-    - using Object.keys (note the capital O in Object), you will get back an object as an array.
+    - using Object.keys (note the capital "O" in Object), you will get back an object as an array.
+
+                method    iterated object  method       function
+                    \            |         |             /
+                    Object.keys(snacks).forEach(function(key) {
+                        console.log(`the key is ${key} and the value is ${snacks[key]}`);
+                                                |                              |
+                                        return name of property          return value of property
+                    });
+        
+        - We use "Object.keys" with "snacks" as the parameter, then use '.forEach' to execute the following function
+          FOR EACH property in the object.  The function (with the 'key' parameter) will then log the property of the object (i.e. ${key})
+          as well as the value of that key (i.e. ${snacks[key]}).
+          
+        - To break it down into its constituent parts:
 
             -- Object.keys          -- method that returns a given object (in this case snacks) own property names.
             -- (snacks)             -- the object whose properties are to be returned.
-            -- .forEach             -- calls the proceeding function once for each element in the array.
-            -- function(key) {...}  -- 
+            -- .forEach             -- calls the proceeding function once for each element in the array.  
+                                       This is essentially saying "for each key/value pair in the object..."
+            -- function(key) {...}  -- ... execute a function whose paramter is key and...
+            -- ${key}               -- ... return the name...
+            -- ${snacks[key]}       -- ... return the value of the name. 
 
-        method    iterated object   method
-             \            |         |             /
-            Object.keys(snacks).forEach(function(key) {
-                console.log(`the key is ${key} and the value is ${snacks[key]}`);
-                                           |                              |
 
-            });
 
 
 
