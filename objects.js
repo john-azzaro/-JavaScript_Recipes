@@ -65,7 +65,7 @@
 /*
     - we are declaring variable, but all of these variables are highly related.
     - BUT if we encapsulate those variables in an object, we can send that object anywhere in our program.
-    - so we create an object to hold those related variables:
+    - so we create an object using "object literal syntax" to hold those related variables:
 */
             let standardEquipment = {
                 armor: 'chain mail',
@@ -96,17 +96,50 @@
             -- bracket notation (i.e. equipment['armor'])
                 - we use bracket notation is we need to use spaces or periods (because otherwise dot-notation would have breaks and not work).
 */
-            console.log(equipment.equipmentOwner);   //-> Sir Galahad
-            console.log(equipment.isDefensive);      //-> true
-            console.log(equipment.armor);            //-> { helmet: 'sallet', armor: 'chain mail' }
-            console.log(equipment.shield);           //-> [ 'round', 'dragon picture', 'handle' ]
+                console.log(equipment.equipmentOwner);   //-> Sir Galahad
+                console.log(equipment.isDefensive);      //-> true
+                console.log(equipment.armor);            //-> { helmet: 'sallet', armor: 'chain mail' }
+                console.log(equipment.shield);           //-> [ 'round', 'dragon picture', 'handle' ]
 /*
             -- for the object method (i.e. function), we need to call the function first.
 */
-            console.log(equipment.weaponStrikes);    //-> 1
-            equipment.useWeapon();                   //-> using weapon increases offensive ability +1!
-            console.log(equipment.weaponStrikes);    //-> 2
+                console.log(equipment.weaponStrikes);    //-> 1
+                equipment.useWeapon();                   //-> using weapon increases offensive ability +1!  (i.e we call the draw method)
+                console.log(equipment.weaponStrikes);    //-> 2
 
 
 
+/*
+How do you add, update, and delete key/value pairs?
+///////////////////////////////////////////////////
+*/
+                let colorsAndItems = {
+                    yellow: 'banana',
+                    red: 'apple',
+                    green: 'kiwi'
+                }
+
+/*
+        - To ADD a new key/value pair to an existing object:
+
+             existing object name      new key         new value
+*///               \                  |              /         
+                    colorsAndItems.purple = 'eggplant';
+                    console.log(colorsAndItems);             //-> purple: 'eggplant'
+
+/*
+        - To UPDATE a new key/value pair to an existing object:
+
+           existing object name     key           new value
+*///               \                 |               /         
+                     colorsAndItems.red = 'strawberry';           //     old key/value:   red: 'apple'
+                     console.log(colorsAndItems);                 //->   new key/value:   red: 'strawberry'
+
+/*
+        - To ADD a new key/value pair to an existing object:
+
+             delete keyword     existing object     key to delete         
+*///                   \                |           /         
+                    delete colorsAndItems.purple;
+                    console.log(colorsAndItems);             //-> purple: 'eggplant'
 
