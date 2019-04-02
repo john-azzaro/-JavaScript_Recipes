@@ -352,3 +352,48 @@
             increaseRef(xd);                // when we call increaseRef and pass the object xd, it is passed by REFERENCE
                                             // this means that the local xd in the function parameter points to the same object above.
             console.log(xd);                //->  { value: 11 }
+
+
+
+/*
+How do you iterate over the properties of an object?
+////////////////////////////////////////////////////
+    - to iterate over key/value pairs in an object, you can 
+*/
+            const snacks = {
+                fruit: "apple",
+                drink: "juice",
+                desert: "cookie",
+            }
+/*
+    - ITERATION METHOD 1: Using Object.keys
+    =======================================
+    - using Object.keys (note the capital O in Object), you will get back an object as an array.
+
+            -- Object.keys          -- method that returns a given object (in this case snacks) own property names.
+            -- (snacks)             -- the object whose properties are to be returned.
+            -- .forEach             -- calls the proceeding function once for each element in the array.
+            -- function(key) {...}  -- 
+
+        method    iterated object   method
+             \            |         |             /
+            Object.keys(snacks).forEach(function(key) {
+                console.log(`the key is ${key} and the value is ${snacks[key]}`);
+                                           |                              |
+
+            });
+
+
+
+*/
+            Object.keys(snacks).forEach(function(key) {
+                console.log(`the key is ${key} and the value is ${snacks[key]}`);
+            });
+
+/*
+    - ITERATION METHOD 2: Using for...in
+*/
+
+/*
+    - ITERATION METHOD 3: Using for...in
+*/
