@@ -278,6 +278,7 @@
                 -- null               
 */
 /*
+    - PRIMITIVES are copied by value.
     - Below we define two primitives.
     - Keep in mind that x and y are two independent variables.
 */
@@ -302,7 +303,8 @@
                 console.log(ya);     //-> 10
 
 /*
-    - For REFERENCE types
+    - For REFERENCE types...
+    - REFERENCE TYPES are copied by thier reference.
 */
             let xb = {value: 10};   // so the immediate difference is that the value is now an object with a property called value.
             let yb = xb;
@@ -313,6 +315,40 @@
 /*
     - HOWEVER, when the object is a value, that object is NOT stored in the variable (i.e. xb)...
             -- that object is stored SOMEWHERE ELSE in memory and the ADDRESS is stored in that memory variable.
+            -- both xb and yb are point to the SAME OBJECT.
+            -- And when we chnage wither xb or xy, it changes the object stored in memory
 */
             xb.value = 20;
             console.log(yb);        //-> { value: 20 }
+
+/*
+    - So this logic also applies to functions as well...
+    - below we have an example using primitives:
+*/
+            let xc = 10;                            // the intial variable value is equal to 10
+            function increasePrim(xc) {              
+                xc++;                               // when we run increasePrim, we increment xc by 1.
+            }
+
+            increasePrim(xc);                        // we run increasePrim
+            console.log(xc);                        //-> 10
+/*
+    - So why didnt the value of xc increment by 1 for a total of 11?
+            -- when we call increasedPrim and pass in xc as a parameter, the value is copied into the function parameter (which is local).
+            -- so the incremented number (i.e. xc++) is INDEPENDENT of the xc variable!
+            -- This shows that primitives are copied by thier value.
+*/
+/*
+    - When we have a reference type instead of a primitive type (i.e. replace the variable value with an object).
+    - any changes that you make to the object will be visible to the other variable.
+    - below we have an example that uses reference:
+*/
+
+            let xd = { value: 10 }; 
+            function increaseRef(xd) {
+                xd.value++;
+            }
+
+            increaseRef(xd);                // when we call increaseRef and pass the object xd, it is passed by REFERENCE
+                                            // this means that the local xd in the function parameter points to the same object above.
+            console.log(xd);                //->  { value: 11 }
