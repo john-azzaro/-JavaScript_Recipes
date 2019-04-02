@@ -8,6 +8,7 @@
 //     4. How do you add, update, and delete key/value pairs?
 //     5. What is self-reference in an object and what is the function of `this`?
 //     6. What is a factory function?
+//     7. What is a constructor function?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on objects taken from study, research, tutorials, 
@@ -169,7 +170,8 @@
 //////////////////////////////
         - Just like a factory produces products, factory functions produce objects.
         - the job of a factory is to create an individual instance of some model.
-        - in a factory function, we 
+        - in a factory function, you create an object by making a constant called x, then call the factory function with the parameters.
+        - so with factory functions, we simply call a function and in the function we return a new object.
 */
             function createCake(name, layers) {
                 return {
@@ -189,4 +191,31 @@
             superCake.cakeStatus();                              // log cake status set to 1.
             superCake.addLayer();                                // run the object method addlayer (which adds 1 layer)
             superCake.cakeStatus();                              // log again and now the layers are set to 2!
-            
+
+
+/*
+7. what is a constructor function?
+///////////////////////////////
+    - the job of a constructor function is to construct (or create) an object.
+    - constructor functions use PASCAL NOTATION by convention, where we capitalize all words in our neam (i.e. ThisIsPascalNotation).
+    - unlike a factory function where we return an object, with constructors we use the new operator and instead of returning an object
+      we use the keword `this`.
+
+
+*/
+            function Circle(radius) {
+                this.radius = radius;              // add new property into an empty object.
+                this.draw = function() {
+                    console.log('draw');
+                }
+            }
+/* 
+    - In order to create a circle object using this constructor function.
+    - First, we define a constant named circle.
+    - Three things happen with the new operator:
+            -- first, the operator creates an empty object.  Something liek this:  const x = {}
+            -- second, it sets `this` to point to this object.
+            -- third, it will return the object from the Circle function.
+*/
+            const circle = new Circle(1);           
+            console.log(circle);
