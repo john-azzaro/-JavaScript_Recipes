@@ -165,6 +165,7 @@
                         console.log(`Hello from ${this.dog}`);      //  this template literal uses the `this` to access the value of dog.
                     }
                 }
+                console.log(`==>Example of self-reference`)
                 console.log(dogCaller.message());
 
 
@@ -180,7 +181,7 @@
 */
             function createCake(name, layers) {
                 return {
-                    name: name,                                                        // starting name key and value
+                    name: name,                                                        // starting name key and value.  (however, you can use 'name,')
                     layers: layers,                                                    // starting layer key and value
                     addLayer: function() {                                             // function that adds a layer to your cake.
                         console.log(`You've added another layer!`);
@@ -191,11 +192,12 @@
                     }
                 }
             }
-
+            console.log(`==> Example of factory function:`)
             const superCake = createCake('Super Cake', 2);       // first we define a constant, call createCake function and pass name and layer parameters.       
             superCake.cakeStatus();                              // log cake status set to 1.
             superCake.addLayer();                                // run the object method addlayer (which adds 1 layer)
             superCake.cakeStatus();                              // log again and now the layers are set to 2!
+
 
 
 /*
@@ -223,10 +225,39 @@
             -- third, it will return the object from the Circle function.
 */
             const circle = new Circle(1);           
+            console.log(`==> Example of a constrcutor function`)
             console.log(circle);
 
 
 /*
 8. What is a constructor property?
-///////////////////////////////
+/////////////////////////////////
+    - Objects in Javascript have a property called constructor, which references a function that is used to construct or create an object.
+    - below we have two objects (top is a factory function the lower is a constructor function). 
+*/
+            function factoryDemo() {
+                return {
+                    make: function() {
+                        console.log('something');
+                    }
+                };
+            }
+            const factoryExample = factoryDemo();
+ 
+            
+            function ConstructorDemo(radius) {
+                this.radius = radius;
+                this.draw = function() {
+                    console.log('draw');
+                }
+            }
+            const ConstructorExample = new ConstructorDemo(1);
+/*
+    - When looking at thier constructor PROPERTY, we call the variable we have created that calls the function AND add .constructor to the end of it.
+*/
+            console.log(`==> Example of constructor properties`)
+            console.log(factoryDemo.constructor);
+            console.log(ConstructorDemo.constructor);
+/*
+    - Important thing to take away is that every object has a constructor property which references the function used to create that object.
 */
