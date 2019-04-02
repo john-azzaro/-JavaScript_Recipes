@@ -5,11 +5,12 @@
 //     1. What is an Object?
 //     2. What are the components of an object?
 //     3. How do you use objects?
-//     4. How do you add, update, and delete key/value pairs from dynmaic objects?
+//     4. How do you add, update, and delete key/value pairs?
 //     5. What is self-reference in an object and what is the function of `this`?
 //     6. What is a factory function?
 //     7. What is a constructor function?
-//     8. WHat is a constructor property?
+//     8. What is a constructor property?
+//     9. What are value vs reference types?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on objects taken from study, research, tutorials, 
@@ -260,4 +261,43 @@
             console.log(ConstructorDemo.constructor);
 /*
     - Important thing to take away is that every object has a constructor property which references the function used to create that object.
+*/
+
+
+/*
+9. What are value vs reference types?
+////////////////////////////////////
+    - In JavaScript, there are two categories of types:
+
+            - Value types (a.k.a primitives)               - Reference types
+                -- numbers                                      -- objects
+                -- strings                                      -- function
+                -- booleans                                     -- arrays
+                -- symbols (es6+)
+                -- undefined
+                -- null               
+*/
+/*
+    - Below we define two primitives.
+    - Keep in mind that x and y are two independent variables.
+*/
+                let xa = 10;      
+                let ya = xa;
+                console.log(xa);    //-> 10
+                console.log(ya);    //-> 10
+/*
+    - when we reassign the value of xa to 20 from 10 which is certainly correct.
+*/
+                xa = 20; 
+                console.log(xa);     //-> 20
+/*
+    - HOWEVER, when we print ya again, it will still be 10.  Why?
+            -- when you work with primitives, the value (i.e. 10) is stored in the variable (i.e. xa).
+            -- when you copy that variable (i.e. xa as a value of ya), that exact value (10) is copied into the new variable (ya).
+            -- MAIN POINT: Each variable is completely independant of each other.
+*/
+                console.log(ya);     //-> 10
+                
+/*
+    - for REFERENCE types
 */
