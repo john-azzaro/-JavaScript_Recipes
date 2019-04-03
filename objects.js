@@ -391,7 +391,20 @@
 /*
 10. How do you iterate over the properties of an object?
 ///////////////////////////////////////////////////////
-    - to iterate over key/value pairs in an object, you can 
+    - when you iterate over an object, you are simply looping through the key/value pairs inside that object.
+    - The best way to loop through an obejct is to first convert it to an array using one of three methods:
+            -- Object.keys
+            -- Object.values
+            -- Object.entries.
+    - using this method, you can loop through the result like a normal array.
+
+    - It is possible to iterate over an object using for...in.  
+    - However, using for...in has some drawbacks:
+            -- first, it iterates through the properties in the protoype chain.
+            -- second, you need to check if the property belongs to the object with the .hasOwnProperty method.
+            - with Es6, we now have amuch easier and much more efficient way of looping through an objects key/value pairs so we avoid for...in.
+    
+            - Below is our sample object that we will use to iterate through:
 */
             const snacks = {
                 fruit: "apple",
@@ -399,9 +412,27 @@
                 desert: "cookie",
             }
 /*
-    - ITERATION METHOD 1: Using Object.keys
-    =======================================
-    - using Object.keys (note the capital "O" in Object), you will get back an object as an array.
+    What is Object.keys and how do you use it?
+    ==========================================
+    - Object.keys creates an array that contains all the properties of an object.
+*/
+            const keys = Object.keys(snacks)    // we create a variable call 'keys' and assign a value that loops through the keys of snacks.
+            console.log(keys);                  //-> [ 'fruit', 'drink', 'desert' ]
+                                                //   ... so when we log the variable 'keys', we get back an array with only the keys!
+
+/*
+
+*/
+
+
+
+
+
+
+
+
+/*    How do you use .forEach when iterating through an object?
+    =========================================================
 
                 method    iterated object  method       function
                     \            |         |             /
@@ -431,11 +462,3 @@
             });
 
 
-            
-/*
-    - ITERATION METHOD 2: Using for...in
-*/
-
-/*
-    - ITERATION METHOD 3: Using for...in
-*/
