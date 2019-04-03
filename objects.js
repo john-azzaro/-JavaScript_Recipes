@@ -391,7 +391,7 @@
 /*
 10. How do you iterate over the properties of an object?
 ///////////////////////////////////////////////////////
-    - when you iterate over an object, you are simply looping through the key/value pairs inside that object.
+    - when you iterate (enumerate) over an object, you are simply looping through the key/value pairs inside that object.
 
     - The best way to loop through an obejct is:
         - FIRST convert it to an array using one of three methods:
@@ -401,6 +401,16 @@
         - SECOND, loop through it like a normal array. 
  
     - It is possible to iterate over an object using for...in.  
+*/          
+            const yums = {
+                yum1: 'delicious',
+                yum2: 'superb'
+            }
+
+            for (let key in yums) {
+                console.log(key, yums[key]);            //-> yum1 delicious
+            }                                           //   yum2 superb                    
+/*
     - However, using for...in has some drawbacks:
             -- first, it iterates through the properties in the protoype chain.
             -- second, you need to check if the property belongs to the object with the .hasOwnProperty method.
@@ -417,7 +427,6 @@
 /*
     - The first thing to do is to convert the object into an arry...
 */
-
 /*
         What is Object.keys and how do you use it?
         ==========================================
@@ -488,6 +497,30 @@
             });
 
 
+/*
+Why and how do you clone an Object?
+///////////////////////////////////
+    - cloning an object gets all the properties of an object and copies them into another object.
+*/
+
+        const square = {
+            sides: 4,
+            draw: function() {
+                console.log('draw this shape!')
+            }
+        };
+/*
+    - FIRST, to clone (or to put it more simply copy) an object, create your clone variable and set the value to an empty object.
+*/
+        const anotherSquare = {}       
+/*
+    - SECOND, we use a for...in loop to iterate over all the properties of an obejct and copy them to the new object.
+*/
+        for (let key in square) {                        // so for every key in the object square (i.e. the object to be copied)...
+            anotherSquare[key] = square[key];            // set the property of X in the new object (i.e. anotherSquare) to the property of square.
+        }                                                // ... so essentially we are reading the property 'side' and the value 4 and coping it over.
+
+        console.log(anotherSquare);                      //-> { sides: 4, draw: [Function: draw] }
 
 
 
