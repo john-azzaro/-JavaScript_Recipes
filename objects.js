@@ -10,7 +10,7 @@
 //     6. What is a factory function?
 //     7. What is a constructor function?
 //     8. What is a constructor property?
-//     9. What are value vs reference types?
+//     9. What is pass-by value and what are primitive and reference types?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on objects taken from study, research, tutorials, 
@@ -69,16 +69,20 @@
             let weapon = 'sword';
             let shield = 'round';
 /*
+    How do you create an object?
+    =============================
     - in the example above, we are declaring variables, but all of these variables are highly related.
     - BUT if we encapsulate those variables in an object, we can send that object anywhere in our program.
-    - so we create an object using "object literal syntax" to hold those related variables:
+    - so we create an object using "object literal syntax" to hold those related variables.
 */
-            let standardEquipment = {
-                armor: 'chain mail',
-                weapon: 'sword',
+            let standardEquipment = {              // object name assigned to an object (i.e. curly braces {...}).
+                armor: 'chain mail',               // key/value pairs where armor is the key, then a colon which assigns 'chain mail' as the value.
+                weapon: 'sword',                   // each key/value pair is seperated by a comma. 
                 shield: 'round'
             }
 /*
+    What kind of data types can an object hold?
+    ===========================================
     - object values can have any data type (i.e. strings, numbers, booleans, objects, arrays, functions, etc.).
     - special note: if a function is part of an object, we call that function a METHOD.
 */
@@ -97,6 +101,8 @@
                 shield: ['round', 'dragon picture', 'handle']                       // array
             }
 /*
+    How do you access the values in an object?
+    ==========================================
     - to access values and run object methods (i.e. functions), we can use two ways:
             -- dot notation (i.e. equipment.armor)
             -- bracket notation (i.e. equipment['armor'])
@@ -119,9 +125,9 @@
 4. How do you add, update, and delete key/value pairs?
 //////////////////////////////////////////////////////
     - OBJECTS ARE DYNAMIC, meaning that once you create them you can:
-            -- Create new properties (i.e. insert a key/value pair into your existing object).
-            -- Update existing properties (i.e. change the value of a property to anything else).
-            -- Delete existing properties (i.e. remove the property from the object).
+        -- Create new properties (i.e. insert a key/value pair into your existing object).
+        -- Update existing properties (i.e. change the value of a property to anything else).
+        -- Delete existing properties (i.e. remove the property from the object).
 */    
                 let colorsAndItems = {
                     yellow: 'banana',
@@ -129,7 +135,8 @@
                     green: 'kiwi'
                 }
 /*
-        - To CREATE a new properties:
+        How do you CREATE a new property?
+        ==================================
 
              existing object name      new key         new value
 *///               \                  |              /         
@@ -137,7 +144,8 @@
                     console.log(colorsAndItems);             //-> purple: 'eggplant'
 
 /*
-        - To UPDATE existing properties:
+        How do you UPDATE an existing property?
+        =======================================
 
            existing object name     key           new value
 *///               \                 |               /         
@@ -145,7 +153,8 @@
                      console.log(colorsAndItems);                 //->   new key/value:   red: 'strawberry'
 
 /*
-        - To DELETE existing properties:
+        How do you DELETE an existing property?
+        =======================================
 
              delete keyword     existing object     key to delete         
 *///                   \                |           /         
@@ -157,8 +166,8 @@
 /*
 5. What is self-reference in an object and what is the function of `this`?
 //////////////////////////////////////////////////////////////////////////
-        - Self-reference is when you mention the object name again inside a function.
-        - self-reference is achieved by repeating the object variable name inside a method
+    - Self-reference is when you mention the object name again inside a function.
+    - Self-reference is achieved by repeating the object variable name inside a method
 */
                 const dogCaller = {
                     dog: 'Mr. Barksy',
@@ -175,10 +184,10 @@
 /*
 6. What is a factory function?
 //////////////////////////////
-        - Just like a factory produces products, factory functions produce objects.
-        - the job of a factory is to create an individual instance of some model.
-        - in a factory function, you create an object by making a constant called x, then call the factory function with the parameters.
-        - so with factory functions, we simply call a function and in the function we return a new object.
+    - Just like a factory produces products, factory functions produce objects.
+    - the job of a factory is to create an individual instance of some model.
+    - in a factory function, you create an object by making a constant called x, then call the factory function with the parameters.
+    - so with factory functions, we simply call a function and in the function we return a new object.
 */
             function createCake(name, layers) {
                 return {
@@ -193,7 +202,10 @@
                     }
                 }
             }
-            console.log(`==> Example of factory function:`)
+/*
+        How do you create a factory function?
+        ====================================
+*/          console.log(`==> Example of factory function:`)
             const superCake = createCake('Super Cake', 2);       // first we define a constant, call createCake function and pass name and layer parameters.       
             superCake.cakeStatus();                              // log cake status set to 1.
             superCake.addLayer();                                // run the object method addlayer (which adds 1 layer)
@@ -203,13 +215,11 @@
 
 /*
 7. what is a constructor function?
-///////////////////////////////
+//////////////////////////////////
     - the job of a constructor function is to construct (or create) an object.
     - constructor functions use PASCAL NOTATION by convention, where we capitalize all words in our neam (i.e. ThisIsPascalNotation).
     - unlike a factory function where we return an object, with constructors we use the new operator and instead of returning an object
       we use the keword `this`.
-
-
 */
             function Circle(radius) {
                 this.radius = radius;              // add new property into an empty object.
@@ -218,6 +228,8 @@
                 }
             }
 /* 
+    How do you create an object using a constructor function?
+    ==========================================================
     - In order to create a circle object using this constructor function.
     - First, we define a constant named circle.
     - Three things happen with the new operator:
@@ -230,9 +242,10 @@
             console.log(circle);
 
 
+
 /*
 8. What is a constructor property?
-/////////////////////////////////
+//////////////////////////////////
     - Objects in Javascript have a property called constructor, which references a function that is used to construct or create an object.
     - below we have two objects (top is a factory function the lower is a constructor function). 
 */
@@ -244,8 +257,7 @@
                 };
             }
             const factoryExample = factoryDemo();
- 
-            
+       
             function ConstructorDemo(radius) {
                 this.radius = radius;
                 this.draw = function() {
@@ -264,9 +276,17 @@
 */
 
 
+
 /*
-9. What are value vs reference types?
-////////////////////////////////////
+9. What is pass-by value and what are primitive and reference types?
+/////////////////////////////////////
+    - JavaScript has 2 kinds of variable types: primitive and reference.
+    - A fixed amount of memory is reserved after creation of every variable.
+    - When a variable is copied, it's in-memory value is copied.
+    - Passing a variable to a function via a call also creates a copy of that variable.
+
+    What are the two type ctegories?
+    ================================
     - In JavaScript, there are two categories of types:
 
             - Value types (a.k.a primitives)               - Reference types
@@ -278,6 +298,8 @@
                 -- null               
 */
 /*
+    What are primitives?
+    =============================
     - PRIMITIVES are copied by value.
     - Below we define two primitives.
     - Keep in mind that x and y are two independent variables.
@@ -293,6 +315,8 @@
                 xa = 20; 
                 console.log(xa);     //-> 20
 /*
+    Are primitive variables independant?
+    ====================================
     - HOWEVER, when we print ya again, it will still be 10.  Why?
             -- when you work with primitives, the value (i.e. 10) is stored in the variable (i.e. xa).
             -- when you copy that variable (i.e. xa as a value of ya), that exact value (10) is copied into the new variable (ya).
@@ -303,6 +327,8 @@
                 console.log(ya);     //-> 10
 
 /*
+    What are reference types?
+    ===================================
     - For REFERENCE types...
     - REFERENCE TYPES are copied by thier reference.
 */
@@ -313,15 +339,19 @@
             console.log(yb);        //-> { value: 10 }
             
 /*
+    Are reference types (i.e. objects) stored in the variable?
+    ==========================================================
     - HOWEVER, when the object is a value, that object is NOT stored in the variable (i.e. xb)...
             -- that object is stored SOMEWHERE ELSE in memory and the ADDRESS is stored in that memory variable.
             -- both xb and yb are point to the SAME OBJECT.
-            -- And when we chnage wither xb or xy, it changes the object stored in memory
+            -- And when we change wither xb or xy, it changes the object stored in memory
 */
             xb.value = 20;
             console.log(yb);        //-> { value: 20 }
 
 /*
+    Does the reference type logic apply to functions?
+    =================================================
     - So this logic also applies to functions as well...
     - below we have an example using primitives:
 */
@@ -339,8 +369,11 @@
             -- This shows that primitives are copied by thier value.
 */
 /*
-    - When we have a reference type instead of a primitive type (i.e. replace the variable value with an object).
-    - any changes that you make to the object will be visible to the other variable.
+    Does the reference type logic apply to objects?
+    ===============================================
+    - When we have a reference type instead of a primitive type (i.e. replace the variable value with an object).  Any changes that 
+      you make to the object will be visible to the other variable.
+
     - below we have an example that uses reference:
 */
 
@@ -356,8 +389,8 @@
 
 
 /*
-How do you iterate over the properties of an object?
-////////////////////////////////////////////////////
+10. How do you iterate over the properties of an object?
+///////////////////////////////////////////////////////
     - to iterate over key/value pairs in an object, you can 
 */
             const snacks = {
