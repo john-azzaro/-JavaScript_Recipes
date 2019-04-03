@@ -381,7 +381,7 @@ How do you iterate over the properties of an object?
         - We use "Object.keys" with "snacks" as the parameter, then use '.forEach' to execute the following function
           FOR EACH property in the object.  The function (with the 'key' parameter) will then log the property of the object (i.e. ${key})
           as well as the value of that key (i.e. ${snacks[key]}).
-          
+
         - To break it down into its constituent parts:
 
             -- Object.keys          -- method that returns a given object (in this case snacks) own property names.
@@ -391,16 +391,14 @@ How do you iterate over the properties of an object?
             -- function(key) {...}  -- ... execute a function whose paramter is key and...
             -- ${key}               -- ... return the name...
             -- ${snacks[key]}       -- ... return the value of the name. 
-
-
-
-
-
 */
+
             Object.keys(snacks).forEach(function(key) {
                 console.log(`the key is ${key} and the value is ${snacks[key]}`);
             });
 
+
+            
 /*
     - ITERATION METHOD 2: Using for...in
 */
