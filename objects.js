@@ -419,8 +419,8 @@
 */
 
 /*
-    What is Object.keys and how do you use it?
-    ==========================================
+        What is Object.keys and how do you use it?
+        ==========================================
         - Object.keys creates an array that contains all the properties of an object.
 */
             const keys = Object.keys(snacks);   // we create a variable call 'keys' and assign a value that loops through the keys of snacks.
@@ -428,16 +428,16 @@
                                                 //   ... so when we log the variable 'keys', we get back an array with only the keys!
 
 /*
-    What is Object.value and how do you use it?
-    ===========================================
+        What is Object.value and how do you use it?
+        ===========================================
         - Object.value creates an array that contains the values of every property in an object.
 */
             const values = Object.values(snacks);
             console.log(values);                //-> [ 'apple', 'juice', 'cookie' ]
 
 /*
-    What is Object.entries and how do you use it?
-    =============================================
+        What is Object.entries and how do you use it?
+        =============================================
         - Object.entries
 */
             const entries = Object.entries(snacks);
@@ -445,14 +445,21 @@
                                                 //     [ 'drink', 'juice' ],
                                                 //     [ 'desert', 'cookie' ] ]
 
+/*
+        How do you loop through an Object now that is has been converted to an array?
+        =============================================================================
+        - Now you can loop through like you would a normal array:
+    
+            const keys = Object.keys(snacks);
+*/          for (const key of keys) {
+                console.log(key);
+            }                                  //-> fruit
+                                               //   drink
+                                               //   desert
 
 
-
-
-
-
-/*    How do you use .forEach when iterating through an object?
-    =========================================================
+/*      How do you use .forEach when iterating through an object?
+        =========================================================
 
                 method    iterated object  method       function
                     \            |         |             /
@@ -481,3 +488,14 @@
             });
 
 
+
+
+
+
+/*
+Resources
+=========
+    https://zellwk.com/blog/looping-through-js-objects/
+        -- converting objects to arrays
+        -- looping through arrays.
+*/
