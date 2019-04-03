@@ -392,12 +392,14 @@
 10. How do you iterate over the properties of an object?
 ///////////////////////////////////////////////////////
     - when you iterate over an object, you are simply looping through the key/value pairs inside that object.
-    - The best way to loop through an obejct is to first convert it to an array using one of three methods:
+
+    - The best way to loop through an obejct is:
+        - FIRST convert it to an array using one of three methods:
             -- Object.keys
             -- Object.values
             -- Object.entries.
-    - using this method, you can loop through the result like a normal array.
-
+        - SECOND, loop through it like a normal array. 
+ 
     - It is possible to iterate over an object using for...in.  
     - However, using for...in has some drawbacks:
             -- first, it iterates through the properties in the protoype chain.
@@ -411,19 +413,37 @@
                 drink: "juice",
                 desert: "cookie",
             }
+
+/*
+    - The first thing to do is to convert the object into an arry...
+*/
+
 /*
     What is Object.keys and how do you use it?
     ==========================================
-    - Object.keys creates an array that contains all the properties of an object.
+        - Object.keys creates an array that contains all the properties of an object.
 */
-            const keys = Object.keys(snacks)    // we create a variable call 'keys' and assign a value that loops through the keys of snacks.
+            const keys = Object.keys(snacks);   // we create a variable call 'keys' and assign a value that loops through the keys of snacks.
             console.log(keys);                  //-> [ 'fruit', 'drink', 'desert' ]
                                                 //   ... so when we log the variable 'keys', we get back an array with only the keys!
 
 /*
-
+    What is Object.value and how do you use it?
+    ===========================================
+        - Object.value creates an array that contains the values of every property in an object.
 */
+            const values = Object.values(snacks);
+            console.log(values);                //-> [ 'apple', 'juice', 'cookie' ]
 
+/*
+    What is Object.entries and how do you use it?
+    =============================================
+        - Object.entries
+*/
+            const entries = Object.entries(snacks);
+            console.log(entries);               //-> [ [ 'fruit', 'apple' ],
+                                                //     [ 'drink', 'juice' ],
+                                                //     [ 'desert', 'cookie' ] ]
 
 
 
@@ -456,7 +476,6 @@
             -- ${key}               -- ... return the name...
             -- ${snacks[key]}       -- ... return the value of the name. 
 */
-
             Object.keys(snacks).forEach(function(key) {
                 console.log(`the key is ${key} and the value is ${snacks[key]}`);
             });
