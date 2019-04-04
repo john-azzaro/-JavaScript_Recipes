@@ -11,6 +11,8 @@
 //     7. What is a constructor function?
 //     8. What is a constructor property?
 //     9. What is pass-by value and what are primitive and reference types?
+//    10. How do you iterate over the properties of an object?
+//    11. Why and how do you clone an Object?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on objects taken from study, research, tutorials, 
@@ -447,7 +449,8 @@
 /*
         What is Object.entries and how do you use it?
         =============================================
-        - Object.entries
+        - Object.entries creates an array of arrays.
+            - important to note that to loop through Object.entries you might want to destructure the array into its keys and properties.
 */
             const entries = Object.entries(snacks);
             console.log(entries);               //-> [ [ 'fruit', 'apple' ],
@@ -498,9 +501,14 @@
 
 
 /*
-Why and how do you clone an Object?
+11. Why and how do you clone an Object?
 ///////////////////////////////////
     - cloning an object gets all the properties of an object and copies them into another object.
+    - there are TWO ways to clone an object:
+            -- for...in
+            -- Object.assign
+
+    - so lets take our example object 'square' with two properties, sides and a method called draw:
 */
 
         const square = {
@@ -509,18 +517,54 @@ Why and how do you clone an Object?
                 console.log('draw this shape!')
             }
         };
+
 /*
+   How to clone an object using for...in loop?
+   ===========================================
     - FIRST, to clone (or to put it more simply copy) an object, create your clone variable and set the value to an empty object.
 */
         const anotherSquare = {}       
 /*
-    - SECOND, we use a for...in loop to iterate over all the properties of an obejct and copy them to the new object.
+    - SECOND, we use a for...in loop to iterate over all the properties of an object and copy them to the new object.
 */
         for (let key in square) {                        // so for every key in the object square (i.e. the object to be copied)...
             anotherSquare[key] = square[key];            // set the property of X in the new object (i.e. anotherSquare) to the property of square.
         }                                                // ... so essentially we are reading the property 'side' and the value 4 and coping it over.
 
         console.log(anotherSquare);                      //-> { sides: 4, draw: [Function: draw] }
+/*
+    - HOWEVER, there are better and more modern ways to do this using dot notation.
+*/
+/*
+    How to clone an object using Object.assign?
+    ==========================================
+    - We use Object and a method called 'assign'.
+    - We create a name for our new object we want to clone properties into (i.e. assignAnotherSquare).
+    - When we use Object.assign and pass 2 arguments:
+        - the first argument can be an object which can be empty or existing (i.e. {}).
+        - the second argumen is where you pass in the SOURCE object. (i.e. square).
+        
+       new object to be created                method       FIRST ARGUMENT: copy-to argument (which is an empty object in this example)
+                   \                             |         /        
+                const assignAnotherSquare = Object.assign({}, square);
+                                                                \ 
+                                                                 SECOND ARGUMENT: source to-copy (existing object)
+
+    - the Object.assign method takes all the properties of the source object (i.e. the second argument `square`) and copies them
+      into the new object (i.e. the empty object in the first argument) and returns the result.
+*/  
+            const assignAnotherSquare = Object.assign({}, square);
+            console.log(assignAnotherSquare);
+/*
+    - keep in mind that the first argument which we copy the contents from the exiting object does NOT have to be empty.
+    - you could also ADD additional properties to the object while you are copying it.
+*/
+            const assignYetAnotherSquare = Object.assign({
+                    color: 'red',                                 // here we add another property to the object to be created.
+                }, square);
+            console.log(assignYetAnotherSquare);
+
+
 
 
 
