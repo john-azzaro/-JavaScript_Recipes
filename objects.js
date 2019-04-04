@@ -542,8 +542,13 @@
     - We create a name for our new object we want to clone properties into (i.e. assignAnotherSquare).
     - When we use Object.assign and pass 2 arguments:
         - the first argument can be an object which can be empty or existing (i.e. {}).
-        - the second argumen is where you pass in the SOURCE object. (i.e. square).
-        
+        - the second argument is where you pass in the SOURCE object. (i.e. square).
+
+    - additionally...
+
+        - the first argument can be an empty object (i.e. {}) or a pre-existing object.
+        - the second argument can take from one OR MORE sources. 
+       
        new object to be created                method       FIRST ARGUMENT: copy-to argument (which is an empty object in this example)
                    \                             |         /        
                 const assignAnotherSquare = Object.assign({}, square);
@@ -564,7 +569,14 @@
                 }, square);
             console.log(assignYetAnotherSquare);
 
-
+/*
+    How to clone an object using the spread operator?
+    /////////////////////////////////////////////////
+        - with the spread operator, it takes all the properties in the square object and puts them into the new object we are creating.
+        - this is by far the simplest way to clone an object,
+*/
+            const assignSpreadSquare = { ...square};
+            console.log(assignSpreadSquare);
 
 
 
