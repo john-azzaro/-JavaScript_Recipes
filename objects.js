@@ -709,25 +709,19 @@
 
                 function getTime() {
                     let now = new Date();
-                    return currentDate.toTimeString();
+                    return now.toTimeString();
                 } 
-                console.log(getTime());
+                console.log(getTime());                        //-> 11:45:52 GMT-0700 (Pacific Daylight Time)
                 
         // To get Date and Time:
         
+                function getDateAndTime() {
+                    let now = new Date();
+                    return now.toISOString();                  
+                }
+                console.log(getDateAndTime());                 //-> 2019-04-04T18:45:52.679Z
+
                 
-
-        
-
-
-
-
-
-
-
-
-
-
 
 /*
 Resources
