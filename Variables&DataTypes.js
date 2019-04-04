@@ -302,10 +302,10 @@ The Answer:
 /*
 15. What is a template literal?
 ///////////////////////////////
-    - a template literal is a set of backticks (i.e. ``) used instead of quotation marks.
-    - template literals allow us to refer to variables and execute JavaScript INSIDE a string.
-    - inside the template literal, you can use ${} and insert any variable you want to refer insde the curly braces.
-    - introduced with es6.
+    -- a template literal is a set of backticks (i.e. ``) used instead of quotation marks.
+    -- template literals allow us to refer to variables and execute JavaScript INSIDE a string.
+    -- inside the template literal, you can use ${} and insert any variable you want to refer insde the curly braces.
+    -- introduced with es6.
 */
             let myName = 'joe';
             let myAge = '25';
@@ -313,3 +313,16 @@ The Answer:
             const nameAgeCombo = `Hello, my name is ${myName} and my age is ${myAge}`
 
             console.log(nameAgeCombo);      //-> Hello, my name is joe and my age is 25
+/*
+    -- you can also format with template literals without needing to use escape notation
+*/
+            function emailGreeting() {
+                return `Hello Joe,
+
+                Thank you for your gift of 100 chocodiles.
+                I enjoyed them very much!
+                
+                Regards,
+                Bill`
+            }
+            console.log(emailGreeting())
