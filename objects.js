@@ -677,9 +677,47 @@
                 console.log(test());                //-> [ 'I', 'am', 'testing', 'string', 'methods' ]
 
 
+/*
+    What is a Date Object?
+    ======================
+    -- The Date object will return the date you want.
+*/
+        // To return current date:
 
+                const currentDate = new Date()       
+                console.log(currentDate);                      //-> 2019-04-04T18:23:47.477Z
 
+        // To create a specific date using string:
 
+                const date2 = new Date('June 15 2018 09:00')   
+                console.log(date2);                            //-> 2018-06-15T16:00:00.000Z
+
+        // To create a specific date using numbers:
+
+                const date3 = new Date(2019, 0, 15, 9, 0);    // (year, month (0-11), day, hour, minute)
+                console.log(date3);                           //-> 2019-01-15T08:00:00.000Z
+
+        // To get the day, month, number of day in month, and year:
+
+                function getDate() {
+                    let now = new Date();                      // first, establish now as the current date.
+                    return now.toDateString();                 // second, call now with the date as a string.
+                }        
+                console.log(getDate());                        //-> Thu Apr 04 2019
+
+        // To get the time component:
+
+                function getTime() {
+                    let now = new Date();
+                    return currentDate.toTimeString();
+                } 
+                console.log(getTime());
+                
+        // To get Date and Time:
+        
+                
+
+        
 
 
 
