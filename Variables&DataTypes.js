@@ -2,8 +2,8 @@
 // TOPIC /////////////////////////////////////////////////////////////////////////////////////////////////////
 //     Variables & Data Types
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//     1. Variables 
-//     2. Variable Structure
+//     1. What is a Variables? 
+//     2. What is the basic structure of a variable?
 //     3. Variable Commands
 //     4. Data Types
 //     5. Dynamic vs. Static Lang. types
@@ -27,6 +27,9 @@
 /* 
 1. What is a variable?
 /////////////////////
+
+    What is the definition of a variable?
+    =====================================
     - a variable is a name attached to a variable.
     - a variable stores and keeps track of information within a program.
     - a variable manages the state of a program.
@@ -34,21 +37,9 @@
     - a variable uses the equal sign (=) to assign a value to a variable.
         -- i.e let name = 'john'
     - a variable WITHOUT a value is called an empty variable.
-    
-    Important things to keep in mind with variables:
-        - You CANNOT use a reserved word (i.e. let let, var var, let return, etc.).
-        - You CANNOT start with a number (i.e. 1name).
-        - you CANNOT use a space or a hyphen (i.e. -).
+   
 
-        - You SHOULD NOT declare multiple variables in the same .  
-             -- you can use a shorthand method for declaring multiple variables in one statement but it is NOT best practice.
-                  --  var person = "john", 
-                          place = "park", 
-                          thing = "watermellon";
-
-        - You SHOULD use meaningful names.
-        - You SHOULD use camel casing (i.e. thisIsAnExample).
-        - You SHOULD either Uppercase, LowerCase, underscore, or cashsign for the first letter.
+.
 */
 
 
@@ -56,9 +47,31 @@
 /*
 2. What is the basic structure of a variable?
 ////////////////////////////////////////////
+
+    What does a basic variable look like?
+    =====================================
+
+
     JavaScript Keyword      Variable Name     Assinment Operator        Value
     __________________      _____________     __________________      ________
          let                    name                  =                'john'
+
+
+    What are important things to remember about variables?
+    ======================================================
+    - You CANNOT use a reserved word (i.e. let let, var var, let return, etc.).
+    - You CANNOT start with a number (i.e. 1name).
+    - you CANNOT use a space or a hyphen (i.e. -).
+
+    - You SHOULD NOT declare multiple variables in the same .  
+         -- you can use a shorthand method for declaring multiple variables in one statement but it is NOT best practice.
+         --  var person = "john", 
+                 place = "park", 
+                 thing = "watermellon";
+
+        - You SHOULD use meaningful names.
+        - You SHOULD use camel casing (i.e. thisIsAnExample).
+        - You SHOULD either Uppercase, LowerCase, underscore, or cashsign for the first letter
 */
 
 
@@ -120,6 +133,9 @@ What are the different types in JavaScript?
 /* 
 5. What is the difference between a dynamically typed language like JavaScript and a staticly typed language like Java?
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    What is a static language?
+    ==========================
     -- In a STATIC language (like Java), the type of that variable is set and CANNOT be changed    
 
             String a = 'cat';  
@@ -127,6 +143,9 @@ What are the different types in JavaScript?
        In a statically typed language like Java we are saying that this varibale 'a' holes strings and ONLY strings.  
        So in Java you have to specify what EXACT types each variable will hold.
     
+
+    What is a dynamic language?
+    ===========================   
     -- In a DYNAMIC language like JavaScript, the typeof variables are determined DYNAMICALLY at the runtime.  So if you have this:
           
             let a = 'cat';
@@ -135,6 +154,7 @@ What are the different types in JavaScript?
         But if we then CHANGE the value from string to a number (i.e. 'point' the name to the value to a number), it will
         evaluate as a 'number'.  It DYNAMICALLY changes at runtime.
 */
+
 
 
 /* 
@@ -221,7 +241,7 @@ The Answer:
 
 /* 
 11. What is NaN?
-///////////////////////////////////////
+////////////////
     -- NaN stands for "not a number" and its used to define a number that's not really a number, like a bad calculation.
     -- NaN compared to any other value is FALSE.
     -- Confusingly, NaN compared to NaN (i.e. NaN == NaN) is also FALSE.
@@ -235,7 +255,7 @@ The Answer:
 
 /* 
 12. How do you check for NaN?
-////////////////////////
+/////////////////////////////
       -- There is an inbuilt function called "isNaN"
             
             // console.log(isNaN(NaN))      
@@ -264,3 +284,15 @@ What is Coercion?
 
             let stringFirst = 'howdy' + 5 + 10 + 15;
             console.log(stringFirst);                 //-> howdy51015 (this will coerce everything as a string).
+
+
+/*
+What are special characters and escape notation?
+///////////////////////////////////////////////
+    -- ESCAPE NOTATION is used when you want to eseacpe the quotation mark limiter by using a BACKSLASH.
+*/
+            let escNo = 'this is an example of a normal string'
+            
+            let escNoWithSingleQuotes = 'example of a string with \'single quotes\' in it.';      // allows quotes in string. 
+            let escNoWithNewLine = 'example of a string with a \n new line put in it.';           // makes a new line in the string.
+            let escNoWithTab = 'example of a string with a \t tab in it';                         // creates a tab in the string.
