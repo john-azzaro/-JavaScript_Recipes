@@ -677,11 +677,7 @@
                 console.log(test());                //-> [ 'I', 'am', 'testing', 'string', 'methods' ]
 
 
-/*
-13. What is escape notation for a string object?
-///////////////////////////////////////////////
-    - 
-*/
+
 
 
 
