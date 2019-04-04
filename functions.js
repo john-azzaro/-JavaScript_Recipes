@@ -33,16 +33,16 @@
 
 /*
 1. What is a function?
-///////////////////////////////////////
-    - A function is one of the fundamental building blocks of JavaScript.
-    - A function is a repeatable (i.e. can be called multiple times) and determinate (i.e. predictable) process or behavior.
-    - A function performs a task or calculates a value.
-    - A function is the primary modular unit of execution in JavaScript (which is a functional language).
-    - A function (in JavaScript) are called first-class entities.
-    - A function is treaded as a value.
-    - A function is a series of statements that are grouped into a special package.
-    - A function is JavaScripts paragraph.
-    - A function is considered an object
+//////////////////////
+    -- A function is one of the fundamental building blocks of JavaScript.
+    -- A function is a repeatable (i.e. can be called multiple times) and determinate (i.e. predictable) process or behavior.
+    -- A function performs a task or calculates a value.
+    -- A function is the primary modular unit of execution in JavaScript (which is a functional language).
+    -- A function (in JavaScript) are called first-class entities.
+    -- A function is treaded as a value.
+    -- A function is a series of statements that are grouped into a special package.
+    -- A function is JavaScripts paragraph.
+    -- A function is considered an object
     */
     
 
@@ -59,8 +59,7 @@
                                 return str;                     //- MAIN BLOCK of function
                                 }
                                 console.log(myFunction("Hello!"));  //- CALL (W/ARGUMENT)
-/*
-Example     
+/*  
  
 function    > Keyword    - Functions are `DEFINED` with the function keyword (regardless of how they are used or invoked).
                          - Defining a function is sometimes called "DECLARING" a function.
@@ -96,18 +95,19 @@ console.log  >  Invoke    - This invokes (or calls) the function to be used else
 
  /* 
  3. What is the difference between arguments and parameters?
- ///////////////////////////////////////////////////////
+ //////////////////////////////////////////////////////////
       When talking about functions, the terms parameters and arguments are often interchangeably used as if it were one and the 
       same thing but there is a very subtle difference.  
 
            A. Parameters are variables listed as a part of the function definition 
                 -- i.e. function(num1, num2) {...} where num1 and num2 are the paramter
+
            B. Arguments are values passed to the function when it is invoked 
                 -- i.e. console.log(myFunction(1,2)) where 1 and 2 are the arguments.  
       
            Its important to know the difference because JavaScript does not throw an error if the number of arguments passed during a function 
-      invocation are different than the number of parameters listed during function definition. This should make it clear that parameters 
-      and arguments should be treated as two different entities.
+           invocation are different than the number of parameters listed during function definition. This should make it clear that parameters 
+           and arguments should be treated as two different entities.
 */
 
 
@@ -116,8 +116,8 @@ console.log  >  Invoke    - This invokes (or calls) the function to be used else
 /*
 What is a default parameter?
 ///////////////////////////
-        - a default parameter is a specified parameter that we specify in the call signature parentheses of the function.
-        - below we have a normal function BEFORE default parameters:
+        -- a default parameter is a specified parameter that we specify in the call signature parentheses of the function.
+        -- below we have a normal function BEFORE default parameters:
 */
                 function interest(principal, rate, years) {
                     return principal * rate / 100 * years;
@@ -126,8 +126,8 @@ What is a default parameter?
                 console.log(interest(10000, 3.5, 5));                     //-> 1750
 /*
 
-        - However, we can use a variable to provide a default value with the or operator (i.e. ||).
-        - note that you DO NOT instantiate the default parameters as variables.
+        -- However, we can use a variable to provide a default value with the or operator (i.e. ||).
+        -- note that you DO NOT instantiate the default parameters as variables.
 */
                 function interest2(principal, rate, years) {
                     rate = rate || 3.5;
@@ -138,9 +138,9 @@ What is a default parameter?
                 console.log(interest2(10000));                           //-> 1750
 /*
 
-        - With ES6, you can do it in amuch cleaner way by inserting it inside the call signature itself.
-        - Once you give a default parameter, every parameter after that should also have a default as well, otherwise
-          you get a NaN (not a number).  
+        -- With ES6, you can do it in amuch cleaner way by inserting it inside the call signature itself.
+        -- Once you give a default parameter, every parameter after that should also have a default as well, otherwise
+           you get a NaN (not a number).  
               -- HOWEVER, if you pass in undefined (i.e. console.log(interest3(principle, rate = 3.5, undefined))), you will be able
                  to use default parameters at whichever point you wish... but try not to because it is not good practice.
 */
@@ -157,88 +157,91 @@ What is a default parameter?
 /*
 4. How do you define a function?
 ////////////////////////////
-*/
-/*
-        Function Declaration: 1. Hoisted with contents (hoisting is how the browser parses Javascript, reads through once then executes second pass).
-                              2. Function declarations are hoisted to the top of the top-level or if you have a function declaration inside 
-                                   a function, to the top of that function. 
-                              3. With function declarations, you can use them above where they are declared.
-*/
-                        function addDeclaration(num1, num2) {
-                            return num1 + num2;
-                        }
-                        console.log(`function declaration example:`)
-                        console.log(addDeclaration(2,2))     // 4
 
-/*
-        Function Expression:          1. A JavaScript pattern that lets you create a variable and execute it as a function.
-                                      2. Remember: a variable can be set to a number, a string, an object, or even a function (seen here). 
-                                      3. Not hoisted with contents, but the reference to it may be hoisted if we assign it as a variable.
-        (or) Definition Expression    4. Functions defined as arguments to functions are expressions.
-        (or) Function literal         5. This is also known as an anonymous function because you dont need a name for it.
-                                      6. Function expressions are useful because we can use it everywhere a variable can go.
-                                      7. Since this is a variable (or if it is a const), we need to terminate the function with a semi-colon.
-                                      8. If you DO NOT have a name for the function (seen below), you have an ANONYMOUS function.
-                                      9. If you add a name to the function (i.e. let run = function walk() {...}), it is a NAMED function expression.
-                                      10. IMPORTANT: Because of an issue with hoisting, if you invoke a function expression before the function itself, 
-                                                     you will get an error.
-                                      11. You can also run the function through another declared variable.             
+    What is a function Declaration?
+    ===============================
+        -- A function declaration is hoisted with contents (hoisting is how the browser parses Javascript, reads through once 
+           then executes second pass).
+        -- Function declarations are hoisted to the top of the top-level or if you have a function declaration inside 
+           a function, to the top of that function. 
+        -- With function declarations, you can use them above where they are declared.
+*/
+                function addDeclaration(num1, num2) {
+                    return num1 + num2;
+                }
+                console.log(`function declaration example:`)
+                console.log(addDeclaration(2,2))     //-> 4
+
+
+/*  What is a function expression?
+    ==============================
+    -- Function expressions also go by the name Definition Expression and Function literal.
+    -- Function expressions are a JavaScript pattern that lets you create a variable and execute it as a function.
+        -- Remember: a variable can be set to a number, a string, an object, or even a function (seen here). 
+    -- Function expressions are Not hoisted with contents, but the reference to it may be hoisted if we assign it as a variable.
+    -- Functions defined as arguments to functions ARE expressions.
+    -- Internal functions with no names are also known as an anonymous function because you dont need a name for it.
+    -- Function expressions are useful because we can use it everywhere a variable can go.
+    -- Since a function expression is a variable (or if it is a const), we need to terminate the function with a semi-colon.
+    -- If you DO NOT have a name for the function (seen below), you have an ANONYMOUS function.
+    -- If you add a name to the function (i.e. let run = function walk() {...}), it is a NAMED function expression.
+    -- IMPORTANT: Because of an issue with hoisting, if you invoke a function expression before the function itself, you will get an error.
+    -- You can also run the function through another declared variable.             
  */                                 
+        // function expression:
 
-                    // function expression:
+                let addExpression = function(num1, num2) {
+                    return num1 + num2;
+                };                                                 // note the semi-colon that terminates the variable.
+                console.log(`function expression example:`)
+                console.log(addExpression(3,3));                   //-> 6
 
-                        let addExpression = function(num1, num2) {
-                            return num1 + num2;
-                        };                                                 // note the semi-colon that terminates the variable.
-                        console.log(`function expression example:`)
-                        console.log(addExpression(3,3));    // 6
+        //function expression called through another variable:
 
-                    //function expression called through another variable:
-
-                        let variableWithAddExpression = addExpression;
-                        console.log(`function expression called via another variable:`);
-                        variableWithAddExpression();
+                let variableWithAddExpression = addExpression;
+                console.log(`function expression called via another variable:`);
+                variableWithAddExpression();
 
         // ES6 Fat Arrow Function:
 
-                        const addFatArrow = (num1, num2) => num1 + num2;
-                        console.log(addFatArrow(4,4))       // 8   
+                const addFatArrow = (num1, num2) => num1 + num2;
+                console.log(addFatArrow(4,4))       // 8   
    
 
 
 
 /*
 5. How do you invoke a function?
-////////////////////////////
-        There are 4 ways to invoke a function:
-                1. Invoke as a function.
-                2. Invoke as a method.
-                3. Invoke as a constructor.
-                4. Invoke with call and apply methods.
+///////////////////////////////
+    -- There are 4 ways to invoke a function:
+        1. Invoke as a function.
+        2. Invoke as a method.
+        3. Invoke as a constructor.
+        4. Invoke with call and apply methods.
 
-            - Invoking as a FUNCTION and METHOD are the most common.
-            - functions also get a few extra parameters, like arguments and THIS.
+    -- Invoking as a FUNCTION and METHOD are the most common.
+    -- functions also get a few extra parameters, like arguments and THIS.
             
-            IMPORTANT: A property of functions is that invoking them passes control of the program to the function we are calling.
+    -- IMPORTANT: A property of functions is that invoking them passes control of the program to the function we are calling.
 
-            - A common way to invoke a function is TRADITIONAL INVOCATION.
-                 - so if a function has a name, you can call it by its name and pass along 0 to as many parameters as you need (i.e. myFunction(a,b,c); ).
+    -- A common way to invoke a function is TRADITIONAL INVOCATION.
+    -- so if a function has a name, you can call it by its name and pass along 0 to as many parameters as you need (i.e. myFunction(a,b,c); ).
 
 */                    
-                function addItUp(num1, num2) {                    // plus is passed two parameters, a and b.
-                    return (                             // return is used as a function (return IS a function so it can be passed parameters).
-                        console.log(num1 + num2),        // here we have num1 + num2, which the result of our operation. NOTE THE COMMA!
-                        console.log(num1 * num2),        // here we have num1 * num2, which is another result of our operation. NOTE THE COMMA!!
-                        console.log(arguments)           // here we pass the `arguments` parameter (this will restate our parameters).      
-                    );                                   // Thus everything above is a straight function call.     
-                }
+            function addItUp(num1, num2) {           // plus is passed two parameters, a and b.
+                return (                             // return is used as a function (return IS a function so it can be passed parameters).
+                    console.log(num1 + num2),        // here we have num1 + num2, which the result of our operation. NOTE THE COMMA!
+                    console.log(num1 * num2),        // here we have num1 * num2, which is another result of our operation. NOTE THE COMMA!!
+                    console.log(arguments)           // here we pass the `arguments` parameter (this will restate our parameters).      
+                );                                   // Thus everything above is a straight function call.     
+            }
                 
-                console.log(`results of Return as function example below`);
+            console.log(`results of Return as function example below`);
 
-                addItUp(2, 3);                          // now we INVOKE the function and PASS the parameters we want.  We have two slots, so two numbers.
-                                                        //->  5
-                                                        //    6
-                                                        //    { '0': 2, '1': 3 }
+            addItUp(2, 3);                          // now we INVOKE the function and PASS the parameters we want.  We have two slots, so two numbers.
+                                                    //->  5
+                                                    //    6
+                                                    //    { '0': 2, '1': 3 }
 
 
 
@@ -250,18 +253,18 @@ What is a default parameter?
 
 NOTE: This section is on functions in objects, but first a brief overview.
 
-        - in addition ot calling functions using the Traditional way (i.e. call name and pass along parameters), we can also invoke them by METHODS.
-        - A METHOD is a function that has been assigned as a property of an OBJECT (i.e. myObject.firstName where .firstName is the method).
-        - An OBJECT is a complex data type that brings together properties and behaviors into a single entity.
-        - An OBJECT always begins and ends with curly braces.
-        - Inside an object, we have name:value pairs.
-        - An OBJECT can have:
+        -- in addition ot calling functions using the Traditional way (i.e. call name and pass along parameters), we can also invoke them by METHODS.
+        -- A METHOD is a function that has been assigned as a property of an OBJECT (i.e. myObject.firstName where .firstName is the method).
+        -- An OBJECT is a complex data type that brings together properties and behaviors into a single entity.
+        -- An OBJECT always begins and ends with curly braces.
+        -- Inside an object, we have name:value pairs.
+        -- An OBJECT can have:
                 -- variables  -- (i.e. let car = "Honda"; ).
                 -- lists (aka arrays)  --   (i.e. let cars = ["Toyota", "BMW", "Mercedes"]; ).
                 -- any data type (including other objects).
-        */
-        // The example below is a normal function with key/value pairs:
-                
+        
+        -- The example below is a normal function with key/value pairs:
+*/                
                 let info = {
                     firstName : 'John',                     // a name/value pair
                     lastName : 'Smith',
@@ -269,10 +272,10 @@ NOTE: This section is on functions in objects, but first a brief overview.
                 }
                 console.log(`result of normal function test:`)                                   
                 console.log(info.firstName);                 //-> John   ()
-        
-        // The example below shows a function as a property of an object
-        //   - Here we create an object called 'report' and add 2 properties, status and a method called plus (which is function).
-               
+/*        
+        -- The example below shows a function as a property of an object
+        -- Here we create an object called 'report' and add 2 properties, status and a method called plus (which is function).
+*/              
                 let report = {
                     status: 'Awesome',                  // property called status with a value called Awesome.  NOTE COMMA!
                     plus: function(a,b)  {              // this is an anonymous function assigned to an element.  It is called with the 'plus' identifier
@@ -292,14 +295,12 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 
-
-
 /*
 7. How do you invoke a function through a constructor?
 /////////////////////////////////////////////////////
-        - functions can construct objects as well.
-        - in other words, the function itself BECOMES the constructor.
-        - you can create an object with the `new` keyword.
+        -- functions can construct objects as well.
+        -- in other words, the function itself BECOMES the constructor.
+        -- you can create an object with the `new` keyword.
              -- this method of creating an object is called a CONSTRUCTOR INVOCATION.
              -- a constructor builds on object based on the original function
              -- each instance will have its own set of properties (see example below).
@@ -386,11 +387,11 @@ NOTE: This section is on functions in objects, but first a brief overview.
 /*
 9. How do you invoke through Call & Apply?
 /////////////////////////////////////////
-        - Call & Apply is sometimes refered to as "indirect invocation".
-        - Call & Apply can define the value of `this` argument.
-        - Call & Apply can control `this` and `arguments`.
-        - Call passes a VALUE.
-        - APPLY passes an ARRAY.
+        -- Call & Apply is sometimes refered to as "indirect invocation".
+        -- Call & Apply can define the value of `this` argument.
+        -- Call & Apply can control `this` and `arguments`.
+        -- Call passes a VALUE.
+        -- APPLY passes an ARRAY.
   */
 
                 let talk = function() {
@@ -416,7 +417,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
                                                                     // which is then passed into the console.log.
 
 /* 
-        - Now the difference between call and apply is that apply can pass an ARRAY.
+        -- Now the difference between call and apply is that apply can pass an ARRAY.
 
 */                let talk3 = function(what) {
                     console.log(what);                             
@@ -436,10 +437,10 @@ NOTE: This section is on functions in objects, but first a brief overview.
 /*
 10. What is the arguments parameter?
 ///////////////////////////////
-        - Although we've been passing elements to functions, but often we dont know how many elements we will be needing.
-        - You want your function to be able to accept an number of elements.
-        - The ARGUMENTS PARAMETER is used to hold a list of all the elements passed as arguments to the function.
-        - The arguments parameter is an array-like object becasue it looks like an array and we can do some things we do to arrays.
+        -- Although we've been passing elements to functions, but often we dont know how many elements we will be needing.
+        -- You want your function to be able to accept an number of elements.
+        -- The ARGUMENTS PARAMETER is used to hold a list of all the elements passed as arguments to the function.
+        -- The arguments parameter is an array-like object becasue it looks like an array and we can do some things we do to arrays.
                 -- for example, we can call the numerical index(i.e. arguments[x] ).
                 -- we can also get the arguments.length (i.e. the amount of elements we pass to the function).
                 -- because we have these properties, we can loop through the arguments with a for-loop.
@@ -476,8 +477,8 @@ NOTE: This section is on functions in objects, but first a brief overview.
 /*
 11. Can you explain the return statement?
 ////////////////////////////////////////
-        - When you invoke a function, its like generating an equation, which usually have results.
-        - The 'RETURN' statement can return a result, object, or even another function.
+        -- When you invoke a function, its like generating an equation, which usually have results.
+        -- The 'RETURN' statement can return a result, object, or even another function.
                -- This lets JavaScript do things that are very difficult in other languages.
                -- In fact, `RETURN` is a function in its own right and you can return a series of parameters in 
                   the parentheses (i.e. return (...) ).  For example:
@@ -490,7 +491,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
                                 );
                             }
                                                     
-        - So to put it simply, the return statement expresses the result of the operation we perform in our function.  
+        -- So to put it simply, the return statement expresses the result of the operation we perform in our function.  
                -- For example:
 */
                 let addTheThing = function(a,b) {
@@ -498,12 +499,12 @@ NOTE: This section is on functions in objects, but first a brief overview.
                 }
                 console.log(addTheThing(4,5))     //-> 9
 /*
-        - the return statement is optional.  that is to say, if you do not include it in your code, the function will return something.
-        - the return statement is only in the function body.
-        - the return statement can be used to return something back to the caller.
+        -- the return statement is optional.  that is to say, if you do not include it in your code, the function will return something.
+        -- the return statement is only in the function body.
+        -- the return statement can be used to return something back to the caller.
                 -- so you could assign it to a variable and it will place a value in the variable when the function returns.
-        - the return statement is usually the last statement in a function (stops execution).
-        - the return statement can be anything or return nothing
+        -- the return statement is usually the last statement in a function (stops execution).
+        -- the return statement can be anything or return nothing
 */
 
 
@@ -513,19 +514,19 @@ NOTE: This section is on functions in objects, but first a brief overview.
 /* 
 12. How do you use an anonymous closure (or self executing function)?
 ////////////////////////////////////////
-        - a typical function definition can be invoked by calling the function name anywhere in the code.  For example:
+        -- a typical function definition can be invoked by calling the function name anywhere in the code.  For example:
 */
                     let cat = function() {
                         console.log('meow')
                     }
                     console.log(cat());
 /*
-        - However, there is a way to invoke a function and NOT call it manually.  
+        -- However, there is a way to invoke a function and NOT call it manually.  
 
-        - Anonymous closures can be used to invoke a function automatically by adding parentheses AFTER the function body.
-        - Anonymous closures DO NOT have a name... they dont need it since they run automatically.
-        - Any variables INSIDE the function body will NOT be known outside the anonymous closure.
-        - the () at the end of the function change the function declaration to a function expression.
+        -- Anonymous closures can be used to invoke a function automatically by adding parentheses AFTER the function body.
+        -- Anonymous closures DO NOT have a name... they dont need it since they run automatically.
+        -- Any variables INSIDE the function body will NOT be known outside the anonymous closure.
+        -- the () at the end of the function change the function declaration to a function expression.
             -- when you use the function keyword, JavaScript assumes you want to create a function with a name.  But it will not run it.
             -- 
 */
@@ -533,14 +534,14 @@ NOTE: This section is on functions in objects, but first a brief overview.
                         console.log('meow meow')
                     }();
 /*
-        - You can also instantiate the function by passing parameters into those parentheses.
+        -- You can also instantiate the function by passing parameters into those parentheses.
 */
                     let addTheCats = function(message) {        // Second, the string is passed (via message) to the function.
                         console.log(message);                   // Third, the string finally is passed to the console.log statement.
                     }("Good evening, I am a cat");              // First, a string is passed.
 /*
-        - You can also make the function completely anaonymous.
-        - You make a function completely anonymous by wrapping the ENTIRE function in parentheses.
+        -- You can also make the function completely anaonymous.
+        -- You make a function completely anonymous by wrapping the ENTIRE function in parentheses.
             -- what this does is ask JavaScript to comvert this function into a value and then use the last set of parentheses to
                pass in any parameters (if needed).
             -- important to remember, you dont need to have any parameters in the last parentheses, just that this example has one.
@@ -557,31 +558,31 @@ NOTE: This section is on functions in objects, but first a brief overview.
 /*
 13. What is variable hoisting and scope?
 ///////////////////////////////////////
-        - HOISTING refers to how browsers parse JavaScript.
-                    -First pass, the browser reads through the code once, setting aside space for variables, functions, etc.
-                    -Second pass, the browser reads through AGAIN and executes the code.
+        -- HOISTING refers to how browsers parse JavaScript.
+                    -- First pass, the browser reads through the code once, setting aside space for variables, functions, etc.
+                    -- Second pass, the browser reads through AGAIN and executes the code.
                         -- this is how the browser knows what is what.
 
-        - VARIABLE SCOPE defines how the variables declared CAN or CANNOT be accessed at different places in your code.
+        -- VARIABLE SCOPE defines how the variables declared CAN or CANNOT be accessed at different places in your code.
 
-        - GLOBAL SCOPE means that the variable is available EVERYWHERE in the code.
+        -- GLOBAL SCOPE means that the variable is available EVERYWHERE in the code.
 
-        - BLOCK (LOCAL) SCOPE means that the variable is only available within the confines of the function.
+        -- BLOCK (LOCAL) SCOPE means that the variable is only available within the confines of the function.
 
-        - SCOPE CHAIN refers to the way the JavaScript interpreter determines the value of a variable.
-                    - first, the interpreter looks locally for the variable.
-                    - if it is not there, then the interpreter will look UP THE SCOPE CHAIN until it reaches GLOBAL SCOPE.
+        -- SCOPE CHAIN refers to the way the JavaScript interpreter determines the value of a variable.
+                    -- first, the interpreter looks locally for the variable.
+                    -- if it is not there, then the interpreter will look UP THE SCOPE CHAIN until it reaches GLOBAL SCOPE.
                     
-        - VARIABLE SHADOWING means that if there is a global AND block scope variable, the local block variable will take precedence.
+        -- VARIABLE SHADOWING means that if there is a global AND block scope variable, the local block variable will take precedence.
 
-        - GLOBAL variables have some negative attributes.
-                    - GLOBALS tend to have unintended SIDE EFFECTS.
-                    - SIDE EFFECTS occur when a local scope variable reaches into global and changes a value there.
-                    - Side Effects are UNINTENDED since it can change an outside variable to carry out its instructions.
-                    - When this happens, a code is INDETERMINATE.
+        -- GLOBAL variables have some negative attributes.
+                    -- GLOBALS tend to have unintended SIDE EFFECTS.
+                    -- SIDE EFFECTS occur when a local scope variable reaches into global and changes a value there.
+                    -- Side Effects are UNINTENDED since it can change an outside variable to carry out its instructions.
+                    -- When this happens, a code is INDETERMINATE.
 
-                    - A function should be DETERMINATE, meaning that it should always return the same value and have NO side effects.
-                    - A function that is determinate is a PURE function.
+                    -- A function should be DETERMINATE, meaning that it should always return the same value and have NO side effects.
+                    -- A function that is determinate is a PURE function.
 */
 
 
@@ -591,29 +592,29 @@ NOTE: This section is on functions in objects, but first a brief overview.
 /*
 14. How do you create and namespace modules?
 ///////////////////////////////////////
-        - modules let you reuse code across apps.
-            - when you just start coding, you are coding just for that program.  However, when you start a new project you
-              might tend to look around your old code to find bits and peices to use.
-            - modules will allow you to start reusing those bits and peices without having to capy-and-paste.
-            - in a way, modules is like creating a library for you to use on any project. 
+    -- modules let you reuse code across apps.
+        -- when you just start coding, you are coding just for that program.  However, when you start a new project you
+           might tend to look around your old code to find bits and peices to use.
+        -- modules will allow you to start reusing those bits and peices without having to capy-and-paste.
+        -- in a way, modules is like creating a library for you to use on any project. 
 
-        - To create a module, you need to create a NAME SPACE.
-            - namespacing allows you to protect variables that you have in your modules from any global scoped variables.
-            - this is important because you might have variables in your module that are in the application.
-            - so we know we can create a self executing function (within parentheses) which protects all the variables inside from global scope.
-                    -- but what if we want access to those variables OUTSIDE the closure but INSIDE our application?
-                    -- to do this, we need to create a variable and assign it to our self executing function.
+    -- To create a module, you need to create a NAME SPACE.
+        -- namespacing allows you to protect variables that you have in your modules from any global scoped variables.
+        -- this is important because you might have variables in your module that are in the application.
+        -- so we know we can create a self executing function (within parentheses) which protects all the variables inside from global scope.
+            -- but what if we want access to those variables OUTSIDE the closure but INSIDE our application?
+            -- to do this, we need to create a variable and assign it to our self executing function.
 */
 
                     let myLibraryDemo = (function() {
                         let myBook = "Moby Dick";
                     })();                                    //-> 
 /*
-                    -- inside the function we have a private variable (i.e. myBook).
-                    -- the variables in this function would NOT be accessible outside the function (i.e. protected from global scope).
+             -- inside the function we have a private variable (i.e. myBook).
+             -- the variables in this function would NOT be accessible outside the function (i.e. protected from global scope).
         
-        - Now if you want to access a variable from OUTSIDE the function, you need a RETURN statement to commicate back with the
-          rest of the application.
+    -- Now if you want to access a variable from OUTSIDE the function, you need a RETURN statement to commicate back with the
+       rest of the application.
 */
 
                     let myLibrary = (function() {
@@ -624,17 +625,18 @@ NOTE: This section is on functions in objects, but first a brief overview.
                         }
                     })();
                     myLibrary.book();       //-> Moby Dick     // call function with name space (i.e. myLibrary) and method (i.e. book).
-/*
-        - main thing is that the name space protects the variables inside from global scope.
-        - So what we've done is create a module and used name spacing to protect that module's internal variables from global scope.       
+
+                    /*
+    -- main thing is that the name space protects the variables inside from global scope.
+    -- So what we've done is create a module and used name spacing to protect that module's internal variables from global scope.       
 */
 /* 
-        - What if we want to send infromation TO our function using an object and how to set defaults just in case the user calls a method without
-          initializing it?
-        - To send information, we use an object.
-        - it s good to use an object because we can pass in multiple key/value pairs to the function and then parse each of the values out.
-
+    -- What if we want to send infromation TO our function using an object and how to set defaults just in case the user calls a method without
+       initializing it?
+    -- To send information, we use an object.
+    -- it s good to use an object because we can pass in multiple key/value pairs to the function and then parse each of the values out.
 */
+
                     let myLibrary2 = (function() {
                         return {                               
                             bookCollection: function() {                 
@@ -645,10 +647,10 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     myLibrary2.bookCollection({ book: 'Jane Eyre'});   //-> Jabe Eyre
 /*
 
-        - but suppose you forget to initialize the bookCollection function?
-            - you will get an error because its asking to read an argument with nothing in it.
+    -- but suppose you forget to initialize the bookCollection function?
+        -- you will get an error because its asking to read an argument with nothing in it.
 
-        - To fix this, we need to do a SHORT CIRCUIT EVALUATION.
+    -- To fix this, we need to do a SHORT CIRCUIT EVALUATION.
 */                    
                     let myLibrary3 = (function() {
                         return {                               
@@ -663,9 +665,9 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     myLibrary3.bookCollection({ book: 'Persuasion'}); //-> Persuasion   // because we now have a key value pair.
 
 /*
-        - Now what if we have a bunch of variables everywhere within a much larger function?
-        - it would NOT be efficient to have these values scattered all over the place.
-        - To avoid this, we need a DEFAULT OBJECT for the function.
+    -- Now what if we have a bunch of variables everywhere within a much larger function?
+    -- it would NOT be efficient to have these values scattered all over the place.
+    -- To avoid this, we need a DEFAULT OBJECT for the function.
 */
 
                     let myLibrary4 = (function() {
@@ -686,14 +688,12 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 
-
-
 /* 
 15. How do you chain method calls?
 /////////////////////////////////
-        - CHAINING makes it easy to work with multiple methods and it allows one function to call another.
-        - similar to jQuery.
-        - 
+    -- CHAINING makes it easy to work with multiple methods and it allows one function to call another.
+    -- similar to jQuery.
+
 */
                 let cars = (function() {
                     let DEFAULT = {
@@ -720,14 +720,14 @@ NOTE: This section is on functions in objects, but first a brief overview.
                cars.run( { speed: 'fast'});    //-> speed...fast
 
 /*
-       - Now you can use DOT NOTATION to chain one call to another.
-       - However, you need to understand WHY it is working.
-       - what is important is we have to make sure each function returns the calling object... which is exactly what the `this` argument does, 
-         specifically, return the object that contains it.
-                -- why is this working?  The `this` parameter is goign to return the instance of the object.
-                -- in other words, in the example below the `this` is going to return the cars2 object.
-                -- normally return would exit the current function, but in this case the `this` returns the carCollection (or run) and returns the
-                   cars2 object where you have access to carCollection AND run.
+    -- Now you can use DOT NOTATION to chain one call to another.
+    -- However, you need to understand WHY it is working.
+    -- what is important is we have to make sure each function returns the calling object... which is exactly what the `this` argument does, 
+       specifically, return the object that contains it.
+    -- why is this working?  The `this` parameter is goign to return the instance of the object.
+    -- in other words, in the example below the `this` is going to return the cars2 object.
+    -- normally return would exit the current function, but in this case the `this` returns the carCollection (or run) and returns the
+       cars2 object where you have access to carCollection AND run.
 */
 
                 let cars2 = (function() {
@@ -756,19 +756,17 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 
-
-
 /*
 16. What is a Rest Operator?
-////////////////////////
-                - if you want a function with varying numbers of parameters, you can use the rest operator.
-                - this is not to be confused with the spread operator because it is used with arrays.
-                    - with a spread operator, we can spread an array which means take it individual elements.
-                - but when we use the ... along with a parameter of a function, it is refered to as a spread operator.
-                - when you apply the rest operator to a parameter of a function, we pass a varying number of arguments and the rest 
-                  operator will take all of them and put them in an array.
-                - remember, rest operator must be LAST formal parameter (i.e. function sum(var1, var2, ...var3) {...}).
-                - because it is always at the end, we have as many parameters as we want but we use the ... for the REST of the parameters.
+////////////////////////////
+    -- if you want a function with varying numbers of parameters, you can use the rest operator.
+    -- this is not to be confused with the spread operator because it is used with arrays.
+    -- with a spread operator, we can spread an array which means take it individual elements.
+    -- but when we use the ... along with a parameter of a function, it is refered to as a spread operator.
+    -- when you apply the rest operator to a parameter of a function, we pass a varying number of arguments and the rest 
+       operator will take all of them and put them in an array.
+    -- remember, rest operator must be LAST formal parameter (i.e. function sum(var1, var2, ...var3) {...}).
+    -- because it is always at the end, we have as many parameters as we want but we use the ... for the REST of the parameters.
 */
                 
                 // classic was of getting the sum with rest operator
