@@ -296,3 +296,19 @@ What are special characters and escape notation?
             let escNoWithSingleQuotes = 'example of a string with \'single quotes\' in it.';      // allows quotes in string. 
             let escNoWithNewLine = 'example of a string with a \n new line put in it.';           // makes a new line in the string.
             let escNoWithTab = 'example of a string with a \t tab in it';                         // creates a tab in the string.
+
+
+/*
+What is a template literal?
+///////////////////////////
+    - a template literal is a set of backticks (i.e. ``) used instead of quotation marks.
+    - template literals allow us to refer to variables and execute JavaScript INSIDE a string.
+    - inside the template literal, you can use ${} and insert any variable you want to refer insde the curly braces.
+    - introduced with es6.
+*/
+            let myName = 'joe';
+            let myAge = '25';
+
+            const nameAgeCombo = `Hello, my name is ${myName} and my age is ${myAge}`
+
+            console.log(nameAgeCombo);      //-> Hello, my name is joe and my age is 25
