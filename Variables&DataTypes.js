@@ -4,17 +4,19 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. What is a Variables? 
 //     2. What is the basic structure of a variable?
-//     3. Variable Commands
-//     4. Data Types
-//     5. Dynamic vs. Static Lang. types
-//     6. Null vs. Undefined
-//     7. Strict mode
-//     8. Pass-by Value or Reference
-//     9. -- Pass-by Value
-//    10. -- Pass-by Reference
-//    11. What is NaN
-//    12. Checking for NaN
-//    13. Coercion
+//     3. What are the THREE commands used to create variable?
+//     4. What are the different types in JavaScript?
+//     5. What is the difference between a dynamic language like JavaScript and a static language like Java?
+//     6. What is the difference between Null and Undefined?
+//     7. What is strict mode and what does it do?
+//     8. Does JavaScript pass parameters by value or reference?
+//     9. What is pass-by value?
+//    10. What is pass-by reference?
+//    11. What is NaN?
+//    12. How do you check for NaN?
+//    13. What is Coercion?
+//    14. What are special characters and escape notation?
+//    15. What is a template literal?
 //
 
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -30,16 +32,13 @@
 
     What is the definition of a variable?
     =====================================
-    - a variable is a name attached to a variable.
-    - a variable stores and keeps track of information within a program.
-    - a variable manages the state of a program.
+    -- a variable is a name attached to a variable.
+    -- a variable stores and keeps track of information within a program.
+    -- a variable manages the state of a program.
         -- i.e. let clickCount = 2.
-    - a variable uses the equal sign (=) to assign a value to a variable.
+    -- a variable uses the equal sign (=) to assign a value to a variable.
         -- i.e let name = 'john'
-    - a variable WITHOUT a value is called an empty variable.
-   
-
-.
+    -- a variable WITHOUT a value is called an empty variable.
 */
 
 
@@ -59,28 +58,29 @@
 
     What are important things to remember about variables?
     ======================================================
-    - You CANNOT use a reserved word (i.e. let let, var var, let return, etc.).
-    - You CANNOT start with a number (i.e. 1name).
-    - you CANNOT use a space or a hyphen (i.e. -).
+    -- You CANNOT use a reserved word (i.e. let let, var var, let return, etc.).
+    -- You CANNOT start with a number (i.e. 1name).
+    -- you CANNOT use a space or a hyphen (i.e. -).
 
-    - You SHOULD NOT declare multiple variables in the same .  
+    -- You SHOULD NOT declare multiple variables in the same .  
          -- you can use a shorthand method for declaring multiple variables in one statement but it is NOT best practice.
          --  var person = "john", 
                  place = "park", 
                  thing = "watermellon";
 
-        - You SHOULD use meaningful names.
-        - You SHOULD use camel casing (i.e. thisIsAnExample).
-        - You SHOULD either Uppercase, LowerCase, underscore, or cashsign for the first letter
+        -- You SHOULD use meaningful names.
+        -- You SHOULD use camel casing (i.e. thisIsAnExample).
+        -- You SHOULD either Uppercase, LowerCase, underscore, or cashsign for the first letter
 */
+
 
 
 /*
 3. What are the THREE commands used to create variable?
 //////////////////////////////////////////////////////
-    - var    -- value can be changed.
-    - let    -- value can be changed.
-    - const  -- value CANNOT be changed (i.e. const interestRate = 0.3 --then--> interestRate = 1 //-> error )
+    -- var    -- value can be changed.
+    -- let    -- value can be changed.
+    -- const  -- value CANNOT be changed (i.e. const interestRate = 0.3 --then--> interestRate = 1 //-> error )
                 
     For example: 
     */
@@ -96,11 +96,10 @@
     
     
 /* 
-4. What is a Data Type?
-What are the different types in JavaScript?
-//////////////////////////////////////////
-    - A data type is a kind of value that is assigned to a variable.
-    - there are 6 (or really 7 if you count functions) data types    */
+4. What are the different types in JavaScript?
+//////////////////////////////////////////////
+    -- A data type is a kind of value that is assigned to a variable.
+    -- there are 6 (or really 7 if you count functions) data types    */
 
 //    1. string     -     A string (literal) is a series of characters within single or double quotes.
                           console.log(typeof('Hello'))    
@@ -158,9 +157,10 @@ What are the different types in JavaScript?
 
 
 /* 
-6. Null and Undefined seem to mean the same thing, that there is no value.  However, there is a subtle difference
-between the two.  What are the subtle differences?
-/////////////////////////////////////////////////
+6. What is the difference between Null and Undefined?
+/////////////////////////////////////////////////////
+    -- Null and Undefined seem to mean the same thing, that there is no value.  However, there is a subtle difference
+       between the two.  What are the subtle differences?
 
     SHORT ANSWER: JavaScript will use Undefined by default for uninitialized variables.  Null is set by humans.
 
@@ -177,9 +177,10 @@ between the two.  What are the subtle differences?
 
 
 /* 
-7. What does 'use strict;' do?
-/////////////////////////////
+7. What is strict mode and what does it do?
+//////////////////////////////////////////
     -- strict mode allows you to place a program or a function in a strict operating context.
+    -- to enable strict mode, you simple put 'use strict'; at the beginning of your JavaScript document.
     -- strict mode makes debugging easier, errors will be easier to find.
     -- It is a string because when it was first implemented only new browsers supported it, so a string
        was used and when a new browser reads the string, it knows to turn itself into strict mode operating context.    
@@ -266,8 +267,8 @@ The Answer:
                
 
 /*
-What is Coercion?
-////////////////
+13. What is Coercion?
+////////////////////
     -- Coercion is simply adding two variables together    
     -- Because JavaScript is dyamically types, the type associated with the runtime values and not the variables.
     -- We can concatenate multiple string values (i.e. add them together).
@@ -287,8 +288,8 @@ What is Coercion?
 
 
 /*
-What are special characters and escape notation?
-///////////////////////////////////////////////
+14. What are special characters and escape notation?
+///////////////////////////////////////////////////
     -- ESCAPE NOTATION is used when you want to eseacpe the quotation mark limiter by using a BACKSLASH.
 */
             let escNo = 'this is an example of a normal string'
@@ -299,8 +300,8 @@ What are special characters and escape notation?
 
 
 /*
-What is a template literal?
-///////////////////////////
+15. What is a template literal?
+///////////////////////////////
     - a template literal is a set of backticks (i.e. ``) used instead of quotation marks.
     - template literals allow us to refer to variables and execute JavaScript INSIDE a string.
     - inside the template literal, you can use ${} and insert any variable you want to refer insde the curly braces.
