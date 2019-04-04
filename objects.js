@@ -588,7 +588,7 @@
 
 
 /*
-What is a built-in object in JavaScript?
+12. What is a built-in object in JavaScript?
 ////////////////////////////////////////
     - a built-in object in javascript as small built-in objects.
     - these objects are available regardless of window content and operate independently of wheveer page your browser has loaded.
@@ -677,7 +677,11 @@ What is a built-in object in JavaScript?
                 console.log(test());                //-> [ 'I', 'am', 'testing', 'string', 'methods' ]
 
 
-
+/*
+13. What is escape notation for a string object?
+///////////////////////////////////////////////
+    - 
+*/
 
 
 
