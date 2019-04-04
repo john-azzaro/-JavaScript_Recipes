@@ -13,6 +13,7 @@
 //     9. What is pass-by value and what are primitive and reference types?
 //    10. How do you iterate over the properties of an object?
 //    11. Why and how do you clone an Object?
+//    12. What is a built-in object in JavaScript and what are they?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on objects taken from study, research, tutorials, 
@@ -31,7 +32,10 @@
     - objects provide an excellent way of organizing code that belongs together.
     - objects helpyou avoid global variables.
     - objects let us represent instances of some model.
-        
+    - when you create an object, memory is automatically allocated to memory in JavaScript (and we do not need to deallocate memory)
+        -- as opposed to low level languages like C++ or C, you do not need to allocate or de-allocate memory.
+        -- JavaScript has something called a "garbage collector" which finds variables or constants that are no longer used and deallocates
+           memory automatically   
 */
 
 
@@ -502,7 +506,7 @@
 
 /*
 11. Why and how do you clone an Object?
-///////////////////////////////////
+///////////////////////////////////////
     - cloning an object gets all the properties of an object and copies them into another object.
     - there are TWO ways to clone an object:
             -- for...in
@@ -535,6 +539,7 @@
 /*
     - HOWEVER, there are better and more modern ways to do this using dot notation.
 */
+
 /*
     How to clone an object using Object.assign?
     ==========================================
@@ -569,9 +574,10 @@
                 }, square);
             console.log(assignYetAnotherSquare);
 
+
 /*
     How to clone an object using the spread operator?
-    /////////////////////////////////////////////////
+    ==================================================
         - with the spread operator, it takes all the properties in the square object and puts them into the new object we are creating.
         - this is by far the simplest way to clone an object,
 */
@@ -579,6 +585,57 @@
             console.log(assignSpreadSquare);
 
 
+
+/*
+What is a built-in object in JavaScript?
+////////////////////////////////////////
+    - a built-in object in javascript as small built-in objects.
+    - these objects are available regardless of window content and operate independently of wheveer page your browser has loaded.
+    - there are 5 built-in objects:
+            -- Date
+            -- Math
+            -- String
+            -- Array
+            -- Object
+*/
+/*
+    What is the Math Object?
+    ========================
+    - math is a built in object that has properties and methods for mathematical constants and function.
+    - you would use the math object if you were dealing with mathematical calculations.
+
+    - when we use Math.random, we get a random number between 0 and 1 (i.e. 0.67394576230373).
+    - For more info, check MDN web docs for full list: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+*/
+                const randomNumber = Math.random();
+                console.log(randomNumber);              //-> 0.736367298383 (will be different every time you run).
+/*
+    - if you want to keep the random numbers within a given range...
+*/
+                function randomNumberArbitrary(min, max) {
+                    return Math.random() * (max - min) + min;
+                }
+                console.log(randomNumberArbitrary(1, 10));      //-> random number between 1 and 10.
+/*
+    - When we use Math.round, it will take the number we specify and round it.
+*/
+                function mathRound() {
+                    return Math.round(1.9);    
+                }
+                console.log(mathRound());          //-> 2
+/*
+    - When we use Math.max, it will take a bunch of arguments and return the largest number.
+*/
+                function mathMax() {
+                    return Math.max(2,4,7,9);
+                }
+                console.log(mathMax());           //-> 9
+
+
+/*
+    What is a String Object?
+    ==========================
+*/
 
 
 /*
