@@ -14,6 +14,7 @@
 //    10. How do you iterate over the properties of an object?
 //    11. Why and how do you clone an Object?
 //    12. What is a built-in object in JavaScript and what are they?
+//    13. What is escape notation for a string object?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on objects taken from study, research, tutorials, 
@@ -635,7 +636,59 @@ What is a built-in object in JavaScript?
 /*
     What is a String Object?
     ==========================
+    - although strings are primitive types (which dont have properties and methods), in JavaScript there are 2 kinds of strings.
+        -- primitive string
+        -- object string
+
+    - a string primitive does not have any properties or methods.
+    - a string primitive will evaluate typeof = 'string'.
+    - For more info, check MDN web docs for full list: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+*/             const stringPrimitive = 'hello, im a string primitive';
+/*
+    - However, a STRING OBJECT has properties and methods.
+    - we use a String constructor function to create a new string object (i.e. new String() ).
+    - a string object will evaluate typeof = 'object'.
+*/ 
+               const stringObject = new String('hello, im a string object');
+
+/*
+    - with strings, you can use STRING METHODS:
+                
+                let str = "I am testing string methods";
+
+                str.length;                        //-> 27
+                str.charAt(0)                      //-> I
+                str.slice(0, 10)                   //-> I am testing
+                str.toUpperCase()                  //-> I AM TESTING STRING METHODS
+                str.toLowerCase()                  //-> i am testing string methods
+                str.replace('testing', 'eating')   //-> I am eating string methods
+                str.split(" ")                     //-> [ 'I', 'am', 'testing', 'string', 'methods' ]
+                str.includes('methods')            //-> true
+                str.startsWith('apple')            //-> false  (note this is case senitive)
+                str.endsWith('e')                  //-> false
+                str.indexOf('testing')             //-> 8     (meaning testing starts at index 8)
 */
+           
+                function test() {
+                    let str = "I am testing string methods";
+                    return  str.indexOf('testing');
+                }
+                console.log(test());                //-> [ 'I', 'am', 'testing', 'string', 'methods' ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*
