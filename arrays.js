@@ -6,6 +6,10 @@
 //     2. How do you create an array?
 //     3. How do you access items in an array?
 //     4. How do you find the length of an array?
+//     5. What is an array method?
+//     6. How do you add elements to the beginning, middle, and end of an array?
+//     7. How do you remove the first item in an array?
+//     8. How do you create a new array from an exiting one?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on arrays taken from study, research, tutorials, 
@@ -101,12 +105,12 @@
 
 
 /*
-6. How do you add elements to an array?
-///////////////////////////////////////
+6. How do you add elements to the beginning, middle, and end of an array?
+////////////////////////////////////////////////////////////////////////
     -- in an array, you can add elements to the:
         -- beginning (.unshift)
-        -- middle (.)
-        -- end (.push)
+        -- middle    (.slice)
+        -- end       (.push)
 */
 
 /*
@@ -179,10 +183,91 @@
             console.log(addToEnd);    //-> [ 'apple', 'banana', 'carrot', 'date' ]
 
 
+/*
+7. How do you remove the first item in an array?
+////////////////////////////////////////////////
+    -- to remove the last item in an array, you use the .shift method.
+*/
+            const removeFirstItem = ['axe', 'bat', 'cutlass'];
+
+            console.log(`==> Remove first element from array with .shift`);
+
+            console.log(removeFirstItem);       //-> [ 'axe', 'bat', 'cutlass' ]
+            removeFirstItem.shift();
+            console.log(removeFirstItem);       //-> [ 'bat', 'cutlass' ]
+
+ 
+
+/*
+8. How do you create a new array from an exiting one?
+/////////////////////////////////////////////////////
+    -- to remove the last item in an array, you use the .slice method.
+    -- here, .slice uses TWO paramters:
+            -- new array start (i.e. index of 2 = charlie)
+            -- new array end (i.e. index of 5 = foxtrot).
+                -- note that foxtrot is NOT included in the new array since it is where the new array officially ends.
+*/
+            const createNewArray = ['alpha', 'beta', 'charlie', 'delta', 'echo', 'foxtrot'];
+
+            console.log(`==> Create a new array from an existing one with .slice`);
+
+            console.log(createNewArray);                          //-> [ 'alpha', 'beta', 'charlie', 'delta', 'echo', 'foxtrot' ]
+            const newCreatedArray = createNewArray.slice(2,5);
+            console.log(newCreatedArray);                         //-> [ 'charlie', 'delta', 'echo' ]
 
 
 
 
+/*
+How do you find primitive elements in an array?
+///////////////////////////////////////////////
+    -- finding elements in an array depends on whether you are looking for primitive (i.e. strings, numbers, booleans, etc.)
+       or reference types (functions, objects, arrays).
 
 
+    How do you find primitve elements?
+    ==================================
+    -- for primitives, we use the .indexOf() method and pass the element we are looking for in the parentheses.
+        -- if you pass in an element that IS in the array, you will get the index location.
+        -- if you pass in an element that is NOT in the array, you will get a -1 (which is saying it does not exist).  
+*/
+            const findPrimNumbers = [1,2,3,4,5];
 
+            console.log(findPrimNumbers.indexOf('a'));    //-> -1   Since 'a' is not in the array, it returns a -1.
+            console.log(findPrimNumbers.indexOf(4));      //-> 3    4 is in the array and its index location is 3.
+            console.log(findPrimNumbers.indexOf("4"));    //-> -1   "4" is a string so its not in the array, so it return -1.
+
+
+/*
+    How do you find the last index of a given element?
+    ==================================================
+        -- if you want to find the last instance of a given element.
+*/
+            const findLastInstance = [1,2,3,4,5,3,6];   // note 3 is repeated near the end of the array.
+
+            console.log(findLastInstance.lastIndexOf(3));   //-> 5
+
+
+ /*
+    How do you determined if an element exists in an array?
+    =======================================================
+        -- to find out whether or not an element exists in a given array, you look for the element with .indexOf and then
+           use conditional logic to determine is it is NOT equal to -1 (i.e. the value that is returned if the element is NOT there).
+*/
+            const doesItExist = [1,2,3,4,5,6,7,8,9,10];
+
+            console.log(doesItExist.indexOf(5) !== -1);    //-> true   
+            console.log(doesItExist.indexOf(15) !== -1);   //-> false   
+/*
+        -- However, there is a better way to do this:
+*/
+            console.log(doesItExist.includes(5));           //-> true
+/*
+        -- You can also pass in a second parameter that will specify where the search begins.
+*/
+            const existSearch = [1,2,3,4,5,6,7,8,9,10];
+
+            console.log(existSearch.includes(1, 2));    //-> false   This is because although 1 is in the array, we start at index 
+                                                        //           of 2 (i.e. 3).
+            console.log(existSearch.includes(3, 2));    //-> true    This is because while looking for #3 in the array, we start at 
+                                                        //           index of 2 (i.e. 3)
