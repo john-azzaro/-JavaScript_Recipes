@@ -604,10 +604,22 @@
     ========================
     - math is a built in object that has properties and methods for mathematical constants and function.
     - you would use the math object if you were dealing with mathematical calculations.
+    - when using math objects, use a capital 'M'.
 
     - when we use Math.random, we get a random number between 0 and 1 (i.e. 0.67394576230373).
+    - Below are a few important Math object operations:
+
+                - Math.round(.6)  //=> 1.0  (rounded up ro down to the nearest integer)
+                - Math.ceil(.6)   //=> 1.0  (rounded UP to an integer)
+                - Math.floor(.6)  //=> 0.0  (rounded DOWN to an integer)
+                - Math.abs(-5)    //=> 5    (the absolute of -5 is 5 and absolute value of 5 is 5)
+                - Math.max(1,2,3) //=> 3    (the highest integer in the arguments is 3)
+                - Math.min(1,2,3) //=> 1    (the lowest integer in the arguments is 1)
+                - Math.random()   //=> 0.2  (random number between 1 and 10)
+
+
     - For more info, check MDN web docs for full list: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
-*/
+*/       
                 const randomNumber = Math.random();
                 console.log(randomNumber);              //-> 0.736367298383 (will be different every time you run).
 /*
