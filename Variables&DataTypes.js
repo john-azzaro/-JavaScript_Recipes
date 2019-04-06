@@ -32,6 +32,7 @@
 
     What is the definition of a variable?
     =====================================
+    -- a variable is 'declared' with a key word (i.e. var, let, const).
     -- a variable is a name attached to a variable.
     -- a variable stores and keeps track of information within a program.
     -- a variable manages the state of a program.
@@ -39,6 +40,9 @@
     -- a variable uses the equal sign (=) to assign a value to a variable.
         -- i.e let name = 'john'
     -- a variable WITHOUT a value is called an empty variable.
+    -- Javascript uses 'lexical scope'
+    -- variables declared outside a function haved 'global variables'.
+    -- variable declared inside a function have 'function scope'
 */
 
 
@@ -99,33 +103,41 @@
 4. What are the different types in JavaScript?
 //////////////////////////////////////////////
     -- A data type is a kind of value that is assigned to a variable.
-    -- there are 6 (or really 7 if you count functions) data types    */
+    -- there are 6 (or really 7 if you count functions) data types
+    -- Types can either be mutable or immutable.
+        -- mutable means the type can change, like the values of an objects and arrays can be changed.
+        -- immutable means that the type cannot change.  This applies to: Numbers, booleans, null, undefined.
+        -- in javascript, strings are immutable since you can index them at any index in the string BUT
+
+*/
 
 //    1. string     -     A string (literal) is a series of characters within single or double quotes.
-                          console.log(typeof('Hello'))    
+                          console.log(typeof('Hello'));    
                           //-> "string"
 
-//    2. number     -     A number (literal) is used to represent numbers, both integers an floating point decimals numbers.
-                          console.log(typeof(23))         
+//    2. number     -     A number (numeric literal) is used to represent numbers, both integers an floating point decimals numbers. 
+                          console.log(typeof(23));
+                          console.log(typeof(1.345));         
                           //-> "number"
+                          //->  number
 
 //    3. Boolean    -     A Boolean (literal) evaluates either true or false.
-                          console.log(typeof(true))       
+                          console.log(typeof(true));       
                           //-> "boolean"
 
 //    4. Undedined  -     Special value that declares variable before assigning a value to them.
-                          console.log(typeof(undefined))       
+                          console.log(typeof(undefined));       
                           //-> "undefined"
 
 //    5. Null       -     Null is a special value used to indicate that the variable has no value.
-                          console.log(typeof(null))      
+                          console.log(typeof(null));      
                           //-> "object" 
                           //    BUT this is incorrect but the problem has existed for so long that it would be
                           //    problematic to fix it so its stayed like that.  It should be "null"
 
 //    6. Object     -    Objects are complex data types that combine primitive datat types like numbers, strings, booleans, null, undefined.
-                         console.log(typeof({}))      
-                         //-> "object"              
+                         console.log(typeof({}));      
+                          //-> "object"              
 
                         
                     
