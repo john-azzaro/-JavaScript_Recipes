@@ -475,4 +475,28 @@
                                                                         //   5
                                                                         //   7
                                                                         //   9
-                                                                
+                                        
+                                                                    
+/*
+What is try/catch/finally?
+//////////////////////////
+    -- the try/catch/finally statement is JavaScripts exception handling mechanism.
+    -- try/catch/finally is used to catch errors in our programs.
+
+    -- the 'try' clause defines the block of code whose exceptions are to be handled.
+        -- simply put, 'try' is the block of behavior to be tested.
+    -- the 'catch' clause is a block of statements invoked when the exception has occured anywhere in the 'try' block.
+        -- simply put, the 'catch' is the block that runs if the 'try' block fails.
+        -- 'catch' is also always folloed by an identifier in parentheses (i.e. e).
+            -- it is like a function parameter when the exception is caught the value associated with it it is assigned to the 
+               parameter.
+    -- the 'finally' block contains cleanup code that is guarenteed to be executed regardless of what happens in the 'try' block.
+
+*/
+       
+
+/*
+Resources
+//////////
+-- JavaScript - the Definitve guide.
+*/
