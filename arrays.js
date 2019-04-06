@@ -308,10 +308,17 @@
 /*
     How do you find a reference type and return the index location?
     ==============================================================
-    - .findIndex returns the element's index.
+    -- .findIndex returns the element's index.
 */
             let foundIndex = section.findIndex(function(section) {        
                 return section.name === 'a';
             });
 
             console.log(foundIndex);      //-> 0       This is because 0 is the index location.
+/*
+    --  you can also use the es6 fat arrow function to make the code cleaner.
+    -- in this example, we would say "find the section that goes to (i.e. =>) section name that matches 'a'".
+*/
+            let foundIndexArrow = section.find(section => section.name === 'a');
+
+            console.log(foundIndexArrow);      //-> 0       
