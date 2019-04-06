@@ -278,6 +278,7 @@
 10. How do you find reference-type elements in an array?
 ////////////////////////////////////////////////////////
     -- finding primitives is different than finding reference types.
+    -- we use .find(), which returns the FIRST item that matches our search criteria.
 
 */
             const section = [
@@ -286,11 +287,17 @@
             ];
 
                       
-            let found = courses.find(function(element) {        
-                reuturn
-            })
+            let found = section.find(function(section) {        
+                return section.name === 'a';
+            });
+
+            console.log(found);      //-> { id: 1, name: 'a' }
 /*
-   -- here we call the find method with a function (i.e. predicate) as an argument.
+   -- here we call the find method with a function (i.e. predicate or callback) as an argument.
+        -- its called a 'callback' because the function is called back as part of finding an element in the array.
    -- we use the argument as a predicate to determine whether the given element exists in an array or not.
-   -- the function takes 'element' in the array as a parameter.
+   -- the function takes 'section' in the array as a parameter (can be called 'element' but better to be specific).
+   -- in the body of the function, we want to see if the section name is equal to 'a'.
+   -- if there is an element that meets that criteria, print.
+   -- if there are no elements that meet the criteria in the cody body, it returns undefined.
 */
