@@ -20,17 +20,29 @@
     - a program is a set of instructions a computer carries out.
     - the skill of a programmer is finding a solution to a problem and implementing those solutions with a programming language
       so the computer can execute it.
+    - programming is like learning a language, where you need to learn new words, punctuation, and putting all these things 
+      together to successfully communicate.
+    - programming languages, like JavaScript, have thier own keywords an characters, as well as rules for putting them all together.
+    - this is called the 'syntax' of the programming language.
+    - a computer program (i.e. scripts) would be as simple as added a bit of javascript to your webpage.
+    - programs work by manipulating values, like numbers or text.
+    - a program retains a values in a variable, which is and allows that value to be refered to by name.
 */
 
 /*
 2. What is JavaScript?
 /////////////////////
     - JavaScript is the only lnaguage that can be used on all modern browsers.
+    - Javascript is a client-side langauge, meaning that it works inside a web browser.
+        -- conversely, a server-side language would be node.js.
     - JavaScript is specified by ECMA and W3C specs.
     - JavaScript relies on individual browsers to handle how to implement ECMA and W3C specifications. 
     - JavaScript is used in two ways:
         -- First, modeling and manipulating data and proceses.
         -- Second, interacting with browser elements.
+    - the JavaScript interpreter performs automatic 'garbage colleciton' for memory management, meaning the program can create objects
+      and the programmer does not need to worry about destruction or deallocation of those objects.  
+        -- when the program has no way to refer to it (no longer reachable), the interpreter automatically reclaims the memory it occuiped.
 */
 
 /*
