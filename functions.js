@@ -505,7 +505,9 @@ NOTE: This section is on functions in objects, but first a brief overview.
         -- the return statement can be used to return something back to the caller.
                 -- so you could assign it to a variable and it will place a value in the variable when the function returns.
         -- the return statement is usually the last statement in a function (stops execution).
-        -- the return statement can be anything or return nothing
+        -- the return statement can be anything or return nothing.
+        -- the return statement appears only in the body of a function (otherwise it is a syntactical error).
+
 */
 
 
