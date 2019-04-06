@@ -280,3 +280,17 @@
     -- finding primitives is different than finding reference types.
 
 */
+            const section = [
+                { id: 1, name: 'a'},
+                { id: 2, name: 'b'}
+            ];
+
+                      
+            let found = courses.find(function(element) {        
+                reuturn
+            })
+/*
+   -- here we call the find method with a function (i.e. predicate) as an argument.
+   -- we use the argument as a predicate to determine whether the given element exists in an array or not.
+   -- the function takes 'element' in the array as a parameter.
+*/
