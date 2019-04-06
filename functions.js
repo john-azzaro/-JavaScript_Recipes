@@ -203,7 +203,8 @@ What is a default parameter?
                 variableWithAddExpression();
 
         // ES6 Fat Arrow Function:
-
+        //  -- when you read this, you would say 'goes to...' for fat arrow.
+                                             
                 const addFatArrow = (num1, num2) => num1 + num2;
                 console.log(addFatArrow(4,4))       // 8   
    
