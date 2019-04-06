@@ -278,8 +278,11 @@
 10. How do you find reference-type elements in an array?
 ////////////////////////////////////////////////////////
     -- finding primitives is different than finding reference types.
-    -- we use .find(), which returns the FIRST item that matches our search criteria.
+    -- we use .find(), which returns the FIRST object that matches our search criteria.
 
+
+    How do you find a reference type and return a specific element?
+    ===============================================================
 */
             const section = [
                 { id: 1, name: 'a'},
@@ -301,3 +304,14 @@
    -- if there is an element that meets that criteria, print.
    -- if there are no elements that meet the criteria in the cody body, it returns undefined.
 */
+
+/*
+    How do you find a reference type and return the index location?
+    ==============================================================
+    - .findIndex returns the element's index.
+*/
+            let foundIndex = section.findIndex(function(section) {        
+                return section.name === 'a';
+            });
+
+            console.log(foundIndex);      //-> 0       This is because 0 is the index location.
