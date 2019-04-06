@@ -10,6 +10,7 @@
 //     6. How do you add elements to the beginning, middle, and end of an array?
 //     7. How do you remove the first item in an array?
 //     8. How do you create a new array from an exiting one?
+//     9. How do you find primitive elements in an array?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on arrays taken from study, research, tutorials, 
@@ -219,8 +220,8 @@
 
 
 /*
-How do you find primitive elements in an array?
-///////////////////////////////////////////////
+9. How do you find primitive elements in an array?
+/////////////////////////////////////////////////
     -- finding elements in an array depends on whether you are looking for primitive (i.e. strings, numbers, booleans, etc.)
        or reference types (functions, objects, arrays).
 
@@ -249,15 +250,15 @@ How do you find primitive elements in an array?
 
 
  /*
-    How do you determined if an element exists in an array?
+    How do you determine if an element exists in an array?
     =======================================================
         -- to find out whether or not an element exists in a given array, you look for the element with .indexOf and then
            use conditional logic to determine is it is NOT equal to -1 (i.e. the value that is returned if the element is NOT there).
 */
             const doesItExist = [1,2,3,4,5,6,7,8,9,10];
 
-            console.log(doesItExist.indexOf(5) !== -1);    //-> true   
-            console.log(doesItExist.indexOf(15) !== -1);   //-> false   
+            console.log(doesItExist.indexOf(5) !== -1);    //-> true      Is 5 in the array?  Yes it is!
+            console.log(doesItExist.indexOf(15) !== -1);   //-> false     Is 15 in the array?  No, it is NOT.
 /*
         -- However, there is a better way to do this:
 */
@@ -270,4 +271,12 @@ How do you find primitive elements in an array?
             console.log(existSearch.includes(1, 2));    //-> false   This is because although 1 is in the array, we start at index 
                                                         //           of 2 (i.e. 3).
             console.log(existSearch.includes(3, 2));    //-> true    This is because while looking for #3 in the array, we start at 
-                                                        //           index of 2 (i.e. 3)
+                                                        //           index of 2 (i.e. 3).
+
+
+/*
+10. How do you find reference-type elements in an array?
+////////////////////////////////////////////////////////
+    -- finding primitives is different than finding reference types.
+
+*/
