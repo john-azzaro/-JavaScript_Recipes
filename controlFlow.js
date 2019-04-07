@@ -491,9 +491,34 @@ What is try/catch/finally?
             -- it is like a function parameter when the exception is caught the value associated with it it is assigned to the 
                parameter.
     -- the 'finally' block contains cleanup code that is guarenteed to be executed regardless of what happens in the 'try' block.
+        -- this is optional... the block will run whether the block runs or not.
 
 */
-       
+       function fail() {
+           try {                                   // try anything in this block...
+                console.log('this works');
+           } catch (error) {                       // if there are any errors, handle them in 'catch'...
+                console.log('theres a mistake')
+           }
+       }
+       console.log(fail());                        // if you try this, the code works and catch block was never called.
+
+/*
+    -- But what if we alter the code in the try block so that it DOES NOT work.
+*/
+
+        function fail2() {
+            try {                                       // try anything in this block...
+                consol.log('this works');               // console.log is misspelled...
+            } catch (error) {                           // catch runs...
+                console.log('theres a mistake')         // prints 'there is a mistake'...
+                console.dir(error);                     // when you call console.dir with the error object, this prints the stack trace.
+            }
+        }
+        console.log(fail2());                         
+
+
+
 
 /*
 Resources
