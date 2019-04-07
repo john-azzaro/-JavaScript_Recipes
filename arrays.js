@@ -406,7 +406,39 @@
             emptyTheArray3.splice(0, emptyTheArray3.length);      // .splice from start (index of 0, to the length of the array)
             console.log(emptyTheArray3);     //=> []
 
-  
+            
+
+/*
+13. How do you combine and slice an array?
+//////////////////////////////////////////
+    
+    How to Combine two arrays together
+    ==================================
+    -- to combine two arrays together, you use .concat.
+    -- to combine an array, make a new variable and call the first part of your array, then .concat, then pass second array 
+       as your argument.
+    -- whatever array you attach the .concat method to will be first, etc.
+*/
+            const combo1 = [1,2,3];
+            const combo2 = ['a','b','c'];
+            const combo3 = ["why though"] 
+
+            const doubleCombo = combo1.concat(combo2, combo3);     
+            console.log(doubleCombo);                               //=> [ 1, 2, 3, 'a', 'b', 'c', 'why though' ]
+/*
+    How do you slice an array?
+    ==========================
+    -- essentially this is simply making a new array by using .slice and two arguments, where it begins and where it ends.
+    -- remember that the first argument is where the array starts, the second argument is where the array ends.
+*/
+            const sliceUp = ['aaa','bbb','CCC', 'DDD', 'eee', 'fff'];
+
+            const newSlice = sliceUp.slice(2,4);
+            console.log(newSlice);              //=> [ 'CCC', 'DDD' ]
+/*
+
+*/
+            
 
 
 
