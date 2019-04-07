@@ -548,3 +548,9 @@ How do you sort an array?
 /////////////////////////
     -- when you sort an array, you order the elements in the array from least to greatest (or greatest to least).
 */
+            const arrayToArrange = [1,'beta', 3, 'alpha', 2, 'charlie'];
+
+            const normalSort = arrayToArrange.sort();
+            console.log(normalSort);                     //=> [ 1, 2, 3, 'alpha', 'beta', 'charlie' ]
+
+            const sort
