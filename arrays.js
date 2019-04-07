@@ -16,6 +16,8 @@
 //    12. How do you empty an array?
 //    13. How do you combine and slice an array?
 //    14. How do you use the spread operator?
+//    15. How do you iterate over an array?
+//    16. How do you join an array?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on arrays taken from study, research, tutorials, 
@@ -480,7 +482,7 @@
 /*
 15. How do you iterate over an array?
 /////////////////////////////////////
-    -- to iterate over an array, you can use:
+    -- to iterate over an array (i.e. loop over the elements in an array), you can use:
             -- for...of loop
             -- .forEach with function
             -- .forEach with es6 fat-arrow function.
@@ -514,3 +516,27 @@
                                                                                  //    the index of 4 is 3
                                                                                  //    the index of 5 is 4
  
+/*
+16. How do you join an array?
+    -- to join an array (i.e. put all the element in the array together,) we use the .join() method.
+    -- the .join method can have two arguments.
+            -- the first OPTIONAL argument can specify how you want to seperated them (i.e. with a comma).
+            -- the second argument is an empty string.
+*/
+            const joinArray = [1,2,3,4,5];
+
+            const joined = joinArray.join(',', " ");  // note the two arguments here, the first a comma, the second an empty string
+            console.log(joined);                      //=> 1,2,3,4,5
+
+            const joined2 = joinArray.join('');
+            console.log(joined2);                     //=> 12345
+
+/*
+    -- you can also use .split to literally split apart a string in an array.
+*/
+            const stringArray = 'hello';
+
+            const splitString = stringArray.split('');
+            console.log(splitString);                     //=> [ 'h', 'e', 'l', 'l', 'o' ]
+
+          
