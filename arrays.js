@@ -476,6 +476,41 @@
             console.log(combinedSpread2);                          //=> [ 1, 2, 3, 4, 'WOW', 5, 6, 7, 8 ]
 
 
+    
+/*
+15. How do you iterate over an array?
+/////////////////////////////////////
+    -- to iterate over an array, you can use:
+            -- for...of loop
+            -- .forEach with function
+            -- .forEach with es6 fat-arrow function.
+*/
 
+            const iterate1 = [1,2,3,4,5];
 
+            for (let number of iterate1) {
+                console.log(number);              //=> 1  2  3  4  5
+            }
 
+            //or//
+
+            const iterate2 = [1,2,3,4,5];
+
+            iterate2.forEach(function(number) {
+                console.log(number);               //=> 1  2  3  4  5
+            });
+
+            //or using es^ fat-arrow function//
+
+            iterate2.forEach((number) => {
+                console.log(number);               //=> 1  2  3  4  5
+            });
+/*
+    -- additionally, suppose we want to return not only the number but the index as well
+*/
+            iterate2.forEach(function(number, index) {                           //=>  the index of 1 is 0
+                console.log(`the index of ${number} is ${index}`);               //    the index of 2 is 1
+            });                                                                  //    the index of 3 is 2
+                                                                                 //    the index of 4 is 3
+                                                                                 //    the index of 5 is 4
+ 
