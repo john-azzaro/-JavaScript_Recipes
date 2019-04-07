@@ -10,8 +10,8 @@
 //     6. How do you add elements to the beginning, middle, and end of an array?
 //     7. How do you remove the first item in an array?
 //     8. How do you create a new array from an exiting one?
-//     9. How do you find primitive elements in an array?
-//    10. How do you find reference-type elements in an array?
+//     9. How do you find primitive elements (i.e. strings, numbers, booleans, etc.) in an array?
+//    10. How do you find reference-type elements (i.e. objects, functions, etc.) in an array?
 //    11. How do you remove an element from an array?
 //    12. How do you empty an array?
 //    13. How do you combine and slice an array?
