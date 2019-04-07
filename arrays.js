@@ -436,8 +436,20 @@
             const newSlice = sliceUp.slice(2,4);
             console.log(newSlice);              //=> [ 'CCC', 'DDD' ]
 /*
-
+    How do you copy objects in an array?
+    ===================================
+    -- when you copy objects, it is not the objects that are copied but the REFERENCES, so the elements in input and output
+      will point to the same object.
+        -- in the example below, when you call the concat method, the object is not copied to the new array.
+        -- only the REFERENCE is copied.
 */
+            const copObj = [{ name: 'Joe'}];
+            const copArr = [1,2,3,4,5,6,7,8];
+
+            const ObjArrCombo = copObj.concat(copArr);
+            console.log(ObjArrCombo);                   //=> [ { name: 'Joe' }, 1, 2, 3, 4, 5, 6, 7, 8 ]
+
+
             
 
 
