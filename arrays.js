@@ -18,6 +18,7 @@
 //    14. How do you use the spread operator?
 //    15. How do you iterate over an array?
 //    16. How do you join an array?
+//    17. How do you sort an array?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on arrays taken from study, research, tutorials, 
@@ -518,6 +519,7 @@
  
 /*
 16. How do you join an array?
+////////////////////////////
     -- to join an array (i.e. put all the element in the array together,) we use the .join() method.
     -- the .join method can have two arguments.
             -- the first OPTIONAL argument can specify how you want to seperated them (i.e. with a comma).
@@ -532,6 +534,8 @@
             console.log(joined2);                     //=> 12345
 
 /*
+    How do you split a string?
+    ==========================
     -- you can also use .split to literally split apart a string in an array.
 */
             const stringArray = 'hello';
@@ -539,4 +543,8 @@
             const splitString = stringArray.split('');
             console.log(splitString);                     //=> [ 'h', 'e', 'l', 'l', 'o' ]
 
-          
+/*
+How do you sort an array?
+/////////////////////////
+    -- when you sort an array, you order the elements in the array from least to greatest (or greatest to least).
+*/
