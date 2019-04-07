@@ -11,6 +11,9 @@
 //     7. How do you remove the first item in an array?
 //     8. How do you create a new array from an exiting one?
 //     9. How do you find primitive elements in an array?
+//    10. How do you find reference-type elements in an array?
+//    11. How do you remove an element from an array?
+//    12. How do you empty an array?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on arrays taken from study, research, tutorials, 
@@ -324,8 +327,8 @@
             console.log(foundIndexArrow);      //-> 0      
             
 /*
-How do you remove an element from an array?
-///////////////////////////////////////////
+11. How do you remove an element from an array?
+///////////////////////////////////////////////
     - to remove an element in an array, you can use:
         -- beginning  
         -- middle
@@ -347,10 +350,15 @@ How do you remove an element from an array?
 /*
     How to remove an element from the MIDDLE of an array?
     ==================================================
+        -- for removing middle, remember that with .slice you have 2 arguments.
+            -- first argument = where to start.
+            -- second argument = where to end.
+        -- in this case, we just want 1 element, so 1. 
+        -- but if we want to start at 3 (index of 2) and go to 5 (index of 6), we would simply specify .slice(2,6).
 */
             let removeMiddle = [1,2,3,4,5,6,7,8,9];
 
-            const middle = removeMiddle.splice(2, 1);       // in this example we want to remove the element #3 (index of 2).
+            const middle = removeMiddle.splice(2, 0);       // in this example we want to remove the element #3 (index of 2). 
             console.log(middle);                            //=> 3
             console.log(removeMiddle);                      //=> [ 1, 2, 4, 5, 6, 7, 8, 9 ]
 
@@ -363,4 +371,42 @@ How do you remove an element from an array?
             const ending = removeEnd.pop();
             console.log(ending);                   //=> 9
             console.log(removeEnd);                //=> [ 1, 2, 3, 4, 5, 6, 7, 8 ]   (note the last element is gone)
+
+
+/*
+12. How do you empty an array?
+//////////////////////////////
+    -- when we empty an array, we remove every single element in the array.
+    -- There are three good methods to do this:
+            1.  reassign the value as an empty array.
+                -- when you reassign the value as an empty array, if you have another variable that points to the former 
+                   version of the object (i.e. full of elements instead of empty), it will still be stored in memory.
+                -- if there are no reference to the object, then it will be garbage collected to free up memory.
+            2.  use .length to truncate the array (i.e. remove all elements).
+            3.  use .splice and specify the start (i.e. 0) and the entire array (array.length).
+            4.  use .pop
+*/
+
+            let emptyTheArray = [1,2,3,4,5,6,7,8,9];
+
+            emptyTheArray = [];          // reassign the value of 'emptyTheArray' to an empty array.
+            console.log(emptyTheArray);  //=> []
+
+                //or//
+
+            let emptyTheArray2 = [1,2,3,4,5,6,7,8,9];
+
+            emptyTheArray2.length = 0;      // when you do this, it truncates the array, meaning it will remove all elements.
+            console.log(emptyTheArray2);    //=> []
+
+                //or//
+
+            let emptyTheArray3 = [1,2,3,4,5,6,7,8,9];
+
+            emptyTheArray3.splice(0, emptyTheArray3.length);      // .splice from start (index of 0, to the length of the array)
+            console.log(emptyTheArray3);     //=> []
+
+  
+
+
 
