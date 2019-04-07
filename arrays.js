@@ -14,6 +14,8 @@
 //    10. How do you find reference-type elements in an array?
 //    11. How do you remove an element from an array?
 //    12. How do you empty an array?
+//    13. How do you combine and slice an array?
+//    14. How do you use the spread operator?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on arrays taken from study, research, tutorials, 
@@ -450,7 +452,30 @@
             console.log(ObjArrCombo);                   //=> [ { name: 'Joe' }, 1, 2, 3, 4, 5, 6, 7, 8 ]
 
 
-            
+
+
+/*
+14. How do you use the spread operator?
+///////////////////////////////////////
+    -- with the introduction of es6, there is a much easier way to combine arrays than using the .concat method using spread operator
+    -- the spread operator (i.e. ...)
+    -- when you spread an array all of its elements are returned individually.
+    -- so we declare a new array THEN inside the new array we are adding the individual elements of the first and second arrays.
+*/
+            const spread1 = [1,2,3,4];
+            const spread2 = [5,6,7,8];
+
+            const combinedSpread = [...spread1, ...spread2];  
+            console.log(combinedSpread);                         //=> [ 1, 2, 3, 4, 5, 6, 7, 8 ]
+
+/*
+    -- you also have a great deal more flexibility with this spread method.
+    -- for example, we could add another element in the middle of the previous arrays.
+*/
+            const combinedSpread2 = [...spread1, 'WOW', ...spread2];
+            console.log(combinedSpread2);                          //=> [ 1, 2, 3, 4, 'WOW', 5, 6, 7, 8 ]
+
+
 
 
 
