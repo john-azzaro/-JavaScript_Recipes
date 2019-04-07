@@ -321,4 +321,46 @@
 */
             let foundIndexArrow = section.find(section => section.name === 'a');
 
-            console.log(foundIndexArrow);      //-> 0       
+            console.log(foundIndexArrow);      //-> 0      
+            
+/*
+How do you remove an element from an array?
+///////////////////////////////////////////
+    - to remove an element in an array, you can use:
+        -- beginning  
+        -- middle
+        -- end          (.pop)
+*/
+
+
+/*
+    How to remove an element from the BEGINNING of an array?
+    ==================================================
+*/
+            let removeBeginning = [1,2,3,4,5,6,7,8,9];
+
+            const beginning = removeBeginning.shift();      
+            console.log(beginning);                         //=> 1
+            console.log(removeBeginning);                   //=> [ 2, 3, 4, 5, 6, 7, 8, 9 ]      (note the first element is gone)
+
+
+/*
+    How to remove an element from the MIDDLE of an array?
+    ==================================================
+*/
+            let removeMiddle = [1,2,3,4,5,6,7,8,9];
+
+            const middle = removeMiddle.splice(2, 1);       // in this example we want to remove the element #3 (index of 2).
+            console.log(middle);                            //=> 3
+            console.log(removeMiddle);                      //=> [ 1, 2, 4, 5, 6, 7, 8, 9 ]
+
+/*
+    How to remove an element from the END of an array?
+    ==================================================
+*/
+            let removeEnd = [1,2,3,4,5,6,7,8,9];
+
+            const ending = removeEnd.pop();
+            console.log(ending);                   //=> 9
+            console.log(removeEnd);                //=> [ 1, 2, 3, 4, 5, 6, 7, 8 ]   (note the last element is gone)
+
