@@ -836,10 +836,28 @@ NOTE: This section is on functions in objects, but first a brief overview.
                 const kitty2 = {
                     firstName: 'Felix',
                     lastName: 'McCattykins',
-                    fullName: function() {
-                        return `${kitty2.firstName} ${kitty2.lastName}`
-                    }     
+                    get fullName() {                                                       // use prefix 'get' so we can access like a property. 
+                        return `Hello, my name is ${kitty2.firstName} ${kitty2.lastName}`     
+                    },  
                 }
 
-                const whatCat2 = `Hi, my name is ${kitty2.fullname}`
-                console.log(whatCat2.fullName());              
+                console.log(kitty2.fullName);                //=> Hello, my name is Felix McCattykins
+/*
+    -- However, the solution above is READ ONLY, meaning that we cannot set anyone elses name from the outside.
+    -- in otherwords, suppose we want to specify the name from outside the object.
+    -- a solution is to use the `set` prefix.
+*/
+
+                const kitty3 = {
+                    firstName: 'Felix',
+                    lastName: 'McCattykins',
+                    get fullName() {                                                          //
+                        return `Hello, my name is ${kitty2.firstName} ${kitty2.lastName}`     
+                    },
+                    set  
+                }
+
+                const newName = kitty3.fullName('Q.T. McWhiskers')
+
+
+                console.log(kitty3.fullName);                //=> 
