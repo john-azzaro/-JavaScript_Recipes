@@ -20,6 +20,8 @@
 //    16. How do you join an array?
 //    17. How do you sort an array?
 //    18. How do you test elements of an array?
+//    19. How do you filter an array based on search criteria?
+//    20. 
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on arrays taken from study, research, tutorials, 
@@ -591,7 +593,7 @@
 /////////////////////////////////////////
     -- in modern JavaScript we have two new methods call EVERY and SUM.
         --  .every()
-            -- in the method .every(), we hpass a CALLBACK function.
+            -- in the method .every(), we pass a CALLBACK function.
             -- there are actually three parameters: value, index, array.
             -- however, you could just use a single parameter like value or index if you want.
         -- .some()
@@ -599,6 +601,7 @@
 
     How do you use .every()
     =======================        
+    -- when we use .every(), we check to see if EVERY element in the array matches the criteria.
     -- so in the example below, we want to check to see if all the numbers in the array are POSITIVE.
 */
             const testElements = [1,2,3];
@@ -615,8 +618,28 @@
 */
             const checkSum = [1,2,3,4,5];
 
-            const checkingForSum = checkSum.some(function(value) {
+            const atLeastOnePositive = checkSum.some(function(value) {
                 return value >= 0;
             });
-            console.log(checkingForSum);
+            console.log(atLeastOnePositive);         //=> true
 
+
+
+/*
+19. How do you filter an array based on search criteria?
+////////////////////////////////////////////////////////
+    -- this method is used to take one array of items and make a new one that contains only items you are filtering that are true.
+    -- in practical use, this would be like having a 'find restautrants by hours open' in an app.
+            -- the array would be full of times, the filter method would search for those restaurants that were open to your specs.
+*/
+            const filterArray = [1,-1, 2, 3, 4, 5, -4, -7];
+
+            const greater = filterArray.filter(function(value) {
+                return value >= 0;
+            });
+            console.log(greater);       //=> [ 1, 2, 3, 4, 5 ]
+
+            //or//
+
+            const greaterFatArrow = filterArray.filter(value => value >= 0);
+            console.log(greaterFatArrow)        //=> [ 1, 2, 3, 4, 5 ]
