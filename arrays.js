@@ -19,6 +19,7 @@
 //    15. How do you iterate over an array?
 //    16. How do you join an array?
 //    17. How do you sort an array?
+//    18. How do you test elements of an array?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on arrays taken from study, research, tutorials, 
@@ -543,9 +544,10 @@
             const splitString = stringArray.split('');
             console.log(splitString);                     //=> [ 'h', 'e', 'l', 'l', 'o' ]
 
+
 /*
-How do you sort an array?
-/////////////////////////
+17. How do you sort an array?
+/////////////////////////////
     -- when you sort an array, you order the elements in the array from least to greatest (or greatest to least).
 */
             const arrayToArrange = [1,'beta', 3, 'alpha', 2, 'charlie'];
@@ -553,4 +555,33 @@ How do you sort an array?
             const normalSort = arrayToArrange.sort();
             console.log(normalSort);                     //=> [ 1, 2, 3, 'alpha', 'beta', 'charlie' ]
 
-            const sort
+            const sortBack = arrayToArrange.reverse();
+            console.log(sortBack);                       //=> [ 'charlie', 'beta', 'alpha', 3, 2, 1 ]
+
+/*
+    -- however, if you have objects in the array, you need to do things a little differently:
+*/
+            const arrayOfObjects = [
+                { id: 1, name: 'pears'},
+                { id: 2, name: 'apples'}
+            ];
+/*
+    -- to sort the array of objects by the name, we need to pass a function for comparison.
+    -- the function will take two parameters.  
+            -- the first parameter (i.e. a) is FIRST.
+            -- the second parameter (i.e. b) is SECOND.
+    -- in the example below, note that we are using if statements but not if, else if statements
+            -- this is because if we use if, else if the sorting will stop at the first if statement.
+
+*///                                                  
+//                                                        \    
+            const sortArrayObjects = arrayOfObjects.sort(function(a,b) {
+                const nameA = a.name.toUpperCase();
+                const nameB = b.name.toUpperCase();
+                
+                if (nameA < nameB) return -1;
+                if (nameA > nameB) return 1;
+                return 0;
+            });
+            console.log(sortArrayObjects);       //=> [ { id: 2, name: 'apples' }, { id: 1, name: 'pears' } ]
+ 
