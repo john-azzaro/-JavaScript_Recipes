@@ -706,3 +706,23 @@
 
             const doubledNumbers = arrayToDouble.map(double);   // we create a new variable and apply map to the array and call double
             console.log(doubledNumbers);      //=> [ 2, 4, 6, 8, 10 ]
+
+
+
+/*
+21. How do you use reduce for an array?
+///////////////////////////////////////
+    -- you use .reduce method to calculate the sum of elements in an array.
+    -- this method is very good for aggregating array data.
+    -- the method takes an array and REDUCES it to one thing.
+*/
+
+           const addThisArray = [1,2,3,4,5,6,7,8,9,10];
+
+           let sum = 0;                           // first create a variable to hold the total value of our tally.
+           for (let n of addThisArray) {          // then loop though the elements in the array.  for every number (n) in the array (addThisArray)..
+               sum = sum + n;                     // sum will be the value of sum PLUS the number we are iterating.   you can also write as sum += n.
+           }
+           console.log(sum);                      //=> 55
+
+           
