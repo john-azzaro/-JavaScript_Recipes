@@ -715,8 +715,11 @@
     -- you use .reduce method to calculate the sum of elements in an array.
     -- this method is very good for aggregating array data.
     -- the method takes an array and REDUCES it to one thing.
-*/
 
+
+    How to  add an array WITHOUT .reduce():
+    ======================================
+*/
            const addThisArray = [1,2,3,4,5,6,7,8,9,10];
 
            let sum = 0;                           // first create a variable to hold the total value of our tally.
@@ -725,4 +728,16 @@
            }
            console.log(sum);                      //=> 55
 
-           
+/*
+    How to add an array WITH .reduce()
+    ===================================
+    -- the reduce method takes a callback function with two parameters.
+          
+*/
+            const addThisArray2 = [1,2,3,4,5,6,7,8,9,10];
+
+            const sumAdd = addThisArray2.reduce((accumulator, currentValue) => {
+                return accumulator + currentValue;
+            }, 0);
+
+            console.log(sumAdd);           //=> 55
