@@ -562,7 +562,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 13. What is variable hoisting and scope?
 ///////////////////////////////////////
         -- HOISTING is the process of moving the FUNCTION DECLARATIONS to the top of the file automatically.
-        
+
         -- HOISTING refers to how browsers parse JavaScript.
             -- First pass, the browser reads through the code once, setting aside space for variables, functions, etc.
             -- Second pass, the browser reads through AGAIN and executes the code.
@@ -783,7 +783,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
     -- because it is always at the end, we have as many parameters as we want but we use the ... for the REST of the parameters.
 */
                 
-                // classic was of getting the sum with rest operator
+            // classic was of getting the sum with rest operator
 
                 function sum1(...args) {
                     let total = 0;
@@ -795,7 +795,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
                 console.log(sum1(1,2,3,4,5,10));
 
 
-                // more modern way of getting the sum with rest operator
+            // more modern way of getting the sum with rest operator
 
                 function sum2(...args) {
                     return args.reduce((a, b) => a + b);
@@ -803,7 +803,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
                 console.log(sum2(1,2,3,4,5,10));
 
 
-                // more complex example
+            // more complex example
 
                 function sum3(discount, ...prices) {
                     const total = prices.reduce((a,b) => a + b);
@@ -812,3 +812,34 @@ NOTE: This section is on functions in objects, but first a brief overview.
                 console.log(sum3(0.1, 20, 30));                      // 0.1 is the discount, 20 and 30 are the prices.
                                                                      //-> 45
            
+
+/*
+18. What are getters and setters?
+/////////////////////////////////
+    -- Getters and setters are special types of methods for objects.
+        -- Getters access properties in an object
+        -- Setters change (or more specifically mutate) the properties.
+
+    -- below we call on the two properties in the object kitty for our greeting.
+*/
+                const kitty = {
+                    firstName: 'Felix',
+                    lastName: 'McCattykins'
+                }
+
+                const whatCat = `Hi, my name is ${kitty.firstName} ${kitty.lastName}`
+                console.log(whatCat);
+/*
+    -- but while the previous appraoch is good, we would have to repeat this template literally everywhere we need it
+    -- a better way to do this is to define a method in the object called 'fullName' and then put the expression in the log.
+*/
+                const kitty2 = {
+                    firstName: 'Felix',
+                    lastName: 'McCattykins',
+                    fullName: function() {
+                        return `${kitty2.firstName} ${kitty2.lastName}`
+                    }     
+                }
+
+                const whatCat2 = `Hi, my name is ${kitty2.fullname}`
+                console.log(whatCat2.fullName());              
