@@ -585,3 +585,38 @@
             });
             console.log(sortArrayObjects);       //=> [ { id: 2, name: 'apples' }, { id: 1, name: 'pears' } ]
  
+
+/*
+18. How do you test elements of an array?
+/////////////////////////////////////////
+    -- in modern JavaScript we have two new methods call EVERY and SUM.
+        --  .every()
+            -- in the method .every(), we hpass a CALLBACK function.
+            -- there are actually three parameters: value, index, array.
+            -- however, you could just use a single parameter like value or index if you want.
+        -- .some()
+            -- this checks to see if we have at least one element in the array that matches the criteria.
+
+    How do you use .every()
+    =======================        
+    -- so in the example below, we want to check to see if all the numbers in the array are POSITIVE.
+*/
+            const testElements = [1,2,3];
+
+            const AllPositives = testElements.every(function(value) {     // here we check to see if the value is a postive number
+                return value >= 0;
+            });
+            console.log(AllPositives);            //=> true      And if there was a negative number in there, it would return false.
+
+/*
+    How do you use .some()
+    ======================
+    -- when we use .some(), we check to see if there is any element in the array that matches our criteria.
+*/
+            const checkSum = [1,2,3,4,5];
+
+            const checkingForSum = checkSum.some(function(value) {
+                return value >= 0;
+            });
+            console.log(checkingForSum);
+
