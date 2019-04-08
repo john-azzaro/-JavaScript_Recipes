@@ -687,27 +687,16 @@
             const mapIt2 = mapArray2.map(function(value) {
                 const object = {                                 // this could also be written:   
                     number: value                                //================================
-                };                                               //    return {name: value};
+                };                                               //    return {name: value};    note: you could also exclude the return keyword.
                 return object;                                   //
             });               
             
             console.log(mapIt2);          //=>     [ { number: 1 }, { number: 2 }, { number: 3 } ]
 
-
-                                
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+    How to map an array with a function as a parameter
+    ==================================================
+*/
 
             function double(num) {                   // First we have a function which will double each element in the array.
                 return 2 * num;
