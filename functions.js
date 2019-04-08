@@ -561,10 +561,21 @@ NOTE: This section is on functions in objects, but first a brief overview.
 /*
 13. What is variable hoisting and scope?
 ///////////////////////////////////////
+        -- HOISTING is the process of moving the FUNCTION DECLARATIONS to the top of the file automatically.
+        
         -- HOISTING refers to how browsers parse JavaScript.
-                    -- First pass, the browser reads through the code once, setting aside space for variables, functions, etc.
-                    -- Second pass, the browser reads through AGAIN and executes the code.
-                        -- this is how the browser knows what is what.
+            -- First pass, the browser reads through the code once, setting aside space for variables, functions, etc.
+            -- Second pass, the browser reads through AGAIN and executes the code.
+                 -- this is how the browser knows what is what.
+
+        -- With hoisting, we can call a FUNCTION before it has been defined.
+                -- i.e. function hoistThis() {...}
+
+        -- However, we CANNOT call a function that is defined using FUNCTION EXPRESSION syntax.
+            -- this is because when the JavaScript engine executes the code, it moves all the function DECLARATIONS to the top.
+            -- when all the function declarations are 'HOISTED' to the top, we get the term 'hoisting',
+
+                --i.e. const hoistThis = function() {...}
 
         -- VARIABLE SCOPE defines how the variables declared CAN or CANNOT be accessed at different places in your code.
 
