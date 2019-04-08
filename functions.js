@@ -834,30 +834,40 @@ NOTE: This section is on functions in objects, but first a brief overview.
     -- a better way to do this is to define a method in the object called 'fullName' and then put the expression in the log.
 */
                 const kitty2 = {
-                    firstName: 'Felix',
-                    lastName: 'McCattykins',
+                    firstName: 'Garfield',
+                    lastName: 'Fluffynums',
                     get fullName() {                                                       // use prefix 'get' so we can access like a property. 
                         return `Hello, my name is ${kitty2.firstName} ${kitty2.lastName}`     
                     },  
                 }
 
-                console.log(kitty2.fullName);                //=> Hello, my name is Felix McCattykins
+                console.log(kitty2.fullName);                //=> Hello, my name is Garfield Fluffynums
 /*
     -- However, the solution above is READ ONLY, meaning that we cannot set anyone elses name from the outside.
     -- in otherwords, suppose we want to specify the name from outside the object.
     -- a solution is to use the `set` prefix.
+    -- the `set` function is almost exactly like the `get`
 */
 
                 const kitty3 = {
                     firstName: 'Felix',
                     lastName: 'McCattykins',
                     get fullName() {                                                          //
-                        return `Hello, my name is ${kitty2.firstName} ${kitty2.lastName}`     
+                        return `Greetings, my name is ${kitty3.firstName} ${kitty3.lastName}`     
                     },
-                    set  
+                    set  fullName(value) {                   // with set, we need to 'process' the outside input.
+                        const parts = value.split(' ');      // first, we take the value (i.e. ) and split it into an array.
+                        this.firstName = parts[0];           // once in an array, we can seperate the words. index of 0 is 'Jacob'...
+                        this.lastName = parts[1];            // index of 1 is 'McWhiskers'.
+                    }
                 }
 
-                const newName = kitty3.fullName('Q.T. McWhiskers')
+                // and below we have the outside name:
 
+                kitty3.fullName = 'Jacob McWhiskers';
 
-                console.log(kitty3.fullName);                //=> 
+                console.log(kitty3);                //=> { firstName: 'Jacob',
+                                                    //     lastName: 'McWhiskers',
+                                                    //     fullName: [Getter/Setter] }
+
+                console.log(kitty3.fullName);       //=> Greetings, my name is Jacob McWhiskers
