@@ -21,7 +21,8 @@
 //    17. How do you sort an array?
 //    18. How do you test elements of an array?
 //    19. How do you filter an array based on search criteria?
-//    20. 
+//    20. How do you map an array?
+//    21. How do you use reduce for an array?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on arrays taken from study, research, tutorials, 
@@ -639,7 +640,23 @@
             });
             console.log(greater);       //=> [ 1, 2, 3, 4, 5 ]
 
-            //or//
+
+            //or using Fat arrow functions//
 
             const greaterFatArrow = filterArray.filter(value => value >= 0);
             console.log(greaterFatArrow)        //=> [ 1, 2, 3, 4, 5 ]
+
+/*
+20. How do you map an array?
+////////////////////////////
+    -- the map() method is used to generate a new array of items by applying the same function to each item in the array
+*/
+
+            function double(num) {                   // First we have a function which will double each element in the array.
+                return 2 * num;
+            }
+
+            const arrayToDouble = [1,2,3,4,5];       // Second we have the array whose elements we want to double.
+
+            const doubledNumbers = arrayToDouble.map(double);   // we create a new variable and apply map to the array and call double
+            console.log(doubledNumbers);      //=> [ 2, 4, 6, 8, 10 ]
