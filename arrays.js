@@ -650,7 +650,64 @@
 20. How do you map an array?
 ////////////////////////////
     -- the map() method is used to generate a new array of items by applying the same function to each item in the array
+    -- in other words, we can map each item in the array to something else.
+
+    -- in the example below, we want to construct an html markup:
+    -- what this does is display each number in the array with a bullet point.
+    -- also note in this case we are only working with the value.
+
+
+    How to map an array
+    =================== 
 */
+            const mapArray = [1,2,3];
+
+            const mapIt = mapArray.map(function(value) {
+                return '<li>' + value + '</li>'                  // maps the elements in the array to this schema...
+            });                                                  // we are basically mapping the elements in an array to something else, in this case strings.
+
+            const html = mapIt.join('');                         // converts the array to a string. 
+                                                                 // note: by default if the parentheses are empty, you will get 
+                                                                 //       commas.  To avoid this, put in an empty string.
+
+            const addUl = '<ul>' + html + '</ul>';               // adds ul elements outside the html results.
+
+            console.log(mapIt);         //=>  [ '<li>1</li>', '<li>2</li>', '<li>3</li>' ]
+            console.log(html);          //=>  <li>1</li><li>2</li><li>3</li>
+            console.log(addUl);         //=>  <ul<li>1</li><li>2</li><li>3</li></ul>
+
+
+/*
+    How to map an object
+    ====================
+*/
+
+            const mapArray2 = [1,2,3];
+
+            const mapIt2 = mapArray2.map(function(value) {
+                const object = {                                 // this could also be written:   
+                    number: value                                //================================
+                };                                               //    return {name: value};
+                return object;                                   //
+            });               
+            
+            console.log(mapIt2);          //=>     [ { number: 1 }, { number: 2 }, { number: 3 } ]
+
+
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             function double(num) {                   // First we have a function which will double each element in the array.
                 return 2 * num;
