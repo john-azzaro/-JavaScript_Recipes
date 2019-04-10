@@ -1,0 +1,10 @@
+/* 
+NOTE: This CSS document is divided into specific topic sections from jQuery.js and jquery.html. 
+*/
+
+
+/* #3: Traversal and Manipulation: Selecting elements*/
+.hidden {
+    display: none;
+}
+
