@@ -25,7 +25,10 @@
         -- However, as JavaScript begins to take over elements can be added or removed regardless of whether they were orginally
            in the HTML document.
     -- When you create a web page and load it in a web browser the DOM is ENABLED.
-    -- Think of the DOCUMENT as a tree.
+
+    -- DOM is a collection of NODES.
+        -- Everything in the HTML document is a NODE.
+    -- Think of the DOCUMENT as a NODE TREE.
         -- the tree describes the relationship between its members like parent, child, sibling, etc.
 
                              <title>
@@ -43,9 +46,15 @@
         -- HTML tag has no parent or siblings.
     -- One level deepr, we have two elements: head and body.
         -- the head and the body are siblings.
+        -- the head and the body also contain children.
+        
+    -- Within the concept of nodes, consider how a basic element is a collection of nodes:
 
-    --
-
+                attribute node                   text node
+                        \                         /
+                <p class='paragraph'>This is the text inside the element</p>
+                |_________________________________________________________|
+                                        element node
 
 
 
