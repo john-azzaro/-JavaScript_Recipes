@@ -153,19 +153,22 @@
     ==========================
     -- The jQuery syntax has a few basic components:
 
-        1. jQuery Object 
-            -- This is the cash ($) symbol (followed by parentheses) that comes at the beginning to ACCESS (or CALL) jQuery.
+        1.  Object
+            -- The jQuery Object is a cash ($) symbol followed by parentheses to ACCESS (or CALL) jQuery.
         2. Selector      
             -- This is INSIDE the parentheses following the jQuery Object that GRABS (or SELECTS) HTML elements, ID's, classes, etc.
-        3. jQuery method 
-            -- This the method added to the end of the jQuery object that executes a desired 
+            -- REMEMBER: Use quotes for every element you select and if you have multiple elements, seperate with a comma.
+        3. Action (method)
+            -- This is the method added to the end of the jQuery object that executes a desired effect.
+        4. Method Parameters
+            -- 
 
 
-                jQuery OBJECT    jQuery METHOD
+                    OBJECT       ACTION (method)
                         \           |
-                        $('p').addClass('hidden')
-                            |                \
-                        selector          
+                        $('p').addClass('hidden');
+                           |                \
+                        SELECTOR             PARAMATERS (for method)
 */
 
 
