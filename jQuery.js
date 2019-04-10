@@ -3,6 +3,7 @@
 //     jQuery
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. What is the DOM?
+//     2. What is DOM Traversal and Manipulation?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on jQuery taken from study, research, tutorials, 
@@ -12,8 +13,10 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+
 /*
 1. What is the DOM?
+///////////////////
     -- DOM is short for 'Document Object Model'.
     -- DOM is the CURRENT REPRESENTATION of the CURRENT STATE of the HTML content on the page.
     -- DOM specifies how JavaScript can access and update the content of a web page.
@@ -26,6 +29,8 @@
            in the HTML document.
     -- When you create a web page and load it in a web browser the DOM is ENABLED.
 
+    How does the DOM work?
+    ======================
     -- DOM is a collection of NODES.
         -- Everything in the HTML document is a NODE.
     -- Think of the DOCUMENT as a NODE TREE.
@@ -47,7 +52,7 @@
     -- One level deepr, we have two elements: head and body.
         -- the head and the body are siblings.
         -- the head and the body also contain children.
-        
+
     -- Within the concept of nodes, consider how a basic element is a collection of nodes:
 
                 attribute node                   text node
@@ -55,9 +60,25 @@
                 <p class='paragraph'>This is the text inside the element</p>
                 |_________________________________________________________|
                                         element node
+*/
+
+
+
+/*
+2. What is DOM 'Traversal' and 'Manipulation'
+///////////////////////////////////////////// 
+*/
 
 
 
 
 
-*/  
+
+
+
+
+
+
+/*
+JSCor-BldRlWldAp
+*/
