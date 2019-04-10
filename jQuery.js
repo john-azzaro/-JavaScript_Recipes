@@ -5,10 +5,11 @@
 //     1. What is the DOM?
 //     2. What is DOM Traversal and Manipulation?
 //     3. What is jQuery?
-//     4. How do you select elements in the DOM (using jQuery)?
+//     4. What is the jQuery syntax and how do you select elements in the DOM?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
-//     1. Useful overview of information on jQuery taken from study, research, tutorials, 
+//     1. This .js document uses jqueryCSS.CSS and jquery.html for demonstrations below.
+//     2. Useful overview of information on jQuery taken from study, research, tutorials, 
 //        mentor meetings, peer discussions, and good ole' fashioned curiosity.  I've put the document in Question
 //        and Answer format for improved readability.
 //
@@ -92,7 +93,7 @@
 
 /*
 3. What is jQuery?
-/////////////////
+///////////////////
     -- jQuery is a fast, small, and feature rich JavaScript library.
         -- Remember, a JavaScript library which means it combines a big list of functions and methods built using JavaScript code.
     -- Makes HTML document traversal and manipulation, event handling, animation, and Ajax simple to use.
@@ -108,15 +109,63 @@
             -- Thus, the user will have faster loading times.
 
     -- To Include jQuery from a CDN, you simply have to insert the link below into your HTML meta.
-    
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    Where do I include jQuery and documents that depend on it (i.e. jquery.js)
+    ==========================================================================
+    -- REMEMBER: You MUST include the jQuery library FIRST.
+        -- The browser reads the HTML file from TOP to BOTTOM.
+        -- This is why in the HTML document, our .js files are at the BOTTOM of the body element.
+        -- Why? If the javascript file (i.e. jQuery.js) depends on jQuery, it need the jQuery library to come before so it can read it.
+
+                <meta>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>     <= jQuery library FIRST
+                </meta>
+                <body>
+                    <nav></nav>                                                                                  
+                    <main></main>                                                                                 
+                    <footer></footer>                                                                             
+                <script src="jQuery.js"></script>                 <= .js files at the bottom of the body of HTML
+                </body>           
 */
+
 
 /*
-4. How do you select elements in the DOM (using jQuery)?
-/////////////////////////////////////////
-    -- to select elements in the DOM using jQuery, you need to use 
+4. What is the jQuery syntax and how do you select elements in the DOM?
+///////////////////////////////////////////////////////////////////////
+    -- jQuery can select ANY element in the DOM (Document object Model).
+        -- This means ANY element, such as:
+            -- ALL HTML tags (i.e. main, section, div, h1, p, ul, li, etc.).
+            -- ALL ID's (i.e. id='button').
+            -- ALL Classes (i.e. class='js-hidden').
+        -- jQuery can also select:
+            -- multiple elements
+            -- pseudo classes
+            -- specific string fo text attributes
+            -- etc.
+
+    -- jQuery uses essentially the same syntax as CSS when selecting elements.
+    -- To select elements in the DOM using jQuery, you need to use SELECTORS.
+
+    What is the jQuery syntax?
+    ==========================
+    -- The jQuery syntax has a few basic components:
+
+        1. jQuery Object 
+            -- This is the cash ($) symbol (followed by parentheses) that comes at the beginning to ACCESS (or CALL) jQuery.
+        2. Selector      
+            -- This is INSIDE the parentheses following the jQuery Object that GRABS (or SELECTS) HTML elements, ID's, classes, etc.
+        3. jQuery method 
+            -- This the method added to the end of the jQuery object that executes a desired 
+
+
+                jQuery OBJECT    jQuery METHOD
+                        \           |
+                        $('p').addClass('hidden')
+                            |                \
+                        selector          
 */
 
 
@@ -127,6 +176,3 @@
 
 
 
-/*
-JSCor-BldRlWldAp
-*/

@@ -1,9 +1,13 @@
 /* 
-NOTE: This CSS document is divided into specific topic sections from jQuery.js and jquery.html. 
+===============================================================================================
+NOTE: This CSS document is divided into specific topic sections from jQuery.js and jquery.html.
+=============================================================================================== 
 */
 
-
-/* #3: Traversal and Manipulation: Selecting elements*/
+/* 
+#3: Traversal and Manipulation: Selecting elements
+    -- the ruleset below will hide when applied.
+*/
 .hidden {
     display: none;
 }
