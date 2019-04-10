@@ -49,7 +49,7 @@
     -- The DOCUMENT begins by opening the HTML tag 
         -- This would be a PARENT which all the other elements are contained within.
         -- HTML tag has no parent or siblings.
-    -- One level deepr, we have two elements: head and body.
+    -- One level deeper, we have two elements: head and body.
         -- the head and the body are siblings.
         -- the head and the body also contain children.
 
@@ -67,9 +67,41 @@
 /*
 2. What is DOM 'Traversal' and 'Manipulation'
 ///////////////////////////////////////////// 
+    -- The goal of DOM traversal and manipulation is to:
+        1. FIND a particular element in the DOM (i.e. 'TRAVERSE' the DOM).
+        2. UPDATE that particular element (i.e. 'MANIPULATE' the element).
+
+    -- DOM traversal and manipulation can be done with:
+        1. jQuery
+            -- jQuery provides methods to manipulate the DOM in a very efficient way.
+            -- with jQuery, no major code needed to modify element attributes or extract HTML from a paragraph or division.   
+        2.  Plain JavaScript.
+            -- Hoever, because of cross compatibility issues, using jQuery is preferable.
 */
 
+/*
+3. What is jQuery?
+/////////////////
+    -- jQuery is a fast, small, and feature rich JavaScript library.
+        -- Remember, a JavaScript library which means it combines a big list of functions and methods built using JavaScript code.
+    -- Makes HTML document traversal and manipulation, event handling, animation, and Ajax simple to use.
+    -- jQuery makes our coding experience easier and our code more user friendly.
+    -- The jQuery API works across MANY browsers.
+ 
+    How do you use jQuery in your project?
+    ======================================
+    -- to use jQuery in your project, you can either:
+        1. Download the jQuery library to your computer (inefficent).
+        2. Include jQuery from a CDN (Content Delivery Network) in your meta from Google.
+            -- the benefit of using something like a google hosted library is everyone probably already has it on thier computer already.
+            -- Thus, the user will have faster loading times.
 
+    -- To Include jQuery from a CDN, you simply have to insert the link below into your HTML meta.
+
+        <meta>    
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        </meta>
+*/
 
 
 
