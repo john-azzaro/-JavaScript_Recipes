@@ -79,6 +79,14 @@
             -- Hoever, because of cross compatibility issues, using jQuery is preferable.
 */
 
+
+
+   // =========================================================================================
+   // IMPORTANT: EVERYTHING FROM HERE ON WILL USE JQUERY FOR DOM TRAVERSAL AND MANIPULATION
+   // =========================================================================================
+
+
+
 /*
 3. What is jQuery?
 /////////////////
@@ -97,10 +105,13 @@
             -- Thus, the user will have faster loading times.
 
     -- To Include jQuery from a CDN, you simply have to insert the link below into your HTML meta.
+    
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            
+*/
 
-        <meta>    
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        </meta>
+/*
+4. How do you select elements in the DOM
 */
 
 
