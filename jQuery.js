@@ -4,6 +4,8 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. What is the DOM?
 //     2. What is DOM Traversal and Manipulation?
+//     3. What is jQuery?
+//     4. How do you select elements in the DOM (using jQuery)?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on jQuery taken from study, research, tutorials, 
@@ -23,7 +25,7 @@
     -- DOM is a cross-platform and language independent model for representing and interacting with elements in HTML documents.
     -- DOM is NOT part of HTML and it is NOT part of JavaScript... it is a seperate set of rules.
     -- DOM CANNOT work without a DOCUMENT.
-    -- DOM is NOT to be confused with the HTML file of the page
+    -- DOM is NOT to be confused with the HTML file of the page.
         -- the HTML file will show what the page will look like INITIALLY.
         -- However, as JavaScript begins to take over elements can be added or removed regardless of whether they were orginally
            in the HTML document.
@@ -74,7 +76,8 @@
     -- DOM traversal and manipulation can be done with:
         1. jQuery
             -- jQuery provides methods to manipulate the DOM in a very efficient way.
-            -- with jQuery, no major code needed to modify element attributes or extract HTML from a paragraph or division.   
+            -- with jQuery, no major code needed to modify element attributes or extract HTML from a paragraph or division.
+            -- jQuery can do everything JavaScript can do but with a much easier syntax and more power. 
         2.  Plain JavaScript.
             -- Hoever, because of cross compatibility issues, using jQuery is preferable.
 */
@@ -111,7 +114,9 @@
 */
 
 /*
-4. How do you select elements in the DOM
+4. How do you select elements in the DOM (using jQuery)?
+/////////////////////////////////////////
+    -- to select elements in the DOM using jQuery, you need to use 
 */
 
 
