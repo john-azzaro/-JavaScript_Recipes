@@ -245,7 +245,7 @@ How does jQuery work?
                                            
     -- Examples of jQuery HTML/CSS Methods:
          Method              Example                                                      Action   
-           - css()              $("p").css('color', 'red');                                - the paragraph element color will amend the text color.
+           - css()              $("p").css('property', 'value');                           - the paragraph element color will amend the value of the property.
            - addClass()         $("p").addClass('.hidden');                                - the paragraph element will add class hidden and disappear.
            - removeClass()      $("p").removeClass('.hidden');                             - the paragrpah element will remove hidden and reappear.
            - append()           $("p").append(generateHTML());                             - will append the paragraph element with the content of
@@ -280,15 +280,21 @@ How does jQuery work?
 
     // Example of jQuery HTML/CSS Methods:
 
-            function selectorTester() {
+            function  htmlCssTester() {
                 $('.js-color-it-red').css('color', 'red');     // find all elements with the class 'js-color-it', and changes color red.
              }
-             selectorTester();
+            htmlCssTester();
 
-             function selectorTester2() {
+             function htmlCssTester2() {
                  $('.js-cross-it-out').css('text-decoration', 'line-through');   //find the selector, and alter the css to line-through.
              }
-             selectorTester2();        
+             htmlCssTester2(); 
+             
+             function htmlCssTester3() {
+                 $('.js-uncover-it').removeClass('hidden');
+             }
+             htmlCssTester3();
+
 
     // Example of jQuery Traversing Methods:
 

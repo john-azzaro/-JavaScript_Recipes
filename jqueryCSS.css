@@ -9,14 +9,6 @@ NOTE: This CSS document is divided into specific topic sections from jQuery.js a
     -- the ruleset below will hide when applied.
 */
 
-.cross-off{
-    text-decoration: line-through;
-}
-
-.p {
-    color: black;
-}
-
 .hidden {
     display: none;
 }
