@@ -170,23 +170,50 @@
                            |                \
                         SELECTOR             PARAMATERS (for method)
 
+    -- There are MANY more jQuery reference that you can use to traverse and manipulate the DOM.
+    -- Below are a few examples of jQuery references taken from: https://www.w3schools.com/jquery/jquery_ref_selectors.asp.
 
-    -- Examples of jQuery objects:
+    -- jQuery references can be categorized into:
+        -- Selectors ==> used to select different elements on the HTML document.
+        -- Events ==> methods that trigger or attach functions to an event handler for a selected element.
+        -- 
+
+    -- Examples of jQuery selectors:
         Selector             Example                Selects
             *                  $("*")                 Selects ALL elements.   
             #id                $("#bottom")           Selects the element with the ID 'bottom'.
             .class             $(".title")            Selects All elements with the class 'main' (i.e. class='title').
             .class,.class      $(".title,.footer")    Selects ALL elements with the class 'title' and 'footer'.
-            
+            element            $("p")                 Selects ALL paragraph elements.
+            el1,el2,el3        $("h1","h2","p")       Selects ALL h1, h2, and paragraph elements.
+            :first (or last)   $("p:first")           Selects the FIRST paragraph elements.    
+            :even (or odd)     $("p:even")            Selects ALL even elements   
+            parent > child     $("div > p")           Selects ALL paragraph elements that are the direct child of <div> elements.
 
+    -- Example of jQuery Event Methods:
+        Method               Example                                                    Action
+            click()            $('main).on('click', #next, function(event) {...});        - Attaches event handler to an element.
+                                    -or-                                                  - on() has 3 parameters: action, selected element
+                               $('main').click(function(event) {...});                      function.
+                                                                                          - Watching 'main', on click of the next button,
+                                                                                            execute function.
+                                                                                            
+
+    -- Example of jQuery Effect Methods:
+        Method              Example                                                      Action
+        fadeIn()               $('p').fadeIn()                                           - fadeIn has 3 parameters: speed, easing, callback
+                                    -or-                                                 - speed is in milliseconds: default () is 400, slow, fast
+                               $('main').on('click', #doThis, function(event) {          - easing can be swing (slow, fast, slow) or linear (constant speed).
+                                   $('p').fadeIn();                                      - callback is executed after the current effect is finished
+                               });
             
-        
+    -- Example of jQuery HTML/CSS Methos
 
 
 */
 
 /*
-
+UltWbDsg&DevCoBld23Prjts
 */
 
 
