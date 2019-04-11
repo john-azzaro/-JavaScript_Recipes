@@ -81,6 +81,10 @@
             -- jQuery can do everything JavaScript can do but with a much easier syntax and more power. 
         2.  Plain JavaScript.
             -- Hoever, because of cross compatibility issues, using jQuery is preferable.
+
+    -- What is most important to learn is event-driven DOM manipulation.
+        -- Simply put, we will write a set of instructions that tell the computer to LISTEN when specific EVENTS occur, 
+           then do SOMETHING in response.
 */
 
 
@@ -184,19 +188,19 @@
 
     -- Examples of jQuery selectors:
         Selector             Example                Selects
-            *                  $("*")                 Selects ALL elements.   
-            #id                $("#bottom")           Selects the element with the ID 'bottom'.
-            .class             $(".title")            Selects All elements with the class 'main' (i.e. class='title').
-            .class,.class      $(".title,.footer")    Selects ALL elements with the class 'title' and 'footer'.
-            element            $("p")                 Selects ALL paragraph elements.
-            el1,el2,el3        $("h1","h2","p")       Selects ALL h1, h2, and paragraph elements.
-            :first (or last)   $("p:first")           Selects the FIRST paragraph elements.    
-            :even (or odd)     $("p:even")            Selects ALL even elements   
-            parent > child     $("div > p")           Selects ALL paragraph elements that are the direct child of <div> elements.
+           - *                  $("*")                 Selects ALL elements.   
+           - #id                $("#bottom")           Selects the element with the ID 'bottom'.
+           - .class             $(".title")            Selects All elements with the class 'main' (i.e. class='title').
+           - .class,.class      $(".title,.footer")    Selects ALL elements with the class 'title' and 'footer'.
+           - element            $("p")                 Selects ALL paragraph elements.
+           - el1,el2,el3        $("h1","h2","p")       Selects ALL h1, h2, and paragraph elements.
+           - :first (or last)   $("p:first")           Selects the FIRST paragraph elements.    
+           - :even (or odd)     $("p:even")            Selects ALL even elements   
+           - parent > child     $("div > p")           Selects ALL paragraph elements that are the direct child of <div> elements.
 
     -- Example of jQuery Event Methods:
         Method               Example                                                    Action
-            click()            $('main).on('click', #next, function(event) {...});        - Attaches event handler to an element.
+           - click()            $('main).on('click', #next, function(event) {...});        - Attaches event handler to an element.
                                     -or-                                                  - on() has 3 parameters: action, selected element
                                $('main').click(function(event) {...});                      function.
                                                                                           - Watching 'main', on click of the next button,
@@ -204,7 +208,7 @@
                                                                                             
     -- Example of jQuery Effect Methods:
         Method              Example                                                      Action
-          fadeIn()             $('p').fadeIn()                                           - fadeIn has 3 parameters: speed, easing, callback
+         - fadeIn()             $('p').fadeIn()                                           - fadeIn has 3 parameters: speed, easing, callback
                                     -or-                                                 - speed is in milliseconds: default () is 400, slow, fast
                                $('main').on('click', #doThis, function(event) {          - easing can be swing (slow, fast, slow) or linear (constant speed).
                                    $('p').fadeIn();                                      - callback is executed after the current effect is finished
@@ -212,28 +216,37 @@
                                            
     -- Examples of jQuery HTML/CSS Methods:
          Method              Example                                                      Action   
-            addClass()         $("p").addClass('.hidden');                                - the paragraph element will add class hidden and disappear.
-            removeClass()      $("p").removeClass('.hidden');                             - the paragrpah element will remove hidden and reappear.
-            append()           $("p").append(generateHTML());                             - will append the paragraph element with the content of
+           - addClass()         $("p").addClass('.hidden');                                - the paragraph element will add class hidden and disappear.
+           - removeClass()      $("p").removeClass('.hidden');                             - the paragrpah element will remove hidden and reappear.
+           - append()           $("p").append(generateHTML());                             - will append the paragraph element with the content of
                                                                                             generateHTML() function by adding it to the end of the elements.
 
     -- Examples of jQuery Traversing Methods:
          Method              Example                                                      Action   
-            add()              $("p").add(generateListItem());                            - List item from generateListItem() added to p element.
-            find()             $("p").find('.list')                                       - Finds elements with .list class in it within p element.
+           - add()              $("p").add(generateListItem());                            - List item from generateListItem() added to p element.
+           - find()             $("p").find('.list')                                       - Finds elements with .list class in it within p element.
                                $("p").find('.list').addClass('complete');                     - Finds .list and adds the class of 'complete' to it.
-            parent()           $("p").parent('.list').removeClass('unfinished');          - targets the first parent element of a jQuery Object the
+           - parent()           $("p").parent('.list').removeClass('unfinished');          - targets the first parent element of a jQuery Object the
                                                                                             passes the filter condition.  In this case, the level above.
 
     -- Example of jQuery AJAX Methods:
          Method              Action                   
-            $.ajax()           Perfoms an AJAX (Asynchronous JavaScript and XML) request.  See API section.
+           - $.ajax()           Perfoms an AJAX (Asynchronous JavaScript and XML) request.  See API section.
 
 
 
     What do practical examples of jQuery references look like?
     ==========================================================
-*/
+*/    
+    // Example of jQuery Selectors:
+
+    // Example of jQuery Event Methods:
+
+    // Example of jQuery Effect Methods:
+
+    // Example of jQuery HTML/CSS Methods:
+
+    // Example of jQuery Traversing Methods:
 
 
 
