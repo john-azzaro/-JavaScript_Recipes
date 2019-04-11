@@ -201,16 +201,31 @@
 
     -- Example of jQuery Effect Methods:
         Method              Example                                                      Action
-        fadeIn()               $('p').fadeIn()                                           - fadeIn has 3 parameters: speed, easing, callback
+          fadeIn()             $('p').fadeIn()                                           - fadeIn has 3 parameters: speed, easing, callback
                                     -or-                                                 - speed is in milliseconds: default () is 400, slow, fast
                                $('main').on('click', #doThis, function(event) {          - easing can be swing (slow, fast, slow) or linear (constant speed).
                                    $('p').fadeIn();                                      - callback is executed after the current effect is finished
                                });
             
-    -- Example of jQuery HTML/CSS Methos
+    -- Example of jQuery HTML/CSS Methods:
+         Method              Example                                                      Action   
+            addClass()         $("p").addClass('.hidden');                                - the paragraph element will add class hidden and disappear.
+            removeClass()      $("p").removeClass('.hidden');                             - the paragrpah element will remove hidden and reappear.
+            append()           $("p").append(generateHTML());                             - will append the paragraph element with the content of
+                                                                                            generateHTML() function by adding it to the end of the elements.
 
-
+    -- Example of jQuery Traversing Methods:
+         Method              Example                                                      Action   
+            add()              $("p").add(generateListItem());                            - List item from generateListItem() added to p element.
+            
 */
+
+
+
+
+
+
+
 
 /*
 UltWbDsg&DevCoBld23Prjts
