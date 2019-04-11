@@ -138,7 +138,7 @@
     -- jQuery can select ANY element in the DOM (Document object Model).
         -- This means ANY element, such as:
             -- ALL HTML tags (i.e. main, section, div, h1, p, ul, li, etc.).
-            -- ALL ID's (i.e. id='button').
+            -- ALL ID's (i.e. id='box' which would be $('#box').
             -- ALL Classes (i.e. class='js-hidden').
         -- jQuery can also select:
             -- multiple elements
@@ -161,7 +161,7 @@
         3. Action (method)
             -- This is the method added to the end of the jQuery object that executes a desired effect.
         4. Method Parameters
-            -- 
+            -- this could be paramters, functions, etc.
 
 
                     OBJECT       ACTION (method)
@@ -169,8 +169,25 @@
                         $('p').addClass('hidden');
                            |                \
                         SELECTOR             PARAMATERS (for method)
+
+
+    -- Examples of jQuery objects:
+        Selector             Example                Selects
+            *                  $("*")                 Selects ALL elements.   
+            #id                $("#bottom")           Selects the element with the ID 'bottom'.
+            .class             $(".title")            Selects All elements with the class 'main' (i.e. class='title').
+            .class,.class      $(".title,.footer")    Selects ALL elements with the class 'title' and 'footer'.
+            
+
+            
+        
+
+
 */
 
+/*
+
+*/
 
 
 
