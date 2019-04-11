@@ -245,6 +245,7 @@ How does jQuery work?
                                            
     -- Examples of jQuery HTML/CSS Methods:
          Method              Example                                                      Action   
+           - css()              $("p").css('color', 'red');                                - the paragraph element color will amend the text color.
            - addClass()         $("p").addClass('.hidden');                                - the paragraph element will add class hidden and disappear.
            - removeClass()      $("p").removeClass('.hidden');                             - the paragrpah element will remove hidden and reappear.
            - append()           $("p").append(generateHTML());                             - will append the paragraph element with the content of
@@ -254,7 +255,7 @@ How does jQuery work?
          Method              Example                                                      Action   
            - add()              $("p").add(generateListItem());                            - List item from generateListItem() added to p element.
            - find()             $("p").find('.list')                                       - Finds elements with .list class in it within p element.
-                               $("p").find('.list').addClass('complete');                     - Finds .list and adds the class of 'complete' to it.
+                                $("p").find('.list').addClass('complete');                     - Finds .list and adds the class of 'complete' to it.
            - parent()           $("p").parent('.list').removeClass('unfinished');          - targets the first parent element of a jQuery Object the
                                                                                             passes the filter condition.  In this case, the level above.
 
@@ -271,17 +272,23 @@ How does jQuery work?
 
     // Example of jQuery Selectors:
 
-             function selectorTester() {
-                $('.js-color-it-red').css('color', 'red');     // find all elements with the class 'js-color-it'
-             }
-             selectorTester();
-
+            
 
     // Example of jQuery Event Methods:
 
     // Example of jQuery Effect Methods:
 
     // Example of jQuery HTML/CSS Methods:
+
+            function selectorTester() {
+                $('.js-color-it-red').css('color', 'red');     // find all elements with the class 'js-color-it', and changes color red.
+             }
+             selectorTester();
+
+             function selectorTester2() {
+                 $('.js-cross-it-out').css('text-decoration', 'line-through');   //find the selector, and alter the css to line-through.
+             }
+             selectorTester2();        
 
     // Example of jQuery Traversing Methods:
 

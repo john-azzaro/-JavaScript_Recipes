@@ -8,7 +8,12 @@ NOTE: This CSS document is divided into specific topic sections from jQuery.js a
 #3: Traversal and Manipulation: Selecting elements
     -- the ruleset below will hide when applied.
 */
-p {
+
+.cross-off{
+    text-decoration: line-through;
+}
+
+.p {
     color: black;
 }
 
