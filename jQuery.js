@@ -149,6 +149,7 @@
     -- jQuery uses essentially the same syntax as CSS when selecting elements.
     -- To select elements in the DOM using jQuery, you need to use SELECTORS.
 
+    
     What is the jQuery syntax?
     ==========================
     -- The jQuery syntax has a few basic components:
@@ -170,6 +171,9 @@
                            |                \
                         SELECTOR             PARAMATERS (for method)
 
+    
+    What is are jQuery reference and what do they do?
+    =================================================
     -- There are MANY more jQuery reference that you can use to traverse and manipulate the DOM.
     -- Below are a few examples of jQuery references taken from: https://www.w3schools.com/jquery/jquery_ref_selectors.asp.
 
@@ -217,7 +221,7 @@
     -- Example of jQuery Traversing Methods:
          Method              Example                                                      Action   
             add()              $("p").add(generateListItem());                            - List item from generateListItem() added to p element.
-            
+
 */
 
 
