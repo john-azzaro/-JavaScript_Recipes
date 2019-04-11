@@ -202,7 +202,6 @@
                                                                                           - Watching 'main', on click of the next button,
                                                                                             execute function.
                                                                                             
-
     -- Example of jQuery Effect Methods:
         Method              Example                                                      Action
           fadeIn()             $('p').fadeIn()                                           - fadeIn has 3 parameters: speed, easing, callback
@@ -210,20 +209,35 @@
                                $('main').on('click', #doThis, function(event) {          - easing can be swing (slow, fast, slow) or linear (constant speed).
                                    $('p').fadeIn();                                      - callback is executed after the current effect is finished
                                });
-            
-    -- Example of jQuery HTML/CSS Methods:
+                                           
+    -- Examples of jQuery HTML/CSS Methods:
          Method              Example                                                      Action   
             addClass()         $("p").addClass('.hidden');                                - the paragraph element will add class hidden and disappear.
             removeClass()      $("p").removeClass('.hidden');                             - the paragrpah element will remove hidden and reappear.
             append()           $("p").append(generateHTML());                             - will append the paragraph element with the content of
                                                                                             generateHTML() function by adding it to the end of the elements.
 
-    -- Example of jQuery Traversing Methods:
+    -- Examples of jQuery Traversing Methods:
          Method              Example                                                      Action   
             add()              $("p").add(generateListItem());                            - List item from generateListItem() added to p element.
             find()             $("p").find('.list')                                       - Finds elements with .list class in it within p element.
-                               $("p").find('.list').addClass('complete');                 - finds .list and adds the class of 'complete' to it.
+                               $("p").find('.list').addClass('complete');                     - Finds .list and adds the class of 'complete' to it.
+            parent()           $("p").parent('.list').removeClass('unfinished');          - targets the first parent element of a jQuery Object the
+                                                                                            passes the filter condition.  In this case, the level above.
+
+    -- Example of jQuery AJAX Methods:
+         Method              Action                   
+            $.ajax()           Perfoms an AJAX (Asynchronous JavaScript and XML) request.  See API section.
+
+
+
+    What do practical examples of jQuery references look like?
+    ==========================================================
 */
+
+
+
+
 
 
 
