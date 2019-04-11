@@ -149,7 +149,7 @@
     -- jQuery uses essentially the same syntax as CSS when selecting elements.
     -- To select elements in the DOM using jQuery, you need to use SELECTORS.
 
-    
+
     What is the jQuery syntax?
     ==========================
     -- The jQuery syntax has a few basic components:
@@ -221,7 +221,8 @@
     -- Example of jQuery Traversing Methods:
          Method              Example                                                      Action   
             add()              $("p").add(generateListItem());                            - List item from generateListItem() added to p element.
-
+            find()             $("p").find('.list')                                       - Finds elements with .list class in it within p element.
+                               $("p").find('.list').addClass('complete');                 - finds .list and adds the class of 'complete' to it.
 */
 
 
