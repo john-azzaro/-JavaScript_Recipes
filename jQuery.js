@@ -100,10 +100,16 @@
 ///////////////////
     -- jQuery is a fast, small, and feature rich JavaScript library.
         -- Remember, a JavaScript library which means it combines a big list of functions and methods built using JavaScript code.
+    -- jQuery has massive cross-browser compatibility, and you can expect to have it run everywhere.
+    -- jQuery uses CSS3 selectors (i.e. class="title").
+    -- jQuery leads to other frameworks like React.
     -- Makes HTML document traversal and manipulation, event handling, animation, and Ajax simple to use.
     -- jQuery makes our coding experience easier and our code more user friendly.
     -- The jQuery API works across MANY browsers.
  
+
+
+
     How do you use jQuery in your project?
     ======================================
     -- to use jQuery in your project, you can either:
@@ -134,6 +140,29 @@
                 <script src="jQuery.js"></script>                 <= .js files at the bottom of the body of HTML
                 </body>           
 */
+
+/*
+How does jQuery work?
+=====================
+-- jQuery has a very clever central concept: method chaining
+-- A jQuery object (i.e. $('p')) is an array of DOM nodes (i.e. .addClass('')) and functions which can modify them.
+-- jQuery objects usally return the object itself.
+
+    TAKE THE FOLLOWING jQuery OBJECT: 
+        
+                STEP 1                     STEP 3
+                      \                      |
+                $('p.example').hide().addClass('hello').fadeIn('slow')
+                                  |                        \
+                                STEP 2                   STEP 4
+
+    STEP 1: Find all paragraphs which have the class attribute of 'example' can constrcut a jQuery object to contain them.
+    STEP 2: Take those paragraphs ans hide them all immediately.
+    STEP 3: Add a class of 'hello' to each of them.
+    STEP 4: Perform a short animation  which reveals all the paragraphs slowly.
+
+*/
+
 
 
 /*
