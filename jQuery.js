@@ -150,16 +150,16 @@ How does jQuery work?
 
     TAKE THE FOLLOWING jQuery OBJECT: 
         
-                STEP 1                     STEP 3
-                      \                      |
-                $('p.example').hide().addClass('hello').fadeIn('slow')
-                                  |                        \
-                                STEP 2                   STEP 4
+                STEP 1                 STEP 3
+                  \                      |
+            $('p.example').hide().addClass('hello').fadeIn('slow')
+                              |                        \
+                            STEP 2                    STEP 4
 
-    STEP 1: Find all paragraphs which have the class attribute of 'example' can constrcut a jQuery object to contain them.
-    STEP 2: Take those paragraphs ans hide them all immediately.
-    STEP 3: Add a class of 'hello' to each of them.
-    STEP 4: Perform a short animation  which reveals all the paragraphs slowly.
+            STEP 1: Find all paragraphs which have the class attribute of 'example' can constrcut a jQuery object to contain them.
+            STEP 2: Take those paragraphs ans hide them all immediately.
+            STEP 3: Add a class of 'hello' to each of them.
+            STEP 4: Perform a short animation  which reveals all the paragraphs slowly.
 
 */
 
@@ -266,8 +266,16 @@ How does jQuery work?
 
     What do practical examples of jQuery references look like?
     ==========================================================
+    -- NOTE: Examples displayed on jquery.html.
 */    
+
     // Example of jQuery Selectors:
+
+             function selectorTester() {
+                $('.js-color-it-red').css('color', 'red');     // find all elements with the class 'js-color-it'
+             }
+             selectorTester();
+
 
     // Example of jQuery Event Methods:
 
