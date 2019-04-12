@@ -13,3 +13,10 @@ NOTE: This CSS document is divided into specific topic sections from jQuery.js a
     display: none;
 }
 
+
+.block {
+    width: 80px;
+    height: 80px;
+    background-color: red;
+}
+

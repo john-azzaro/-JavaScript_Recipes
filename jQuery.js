@@ -292,9 +292,7 @@ How does jQuery work?
              htmlCssTester3();
 
 
-    // Example of jQuery Traversing Methods:
-
-             
+    // Example of jQuery Event Methods:
 
              function handleShowText() {
                  $('main').on('click', '#appear', function(event) {
@@ -313,12 +311,45 @@ How does jQuery work?
                  handleRemoveText();
              }
 
-             function initializeTrav() {
+             function initialize() {
                  setUpEventHandlers();
              }
 
-             $(initializeTrav);
+             $(initialize);
 
+
+    // Example of jQuery effect methods
+
+             function handleFadeIn() {
+                 $('main').on('click', '#fade-in', function(event) {
+                    $('.fade-in').fadeIn('slow');
+                 });
+             }
+
+             function handleFadeOut() {
+                 $('main').on('click', '#fade-out', function(event) {
+                    $('.fade-out').fadeOut('slow');
+                 });
+             }           
+
+            function setUpEventHandlers2(){
+                handleFadeIn();
+                handleFadeOut();
+            }
+
+             function initialize2() {
+                setUpEventHandlers2();
+             }
+
+            $(initialize2);
+
+
+
+
+
+
+
+            
 
 
 
