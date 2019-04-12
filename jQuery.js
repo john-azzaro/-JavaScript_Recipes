@@ -352,8 +352,7 @@
             $(initialize2);
 
     
-    // Example of 
-
+   
 
 
 
