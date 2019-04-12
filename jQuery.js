@@ -214,7 +214,9 @@
     -- jQuery references can be categorized into:
         -- Selectors ==> used to select different elements on the HTML document.
         -- Events ==> methods that trigger or attach functions to an event handler for a selected element.
-        -- 
+        -- Effects ==> creates animation effects.
+        -- HTML/CSS methods ==> used to manipulate HTML and CSS.
+        -- Traversing ==>
 
     -- Examples of jQuery selectors:
         Selector             Example                Selects
@@ -349,7 +351,8 @@
 
             $(initialize2);
 
-
+    
+    // Example of 
 
 
 
