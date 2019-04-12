@@ -142,11 +142,11 @@
 */
 
 /*
-How does jQuery work?
-=====================
--- jQuery has a very clever central concept: method chaining
--- A jQuery object (i.e. $('p')) is an array of DOM nodes (i.e. .addClass('')) and functions which can modify them.
--- jQuery objects usally return the object itself.
+    How does jQuery work?
+    =====================
+    -- jQuery has a very clever central concept: method chaining
+    -- A jQuery object (i.e. $('p')) is an array of DOM nodes (i.e. .addClass('')) and functions which can modify them.
+    -- jQuery objects usally return the object itself.
 
     TAKE THE FOLLOWING jQuery OBJECT: 
         
@@ -205,8 +205,9 @@ How does jQuery work?
                         SELECTOR             PARAMATERS (for method)
 
     
-    What is are jQuery reference and what do they do?
+    What is are jQuery references and what do they do?
     =================================================
+    -- 
     -- There are MANY more jQuery reference that you can use to traverse and manipulate the DOM.
     -- Below are a few examples of jQuery references taken from: https://www.w3schools.com/jquery/jquery_ref_selectors.asp.
 
@@ -270,9 +271,7 @@ How does jQuery work?
     -- NOTE: Examples displayed on jquery.html.
 */            
 
-    // Example of jQuery Event Methods:
 
-    // Example of jQuery Effect Methods:
 
     // Example of jQuery HTML/CSS Methods:
 
@@ -292,11 +291,11 @@ How does jQuery work?
              htmlCssTester3();
 
 
-    // Example of jQuery Event Methods:
+    // Example of jQuery Event Methods using show/hide text buttons :
 
              function handleShowText() {
                  $('main').on('click', '#appear', function(event) {
-                    $('.magic-text').removeClass('hidden').fadeIn(slow);
+                    $('.magic-text').removeClass('hidden').fadeIn();
                  });
              }
 
@@ -318,23 +317,30 @@ How does jQuery work?
              $(initialize);
 
 
-    // Example of jQuery effect methods
+    // Example of jQuery effect methods for fade-in/fade-out of a red colored square
 
              function handleFadeIn() {
                  $('main').on('click', '#fade-in', function(event) {
-                    $('.fade-in').fadeIn('slow');
+                    $('.block').fadeIn(1000);
                  });
              }
 
              function handleFadeOut() {
                  $('main').on('click', '#fade-out', function(event) {
-                    $('.fade-out').fadeOut('slow');
+                    $('.block').fadeOut(1000);
                  });
-             }           
+             }
+           
+             function handleFadeToggle() {
+                 $('main').on('click', '#fade-toggle', function(event) {
+                    $('.block').fadeToggle(1000);
+                 });
+             }
 
             function setUpEventHandlers2(){
                 handleFadeIn();
                 handleFadeOut();
+                handleFadeToggle();
             }
 
              function initialize2() {
