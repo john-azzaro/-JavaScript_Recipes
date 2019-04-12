@@ -6,6 +6,8 @@
 //     2. What is DOM Traversal and Manipulation?
 //     3. What is jQuery?
 //     4. What is the jQuery syntax and how do you select elements in the DOM?
+//     5. What is are jQuery references and what do they do?
+//     6. What is an Event Listener?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. This .js document uses jqueryCSS.CSS and jquery.html for demonstrations below.
@@ -202,11 +204,15 @@
                         \           |
                         $('p').addClass('hidden');
                            |                \
-                        SELECTOR             PARAMATERS (for method)
+                        SELECTOR             PARAMATERS (for method)  
+*/ 
 
-    
-    What is are jQuery references and what do they do?
-    =================================================
+
+
+
+/*
+5.What is are jQuery references and what do they do?
+////////////////////////////////////////////////////
     -- 
     -- There are MANY more jQuery reference that you can use to traverse and manipulate the DOM.
     -- Below are a few examples of jQuery references taken from: https://www.w3schools.com/jquery/jquery_ref_selectors.asp.
@@ -271,6 +277,8 @@
     What do practical examples of jQuery references look like?
     ==========================================================
     -- NOTE: Examples displayed on jquery.html.
+    -- NOTE: The examples below use Event Listeners, which come after the bascis but this si the best way to demonstrate
+             the functionality for now.
 */            
 
 
@@ -351,7 +359,22 @@
 
             $(initialize2);
 
+
+            
+/*
+6. What is an Event Listener?
+/////////////////////////////
+    -- To take advantage of DOM manipulation, you need to be able to alter the DOM when EVENTS happen.
+    -- In order to update the DOM, you need to 'listen' for specific events happening.
+        -- For example:
+             -- an app LISTENS when the user submits a form
+             -- an app LISTENS for when the user inputs a search term.
+             -- an app LISTENS for when the user clicks on an element in the page to launch an animation.
     
+    -- So an EVENT LISTENER has 2 parts:
+        1. Specify what event to listen for.
+        2. provide a CALLBACK FUNCTION that runs when the event occurs.
+*/
    
 
 
@@ -369,6 +392,7 @@
 
 /*
 UltWbDsg&DevCoBld23Prjts
+ModJavThComCorBld10Prjts
 */
 
 
