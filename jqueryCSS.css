@@ -20,3 +20,20 @@ NOTE: This CSS document is divided into specific topic sections from jQuery.js a
     background-color: red;
 }
 
+
+h4 {
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+li {
+    border: 1px dashed lightgrey;
+    padding: 7px;
+    list-style-type: circle;
+
+}
+
+li:hover {
+    border: 1px solid black;
+    background-color: aliceblue;
+}

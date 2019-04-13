@@ -9,6 +9,7 @@
 //     5. What is are jQuery references and what do they do?
 //     6. What is an Event Listener?
 //     7. What is a DOM Event Object?
+//     8. How does event.currentTarget work?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. This .js document uses jqueryCSS.CSS and jquery.html for demonstrations below.
@@ -408,28 +409,49 @@
     -- in fact, every peice of information of how you preformed an action is contained wihtin the event object.
 */
 
-           function clickIt() {
-               $('button').mousedown(function(event) {
-                   $('.output').text(`The Button Click: ${event.which}`)
-               });
-           } 
+            $(function() {
+                $('button').mousedown(function(event) {
+                    $('.output').text(`The Button Click: ${event.which}`)        // event.which contains information about which button was 
+                });                                                              // pressed in a mousedown event and the key property.
 
-           function pressIt() {
-               $('button').keydown(function(event) {
+                $('button').keydown(function(event) {
                     $('.output').text(`The Key Pressed: ${event.key}`)
                });
-           }
+            });
 
-           function setUpEventHandlers4() {
-                clickIt();
-                pressIt();
-           }
 
-           function initialize4() {
-               setUpEventHandlers4();
-           }
+/*
+8. How does event.currentTarget work?
+/////////////////////////////////////
+    -- One of the most powerful properties of an object is event.current target.
+    -- event.currentTarget contains information about which DOM element the user has interacted with.
+    
 
-           $('initialize4')
+*/
+
+            function clickEm() {
+                $("ul, li").on('click', function(event) {
+                    event.stopPropagation();
+                    $("h4").text("the element the user selected is: " + $(event.currentTarget).text());
+                });
+            }
+
+            $(clickEm);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
