@@ -7,6 +7,8 @@
 //     3. What are the THREE commands used to create variable?
 //     4. What are the different types in JavaScript?
 //     5. What is the difference between a dynamic language like JavaScript and a static language like Java?
+//          + What is a static language?
+//          + What is a dynamic language?
 //     6. What is the difference between Null and Undefined?
 //     7. What is strict mode and what does it do?
 //     8. Does JavaScript pass parameters by value or reference?
