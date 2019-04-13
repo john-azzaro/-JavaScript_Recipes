@@ -10,6 +10,7 @@
 //     6. What is an Event Listener?
 //     7. What is a DOM Event Object?
 //     8. How does event.currentTarget work?
+//     9. Why and how do you prevent default element behaviors?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. This .js document uses jqueryCSS.CSS and jquery.html for demonstrations below.
@@ -425,8 +426,14 @@
 /////////////////////////////////////
     -- One of the most powerful properties of an object is event.current target.
     -- event.currentTarget contains information about which DOM element the user has interacted with.
-    
+    -- event.currentTarget refers to the element.
 
+   -- So what happens in the code below?
+            1. When you click one of the squares (containing fee, fie, foe, fum), the text inside the elements gets displayed in the h4 element.
+            2. The JavaScript code executes as follows:
+                a. wait until the page loads.
+                b. listen for when the user clicks on one of the li elements.
+                c. when one of those is clicked, a function is run.
 */
 
             function clickEm() {
@@ -435,9 +442,22 @@
                     $("h4").text("the element the user selected is: " + $(event.currentTarget).text());
                 });
             }
+ 
+            $(clickEm);                                                                                      
 
-            $(clickEm);
+/*
+    What is event.stopPropagation?
+    ==============================
+    -- When you inser event.stopPropagation, you are telling the browser to stop the event from bubbling up the DOM.
+    -- in the example above, it runs the innermost element (i.e. the li that you click) but it WONT run again.
+*/
 
+
+
+/*
+9. Why and how do you prevent default element behaviors?
+////////////////////////////////////////////////////////
+*/
 
 
 
