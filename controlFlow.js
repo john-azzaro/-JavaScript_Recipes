@@ -14,8 +14,7 @@
 //    10. What is a for...in loop?
 //    11. What is a for...of loop?
 //    12. What are the uses of the keywords break and continue in loops?
-
-//     ?. what is a try...catch...finally statement?
+//    13. What is try/catch/finally?
 //
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -478,8 +477,8 @@
                                         
                                                                     
 /*
-What is try/catch/finally?
-//////////////////////////
+13. What is try/catch/finally?
+//////////////////////////////
     -- the try/catch/finally statement is JavaScripts exception handling mechanism.
     -- try/catch/finally is used to catch errors in our programs.
 
