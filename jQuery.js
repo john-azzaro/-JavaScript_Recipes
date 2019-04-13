@@ -464,13 +464,14 @@
 */
 
 function forForm() {
-    $('form').submit(function(event) {                                               // on submit...
-        event.preventDefault();                                                      // ... prevent default submission behavior.
-        const userTextElement = $(event.currentTarget).find('#user-text');           // variable which finds the user text...
-        $('.display-user-text').text(`user text is ${userTextElement.val()}`);       //
-        userTextElement.val(""); 
-    })
+    $('.js-form').submit(function(event) {                                            // on submit...
+        event.preventDefault();                                                       // ... prevent default submission behavior.
+        const userTextElement = $(event.currentTarget).find('#user-text');            // variable assigned user tect input...
+        $('.display-user-text').text(`user text is: ${userTextElement.val()}`);       // ...show text in paragraph element...
+        userTextElement.val("");                                                      // ... clear out variable value for next input.
+    });
 }
+$(forForm);
 
 
 
