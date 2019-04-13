@@ -20,6 +20,7 @@
 //    15. How do you chain method calls?
 //    16. What is a rest operator?
 //    17. What are getters and setters?
+//    18. What is a callback function?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on functions taken from study, research, tutorials, 
@@ -871,3 +872,25 @@ NOTE: This section is on functions in objects, but first a brief overview.
                                                     //     fullName: [Getter/Setter] }
 
                 console.log(kitty3.fullName);       //=> Greetings, my name is Jacob McWhiskers
+
+
+/*
+7. What is a callback?
+//////////////////////
+    -- when you pass a function as an argument.
+    -- in javascript, functions are objects, so functions can be taken as arguments and can be returned by other functions.
+    -- any function that is passed as an argument is called a callback function.
+    -- callbacks are a way to make sure certain code doesnt execute until other code has already finished execution.
+*/
+
+                function doHomeWork(subject, callback) {
+                    console.log(`I'm doing my ${subject} homework.`);
+                    callback();
+                }
+
+                doHomeWork('math', function() {
+                    console.log('finished my homework!');
+                });
+/*
+    -- 
+*/
