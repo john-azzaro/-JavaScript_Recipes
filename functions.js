@@ -882,9 +882,21 @@ NOTE: This section is on functions in objects, but first a brief overview.
     -- any function that is passed as an argument is called a callback function.
     -- callbacks are a way to make sure certain code doesnt execute until other code has already finished execution.
 */
-
-                function doHomeWork(subject, callback) {
+                function doHomeworkDemo(subject) {
                     console.log(`I'm doing my ${subject} homework.`);
+                }
+                doHomeworkDemo('science');                   //=> I'm doing my science homework.
+
+/*
+    -- In the example above, you see a normal function process.
+        1. We have a function that, when called, will return the statement 'I'm doing my ______ homework.'
+        2. When we call this function, and pass the argument 'science', the result is 'I'm doing my science homework'.
+
+    -- However, when we add the CALLBACK as a second parameter, we get something different. 
+*/
+
+                function doHomeWork(subject, callback) {                   
+                    console.log(`I'm doing my ${subject} homework.`);          
                     callback();
                 }
 
@@ -892,5 +904,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     console.log('finished my homework!');
                 });
 /*
-    -- 
+    
+    -- When you run the code above, you will get two responses:
+        
 */
