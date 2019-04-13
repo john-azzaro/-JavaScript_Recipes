@@ -11,6 +11,7 @@
 //     7. What is a DOM Event Object?
 //     8. How does event.currentTarget work?
 //     9. Why and how do you prevent default element behaviors?
+//    10. What is Event Delegation?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. This .js document uses jqueryCSS.CSS and jquery.html for demonstrations below.
@@ -474,6 +475,16 @@ function forForm() {
 $(forForm);
 
 
+
+/*
+10. What is Event Delegation?
+/////////////////////////////
+    -- Event delegation allows you to attach a single event listener to a parent element that will fire for all descendants
+       matching a selector, whether those descendants exist now or will be added in the future.
+    -- If you need to use jQuery to watch for events on dynamically generated elements (i.e. elements added after JavaScript has
+       been loaded), do use .click().
+    -- Instead, use an element that will always be there, like $('main').on('click') where 'main' which will always be there.
+*/
 
 
 
