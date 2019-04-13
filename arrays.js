@@ -2,7 +2,10 @@
 // TOPIC /////////////////////////////////////////////////////////////////////////////////////////////////////
 //     Arrays
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//     1. What is an Array? 
+//     1. What is an Array?
+//        + How do you create an empty array?
+//        + How do you create an array with items inside it?
+//        + How do you create an array with different data types in it?
 //     2. How do you create an array?
 //     3. How do you access items in an array?
 //     4. How do you find the length of an array?
@@ -11,18 +14,35 @@
 //     7. How do you remove the first item in an array?
 //     8. How do you create a new array from an exiting one?
 //     9. How do you find primitive elements (i.e. strings, numbers, booleans, etc.) in an array?
+//        + How do you find primitve elements?
+//        + How do you find the last index of a given element?
+//        + How do you determine if an element exists in an array?
 //    10. How do you find reference-type elements (i.e. objects, functions, etc.) in an array?
+//        + How do you find a reference type and return a specific element?
 //    11. How do you remove an element from an array?
+//        + How to remove an element from the BEGINNING of an array?
+//        + How to remove an element from the MIDDLE of an array?
+//        + How to remove an element from the END of an array?
 //    12. How do you empty an array?
 //    13. How do you combine and slice an array?
+//        + How do you combine two arrays together?
+//        + How do you slice an array?
+//        + How do you copy objects in an array?
 //    14. How do you use the spread operator?
 //    15. How do you iterate over an array?
 //    16. How do you join an array?
+//        + How do you split a string?
 //    17. How do you sort an array?
 //    18. How do you test elements of an array?
+//        + How do you use .every()
+//        + How do you use .some()
 //    19. How do you filter an array based on search criteria?
 //    20. How do you map an array?
+//        + How do you map an object?
+//        + How do you map an array with a function as a parameter?
 //    21. How do you use reduce for an array?
+//        + How do you add an array WITHOUT .reduce()?
+//        + How do you add an array WITH .reduce()?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on arrays taken from study, research, tutorials, 
@@ -53,20 +73,20 @@
         -- however, it is possible to MODIFY the content of the array (i.e. change a number 
            to another number), add or remove existing elements.
 */
-    // How to create an empty array:
-    //===============================
+    // How do you create an empty array:
+    //==================================
 
             let myFirstArray = []                      
             console.log(myFirstArray);                 //-> []
 
-    // How to create an array with items inside it:
-    //=============================================
+    // How do you create an array with items inside it:
+    //================================================
 
             let myFirstFullArray = ['a', 'b', 'c'];    
             console.log(myFirstFullArray);             //-> [ 'a', 'b', 'c' ]
 
-    // How to create an array with different data types in it:
-    //========================================================
+    // How do you create an array with different data types in it:
+    //============================================================
 
     //                             string              array                    function
     //                                  \                 |                         |
@@ -421,8 +441,8 @@
 13. How do you combine and slice an array?
 //////////////////////////////////////////
     
-    How to Combine two arrays together
-    ==================================
+    How do you combine two arrays together?
+    ======================================
     -- to combine two arrays together, you use .concat.
     -- to combine an array, make a new variable and call the first part of your array, then .concat, then pass second array 
        as your argument.
@@ -657,8 +677,8 @@
     -- also note in this case we are only working with the value.
 
 
-    How to map an array
-    =================== 
+    How do you map an array?
+    ======================== 
 */
             const mapArray = [1,2,3];
 
@@ -678,8 +698,8 @@
 
 
 /*
-    How to map an object
-    ====================
+    How do you map an object?
+    ========================
 */
 
             const mapArray2 = [1,2,3];
@@ -694,8 +714,8 @@
             console.log(mapIt2);          //=>     [ { number: 1 }, { number: 2 }, { number: 3 } ]
 
 /*
-    How to map an array with a function as a parameter
-    ==================================================
+    How do you map an array with a function as a parameter?
+    ======================================================
 */
 
             function double(num) {                   // First we have a function which will double each element in the array.
@@ -717,8 +737,8 @@
     -- the method takes an array and REDUCES it to one thing.
 
 
-    How to  add an array WITHOUT .reduce():
-    ======================================
+    How do you add an array WITHOUT .reduce()?
+    ==========================================
 */
            const addThisArray = [1,2,3,4,5,6,7,8,9,10];
 
@@ -729,8 +749,8 @@
            console.log(sum);                      //=> 55
 
 /*
-    How to add an array WITH .reduce()
-    ===================================
+    How do you add an array WITH .reduce()?
+    =======================================
     -- the reduce method takes a callback function with two parameters.
           
 */
