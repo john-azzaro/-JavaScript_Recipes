@@ -380,15 +380,23 @@
    
 
             function handleClicks() {
-                
+                let clickCount = 0;                                          // Stores click count.
+                $('.click-counter').text(clickCount);                        // show current click count.
+                $('main').on('click', '#clicker', function(event) {          // On click...
+                    clickCount += 1;                                         // ... increment by 1...
+                    $('.click-counter').text(clickCount);                    // ... show new click count.
+                });
+            }
+
+            function setUpEventHandlers3() {
+                handleClicks();
             }
 
             function initialize3() {
-                handleClicks()
+                setUpEventHandlers3();
             }
 
             $(initialize3);
-
 
             
 
