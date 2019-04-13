@@ -7,6 +7,8 @@
 //     3. What is the difference between arguments and parameters?
 //     4. What is a default parameter?
 //     4. How do you define a function?
+//          + What is a function defintion?
+//          + What is a function expression?
 //     5. How do you invoke a function?
 //     6. How do you use functions in objects?
 //     7. How do you invoke a function through a constructor?
@@ -517,7 +519,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 /* 
 12. How do you use an anonymous closure (or self executing function)?
-////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
         -- a typical function definition can be invoked by calling the function name anywhere in the code.  For example:
 */
                     let cat = function() {
