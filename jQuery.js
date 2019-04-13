@@ -457,7 +457,20 @@
 /*
 9. Why and how do you prevent default element behaviors?
 ////////////////////////////////////////////////////////
+    -- event.preventDefault is used to stop default submission behavior for forms.
+    -- event.preventDefault can also be used to stop the default behavior of anchor tags.
+    -- By default, when the browser sees that a user submits a form, it tries to submit the form to the server.
+
 */
+
+function forForm() {
+    $('form').submit(function(event) {                                               // on submit...
+        event.preventDefault();                                                      // ... prevent default submission behavior.
+        const userTextElement = $(event.currentTarget).find('#user-text');           // variable which finds the user text...
+        $('.display-user-text').text(`user text is ${userTextElement.val()}`);       //
+        userTextElement.val(""); 
+    })
+}
 
 
 
