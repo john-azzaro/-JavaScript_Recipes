@@ -877,10 +877,10 @@ NOTE: This section is on functions in objects, but first a brief overview.
 /*
 7. What is a callback?
 //////////////////////
+    -- callbacks are a way to make sure certain code doesnt execute until other code has already finished execution.
     -- when you pass a function as an argument.
     -- in javascript, functions are objects, so functions can be taken as arguments and can be returned by other functions.
-    -- any function that is passed as an argument is called a callback function.
-    -- callbacks are a way to make sure certain code doesnt execute until other code has already finished execution.
+    -- any function that is passed as an argument is called a callback function. 
 */
                 function doHomeworkDemo(subject) {
                     console.log(`I'm doing my ${subject} homework.`);
@@ -906,5 +906,14 @@ NOTE: This section is on functions in objects, but first a brief overview.
 /*
     
     -- When you run the code above, you will get two responses:
-        
+                //=> I'm doing my math homework.
+                //=> finished my homework!
+
+    -- The process goes like this:
+        1. We call the function doHomeWork() and pass the arguments 'math' and also a function.
+        2. The function doHomwWork() runs and executes the console.log with the parameter 'math' passed in.
+        3. At this point "I'm doing my math homework." is printed to the console.
+        4. Now a callback "makes sure certain code doesnt execute until other code has already finished."
+           In this case, the first pass where "I'm doing my math homework." is done...
+           Now, now that 'callback()' is invoked
 */
