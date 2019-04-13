@@ -5,16 +5,37 @@
 //     1. What is an Object?
 //     2. What are the components of an object?
 //     3. How do you use objects?
+//        + How do you create an object?
+//        + What kind of data types can an object hold?
+//        + How do you access the values in an object?
 //     4. How do you add, update, and delete key/value pairs?
 //     5. What is self-reference in an object and what is the function of `this`?
 //     6. What is a factory function?
+//        + How do you create a factory function?
 //     7. What is a constructor function?
+//        + How do you create a constructor function?
 //     8. What is a constructor property?
 //     9. What is pass-by value and what are primitive and reference types?
+//        + What are primitives?
+//        + Are primitive variables independent?
+//        + What are reference types?
+//        + Are reference types stored in variables?
+//        + Does reference type logic apply to functions?
 //    10. How do you iterate over the properties of an object?
+//        + What is Object.keys and how do you use it?
+//        + What is Object.value and how do you use it?
+//        + What is Object.entries and how do you use it?
+//        + How do you loop through an Object once it has been converted to an array?
+//        + How do you use .forEach when iterating through an object?
 //    11. Why and how do you clone an Object?
+//        + How to clone an object using for...in loop?
+//        + How to clone an object using Object.assign?
+//        + How to clone an object using the spread operator?
 //    12. What is a built-in object in JavaScript and what are they?
-//    13. What is escape notation for a string object?
+//        + What is the Math Object?
+//        + What is a String Object?
+//        + What is a Date Object?
+//    13. (TBC) What is escape notation for a string object?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on objects taken from study, research, tutorials, 
@@ -357,8 +378,8 @@
             console.log(yb);        //-> { value: 20 }
 
 /*
-    Does the reference type logic apply to functions?
-    =================================================
+    Does reference type logic apply to functions?
+    =============================================
     - So this logic also applies to functions as well...
     - below we have an example using primitives:
 */
@@ -463,8 +484,8 @@
                                                 //     [ 'desert', 'cookie' ] ]
 
 /*
-        How do you loop through an Object now that is has been converted to an array?
-        =============================================================================
+        How do you loop through an Object once it has been converted to an array?
+        =========================================================================
         - Now you can loop through like you would a normal array:
     
             const keys = Object.keys(snacks);
