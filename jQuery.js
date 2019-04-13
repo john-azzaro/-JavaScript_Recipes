@@ -364,6 +364,8 @@
 /*
 6. What is an Event Listener?
 /////////////////////////////
+    -- An Event Listener listens for a specific event to happen (i.e. submit, click, etc.) and does something (i.e. callback function).
+
     -- To take advantage of DOM manipulation, you need to be able to alter the DOM when EVENTS happen.
     -- In order to update the DOM, you need to 'listen' for specific events happening.
         -- For example:
@@ -377,7 +379,15 @@
 */
    
 
+            function handleClicks() {
+                
+            }
 
+            function initialize3() {
+                handleClicks()
+            }
+
+            $(initialize3);
 
 
             
