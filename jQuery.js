@@ -8,6 +8,7 @@
 //     4. What is the jQuery syntax and how do you select elements in the DOM?
 //     5. What is are jQuery references and what do they do?
 //     6. What is an Event Listener?
+//     7. What is a DOM Event Object?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. This .js document uses jqueryCSS.CSS and jquery.html for demonstrations below.
@@ -398,8 +399,37 @@
 
             $(initialize3);
 
-            
+ 
+/*
+7. What is a DOM Event Object?
+//////////////////////////////
+    -- A callback function in an event listener gets access to an object representing the triggering event.
+    -- This contains information about what you typed in text, what you typed, or what bitton you pressed.
+    -- in fact, every peice of information of how you preformed an action is contained wihtin the event object.
+*/
 
+           function clickIt() {
+               $('button').mousedown(function(event) {
+                   $('.output').text(`The Button Click: ${event.which}`)
+               });
+           } 
+
+           function pressIt() {
+               $('button').keydown(function(event) {
+                    $('.output').text(`The Key Pressed: ${event.key}`)
+               });
+           }
+
+           function setUpEventHandlers4() {
+                clickIt();
+                pressIt();
+           }
+
+           function initialize4() {
+               setUpEventHandlers4();
+           }
+
+           $('initialize4')
 
 
 
