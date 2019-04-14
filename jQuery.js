@@ -3,9 +3,14 @@
 //     jQuery
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. What is the DOM?
+//        + How does the DOM work?
 //     2. What is DOM Traversal and Manipulation?
 //     3. What is jQuery?
+//        + How do you use jQuery in your projects?
+//        + Where do I include jQuery and documents that depend on it (i.e. jquery.js)?
+//        + How does jQuery work?
 //     4. What is the jQuery syntax and how do you select elements in the DOM?
+//        + What is the jQuery syntax?
 //     5. What is are jQuery references and what do they do?
 //     6. What is an Event Listener?
 //     7. What is a DOM Event Object?
