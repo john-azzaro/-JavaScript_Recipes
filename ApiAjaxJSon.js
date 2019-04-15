@@ -23,6 +23,22 @@ What is an API?
         -- More simply put, an API allows two strangers to speak to each other so that we can share data and work with each other.
         -- for example, the jQuery library provides an API for DOM traversal and manipulation, like .find, $(), etc.
     -- An API is a messenger that takes a request and tells the system what to do. 
+    -- An API is a contract between two things and how they interact with each other.
+    -- Common API's include REST API's and library API's.
+    -- Web API's (most likely REST API's) expse different endpoint (i.e. URLs) which you can access to get certian data from that API.
+        -- you could also access those endpoints to modify the data on those servers.
+        -- BUT it will only be what the API will expose to you and wants you to modify.
+            -- for example, you could update a user through a REST API, but the API may only let you update the name or the email and not
+               the password.
+            -- You could also get the users from this API but you might not get the password of the user.
+    -- the other common API is library API's.
+        -- library API are actual libraries you pull into your code, such as jQuery.
+            -- in jQuery, you have a library with a bunch of methodes defined on them that do specific things when you call them and return to
+               you specific data.
+    -- A common theme with API's is that it will only expose to you that which it wants you to access and hide what it does not want you to see.
+    -- Also common with API's are tokens, which authenticate yourself with the API.
+        -- the token will know who is accessing the API in order to limit what that person can access based on thier specific permissions.
+
 
     -- Example 1: Expedia:
         -- For example, if you look at Expedia and try to findfrom San Diego to New York, it will search all websites
