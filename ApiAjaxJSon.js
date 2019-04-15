@@ -109,15 +109,16 @@ What is JSON?
     -- JSON is easy to read, with text-based ordered list of values.
     -- JSON is scalable, meaning you can expand and add more data.
     -- JSON Data types include: Number, String, Boolean, Array, Object.  
+    -- JSON is more concise than XML
+    -- JSON can be parsed into JavaScript (i.e. let obj = JSON.parse(string)).
+    -- JSON can be parse objects back into strings (i.e. let string = JSON.stringify(obj)).
 */
 
 
 /*
 What is the format of JSON?
 //////////////////////////
-    -- used like a JavaScript Object
-
-
+    -- used like a JavaScript Object where you can give properties and values.
 
 
                 {
@@ -143,6 +144,11 @@ What is the format of JSON?
                     "spouse": null
                 }
 
+*/
+
+/*
+What are the difference between JavaScript Object literals and JSON?
+////////////////////////////////////////////////////////////////////
 */
 
 
