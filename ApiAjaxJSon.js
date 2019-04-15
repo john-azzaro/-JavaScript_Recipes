@@ -84,6 +84,22 @@ What is a web API?
 */
 
 
+/*
+What is JSON?
+/////////////
+    -- JSON stands for JavaScript Object Notation
+    -- JSON is a common format for sending data back and forth.
+    -- JSON is based on basic data structure.
+    -- JSON is a common data format used for sending adynchronous browser-server communication.
+    -- JSON serves as a replacement for XML in some AJAX-style systems.
+    -- JSON is used in conjunction with AJAX where we have communication between the browser and the server and it needs
+       to pass data back and forth with some type of format.
+    -- JSON grew out of a need for stateful, real-tim server-to-browser communication protocol  without using browser plugins
+       such as Flash or Java applets which were dominant methods in the early 2000's.
+    
+*/
+
+
 
 
 
