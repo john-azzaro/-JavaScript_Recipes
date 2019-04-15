@@ -96,8 +96,55 @@ What is JSON?
        to pass data back and forth with some type of format.
     -- JSON grew out of a need for stateful, real-tim server-to-browser communication protocol  without using browser plugins
        such as Flash or Java applets which were dominant methods in the early 2000's.
-    
+    -- JSON is the most common format for data transfer across different platforms between browsers.
+    -- JSON is based on VERY basic data structure.
+    -- JSON is textual, language-independant data-exchange format (much like XML, CSV, or YAML).
+    -- JSON is the most wisely used for API's - Best for data exchange.
+    -- Most API's are JSON with some JSON only.
+    -- JSON works seemlessly with the server side languages as well as frontend code.
+    -- Most programming languages can be used with JSON.
+    -- NoSQL databases like MongoDB use JSON formats.
+    -- JSON works well with AJAX which is common format for retrieving data.
+    -- JSON is an open, text-based, light-weight datat interchange.
+    -- JSON is easy to read, with text-based ordered list of values.
+    -- JSON is scalable, meaning you can expand and add more data.
+    -- JSON Data types include: Number, String, Boolean, Array, Object.  
 */
+
+
+/*
+What is the format of JSON?
+//////////////////////////
+    -- used like a JavaScript Object
+
+
+
+
+                {
+                    "firstName": "Joe",
+                    "lastName": "Smith",
+                    "address": {
+                        "street": "Sesame St.",
+                        "city": "New York",
+                        "state": "NY",
+                        "postalCode": "10021"
+                    }
+                    "phoneNumbers": [
+                        {
+                            "type": "home",
+                            "number": "123-456-7890"
+                        },
+                        {
+                            "type": "cell",
+                            "number": "098-765-4321" 
+                        }
+                    ],
+                    "children": [],
+                    "spouse": null
+                }
+
+*/
+
 
 
 
