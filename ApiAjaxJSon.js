@@ -61,9 +61,19 @@ What is an API?
         -- A computer works in its own way but it gives access to things like VGA, HDMI, audio, USB, etc.
 
     -- Example 4: Twilio API
-        -- 
-
+        -- SMS service API that you can use to send messages through your application to a users phone.
 */ 
+
+
+/*
+What is AJAX?
+/////////////
+    -- AJAX stands for Asynchronous JavaScript and XML.
+    -- AJAX refers to making one or more calls to a server AFTER a page has initially loaded.
+        -- for example, infinite scroll where new content appears as you scroll down.
+        -- when the user scolls, the application makes new calls to the server to retrieve additional data. 
+
+*/
 
 
 
