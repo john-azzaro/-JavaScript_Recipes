@@ -3,6 +3,8 @@
 //     API's, AJAX, JSON with jQuery
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. What is an API?
+//     2. What is AJAX?
+//     3. What is a web API?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on creating apps with jquery, including API's, AJAX, and jQuery taken from 
@@ -71,8 +73,14 @@ What is AJAX?
     -- AJAX stands for Asynchronous JavaScript and XML.
     -- AJAX refers to making one or more calls to a server AFTER a page has initially loaded.
         -- for example, infinite scroll where new content appears as you scroll down.
-        -- when the user scolls, the application makes new calls to the server to retrieve additional data. 
+        -- when the user scolls, the application makes new calls to the server to retrieve additional data.
+        -- The application then run a callback function ont he data returned by the AJAX request. 
+*/
 
+/*
+What is a web API?
+///////////////////
+    -- a web API provides endpoints, which are URL's that we can make requests to in order to write and retrieve data.
 */
 
 
