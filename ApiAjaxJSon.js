@@ -5,6 +5,9 @@
 //     1. What is an API?
 //     2. What is AJAX?
 //     3. What is a web API?
+//     4. What is JSON?
+//     5. What is the format of JSON?
+//     6. What are the difference between JavaScript Objects and JSON?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on creating apps with jquery, including API's, AJAX, and jQuery taken from 
@@ -14,12 +17,8 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
-1. How is the difference between static and 
-*/
-
-/*
-What is an API?
-///////////////
+1. What is an API?
+///////////////////
     -- API stands for Application Programming Interface.    
     -- An API is a specification allowing two systems to communicate.
         -- More simply put, an API allows two strangers to speak to each other so that we can share data and work with each other.
@@ -68,8 +67,8 @@ What is an API?
 
 
 /*
-What is AJAX?
-/////////////
+2. What is AJAX?
+////////////////
     -- AJAX stands for Asynchronous JavaScript and XML.
     -- AJAX refers to making one or more calls to a server AFTER a page has initially loaded.
         -- for example, infinite scroll where new content appears as you scroll down.
@@ -78,15 +77,15 @@ What is AJAX?
 */
 
 /*
-What is a web API?
-///////////////////
+3. What is a web API?
+//////////////////////
     -- a web API provides endpoints, which are URL's that we can make requests to in order to write and retrieve data.
 */
 
 
 /*
-What is JSON?
-/////////////
+4. What is JSON?
+////////////////
     -- JSON stands for JavaScript Object Notation
     -- JSON is a common format for sending data back and forth.
     -- JSON is based on basic data structure.
@@ -116,8 +115,8 @@ What is JSON?
 
 
 /*
-What is the format of JSON?
-//////////////////////////
+5. What is the format of JSON?
+/////////////////////////////
     -- used like a JavaScript Object where you can give properties and values.
 
 
@@ -147,8 +146,20 @@ What is the format of JSON?
 */
 
 /*
-What are the difference between JavaScript Object literals and JSON?
-////////////////////////////////////////////////////////////////////
+6. What are the difference between JavaScript Objects and JSON?
+///////////////////////////////////////////////////////////////
+    -- JSON has the following syntax constraints:
+        -- Object keys MIST be in strings (i.e. "firstName", "address", etc.).
+        -- Values can either be: string, number, JSON object, array, boolean, null.
+        -- Duplicate keys (i.e. "spouse": null, "spouse": "Samantha") produce undefined.
+
+    -- Comparatively, JavaScript object literals can have:
+        -- string literals, number literals, or identifier names as keys.
+        -- do not require quotes around them.
+        -- Values can be any valid JavaScript expression, including function definitions and undefined.
+        -- Duplicate keys produce defined, specific results.
+
+
 */
 
 
