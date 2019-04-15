@@ -111,6 +111,17 @@
     -- JSON is more concise than XML
     -- JSON can be parsed into JavaScript (i.e. let obj = JSON.parse(string)).
     -- JSON can be parse objects back into strings (i.e. let string = JSON.stringify(obj)).
+
+    -- JSON is extended from JavaScript, meaning its not entirely the same.
+    -- The media type is application/json.
+    -- The extension is .json (i.e. like javascript is .js).
+    -- Just like a JavaScript object, a JSON object always starts and ends with curly braces (i.e. {}).
+    -- Name and Value are seperated by a colon.
+    -- More than one pair is seperated by a comma.
+
+
+
+
 */
 
 
