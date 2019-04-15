@@ -23,15 +23,29 @@ What is an API?
         -- More simply put, an API allows two strangers to speak to each other so that we can share data and work with each other.
         -- for example, the jQuery library provides an API for DOM traversal and manipulation, like .find, $(), etc.
     -- An API is a messenger that takes a request and tells the system what to do. 
-    -- Example 1: Expedia
+
+    -- Example 1: Expedia:
         -- For example, if you look at Expedia and try to findfrom San Diego to New York, it will search all websites
            and airlines for the best deals.  
         -- So how is this one website able to find flights from multiple websites?
             -- The website iteself doesnt have that information itself... that information is in the data base of the airlines themselves.
             -- The airline is interested in having thier flights on as many websites as possible to sell as many tickets as possible.
         -- Expedia has all this information by using the API's
-            -- Now Expedia doesnt have access to the databases of all the airlines.
-            -- BUT Expedia DOES have 
+            -- Now Expedia doesnt have access to the databases of all the airlines, with passwords, users, etc.
+            -- BUT all the airlines use API's to give access to information through API's so websites like Expedia can have and list 
+               that information on thier website.
+
+    -- Example 2: A waiter:
+        -- There are three entities in the restraurant: the customer, the waiter, and the kitchen.
+        -- The waiter is the messenger that tells the kitchen what to do.
+        -- The kitchen is providing the waiter with menu items.
+            -- the kitchen tells the waiter to ask the customer what they want from the menu so it can be prepared.
+    
+    -- Example 3: The access port behind a computer:
+        -- A computer works in its own way but it gives access to things like VGA, HDMI, audio, USB, etc.
+
+    -- Example 4: Twilio API
+        -- 
 
 */ 
 
