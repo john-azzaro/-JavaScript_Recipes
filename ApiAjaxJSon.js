@@ -25,6 +25,9 @@
         -- for example, the jQuery library provides an API for DOM traversal and manipulation, like .find, $(), etc.
     -- An API is a messenger that takes a request and tells the system what to do. 
     -- An API is a contract between two things and how they interact with each other.
+    -- API's are made up of requests and repsonses.
+        -- browser makes API request to the server.
+        -- server does something with that request and sends it back.
     -- Common API's include REST API's and library API's.
     -- Web API's (most likely REST API's) expse different endpoint (i.e. URLs) which you can access to get certian data from that API.
         -- you could also access those endpoints to modify the data on those servers.
@@ -87,6 +90,7 @@
 4. What is JSON?
 ////////////////
     -- JSON stands for JavaScript Object Notation
+    -- JSON is an object which can be used to describe something.
     -- JSON is a common format for sending data back and forth.
     -- JSON is based on basic data structure.
     -- JSON is a common data format used for sending adynchronous browser-server communication.
@@ -107,10 +111,17 @@
     -- JSON is an open, text-based, light-weight datat interchange.
     -- JSON is easy to read, with text-based ordered list of values.
     -- JSON is scalable, meaning you can expand and add more data.
-    -- JSON Data types include: Number, String, Boolean, Array, Object.  
+    -- JSON Data types include: 
+        -- Number  -- {"name": 10}
+        -- String  -- {"name": "Joe"}
+        -- Boolean -- {"name": true}
+        -- Array   -- {"name": [{"name": 1}, {"name2": 2}]}
+        -- Object  -- {"name": {"name1": 1, "name2": 2}}
+        -- Null    -- {"name": null}
     -- JSON is more concise than XML
     -- JSON can be parsed into JavaScript (i.e. let obj = JSON.parse(string)).
     -- JSON can be parse objects back into strings (i.e. let string = JSON.stringify(obj)).
+    -- JSON has what is known as a JSON schema.
 
     -- JSON is extended from JavaScript, meaning its not entirely the same.
     -- The media type is application/json.
@@ -224,5 +235,6 @@ What is the format of XML and why is JSON better?
 
 
 /*
+www.jsonlint.com
 UdThComWeDevin2019Ze2MasApis
 */
