@@ -174,6 +174,28 @@
 */
 
 
+/*
+What does XML look like?
+////////////////////////
+    -- 
+
+    <person>
+    <firstName></firstName>
+    <lastName></lastName>
+    <age></age>
+    <address>
+      <streetAddress></streetAddress>
+      <city></city>
+    </address>
+    <phoneNumber>
+      <type></type>
+    </phoneNumber>
+    <phoneNumber>
+    </phoneNumber>
+    </person>
+
+
+*/
 
 
 
