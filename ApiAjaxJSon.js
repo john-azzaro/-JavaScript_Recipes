@@ -208,6 +208,9 @@ What is the format of XML and why is JSON better?
 /*
 6. What are the difference between JavaScript Objects and JSON?
 ///////////////////////////////////////////////////////////////
+    -- There is a definite difference between JSON and JavaScript Objects.
+    -- however, the difference are minimal (i.e. double quotes for JSON compared to JavaScript, etc.)
+
     -- JSON has the following syntax constraints:
         -- Object keys MIST be in strings (i.e. "firstName", "address", etc.).
         -- JSON uses double quotes.
@@ -258,6 +261,6 @@ What is the format of XML and why is JSON better?
 
 
 /*
-www.jsonlint.com
+www.jsonlint.com to validate json structure
 UdThComWeDevin2019Ze2MasApis
 */
