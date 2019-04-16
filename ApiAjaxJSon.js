@@ -114,7 +114,7 @@
 
     -- JSON is extended from JavaScript, meaning its not entirely the same.
     -- The media type is application/json.
-    -- The extension is .json (i.e. like javascript is .js).
+    -- The extension is saved as .json (i.e. like javascript is .js).
     -- Just like a JavaScript object, a JSON object always starts and ends with curly braces (i.e. {}).
     -- Name and Value are seperated by a colon.
     -- More than one pair is seperated by a comma.
@@ -130,6 +130,8 @@
 /////////////////////////////
     -- used like a JavaScript Object where you can give properties and values.
 
+    What does a JSON object look like?
+    ==================================
 
                 {
                     "firstName": "Joe",
@@ -153,12 +155,17 @@
                     "children": [],
                     "spouse": null
                 }
+    
+    How do you present the key/name values?
+    =======================================
+
+    
 */
 
 /*
 What is the format of XML and why is JSON better?
 /////////////////////////////////////////////////
-    -- 
+    -- although there is some structure to XML, it is more difficult to read XML over JSON.
 
     <person>
     <firstName>Joe</firstName>
