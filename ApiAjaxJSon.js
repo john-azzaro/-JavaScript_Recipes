@@ -89,28 +89,21 @@
 /*
 4. What is JSON?
 ////////////////
-    -- JSON stands for JavaScript Object Notation
-    -- JSON is an object which can be used to describe something.
-    -- JSON is a common format for sending data back and forth.
-    -- JSON is based on basic data structure.
-    -- JSON is a common data format used for sending adynchronous browser-server communication.
-    -- JSON serves as a replacement for XML in some AJAX-style systems.
-    -- JSON is used in conjunction with AJAX where we have communication between the browser and the server and it needs
-       to pass data back and forth with some type of format.
-    -- JSON grew out of a need for stateful, real-tim server-to-browser communication protocol  without using browser plugins
-       such as Flash or Java applets which were dominant methods in the early 2000's.
-    -- JSON is the most common format for data transfer across different platforms between browsers.
+    -- JSON stands for "JavaScript Object Notation."
+    -- JSON is the most common format for sending asynchronous browser-server communication back and forth.
+    -- JSON is the most wisely used for API's - Best for data exchange.    
+    -- JSON grew out of a need for stateful, real-time server-to-browser communication protocol without using browser plugins
+       such as Flash or Java applets which were dominant methods in the early 2000's.   
     -- JSON is based on VERY basic data structure.
     -- JSON is textual, language-independant data-exchange format (much like XML, CSV, or YAML).
-    -- JSON is the most wisely used for API's - Best for data exchange.
-    -- Most API's are JSON with some JSON only.
     -- JSON works seemlessly with the server side languages as well as frontend code.
     -- Most programming languages can be used with JSON.
     -- NoSQL databases like MongoDB use JSON formats.
-    -- JSON works well with AJAX which is common format for retrieving data.
-    -- JSON is an open, text-based, light-weight datat interchange.
-    -- JSON is easy to read, with text-based ordered list of values.
-    -- JSON is scalable, meaning you can expand and add more data.
+    -- The media type is application/json.
+    -- The extension is saved as .json (i.e. like javascript is .js).
+    
+    What kind of data types can JSON use?
+    =====================================
     -- JSON Data types include: 
         -- Number  -- {"name": 10}
         -- String  -- {"name": "Joe"}
@@ -118,27 +111,34 @@
         -- Array   -- {"name": [{"name": 1}, {"name2": 2}]}
         -- Object  -- {"name": {"name1": 1, "name2": 2}}
         -- Null    -- {"name": null}
-    -- JSON is more concise than XML
+
+
+    What can JSON do?
+    =================
     -- JSON can be parsed into JavaScript (i.e. let obj = JSON.parse(string)).
     -- JSON can be parse objects back into strings (i.e. let string = JSON.stringify(obj)).
-    -- JSON has what is known as a JSON schema.
-
+    -- JSON has what is known as a JSON schema (i.e. structure).
+    -- JSON is scalable, meaning you can expand and add more data.  
     -- JSON is extended from JavaScript, meaning its not entirely the same.
-    -- The media type is application/json.
-    -- The extension is saved as .json (i.e. like javascript is .js).
-    -- Just like a JavaScript object, a JSON object always starts and ends with curly braces (i.e. {}).
-    -- Name and Value are seperated by a colon.
-    -- More than one pair is seperated by a comma.
+    -- JSON works well with AJAX which is common format for retrieving data.
+
+
+
+
 */
 
 
 /*
-5. What is the format of JSON?
-/////////////////////////////
+5. What are the unique features JSON?
+/////////////////////////////////////
     -- used like a JavaScript Object where you can give properties and values.
+    -- JSON objects always start and end with curly braces (i.e. {}).
+    -- JSON Names and Values are seperated by a colon.
+    -- More than one pair of Name and Value is seperated by a comma.
 
-    What does a JSON object look like?
-    ==================================
+    
+    What does a typical JSON schema (i.e. structure) look like?
+    ===========================================================
 
                 {
                     "firstName": "Joe",
@@ -163,6 +163,7 @@
                     "spouse": null
                 }
     
+
     How do you present the key/name values?
     =======================================
     -- Key/name value pairs:
@@ -182,25 +183,26 @@
 /*
 What is the format of XML and why is JSON better?
 /////////////////////////////////////////////////
-    -- although there is some structure to XML, it is more difficult to read XML over JSON.
+    -- Although there is some structure to XML, it is more difficult to read XML over JSON.
+    -- In other words, JSON is more concise than XML.
 
-    <person>
-    <firstName>Joe</firstName>
-    <lastName>Smith</lastName>
-    <age>25</age>
-    <address>
-      <streetAddress>Sesame St.</streetAddress>
-      <city>New York</city>
-    </address>
-    <phoneNumber>
-      <type>Home</type>
-      <number>123-456-7890</number>
-    </phoneNumber>
-    <phoneNumber>
-      <type>Work</type>
-      <number>098-765-4321</number>
-    </phoneNumber>
-    </person>
+        <person>
+        <firstName>Joe</firstName>
+        <lastName>Smith</lastName>
+        <age>25</age>
+        <address>
+        <streetAddress>Sesame St.</streetAddress>
+        <city>New York</city>
+        </address>
+        <phoneNumber>
+        <type>Home</type>
+        <number>123-456-7890</number>
+        </phoneNumber>
+        <phoneNumber>
+        <type>Work</type>
+        <number>098-765-4321</number>
+        </phoneNumber>
+        </person>
 
 
 */
@@ -221,7 +223,7 @@ What is the format of XML and why is JSON better?
             let cars = {};
             cars.car1 = 'blue';    // note the single quotes
             cars.car2 = "black";   // note the double quotes
-            console.log(cars);
+            console.log(cars);     //=> { car1: 'blue', car2: 'black' }
 
 
 /*
@@ -245,9 +247,10 @@ What is the format of XML and why is JSON better?
                     "mileage": 9876
                 }
             }    
-            console.log(carCollection);         // { car1: { color: 'black', model: 'Honda', mileage: 12345 },
-                                                //   car2: { color: 'blue', model: 'Ford', mileage: 9876 } }
-            console.log(carCollection.car2);    // { color: 'blue', model: 'Ford', mileage: 9876 }
+            console.log(carCollection);         //  { car1: { color: 'black', model: 'Honda', mileage: 12345 },
+                                                //    car2: { color: 'blue', model: 'Ford', mileage: 9876 } }
+
+            console.log(carCollection.car2);    //  { color: 'blue', model: 'Ford', mileage: 9876 }
 
 
 
