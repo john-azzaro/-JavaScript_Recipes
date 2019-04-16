@@ -129,10 +129,6 @@
     -- Just like a JavaScript object, a JSON object always starts and ends with curly braces (i.e. {}).
     -- Name and Value are seperated by a colon.
     -- More than one pair is seperated by a comma.
-
-
-
-
 */
 
 
@@ -178,6 +174,9 @@
     -- Arrays hae square brackets with values sperated by commas:
             { "name" : [ {"name" : "value"}, {"name" : "value"}] }
 
+    
+    
+
 */
 
 /*
@@ -211,17 +210,41 @@ What is the format of XML and why is JSON better?
 ///////////////////////////////////////////////////////////////
     -- JSON has the following syntax constraints:
         -- Object keys MIST be in strings (i.e. "firstName", "address", etc.).
+        -- JSON uses double quotes.
         -- Values can either be: string, number, JSON object, array, boolean, null.
         -- Duplicate keys (i.e. "spouse": null, "spouse": "Samantha") produce undefined.
+        -- A basic example of a JavaScript object:
+*/          
+            let cars = {};
+            cars.car1 = 'blue';    // note the single quotes
+            cars.car2 = "black";   // note the double quotes
+            console.log(cars);
+
+
+/*
 
     -- Comparatively, JavaScript object literals can have:
         -- string literals, number literals, or identifier names as keys.
+        -- JavaScript uses double and single quotes.
         -- do not require quotes around them.
         -- Values can be any valid JavaScript expression, including function definitions and undefined.
         -- Duplicate keys produce defined, specific results.
-
-
 */
+            let carCollection = {
+                "car1": {
+                    "color": "black", 
+                    "model":"Honda", 
+                    "mileage": 12345
+                },
+                "car2": {
+                    "color": "blue", 
+                    "model":"Ford", 
+                    "mileage": 9876
+                }
+            }    
+            console.log(carCollection);         // { car1: { color: 'black', model: 'Honda', mileage: 12345 },
+                                                //   car2: { color: 'blue', model: 'Ford', mileage: 9876 } }
+            console.log(carCollection.car2);    // { color: 'blue', model: 'Ford', mileage: 9876 }
 
 
 
