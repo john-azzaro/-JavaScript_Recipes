@@ -6,12 +6,12 @@
 //        + What are common API's?
 //        + What are common features and themes with API's?
 //        + What are some examples (and analogies) of API's?
-//     2. What is AJAX?
-//     3. What is a web API?
+//     2. What is a web API?
+//     3. What is AJAX?
 //     4. What is JSON?
 //        + What kind of data types can JSON use?
 //        + What can JSON do?
-//     5. What is the format of JSON?
+//     5. What are the unique features of JSON?
 //        + What does a typical JSON schema (i.e. structure) look like?
 //     6. What is the format of XML and why is JSON better? 
 //     7. What are the difference between JavaScript Objects and JSON?
@@ -23,10 +23,15 @@
 //        
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
 /*
 1. What is an API?
 ///////////////////
-    -- API stands for Application Programming Interface.    
+    -- API stands for Application Programming Interface. 
+    -- API is some kind of interface which has a set of functions that allow programmers to access specific features or data of an 
+       application, operating system or other services.
+    -- API define the way software libraries behave.   
     -- An API is a specification allowing two systems to communicate.
         -- In other words, an API is a messenger that takes a request and tells the system what to do. 
             -- For example, an API allows two strangers to speak to each other so that we can share data and work with each other.
@@ -61,33 +66,41 @@
 
     What are some examples (and analogies) of API's?
     ===============================================
-    Example 1: Expedia:
-    =-=-=-=-=-=-=-=-=-=
-        -- For example, if you look at Expedia and try to findfrom San Diego to New York, it will search all websites
-           and airlines for the best deals.  
-        -- So how is this one website able to find flights from multiple websites?
-            -- The website iteself doesnt have that information itself... that information is in the data base of the airlines themselves.
-            -- The airline is interested in having thier flights on as many websites as possible to sell as many tickets as possible.
-        -- Expedia has all this information by using the API's
-            -- Now Expedia doesnt have access to the databases of all the airlines, with passwords, users, etc.
-            -- BUT all the airlines use API's to give access to information through API's so websites like Expedia can have and list 
-               that information on thier website.
+        Example 1: Expedia:
+        =-=-=-=-=-=-=-=-=-=
+            -- For example, if you look at Expedia and try to findfrom San Diego to New York, it will search all websites
+            and airlines for the best deals.  
+            -- So how is this one website able to find flights from multiple websites?
+                -- The website iteself doesnt have that information itself... that information is in the data base of the airlines themselves.
+                -- The airline is interested in having thier flights on as many websites as possible to sell as many tickets as possible.
+            -- Expedia has all this information by using the API's
+                -- Now Expedia doesnt have access to the databases of all the airlines, with passwords, users, etc.
+                -- BUT all the airlines use API's to give access to information through API's so websites like Expedia can have and list 
+                that information on thier website.
 
-    Example 2: A waiter
-    =-=-=-=-=-=-=-=-=-=
-        -- There are three entities in the restraurant: the customer, the waiter, and the kitchen.
-        -- The waiter is the messenger that tells the kitchen what to do.
-        -- The kitchen is providing the waiter with menu items.
-            -- the kitchen tells the waiter to ask the customer what they want from the menu so it can be prepared.
-    
-    Example 3: The access port behind a computer.
-    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-        -- A computer works in its own way but it gives access to things like VGA, HDMI, audio, USB, etc.
+        Example 2: A waiter
+        =-=-=-=-=-=-=-=-=-=
+            -- There are three entities in the restraurant: the customer, the waiter, and the kitchen.
+            -- The waiter is the messenger that tells the kitchen what to do.
+            -- The kitchen is providing the waiter with menu items.
+                -- the kitchen tells the waiter to ask the customer what they want from the menu so it can be prepared.
+        
+        Example 3: The access port behind a computer.
+        =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+            -- A computer works in its own way but it gives access to things like VGA, HDMI, audio, USB, etc.
 
-    Example 4: Twilio API
-    =-=-=-=-=-=-=-=-=-=-=
-        -- SMS service API that you can use to send messages through your application to a users phone.
+        Example 4: Twilio API
+        =-=-=-=-=-=-=-=-=-=-=
+            -- SMS service API that you can use to send messages through your application to a users phone.
 */ 
+
+
+/*
+3. What is a web API?
+//////////////////////
+    -- A web API is an API over the web which can be accessed with HTTP protocol.
+    -- A web API provides endpoints, which are URL's that we can make requests to in order to write and retrieve data.
+*/
 
 
 /*
@@ -98,12 +111,6 @@
         -- for example, infinite scroll where new content appears as you scroll down.
         -- when the user scolls, the application makes new calls to the server to retrieve additional data.
         -- The application then run a callback function ont he data returned by the AJAX request. 
-*/
-
-/*
-3. What is a web API?
-//////////////////////
-    -- a web API provides endpoints, which are URL's that we can make requests to in order to write and retrieve data.
 */
 
 
@@ -146,9 +153,10 @@
 
 
 /*
-5. What are the unique features JSON?
-/////////////////////////////////////
+5. What are the unique features of JSON?
+////////////////////////////////////////
     -- used like a JavaScript Object where you can give properties and values.
+    -- JSON properties and values use double quotes (i.e. "firstName" : "Joe").
     -- JSON objects always start and end with curly braces (i.e. {}).
     -- JSON Names and Values are seperated by a colon.
     -- More than one pair of Name and Value is seperated by a comma.
@@ -190,12 +198,9 @@
             { "name1" : "value1", "name2" : "value2", "name3" : "value3" }
 
     -- Arrays hae square brackets with values sperated by commas:
-            { "name" : [ {"name" : "value"}, {"name" : "value"}] }
-
-    
-    
-
+            { "name" : [ {"name" : "value"}, {"name" : "value"}] }    
 */
+
 
 /*
 6. What is the format of XML and why is JSON better?
@@ -204,25 +209,24 @@
     -- In other words, JSON is more concise than XML.
 
         <person>
-        <firstName>Joe</firstName>
-        <lastName>Smith</lastName>
-        <age>25</age>
-        <address>
-        <streetAddress>Sesame St.</streetAddress>
-        <city>New York</city>
-        </address>
-        <phoneNumber>
-        <type>Home</type>
-        <number>123-456-7890</number>
-        </phoneNumber>
-        <phoneNumber>
-        <type>Work</type>
-        <number>098-765-4321</number>
-        </phoneNumber>
+            <firstName>Joe</firstName>
+            <lastName>Smith</lastName>
+            <age>25</age>
+            <address>
+                <streetAddress>Sesame St.</streetAddress>
+                <city>New York</city>
+            </address>
+            <phoneNumber>
+                <type>Home</type>
+                <number>123-456-7890</number>
+            </phoneNumber>
+            <phoneNumber>
+                <type>Work</type>
+                <number>098-765-4321</number>
+            </phoneNumber>
         </person>
-
-
 */
+
 
 /*
 7. What are the difference between JavaScript Objects and JSON?
@@ -236,21 +240,24 @@
         -- Values can either be: string, number, JSON object, array, boolean, null.
         -- Duplicate keys (i.e. "spouse": null, "spouse": "Samantha") produce undefined.
         -- A basic example of a JavaScript object:
-*/          
+*/     
+     
             let cars = {};
             cars.car1 = 'blue';    // note the single quotes
             cars.car2 = "black";   // note the double quotes
             console.log(cars);     //=> { car1: 'blue', car2: 'black' }
 
-
 /*
-
     -- Comparatively, JavaScript object literals can have:
         -- string literals, number literals, or identifier names as keys.
         -- JavaScript uses double and single quotes.
         -- do not require quotes around them.
         -- Values can be any valid JavaScript expression, including function definitions and undefined.
         -- Duplicate keys produce defined, specific results.
+
+
+    -- In the example below, we have a JSON object called 'carCollection' with two items, 
+           specifically 'car1' and 'car2'.
 */
             let carCollection = {
                 "car1": {
