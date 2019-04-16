@@ -153,6 +153,31 @@
                     "children": [],
                     "spouse": null
                 }
+*/
+
+/*
+What is the format of XML and why is JSON better?
+/////////////////////////////////////////////////
+    -- 
+
+    <person>
+    <firstName>Joe</firstName>
+    <lastName>Smith</lastName>
+    <age>25</age>
+    <address>
+      <streetAddress>Sesame St.</streetAddress>
+      <city>New York</city>
+    </address>
+    <phoneNumber>
+      <type>Home</type>
+      <number>123-456-7890</number>
+    </phoneNumber>
+    <phoneNumber>
+      <type>Work</type>
+      <number>098-765-4321</number>
+    </phoneNumber>
+    </person>
+
 
 */
 
@@ -174,28 +199,7 @@
 */
 
 
-/*
-What does XML look like?
-////////////////////////
-    -- 
 
-    <person>
-    <firstName></firstName>
-    <lastName></lastName>
-    <age></age>
-    <address>
-      <streetAddress></streetAddress>
-      <city></city>
-    </address>
-    <phoneNumber>
-      <type></type>
-    </phoneNumber>
-    <phoneNumber>
-    </phoneNumber>
-    </person>
-
-
-*/
 
 
 
