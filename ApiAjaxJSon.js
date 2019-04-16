@@ -1,13 +1,20 @@
 "use strict";
 // TOPIC /////////////////////////////////////////////////////////////////////////////////////////////////////
-//     API's, AJAX, JSON with jQuery
+//     API's, AJAX, and JSON with jQuery
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. What is an API?
+//        + What are common API's?
+//        + What are common features and themes with API's?
+//        + What are some examples (and analogies) of API's?
 //     2. What is AJAX?
 //     3. What is a web API?
 //     4. What is JSON?
+//        + What kind of data types can JSON use?
+//        + What can JSON do?
 //     5. What is the format of JSON?
-//     6. What are the difference between JavaScript Objects and JSON?
+//        + What does a typical JSON schema (i.e. structure) look like?
+//     6. What is the format of XML and why is JSON better? 
+//     7. What are the difference between JavaScript Objects and JSON?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on creating apps with jquery, including API's, AJAX, and jQuery taken from 
@@ -52,7 +59,7 @@
         -- the token will know who is accessing the API in order to limit what that person can access based on thier specific permissions.
 
 
-    What are some Examples and Analogies of API's?
+    What are some examples (and analogies) of API's?
     ===============================================
     Example 1: Expedia:
     =-=-=-=-=-=-=-=-=-=
@@ -191,8 +198,8 @@
 */
 
 /*
-What is the format of XML and why is JSON better?
-/////////////////////////////////////////////////
+6. What is the format of XML and why is JSON better?
+////////////////////////////////////////////////////
     -- Although there is some structure to XML, it is more difficult to read XML over JSON.
     -- In other words, JSON is more concise than XML.
 
@@ -218,7 +225,7 @@ What is the format of XML and why is JSON better?
 */
 
 /*
-6. What are the difference between JavaScript Objects and JSON?
+7. What are the difference between JavaScript Objects and JSON?
 ///////////////////////////////////////////////////////////////
     -- There is a definite difference between JSON and JavaScript Objects.
     -- however, the difference are minimal (i.e. double quotes for JSON compared to JavaScript, etc.)
