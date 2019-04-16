@@ -158,8 +158,15 @@
     
     How do you present the key/name values?
     =======================================
+    -- Key/name value pairs:
+            { "name" : "value" }
 
-    
+    -- Objects are comma seperated:
+            { "name1" : "value1", "name2" : "value2", "name3" : "value3" }
+
+    -- Arrays hae square brackets with values sperated by commas:
+            { "name" : [ {"name" : "value"}, {"name" : "value"}] }
+
 */
 
 /*
