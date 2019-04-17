@@ -304,9 +304,9 @@ How do you loop through a JSON object?
     =============================
 */
             function printPartyNames1() {
-                let people = party.friends;
-                for (let x in people) {
-                    console.log(`${people[x].firstName} ${people[x].lastName}`);        
+                let people = party.friends;                                             // Let the variable 'people' equal the object party => friends
+                for (let x in people) {                                                 // for all the items in people...
+                    console.log(`${people[x].firstName} ${people[x].lastName}`);        // ... print the value of firstName and value of lastName.
                 }
             }
             console.log(printPartyNames1());        // Alana Abelemill
@@ -326,7 +326,6 @@ How do you loop through a JSON object?
             console.log(printPartyNames2());        // Alana Abelemill
                                                     // Bob Baskerville
                                                     // Charlie Coopersworth
-
 
 /*
     Example 3 using normal for-loop
