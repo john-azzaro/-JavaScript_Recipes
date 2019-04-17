@@ -15,6 +15,7 @@
 //        + What does a typical JSON schema (i.e. structure) look like?
 //     6. What is the format of XML and why is JSON better? 
 //     7. What are the difference between JavaScript Objects and JSON?
+//     8. How do you loop through a JSON object?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on creating apps with jquery, including API's, AJAX, and jQuery taken from 
@@ -277,6 +278,71 @@
             console.log(carCollection.car2);    //  { color: 'blue', model: 'Ford', mileage: 9876 }
 
 
+/*
+How do you loop through a JSON object?
+//////////////////////////////////////
+*/
+
+            const party = {
+                "friends": [{
+                    "firstName": "Alana",
+                    "lastName": "Abelemill"
+                },
+                {
+                    "firstName": "Bob",
+                    "lastName": "Baskerville"
+                }, 
+                {
+                    "firstName": "Charlie",
+                    "lastName": "Coopersworth"
+                }]
+            }
+
+
+/*
+    Example 1 using for...in loop
+    =============================
+*/
+            function printPartyNames1() {
+                let people = party.friends;
+                for (let x in people) {
+                    console.log(`${people[x].firstName} ${people[x].lastName}`);        
+                }
+            }
+            console.log(printPartyNames1());        // Alana Abelemill
+                                                    // Bob Baskerville
+                                                    // Charlie Coopersworth
+
+/*
+    Example 2 using Object.keys
+    ===========================
+*/
+            function printPartyNames2() {
+                let people = party.friends;
+                Object.keys(people).forEach(function(key) {
+                    console.log(`${people[key].firstName} ${people[key].lastName}`)
+                })
+            }
+            console.log(printPartyNames2());        // Alana Abelemill
+                                                    // Bob Baskerville
+                                                    // Charlie Coopersworth
+
+
+/*
+    Example 3 using normal for-loop
+    ===============================
+*/
+
+            function printPartyNames3() {
+                let people = party.friends;
+                for (let x=0; x < people.length; x++) {
+                    console.log(`${people[x].firstName} ${people[x].lastName}`);
+                }
+            }        
+
+            console.log(printPartyNames3());        // Alana Abelemill
+                                                    // Bob Baskerville
+                                                    // Charlie Coopersworth
 
 
 
