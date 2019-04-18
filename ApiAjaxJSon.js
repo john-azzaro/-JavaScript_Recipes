@@ -351,7 +351,8 @@ How do you loop through a JSON object?
 /*
 How do you interpret JSON on the web?
 /////////////////////////////////////
-    -- Below is a good representation of AJAX, but more speficially JSON on the web.
+    -- Below is a good representation of AJAX, but more speficially JSON content you will encounter on the web.
+    -- The following example is taken from https://randomuser.me/api/ .
     
     {"results":[{"gender":"male","name":{"title":"mr","first":"vincent","last":"clark"},"location":{"street":"4717 main st","city":"lloydminster",
     "state":"prince edward island","postcode":"Y4L 6Q5","coordinates":{"latitude":"-67.9857","longitude":"-29.2469"},"timezone":{"offset":"+4:00",
@@ -362,7 +363,8 @@ How do you interpret JSON on the web?
     {"large":"https://randomuser.me/api/portraits/men/11.jpg","medium":"https://randomuser.me/api/portraits/med/men/11.jpg","thumbnail":
     "https://randomuser.me/api/portraits/thumb/men/11.jpg"},"nat":"CA"}],"info":{"seed":"e7998ea4bfe8b82f","results":1,"page":1,"version":"1.2"}}
 
-    -- Above
+    -- Note that the output above is essentially a string value which isnt very usable in JavaScript.
+    -- to bring it into JavaScript, we need to lint
 
 
     */
