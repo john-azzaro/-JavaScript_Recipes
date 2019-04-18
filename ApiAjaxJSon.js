@@ -281,6 +281,8 @@
 /*
 How do you loop through a JSON object?
 //////////////////////////////////////
+    -- To iterate through a JSON object, follow the same method you would for normal JavaScript objects.
+    -- Note that you can also look at the 'objects' tutorial for additional information.
 */
 
             const party = {
@@ -327,6 +329,7 @@ How do you loop through a JSON object?
                                                     // Bob Baskerville
                                                     // Charlie Coopersworth
 
+                                                   
 /*
     Example 3 using normal for-loop
     ===============================
@@ -342,6 +345,61 @@ How do you loop through a JSON object?
             console.log(printPartyNames3());        // Alana Abelemill
                                                     // Bob Baskerville
                                                     // Charlie Coopersworth
+
+
+
+/*
+How do you interpret JSON on the web?
+/////////////////////////////////////
+    -- Below is a good representation of AJAX, but more speficially JSON on the web.
+    
+    {"results":[{"gender":"male","name":{"title":"mr","first":"vincent","last":"clark"},"location":{"street":"4717 main st","city":"lloydminster",
+    "state":"prince edward island","postcode":"Y4L 6Q5","coordinates":{"latitude":"-67.9857","longitude":"-29.2469"},"timezone":{"offset":"+4:00",
+    "description":"Abu Dhabi, Muscat, Baku, Tbilisi"}},"email":"vincent.clark@example.com","login":{"uuid":"e39798b6-0652-47a0-bea0-c3c16e439e6d",
+    "username":"redbird814","password":"vagabond","salt":"aztiBOcE","md5":"d88dea267bc7c31f786a2c7ed3b37f35","sha1":"d89f687323b9836f3d5993bcb7cf
+    20b1fd273d9d","sha256":"f23647b8fb48c3b754dfbcdd9fb4d2e5a55dc2884cc6aa6e4ff6d644fab73db1"},"dob":{"date":"1956-05-10T04:15:22Z","age":62},
+    "registered":{"date":"2015-02-27T08:28:30Z","age":4},"phone":"482-258-3816","cell":"224-996-1491","id":{"name":"","value":null},"picture":
+    {"large":"https://randomuser.me/api/portraits/men/11.jpg","medium":"https://randomuser.me/api/portraits/med/men/11.jpg","thumbnail":
+    "https://randomuser.me/api/portraits/thumb/men/11.jpg"},"nat":"CA"}],"info":{"seed":"e7998ea4bfe8b82f","results":1,"page":1,"version":"1.2"}}
+
+    -- Above
+
+
+    */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
