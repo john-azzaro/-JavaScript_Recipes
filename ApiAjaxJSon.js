@@ -364,8 +364,69 @@ How do you interpret JSON on the web?
     "https://randomuser.me/api/portraits/thumb/men/11.jpg"},"nat":"CA"}],"info":{"seed":"e7998ea4bfe8b82f","results":1,"page":1,"version":"1.2"}}
 
     -- Note that the output above is essentially a string value which isnt very usable in JavaScript.
-    -- to bring it into JavaScript, we need to lint
+    -- to bring it into JavaScript, we need to lint it.  
 
+
+            {
+                "results": [{
+                    "gender": "male",
+                    "name": {
+                        "title": "mr",
+                        "first": "vincent",
+                        "last": "clark"
+                    },
+                    "location": {
+                        "street": "4717 main st",
+                        "city": "lloydminster",
+                        "state": "prince edward island",
+                        "postcode": "Y4L 6Q5",
+                        "coordinates": {
+                            "latitude": "-67.9857",
+                            "longitude": "-29.2469"
+                        },
+                        "timezone": {
+                            "offset": "+4:00",
+                            "description": "Abu Dhabi, Muscat, Baku, Tbilisi"
+                        }
+                    },
+                    "email": "vincent.clark@example.com",
+                    "login": {
+                        "uuid": "e39798b6-0652-47a0-bea0-c3c16e439e6d",
+                        "username": "redbird814",
+                        "password": "vagabond",
+                        "salt": "aztiBOcE",
+                        "md5": "d88dea267bc7c31f786a2c7ed3b37f35",
+                        "sha1": "d89f687323b9836f3d5993bcb7cf20b1fd273d9d",
+                        "sha256": "f23647b8fb48c3b754dfbcdd9fb4d2e5a55dc2884cc6aa6e4ff6d644fab73db1"
+                    },
+                    "dob": {
+                        "date": "1956-05-10T04:15:22Z",
+                        "age": 62
+                    },
+                    "registered": {
+                        "date": "2015-02-27T08:28:30Z",
+                        "age": 4
+                    },
+                    "phone": "482-258-3816",
+                    "cell": "224-996-1491",
+                    "id": {
+                        "name": "",
+                        "value": null
+                    },
+                    "picture": {
+                        "large": "https://randomuser.me/api/portraits/men/11.jpg",
+                        "medium": "https://randomuser.me/api/portraits/med/men/11.jpg",
+                        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/11.jpg"
+                    },
+                    "nat": "CA"
+                }],
+                "info": {
+                    "seed": "e7998ea4bfe8b82f",
+                    "results": 1,
+                    "page": 1,
+                    "version": "1.2"
+                }
+            }
 
     */
 
