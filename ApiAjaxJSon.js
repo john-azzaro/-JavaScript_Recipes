@@ -484,9 +484,15 @@ ______/_____  __________________________________/_______________________________
                                                 // of "results".
             console.log(person.phone);          // THEN when we console log person.phone, we'll get 070-256-6793
 
-
+/*
+    -- and of course we can create template literals with access to all key/values in out object.
+*/
             console.log(`${person.name.first} ${person.name.last} who lives in ${person.location.city}`);   // jayden andersen who lives in aylmer
 
+/*
+    -- and of course we can also access things like thumbnails in the object as well.
+*/
+            console.log(person.picture.thumbnail);
 
             
 
