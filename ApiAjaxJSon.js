@@ -367,86 +367,82 @@
     -- The following example is taken from https://randomuser.me/api/ .
     
 
-    {"results":[{"gender":"male","name":{"title":"mr","first":"vincent","last":"clark"},"location":{"street":"4717 main st","city":"lloydminster",
-    "state":"prince edward island","postcode":"Y4L 6Q5","coordinates":{"latitude":"-67.9857","longitude":"-29.2469"},"timezone":{"offset":"+4:00",
-    "description":"Abu Dhabi, Muscat, Baku, Tbilisi"}},"email":"vincent.clark@example.com","login":{"uuid":"e39798b6-0652-47a0-bea0-c3c16e439e6d",
-    "username":"redbird814","password":"vagabond","salt":"aztiBOcE","md5":"d88dea267bc7c31f786a2c7ed3b37f35","sha1":"d89f687323b9836f3d5993bcb7cf
-    20b1fd273d9d","sha256":"f23647b8fb48c3b754dfbcdd9fb4d2e5a55dc2884cc6aa6e4ff6d644fab73db1"},"dob":{"date":"1956-05-10T04:15:22Z","age":62},
-    "registered":{"date":"2015-02-27T08:28:30Z","age":4},"phone":"482-258-3816","cell":"224-996-1491","id":{"name":"","value":null},"picture":
-    {"large":"https://randomuser.me/api/portraits/men/11.jpg","medium":"https://randomuser.me/api/portraits/med/men/11.jpg","thumbnail":
-    "https://randomuser.me/api/portraits/thumb/men/11.jpg"},"nat":"CA"}],"info":{"seed":"e7998ea4bfe8b82f","results":1,"page":1,"version":"1.2"}}
+        {"results":[{"gender":"male","name":{"title":"mr","first":"jayden","last":"andersen"},"location":{"street":"2678 concession road 6","city":"aylmer","state":"nova scotia","postcode":"R9P 0I9","coordinates":{"latitude":"-63.3666","longitude":"-118.0485"},"timezone":{"offset":"+2:00","description":"Kaliningrad, South Africa"}},"email":"jayden.andersen@example.com","login":{"uuid":"70845082-167a-4a18-acd0-c8611c038a9c","username":"ticklishbear777","password":"seeker","salt":"fAENNeHi","md5":"dc370da87565686343b09288b3ba0f36","sha1":"e89b0734ace5005667dffb39913350570bcb388f","sha256":"89fe7b18d97b9cf747d799be145e08ce97705049d2ef20177ed3505b8da72d97"},"dob":{"date":"1973-11-30T20:41:24Z","age":45},"registered":{"date":"2008-09-21T03:32:59Z","age":10},"phone":"070-256-6793","cell":"997-407-7418","id":{"name":"","value":null},"picture":{"large":"https://randomuser.me/api/portraits/men/10.jpg","medium":"https://randomuser.me/api/portraits/med/men/10.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/10.jpg"},"nat":"CA"}],"info":{"seed":"a36c43ae6a9b2554","results":1,"page":1,"version":"1.2"}}
 
 
     -- Note that the output above is essentially a string value which isnt very usable in JavaScript.
-    -- to bring it into JavaScript, we need to first lint it an then assign it a variable name. 
+    -- to bring it into JavaScript, we need to first lint it an then assign it a variable name.
+    -- Also, add template literal backticks to the object.
+
+    DO NOT FORGET: REMEMBER TO ADD TEMPLATE LITERAL BACKTICKS TO THE OBJECT!!!
+    
 
       Assigned variable name                   linted JSON data
 ______/_____  __________________________________/______________________________________________________  
-|          | |                                                                                        |
+|           | |                                                                                        |
 */
- let data = {
-                "results": [{
-                    "gender": "male",
-                    "name": {
-                        "title": "mr",
-                        "first": "vincent",
-                        "last": "clark"
-                    },
-                    "location": {
-                        "street": "4717 main st",
-                        "city": "lloydminster",
-                        "state": "prince edward island",
-                        "postcode": "Y4L 6Q5",
-                        "coordinates": {
-                            "latitude": "-67.9857",
-                            "longitude": "-29.2469"
-                        },
-                        "timezone": {
-                            "offset": "+4:00",
-                            "description": "Abu Dhabi, Muscat, Baku, Tbilisi"
-                        }
-                    },
-                    "email": "vincent.clark@example.com",
-                    "login": {
-                        "uuid": "e39798b6-0652-47a0-bea0-c3c16e439e6d",
-                        "username": "redbird814",
-                        "password": "vagabond",
-                        "salt": "aztiBOcE",
-                        "md5": "d88dea267bc7c31f786a2c7ed3b37f35",
-                        "sha1": "d89f687323b9836f3d5993bcb7cf20b1fd273d9d",
-                        "sha256": "f23647b8fb48c3b754dfbcdd9fb4d2e5a55dc2884cc6aa6e4ff6d644fab73db1"
-                    },
-                    "dob": {
-                        "date": "1956-05-10T04:15:22Z",
-                        "age": 62
-                    },
-                    "registered": {
-                        "date": "2015-02-27T08:28:30Z",
-                        "age": 4
-                    },
-                    "phone": "482-258-3816",
-                    "cell": "224-996-1491",
-                    "id": {
-                        "name": "",
-                        "value": null
-                    },
-                    "picture": {
-                        "large": "https://randomuser.me/api/portraits/men/11.jpg",
-                        "medium": "https://randomuser.me/api/portraits/med/men/11.jpg",
-                        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/11.jpg"
-                    },
-                    "nat": "CA"
-                }],
-                "info": {
-                    "seed": "e7998ea4bfe8b82f",
-                    "results": 1,
-                    "page": 1,
-                    "version": "1.2"
-                }
-            }
+ var dataTest = `{
+	"results": [{
+		"gender": "male",
+		"name": {
+			"title": "mr",
+			"first": "jayden",
+			"last": "andersen"
+		},
+		"location": {
+			"street": "2678 concession road 6",
+			"city": "aylmer",
+			"state": "nova scotia",
+			"postcode": "R9P 0I9",
+			"coordinates": {
+				"latitude": "-63.3666",
+				"longitude": "-118.0485"
+			},
+			"timezone": {
+				"offset": "+2:00",
+				"description": "Kaliningrad, South Africa"
+			}
+		},
+		"email": "jayden.andersen@example.com",
+		"login": {
+			"uuid": "70845082-167a-4a18-acd0-c8611c038a9c",
+			"username": "ticklishbear777",
+			"password": "seeker",
+			"salt": "fAENNeHi",
+			"md5": "dc370da87565686343b09288b3ba0f36",
+			"sha1": "e89b0734ace5005667dffb39913350570bcb388f",
+			"sha256": "89fe7b18d97b9cf747d799be145e08ce97705049d2ef20177ed3505b8da72d97"
+		},
+		"dob": {
+			"date": "1973-11-30T20:41:24Z",
+			"age": 45
+		},
+		"registered": {
+			"date": "2008-09-21T03:32:59Z",
+			"age": 10
+		},
+		"phone": "070-256-6793",
+		"cell": "997-407-7418",
+		"id": {
+			"name": "",
+			"value": null
+		},
+		"picture": {
+			"large": "https://randomuser.me/api/portraits/men/10.jpg",
+			"medium": "https://randomuser.me/api/portraits/med/men/10.jpg",
+			"thumbnail": "https://randomuser.me/api/portraits/thumb/men/10.jpg"
+		},
+		"nat": "CA"
+	}],
+	"info": {
+		"seed": "a36c43ae6a9b2554",
+		"results": 1,
+		"page": 1,
+		"version": "1.2"
+	}
+}`
 
-            // console.log(data);   // This will return one big string which is problematic because we might want specific data.
-            // console.log(data.results);   // This will also return a big string format.
+            console.log(dataTest);        // out
 
 /*
     
@@ -459,10 +455,11 @@ ______/_____  __________________________________/_______________________________
        javascript object format.
                                        pass data (i.e. the variable name of the JSON data above)
                                         /
-            let dataJSON = JSON.parse(data)
+            let dataJSON = JSON.parse(dataTest)
 */
 
-
+            // var dataJSON = JSON.parse(dataTest);
+            // console.log(dataJSON);
             
 
 
