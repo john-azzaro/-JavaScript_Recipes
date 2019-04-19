@@ -384,7 +384,8 @@
 ______/_____  __________________________________/______________________________________________________  
 |          | |                                                                                        |
 */
- let data = {       "results": [{
+ let data = {
+                "results": [{
                     "gender": "male",
                     "name": {
                         "title": "mr",
@@ -447,6 +448,19 @@ ______/_____  __________________________________/_______________________________
             // console.log(data);   // This will return one big string which is problematic because we might want specific data.
             // console.log(data.results);   // This will also return a big string format.
 
+/*
+    
+    -- However, there is a way to transform a string that is JSON formatted into a useable javascript object.
+    -- To transform a string which is JSON formatted into a JavaScript object, we use a method called PARSE.
+
+    How do you use the parse method to make JSON data into a useable JavaScript object?
+    ===================================================================================
+    -- JSON.parse is the method used to parse JSON, transforming the value that it parses through into a useable
+       javascript object format.
+                                       pass data (i.e. the variable name of the JSON data above)
+                                        /
+            let dataJSON = JSON.parse(data)
+*/
 
 
             
