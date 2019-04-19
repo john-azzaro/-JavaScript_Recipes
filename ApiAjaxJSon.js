@@ -492,8 +492,13 @@ ______/_____  __________________________________/_______________________________
 /*
     -- and of course we can also access things like thumbnails in the object as well.
 */
-            console.log(person.picture.thumbnail);
+            console.log(person.picture.thumbnail);     // https://randomuser.me/api/portraits/thumb/men/10.jpg
 
+
+/*
+    How do you output infromation from an object into a string?
+    ==========================================================
+*/
             
 
 
