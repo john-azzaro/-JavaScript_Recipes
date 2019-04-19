@@ -501,7 +501,7 @@ ______/_____  __________________________________/_______________________________
     -- to turn an object into a string, we use JSON.stringify, which converts a value to a string.
     -- when this is done, the whole JSON object will fit into one variable.
 */
-            let stringIt = JSON.stringify(dataJSON);    // so bascially here we are taking our object and onverting it back to a string.
+            let stringIt = JSON.stringify(dataJSON);    // so bascially here we are taking our object and converting it back to a string.
             console.log(stringIt);
 
             
@@ -559,5 +559,5 @@ What is an API endpoint
 
 /*
 www.jsonlint.com to validate json structure
-UdThComWeDevin2019Ze2MasApis
+UdCoJAAC-Be2Pr
 */
