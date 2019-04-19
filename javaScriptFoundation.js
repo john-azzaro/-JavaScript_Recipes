@@ -59,3 +59,29 @@ What is the history of JavaScript?
 
 
 */
+
+
+// useful problem solving strategies
+
+// 1. Always have a plan
+// 2. Restate the problem
+// 3. Divide the Problem
+// 5. Start with what you know
+// 6. Reduce the Problem
+// 7. Look for Analogies
+// 8. Experiment
+// 9. Dont get frustrated
+// 10.
+
+/*
+Balance of active vs passive(conceptual) learning strategies
+  -- spend good time on conceptual learning, but never neglect practical application by coding
+Applying spacing to learning
+  -- use effective memorization techniques or space the top out over a few days.
+  -- avoid cramming
+teaching the concepts you learn
+  -- when you formulate an idea, you learn so much more.
+  -- you find grey areas while teaching
+
+
+*/
