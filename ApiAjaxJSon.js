@@ -496,9 +496,14 @@ ______/_____  __________________________________/_______________________________
 
 
 /*
-    How do you output infromation from an object into a string?
-    ==========================================================
+    How do you output infotmation from an object into a string?
+    ===========================================================
+    -- to turn an object into a string, we use JSON.stringify, which converts a value to a string.
+    -- when this is done, the whole JSON object will fit into one variable.
 */
+            let stringIt = JSON.stringify(dataJSON);    // so bascially here we are taking our object and onverting it back to a string.
+            console.log(stringIt);
+
             
 
 
