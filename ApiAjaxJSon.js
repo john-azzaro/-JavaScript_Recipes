@@ -375,7 +375,7 @@
     -- Also, add template literal backticks to the object.
 
     DO NOT FORGET: REMEMBER TO ADD TEMPLATE LITERAL BACKTICKS TO THE OBJECT!!!
-    
+
 
       Assigned variable name                   linted JSON data
 ______/_____  __________________________________/______________________________________________________  
@@ -442,24 +442,39 @@ ______/_____  __________________________________/_______________________________
 	}
 }`
 
-            console.log(dataTest);        // out
-
-/*
-    
-    -- However, there is a way to transform a string that is JSON formatted into a useable javascript object.
+            console.log(dataTest);        // output will return the entire object as a string.
+           
+/*   
+    -- HOWEVER< returning the entire object as a string is problematic because you might want ot get specfic key/value pairs. 
+    -- BUT there is a way to transform a string that is JSON formatted into a useable javascript object.
     -- To transform a string which is JSON formatted into a JavaScript object, we use a method called PARSE.
+
 
     How do you use the parse method to make JSON data into a useable JavaScript object?
     ===================================================================================
     -- JSON.parse is the method used to parse JSON, transforming the value that it parses through into a useable
        javascript object format.
+    -- The JSON data MUST be valid otherwise you will get problems.
+
                                        pass data (i.e. the variable name of the JSON data above)
                                         /
             let dataJSON = JSON.parse(dataTest)
 */
+            let dataJSON = JSON.parse(dataTest);      
+            console.log(dataJSON.results);            // shows entire object above!
 
-            // var dataJSON = JSON.parse(dataTest);
-            // console.log(dataJSON);
+
+/*
+    How do you output information from your object?
+    ===============================================
+    
+*/
+
+            let person = dataJSON.results[0]
+            console.log(person.gender);
+            
+
+
             
 
 
