@@ -439,7 +439,10 @@ ______/_____  __________________________________/_______________________________
 		"results": 1,
 		"page": 1,
 		"version": "1.2"
-	}
+    },
+    "rewards" : [{                                         
+        "trophy": "gold cup"
+    }]
 }`
 
             console.log(dataTest);        // output will return the entire object as a string.
@@ -467,12 +470,20 @@ ______/_____  __________________________________/_______________________________
 /*
     How do you output information from your object?
     ===============================================
-    
+    -- So now we should be ready to output our data taken from JSON and then converted to a JavaScript object!
+*/
+            console.log(dataJSON.results[0].cell);    // 997-407-7418
+/*
+
 */
 
-            let person = dataJSON.results[0]
-            console.log(person.gender);
-            
+            let person = dataJSON.results[0]    // to make things more streamlined, we make a new variable called person
+                                                // and assign it the value "dataJSON.results[0]" where 0 is the index value
+                                                // of "results".
+            console.log(person.phone);          // THEN when we console log person.phone, we'll get 070-256-6793
+
+
+            console.log(`${person.name.first} ${person.name.last} who lives in ${person.location.city}`);   // jayden andersen who lives in aylmer
 
 
             
