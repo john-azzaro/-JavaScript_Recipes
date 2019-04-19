@@ -16,6 +16,8 @@
 //     6. What is the format of XML and why is JSON better? 
 //     7. What are the difference between JavaScript Objects and JSON?
 //     8. How do you loop through a JSON object?
+//     9. How do you interpret JSON on the web?
+//        + How do you use the parse method to make JSON data into a useable JavaScript object?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on creating apps with jquery, including API's, AJAX, and jQuery taken from 
@@ -289,8 +291,8 @@
 
 
 /*
-How do you loop through a JSON object?
-//////////////////////////////////////
+8. How do you loop through a JSON object?
+/////////////////////////////////////////
     -- To iterate through a JSON object, follow the same method you would for normal JavaScript objects.
     -- Note that you can also look at the 'objects' tutorial for additional information.
 */
@@ -359,8 +361,8 @@ How do you loop through a JSON object?
 
 
 /*
-How do you interpret JSON on the web?
-/////////////////////////////////////
+9. How do you interpret JSON on the web?
+////////////////////////////////////////
     -- Below is a good representation of AJAX, but more speficially JSON content you will encounter on the web.
     -- The following example is taken from https://randomuser.me/api/ .
     
@@ -443,8 +445,12 @@ ______/_____  __________________________________/_______________________________
                 }
             }
 
-            console.log(data);   // This will return one big string which is problematic because we might want specific data
+            // console.log(data);   // This will return one big string which is problematic because we might want specific data.
+            // console.log(data.results);   // This will also return a big string format.
 
+
+
+            
 
 
 
