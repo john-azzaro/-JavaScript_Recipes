@@ -471,10 +471,12 @@ ______/_____  __________________________________/_______________________________
     How do you output information from your object?
     ===============================================
     -- So now we should be ready to output our data taken from JSON and then converted to a JavaScript object!
+    -- to do this, we call dataJSON (which parses JSON and transforms it into a useable object), specify the index value (i.e. 0)
+       and then chain the desired key whose value we want to access.
 */
             console.log(dataJSON.results[0].cell);    // 997-407-7418
 /*
-
+    -- However, we can clean up the above code by assigning a variable to the dataJSON.results[0]
 */
 
             let person = dataJSON.results[0]    // to make things more streamlined, we make a new variable called person
