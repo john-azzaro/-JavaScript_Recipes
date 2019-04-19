@@ -118,7 +118,17 @@
 /*
 4. What is JSON?
 ////////////////
+    What is JSON in a nutshell?
+    ===========================
     -- JSON stands for "JavaScript Object Notation."
+    -- JSON is a format used to serialize JavaScript.
+        -- in other words, it is a way that we can represent JavaScript object as a STRING that can be transmitted
+           between  the server in the and the client
+        -- Web API's provide JSON data.
+        -- In turn, we write JavaScript code that translates JSON back into memory JavaScript objects.
+
+
+
     -- JSON is the most common format for sending asynchronous browser-server communication back and forth.
     -- JSON is the most wisely used for API's - Best for data exchange.    
     -- JSON grew out of a need for stateful, real-time server-to-browser communication protocol without using browser plugins
@@ -354,6 +364,7 @@ How do you interpret JSON on the web?
     -- Below is a good representation of AJAX, but more speficially JSON content you will encounter on the web.
     -- The following example is taken from https://randomuser.me/api/ .
     
+
     {"results":[{"gender":"male","name":{"title":"mr","first":"vincent","last":"clark"},"location":{"street":"4717 main st","city":"lloydminster",
     "state":"prince edward island","postcode":"Y4L 6Q5","coordinates":{"latitude":"-67.9857","longitude":"-29.2469"},"timezone":{"offset":"+4:00",
     "description":"Abu Dhabi, Muscat, Baku, Tbilisi"}},"email":"vincent.clark@example.com","login":{"uuid":"e39798b6-0652-47a0-bea0-c3c16e439e6d",
@@ -362,6 +373,7 @@ How do you interpret JSON on the web?
     "registered":{"date":"2015-02-27T08:28:30Z","age":4},"phone":"482-258-3816","cell":"224-996-1491","id":{"name":"","value":null},"picture":
     {"large":"https://randomuser.me/api/portraits/men/11.jpg","medium":"https://randomuser.me/api/portraits/med/men/11.jpg","thumbnail":
     "https://randomuser.me/api/portraits/thumb/men/11.jpg"},"nat":"CA"}],"info":{"seed":"e7998ea4bfe8b82f","results":1,"page":1,"version":"1.2"}}
+
 
     -- Note that the output above is essentially a string value which isnt very usable in JavaScript.
     -- to bring it into JavaScript, we need to lint it.  
@@ -432,6 +444,15 @@ How do you interpret JSON on the web?
 
 
 
+
+
+
+
+
+
+/*
+What is an API endpoint
+*/
 
 
 
