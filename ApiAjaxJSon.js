@@ -376,10 +376,13 @@ How do you interpret JSON on the web?
 
 
     -- Note that the output above is essentially a string value which isnt very usable in JavaScript.
-    -- to bring it into JavaScript, we need to lint it.  
+    -- to bring it into JavaScript, we need to first lint it an then assign it a variable name. 
 
-
-            {
+      Assigned variable name                   linted JSON data
+______/_____  __________________________________/______________________________________________________  
+|          | |                                                                                        |
+*/
+ let data = {
                 "results": [{
                     "gender": "male",
                     "name": {
@@ -440,7 +443,7 @@ How do you interpret JSON on the web?
                 }
             }
 
-    */
+            console.log(data);   // This will return one big string which is problematic because we might want specific data
 
 
 
