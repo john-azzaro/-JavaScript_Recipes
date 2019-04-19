@@ -82,6 +82,11 @@ Applying spacing to learning
 teaching the concepts you learn
   -- when you formulate an idea, you learn so much more.
   -- you find grey areas while teaching
+keep track of questions
+  -- keeping track of your "why's".
+  -- if you dont track what you dont know, you have gaps that can be frustrating.
+pace yourself so you can recover
+  --
 
 
 */
