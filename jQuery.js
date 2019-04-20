@@ -5,18 +5,20 @@
 //     1. What is the DOM?
 //        + How does the DOM work?
 //     2. What is DOM Traversal and Manipulation?
-//     3. What is jQuery?
+//     3. How do you select elements in the DOM using plain JavaScript?
+//        + What is the "document" and how is it referenced in selecting elements in the DOM using plain JavaScript?
+//     4. What is jQuery?
 //        + How do you use jQuery in your projects?
 //        + Where do I include jQuery and documents that depend on it (i.e. jquery.js)?
 //        + How does jQuery work?
-//     4. What is the jQuery syntax and how do you select elements in the DOM?
+//     5. What is the jQuery syntax and how do you select elements in the DOM?
 //        + What is the jQuery syntax?
-//     5. What is are jQuery references and what do they do?
-//     6. What is an Event Listener?
-//     7. What is a DOM Event Object?
-//     8. How does event.currentTarget work?
-//     9. Why and how do you prevent default element behaviors?
-//    10. What is Event Delegation?
+//     6. What is are jQuery references and what do they do?
+//     7. What is an Event Listener?
+//     8. What is a DOM Event Object?
+//     9. How does event.currentTarget work?
+//    10. Why and how do you prevent default element behaviors?
+//    11. What is Event Delegation?
 //
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. This .js document uses jqueryCSS.CSS and jquery.html for demonstrations below.
@@ -105,8 +107,8 @@
     -- to select elements in the DOM using plain JavaScript
     -- However, jQuery is much easier syntax and more powerful so alhtough this is useful to know, we'll use jQuery more often.
     
-    What is the "document"?
-    =======================
+    What is the "document" and how is it referenced in selecting elements in the DOM using plain JavaScript?
+    ========================================================================================================
     -- the document (discussed in how the DOM works) is the current representation of the HTML document.
     -- to alter the elements in the DOM, we need a way to select specific elements in the document.
     -- although jquery offers a more streamline way to traverse and manipulate the DOM, you can also do so with plain JavaScript.
@@ -161,7 +163,7 @@
 
 
 /*
-3. What is jQuery?
+4. What is jQuery?
 ///////////////////
     -- jQuery is a fast, small, and feature rich JavaScript library.
         -- Remember, a JavaScript library which means it combines a big list of functions and methods built using JavaScript code.
@@ -231,7 +233,7 @@
 
 
 /*
-4. What is the jQuery syntax and how do you select elements in the DOM?
+5. What is the jQuery syntax and how do you select elements in the DOM?
 ///////////////////////////////////////////////////////////////////////
     -- jQuery can select ANY element in the DOM (Document object Model).
         -- This means ANY element, such as:
@@ -274,7 +276,7 @@
 
 
 /*
-5.What is are jQuery references and what do they do?
+6.What is are jQuery references and what do they do?
 ////////////////////////////////////////////////////
     -- 
     -- There are MANY more jQuery reference that you can use to traverse and manipulate the DOM.
@@ -425,7 +427,7 @@
 
             
 /*
-6. What is an Event Listener?
+7. What is an Event Listener?
 /////////////////////////////
     -- An Event Listener listens for a specific event to happen (i.e. submit, click, etc.) and does something (i.e. callback function).
 
@@ -463,7 +465,7 @@
 
  
 /*
-7. What is a DOM Event Object?
+8. What is a DOM Event Object?
 //////////////////////////////
     -- A callback function in an event listener gets access to an object representing the triggering event.
     -- This contains information about what you typed in text, what you typed, or what bitton you pressed.
@@ -482,7 +484,7 @@
 
 
 /*
-8. How does event.currentTarget work?
+9. How does event.currentTarget work?
 /////////////////////////////////////
     -- One of the most powerful properties of an object is event.current target.
     -- event.currentTarget contains information about which DOM element the user has interacted with.
@@ -515,7 +517,7 @@
 
 
 /*
-9. Why and how do you prevent default element behaviors?
+10. Why and how do you prevent default element behaviors?
 ////////////////////////////////////////////////////////
     -- event.preventDefault is used to stop default submission behavior for forms.
     -- event.preventDefault can also be used to stop the default behavior of anchor tags.
@@ -536,7 +538,7 @@ $(forForm);
 
 
 /*
-10. What is Event Delegation?
+11. What is Event Delegation?
 /////////////////////////////
     -- Event delegation allows you to attach a single event listener to a parent element that will fire for all descendants
        matching a selector, whether those descendants exist now or will be added in the future.
