@@ -21,6 +21,8 @@
 //        + How do you output information from your object?
 //        + How do you output infotmation from an object into a string?
 //
+//     X. How do you retrieve data from web API's using jQueries AJAX capabilities?
+//
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on creating apps with jquery, including API's, AJAX, and jQuery taken from 
 //        study, research, tutorials, mentor meetings, peer discussions, and good ole' fashioned curiosity.  I've put the
@@ -36,6 +38,7 @@
     -- API stands for Application Programming Interface. 
     -- API is some kind of interface which has a set of functions that allow programmers to access specific features or data of an 
        application, operating system or other services.
+    -- API is NOT a database or server... it is the CODE that governs the access points for the server. 
     -- API define the way software libraries behave.   
     -- An API is a specification allowing two systems to communicate.
         -- In other words, an API is a messenger that takes a request and tells the system what to do. 
@@ -379,7 +382,7 @@
     DO NOT FORGET: REMEMBER TO ADD TEMPLATE LITERAL BACKTICKS TO THE OBJECT!!!
 
 
-      Assigned variable name                   linted JSON data
+      Assigned variable name                   JSON data (linted)
 ______/_____  __________________________________/______________________________________________________  
 |           | |                                                                                        |
 */
@@ -447,12 +450,12 @@ ______/_____  __________________________________/_______________________________
     }]
 }`
 
-            console.log(dataTest);        // output will return the entire object as a string.
-           
+            console.log(dataTest);        // output will return the entire object as a string.         
 /*   
     -- HOWEVER< returning the entire object as a string is problematic because you might want ot get specfic key/value pairs. 
     -- BUT there is a way to transform a string that is JSON formatted into a useable javascript object.
     -- To transform a string which is JSON formatted into a JavaScript object, we use a method called PARSE.
+
 
 
     How do you use the parse method to make JSON data into a useable JavaScript object?
@@ -467,6 +470,7 @@ ______/_____  __________________________________/_______________________________
 */
             let dataJSON = JSON.parse(dataTest);      
             console.log(dataJSON.results);            // shows entire object above!
+
 
 
 /*
@@ -497,8 +501,9 @@ ______/_____  __________________________________/_______________________________
             console.log(person.picture.thumbnail);     // https://randomuser.me/api/portraits/thumb/men/10.jpg
 
 
+
 /*
-    How do you output infotmation from an object into a string?
+    How do you output infortmation from an object into a string?
     ===========================================================
     -- to turn an object into a string, we use JSON.stringify, which converts a value to a string.
     -- when this is done, the whole JSON object will fit into one variable.
@@ -507,6 +512,16 @@ ______/_____  __________________________________/_______________________________
             console.log(stringIt);
 
             
+
+
+
+
+
+
+/*
+X. How do you retrieve data from web API's using jQueries AJAX capabilities?
+////////////////////////////////////////////////////////////////////////////
+*/
 
 
 
