@@ -18,6 +18,8 @@
 //     8. How do you loop through a JSON object?
 //     9. How do you interpret JSON on the web?
 //        + How do you use the parse method to make JSON data into a useable JavaScript object?
+//        + How do you output information from your object?
+//        + How do you output infotmation from an object into a string?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on creating apps with jquery, including API's, AJAX, and jQuery taken from 
