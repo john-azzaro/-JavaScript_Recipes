@@ -118,12 +118,31 @@
  
     Selector                                        What it does                                    Return example (in chrome devtools)
     __________________                              __________________________________________      ______________________________________________________
-    document.getElementElementsByTagName("h1");     Selects elements by tag name of h1.             //=> HTMLCollection [h6.first]
+    document.getElementsByTagName("h1");            Selects elements by tag name of h1.             //=> HTMLCollection [h6.first]
     document.getElementsByClassName("first");       Selects elements with the class "first".        //=> HTMLCollection [p.third]
     document.getElementsById("second");             Selects elements with id of "form".             //=> <p id="second">This is the second sentence.</p>
 
     document.querySelector("li");                   Selects the FIRST element of "li" in doc.       //=> <li class="listItem">this is a list item</li>
-    document.querySelectorAll("")
+    document.querySelectorAll("li");                Selects ALL elements of "li".                   //=> NodeList(7) [li.listItem, li.listItem, li.listItem, li, li, li, li]
+
+    getAttribute("");
+    setAttribute("");
+
+
+    -- Additionally, we can attach methods which do various things.
+
+        -- Use className to assign a class to a selected element:
+    
+            document.getElementByClassName("p").className = "red";       //=> text will turn red for p elements
+                                                                         //   <p class="red">some text here</p> 
+        
+        -- Use classList to add, remove, and toggle classes:
+
+            document.getElementByClassName("p").classList.add("cssStyle1");        //=> will add cssStyle1 from CSS document to p element 
+            document.getElementByClassName("p").classList.remove("cssStyle1");     //=> will remove cssStyle1 from CSS document to p element 
+            document.getElementByClassName("p").classList.toggle("cssStyle1");     //=> will toggle cssStyle1 from CSS document to p element true or false.
+
+    -- There are many more methods we can use, but again we will focus on jQuery for DOM traversal and manipulation.
 */ 
                                        
 
