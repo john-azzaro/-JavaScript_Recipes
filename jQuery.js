@@ -103,6 +103,7 @@
 3. How do you select elements in the DOM using plain JavaScript?
 ////////////////////////////////////////////////////////////////
     -- to select elements in the DOM using plain JavaScript
+    -- However, jQuery is much easier syntax and more powerful so alhtough this is useful to know, we'll use jQuery more often.
     
     What is the "document"?
     =======================
@@ -114,13 +115,15 @@
         -- but make no mistake, this is an object.
     -- with this DOCUMENT, you can use SELECTORS to select different elements in the DOM.
 
+ 
+    Selector                                        What it does                                    Return example (in chrome devtools)
+    __________________                              __________________________________________      ______________________________________________________
+    document.getElementElementsByTagName("h1");     Selects elements by tag name of h1.             //=> HTMLCollection [h6.first]
+    document.getElementsByClassName("first");       Selects elements with the class "first".        //=> HTMLCollection [p.third]
+    document.getElementsById("second");             Selects elements with id of "form".             //=> <p id="second">This is the second sentence.</p>
 
-    Selector                               What it does
-    __________________                     _________________________________________________________________
-    getElementElementsByTagName("h1");     Selects elements by tag name of h1.
-    getElementsByClassName("first");       Selects elements with the class "first".
-    getElementsById("form");               Selects elements with id of "form".
-
+    document.querySelector("li");                   Selects the FIRST element of "li" in doc.       //=> <li class="listItem">this is a list item</li>
+    document.querySelectorAll("")
 */ 
                                        
 
