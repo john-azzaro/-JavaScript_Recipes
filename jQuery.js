@@ -103,7 +103,31 @@
 3. How do you select elements in the DOM using plain JavaScript?
 ////////////////////////////////////////////////////////////////
     -- to select elements in the DOM using plain JavaScript
-*/
+    
+    What is the "document"?
+    =======================
+    -- the document (discussed in how the DOM works) is the current representation of the HTML document.
+    -- to alter the elements in the DOM, we need a way to select specific elements in the document.
+    -- although jquery offers a more streamline way to traverse and manipulate the DOM, you can also do so with plain JavaScript.
+    
+    -- So if you type 'document' into the console of your web browser, you will get a bunch of HTML.
+        -- but make no mistake, this is an object.
+    -- with this DOCUMENT, you can use SELECTORS to select different elements in the DOM.
+
+
+    Selector                               What it does
+    __________________                     _________________________________________________________________
+    getElementElementsByTagName("h1");     Selects elements by tag name of h1.
+    getElementsByClassName("first");       Selects elements with the class "first".
+    getElementsById("form");               Selects elements with id of "form".
+
+*/ 
+                                       
+
+
+
+
+
 
 
 
