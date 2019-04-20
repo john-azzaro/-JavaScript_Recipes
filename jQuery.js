@@ -99,6 +99,14 @@
 */
 
 
+/*
+3. How do you select elements in the DOM using plain JavaScript?
+////////////////////////////////////////////////////////////////
+    -- to select elements in the DOM using plain JavaScript
+*/
+
+
+
 
    // =========================================================================================
    // IMPORTANT: EVERYTHING FROM HERE ON WILL USE JQUERY FOR DOM TRAVERSAL AND MANIPULATION
