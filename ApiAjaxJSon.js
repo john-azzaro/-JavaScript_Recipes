@@ -35,11 +35,12 @@
 /*
 1. What is an API?
 ///////////////////
-    -- API stands for Application Programming Interface. 
-    -- API is some kind of interface which has a set of functions that allow programmers to access specific features or data of an 
+    -- An API stands for Application Programming Interface. 
+    -- An API is some kind of interface which has a set of functions that allow programmers to access specific features or data of an 
        application, operating system or other services.
-    -- API is NOT a database or server... it is the CODE that governs the access points for the server. 
-    -- API define the way software libraries behave.   
+    -- An API is a publicly available web-based API that returns data, likely in JSON or XML
+    -- An API is NOT a database or server... it is the CODE that governs the access points for the server. 
+    -- An API define the way software libraries behave.   
     -- An API is a specification allowing two systems to communicate.
         -- In other words, an API is a messenger that takes a request and tells the system what to do. 
             -- For example, an API allows two strangers to speak to each other so that we can share data and work with each other.
@@ -521,6 +522,9 @@ ______/_____  __________________________________/_______________________________
 /*
 X. How do you retrieve data from web API's using jQueries AJAX capabilities?
 ////////////////////////////////////////////////////////////////////////////
+    -- 
+
+
 */
 
 
