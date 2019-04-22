@@ -515,8 +515,10 @@ ______/_____  __________________________________/_______________________________
             
 
 /*
-X. What is a API endpoint and query string?
-////////////////////////////////////////
+X. What is an API endpoint and query string?
+///////////////////////////////////////////
+    -- An API endpoint is an interface the consisting of one or more publicly exposed ENDPOINTS to a defined request-response message
+       system (i.e. JSON) which is exposed via the web by means of an HTTP-based web server.
 */
 
 
