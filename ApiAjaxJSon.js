@@ -586,12 +586,20 @@ X. What is an API endpoint and query string?
 
 
         -- So if we wanted to do a real search Kate Hudson (k88hudson) and access all of her repositories, the enpoint would look like this:
+            -- note that the %20 represents a space in the url.
+            -- also note the "in:name"
 
+            https://api.github.com/search/repositories?q=k88hudson%20in:name
+
+        -- and if I wanted to first page of the results and 5 results per page:
 
             https://api.github.com/search/repositories?q=k88hudson%20in:name&page=1&per_page=5
 
-
             This endpoint does the following:
+            1. The query parameter is k88hudson (so go to kate hudsons profile under the name k88hudson).
+            2. in:name is the search in.
+            3. & seperates the next stipulation which is that we want the first page of results...
+            4. & but also what 5 results per page.
 
 */
 
