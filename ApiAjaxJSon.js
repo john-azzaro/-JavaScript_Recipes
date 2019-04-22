@@ -604,16 +604,31 @@ ______/_____  __________________________________/_______________________________
             2. "in:name" is the search in.
             3. "&" seperates the next stipulation which is that we want the first page of results (i.e. page=1)...
             4. "&" but also what 5 results per page (i.e. per_page=5).
+*/
 
+
+/* 
+How do you implement an app with JSON?
+//////////////////////////////////////
+*/
+
+/*
+How do you implement an app with AJAX?
+//////////////////////////////////////
 */
 
 
 
-
 /*
-X. How do you retrieve data from web API's using jQueries AJAX capabilities?
-////////////////////////////////////////////////////////////////////////////
-    -- 
+X. How do you implement an app using JSON or AJAX?
+//////////////////////////////////////////////////
+    -- In the previous sections, you got a sense of what an API is, what API endpoints look like, etc.
+    -- Now you'll take that familiarity with API endpoints and implement that API in an app.
+    -- There are two ways to implement the app:
+        1. JSON
+        2. AJAX
+
+        --JSON 
 
 
 */
