@@ -20,6 +20,8 @@
 //        + How do you use the parse method to make JSON data into a useable JavaScript object?
 //        + How do you output information from your object?
 //        + How do you output infotmation from an object into a string?
+//    10. What is an API endpoint and query string?
+//        + In an API endpoint, how do you identify endpoints, query strings, and additional seach parameters?
 //
 //     X. How do you retrieve data from web API's using jQueries AJAX capabilities?
 //
@@ -515,7 +517,7 @@ ______/_____  __________________________________/_______________________________
             
 
 /*
-X. What is an API endpoint and query string?
+10. What is an API endpoint and query string?
 ///////////////////////////////////////////
     -- An API endpoint is an interface the consisting of one or more publicly exposed ENDPOINTS to a defined request-response message
        system (i.e. JSON) which is exposed via the web by means of an HTTP-based web server.
@@ -598,10 +600,10 @@ X. What is an API endpoint and query string?
             https://api.github.com/search/repositories?q=k88hudson%20in:name&page=1&per_page=5
 
             This endpoint does the following:
-            1. The query parameter is k88hudson (so go to kate hudsons profile under the name k88hudson).
-            2. in:name is the search in.
-            3. & seperates the next stipulation which is that we want the first page of results...
-            4. & but also what 5 results per page.
+            1. The query parameter is "k88hudson" (so go to kate hudsons profile under the name k88hudson).
+            2. "in:name" is the search in.
+            3. "&" seperates the next stipulation which is that we want the first page of results (i.e. page=1)...
+            4. "&" but also what 5 results per page (i.e. per_page=5).
 
 */
 
