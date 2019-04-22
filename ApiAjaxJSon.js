@@ -561,6 +561,7 @@ X. What is an API endpoint and query string?
 
     -- Now suppose the objective of our app is to SEARCH the REPOSITORIES of GitHub for specific users or organizations.
         -- we see that the fourth option lets us do just that:
+        -- Also, for more information see GitHub API documentation: https://developer.github.com/v3/search/#search-repositories
 
 
             repository_search_url	"https://api.github.com/search/repositories?q={query}{&page,per_page,sort,order}"
@@ -575,6 +576,22 @@ X. What is an API endpoint and query string?
                                                       /           |                        \
                   The question mark (?) tell the server           ampersand seperates       additional search parameters
                   it is about to receive a query string           key/value pairs                         
+
+
+            1. https://api.github.com/search/repositories -- This is the endpoint.
+            2. ?  -- This tells the server that it is about to receive a query string
+            3. q={...}  -- this parameter is for indicating the phrase we want to search by.
+            4. &  -- seperates key/value pairs.
+
+
+
+        -- So if we wanted to do a real search Kate Hudson (k88hudson) and access all of her repositories, the enpoint would look like this:
+
+
+            https://api.github.com/search/repositories?q=k88hudson%20in:name&page=1&per_page=5
+
+
+            This endpoint does the following:
 
 */
 
