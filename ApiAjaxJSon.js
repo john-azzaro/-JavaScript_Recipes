@@ -628,9 +628,6 @@ X. How do you implement an app using JSON or AJAX?
         1. JSON
         2. AJAX
 
-        --JSON 
-
-
 */
 
 
@@ -639,10 +636,22 @@ X. How do you implement an app using JSON or AJAX?
 
 
 
+function initialize() {
+    
+}
 
-/*
-What is an API endpoint
-*/
+$(initialize);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
