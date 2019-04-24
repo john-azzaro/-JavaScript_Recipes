@@ -667,6 +667,10 @@ function handleSubmit() {
   });
 }
 
+function renderStartPage() {
+    const startHtml = generateStartHtml();
+    $('main').html(startHtml);
+}
 
 function setUpEventHandlers() {
     handleSubmit();
@@ -677,6 +681,10 @@ function initializeApp() {
 }
 
 $(initializeApp)
+
+
+
+
 
 
 
