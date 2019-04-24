@@ -516,6 +516,41 @@ ______/_____  __________________________________/_______________________________
 
             
 
+
+
+/*
+////////////////////////////////////////
+At this point, it might be best to do a few
+examples with varying degrees of difficulty 
+provide a walkthrough.
+
+There a bit more to put above so more elaboration
+on the ins-and-outs of APIs is needed above.
+///////////////////////////////////////
+*/
+
+
+
+
+
+
+
+
+
+
+/*
+EXAMPLE 1: GitHub API (moderate difficulty)
+//////////////////////////////////////////
+
+*/
+
+/*
+EXAMPLE 2: GitHub API (easy difficulty)
+//////////////////////////////////////
+*/
+
+
+
 /*
 10. What is an API endpoint and query string?
 ///////////////////////////////////////////
@@ -628,7 +663,34 @@ X. How do you implement an app using JSON or AJAX?
         1. JSON
         2. AJAX
 
+    -- 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';
@@ -665,11 +727,6 @@ function handleSubmit() {
     queryTarget.val("");
     getDataFromApi(query, displayGitHubSearchData);
   });
-}
-
-function renderStartPage() {
-    const startHtml = generateStartHtml();
-    $('main').html(startHtml);
 }
 
 function setUpEventHandlers() {
