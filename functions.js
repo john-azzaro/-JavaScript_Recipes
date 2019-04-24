@@ -907,8 +907,8 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     {title: 'Post Two', body: 'This is post two'}
                 ];
 
-                function createPost() {
-                    setTimeout(function(post) {                      // setTimeout takes a callback.
+                function createPost(post) {
+                    setTimeout(function() {                          // setTimeout takes a callback.
                         posts.push(post);                            // pushes post onto the posts array.
                     }, 2000);                                        // but this will happen after 2 seconds.
                 }
@@ -932,9 +932,10 @@ NOTE: This section is on functions in objects, but first a brief overview.
                
 /*
     -- The reason why "Post Three" is not there is because of the setTimeout.
-    -- The server took 2 seconds to create the post and 1 second to get the post.
-    -- when we added the "Post Three", we did so in asynchronous way.
-    -- To achieve what we want in an asynchronous way, we do the following.
+        -- The server took 2 seconds to create the post and 1 second to get the post.
+    -- when we added the "Post Three", we did so in synchronous way.
+
+    -- To achieve what we want in an asynchronous way, we want to create a callback
 */
 
 
@@ -943,14 +944,14 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     {title: 'Blog Two', body: 'This is blog two'}
                 ];
 
-                function createBlog(post, callback) {
+                function createBlog(post, callback) {             // by passing in a callback (note: you can call it whatever you want)...
                     setTimeout(function() {                      
                         blog.push(post);
-                        callback();                            
+                        callback();                               // ... we then insert the callback function.
                     }, 2000);                                       
                 }
 
-                function getBlog() {
+                function getBlogs() {
                     setTimeout(function() {
                         let output = "";                             
                         blog.forEach(function(post) {              
@@ -960,9 +961,11 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     }, 1000);
                 }                                                   
 
-                createBlog({title: 'Blog Three', body: 'This is blog three'}, getBlog);       
-
-                getBlog();                                                           
+                createBlog({title: 'Blog Three', body: 'This is blog three'}, getBlogs);      // So when createBlog takes in "Blog Three", we ALSO have
+                                                                                              // the callback "getBlogs". So when createBlog is called
+                                                                                              // it will also call "getBlogs" before (within) the  
+                                                                                              // 2 second server time.
+                                                                              
                                     
                         
                                 
