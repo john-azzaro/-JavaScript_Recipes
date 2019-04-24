@@ -898,6 +898,8 @@ NOTE: This section is on functions in objects, but first a brief overview.
     =====================
     -- below we have an array storing two blog posts and two functions, createPost and getPost.
     -- to provide an example of a callback, we'll use "setTimeout" to mimic server response (time).
+    -- the objective is to create the post first (i.e. createPost) and then call getPost after (i.e. getPost).
+    -- 
 */
 
                 const posts = [
@@ -921,9 +923,48 @@ NOTE: This section is on functions in objects, but first a brief overview.
                     }, 1000);
                 }
 
-                getPost();                                            //=> <li>Post One</li><li>Post Two</li>
+                getPost();                                                           //=> <li>Post One</li><li>Post Two</li>
 
+                createPost({title: 'Post Three', body: 'This is post three'});       // Here we add a 'Post Three' to createPost.
+
+                getPost();                                                           //=> <li>Post One</li><li>Post Two</li>    
+                                                                                     // Note here that "Post Three" is NOT there!  Why?          
                
+/*
+    -- The reason why "Post Three" is not there is because of the setTimeout.
+    -- The server took 2 seconds to create the post and 1 second to get the post.
+    -- when we added the "Post Three", we did so in asynchronous way.
+    -- To achieve what we want in an asynchronous way, we do the following.
+*/
+
+
+                const posts2 = [
+                    {title: 'Post One #2', body: 'This is post one'},
+                    {title: 'Post Two #2', body: 'This is post two'}
+                ];
+
+                function createPost2() {
+                    setTimeout(function(post) {                      
+                        posts2.push(post);                            
+                    }, 2000);                                        
+                }
+
+                function getPost2() {
+                    setTimeout(function() {
+                        let output = "";                             
+                        posts2.forEach(function(post) {               
+                            output += `<li>${post.title}</li>`       
+                        });
+                        return console.log(output);                  
+                    }, 1000);
+                }
+
+                getPost2();                                                           
+
+                createPost2({title: 'Post Three #2', body: 'This is post three'});       
+
+                getPost2();           
+                
 
 
 
