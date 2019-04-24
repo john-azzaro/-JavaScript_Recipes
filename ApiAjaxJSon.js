@@ -635,9 +635,12 @@ X. How do you implement an app using JSON or AJAX?
 
 
 function handleSubmit() {
-    $("js-search-form").on("click", "#submit", function() {
+    $(".js-search-form").on("click", "#submit", function() {
         event.preventDefault();
-        
+        const queryTarget = $(event.currentTarget).find('.js-query');
+        const query = queryTarget.val();
+        queryTarget.val("");
+        getDataFromAPI(query, displayGitHubSearchData);
     });
 }
 
