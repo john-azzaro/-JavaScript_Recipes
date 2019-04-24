@@ -522,7 +522,8 @@ ______/_____  __________________________________/_______________________________
 ////////////////////////////////////////
 At this point, it might be best to do a few
 examples with varying degrees of difficulty 
-provide a walkthrough.
+provide a walkthrough.  It might be useful
+to put maybe 4 or 5 examples.
 
 There a bit more to put above so more elaboration
 on the ins-and-outs of APIs is needed above.
@@ -534,20 +535,35 @@ on the ins-and-outs of APIs is needed above.
 
 
 
+/*
+EXAMPLE 1: DogPic API (easy difficulty)
+//////////////////////////////////////
+*/
+
+
+
+
+
 
 
 
 
 /*
-EXAMPLE 1: GitHub API (moderate difficulty)
+EXAMPLE 2: GitHub API (moderate difficulty)
 //////////////////////////////////////////
 
 */
 
-/*
-EXAMPLE 2: GitHub API (easy difficulty)
-//////////////////////////////////////
-*/
+
+
+
+
+
+
+
+
+
+
 
 
 
