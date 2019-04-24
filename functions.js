@@ -893,9 +893,37 @@ NOTE: This section is on functions in objects, but first a brief overview.
     -- any function that is passed as an argument is called a callback function. 
 */
 
+/*
+    EXAMPLE 1: Blog Posts
+    =====================
+    -- below we have an array storing two blog posts and two functions, createPost and getPost.
+    -- to provide an example of a callback, we'll use "setTimeout" to mimic server response (time).
+*/
 
+                const posts = [
+                    {title: 'Post One', body: 'This is post one'},
+                    {title: 'Post Two', body: 'This is post two'}
+                ];
 
+                function createPost() {
+                    setTimeout(function(post) {                      // setTimeout takes a callback.
+                        posts.push(post);                            // pushes post onto the posts array.
+                    }, 2000);                                        // but this will happen after 2 seconds.
+                }
 
+                function getPost() {
+                    setTimeout(function() {
+                        let output = "";                             // create a variable for our output.
+                        posts.forEach(function(post) {               // looping through our posts (which takes in a callback) and for each iteration...
+                            output += `<li>${post.title}</li>`       // append on to output (i.e. +=) the template literal with the posts title.
+                        });
+                        return console.log(output);                  // then return the output to the console.
+                    }, 1000);
+                }
+
+                getPost();                                            //=> <li>Post One</li><li>Post Two</li>
+
+               
 
 
 
