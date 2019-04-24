@@ -631,16 +631,25 @@ X. How do you implement an app using JSON or AJAX?
 */
 
 
+const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';
+
+function getDataFromApi(searchTerm, callback) {
+  const query = {
+    q: `${searchTerm} in:name`,
+    per_page: 3
+  }
+  $.getJSON(GITHUB_SEARCH_URL, query, callback);
+}
 
 
 
 function handleSubmit() {
-    $(".js-search-form").on("click", "#submit", function() {
+    $("main").submit( function(event) {
         event.preventDefault();
         const queryTarget = $(event.currentTarget).find('.js-query');
         const query = queryTarget.val();
         queryTarget.val("");
-        getDataFromAPI(query, displayGitHubSearchData);
+        getDataFromApi(query, displayGitHubSearchData);                   // Passes the search term in the first slot (i.e. query).
     });
 }
 
