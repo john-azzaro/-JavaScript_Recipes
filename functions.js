@@ -879,6 +879,12 @@ NOTE: This section is on functions in objects, but first a brief overview.
 /*
 7. What is a callback?
 //////////////////////
+    -- A callback is a function that is passed in as a parameter to another function and then run inside the function body).
+        -- for example, if you run a .forEach on an array (i.e. something.forEach(function(key) {return `${key}`})), where we pass in
+           "function" is a callback.  
+            -- Note that that .forEach example is not an asynchronous
+
+
     -- callbacks are a way to make sure certain code doesnt execute until other code has already finished execution.
     -- when you pass a function as an argument.
     -- a callback is a name to describe a method that is supplied as an argument to another method such that when the parent method is
@@ -886,6 +892,23 @@ NOTE: This section is on functions in objects, but first a brief overview.
     -- in javascript, functions are objects, so functions can be taken as arguments and can be returned by other functions.
     -- any function that is passed as an argument is called a callback function. 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    EXAMPLE 2: Homework
+    ===================
+*/
+
                 function doHomeworkDemo(subject) {
                     console.log(`I'm doing my ${subject} homework.`);
                 }
