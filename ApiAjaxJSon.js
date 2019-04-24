@@ -40,6 +40,10 @@
     -- An API stands for Application Programming Interface. 
     -- An API is some kind of interface which has a set of functions that allow programmers to access specific features or data of an 
        application, operating system or other services.
+    -- An API is a set of commands, function, protocols, and objects that programmers can use to create software or interact with 
+       an external system.
+    -- An API provides developers with standard commands for performing common operations so they do not have to write the code 
+       from scratch.
     -- An API is a publicly available web-based API that returns data, likely in JSON or XML
     -- An API is NOT a database or server... it is the CODE that governs the access points for the server. 
     -- An API define the way software libraries behave.   
