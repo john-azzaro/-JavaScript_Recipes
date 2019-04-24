@@ -634,10 +634,15 @@ X. How do you implement an app using JSON or AJAX?
 
 
 
-
+function handleSubmit() {
+    $("js-search-form").on("click", "#submit", function() {
+        event.preventDefault();
+        
+    });
+}
 
 function initialize() {
-    
+    handleSubmit();
 }
 
 $(initialize);
