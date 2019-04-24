@@ -642,42 +642,41 @@ function getDataFromApi(searchTerm, callback) {
 }
 
 function renderResult(result) {
-    return `
-      <div>
-        <h2>
-        <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> by <a class="js-user-name" href="${result.owner.html_url}" target="_blank">${result.owner.login}</a></h2>
-        <p>Number of watchers: <span class="js-watchers-count">${result.watchers_count}</span></p>
-        <p>Number of open issues: <span class="js-issues-count">${result.open_issues}</span></p>
-      </div>
-    `;
-  }
-  
-  function displayGitHubSearchData(data) {
-    const results = data.items.map((item) => renderResult(item));
-    $('.js-search-results').html(results);
-  }
-
-
-function handleSubmit() {
-    $("main").submit( function(event) {
-        event.preventDefault();
-        const queryTarget = $(event.currentTarget).find('.js-query');
-        const query = queryTarget.val();
-        queryTarget.val("");
-        getDataFromApi(query, displayGitHubSearchData);                   // Passes the search term in the first slot (i.e. query).
-    });
+  return `
+    <div>
+      <h2>
+      <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> by <a class="js-user-name" href="${result.owner.html_url}" target="_blank">${result.owner.login}</a></h2>
+      <p>Number of watchers: <span class="js-watchers-count">${result.watchers_count}</span></p>
+      <p>Number of open issues: <span class="js-issues-count">${result.open_issues}</span></p>
+    </div>
+  `;
 }
 
-function initialize() {
+function displayGitHubSearchData(data) {
+  const results = data.items.map((item) => renderResult(item));
+  $('.js-search-results').html(results);
+}
+
+function handleSubmit() {
+  $('main').submit(function(event) {
+    event.preventDefault();
+    const queryTarget = $(event.currentTarget).find('.js-query');
+    const query = queryTarget.val();
+    queryTarget.val("");
+    getDataFromApi(query, displayGitHubSearchData);
+  });
+}
+
+
+function setUpEventHandlers() {
     handleSubmit();
 }
 
-$(initialize);
+function initializeApp() {
+    setUpEventHandlers();
+}
 
-
-
-
-
+$(initializeApp)
 
 
 

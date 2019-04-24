@@ -10,25 +10,26 @@
     <!-- <link rel="stylesheet" href="index.css"> -->
 </head>
 <body>
+
+    
     <main>
 
-        <section role="region">
+        <h1>Repository Search on GitHub</h1>
 
-            <h3>Search repos by name on GitHub</h3>
-            <form action="#" class="js-search-from">
-                <lable for="query"></lable>
-                <input type="text" class="js-query" placeholder="k88hudson">
-                <button id="submit">Search</button>
-            </form>
+        <form action="#" class="js-search-form">
+            <label for="query">Search repositories: </label>
+            <input type="text" class="js-query" placeholder="e.g., John-Azzaro">
+            <button type="submit">Search</button>
+        </form>
 
-            <h3>Results</h3>
-            <section role="region" class="js-search-results"></section>
-
-        </section>
-
-
+        <h2>Results</h2>
+        <div class="js-search-results">
+            <p>search results go here</p>
+        </div>
         
-    </main>  
+    </main>
+    
+    
     <script src="jQuery.js"></script>
 </body>
 </html>
