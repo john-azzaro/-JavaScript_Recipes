@@ -938,33 +938,34 @@ NOTE: This section is on functions in objects, but first a brief overview.
 */
 
 
-                const posts2 = [
-                    {title: 'Post One #2', body: 'This is post one'},
-                    {title: 'Post Two #2', body: 'This is post two'}
+                const blog = [
+                    {title: 'Blog One', body: 'This is blog one'},
+                    {title: 'Blog Two', body: 'This is blog two'}
                 ];
 
-                function createPost2() {
-                    setTimeout(function(post) {                      
-                        posts2.push(post);                            
-                    }, 2000);                                        
+                function createBlog(post, callback) {
+                    setTimeout(function() {                      
+                        blog.push(post);
+                        callback();                            
+                    }, 2000);                                       
                 }
 
-                function getPost2() {
+                function getBlog() {
                     setTimeout(function() {
                         let output = "";                             
-                        posts2.forEach(function(post) {               
+                        blog.forEach(function(post) {              
                             output += `<li>${post.title}</li>`       
                         });
                         return console.log(output);                  
                     }, 1000);
-                }
+                }                                                   
 
-                getPost2();                                                           
+                createBlog({title: 'Blog Three', body: 'This is blog three'}, getBlog);       
 
-                createPost2({title: 'Post Three #2', body: 'This is post three'});       
-
-                getPost2();           
-                
+                getBlog();                                                           
+                                    
+                        
+                                
 
 
 
