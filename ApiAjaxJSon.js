@@ -532,12 +532,35 @@ ______/_____  __________________________________/_______________________________
 /* 
 How do you implement an app with JSON?
 //////////////////////////////////////
+
+
+function getDataFromApi(searchTerm, callback) {
+  const query = {
+    q: `${searchTerm} in:name`,
+    per_page: 3
+  }
+  $.getJSON(GITHUB_SEARCH_URL, query, callback);
+}
 */
 
 
 /*
 How do you implement an app with AJAX?
-//////////////////////////////////////
+//////////////////////////////////////// 
+
+ function getDataFromApi(searchTerm, callback) {
+    const settings = {
+        url: GITHUB_SEARCH_URL,
+        data: {
+            q: `${searchTerm} in:name`,
+            per_page: 5
+        },
+        dataType: 'json',
+        success: callback
+    };
+    $.ajax(settings);
+}
+
 */
 
 
@@ -588,16 +611,16 @@ EXAMPLE 1: DogPic API (easy)
 
 
 /*
-EXAMPLE 2: Song Lyrix API (moderate)
-/////////////////////////////////////
+EXAMPLE 2: Song Lyrics API (moderate)
+//////////////////////////////////////
 */
 
 
 
 
 /*
-EXAMPLE 2: GitHub API (hard)
-/////////////////////////////
+EXAMPLE 2: GitHub API (moderate-hard)
+//////////////////////////////////////
 
 */
 
@@ -703,13 +726,20 @@ EXAMPLE 2: GitHub API (hard)
         -- and if you want to add additional parameters to the query, you add an ampersand "&" to seperate any additional parameters.
         -- for example, if I wanted to first page of the results and 5 results per page:
 
-            https://api.github.com/search/repositories?q=k88hudson%20in:name&page=1&per_page=5
 
-            This endpoint does the following:
-            1. The query parameter is "k88hudson" (so go to kate hudsons profile under the name k88hudson).
-            2. "in:name" is the search in.
-            3. "&" seperates the next stipulation which is that we want the first page of results (i.e. page=1)...
-            4. "&" but also what 5 results per page (i.e. per_page=5).
+                                                                  page=1 means for the first page of our results...
+                                                                              \
+            https://api.github.com/search/repositories?q=k88hudson%20in:name&page=1&per_page=5
+                                                                                         \
+                                                                                          ... per_page=5 means display 5 results per page.
+                      
+
+
+    STEP 3: GitHub Search App Architecture
+    =======================================
+    -- 
+
+
 */
 
 
@@ -743,28 +773,42 @@ EXAMPLE 2: GitHub API (hard)
 
 const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';
 
+// function getDataFromApi(searchTerm, callback) {
+//   const query = {
+//     q: `${searchTerm} in:name`,
+//     per_page: 3
+//   }
+//   $.getJSON(GITHUB_SEARCH_URL, query, callback);
+// }
+
 function getDataFromApi(searchTerm, callback) {
-  const query = {
-    q: `${searchTerm} in:name`,
-    per_page: 3
-  }
-  $.getJSON(GITHUB_SEARCH_URL, query, callback);
+    const settings = {
+        url: GITHUB_SEARCH_URL,
+        data: {
+            q: `${searchTerm} in:name`,
+            per_page: 5
+        },
+        dataType: 'json',
+        success: callback
+    };
+    $.ajax(settings);
 }
+
+function displayGitHubSearchData(data) {
+    const results = data.items.map((item) => renderResult(item));
+    $('.js-search-results').html(results);
+  }
 
 function renderResult(result) {
   return `
     <div>
       <h2>
-      <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> by <a class="js-user-name" href="${result.owner.html_url}" target="_blank">${result.owner.login}</a></h2>
+      <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> by <a class="js-user-name" 
+         href="${result.owner.html_url}" target="_blank">${result.owner.login}</a></h2>
       <p>Number of watchers: <span class="js-watchers-count">${result.watchers_count}</span></p>
       <p>Number of open issues: <span class="js-issues-count">${result.open_issues}</span></p>
     </div>
   `;
-}
-
-function displayGitHubSearchData(data) {
-  const results = data.items.map((item) => renderResult(item));
-  $('.js-search-results').html(results);
 }
 
 function handleSubmit() {
