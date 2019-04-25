@@ -753,11 +753,11 @@ function setUpEventHandlers() {
     handleSubmit();
 }
 
-function initializeApp() {
+function initializeGitApp() {
     setUpEventHandlers();
 }
 
-$(initializeApp)
+$(initializeGitApp);
 
 
 
