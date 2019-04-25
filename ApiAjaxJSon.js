@@ -521,6 +521,44 @@ ______/_____  __________________________________/_______________________________
             
 
 
+/*
+10. What is an API endpoint and query string?
+///////////////////////////////////////////
+    -- An API endpoint is an interface the consisting of one or more publicly exposed ENDPOINTS to a defined request-response message
+       system (i.e. JSON) which is exposed via the web by means of an HTTP-based web server.
+*/
+
+
+/* 
+How do you implement an app with JSON?
+//////////////////////////////////////
+*/
+
+
+/*
+How do you implement an app with AJAX?
+//////////////////////////////////////
+*/
+
+
+
+/*
+X. How do you implement an app using JSON or AJAX?
+//////////////////////////////////////////////////
+    -- In the previous sections, you got a sense of what an API is, what API endpoints look like, etc.
+    -- Now you'll take that familiarity with API endpoints and implement that API in an app.
+    -- There are two ways to implement the app:
+        1. JSON
+        2. AJAX
+
+    -- 
+*/
+
+
+
+
+
+
 
 /*
 ////////////////////////////////////////
@@ -539,9 +577,28 @@ on the ins-and-outs of APIs is needed above.
 
 
 
+
 /*
-EXAMPLE 1: DogPic API (easy difficulty)
-//////////////////////////////////////
+EXAMPLE 1: DogPic API (easy)
+/////////////////////////////
+*/
+
+
+
+
+
+/*
+EXAMPLE 2: Song Lyrix API (moderate)
+/////////////////////////////////////
+*/
+
+
+
+
+/*
+EXAMPLE 2: GitHub API (hard)
+/////////////////////////////
+
 */
 
 
@@ -552,12 +609,6 @@ EXAMPLE 1: DogPic API (easy difficulty)
 
 
 
-/*
-EXAMPLE 2: GitHub API (moderate difficulty)
-//////////////////////////////////////////
-
-*/
-
 
 
 
@@ -572,14 +623,11 @@ EXAMPLE 2: GitHub API (moderate difficulty)
 
 
 /*
-10. What is an API endpoint and query string?
-///////////////////////////////////////////
-    -- An API endpoint is an interface the consisting of one or more publicly exposed ENDPOINTS to a defined request-response message
-       system (i.e. JSON) which is exposed via the web by means of an HTTP-based web server.
+    -- Suppose you want to make an app that accesses the GitHub API to search and display user repositories.
 
-    EXAMPLE 1: GitHub API
-    =====================
-    -- Suppose you want to make an app that uses the information contained in the GitHub API.
+
+    STEP 1: Explore the API
+    =======================
     -- First thing is go to the GitHub API address: https://api.github.com/
     -- What you will see is a variety of endpoints available to you to build your application.  For example:
         -- 
@@ -662,29 +710,6 @@ EXAMPLE 2: GitHub API (moderate difficulty)
 */
 
 
-/* 
-How do you implement an app with JSON?
-//////////////////////////////////////
-*/
-
-/*
-How do you implement an app with AJAX?
-//////////////////////////////////////
-*/
-
-
-
-/*
-X. How do you implement an app using JSON or AJAX?
-//////////////////////////////////////////////////
-    -- In the previous sections, you got a sense of what an API is, what API endpoints look like, etc.
-    -- Now you'll take that familiarity with API endpoints and implement that API in an app.
-    -- There are two ways to implement the app:
-        1. JSON
-        2. AJAX
-
-    -- 
-*/
 
 
 
