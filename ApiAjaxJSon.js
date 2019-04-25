@@ -670,6 +670,9 @@ EXAMPLE 2: GitHub API (hard)
         -- we see that the fourth option lets us do just that:
         -- Also, for more information see GitHub API documentation: https://developer.github.com/v3/search/#search-repositories
 
+        -- So after looking through the documentation and the options, you see "repository_search_url" which allows you to search for
+           repositories with a given term AND provide a url to that repository.
+
 
             repository_search_url	"https://api.github.com/search/repositories?q={query}{&page,per_page,sort,order}"
 
@@ -693,12 +696,12 @@ EXAMPLE 2: GitHub API (hard)
                                                         \              /
             https://api.github.com/search/repositories?q=k88hudson%20in:name
                                                                    |
-                                                                 %20 represents a space in url
+                                                                 %20 represents a space in url 
 
+ 
 
-
-
-        -- and if I wanted to first page of the results and 5 results per page:
+        -- and if you want to add additional parameters to the query, you add an ampersand "&" to seperate any additional parameters.
+        -- for example, if I wanted to first page of the results and 5 results per page:
 
             https://api.github.com/search/repositories?q=k88hudson%20in:name&page=1&per_page=5
 
