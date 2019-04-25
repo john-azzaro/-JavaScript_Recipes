@@ -630,7 +630,6 @@ EXAMPLE 2: GitHub API (hard)
     =======================
     -- First thing is go to the GitHub API address: https://api.github.com/
     -- What you will see is a variety of endpoints available to you to build your application.  For example:
-        -- 
 
             current_user_url	"https://api.github.com/user"
             current_user_authorizations_html_url	"https://github.com/settings/connections/applications{/client_id}"
@@ -665,8 +664,8 @@ EXAMPLE 2: GitHub API (hard)
             user_search_url	"https://api.github.com/search/users?q={query}{&page,per_page,sort,order}"
 
 
-    In an API endpoint, how do you identify endpoints, query strings, and additional seach parameters?
-    ==================================================================================================    
+    STEP 2: Establish endpoints, query strings, and additional seach parameters.
+    ===========================================================================   
     -- Now suppose the objective of our app is to SEARCH the REPOSITORIES of GitHub for specific users or organizations.
         -- we see that the fourth option lets us do just that:
         -- Also, for more information see GitHub API documentation: https://developer.github.com/v3/search/#search-repositories
@@ -677,26 +676,27 @@ EXAMPLE 2: GitHub API (hard)
 
         -- The API endpoint above has a few components to break down:
 
+
                         Endpoint
             ________________/_________________________       Q indicates the query string we want to search by (i.e. john-smith, sallyK, etc.).
             |                                         |     /
             https://api.github.com/search/repositories?q={query}{&page,per_page,sort,order}
-                                                      /           |                        \
-                  The question mark (?) tell the server           ampersand seperates       additional search parameters
-                  it is about to receive a query string           key/value pairs                         
-
-
-            1. https://api.github.com/search/repositories -- This is the endpoint.
-            2. ?  -- This tells the server that it is about to receive a query string
-            3. q={...}  -- this parameter is for indicating the phrase we want to search by.
-            4. &  -- seperates key/value pairs.
+                                                     /           |                        \
+                  The question mark (?) tell the server          ampersand seperates       additional search parameters
+                  it is about to receive a query string          key/value pairs                         
 
 
         -- So if we wanted to do a real search Kate Hudson (k88hudson) and access all of her repositories, the enpoint would look like this:
-            -- note that the %20 represents a space in the url.
-            -- also note the "in:name"
+            
 
+                               q={...} is the query term               in:name means that we want to search for k88hudson IN the name key.
+                                                        \              /
             https://api.github.com/search/repositories?q=k88hudson%20in:name
+                                                                   |
+                                                                 %20 represents a space in url
+
+
+
 
         -- and if I wanted to first page of the results and 5 results per page:
 
