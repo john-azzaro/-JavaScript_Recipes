@@ -648,8 +648,8 @@ EXAMPLE 2: GitHub API (moderate-hard)
 /*
     -- Suppose you want to make an app that accesses the GitHub API to search and display user repositories.
 
-    STEP 0: User story
-    ==================
+    STEP 1: Basic User Story and Process
+    =====================================
     -- Before anything, make sure you have a clear picture of what you're building by putting together a "user story".
     -- A "user story" is a methodical description of what the app you are building will do.
     -- A simple user story for the GitHub search app could look something like this:
@@ -666,52 +666,42 @@ EXAMPLE 2: GitHub API (moderate-hard)
     -- So with that in mind we can start to get an idea of what is required for our GitHub Search App.
     -- First, do a mockup of your HTML that you are going to use for the project.
 
-            1. HTML consisting of:
+            1. Main HTML:
                 A. Header tag with title in it (i.e. "Search on GitHub Repositories by Name").
                 B. Form with label, input, and submission.
                 C. Results section
-                D. Format of Results.
+            2. Result HTML:
+                D. Schema of Results.
 
-    -- The mockup shouls look something like this:
+    -- The mockup should look something like this (in html document):
 
                 <!-- Search form -->
 
-                    <section class="githubExample" style="border:solid">                                      // Section for github form and results.
-                        <h1>Search on GitHub Repositories by Name</h1>                                        // Title
-                        <form action="#" class="js-search-form">                                              // Form for searchin GitHub Repos by name:
-                            <label for="query">Please provide a name: </label>                                // directions for user input...
-                            <input type="text" class="js-query" placeholder="e.g., John-Azzaro">              // ... input field (with example placeholder).
-                            <button type="submit">Search</button>                                             // Button tp submit "Search".
+                    <section class="githubExample" style="border:solid">                                    // Section for github form and results.
+                        <h1>Search on GitHub Repositories by Name</h1>                                      // Title
+                        <form action="#" class="js-search-form">                                            // Form for searchin GitHub Repos by name:
+                            <label for="query">Please provide a name: </label>                              // directions for user input...
+                            <input type="text" class="js-query" placeholder="e.g., John-Azzaro">            // ... input field (with example placeholder).
+                            <button type="submit">Search</button>                                           // Button tp submit "Search".
                         </form>         
-                        <h2>Results</h2>                                                                      // Result section title
-                        <div class="js-search-results"></div>                                                 // Result section 
+                        <h2>Results</h2>                                                                    // Result section title
+                        <div class="js-search-results"></div>                                               // Result section 
                     </section>
 
                     
                 <!-- Result -->
 
-                    <div>
-                    <h2>
-                <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> by <a class="js-user-name" 
-                    href="${result.owner.html_url}" target="_blank">${result.owner.login}</a></h2>
-                <p>Number of watchers: <span class="js-watchers-count">${result.watchers_count}</span></p>
-                <p>Number of open issues: <span class="js-issues-count">${result.open_issues}</span></p>
-                </div>
+                    <div class="resultblock">
+                        <h2>
+                            <a class="js-result-name" href="http://google.com" target="_blank">Application Name</a> by    // Application anchor element.
+                            <a class="js-user-name" href="http://google.com" target="_blank">John Smith</a>               // User name anchor element.
+                        </h2>
+                        <p>Number of watchers: <span class="js-watchers-count">12</span></p>                              // 
+                        <p>Number of open issues: <span class="js-issues-count">8</span></p>
+                     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    STEP 1: Explore the API
+    STEP 2: Explore the API
     =======================
     -- For me, it seems like the best thing to do is explore the API to make sure what you want to accomplish in your user story
        is possible using the given API (i.e. GitHub API) you want to use.  
@@ -754,7 +744,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
             user_search_url	"https://api.github.com/search/users?q={query}{&page,per_page,sort,order}"
 
 
-    STEP 2: Establish endpoints, query strings, and additional seach parameters.
+    STEP 3: Establish endpoints, query strings, and additional seach parameters.
     ===========================================================================   
     -- Now suppose the objective of our app is to SEARCH the REPOSITORIES of GitHub for specific users or organizations.
         -- we see that the fourth option lets us do just that:
@@ -802,13 +792,10 @@ EXAMPLE 2: GitHub API (moderate-hard)
                       
 
 
-    STEP 3: GitHub Search App Architecture
+    STEP 4: GitHub Search App Architecture
     =======================================
-    -- For the GitHub Search App, we have a pretty straight-forward user story
-        
-            1. User should be able to put in a user name in the provided textfield.
-            2. Upon clicking the "search" button, useer will see 5 respositories displayed in the "results" section. 
-
+    -- Once you have a good idea of what you want your app to do and whether or not that API you've selected will work for you, 
+       
     -- 
 */
 
@@ -861,17 +848,17 @@ function displayGitHubSearchData(data) {
         return renderResult(item);
     }); 
     $('.js-search-results').html(results);
-  }
+}
 
 function renderResult(result) {
   return `
-    <div>
-      <h2>
-        <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> by <a class="js-user-name" 
-         href="${result.owner.html_url}" target="_blank">${result.owner.login}</a>
-      </h2>
-      <p>Number of watchers: <span class="js-watchers-count">${result.watchers_count}</span></p>
-      <p>Number of open issues: <span class="js-issues-count">${result.open_issues}</span></p>
+    <div class="resultblock">
+        <h2>
+            <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> by 
+            <a class="js-user-name" href="${result.owner.html_url}" target="_blank">${result.owner.login}</a>
+        </h2>
+        <p>Description: <span class="js-watchers-count">${result.description}</span></p>
+        <p>Last updated: <span class="js-issues-count">${result.updated_at}</span></p>
     </div>
   `;
 }
@@ -894,7 +881,7 @@ function initializeGitApp() {
     setUpEventHandlers();
 }
 
-$(initializeGitApp);
+$(handleSubmit);
 
 
 
