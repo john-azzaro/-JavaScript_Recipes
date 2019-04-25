@@ -654,11 +654,61 @@ EXAMPLE 2: GitHub API (moderate-hard)
     -- A "user story" is a methodical description of what the app you are building will do.
     -- A simple user story for the GitHub search app could look something like this:
 
-        1. GitHub Search App should be rendered to the page (i.e. show the app on the screen).
-            A. Header will introduce the user to the purpose of the app (i.e. "Search on GitHub Repositories by Name").
-            B. Form submission field with label directing user to provide a name.
-            C. Submit button to search.
-            D. Results section to display the results of the search.
+            1. GitHub Search App should be rendered to the page (i.e. show the app on the screen).
+                A. Header will introduce the user to the purpose of the app.
+                B. Form submission field with label directing user to provide a name.
+                C. Submit button to search.
+                D. Results section to display the results of the search.
+            2. The user will be directed to input a user name to search the GitHub repositories for.
+            3. The user will click the "Search" button to begin the search.
+            4. The user will see the results of that search in the "Results" section below the input form.
+
+    -- So with that in mind we can start to get an idea of what is required for our GitHub Search App.
+    -- First, do a mockup of your HTML that you are going to use for the project.
+
+            1. HTML consisting of:
+                A. Header tag with title in it (i.e. "Search on GitHub Repositories by Name").
+                B. Form with label, input, and submission.
+                C. Results section
+                D. Format of Results.
+
+    -- The mockup shouls look something like this:
+
+                <!-- Search form -->
+
+                    <section class="githubExample" style="border:solid">                                      // Section for github form and results.
+                        <h1>Search on GitHub Repositories by Name</h1>                                        // Title
+                        <form action="#" class="js-search-form">                                              // Form for searchin GitHub Repos by name:
+                            <label for="query">Please provide a name: </label>                                // directions for user input...
+                            <input type="text" class="js-query" placeholder="e.g., John-Azzaro">              // ... input field (with example placeholder).
+                            <button type="submit">Search</button>                                             // Button tp submit "Search".
+                        </form>         
+                        <h2>Results</h2>                                                                      // Result section title
+                        <div class="js-search-results"></div>                                                 // Result section 
+                    </section>
+
+                    
+                <!-- Result -->
+
+                    <div>
+                    <h2>
+                <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> by <a class="js-user-name" 
+                    href="${result.owner.html_url}" target="_blank">${result.owner.login}</a></h2>
+                <p>Number of watchers: <span class="js-watchers-count">${result.watchers_count}</span></p>
+                <p>Number of open issues: <span class="js-issues-count">${result.open_issues}</span></p>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     STEP 1: Explore the API
@@ -817,8 +867,9 @@ function renderResult(result) {
   return `
     <div>
       <h2>
-      <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> by <a class="js-user-name" 
-         href="${result.owner.html_url}" target="_blank">${result.owner.login}</a></h2>
+        <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> by <a class="js-user-name" 
+         href="${result.owner.html_url}" target="_blank">${result.owner.login}</a>
+      </h2>
       <p>Number of watchers: <span class="js-watchers-count">${result.watchers_count}</span></p>
       <p>Number of open issues: <span class="js-issues-count">${result.open_issues}</span></p>
     </div>
