@@ -648,10 +648,23 @@ EXAMPLE 2: GitHub API (moderate-hard)
 /*
     -- Suppose you want to make an app that accesses the GitHub API to search and display user repositories.
 
+    STEP 0: User story
+    ==================
+    -- Before anything, make sure you have a clear picture of what you're building by putting together a "user story".
+    -- A "user story" is a methodical description of what the app you are building will do.
+    -- A simple user story for the GitHub search app could look something like this:
+
+        1. 
+
 
     STEP 1: Explore the API
     =======================
-    -- First thing is go to the GitHub API address: https://api.github.com/
+    -- For me, it seems like the best thing to do is explore the API to make sure what you want to accomplish in your user story
+       is possible using the given API (i.e. GitHub API) you want to use.  
+       -- This makes sure you dont waste your time building out your code only to discover that the API does not provide the 
+          information you want to request and display in your own app.
+
+    -- So first thing is go to the GitHub API address: https://api.github.com/
     -- What you will see is a variety of endpoints available to you to build your application.  For example:
 
             current_user_url	"https://api.github.com/user"
@@ -737,9 +750,12 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
     STEP 3: GitHub Search App Architecture
     =======================================
+    -- For the GitHub Search App, we have a pretty straight-forward user story
+        
+            1. User should be able to put in a user name in the provided textfield.
+            2. Upon clicking the "search" button, useer will see 5 respositories displayed in the "results" section. 
+
     -- 
-
-
 */
 
 
@@ -773,14 +789,6 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
 const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';
 
-// function getDataFromApi(searchTerm, callback) {
-//   const query = {
-//     q: `${searchTerm} in:name`,
-//     per_page: 3
-//   }
-//   $.getJSON(GITHUB_SEARCH_URL, query, callback);
-// }
-
 function getDataFromApi(searchTerm, callback) {
     const settings = {
         url: GITHUB_SEARCH_URL,
@@ -795,7 +803,9 @@ function getDataFromApi(searchTerm, callback) {
 }
 
 function displayGitHubSearchData(data) {
-    const results = data.items.map((item) => renderResult(item));
+    const results = data.items.map(function(item) {
+        return renderResult(item);
+    }); 
     $('.js-search-results').html(results);
   }
 
