@@ -654,7 +654,11 @@ EXAMPLE 2: GitHub API (moderate-hard)
     -- A "user story" is a methodical description of what the app you are building will do.
     -- A simple user story for the GitHub search app could look something like this:
 
-        1. 
+        1. GitHub Search App should be rendered to the page (i.e. show the app on the screen).
+            A. Header will introduce the user to the purpose of the app (i.e. "Search on GitHub Repositories by Name").
+            B. Form submission field with label directing user to provide a name.
+            C. Submit button to search.
+            D. Results section to display the results of the search.
 
 
     STEP 1: Explore the API
