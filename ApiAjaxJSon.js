@@ -893,28 +893,59 @@ EXAMPLE 2: GitHub API (moderate-hard)
         -- In the user stories section, we said that the purpose of the app was to let the user INPUT a GitHub user name and SEARCH for it.
         -- Now we know that we in order to search, we need two things: a form to input the search term and a button to trigger the search.
         -- Below we need to add one event handler function, as well as add that event handler to the setUpEventHandlers so we can listen for interaction.
-        
 
 
 
-
+                function handleSubmit() {                 // ... run handleSubmit.
+                   
+                }
 
                 function setUpEventHandlers() {            
-                    handleSubmit      
+                    handleSubmit();                       // listen for handleSubmit...
                 }
 
                 function initializeGitHubApp() {          
                     setUpEventHandlers();                     
                 }
                 
-                $(initializeGitHubApp)                     
+                $(initializeGitHubApp);                     
 
 
+        Wiring up handleSubmit
+        ======================
+        -- We know that the user needs to do 2 things in order to successfully complete a search:
+                1. Fill in the input field with a GitHub user name.
+                2. Press "Search".
+        -- The fact that we have a search button hints that we need to first construct an event listener.
 
 
+               function handleSubmit() {                     // once handle submit runs...
+                   $('main').submit(function(event) {        // ... on submit (which is attached to the parent element "main" which will fire 
+                        ...                                  // for all descendants).
+                        ...
+                        ...
+                   });
+                }
 
 
+        -- So now what happens once the user clicks the button (and assuming they a GitHub user name in the input field)?
+        -- Now we break down the step-by-step process for submitting the user name.
 
+
+               function handleSubmit() {                                              // once handle submit runs...
+                   $('main').submit(function(event) {                                 // On submit... 
+                        event.preventDefault();                                       // First, make sure we prevent default form submission behavior.                                  
+                        const userInput = $(event.currentTarget).find('.js-input');   // Second, find the input to search for and assign it to "userInput".
+                        const searchTerm = userInput.val();                           // Third, set the current value of userInput to "searchTerm".
+                        userInput.val("");                                            // Fourth, clear out the value of "userInput"f or the next search.
+                        ...
+                   });
+                }
+
+        
+        -- At this point, we have saved the input as our search term.  Now what do we do with it?
+        -- Our objective to get data from the GitHub API, specifically, to find the GitHub user name.
+        -- To this end
 
 
 
