@@ -945,15 +945,63 @@ EXAMPLE 2: GitHub API (moderate-hard)
         
         -- At this point, we have saved the input as our search term.  Now what do we do with it?
         -- Our objective to get data from the GitHub API, specifically, to find the GitHub user name.
-        -- To this end
+        -- To this end, we need to GET THE DATA FROM THE API.
+
+        -- To do this, we need to create a function called getDataFromApi and pass two critical arguments:
+                1. The searchTerm.
+                2. Display the results of that searchTerm.
 
 
+              function handleSubmit() {                                              
+                   $('main').submit(function(event) {                                 
+                        event.preventDefault();                                                                        
+                        const userInput = $(event.currentTarget).find('.js-input');   
+                        const searchTerm = userInput.val();                           
+                        userInput.val("");                                           
+                        getDataFromApi(searchTerm, displayGitHubSearchData);          // here we run "getDataFromAPI" and pass "searchTerm" in the first
+                   });                                                                // slot and displayGitHubSearchData in the second slot.
+                }
 
 
+        -- What running getDataFromApi at the end of handleSubmit does is two main things:
+                1. pass along the search term so that we can use it to search the GitHub API.
+                2. take all that DATA and map it to our template (which we had previously constructed in our HTML mockup).
 
+        -- What does this mean?  We need to two additional functions:
+                1. getDataFromApi, which will literally get the data from the api.
+                2. displayGitHubSearchData, which will literally display the data we request from the GitHub API
 
+        
+                
+        Organic growth of additional functions
+        =======================================
+        -- So now our app starts to look like this:
+        -- Note how the app grew organically, one function following from the other.
+        
+            
+                function getDataFromAPI() {...}                        // This function will RETRIEVE information from the GitHub API.
 
+                function displayGitHubSearchData() {...}               // This function will DISPLAY infromation taken from the GitHub API.              
 
+                function handleSubmit() {                                              
+                   $('main').submit(function(event) {                                 
+                        event.preventDefault();                                                                        
+                        const userInput = $(event.currentTarget).find('.js-input');   
+                        const searchTerm = userInput.val();                           
+                        userInput.val("");                                           
+                        getDataFromApi(searchTerm, displayGitHubSearchData);          
+                   });                                                                
+                }
+
+                function setUpEventHandlers() {            
+                    handleSubmit();                       
+                }
+
+                function initializeGitHubApp() {          
+                    setUpEventHandlers();                     
+                }
+                
+                $(initializeGitHubApp);      
 
 */
 
