@@ -696,8 +696,8 @@ EXAMPLE 2: GitHub API (moderate-hard)
                             <a class="js-result-name" href="http://google.com" target="_blank">Application Name</a> by    // Application anchor element.
                             <a class="js-user-name" href="http://google.com" target="_blank">John Smith</a>               // User name anchor element.
                         </h2>
-                        <p>Number of watchers: <span class="js-watchers-count">12</span></p>                              // 
-                        <p>Number of open issues: <span class="js-issues-count">8</span></p>
+                        <p>Description: <span class="js-description">${result.description}</span></p>
+                        <p>Last updated: <span class="js-last-updated">${result.updated_at}</span></p>
                      </div>
 
 
@@ -711,37 +711,38 @@ EXAMPLE 2: GitHub API (moderate-hard)
     -- So first thing is go to the GitHub API address: https://api.github.com/
     -- What you will see is a variety of endpoints available to you to build your application.  For example:
 
-            current_user_url	"https://api.github.com/user"
-            current_user_authorizations_html_url	"https://github.com/settings/connections/applications{/client_id}"
-            authorizations_url	"https://api.github.com/authorizations"
-            code_search_url	"https://api.github.com/search/code?q={query}{&page,per_page,sort,order}"
-            commit_search_url	"https://api.github.com/search/commits?q={query}{&page,per_page,sort,order}"
-            emails_url	"https://api.github.com/user/emails"
-            emojis_url	"https://api.github.com/emojis"
-            events_url	"https://api.github.com/events"
-            feeds_url	"https://api.github.com/feeds"
-            followers_url	"https://api.github.com/user/followers"
-            following_url	"https://api.github.com/user/following{/target}"
-            gists_url	"https://api.github.com/gists{/gist_id}"
-            hub_url	"https://api.github.com/hub"
-            issue_search_url	"https://api.github.com/search/issues?q={query}{&page,per_page,sort,order}"
-            issues_url	"https://api.github.com/issues"
-            keys_url	"https://api.github.com/user/keys"
-            notifications_url	"https://api.github.com/notifications"
-            organization_repositories_url	"https://api.github.com/orgs/{org}/repos{?type,page,per_page,sort}"
-            organization_url	"https://api.github.com/orgs/{org}"
-            public_gists_url	"https://api.github.com/gists/public"
-            rate_limit_url	"https://api.github.com/rate_limit"
-            repository_url	"https://api.github.com/repos/{owner}/{repo}"
-            repository_search_url	"https://api.github.com/search/repositories?q={query}{&page,per_page,sort,order}"
-            current_user_repositories_url	"https://api.github.com/user/repos{?type,page,per_page,sort}"
-            starred_url	"https://api.github.com/user/starred{/owner}{/repo}"
-            starred_gists_url	"https://api.github.com/gists/starred"
-            team_url	"https://api.github.com/teams"
-            user_url	"https://api.github.com/users/{user}"
-            user_organizations_url	"https://api.github.com/user/orgs"
-            user_repositories_url	"https://api.github.com/users/{user}/repos{?type,page,per_page,sort}"
-            user_search_url	"https://api.github.com/search/users?q={query}{&page,per_page,sort,order}"
+    
+                current_user_url	                    "https://api.github.com/user"
+                current_user_authorizations_html_url	"https://github.com/settings/connections/applications{/client_id}"
+                authorizations_url	                    "https://api.github.com/authorizations"
+                code_search_url	                        "https://api.github.com/search/code?q={query}{&page,per_page,sort,order}"
+                commit_search_url	                    "https://api.github.com/search/commits?q={query}{&page,per_page,sort,order}"
+                emails_url	                            "https://api.github.com/user/emails"
+                emojis_url	                            "https://api.github.com/emojis"
+                events_url	                            "https://api.github.com/events"
+                feeds_url	                            "https://api.github.com/feeds"
+                followers_url	                        "https://api.github.com/user/followers"
+                following_url	                        "https://api.github.com/user/following{/target}"
+                gists_url	                            "https://api.github.com/gists{/gist_id}"
+                hub_url	                                "https://api.github.com/hub"
+                issue_search_url	                    "https://api.github.com/search/issues?q={query}{&page,per_page,sort,order}"
+                issues_url	                            "https://api.github.com/issues"
+                keys_url	                            "https://api.github.com/user/keys"
+                notifications_url	                    "https://api.github.com/notifications"
+                organization_repositories_url	        "https://api.github.com/orgs/{org}/repos{?type,page,per_page,sort}"
+                organization_url	                    "https://api.github.com/orgs/{org}"
+                public_gists_url	                    "https://api.github.com/gists/public"
+                rate_limit_url	                        "https://api.github.com/rate_limit"
+                repository_url	                        "https://api.github.com/repos/{owner}/{repo}"
+                repository_search_url	                "https://api.github.com/search/repositories?q={query}{&page,per_page,sort,order}"
+                current_user_repositories_url	        "https://api.github.com/user/repos{?type,page,per_page,sort}"
+                starred_url	                            "https://api.github.com/user/starred{/owner}{/repo}"
+                starred_gists_url	                    "https://api.github.com/gists/starred"
+                team_url	                            "https://api.github.com/teams"
+                user_url	                            "https://api.github.com/users/{user}"
+                user_organizations_url	                "https://api.github.com/user/orgs"
+                user_repositories_url	                "https://api.github.com/users/{user}/repos{?type,page,per_page,sort}"
+                user_search_url                     	"https://api.github.com/search/users?q={query}{&page,per_page,sort,order}"
 
 
     STEP 3: Establish endpoints, query strings, and additional seach parameters.
@@ -821,33 +822,31 @@ EXAMPLE 2: GitHub API (moderate-hard)
             ...
 
     -- For our app, let's say we want to display:
-        1. Repo
-        2. User Name
-        3. Description
-        4. Updated last.
+
+            1. Repo
+            2. User Name
+            3. Description
+            4. Updated last.
+
 
     -- Now the description and updated last are pretty stright forward.
     -- However, from our HTML mockup we want the Repo and User Name to link to the respective pages on GitHub, so we insert the html_url and
        the name/login
 
 
+            NAME________________              VALUE_________________________________________       LOCATION_________________________________________
 
-    NAME________________              VALUE_________________________________________       LOCATION_________________________________________
-
-    For Repo w/link:
-        1. name                      "react-formation"                                     items  =>  [x]  =>  name
-        2. html_url                  "https://github.com/k88hudson/react-formation"        items  =>  [x]  =>  html_url
-    
-    For User Name w/link:
-        3. owner.html_url            "https://github.com/k88hudson"                        items  =>  [x]  =>  owner  =>  html_url
-        4. owner.login               "k88hudson"                                           items  =>  [x]  =>  owner  =>  login
- 
-    For Description:
-        5. description               "Flight rules for git"                                items  =>  [x]  =>  description
-        6. updated_at                "2019-04-25T18:38:47Z"                                items  =>  [x]  =>  updated_at
-
-
-
+            For Repo w/link:
+                1. name                      "react-formation"                                     items  =>  [x]  =>  name
+                2. html_url                  "https://github.com/k88hudson/react-formation"        items  =>  [x]  =>  html_url
+            
+            For User Name w/link:
+                3. owner.html_url            "https://github.com/k88hudson"                        items  =>  [x]  =>  owner  =>  html_url
+                4. owner.login               "k88hudson"                                           items  =>  [x]  =>  owner  =>  login
+        
+            For Description:
+                5. description               "Flight rules for git"                                items  =>  [x]  =>  description
+                6. updated_at                "2019-04-25T18:38:47Z"                                items  =>  [x]  =>  updated_at
 
 
 
@@ -916,8 +915,8 @@ function renderResult(result) {
             <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> by 
             <a class="js-user-name" href="${result.owner.html_url}" target="_blank">${result.owner.login}</a>
         </h2>
-        <p>Description: <span class="js-watchers-count">${result.description}</span></p>
-        <p>Last updated: <span class="js-issues-count">${result.updated_at}</span></p>
+        <p>Description: <span class="js-description">${result.description}</span></p>
+        <p>Last updated: <span class="js-last-updated">${result.updated_at}</span></p>
     </div>
   `;
 }
