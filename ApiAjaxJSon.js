@@ -798,11 +798,42 @@ EXAMPLE 2: GitHub API (moderate-hard)
             total_count	168                         // this means the total number of repositories k88hudson currently has.
             incomplete_results	false               // this indicates if the search exceeded GitHub's query time limit.
           > items	[…]                             // this is an array of objects which represent a repository with "k88hudson" in it. 
-                                                    // "items" is where we will find information for our app.
+                                                    // -- "items" is where we will find information for our app.
+                                                    // -- Also remember, the values MUST be in double quotes if they are strings.
 
-    -- When you expand "items", you'll see  
+    -- When you expand "items", you'll see a long list of key/value pairs.
+
+            id          	    41055563
+            node_id	            "MDEwOlJlcG9zaXRvcnk0MTA1NTU2Mw=="
+            name	            "react-formation"
+            full_name	        "k88hudson/react-formation"
+            private	            false
+            owner	            {…}
+            html_url	        "https://github.com/k88hudson/react-formation"
+            description	        "Robust, testable forms with react in minutes"
+            fork	            false
+            url	                "https://api.github.com/r…88hudson/react-formation"
+            forks_url	        "https://api.github.com/r…on/react-formation/forks"
+            keys_url	        "https://api.github.com/r…-formation/keys{/key_id}"
+            collaborators_url	"https://api.github.com/r…aborators{/collaborator}"
+            teams_url	        "https://api.github.com/r…on/react-format
+            ...
+            ...
+
+    -- For our app, let's say we want to find 4 data points:
 
 
+    ___________________              ______________________________________________       _________________________________________________
+
+    For Repo w/link:
+        1. name                      "react-formation"                                     items  =>  [x]  =>  name
+        2. html_url                  "https://github.com/k88hudson/react-formation"        items  =>  [x]  =>  html_url
+    
+    For User Name w/link:
+        3. owner.html_url            "https://github.com/k88hudson"                        items  =>  [x]  =>  owner  =>  html_url
+        4. owner.login               "k88hudson"                                           items  =>  [x]  =>  owner  =>  login
+ 
+    For 
 
 
 
