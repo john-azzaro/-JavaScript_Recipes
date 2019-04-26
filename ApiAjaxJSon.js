@@ -664,7 +664,12 @@ EXAMPLE 2: GitHub API (moderate-hard)
             4. The user will see the results of that search in the "Results" section below the input form.
 
     -- So with that in mind we can start to get an idea of what is required for our GitHub Search App.
-    -- First, do a mockup of your HTML that you are going to use for the project.
+
+        HTML Mockup
+        ===========
+        -- First, do a mockup of your HTML that you are going to use for the project.
+        -- This is useful because you can mockup the design before you invest time in the JS coding and also figure 
+           out what data you'll need.
 
             1. Main HTML:
                 A. Header tag with title in it (i.e. "Search on GitHub Repositories by Name").
@@ -673,7 +678,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
             2. Result HTML:
                 D. Schema of Results.
 
-    -- The HTML mockup should look something like this (in html document):
+        -- The HTML mockup should look something like this (in html document):
 
                 <!-- Search form -->
 
@@ -699,6 +704,13 @@ EXAMPLE 2: GitHub API (moderate-hard)
                         <p>Description: <span class="js-description">${result.description}</span></p>
                         <p>Last updated: <span class="js-last-updated">${result.updated_at}</span></p>
                      </div>
+    
+
+        -- Above we have two HTML sections, the search form and the result template.
+        -- The Search form is pretty straight forward: title, form with lable, input, and submission button.  We also have a section for the results.
+        -- The result block will be the tricky part because that's the ultimate goal of our API, specifically to request data from the GitHub API and
+        display it in our app.
+
 
 
     STEP 2: Explore the API
@@ -711,7 +723,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
     -- So first thing is go to the GitHub API address: https://api.github.com/
     -- What you will see is a variety of endpoints available to you to build your application.  For example:
 
-    
+
                 current_user_url	                    "https://api.github.com/user"
                 current_user_authorizations_html_url	"https://github.com/settings/connections/applications{/client_id}"
                 authorizations_url	                    "https://api.github.com/authorizations"
@@ -834,8 +846,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
        the name/login
 
 
-            NAME________________              VALUE_________________________________________       LOCATION_________________________________________
-
+            NAME__________________           VALUE_________________________________________        LOCATION___________________________________
             For Repo w/link:
                 1. name                      "react-formation"                                     items  =>  [x]  =>  name
                 2. html_url                  "https://github.com/k88hudson/react-formation"        items  =>  [x]  =>  html_url
@@ -854,7 +865,65 @@ EXAMPLE 2: GitHub API (moderate-hard)
     =======================================
     -- Once you have a good idea of what you want your app to do (i.e. user story) and whether or not that API you've selected will work for 
        you (i.e explore API), you need to start considering how to setup you app architecture. 
-    -- In the case of the GitHub Search app I find it useful to start off with a basic 
+    -- Perhaps the most effecitve way is to write "pseudocode".  
+    -- "Psuedocode" is comprised of "function stubs", which is essentially functions without any code in it.
+        -- within these "function stubs", you can begin to map out the functionality of your app.
+    -- Note that at this stage, you shouldnt write code in the function stubs but plain descriptions of what you want the function to do.
+
+        Application Code Foundations
+        ============================    
+        -- The best way to start laying the foundations of any app is to start with an asynchronous callback, initialization, and event handler setup.
+        -- This is a common initial setup, so always best to start with what you know!
+
+
+                function setUpEventHandlers() {            // Function that listens for user interaction.
+                         
+                }
+
+                function initializeGitHubApp() {          // runs the initialization functions, such event handlers (i.e. listeners).
+                    setUpEventHandlers();                     
+                }
+
+                $(initializeGitHubApp)                     // Document ready function (i.e. asynchronous callback).
+
+        
+        
+        Implementing App functionality
+        ==============================
+        -- In the user stories section, we said that the purpose of the app was to let the user INPUT a GitHub user name and SEARCH for it.
+        -- Now we know that we in order to search, we need two things: a form to input the search term and a button to trigger the search.
+        -- Below we need to add one event handler function, as well as add that event handler to the setUpEventHandlers so we can listen for interaction.
+        
+
+
+
+
+
+                function setUpEventHandlers() {            
+                    handleSubmit      
+                }
+
+                function initializeGitHubApp() {          
+                    setUpEventHandlers();                     
+                }
+                
+                $(initializeGitHubApp)                     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 */
 
 
@@ -924,10 +993,10 @@ function renderResult(result) {
 function handleSubmit() {
   $('main').submit(function(event) {
     event.preventDefault();
-    const queryTarget = $(event.currentTarget).find('.js-query');
-    const query = queryTarget.val();
-    queryTarget.val("");
-    getDataFromApi(query, displayGitHubSearchData);
+    const userInput = $(event.currentTarget).find('.js-input');
+    const searchTerm = userInput.val();    
+    userInput.val("");
+    getDataFromApi(searchTerm, displayGitHubSearchData);
   });
 }
 
