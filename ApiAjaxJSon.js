@@ -674,41 +674,22 @@ EXAMPLE 2: GitHub API (moderate-hard)
             -- Dont worry about classes, links, etc. for now, only the structure is necessary at this point to give yourself
                a clear idea what you want your app to look like:      
 
-                    1. Section 1: 
+                    1. Search Section: 
                         A. Title: "Search on GitHub Repositories by Name"
                         B. Form-lable: "Please provide a name: "
                         C. Form-input: "e.g., John-Azzaro"
                         D. Search Button: "Search"
 
-                    2. Section 2:
+                    2. Result Section:
                         A. "Results"
-                            I. [My First Repo] by [Joe Smith]
+                            I. [My First Repo] by [Joe Smith]                               // brackets denote anchor links.
                            II. Description: This is the description for my first repo!
                           III. Last Updated: June 24, 2018
 
 
-        -- So from our initial HTML mockup concept, we need 2 sections.
-
-                   1. Section 1:
-                        A. Header tag with title in it (i.e. "Search on GitHub Repositories by Name").
-                            -- So for the header, we can use an h1, h2, h3, etc. element.
-                        B. Form with label, input, and submission.
-                            -- So we'll need a form with: label, input, and submit button at the very least.
-                        C. Results section
-                            -- So we'll need a div section to put our results to.
-
-                    2. Section 2:
-                        D. Schema of Results.
-                            -- So we'll need a template that all our data will map out as.
-
-
-
-
-
-
         -- The HTML mockup should look something like this (in html document):
 
-                <!-- Search form -->
+                <!-- Search Section -->
 
                     <section>                                                                // Section for github form and results.
                         <h1>Search on GitHub Repositories by Name</h1>                       // Title
@@ -722,9 +703,9 @@ EXAMPLE 2: GitHub API (moderate-hard)
                     </section>
 
                     
-                <!-- Result -->
+                <!-- Result section-->
 
-                    <div class="resultblock">
+                    <div class="results">
                         <h2>
                             <a href="http://google.com">Repository Name</a> by               // Repository name anchor element.
                             <a href="http://google.com">John Smith</a>                       // User name anchor element.
@@ -734,17 +715,12 @@ EXAMPLE 2: GitHub API (moderate-hard)
                      </div>
     
 
-        -- Above we have two HTML sections, the search form and the result template.
-        -- The Search form is pretty straight forward: title, form with lable, input, and submission button.  We also have a section for the results.
-        -- The result block will be the tricky part because that's the ultimate goal of our API, specifically to request data from the GitHub API and
-        display it in our app.
-
-
+       
 
     STEP 2: Explore the API
     =======================
-    -- For me, it seems like the best thing to do is explore the API to make sure what you want to accomplish in your user story
-       is possible using the given API (i.e. GitHub API) you want to use.  
+    -- After establishing your user story and HTML mockup, best thing to do is explore the API to make sure what you want 
+       to accomplish in your user story is possible using the given API (i.e. GitHub API) you want to use.  
        -- This makes sure you dont waste your time building out your code only to discover that the API does not provide the 
           information you want to request and display in your own app.
 
@@ -920,8 +896,8 @@ EXAMPLE 2: GitHub API (moderate-hard)
         ==============================
         -- In the user stories section, we said that the purpose of the app was to let the user INPUT a GitHub user name and SEARCH for it.
         -- Now we know that we in order to search, we need two things: a form to input the search term and a button to trigger the search.
-        -- Below we need to add one event handler function, as well as add that event handler to the setUpEventHandlers so we can listen for interaction.
 
+        -- Below we need to add one event handler function, as well as add that event handler to the setUpEventHandlers so we can listen for interaction.
 
 
                 function handleSubmit() {                 // ... run handleSubmit.
@@ -937,6 +913,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
                 }
                 
                 $(initializeGitHubApp);                     
+
 
 
         Wiring up handleSubmit
@@ -1085,7 +1062,7 @@ function displayGitHubSearchData(data) {
 
 function renderResult(result) {
   return `
-    <div class="resultblock">
+    <div class="results">
         <h2>
             <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> by 
             <a class="js-user-name" href="${result.owner.html_url}" target="_blank">${result.owner.login}</a>
