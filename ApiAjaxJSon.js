@@ -673,7 +673,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
             2. Result HTML:
                 D. Schema of Results.
 
-    -- The mockup should look something like this (in html document):
+    -- The HTML mockup should look something like this (in html document):
 
                 <!-- Search form -->
 
@@ -820,10 +820,19 @@ EXAMPLE 2: GitHub API (moderate-hard)
             ...
             ...
 
-    -- For our app, let's say we want to find 4 data points:
+    -- For our app, let's say we want to display:
+        1. Repo
+        2. User Name
+        3. Description
+        4. Updated last.
+
+    -- Now the description and updated last are pretty stright forward.
+    -- However, from our HTML mockup we want the Repo and User Name to link to the respective pages on GitHub, so we insert the html_url and
+       the name/login
 
 
-    ___________________              ______________________________________________       _________________________________________________
+
+    NAME________________              VALUE_________________________________________       LOCATION_________________________________________
 
     For Repo w/link:
         1. name                      "react-formation"                                     items  =>  [x]  =>  name
@@ -833,7 +842,9 @@ EXAMPLE 2: GitHub API (moderate-hard)
         3. owner.html_url            "https://github.com/k88hudson"                        items  =>  [x]  =>  owner  =>  html_url
         4. owner.login               "k88hudson"                                           items  =>  [x]  =>  owner  =>  login
  
-    For 
+    For Description:
+        5. description               "Flight rules for git"                                items  =>  [x]  =>  description
+        6. updated_at                "2019-04-25T18:38:47Z"                                items  =>  [x]  =>  updated_at
 
 
 
