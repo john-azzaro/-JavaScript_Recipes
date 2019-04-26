@@ -745,7 +745,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
 
     STEP 3: Establish endpoints, query strings, and additional seach parameters.
-    ===========================================================================   
+    ============================================================================   
     -- Now suppose the objective of our app is to SEARCH the REPOSITORIES of GitHub for specific users or organizations.
         -- we see that the fourth option lets us do just that:
         -- Also, for more information see GitHub API documentation: https://developer.github.com/v3/search/#search-repositories
@@ -791,12 +791,29 @@ EXAMPLE 2: GitHub API (moderate-hard)
                                                                                           ... per_page=5 means display 5 results per page.
                       
 
+    STEP 4: Determine key/values you wish to use in your app
+    ========================================================
+    -- When you follow the above link you'll see JSON data for search repositories.
 
-    STEP 4: GitHub Search App Architecture
+            total_count	168                         // this means the total number of repositories k88hudson currently has.
+            incomplete_results	false               // this indicates if the search exceeded GitHub's query time limit.
+          > items	[…]                             // this is an array of objects which represent a repository with "k88hudson" in it. 
+                                                    // "items" is where we will find information for our app.
+
+    -- When you expand "items", you'll see  
+
+
+
+
+
+
+
+
+    STEP 5: GitHub Search App Architecture
     =======================================
-    -- Once you have a good idea of what you want your app to do and whether or not that API you've selected will work for you, 
-       
-    -- 
+    -- Once you have a good idea of what you want your app to do (i.e. user story) and whether or not that API you've selected will work for 
+       you (i.e explore API), you need to start considering how to setup you app architecture. 
+    -- In the case of the GitHub Search app I find it useful to start off with a basic 
 */
 
 
