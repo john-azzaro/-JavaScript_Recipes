@@ -668,9 +668,10 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
     STEP 2: Build a HTML Mockup
     ===========================
-        -- First, do a HTML mockup of your App.
+        -- First, do a HTML mockup of your App in you HTML document.
             -- This is useful because you can mockup the design before you invest time in the JS coding  
                and also figure out what data you'll need.
+            -- As you begin to build out the app, you will be able to transfer parts to your .js document.
             -- Dont worry about classes, links, etc. for now, only the structure is necessary at this point to give yourself
                a clear idea what you want your app to look like:      
 
@@ -716,7 +717,6 @@ EXAMPLE 2: GitHub API (moderate-hard)
     
 
        
-
     STEP 2: Explore the API
     =======================
     -- After establishing your user story and HTML mockup, best thing to do is explore the API to make sure what you want 
@@ -759,6 +759,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
                 user_organizations_url	                "https://api.github.com/user/orgs"
                 user_repositories_url	                "https://api.github.com/users/{user}/repos{?type,page,per_page,sort}"
                 user_search_url                     	"https://api.github.com/search/users?q={query}{&page,per_page,sort,order}"
+
 
 
     STEP 3: Establish endpoints, query strings, and additional seach parameters.
@@ -835,7 +836,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
             collaborators_url	"https://api.github.com/r…aborators{/collaborator}"
             teams_url	        "https://api.github.com/r…on/react-format
             ...
-            ...
+            ... 
 
     -- For our app, let's say we want to display:
 
@@ -865,8 +866,8 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
 
 
-    STEP 5: GitHub Search App Architecture
-    =======================================
+    STEP 5: IMplementing App Architecture
+    =====================================
     -- Once you have a good idea of what you want your app to do (i.e. user story) and whether or not that API you've selected will work for 
        you (i.e explore API), you need to start considering how to setup you app architecture. 
     -- Perhaps the most effecitve way is to write "pseudocode".  
@@ -874,8 +875,8 @@ EXAMPLE 2: GitHub API (moderate-hard)
         -- within these "function stubs", you can begin to map out the functionality of your app.
     -- Note that at this stage, you shouldnt write code in the function stubs but plain descriptions of what you want the function to do.
 
-        Application Code Foundations
-        ============================    
+        I. Starting with the right foundation
+        =====================================    
         -- The best way to start laying the foundations of any app is to start with an asynchronous callback, initialization, and event handler setup.
         -- This is a common initial setup, so always best to start with what you know!
 
@@ -892,8 +893,8 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
         
         
-        Implementing App functionality
-        ==============================
+        II. Implementing App functionality
+        ==================================
         -- In the user stories section, we said that the purpose of the app was to let the user INPUT a GitHub user name and SEARCH for it.
         -- Now we know that we in order to search, we need two things: a form to input the search term and a button to trigger the search.
 
@@ -916,8 +917,8 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
 
 
-        Wiring up handleSubmit
-        ======================
+        III. Wiring up handleSubmit
+        ===========================
         -- We know that the user needs to do 2 things in order to successfully complete a search:
                 1. Fill in the input field with a GitHub user name.
                 2. Press "Search".
@@ -978,9 +979,12 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
         
                 
-        Organic growth of additional functions
-        =======================================
-        -- 
+        IV. Building out the application from handleSubmit
+        ==================================================
+        -- Now that the app has the proper foundation, specifically that the app is listening for the search submit, we need to consider
+           what to do next.
+        -- Because we are drawing from an API, first we need a way to get data from that API, thus we'll need a "getDataFromApi" function.
+        -- Second, we need a way to display that data to our results section, thus we'll need a "displayGitHubSearchData".
         
             
                 function getDataFromAPI() {...}                           // This function will RETRIEVE information from the GitHub API.
@@ -1006,6 +1010,13 @@ EXAMPLE 2: GitHub API (moderate-hard)
                 }
                 
                 $(initializeGitHubApp);      
+
+
+
+        V. Getting data from the GitHub API
+        ===================================
+        -- 
+
 
 */
 
