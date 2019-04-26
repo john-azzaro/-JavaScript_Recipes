@@ -648,12 +648,13 @@ EXAMPLE 2: GitHub API (moderate-hard)
 /*
     -- Suppose you want to make an app that accesses the GitHub API to search and display user repositories.
 
-    STEP 1: Basic User Story and Process
-    =====================================
+    STEP 1: Establish User Story
+    ============================
     -- Before anything, make sure you have a clear picture of what you're building by putting together a "user story".
     -- A "user story" is a methodical description of what the app you are building will do.
-    -- A simple user story for the GitHub search app could look something like this:
 
+    -- A simple user story for the GitHub search app could look something like this:
+    
             1. GitHub Search App should be rendered to the page (i.e. show the app on the screen).
                 A. Header will introduce the user to the purpose of the app.
                 B. Form submission field with label directing user to provide a name.
@@ -662,35 +663,62 @@ EXAMPLE 2: GitHub API (moderate-hard)
             2. The user will be directed to input a user name to search the GitHub repositories for.
             3. The user will click the "Search" button to begin the search.
             4. The user will see the results of that search in the "Results" section below the input form.
+  
+    
 
-    -- So with that in mind we can start to get an idea of what is required for our GitHub Search App.
+    STEP 2: Build a HTML Mockup
+    ===========================
+        -- First, do a HTML mockup of your App.
+            -- This is useful because you can mockup the design before you invest time in the JS coding  
+               and also figure out what data you'll need.
+            -- Dont worry about classes, links, etc. for now, only the structure is necessary at this point to give yourself
+               a clear idea what you want your app to look like:      
 
-        HTML Mockup
-        ===========
-        -- First, do a mockup of your HTML that you are going to use for the project.
-        -- This is useful because you can mockup the design before you invest time in the JS coding and also figure 
-           out what data you'll need.
+                    1. Section 1: 
+                        A. Title: "Search on GitHub Repositories by Name"
+                        B. Form-lable: "Please provide a name: "
+                        C. Form-input: "e.g., John-Azzaro"
+                        D. Search Button: "Search"
 
-            1. Main HTML:
-                A. Header tag with title in it (i.e. "Search on GitHub Repositories by Name").
-                B. Form with label, input, and submission.
-                C. Results section
-            2. Result HTML:
-                D. Schema of Results.
+                    2. Section 2:
+                        A. "Results"
+                            I. [My First Repo] by [Joe Smith]
+                           II. Description: This is the description for my first repo!
+                          III. Last Updated: June 24, 2018
+
+
+        -- So from our initial HTML mockup concept, we need 2 sections.
+
+                   1. Section 1:
+                        A. Header tag with title in it (i.e. "Search on GitHub Repositories by Name").
+                            -- So for the header, we can use an h1, h2, h3, etc. element.
+                        B. Form with label, input, and submission.
+                            -- So we'll need a form with: label, input, and submit button at the very least.
+                        C. Results section
+                            -- So we'll need a div section to put our results to.
+
+                    2. Section 2:
+                        D. Schema of Results.
+                            -- So we'll need a template that all our data will map out as.
+
+
+
+
+
 
         -- The HTML mockup should look something like this (in html document):
 
                 <!-- Search form -->
 
-                    <section class="githubExample" style="border:solid">                                    // Section for github form and results.
-                        <h1>Search on GitHub Repositories by Name</h1>                                      // Title
-                        <form action="#" class="js-search-form">                                            // Form for searchin GitHub Repos by name:
-                            <label for="query">Please provide a name: </label>                              // directions for user input...
-                            <input type="text" class="js-query" placeholder="e.g., John-Azzaro">            // ... input field (with example placeholder).
-                            <button type="submit">Search</button>                                           // Button tp submit "Search".
+                    <section>                                                                // Section for github form and results.
+                        <h1>Search on GitHub Repositories by Name</h1>                       // Title
+                        <form action="#">                                                    // Form for searchin GitHub Repos by name:
+                            <label for="query">Please provide a name: </label>               // directions for user input...
+                            <input type="text" placeholder="e.g., Joe Smith">                // ... input field (with example placeholder).
+                            <button type="submit">Search</button>                            // Button tp submit "Search".
                         </form>         
-                        <h2>Results</h2>                                                                    // Result section title
-                        <div class="js-search-results"></div>                                               // Result section 
+                        <h2>Results</h2>                                                     // Result section title
+                        <div>Results go here</div>                                           // Result section 
                     </section>
 
                     
@@ -698,11 +726,11 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
                     <div class="resultblock">
                         <h2>
-                            <a class="js-result-name" href="http://google.com" target="_blank">Application Name</a> by    // Application anchor element.
-                            <a class="js-user-name" href="http://google.com" target="_blank">John Smith</a>               // User name anchor element.
+                            <a href="http://google.com">Repository Name</a> by               // Repository name anchor element.
+                            <a href="http://google.com">John Smith</a>                       // User name anchor element.
                         </h2>
-                        <p>Description: <span class="js-description">${result.description}</span></p>
-                        <p>Last updated: <span class="js-last-updated">${result.updated_at}</span></p>
+                        <p>Description: <span>Description goes here</span></p>               // Description of respository.    
+                        <p>Last updated: <span>Updated last goes here</span></p>             // Last updated date of repository.
                      </div>
     
 
@@ -975,13 +1003,12 @@ EXAMPLE 2: GitHub API (moderate-hard)
                 
         Organic growth of additional functions
         =======================================
-        -- So now our app starts to look like this:
-        -- Note how the app grew organically, one function following from the other.
+        -- 
         
             
-                function getDataFromAPI() {...}                        // This function will RETRIEVE information from the GitHub API.
-
-                function displayGitHubSearchData() {...}               // This function will DISPLAY infromation taken from the GitHub API.              
+                function getDataFromAPI() {...}                           // This function will RETRIEVE information from the GitHub API.
+   
+                function displayGitHubSearchData() {...}                  // This function will DISPLAY infromation taken from the GitHub API.              
 
                 function handleSubmit() {                                              
                    $('main').submit(function(event) {                                 
