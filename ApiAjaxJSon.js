@@ -534,9 +534,9 @@ How do you implement an app with JSON?
 //////////////////////////////////////
 
 
-function getDataFromApi(searchTerm, callback) {
+function getDataFromApi(searchTerm1, searchTerm2, callback) {
   const query = {
-    q: `${searchTerm} in:name`,
+    q: `${searchTerm}`,
     per_page: 3
   }
   $.getJSON(GITHUB_SEARCH_URL, query, callback);
@@ -547,19 +547,26 @@ function getDataFromApi(searchTerm, callback) {
 /*
 How do you implement an app with AJAX?
 //////////////////////////////////////// 
+    -- While similar to getJSON, AJAX gives you more control over configuration.
+    -- AJAX takes a single settings object as its argument (i.e. the "settings" in $.ajax(settings) and an asynchronous 
+       request for the desired data (i.e. the $.ajax() in $.ajaz(settings)). 
 
- function getDataFromApi(searchTerm, callback) {
-    const settings = {
-        url: GITHUB_SEARCH_URL,
-        data: {
-            q: `${searchTerm} in:name`,
-            per_page: 5
-        },
-        dataType: 'json',
-        success: callback
-    };
-    $.ajax(settings);
-}
+       INFORMATION PASSED:  (Jon-Snow)
+
+        function getDataFromApi(searchTerm, callback) {
+            const settings = {                                           // settings object with relevant information to request from API.
+                url: http://api.website.com/search,                      // API url. 
+                data: {                                                  // elements of query string in the settings object.
+                    q: `${searchTerm}`,                                  // search term passed to function (i.e "Jon Snow").
+                },
+                dataType: 'json',                         
+                success: callback,
+                error: function(err) {
+                    console.error(err);
+                }
+            };
+            $.ajax(settings);                                             // asynchronous requests with settings as its argument.
+        }
 
 */
 
@@ -576,7 +583,6 @@ X. How do you implement an app using JSON or AJAX?
 
     -- 
 */
-
 
 
 
@@ -613,6 +619,9 @@ EXAMPLE 1: DogPic API (easy)
 /*
 EXAMPLE 2: Song Lyrics API (moderate)
 //////////////////////////////////////
+
+    -- Suppose you want to make an app that
+
 */
 
 
