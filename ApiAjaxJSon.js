@@ -1018,29 +1018,28 @@ EXAMPLE 2: GitHub API (moderate-hard)
         -- We've built our code to simply take in a user name (i.e. searchTerm) and submit it. But now we need initiate a 
            call to the GitHub server so that we can retrieve the results of our searchTerm query.
     
-        -- There are two ways we can request data from the GitHub server and then make that data accessible in the app.
-            1. getJson
-            2. AJAX
+        -- In this example, we'll use AJAX because it gives you more control over configuration.
 
-        -- In this example, we'll use AJAX because it provides a wider range of parameters for our call to the GitHub server.
+        -- Lets take a look at the the composition of the getDatafromApi function: 
             
-            
-        
-                 function getDataFromApi(searchTerm, callback) {
-                    const API_END_POINT = 'https://api.website.com/search/'; 
-                    const settings = {
-                        ...
-                        ...
-                        ...
+                   
+                 function getDataFromApi(searchTerm, callback) {                    // Function with "SearchTerm" passed from handleSubmit and a callback.
+                    const API_END_POINT = 'https://api.website.com/search/';        // API endpoint (i.e. web url before we add queries)   
+                    const settings = {                                              // Settings Object
+                        url: API_END_POINT,                                         // Url (i.e. the endpoint we want to come first)
+                        data: {                                                     // Data is the query data (i.e. the parameters that follow the endpoint ) 
+                            q: `${searchTerm} in:name`,                             //
+                        }
+                
                     };
                     $.ajax(settings);
 
 
 
+                https://api.website.com/search/?q=john-snow%20in:name&page=1&per_page=5
 
 
 
-                    
 
                                      function getDataFromApi(searchTerm, callback) {
                     const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories'; 
