@@ -893,8 +893,8 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
         
         
-        II. Implementing App functionality
-        ==================================
+        II. Implementing Basic App functionality
+        ========================================
         -- In the user stories section, we said that the purpose of the app was to let the user INPUT a GitHub user name and SEARCH for it.
         -- Now we know that we in order to search, we need two things: a form to input the search term and a button to trigger the search.
 
@@ -1015,8 +1015,31 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
         V. Getting data from the GitHub API
         ===================================
-        -- We've built our code to simply take in a user name (i.e. searchTerm) and submit it. But now we need initiate a 
+        -- We've built our code to simply take in a user name (i.e. searchTerm) and submit it. 
+        -- But remember the last line of code in our handleSubmit:
+
+                    getDataFromApi(searchTerm, displayGitHubSearchData); 
+
+        -- Calling this function does a few things:
+        
+                1. Call the function getDataFromAPI...             3. Call displayGitHubSearchData for the results.
+                                \                                  /
+                            getDataFromApi(searchTerm, displayGitHubSearchData);  
+                                                |
+                                        2. Pass in the searchTerm as an argument...
+
+
+
+
+                    
+        But now we need initiate a 
            call to the GitHub server so that we can retrieve the results of our searchTerm query.
+
+
+
+
+
+        
     
         -- In this example, we'll use AJAX because it gives you more control over configuration.
         -- Remember that AJAX takes a single settings object as its argument and an asynchronous request for the desired data.
@@ -1053,7 +1076,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
                                                  data => q                          |                                   
                                                                       data => page: 1
 
-                                                                      
+
         VI. Putting together the GitHub AJAX request
         ============================================    
         
@@ -1062,17 +1085,18 @@ EXAMPLE 2: GitHub API (moderate-hard)
                     const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';      // GitHub API endpoint for searching urls.
                     const settings = {                                                           // The settings object for the AJAX request contains...
                         url: GITHUB_SEARCH_URL,                                                  // ... the endpoint GITHUB_SEARCH_URL ...                        
-                        data: {                                                                  // ... and query strings and parameters including ...
-                            q: `${searchTerm} in:name`,                                          // ... the searchTerm itself 
-                            per_page: 5
+                        data: {                                                                  // ... and query strings and parameters including:
+                            q: `${searchTerm} in:name`,                                          // the searchTerm itself ...
+                            page: 1,                                                             // ... with additional queries ...
+                            per_page: 5                                                          // ... with additional queries.
                         },
-                        dataType: 'json',
-                        success: callback
+                        dataType: 'json',                                                        // We want the response back to be in JSON format
+                        success: callback                                                        // And if the response is successful, callback.
                     };
-                    $.ajax(settings);
+                    $.ajax(settings);                                                            // Perfom the AJAX request for the data we want (settings).
                 }
 
-                function displayGitHubSearchData() {...}  
+                function displayGitHubSearchData() {...}                                        
 
                 function handleSubmit() {
                     $('main').submit(function(event) {
@@ -1132,7 +1156,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
 
 
-function getDataFromApi(searchTerm, callback, error) {
+function getDataFromApi(searchTerm, callback) {
     const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';
     const settings = {
         url: GITHUB_SEARCH_URL,
