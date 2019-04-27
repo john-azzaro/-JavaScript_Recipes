@@ -12,7 +12,7 @@
 //        + What kind of data types can JSON use?
 //        + What can JSON do?
 //     5. What are the unique features of JSON?
-//        + What does a typical JSON schema (i.e. structure) look like?
+//        + What does a typical JSON schema (e.g. structure) look like?
 //     6. What is the format of XML and why is JSON better? 
 //     7. What are the difference between JavaScript Objects and JSON?
 //     8. How do you loop through a JSON object?
@@ -60,7 +60,7 @@
     ======================
     -- Common API's include REST API's and library API's.
     -- The first common API is a REST API.
-        -- Web API's (most likely REST API's) expse different endpoint (i.e. URLs) which you can access to get certian data from that API.
+        -- Web API's (most likely REST API's) expse different endpoint (e.g. URLs) which you can access to get certian data from that API.
         -- you could also access those endpoints to modify the data on those servers.
         -- BUT it will only be what the API will expose to you and wants you to modify.
             -- for example, you could update a user through a REST API, but the API may only let you update the name or the email and not
@@ -153,7 +153,7 @@
     -- Most programming languages can be used with JSON.
     -- NoSQL databases like MongoDB use JSON formats.
     -- The media type is application/json.
-    -- The extension is saved as .json (i.e. like javascript is .js).
+    -- The extension is saved as .json (e.g. like javascript is .js).
     
     What kind of data types can JSON use?
     =====================================
@@ -168,9 +168,9 @@
 
     What can JSON do?
     =================
-    -- JSON can be parsed into JavaScript (i.e. let obj = JSON.parse(string)).
-    -- JSON can be parse objects back into strings (i.e. let string = JSON.stringify(obj)).
-    -- JSON has what is known as a JSON schema (i.e. structure).
+    -- JSON can be parsed into JavaScript (e.g. let obj = JSON.parse(string)).
+    -- JSON can be parse objects back into strings (e.g. let string = JSON.stringify(obj)).
+    -- JSON has what is known as a JSON schema (e.g. structure).
     -- JSON is scalable, meaning you can expand and add more data.  
     -- JSON is extended from JavaScript, meaning its not entirely the same.
     -- JSON works well with AJAX which is common format for retrieving data.
@@ -181,13 +181,13 @@
 5. What are the unique features of JSON?
 ////////////////////////////////////////
     -- used like a JavaScript Object where you can give properties and values.
-    -- JSON properties and values use double quotes (i.e. "firstName" : "Joe").
-    -- JSON objects always start and end with curly braces (i.e. {}).
+    -- JSON properties and values use double quotes (e.g. "firstName" : "Joe").
+    -- JSON objects always start and end with curly braces (e.g. {}).
     -- JSON Names and Values are seperated by a colon.
     -- More than one pair of Name and Value is seperated by a comma.
 
     
-    What does a typical JSON schema (i.e. structure) look like?
+    What does a typical JSON schema (e.g. structure) look like?
     ===========================================================
 
                 {
@@ -257,13 +257,13 @@
 7. What are the difference between JavaScript Objects and JSON?
 ///////////////////////////////////////////////////////////////
     -- There is a definite difference between JSON and JavaScript Objects.
-    -- however, the difference are minimal (i.e. double quotes for JSON compared to JavaScript, etc.)
+    -- however, the difference are minimal (e.g. double quotes for JSON compared to JavaScript, etc.)
 
     -- JSON has the following syntax constraints:
-        -- Object keys MIST be in strings (i.e. "firstName", "address", etc.).
+        -- Object keys MIST be in strings (e.g. "firstName", "address", etc.).
         -- JSON uses double quotes.
         -- Values can either be: string, number, JSON object, array, boolean, null.
-        -- Duplicate keys (i.e. "spouse": null, "spouse": "Samantha") produce undefined.
+        -- Duplicate keys (e.g. "spouse": null, "spouse": "Samantha") produce undefined.
         -- A basic example of a JavaScript object:
 */     
      
@@ -484,7 +484,7 @@ ______/_____  __________________________________/_______________________________
     How do you output information from your object?
     ===============================================
     -- So now we should be ready to output our data taken from JSON and then converted to a JavaScript object!
-    -- to do this, we call dataJSON (which parses JSON and transforms it into a useable object), specify the index value (i.e. 0)
+    -- to do this, we call dataJSON (which parses JSON and transforms it into a useable object), specify the index value (e.g. 0)
        and then chain the desired key whose value we want to access.
 */
             console.log(dataJSON.results[0].cell);    // 997-407-7418
@@ -720,7 +720,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
     STEP 2: Explore the API
     =======================
     -- After establishing your user story and HTML mockup, best thing to do is explore the API to make sure what you want 
-       to accomplish in your user story is possible using the given API (i.e. GitHub API) you want to use.  
+       to accomplish in your user story is possible using the given API (e.g. GitHub API) you want to use.  
        -- This makes sure you dont waste your time building out your code only to discover that the API does not provide the 
           information you want to request and display in your own app.
 
@@ -779,7 +779,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
 
                         Endpoint
-            ________________/_________________________       Q indicates the query string we want to search by (i.e. john-smith, sallyK, etc.).
+            ________________/_________________________       Q indicates the query string we want to search by (e.g. john-smith, sallyK, etc.).
             |                                         |     /
             https://api.github.com/search/repositories?q={query}{&page,per_page,sort,order}
                                                      /           |                        \
@@ -885,11 +885,11 @@ EXAMPLE 2: GitHub API (moderate-hard)
                          
                 }
 
-                function initializeGitHubApp() {          // runs the initialization functions, such event handlers (i.e. listeners).
+                function initializeGitHubApp() {          // runs the initialization functions, such event handlers (e.g. listeners).
                     setUpEventHandlers();                     
                 }
 
-                $(initializeGitHubApp)                     // Document ready function (i.e. asynchronous callback).
+                $(initializeGitHubApp)                     // Document ready function (e.g. asynchronous callback).
 
         
         
@@ -1015,7 +1015,50 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
         V. Getting data from the GitHub API
         ===================================
-        -- 
+        -- We've built our code to simply take in a user name (i.e. searchTerm) and submit it. But now we need initiate a 
+           call to the GitHub server so that we can retrieve the results of our searchTerm query.
+    
+        -- There are two ways we can request data from the GitHub server and then make that data accessible in the app.
+            1. getJson
+            2. AJAX
+
+        -- In this example, we'll use AJAX because it provides a wider range of parameters for our call to the GitHub server.
+            
+            
+        
+                 function getDataFromApi(searchTerm, callback) {
+                    const API_END_POINT = 'https://api.website.com/search/'; 
+                    const settings = {
+                        ...
+                        ...
+                        ...
+                    };
+                    $.ajax(settings);
+
+
+
+
+
+
+                    
+
+                                     function getDataFromApi(searchTerm, callback) {
+                    const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories'; 
+                    const settings = {
+                        url: GITHUB_SEARCH_URL,
+                        data: {
+                            q: `${searchTerm} in:name`,
+                            per_page: 5
+                        },
+                        dataType: 'json',
+                        success: callback
+                    };
+                    $.ajax(settings);
+}
+
+
+
+
 
 
 */
@@ -1049,9 +1092,10 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
 
 
-const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';
+
 
 function getDataFromApi(searchTerm, callback) {
+    const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';
     const settings = {
         url: GITHUB_SEARCH_URL,
         data: {
