@@ -672,8 +672,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
             -- This is useful because you can mockup the design before you invest time in the JS coding  
                and also figure out what data you'll need.
             -- As you begin to build out the app, you will be able to transfer parts to your .js document.
-            -- Dont worry about classes, links, etc. for now, only the structure is necessary at this point to give yourself
-               a clear idea what you want your app to look like:      
+  
 
                     1. Search Section: 
                         A. Title: "Search on GitHub Repositories by Name"
@@ -689,30 +688,36 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
 
         -- The HTML mockup should look something like this (in html document):
+        -- Note that js class names should closely reflect what each element does.
 
                 <!-- Search Section -->
 
-                    <section>                                                                // Section for github form and results.
-                        <h1>Search on GitHub Repositories by Name</h1>                       // Title
-                        <form action="#">                                                    // Form for searchin GitHub Repos by name:
-                            <label for="query">Please provide a name: </label>               // directions for user input...
-                            <input type="text" placeholder="e.g., Joe Smith">                // ... input field (with example placeholder).
-                            <button type="submit">Search</button>                            // Button tp submit "Search".
+                    <section>                                                                   // Section for github form and results.
+                        <h1>Search on GitHub Repositories by Name</h1>                          // Title
+                        <form action="#" class="js-search-form">                                // Form for searchin GitHub Repos by name:
+                            <label for="query">Please provide a name: </label>                  // directions for user input...
+                            <input type="text" class="js-input"placeholder="e.g., Joe Smith">   // ... input field (with example placeholder).
+                            <button type="submit">Search</button>                               // Button tp submit "Search".
                         </form>         
-                        <h2>Results</h2>                                                     // Result section title
-                        <div>Results go here</div>                                           // Result section 
+                        <h2>Results</h2>                                                        // Result section title
+                        <div class="js-search-results">Results go here</div>                    // Result section 
                     </section>
 
                     
+            <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> by 
+            <a class="js-user-name" href="${result.owner.html_url}" target="_blank">${result.owner.login}</a>
+
+
+
                 <!-- Result section-->
 
                     <div class="results">
                         <h2>
-                            <a href="http://google.com">Repository Name</a> by               // Repository name anchor element.
-                            <a href="http://google.com">John Smith</a>                       // User name anchor element.
+                            <a class="js-result-name" href="">Repository Name</a> by                          // Repository name anchor element.
+                            <a class="js-user-name" href="">John Smith</a>                                    // User name anchor element.
                         </h2>
-                        <p>Description: <span>Description goes here</span></p>               // Description of respository.    
-                        <p>Last updated: <span>Updated last goes here</span></p>             // Last updated date of repository.
+                        <p>Description: <span class="js-description">Description goes here</span></p>         // Description of respository.    
+                        <p>Last updated: <span class="js-last-updated">Updated last goes here</span></p>      // Last updated date of repository.
                      </div>
     
 
@@ -1078,9 +1083,15 @@ EXAMPLE 2: GitHub API (moderate-hard)
         -- The word "DATA" is important here because what we are essentially doing in FUNNELING all the data from getDataFromApi into
            the displayGitHubSearchData function.
                 
+            .................................................
+                    
+            getDataFromApi(searchTerm, displayGitHubSearchData); 
+                    
+            ..................................................
+
                   
-                    function getDataFromApi(searchTerm, callback) {                                  
-                        const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';      
+Get Data            function getDataFromApi(searchTerm, callback) {                                  
+w/searchTerm>           const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';      
                         const settings = {                                                           
                             url: GITHUB_SEARCH_URL,                                                                          
                             data: {                                                                 
@@ -1094,101 +1105,48 @@ EXAMPLE 2: GitHub API (moderate-hard)
                         $.ajax(settings);                                                           
                     }
 
-                    function displayGitHubSearchData(data) {                       // First, we pass the contents of the data object (i.e. q, page, etc.)
+and display it>     function displayGitHubSearchData(data) {                       // First, we pass the contents of the data object (i.e. q, page, etc.)
                         const results = data.items.map(function(item) {            // ... then map each of the items in that data object...
                             return renderResult(item);                             // ... to a pre-made template.
                         }); 
                         $('.js-search-results').html(results);                     // For each iteration of the items in the data object, return the 
                     }                                                              // content of renderResult!
                    
+        
 
-
-                    .................................................
-                    
-                    getDataFromApi(searchTerm, displayGitHubSearchData); 
-                    
-                    ..................................................
-
-
-
-
-
-
-
-
-
-
-
-
-                function getDataFromApi(searchTerm, callback) {                                  
-                    const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';      
-                    const settings = {                                                           
-                        url: GITHUB_SEARCH_URL,                                                                          
-                        data: {                                                                 
-                            q: `${searchTerm} in:name`,                                          
-                            page: 1,                                                            
-                            per_page: 5                                                          
-                        },
-                        dataType: 'json',                                                        
-                        success: callback                                                        
-                    };                                                                            
-                    $.ajax(settings);                                                           
-                }
-
-                function displayGitHubSearchData() {...}                                          // 
-
-                function handleSubmit() {
-                    $('main').submit(function(event) {
-                        event.preventDefault();
-                        const userInput = $(event.currentTarget).find('.js-input');
-                        const searchTerm = userInput.val();    
-                        userInput.val("");
-                        getDataFromApi(searchTerm, displayGitHubSearchData);
-                    });
-                }
-
-                function setUpEventHandlers() {
-                    handleSubmit();
-                }
-
-                function initializeGitApp() {
-                    setUpEventHandlers();
-                }
-
-                $(handleSubmit);
-
-
+        STEP 8.3: Render the display data
+        =================================
+        -- Now we can add in the template for our results using out template!
+        -- Keep in mind that all along, we have been passing the data retrieved from the API.
                 
+                API => displayGitHubSearchData as "data"
+                "data" => renderResult(item) as "item"
+                "item" => renderResult(result) as "result"
 
+        -- Just know that the data persists even if it has changed names a few times.
+        -- Below, we are taking the final form "result" and then use dot-notation to get our desired data points.
+            -- for example:
+                    result.html_url       =  bloggingApp
+                    result.name           =  k88hudson
+                    result.owner.html_url = http://github.com/k88hudson/bloggingApp
 
+            
+        -- The template below
 
+                    function renderResult(result) {
+                    return `
+                        <div class="results">
+                            <h2>
+                                <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> by 
+                                <a class="js-user-name" href="${result.owner.html_url}" target="_blank">${result.owner.login}</a>
+                            </h2>
+                            <p>Description: <span class="js-description">${result.description}</span></p>
+                            <p>Last updated: <span class="js-last-updated">${result.updated_at}</span></p>
+                        </div>
+                    `;
+                    }
+           
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
