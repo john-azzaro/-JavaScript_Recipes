@@ -997,7 +997,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
                         const userInput = $(event.currentTarget).find('.js-input');   
                         const searchTerm = userInput.val();                           
                         userInput.val("");                                           
-                        getDataFromApi(searchTerm, displayGitHubSearchData);          
+                        getDataFromApi(searchTerm, displayGitHubSearchData);          // This function call is the prime mover from here on out...
                    });                                                                
                 }
 
@@ -1067,9 +1067,18 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
         STEP 8.2: Displaying data from GitHub API
         ==========================================  
-        -- No
-                
+        -- Now that we have the data from the GitHub API, we need a way to display the data in our app.
+
+                Get data...                               ... and display it.
+                         \                                    /
                     getDataFromApi(searchTerm, displayGitHubSearchData); 
+                                       |
+                            ... using the searchTerm ...
+
+        -- The word "DATA" is important here because what we are essentially doing in FUNNELING all the data from getDataFromApi into
+           the displayGitHubSearchData function.
+                
+                  
 
 
 
