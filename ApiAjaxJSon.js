@@ -1023,25 +1023,39 @@ EXAMPLE 2: GitHub API (moderate-hard)
         -- Lets take a look at the the composition of the getDatafromApi function: 
             
                    
-                 function getDataFromApi(searchTerm, callback) {                    // Function with "SearchTerm" passed from handleSubmit and a callback.
+                function getDataFromApi(searchTerm, callback) {                     // Function with "SearchTerm" passed from handleSubmit and a callback.
                     const API_END_POINT = 'https://api.website.com/search/';        // API endpoint (i.e. web url before we add queries)   
                     const settings = {                                              // Settings Object
                         url: API_END_POINT,                                         // Url (i.e. the endpoint we want to come first)
                         data: {                                                     // Data is the query data (i.e. the parameters that follow the endpoint ) 
-                            q: `${searchTerm} in:name`,                             //
+                            q: `${searchTerm} in:name`,                             // This is the query (i.e. the searchTerm we passed in from handleSubmit)
+                            page: X,                                                // additional query data.
+                            per_page: X                                             // additional query data.
                         }
-                
-                    };
-                    $.ajax(settings);
+                        dataType: 'json',                                           // Data type of the response.
+                        type: 'GET',                                                // Request method.
+                        success: callback                                           // If successful, callback.which knows how to process data and update
+                    };                                                                 the DOM to display to the user.
+                    $.ajax(settings);                                               // Performs an AJAX (asynchronous HTTP) request for the data above.
+
+
+        -- if the callback is successful, you should see an endpoint and query string like the one below:
 
 
 
-                https://api.website.com/search/?q=john-snow%20in:name&page=1&per_page=5
+                _____________\_________________  _________|____________       ___________
+                |                             | |                     |       |          |
+                https://api.website.com/search/?q=search-term%20in:name&page=1&per_page=5
+                                              /                        |_____|
+                                                                          |
 
 
 
 
-                                     function getDataFromApi(searchTerm, callback) {
+
+                                                                          
+
+                function getDataFromApi(searchTerm, callback) {
                     const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories'; 
                     const settings = {
                         url: GITHUB_SEARCH_URL,
@@ -1056,7 +1070,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
 }
 
 
-
+                https://api.github.com/search/repositories?q=k88hudson%20in:name&page=1&per_page=5
 
 
 
@@ -1093,16 +1107,17 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
 
 
-function getDataFromApi(searchTerm, callback) {
+function getDataFromApi(searchTerm, callback, error) {
     const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';
     const settings = {
         url: GITHUB_SEARCH_URL,
         data: {
             q: `${searchTerm} in:name`,
+            page: 1,
             per_page: 5
         },
         dataType: 'json',
-        success: callback
+        success: callback,
     };
     $.ajax(settings);
 }
