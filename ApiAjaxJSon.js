@@ -618,14 +618,6 @@ EXAMPLE 2: Song Lyrics API (moderate)
 
 
 
-/*
-EXAMPLE 2: GitHub API (moderate-hard)
-//////////////////////////////////////
-
-*/
-
-
-
 
 
 
@@ -646,6 +638,9 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
 
 /*
+EXAMPLE 2: GitHub API (moderate-hard)
+//////////////////////////////////////
+
     -- Suppose you want to make an app that accesses the GitHub API to search and display user repositories.
 
     STEP 1: Establish User Story
@@ -1147,9 +1142,6 @@ and display it>     function displayGitHubSearchData(data) {                    
                     }
            
 */
-
-
-
 
 
 
