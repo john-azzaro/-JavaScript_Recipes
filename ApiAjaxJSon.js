@@ -866,7 +866,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
 
 
 
-    STEP 5: IMplementing App Architecture
+    STEP 5: Implementing App Architecture
     =====================================
     -- Once you have a good idea of what you want your app to do (i.e. user story) and whether or not that API you've selected will work for 
        you (i.e explore API), you need to start considering how to setup you app architecture. 
@@ -1019,58 +1019,83 @@ EXAMPLE 2: GitHub API (moderate-hard)
            call to the GitHub server so that we can retrieve the results of our searchTerm query.
     
         -- In this example, we'll use AJAX because it gives you more control over configuration.
+        -- Remember that AJAX takes a single settings object as its argument and an asynchronous request for the desired data.
 
-        -- Lets take a look at the the composition of the getDatafromApi function: 
+        -- Lets take a look at the the composition of a standard getDatafromApi function: 
             
+            AJAX request template example
+            =============================
                    
-                function getDataFromApi(searchTerm, callback) {                     // Function with "SearchTerm" passed from handleSubmit and a callback.
-                    const API_END_POINT = 'https://api.website.com/search/';        // API endpoint (i.e. web url before we add queries)   
-                    const settings = {                                              // Settings Object
-                        url: API_END_POINT,                                         // Url (i.e. the endpoint we want to come first)
-                        data: {                                                     // Data is the query data (i.e. the parameters that follow the endpoint ) 
-                            q: `${searchTerm} in:name`,                             // This is the query (i.e. the searchTerm we passed in from handleSubmit)
-                            page: X,                                                // additional query data.
-                            per_page: X                                             // additional query data.
-                        }
-                        dataType: 'json',                                           // Data type of the response.
-                        type: 'GET',                                                // Request method.
-                        success: callback                                           // If successful, callback.which knows how to process data and update
-                    };                                                                 the DOM to display to the user.
-                    $.ajax(settings);                                               // Performs an AJAX (asynchronous HTTP) request for the data above.
+            function getDataFromApi(searchTerm, callback) {                                 // Function with "SearchTerm" passed from handleSubmit and a callback.
+                const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';     // API endpoint (i.e. web url before we add queries)   
+                const settings = {                                                          // Settings Object
+                    url: GITHUB_SEARCH_URL,                                                 // Url (i.e. the endpoint we want to come first)
+                    data: {                                                                 // Data is the query data (i.e. the parameters that follow the endpoint ) 
+                        q: `${searchTerm} in:name`,                                         // This is the query (i.e. the searchTerm we passed in from handleSubmit)
+                        page: 1,                                                            // additional query data.
+                        per_page: 5                                                         // additional query data.
+                    }
+                    dataType: 'json',                                                       // Data type of the response.
+                    type: 'GET',                                                            // Request method.
+                    success: callback                                                       // If successful, callback.which knows how to process data and update
+                };                                                                             the DOM to display to the user.
+                $.ajax(settings);                                                           // Performs an AJAX (asynchronous HTTP) request for the data above.
 
 
-        -- if the callback is successful, you should see an endpoint and query string like the one below:
+            -- if the callback is successful, you should see an endpoint and query string like the one below:
 
 
+                      GITHUB_SEARCH_URL                    `${searchTerm} in:name`         data => per_page: 5
+                _____________\_____________________________  _________|_________       ______|_____
+                |                                         | |                   |      |          |
+                https://api.github.com/search/repositories?q=k88hudson%20in:name&page=1&per_page=5
+                                                          /                     |_____|
+                                                 data => q                          |                                   
+                                                                      data => page: 1
 
-                _____________\_________________  _________|____________       ___________
-                |                             | |                     |       |          |
-                https://api.website.com/search/?q=search-term%20in:name&page=1&per_page=5
-                                              /                        |_____|
-                                                                          |
+                                                                      
+        VI. Putting together the GitHub AJAX request
+        ============================================    
+        
 
-
-
-
-
-                                                                          
-
-                function getDataFromApi(searchTerm, callback) {
-                    const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories'; 
-                    const settings = {
-                        url: GITHUB_SEARCH_URL,
-                        data: {
-                            q: `${searchTerm} in:name`,
+                function getDataFromApi(searchTerm, callback) {                                  // Get the data from GitHub API (using searchTerm).
+                    const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';      // GitHub API endpoint for searching urls.
+                    const settings = {                                                           // The settings object for the AJAX request contains...
+                        url: GITHUB_SEARCH_URL,                                                  // ... the endpoint GITHUB_SEARCH_URL ...                        
+                        data: {                                                                  // ... and query strings and parameters including ...
+                            q: `${searchTerm} in:name`,                                          // ... the searchTerm itself 
                             per_page: 5
                         },
                         dataType: 'json',
                         success: callback
                     };
                     $.ajax(settings);
-}
+                }
+
+                function displayGitHubSearchData() {...}  
+
+                function handleSubmit() {
+                    $('main').submit(function(event) {
+                        event.preventDefault();
+                        const userInput = $(event.currentTarget).find('.js-input');
+                        const searchTerm = userInput.val();    
+                        userInput.val("");
+                        getDataFromApi(searchTerm, displayGitHubSearchData);
+                    });
+                }
+
+                function setUpEventHandlers() {
+                    handleSubmit();
+                }
+
+                function initializeGitApp() {
+                    setUpEventHandlers();
+                }
+
+                    $(handleSubmit);
 
 
-                https://api.github.com/search/repositories?q=k88hudson%20in:name&page=1&per_page=5
+                
 
 
 
