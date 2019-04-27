@@ -1079,16 +1079,35 @@ EXAMPLE 2: GitHub API (moderate-hard)
            the displayGitHubSearchData function.
                 
                   
-
-
-
-                    function displayGitHubSearchData(data) {
-                        const results = data.items.map(function(item) {
-                            return renderResult(item);
-                        }); 
-                        $('.js-search-results').html(results);
+                    function getDataFromApi(searchTerm, callback) {                                  
+                        const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';      
+                        const settings = {                                                           
+                            url: GITHUB_SEARCH_URL,                                                                          
+                            data: {                                                                 
+                                q: `${searchTerm} in:name`,                                          
+                                page: 1,                                                            
+                                per_page: 5                                                          
+                            },
+                            dataType: 'json',                                                        
+                            success: callback                                                        
+                        };                                                                            
+                        $.ajax(settings);                                                           
                     }
 
+                    function displayGitHubSearchData(data) {                       // First, we pass the contents of the data object (i.e. q, page, etc.)
+                        const results = data.items.map(function(item) {            // ... then map each of the items in that data object...
+                            return renderResult(item);                             // ... to a pre-made template.
+                        }); 
+                        $('.js-search-results').html(results);                     // For each iteration of the items in the data object, return the 
+                    }                                                              // content of renderResult!
+                   
+
+
+                    .................................................
+                    
+                    getDataFromApi(searchTerm, displayGitHubSearchData); 
+                    
+                    ..................................................
 
 
 
