@@ -941,8 +941,43 @@ NOTE: This section is on functions in objects, but first a brief overview.
 */
 
 
+/*
+    EXAMPLE 2: callback calculator
+    ===============================
+    -- Take the function below which takes two numbers and the 2 calculation types to get a result.
+*/
+            function calculator(num1, num2, calcType) {
+                if (calcType === "add") {
+                    return num1 + num2;
+                } else if (calcType === 'multiply') {
+                    return num1 * num2;
+                } else {
+                    console.log(`I dont know how to divide or subract :(`)
+                }
 
+            }
 
+            console.log(calculator(10, 5, "add"));       //=> 15
+
+/*
+    -- However, we can take all of these calculation types, move them out of the function, and use a callback function
+       to get the same result, but mutch more cleanly.
+*/
+
+            function add(a,b) {
+                return a + b;
+            }        
+
+            function multiply(a,b) {
+                return a * b;
+            }
+
+            function calc(num1, num2, callback) {
+                return callback(num1, num2);
+            }
+
+            console.log(calc(10, 5, multiply));            //=> 50
+            console.log(calc(10, 5, add));                 //=> 15
 
 
 
