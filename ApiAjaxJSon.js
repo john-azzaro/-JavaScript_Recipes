@@ -625,7 +625,11 @@ EXAMPLE 1: DogPic API (easy)
 EXAMPLE 2: Song Lyrics API (moderate)
 //////////////////////////////////////
 
-    -- Suppose you want to make an app that
+    -- Suppose you want to make an app that finds the lyrics of your favorite song.
+
+    STEP 1: Establish User Story
+    ============================
+    
 
 */
 
