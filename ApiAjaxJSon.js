@@ -629,7 +629,6 @@ EXAMPLE 2: Song Lyrics API (moderate)
 
     STEP 1: Establish User Story
     ============================
-
         1. Music lyric app should be rendered to the page.
             A. Header saying "Find your favorite song lyrics!"
             B. Form
@@ -640,6 +639,25 @@ EXAMPLE 2: Song Lyrics API (moderate)
             C. Results Section.
         2. When the user fills in the artist and title section, the submission button
            will show the lyrics to the song.
+
+
+    STEP 2: Mockup
+    ==============
+        
+        HTML Outline
+        ============ 
+        
+        
+        
+        
+        
+        
+        HTML Mockup
+        ===========
+
+
+
+       
 
 */
 
@@ -698,6 +716,8 @@ EXAMPLE 2: GitHub API (moderate)
                and also figure out what data you'll need.
             -- As you begin to build out the app, you will be able to transfer parts to your .js document.
   
+            HTML Outline
+            =============
 
                     1. Search Section: 
                         A. Title: "Search on GitHub Repositories by Name"
@@ -714,6 +734,9 @@ EXAMPLE 2: GitHub API (moderate)
 
         -- The HTML mockup should look something like this (in html document):
         -- Note that js class names should closely reflect what each element does.
+
+            HTML mockup
+            ============
 
                 <!-- Search Section -->
 
