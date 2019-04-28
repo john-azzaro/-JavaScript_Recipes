@@ -882,7 +882,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
     -- A callback is a function that is passed into another function as a parameter to another function.
         -- for example, if you run a .forEach on an array (i.e. something.forEach(function(key) {return `${key}`})), where we pass in
            "function" is a callback.  
-            -- Note that that .forEach example is not an asynchronous
+            -- Note that that .forEach example is not asynchronous. 
 
     -- callbacks are also called "higher order functions".
     -- callbacks are a way to make sure certain code doesnt execute until other code has already finished execution.
@@ -894,24 +894,27 @@ NOTE: This section is on functions in objects, but first a brief overview.
 */
 
 /*
-EXAMPLE 1: Basic example
-========================
+    EXAMPLE 1: Basic example
+    ========================
+    -- In the example below, we have two functions: xS and yS.
+    -- However, even through we have xS as an argument, it does not log in the console.  Why?
+        -- When we pass xS into yS, we essentially want ti pass it in as an argument so that it will run after we call yS.
+        --
 
-
-
+ 
 
 */
 
 
-                let x = function() {
-                    console.log("i am called from inside a function");
+                let xS = function() {
+                    console.log("You will see me if there was a successful asynchronous callback");
                 }
 
-                let y = function() {
-                    console.log('do something')
-                }
+                let yS = function() {
+                    console.log('yS has been called successfuly, but not xS.')
+                }              
 
-                y(x);
+                yS(xS);                                                         //=> do something
 
 
 
