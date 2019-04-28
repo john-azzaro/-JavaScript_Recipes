@@ -115,6 +115,8 @@
 //////////////////////
     -- A web API is an API over the web which can be accessed with HTTP protocol.
     -- A web API provides endpoints, which are URL's that we can make requests to in order to write and retrieve data.
+    -- Most big websites have an API, like Twitter.  There are also many public API's like Todd Motto's list of public API's:
+        -- https://github.com/toddmotto/public-apis
 */
 
 
@@ -122,6 +124,8 @@
 2. What is AJAX?
 ////////////////
     -- AJAX stands for Asynchronous JavaScript and XML.
+    -- AJAX actually means something different than what it does, however it morphed and evolved into the term we use now.
+    -- AJAX now represents what you do when a website requests more information from a server after the page has loaded.
     -- AJAX refers to making one or more calls to a server AFTER a page has initially loaded.
         -- for example, infinite scroll where new content appears as you scroll down.
         -- when the user scolls, the application makes new calls to the server to retrieve additional data.
@@ -1083,11 +1087,14 @@ EXAMPLE 2: GitHub API (moderate)
             AJAX request 
             =============
             -- In this example, we'll use AJAX because it gives you more control over configuration, but getJSON would work just as well.
-            -- Also, remember that AJAX takes a single settings object as its argument and an asynchronous request for the desired data.       
+            -- Remember that AJAX takes a single settings object as its argument and an asynchronous request for the desired data. 
+            -- Also note that the GITHUB_SEARCH_URL variable and endpoing is outside the function here.
+                -- this is in "screaming" case and its a symbol to future users that this variable (i.e, this url) will NEVER change.  
+                  
             
-            
-                function getDataFromApi(searchTerm, callback) {                                  // Get the data from GitHub API (using searchTerm).
-                    const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';      // GitHub API endpoint for searching urls.
+            const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';              // GitHub API endpoint for searching urls.
+                
+                function getDataFromApi(searchTerm, callback) {                                  // Get the data from GitHub API (using searchTerm).  
                     const settings = {                                                           // The settings object for the AJAX request contains...
                         url: GITHUB_SEARCH_URL,                                                  // ... the endpoint GITHUB_SEARCH_URL ...                        
                         data: {                                                                  // ... and query strings and parameters including:
@@ -1133,10 +1140,10 @@ EXAMPLE 2: GitHub API (moderate)
                     
             ..................................................
 
-                  
-Get Data            function getDataFromApi(searchTerm, callback) {                                  
-w/searchTerm>           const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';      
-                        const settings = {                                                           
+                    const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';    
+
+Get Data            function getDataFromApi(searchTerm, callback) {                                             
+w/searchTerm>           const settings = {                                                           
                             url: GITHUB_SEARCH_URL,                                                                          
                             data: {                                                                 
                                 q: `${searchTerm} in:name`,                                          
@@ -1193,10 +1200,9 @@ and display it>     function displayGitHubSearchData(data) {                    
            
 */
 
+const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';
 
-
-function getDataFromApi(searchTerm, callback) {
-    const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';
+function getDataFromApi(searchTerm, callback) {  
     const settings = {
         url: GITHUB_SEARCH_URL,
         data: {
