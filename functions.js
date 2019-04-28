@@ -898,23 +898,54 @@ NOTE: This section is on functions in objects, but first a brief overview.
     ========================
     -- In the example below, we have two functions: xS and yS.
     -- However, even through we have xS as an argument, it does not log in the console.  Why?
-        -- When we pass xS into yS, we essentially want ti pass it in as an argument so that it will run after we call yS.
-        --
+        -- When we pass xS into yS, we essentially want to pass it in as an argument so that it will run after we call yS.
+        -- But because theres no enforced order of operations, only yS will print.
+*/
 
+            let xS = function() {
+                    console.log("You will see me if there was a successful asynchronous callback");
+            }
+
+            let yS = function() {
+                console.log('yS has been called successfuly, but not xS.')
+            }              
+
+            yS(xS);                                              //=> yS has been called successfuly, but not xS.
+/*
+
+    -- How do enforce the order of operations and successfully pass in the xS function as an argument?
+    -- The answer is with a callback.
+        -- In this case, the "callback" will assume the role of whatever you pass into the function.
+        -- when we run the callback at the end of the function, will run.
+*/
+
+            function xA() {
+                console.log("xA has been successfulluy run via callback!");
+            }
+
+            function yA(callback) {                              // We pass the function body of xA into yA...  
+            console.log("yA has been called successfuly");               
+            callback();                                          // ... and then execute it at some point.
+            }              
  
+            yA(xA);                                              //=>  yA has been called successfuly
+                                                                 //    xA has been successfulluy run via callback!                      
 
+/*
+    -- Once you call yA(xA), the xA is passed to yA in that slot.
+    -- Then when yA is called, xA will be you could call the paramter whatever you want because the information in that slot
+       will be called when you invoke the callback function at the end of your code block.
+    -- Note that we are passing the FUNCTION BODY itself of xA into another function, not the results of xA.
+            -- Once that is done, we can execute it at some point.
+    
 */
 
 
-                let xS = function() {
-                    console.log("You will see me if there was a successful asynchronous callback");
-                }
 
-                let yS = function() {
-                    console.log('yS has been called successfuly, but not xS.')
-                }              
 
-                yS(xS);                                                         //=> do something
+
+
+
 
 
 
