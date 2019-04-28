@@ -625,11 +625,21 @@ EXAMPLE 1: DogPic API (easy)
 EXAMPLE 2: Song Lyrics API (moderate)
 //////////////////////////////////////
 
-    -- Suppose you want to make an app that finds the lyrics of your favorite song.
+    -- Suppose you want to make an app that finds the lyrics of your favorite song by artist and song title.
 
     STEP 1: Establish User Story
     ============================
-    
+
+        1. Music lyric app should be rendered to the page.
+            A. Header saying "Find your favorite song lyrics!"
+            B. Form
+                I. Label directing user to put in artist.
+                II. Submission field for artist.
+                III. Label directing user to put in song title.
+                IV. Submission field for song title.
+            C. Results Section.
+        2. When the user fills in the artist and title section, the submission button
+           will show the lyrics to the song.
 
 */
 
@@ -656,8 +666,8 @@ EXAMPLE 2: Song Lyrics API (moderate)
 
 
 /*
-EXAMPLE 2: GitHub API (moderate-hard)
-//////////////////////////////////////
+EXAMPLE 2: GitHub API (moderate)
+/////////////////////////////////
 
     -- Suppose you want to make an app that accesses the GitHub API to search and display user repositories.
 
@@ -670,8 +680,10 @@ EXAMPLE 2: GitHub API (moderate-hard)
     
             1. GitHub Search App should be rendered to the page (i.e. show the app on the screen).
                 A. Header will introduce the user to the purpose of the app.
-                B. Form submission field with label directing user to provide a name.
-                C. Submit button to search.
+                B. Form 
+                    I. Label directing user to provide a name.
+                    II. submission field.
+                    III. Submit button to search.
                 D. Results section to display the results of the search.
             2. The user will be directed to input a user name to search the GitHub repositories for.
             3. The user will click the "Search" button to begin the search.
