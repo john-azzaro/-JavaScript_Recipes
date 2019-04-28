@@ -752,11 +752,6 @@ EXAMPLE 2: GitHub API (moderate)
                     </section>
 
                     
-            <a class="js-result-name" href="${result.html_url}" target="_blank">${result.name}</a> by 
-            <a class="js-user-name" href="${result.owner.html_url}" target="_blank">${result.owner.login}</a>
-
-
-
                 <!-- Result section-->
 
                     <div class="results">
@@ -1181,7 +1176,7 @@ and display it>     function displayGitHubSearchData(data) {                    
                     result.owner.html_url = http://github.com/k88hudson/bloggingApp
 
             
-        -- The template below
+        -- The template below is what we'll use to achieve the results of our orginal mockup:
 
                     function renderResult(result) {
                     return `
