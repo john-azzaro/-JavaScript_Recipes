@@ -532,15 +532,17 @@ ______/_____  __________________________________/_______________________________
 /* 
 How do you implement an app with JSON?
 //////////////////////////////////////
+-- Using the getJSON is a short-cut of the $.ajax() method.
+-- getJSON is our way of initiating a call to the server and then a callback function that knows how to process the data and update the DOM.
 
-
-function getDataFromApi(searchTerm1, searchTerm2, callback) {
-  const query = {
-    q: `${searchTerm}`,
-    per_page: 3
-  }
-  $.getJSON(GITHUB_SEARCH_URL, query, callback);
-}
+        function getDataFromApi(searchTerm, callback) {
+            const API_URL = http://api.website.com/search;
+            const query = {
+                q: `${searchTerm}`,
+                per_page: 3
+        }
+        $.getJSON(API_URL, query, callback);
+        }
 */
 
 
@@ -548,20 +550,23 @@ function getDataFromApi(searchTerm1, searchTerm2, callback) {
 How do you implement an app with AJAX?
 //////////////////////////////////////// 
     -- While similar to getJSON, AJAX gives you more control over configuration.
+    -- Just like getJSON, $.ajax() is another our way of initiating a call to the server and then a callback function that
+       knows how to process the data and update the DOM.
     -- AJAX takes a single settings object as its argument (i.e. the "settings" in $.ajax(settings) and an asynchronous 
        request for the desired data (i.e. the $.ajax() in $.ajaz(settings)). 
 
        INFORMATION PASSED:  (Jon-Snow)
 
-        function getDataFromApi(searchTerm, callback) {
-            const settings = {                                           // settings object with relevant information to request from API.
+        function getDataFromApi(searchTerm, callback) {                  // function which has search term passed in.
+            const settings = {                                           // settings object with relevant information to request from API:
                 url: http://api.website.com/search,                      // API url. 
                 data: {                                                  // elements of query string in the settings object.
                     q: `${searchTerm}`,                                  // search term passed to function (i.e "Jon Snow").
                 },
-                dataType: 'json',                         
-                success: callback,
-                error: function(err) {
+                dataType: 'json',                                        // Data type of response.
+                type: 'GET',                                             // Request method.
+                success: callback,                                       // if callback is successful, go on...
+                error: function(err) {                                   // if callback is unsuccessful, console.log and error.
                     console.error(err);
                 }
             };
@@ -1057,6 +1062,7 @@ EXAMPLE 2: GitHub API (moderate-hard)
                             per_page: 5                                                          // ... with additional queries.
                         },
                         dataType: 'json',                                                        // We want the response back to be in JSON format
+                        type: 'GET',                                                             // request method.
                         success: callback                                                        // And if the response is successful, callback, which knows how 
                     };                                                                              to process data and update the DOM to display to the user.
                     $.ajax(settings);                                                            // Perfom the AJAX request for the data we want (settings).
@@ -1103,7 +1109,8 @@ w/searchTerm>           const GITHUB_SEARCH_URL = 'https://api.github.com/search
                                 page: 1,                                                            
                                 per_page: 5                                                          
                             },
-                            dataType: 'json',                                                        
+                            dataType: 'json',
+                            type: 'GET',                                                        
                             success: callback                                                        
                         };                                                                            
                         $.ajax(settings);                                                           
@@ -1164,6 +1171,7 @@ function getDataFromApi(searchTerm, callback) {
             per_page: 5
         },
         dataType: 'json',
+        type: 'GET',
         success: callback,
     };
     $.ajax(settings);
