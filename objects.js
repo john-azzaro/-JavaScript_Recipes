@@ -112,7 +112,8 @@
     What kind of data types can an object hold?
     ===========================================
     - object values can have any data type (i.e. strings, numbers, booleans, objects, arrays, functions, etc.).
-    - special note: if a function is part of an object, we call that function a METHOD.
+    - if a function is part of an object, we call that function a METHOD.
+    - if there are one or more functions in the object, we say that object has "behavior" like a person who can do different things.
 */
             let equipment = {
                 equipmentOwner: 'Sir Galahad',                                      // string
