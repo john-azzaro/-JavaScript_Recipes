@@ -46,7 +46,7 @@
     -- A function is a series of statements that are grouped into a special package.
     -- A function is JavaScripts paragraph.
     -- A function is considered an object
-    */
+*/
     
 
 
@@ -617,7 +617,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
     -- To create a module, you need to create a NAME SPACE.
         -- namespacing allows you to protect variables that you have in your modules from any global scoped variables.
-        -- this is important because you might have variables in your module that are in the application.
+            -- this is important because you might have variables in your module that are in the application.
         -- so we know we can create a self executing function (within parentheses) which protects all the variables inside from global scope.
             -- but what if we want access to those variables OUTSIDE the closure but INSIDE our application?
             -- to do this, we need to create a variable and assign it to our self executing function.
@@ -833,7 +833,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
                 const whatCat = `Hi, my name is ${kitty.firstName} ${kitty.lastName}`
                 console.log(whatCat);
 /*
-    -- but while the previous appraoch is good, we would have to repeat this template literally everywhere we need it
+    -- but while the previous approach is good, we would have to repeat this template literally everywhere we need it
     -- a better way to do this is to define a method in the object called 'fullName' and then put the expression in the log.
 */
                 const kitty2 = {
@@ -961,7 +961,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 /*
     -- However, we can take all of these calculation types, move them out of the function, and use a callback function
-       to get the same result, but mutch more cleanly.
+       to get the same result, but much cleaner.
 */
 
             function add(a,b) {
@@ -981,13 +981,8 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 
-
-
-
-
-
 /*
-    EXAMPLE 1: Blog Posts
+    EXAMPLE 3: Blog Posts
     =====================
     -- below we have an array storing two blog posts and two functions, createPost and getPost.
     -- to provide an example of a callback, we'll use "setTimeout" to mimic server response (time).
@@ -1059,19 +1054,9 @@ NOTE: This section is on functions in objects, but first a brief overview.
                                                                                               // it will also call "getBlogs" before (within) the  
                                                                                               // 2 second server time.
                                                                               
-                                    
-                        
-                                
-
-
-
-
-
-
-
 
 /*
-    EXAMPLE 2: Homework
+    EXAMPLE 4: Homework
     ===================
 */
 
