@@ -188,7 +188,31 @@ What is a factory object?
                                                                        //   startIgnition: [Function: startIgnition] }
 
 /*
-What is a constrcutor function?
+What is a constructor function?
 ///////////////////////////////
-    -- A constructor function 
+    -- A constructor function is a little bit different than a factory function.
+    -- The choice between using a factory or constrcutor function is up to you since they both do the exact same thing.
+    -- One danger in using the contructor function method is that if you forget to use 'new', it will define the 'this'
+       property on the GLOBAL object (i.e. the window object).
+    -- The first letter of a constrcutor function name should be upper case.
+    -- we also use 'this' to reference the object executing a particular peice of code.
 */
+
+                            function MakeAnotherCar(make) {
+                                this.make = make;
+                                this.isWorking = true;
+                                this.startIgnition = function() {
+                                    console.log('grumble grumble');
+                                }
+                            }
+/*
+    -- to create a car using the constructor function, it is mostly the same as a factory function EXCEPT for
+       the inclusion of 'new' operator.
+    -- When you use 'new', a few things happen:
+        -- first, it will create an empty object (i.e. {}).
+        -- second, it will set 'this' to point to that NEW object (i.e. this.make ==> MakeAnotherCar).
+        -- third, it will return the object from the function.
+*/
+
+                            const makeFord = new MakeAnotherCar('ford');
+                            console.log(makeFord);                                 // MakeAnotherCar { make: 'ford', isWorking: true, startIgnition: [Function] }
