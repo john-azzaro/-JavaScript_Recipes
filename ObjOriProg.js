@@ -108,6 +108,27 @@ What is an object?
 
     What is object literal syntax?
     ==============================
-    -- an object literal is 
- */
-  
+    -- an object literal is: 
+
+            defined variable        assignment operator
+                            \          |
+                            const car = {};
+                            |     \ 
+                            name    curly braces
+
+    -- inside the curly braces we can add key/value pairs:
+
+                          key       value inside "quotes"
+                            \       /
+                            make: "honda",
+                                |         \
+                              colon        comma seperating key/value pairs
+
+
+                            const car = {
+                                make: "honda",
+                                model: "civic",
+                                color: "blue" 
+                            };
+
+*/
