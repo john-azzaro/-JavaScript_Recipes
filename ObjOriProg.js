@@ -25,16 +25,30 @@
 /*
 2. What are the four core concepts of OOP?
 //////////////////////////////////////////
+        
+        1. Encapsulation
+        2. Abstraction
+        3. Inheritance 
+        4. Polymorphism
+
     -- Before object oriented programming there was something called "procedural programming" where data was stored in a
        bunch of variables and function that operate on the data, which was very simple and straight forward.
        -- but eventually these function will break and function will have duplicate lines of codes (i.e. spaghetti code).
     -- Which object-oriented programming (OOP), you combine a group of related variables and function into a unit.
         -- That unit is called an "Object".
         -- variables are called "properties".
+        -- function are called "methods".       
+    -- In object oriented programming, we group related variables and function on them into objects, which is called "ENCAPSULATION"
+        -- for example:
+*/
+            let salary = 30000;
+            let overetime = 10;
+            let rate = 20;
 
-        1. Encapsulation
-        2. Abstraction
-        3. Inheritance 
-        4. Polymorphism
+            function getWage(salary, overtime, rate) {
+                return salary + (overtime * rate);
+            }
+/*
+    -- the example above is a "procedural" implementation
 
 */
