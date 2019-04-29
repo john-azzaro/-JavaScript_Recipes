@@ -116,19 +116,52 @@ What is an object?
                             |     \ 
                             name    curly braces
 
-    -- inside the curly braces we can add key/value pairs:
 
-                          key       value inside "quotes"
+    -- inside the curly braces we can add key/value pairs.
+
+                         key         value inside "quotes"
                             \       /
                             make: "honda",
                                 |         \
                               colon        comma seperating key/value pairs
 
 
+    -- values can be a string, number, boolean, function, object, or array.
+*/
                             const car = {
-                                make: "honda",
-                                model: "civic",
-                                color: "blue" 
+                                make: "honda",                                // string
+                                wheels: 4,                                    // number
+                                isWorking: true,                              // boolean
+                                startIgnition: function() {                   // "method" or function
+                                    console.log("vroom")
+                                },
+                                options: {                                    // object
+                                    airCon: true,
+                                    sportExhaust: true,
+                                    spareTire: false,
+                                },
+                                seats: ["driver", "passenger", "rear"]         // array
                             };
+/*
+    -- and to access the members of the object, we use "dot" notation.
 
+                        object       member name
+                            \         /
+                            car.wheels
+                               |
+                              dot
+*/
+                            console.log(car.make);                        //=> honda
+                            console.log(car.wheels);                      //=> 4
+                            console.log(car.isWorking);                   //=> true
+                            console.log(car.startIgnition());             //=> vroom
+                            console.log(car.options);                     //=> { airCon: true, sportExhaust: true, spareTire: false }
+                            console.log(car.seats);                       //=> [ 'driver', 'passenger', 'rear' ]
+
+
+/*
+What is a factory object?
+/////////////////////////
+    -- a factory functions create an individual instance of some model.
+        -- For example, suppos you want to duplicate  
 */
