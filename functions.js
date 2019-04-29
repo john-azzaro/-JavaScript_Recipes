@@ -29,6 +29,8 @@
 //        mentor meetings, peer discussions, and good ole' fashioned curiosity.  I've put the document in Question
 //        and Answer format for improved readability.
 //
+//     2. For more examples and rough ideas, see functionScratch.js
+//
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
