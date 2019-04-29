@@ -9,6 +9,8 @@
 //     1. Useful overview of information about Object-oriented programming (OOP) taken from study, research,  
 //        tutorials, mentor meetings, peer discussions, and good ole' fashioned curiosity.  I've put the 
 //        document in Question and Answer format for improved readability.
+//     2. There is also a seperate section dedicated to objects (e.g. objects.js).  Although there might be 
+//        some overlap in material here, this looks at that content in the context of OOP.
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -96,7 +98,16 @@
     Polymorphism
     ============
     -- Polymorphism is a technique that lets you get rid of long if and else or switch and case statements.
-
-
-
 */
+
+
+/*
+What is an object?
+///////////////////
+    -- objects are complex data types that bring together properties and elements into a single entity.
+
+    What is object literal syntax?
+    ==============================
+    -- an object literal is 
+ */
+  
