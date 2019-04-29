@@ -160,28 +160,35 @@ What is an object?
 
 
 /*
-What is a factory/constructor object?
-/////////////////////////////////////
+What is a factory object?
+///////////////////////////
     -- A factory functions create an individual instance of some model.
     -- We use factory functions because if we are duplicating an object with one or more methods (has a "bahavior"), it
        can be problematic if there become more duplicate of the same object.
     -- To avoid that issue, we use a function to create an object and return the object.
-    -- note here that with Es6 if the key and the value are the same, we can remove the noise and simple put a single name.
+    -- Note here that with Es6 if the key and the value are the same, we can remove the noise and simple put a single name.
     
 */
-                            function createCar(make, isWorking) {
+                            function createCar(make) {
                                 return {
-                                    make: "honda",                                
-                                    wheels: 4,                                    
+                                    make: make,                                
                                     isWorking: true,                              
                                     startIgnition: function() {                   
                                         console.log("vroom")
-                                    },
-                                    options: {                                    
-                                        airCon: true,
-                                        sportExhaust: true,
-                                        spareTire: false,
-                                    },
-                                    seats: ["driver", "passenger", "rear"]        
+                                    },  
                                 };
                             }
+
+/*
+    -- Once we have the factory function constructed, we simply need to create a new car:
+*/
+                            const makeAcura = createCar('acura');
+                            console.log(makeAcura);                    // { make: 'acura',
+                                                                       //   isWorking: true,
+                                                                       //   startIgnition: [Function: startIgnition] }
+
+/*
+What is a constrcutor function?
+///////////////////////////////
+    -- A constructor function 
+*/
