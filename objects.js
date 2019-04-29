@@ -217,6 +217,7 @@
     - the job of a factory is to create an individual instance of some model.
     - in a factory function, you create an object by making a constant called x, then call the factory function with the parameters.
     - so with factory functions, we simply call a function and in the function we return a new object.
+    - note here that in es6, if the name and the value are the same, you can remove the noise and simply have the name (i.e. name,).
 */
             function createCake(name, layers) {
                 return {
