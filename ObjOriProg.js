@@ -19,17 +19,17 @@
     -- Object oriented programing (OOP) is a programming paradigm centered around objects rather than functions.
     -- Object oriented programming is not a programming language or tool.
     -- Languages such as C#, Java, Ruby, Python, and JavaScript, and more.
-    -- Many frameworks are designed with object oriented programming concepts in mind (e.g. angular(.
+    -- Many frameworks are designed with object oriented programming concepts in mind (e.g. angular).
 */
 
 /*
 2. What are the four core concepts of OOP?
 //////////////////////////////////////////
         
-        1. Encapsulation
-        2. Abstraction
-        3. Inheritance 
-        4. Polymorphism
+        1. Encapsulation   -- group related variables and function together to reduce complexity.
+        2. Abstraction     -- hide details of complexity and show only essentials, reduces complexity, and isolates code impact.
+        3. Inheritance     -- eliminates redundant code.
+        4. Polymorphism    -- refactors if/else and switch/case statements.
 
     -- Before object oriented programming there was something called "procedural programming" where data was stored in a
        bunch of variables and function that operate on the data, which was very simple and straight forward.
@@ -75,8 +75,27 @@
     -- Think of a computer as an object, with a motherboard, a videocard, RAM, CPU, etc.
         -- When you push the power, all the complexity of the computer is hidden from you.
         -- This is abstraction in practice.
-    -- In objects, we have parts of the objectlike properties and methods which are hidden 
+    -- In objects, we have parts of the object, like properties and methods, which are hidden from the outside which has the 
+       benefit of:
+            1. making the interface of those objects simpler.
+            2. helps reduce the impact of change
+                -- for example, if we chnage the inner properties or methods, none of them will leak outside and cause problems.
 
+    Inheritance
+    ===========
+    -- Inheritance is a mechanism that allows you to eliminate redundant code.
+    -- Inheretance helps eliminate redundant code. For exampleL
+        -- Suppose you have a variety of buttons (click buttons, drop-downs, checkboxes, etc.).
+        -- However, they have a few things in common.
+            -- they all have properties like hidden, innerHTML, click, focus, etc.
+        -- Instead of redefining all the properties and methods for each button, all we need to do is define them once 
+           in a generic element.
+        -- So what we do in this example is group all the properties together into something like "HTMLElement" and have
+           other objects inherit those properties and methods.
+
+    Polymorphism
+    ============
+    -- Polymorphism is a technique that lets you get rid of long if and else or switch and case statements.
 
 
 
