@@ -15,27 +15,28 @@
 //     7. What is a constructor function?
 //        + How do you create a constructor function?
 //     8. What is a constructor property?
-//     9. What is pass-by value and what are primitive and reference types?
+//     9. What are getters and setters?
+//     10. What is pass-by value and what are primitive and reference types?
 //        + What are primitives?
 //        + Are primitive variables independent?
 //        + What are reference types?
 //        + Are reference types stored in variables?
 //        + Does reference type logic apply to functions?
-//    10. How do you iterate over the properties of an object?
+//    11. How do you iterate over the properties of an object?
 //        + What is Object.keys and how do you use it?
 //        + What is Object.value and how do you use it?
 //        + What is Object.entries and how do you use it?
 //        + How do you loop through an Object once it has been converted to an array?
 //        + How do you use .forEach when iterating through an object?
-//    11. Why and how do you clone an Object?
+//    12. Why and how do you clone an Object?
 //        + How to clone an object using for...in loop?
 //        + How to clone an object using Object.assign?
-//        + How to clone an object using the spread operator?
-//    12. What is a built-in object in JavaScript and what are they?
+//        + How to clone an object using the spread operator? 
+//    13. What is a built-in object in JavaScript and what are they?
 //        + What is the Math Object?
 //        + What is a String Object?
 //        + What is a Date Object?
-//    13. (TBC) What is escape notation for a string object?
+//    14. (TBC) What is escape notation for a string object?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on objects taken from study, research, tutorials, 
@@ -306,10 +307,71 @@
 */
 
 
+/*
+18. What are getters and setters?
+/////////////////////////////////
+    -- Getters and setters are special types of methods for objects.
+        -- Getters access properties in an object
+        -- Setters change (or more specifically mutate) the properties.
+
+    -- below we call on the two properties in the object kitty for our greeting.
+*/
+            const kitty = {
+                firstName: 'Felix',
+                lastName: 'McCattykins'
+            }
+
+            const whatCat = `Hi, my name is ${kitty.firstName} ${kitty.lastName}`
+            console.log(whatCat);
+/*
+-- but while the previous approach is good, we would have to repeat this template literally everywhere we need it
+-- a better way to do this is to define a method in the object called 'fullName' and then put the expression in the log.
+*/
+            const kitty2 = {
+                firstName: 'Garfield',
+                lastName: 'Fluffynums',
+                get fullName() {                                                       // use prefix 'get' so we can access like a property. 
+                    return `Hello, my name is ${kitty2.firstName} ${kitty2.lastName}`     
+                },  
+            }
+
+            console.log(kitty2.fullName);                //=> Hello, my name is Garfield Fluffynums
+/*
+-- However, the solution above is READ ONLY, meaning that we cannot set anyone elses name from the outside.
+-- in otherwords, suppose we want to specify the name from outside the object.
+-- a solution is to use the `set` prefix.
+-- the `set` function is almost exactly like the `get`
+*/
+
+            const kitty3 = {
+                firstName: 'Felix',
+                lastName: 'McCattykins',
+                get fullName() {                                                          //
+                    return `Greetings, my name is ${kitty3.firstName} ${kitty3.lastName}`     
+                },
+                set  fullName(value) {                   // with set, we need to 'process' the outside input.
+                    const parts = value.split(' ');      // first, we take the value (i.e. ) and split it into an array.
+                    this.firstName = parts[0];           // once in an array, we can seperate the words. index of 0 is 'Jacob'...
+                    this.lastName = parts[1];            // index of 1 is 'McWhiskers'.
+                }
+            }
+
+// and below we have the outside name:
+
+            kitty3.fullName = 'Jacob McWhiskers';
+
+            console.log(kitty3);                //=> { firstName: 'Jacob',
+                                                //     lastName: 'McWhiskers',
+                                                //     fullName: [Getter/Setter] }
+
+            console.log(kitty3.fullName);       //=> Greetings, my name is Jacob McWhiskers
+
+
+
 
 /*
-9. What is pass-by value and what are primitive and reference types?
-/////////////////////////////////////
+10. What is pass-by value and what are primitive and reference types?
+//////////////////////////////////////////////////////////////////////
     - JavaScript has 2 kinds of variable types: primitive and reference.
     - A fixed amount of memory is reserved after creation of every variable.
     - When a variable is copied, it's in-memory value is copied.
@@ -419,7 +481,7 @@
 
 
 /*
-10. How do you iterate over the properties of an object?
+11. How do you iterate over the properties of an object?
 ///////////////////////////////////////////////////////
     - when you iterate (enumerate) over an object, you are simply looping through the key/value pairs inside that object.
 
@@ -529,7 +591,7 @@
 
 
 /*
-11. Why and how do you clone an Object?
+12. Why and how do you clone an Object?
 ///////////////////////////////////////
     - cloning an object gets all the properties of an object and copies them into another object.
     - there are TWO ways to clone an object:
@@ -611,7 +673,7 @@
 
 
 /*
-12. What is a built-in object in JavaScript?
+13. What is a built-in object in JavaScript?
 ////////////////////////////////////////
     - a built-in object in javascript as small built-in objects.
     - these objects are available regardless of window content and operate independently of wheveer page your browser has loaded.

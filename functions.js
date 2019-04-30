@@ -21,8 +21,7 @@
 //    14. How do you create and namespace modules?
 //    15. How do you chain method calls?
 //    16. What is a rest operator?
-//    17. What are getters and setters?
-//    18. What is a callback function?
+//    17. What is a callback function?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on functions taken from study, research, tutorials, 
@@ -819,67 +818,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
            
 
 /*
-18. What are getters and setters?
-/////////////////////////////////
-    -- Getters and setters are special types of methods for objects.
-        -- Getters access properties in an object
-        -- Setters change (or more specifically mutate) the properties.
-
-    -- below we call on the two properties in the object kitty for our greeting.
-*/
-                const kitty = {
-                    firstName: 'Felix',
-                    lastName: 'McCattykins'
-                }
-
-                const whatCat = `Hi, my name is ${kitty.firstName} ${kitty.lastName}`
-                console.log(whatCat);
-/*
-    -- but while the previous approach is good, we would have to repeat this template literally everywhere we need it
-    -- a better way to do this is to define a method in the object called 'fullName' and then put the expression in the log.
-*/
-                const kitty2 = {
-                    firstName: 'Garfield',
-                    lastName: 'Fluffynums',
-                    get fullName() {                                                       // use prefix 'get' so we can access like a property. 
-                        return `Hello, my name is ${kitty2.firstName} ${kitty2.lastName}`     
-                    },  
-                }
-
-                console.log(kitty2.fullName);                //=> Hello, my name is Garfield Fluffynums
-/*
-    -- However, the solution above is READ ONLY, meaning that we cannot set anyone elses name from the outside.
-    -- in otherwords, suppose we want to specify the name from outside the object.
-    -- a solution is to use the `set` prefix.
-    -- the `set` function is almost exactly like the `get`
-*/
-
-                const kitty3 = {
-                    firstName: 'Felix',
-                    lastName: 'McCattykins',
-                    get fullName() {                                                          //
-                        return `Greetings, my name is ${kitty3.firstName} ${kitty3.lastName}`     
-                    },
-                    set  fullName(value) {                   // with set, we need to 'process' the outside input.
-                        const parts = value.split(' ');      // first, we take the value (i.e. ) and split it into an array.
-                        this.firstName = parts[0];           // once in an array, we can seperate the words. index of 0 is 'Jacob'...
-                        this.lastName = parts[1];            // index of 1 is 'McWhiskers'.
-                    }
-                }
-
-                // and below we have the outside name:
-
-                kitty3.fullName = 'Jacob McWhiskers';
-
-                console.log(kitty3);                //=> { firstName: 'Jacob',
-                                                    //     lastName: 'McWhiskers',
-                                                    //     fullName: [Getter/Setter] }
-
-                console.log(kitty3.fullName);       //=> Greetings, my name is Jacob McWhiskers
-
-
-/*
-7. What is a callback?
+17. What is a callback?
 //////////////////////
     -- A callback is a function that is passed into another function as a parameter to another function.
         -- for example, if you run a .forEach on an array (i.e. something.forEach(function(key) {return `${key}`})), where we pass in
