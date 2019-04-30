@@ -330,10 +330,46 @@ How does abstraction apply to OOP?
                                 };
                             }
 
-                            const classicPorsche = classicCar('911');           // we create a new classicCar call classicPorsche w/name
-                            console.log(classicPorsche);                        // ..
+                            const classicPorsche = classicCar('911');           
+                            console.log(classicPorsche);                        
                             const sayWhat = classicPorsche.factualComparison;
                             console.log(sayWhat);
+
+
 /*
-    -- 
+What are private properties and methods?
+/////////////////////////////////////////
+    -- So the goal of abstraction is to hide certain members from the outside.
+    -- to make a property or method private, you simply need to define them as local variables.
 */
+
+                            function germanCar1(name) {
+                                return {
+                                    name: name,
+                                    milage: { mile:30000, services:8 },
+                                    facts: function() {                         
+                                        console.log('Made in Germany')         
+                                    },
+                                    factualComparison: function() {
+                                        this.facts();
+                                    }
+                                };
+                            }
+/*
+    -- Now suppose we want the 'facts' property to remain inside the function.
+    -- All we need to do is define 'facts' as a local variable (e.g. let facts = function(){console.log('germany')});
+    -- When you set that property to a local variable, once you are outside that function the variable essentially dies.
+*/
+                            function germanCar2(name) {
+                                let facts = function() {                         
+                                    console.log('Made in Germany')         
+                                },
+                                return {
+                                    name: name,
+                                    facts: facts,
+                                    milage: { mile:30000, services:8 },
+                                    factualComparison: function() {
+                                        this.facts();
+                                    }
+                                };
+                            }
