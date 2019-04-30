@@ -308,7 +308,7 @@
 
 
 /*
-18. What are getters and setters?
+9. What are getters and setters?
 /////////////////////////////////
     -- Getters and setters are special types of methods for objects.
         -- Getters access properties in an object
@@ -324,8 +324,8 @@
             const whatCat = `Hi, my name is ${kitty.firstName} ${kitty.lastName}`
             console.log(whatCat);
 /*
--- but while the previous approach is good, we would have to repeat this template literally everywhere we need it
--- a better way to do this is to define a method in the object called 'fullName' and then put the expression in the log.
+    -- but while the previous approach is good, we would have to repeat this template literally everywhere we need it
+    -- a better way to do this is to define a method in the object called 'fullName' and then put the expression in the log.
 */
             const kitty2 = {
                 firstName: 'Garfield',
@@ -337,10 +337,10 @@
 
             console.log(kitty2.fullName);                //=> Hello, my name is Garfield Fluffynums
 /*
--- However, the solution above is READ ONLY, meaning that we cannot set anyone elses name from the outside.
--- in otherwords, suppose we want to specify the name from outside the object.
--- a solution is to use the `set` prefix.
--- the `set` function is almost exactly like the `get`
+    -- However, the solution above is READ ONLY, meaning that we cannot set anyone elses name from the outside.
+    -- in otherwords, suppose we want to specify the name from outside the object.
+    -- a solution is to use the `set` prefix.
+    -- the `set` function is almost exactly like the `get`
 */
 
             const kitty3 = {
@@ -356,7 +356,7 @@
                 }
             }
 
-// and below we have the outside name:
+    // and below we have the outside name:
 
             kitty3.fullName = 'Jacob McWhiskers';
 
