@@ -11,6 +11,8 @@
 //        document in Question and Answer format for improved readability.
 //     2. There is also a seperate section dedicated to objects (e.g. objects.js).  Although there might be 
 //        some overlap in material here, this looks at that content in the context of OOP.
+//     3. There seems to be a bit of overlap between the OOP content here and the content of dedicated to objects. 
+//        objects, however this page is more about the paradigm of object oriented programming.
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -169,8 +171,8 @@ What is a factory object?
     -- Note here that with Es6 if the key and the value are the same, we can remove the noise and simple put a single name.
     
 */
-                            function createCar(make) {
-                                return {
+                            function createCar(make) {                      // using the function 'createCar' (passing in make)...
+                                return {                                    // return the following object (with the paramter passed in)
                                     make: make,                                
                                     isWorking: true,                              
                                     startIgnition: function() {                   
@@ -182,7 +184,8 @@ What is a factory object?
 /*
     -- Once we have the factory function constructed, we simply need to create a new car:
 */
-                            const makeAcura = createCar('acura');
+                            const makeAcura = createCar('acura');      // create a 'makeAcura' object from the createCar factory, 
+
                             console.log(makeAcura);                    // { make: 'acura',
                                                                        //   isWorking: true,
                                                                        //   startIgnition: [Function: startIgnition] }
@@ -198,7 +201,7 @@ What is a constructor function?
     -- we also use 'this' to reference the object executing a particular peice of code.
 */
 
-                            function MakeAnotherCar(make) {
+                            function MakeAnotherCar(make) {              
                                 this.make = make;
                                 this.isWorking = true;
                                 this.startIgnition = function() {
@@ -263,7 +266,7 @@ How do you add or remove properties?
         -- use bracket notation if you DO have spaces or special characters.
 */
 
-                            function superCar() {
+                            function superCar() {                               
                                 return {
                                     coupe: 'McLaren 720s',
                                     sedan: 'BMW M5'
@@ -280,6 +283,7 @@ How do you add or remove properties?
 /*
 How do you Enumerate (i.e. iterate) over properties?
 /////////////////////////////////////////////////////
+    -- for more detailed 
 */
                             function carsClasses() {
                                 return {
@@ -304,6 +308,32 @@ How do you Enumerate (i.e. iterate) over properties?
                                                                             // the car class is middle and the car make is Mercedes
                                                                             // the car class is luxury and the car make is Rolls Royce
 
+/*
+How does abstraction apply to OOP?
+///////////////////////////////////
+    -- Abstraction means we should hide the details and show (i.e. expose) only the essentials.
+    -- using the computer as an example, we want to hide the complexity of the hardware on the outside and
+       expose only a button to power the computer on the outside.
+       -- note that understanding abstraction is ESSENTIAL to effectively apply object oriented programming.
+*/
 
+                            function classicCar(name) {
+                                return {
+                                    name: name,
+                                    milage: { mile:12000, services:12 },
+                                    facts: function() {
+                                        console.log('its pretty clean')
+                                    },
+                                    factualComparison: function() {
+                                        this.facts();
+                                    }
+                                };
+                            }
 
-
+                            const classicPorsche = classicCar('911');           // we create a new classicCar call classicPorsche w/name
+                            console.log(classicPorsche);                        // ..
+                            const sayWhat = classicPorsche.factualComparison;
+                            console.log(sayWhat);
+/*
+    -- 
+*/
