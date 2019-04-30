@@ -257,4 +257,53 @@ What is the difference between value(primitive) types and reference types?
 /*
 How do you add or remove properties?
 /////////////////////////////////////
+    -- objects that are created in javascript are dynamic, meaning you can add or remove properties from them.
+    -- to ADD a property to an object, you can either use dot notation or bracket notation.
+        -- use dot notation for words that DONT have spaces or special characters.
+        -- use bracket notation if you DO have spaces or special characters.
 */
+
+                            function superCar() {
+                                return {
+                                    coupe: 'McLaren 720s',
+                                    sedan: 'BMW M5'
+                                };
+                            }
+
+                            const superCarCollection = superCar();
+
+                            superCarCollection.truck = 'Fored Raptor';          // dot notation
+                            superCarCollection['suv'] = 'Lamborghinini Urus';   // bracket notation
+                           
+                            console.log(superCarCollection);
+                            
+/*
+How do you Enumerate (i.e. iterate) over properties?
+/////////////////////////////////////////////////////
+*/
+                            function carsClasses() {
+                                return {
+                                    entry: 'Honda',
+                                    middle: 'Mercedes',
+                                    luxury: 'Rolls Royce'
+                                };
+                            }
+
+                            const carsClassesList = carsClasses();
+
+                            for (let key in carsClassesList) {
+                                console.log(key);
+                            }                                               //=> entry
+                                                                            //   middle
+                                                                            //   luxury
+
+                            Object.keys(carsClassesList).forEach(function(key) {
+                                console.log(`car class: ${key}, car make: ${carsClassesList[key]}`);
+                            });
+                                                                            // the car class is entry and the car make is Honda
+                                                                            // the car class is middle and the car make is Mercedes
+                                                                            // the car class is luxury and the car make is Rolls Royce
+
+
+
+
