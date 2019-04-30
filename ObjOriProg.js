@@ -343,33 +343,22 @@ What are private properties and methods?
     -- to make a property or method private, you simply need to define them as local variables.
 */
 
-                            function germanCar1(name) {
+                            function germanCar(name) {
                                 return {
                                     name: name,
-                                    milage: { mile:30000, services:8 },
-                                    facts: function() {                         
-                                        console.log('Made in Germany')         
+                                    howManyMiles: function() {                         
+                                        let milage =  { mile:30000, services:8 };     // scope of milage is limited to howManyMiles!
+                                        console.log(milage);  
                                     },
                                     factualComparison: function() {
                                         this.facts();
                                     }
                                 };
                             }
-/*
-    -- Now suppose we want the 'facts' property to remain inside the function.
-    -- All we need to do is define 'facts' as a local variable (e.g. let facts = function(){console.log('germany')});
-    -- When you set that property to a local variable, once you are outside that function the variable essentially dies.
-*/
-                            function germanCar2(name) {
-                                let facts = function() {                         
-                                    console.log('Made in Germany')         
-                                },
-                                return {
-                                    name: name,
-                                    facts: facts,
-                                    milage: { mile:30000, services:8 },
-                                    factualComparison: function() {
-                                        this.facts();
-                                    }
-                                };
-                            }
+
+                            const BMW = germanCar('BMW');
+                            console.log(BMW);
+                            console.log(BMW.howManyMiles);
+                            console.log(BMW.milage);
+
+                      
