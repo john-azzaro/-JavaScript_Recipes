@@ -205,6 +205,7 @@ What is a constructor function?
                                     console.log('grumble grumble');
                                 }
                             }
+
 /*
     -- to create a car using the constructor function, it is mostly the same as a factory function EXCEPT for
        the inclusion of 'new' operator.
@@ -216,3 +217,20 @@ What is a constructor function?
 
                             const makeFord = new MakeAnotherCar('ford');
                             console.log(makeFord);                                 // MakeAnotherCar { make: 'ford', isWorking: true, startIgnition: [Function] }
+
+/*
+What is a constructor property?
+///////////////////////////////
+    -- every object in javascript has a property called 'constructor' which references the function used to construct 
+       or create an object.
+    -- When we log 'makeFord.constructor', it will return the function used to create the object (i.e. MakeAnotherCar).
+*/
+
+                            console.log(makeFord.constructor);         //=> [Function: MakeAnotherCar]
+
+/*
+    -- However, when we log 'makeAcura' from the factory function example, we get Object.  
+    -- Note that the first letter in Object is uppercase, meaning that this is a built-in constructor function in JavaScript.
+*/
+
+                            console.log(makeAcura.constructor);         //=> [Function: Object]
