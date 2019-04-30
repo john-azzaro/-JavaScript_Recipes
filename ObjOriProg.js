@@ -339,26 +339,31 @@ How does abstraction apply to OOP?
 /*
 What are private properties and methods?
 /////////////////////////////////////////
+NOTE: EXAMPLE NEEDS MORE CLARIFICATION
+/////////////////////////////////////////
     -- So the goal of abstraction is to hide certain members from the outside.
     -- to make a property or method private, you simply need to define them as local variables.
 */
 
-                            function germanCar(name) {
-                                return {
-                                    name: name,
-                                    howManyMiles: function() {                         
-                                        let milage =  { mile:30000, services:8 };     // scope of milage is limited to howManyMiles!
-                                        console.log(milage);  
-                                    },
-                                    factualComparison: function() {
-                                        this.facts();
-                                    }
+
+                            function Circle(radius) {          
+                                let defaultLocation = { x:0, y:0 };
+                                let computeOptimumLocation = function(factor) {
+                                    //...
+                                }
+                                this.radius = radius;
+                                this.draw = function() {
+                                    computeOptimumLocation(0.1);
+                                    console.log('draw something cool');
                                 };
                             }
 
-                            const BMW = germanCar('BMW');
-                            console.log(BMW);
-                            console.log(BMW.howManyMiles);
-                            console.log(BMW.milage);
+                            const circle = new Circle(10);
+                            console.log(circle);
+
+                            circle.draw();
+
+
+
 
                       
