@@ -343,6 +343,8 @@ NOTE: EXAMPLE NEEDS MORE CLARIFICATION
 /////////////////////////////////////////
     -- So the goal of abstraction is to hide certain members from the outside.
     -- to make a property or method private, you simply need to define them as local variables.
+    -- in the example below, defaultLocation and computeOptimumLocation are local variables in a function.
+        -- however, from the object-oriented point of view, we can refer to them as private members of the circle object.
 */
 
 
