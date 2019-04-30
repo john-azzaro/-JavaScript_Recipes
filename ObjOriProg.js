@@ -221,7 +221,7 @@ What is a constructor function?
 /*
 What is a constructor property?
 ///////////////////////////////
-    -- every object in javascript has a property called 'constructor' which references the function used to construct 
+    -- Main point, every object in javascript has a property called 'constructor' which references the function used to construct 
        or create an object.
     -- When we log 'makeFord.constructor', it will return the function used to create the object (i.e. MakeAnotherCar).
 */
@@ -234,3 +234,27 @@ What is a constructor property?
 */
 
                             console.log(makeAcura.constructor);         //=> [Function: Object]
+
+
+/*
+Are functions objects?
+//////////////////////
+    -- in so many words, yes, function are objects
+
+*/
+
+/*
+What is the difference between value(primitive) types and reference types?
+////////////////////////////////////////////////////////////////////////////
+    -- Value types (primitives) are: numbers, strings, booleans, symbols, undefined, null.
+        -- value types are stored in the variable.
+        -- primitives are copied by thier value.
+    -- Reference types are: objects, functions, arrays.
+        -- reference types are NOT stored in the variable... it is stored somewhere else in memory
+        -- objects are copied by thier reference.
+*/
+
+/*
+How do you add or remove properties?
+/////////////////////////////////////
+*/
