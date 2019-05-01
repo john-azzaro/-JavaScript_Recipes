@@ -52,7 +52,8 @@
 /*
 2. What is functional programming?
 //////////////////////////////////
-    -- functional programming is about beaking up you code into single use peices.
+    -- functional programming is programming technique (i.e. paradigm).
+    -- functional programming is essentially about beaking up you code into single use peices.
     -- functional programming is about breaking your code into "verbs" (vs OOP which is about 'nouns').
     -- In many ways, it is easier to think of the world in terms of nouns (and by extention objects).
         -- so if we were to build a house in OOP, we would talk about the walls, doors, and windows.
