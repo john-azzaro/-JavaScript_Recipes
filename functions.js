@@ -16,7 +16,7 @@
 //     9. How do you invoke through Call and Apply?
 //    10. How do you use the arguments parameter?
 //    11. Can you explain the return statement?
-//    12. How do you use an anaonymous closure (or self executing function)?
+//    12. How do you use an anonymous closure (or self executing function)?
 //    13. What is variable hoisting and scope?
 //    14. How do you create and namespace modules?
 //    15. How do you chain method calls?
@@ -32,7 +32,22 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+/*
+What is functional programming?
+///////////////////////////////
+    -- functional programming is about beaking up you code into single use peices.
+    -- functional programming is about breaking your code into "verbs" (vs OOP which is about 'nouns').
+    -- In many ways, it is easier to think of the world in terms of nouns (and by extention objects).
+        -- so if we were to build a house in OOP, we would talk about the walls, doors, and windows.
+    -- However, with functional programming we are thinking about the ACTIONS.
+        -- if we were buildign a house with functional programming, we would talk about turning the lights
+           on or off, opening or closing the doors, etc.
+        -- functional programming uses many functions, passing functions to functions, returning functions, doing 
+        things with the arguments and parameters. 
+    -- Functional programming is a style (like functional reactive programming with observable streams).
 
+
+*/
 
 
 /*
