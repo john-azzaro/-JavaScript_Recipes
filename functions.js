@@ -3,25 +3,26 @@
 //     Functions (broad overview)
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. What is a function?
-//     2. What are the components of a function?
-//     3. What is the difference between arguments and parameters?
-//     4. What is a default parameter?
-//     4. How do you define a function?
+//     2. What is functional programming?
+//     3. What are the components of a function?
+//     4. What is the difference between arguments and parameters?
+//     5. What is a default parameter?
+//     6. How do you define a function?
 //          + What is a function defintion?
 //          + What is a function expression?
-//     5. How do you invoke a function?
-//     6. How do you use functions in objects?
-//     7. How do you invoke a function through a constructor?
-//     8. How do you use prototypes?
-//     9. How do you invoke through Call and Apply?
-//    10. How do you use the arguments parameter?
-//    11. Can you explain the return statement?
-//    12. How do you use an anonymous closure (or self executing function)?
-//    13. What is variable hoisting and scope?
-//    14. How do you create and namespace modules?
-//    15. How do you chain method calls?
-//    16. What is a rest operator?
-//    17. What is a callback function?
+//     7. How do you invoke a function?
+//     8. How do you use functions in objects?
+//     9. How do you invoke a function through a constructor?
+//    10. How do you use prototypes?
+//    11. How do you invoke through Call and Apply?
+//    12. How do you use the arguments parameter?
+//    13. Can you explain the return statement?
+//    14. How do you use an anonymous closure (or self executing function)?
+//    15. What is variable hoisting and scope?
+//    16. How do you create and namespace modules?
+//    17. How do you chain method calls?
+//    18. What is a rest operator?
+//    19. What is a callback function?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on functions taken from study, research, tutorials, 
@@ -31,23 +32,6 @@
 //     2. For more examples and rough idea for this page, see functionScratch.js
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/*
-What is functional programming?
-///////////////////////////////
-    -- functional programming is about beaking up you code into single use peices.
-    -- functional programming is about breaking your code into "verbs" (vs OOP which is about 'nouns').
-    -- In many ways, it is easier to think of the world in terms of nouns (and by extention objects).
-        -- so if we were to build a house in OOP, we would talk about the walls, doors, and windows.
-    -- However, with functional programming we are thinking about the ACTIONS.
-        -- if we were buildign a house with functional programming, we would talk about turning the lights
-           on or off, opening or closing the doors, etc.
-        -- functional programming uses many functions, passing functions to functions, returning functions, doing 
-        things with the arguments and parameters. 
-    -- Functional programming is a style (like functional reactive programming with observable streams).
-
-
-*/
 
 
 /*
@@ -63,12 +47,27 @@ What is functional programming?
     -- A function is JavaScripts paragraph.
     -- A function is considered an object
 */
-    
+
+
+/*
+2. What is functional programming?
+//////////////////////////////////
+    -- functional programming is about beaking up you code into single use peices.
+    -- functional programming is about breaking your code into "verbs" (vs OOP which is about 'nouns').
+    -- In many ways, it is easier to think of the world in terms of nouns (and by extention objects).
+        -- so if we were to build a house in OOP, we would talk about the walls, doors, and windows.
+    -- However, with functional programming we are thinking about the ACTIONS.
+        -- if we were buildign a house with functional programming, we would talk about turning the lights
+           on or off, opening or closing the doors, etc.
+        -- functional programming uses many functions, passing functions to functions, returning functions, doing 
+        things with the arguments and parameters. 
+    -- Functional programming is a style (like functional reactive programming with observable streams).
+*/
 
 
 
 /* 
-2. What are the components of a function?
+3. What are the components of a function?
 ////////////////////////////////////////
  */
 
@@ -113,8 +112,8 @@ console.log  >  Invoke    - This invokes (or calls) the function to be used else
 
 
  /* 
- 3. What is the difference between arguments and parameters?
- //////////////////////////////////////////////////////////
+4. What is the difference between arguments and parameters?
+//////////////////////////////////////////////////////////
       When talking about functions, the terms parameters and arguments are often interchangeably used as if it were one and the 
       same thing but there is a very subtle difference.  
 
@@ -133,8 +132,8 @@ console.log  >  Invoke    - This invokes (or calls) the function to be used else
 
 
 /*
-What is a default parameter?
-///////////////////////////
+5. What is a default parameter?
+////////////////////////////////
         -- a default parameter is a specified parameter that we specify in the call signature parentheses of the function.
         -- below we have a normal function BEFORE default parameters:
 */
@@ -174,8 +173,8 @@ What is a default parameter?
 
 
 /*
-4. How do you define a function?
-////////////////////////////
+6. How do you define a function?
+////////////////////////////////
 
     What is a function Declaration?
     ===============================
@@ -231,7 +230,7 @@ What is a default parameter?
 
 
 /*
-5. How do you invoke a function?
+7. How do you invoke a function?
 ///////////////////////////////
     -- There are 4 ways to invoke a function:
         1. Invoke as a function.
@@ -268,7 +267,7 @@ What is a default parameter?
 
 
 /* 
-6. How do you use functions as objects?
+8. How do you use functions as objects?
 //////////////////////////////////////
 
 NOTE: This section is on functions in objects, but first a brief overview.
@@ -316,7 +315,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /*
-7. How do you invoke a function through a constructor?
+9. How do you invoke a function through a constructor?
 /////////////////////////////////////////////////////
         -- functions can construct objects as well.
         -- in other words, the function itself BECOMES the constructor.
@@ -361,7 +360,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /* 
-8. How do you expand objects through prototypes?
+10. How do you expand objects through prototypes?
 ///////////////////////////////////////////////
         -- JavaScript is known as a prototypal inheritance langauge, which means you can base the functionality of an
            object on ANOTHER object,
@@ -405,7 +404,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /*
-9. How do you invoke through Call & Apply?
+11. How do you invoke through Call & Apply?
 /////////////////////////////////////////
         -- Call & Apply is sometimes refered to as "indirect invocation".
         -- Call & Apply can define the value of `this` argument.
@@ -455,7 +454,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /*
-10. What is the arguments parameter?
+12. What is the arguments parameter?
 ///////////////////////////////
         -- Although we've been passing elements to functions, but often we dont know how many elements we will be needing.
         -- You want your function to be able to accept an number of elements.
@@ -495,7 +494,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /*
-11. Can you explain the return statement?
+13. Can you explain the return statement?
 ////////////////////////////////////////
         -- When you invoke a function, its like generating an equation, which usually have results.
         -- The 'RETURN' statement can return a result, object, or even another function.
@@ -534,7 +533,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /* 
-12. How do you use an anonymous closure (or self executing function)?
+14. How do you use an anonymous closure (or self executing function)?
 //////////////////////////////////////////////////////////////////////
         -- a typical function definition can be invoked by calling the function name anywhere in the code.  For example:
 */
@@ -578,7 +577,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /*
-13. What is variable hoisting and scope?
+15. What is variable hoisting and scope?
 ///////////////////////////////////////
         -- HOISTING is the process of moving the FUNCTION DECLARATIONS to the top of the file automatically.
 
@@ -623,7 +622,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /*
-14. How do you create and namespace modules?
+16. How do you create and namespace modules?
 ///////////////////////////////////////
     -- modules let you reuse code across apps.
         -- when you just start coding, you are coding just for that program.  However, when you start a new project you
@@ -722,7 +721,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /* 
-15. How do you chain method calls?
+17. How do you chain method calls?
 /////////////////////////////////
     -- CHAINING makes it easy to work with multiple methods and it allows one function to call another.
     -- similar to jQuery.
@@ -790,7 +789,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /*
-16. What is a Rest Operator?
+18. What is a Rest Operator?
 ////////////////////////////
     -- if you want a function with varying numbers of parameters, you can use the rest operator.
     -- this is not to be confused with the spread operator because it is used with arrays.
@@ -833,7 +832,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
            
 
 /*
-17. What is a callback?
+19. What is a callback?
 //////////////////////
     -- A callback is a function that is passed into another function as a parameter to another function.
         -- for example, if you run a .forEach on an array (i.e. something.forEach(function(key) {return `${key}`})), where we pass in
