@@ -38,13 +38,13 @@
 /////////////////////////
     ==SHORT ANSWER==
         -- A function is a repeatable process or behavior.
-
+        
     ==EXTENDED ANSWERS==
         -- A function is a REPEATABLE (i.e. can be called multiple times) and DETERMINATE (i.e. predictable) PROCESS or BEHAVIOR.
         -- A function is a series of STATEMENTS that are grouped into a special package.
         -- A function is a MODULAR and fundamental BUILDING BLOCK of JavaScript that perform tasks or calculate values.
         -- A function is an OBJECT that is a FIRST-CLASS ENTTITY which is treated as a VALUE.
-
+    
     ==ANALOGY==
         -- Think of a function as a resuable recipe for cooking.
         -- That recipe (e.g. "function") performs the same set of actions (i.e. "main block" of function) over and over again on 
@@ -59,14 +59,18 @@
 //////////////////////////////////
     ==SHORT ANSWER==
         -- Functional programming is a PROGRAMMING STYLE/TECHNIQUE (i.e. PARADIGM) that breaks code into SINGLE-USE peices and focuses
-           on DATA-FLOW rather than control-flow.
+           on DATA-FLOW rather than control-flow.  
 
     ==EXTENDED ANSWERS==
         -- Functional programming stresses importance on the ORDER in which things run, specifically how the program progresses from 
-           statement to statement, in and out of for loops and in and out od sub-routines.
+           statement to statement, in-and-out of for loops and in-and-out of sub-routines.
+
 
     ==ANALOGY==
-        
+        -- Think of functional programming in terms a long chain.
+        -- AT one end of the
+
+
     
     
     
@@ -1090,4 +1094,6 @@ NOTE: This section is on functions in objects, but first a brief overview.
 /*
 resources
 http://www.lihaoyi.com/post/WhatsFunctionalProgrammingAllAbout.html
+https://opensource.com/article/17/6/functional-javascript
+https://blog.codeanalogies.com/2019/04/21/state-in-javascript-explained-by-cooking-a-simple-meal/
 */
