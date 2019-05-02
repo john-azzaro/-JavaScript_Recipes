@@ -37,21 +37,30 @@
 /*
 1. What is a function?
 //////////////////////
-    -- A function is one of the fundamental building blocks of JavaScript.
-    -- A function is a repeatable (i.e. can be called multiple times) and determinate (i.e. predictable) process or behavior.
-    -- A function performs a task or calculates a value.
-    -- A function is the primary modular unit of execution in JavaScript (which is a functional language).
-    -- A function (in JavaScript) are called first-class entities.
-    -- A function is treaded as a value.
-    -- A function is a series of statements that are grouped into a special package.
-    -- A function is JavaScripts paragraph.
-    -- A function is considered an object
+==SHORT==
+    -- A function is a repeatable process or behavior.
+
+==LONG==
+    -- A function is a REPEATABLE (i.e. can be called multiple times) and DETERMINATE (i.e. predictable) PROCESS or BEHAVIOR.
+    -- A function is a series of STATEMENTS that are grouped into a special package.
+    -- A function is a MODULAR and fundamental BUILDING BLOCK of JavaScript that perform tasks or calculate values.
+    -- A function is an OBJECT that is a FIRST-CLASS ENTTITY which is treated as a VALUE.
+
+==ANALOGY==
+
+==EXAMPLE==
+
+
+
 */
 
 
 /*
 2. What is functional programming?
 //////////////////////////////////
+==TOP==
+
+
     -- functional programming is programming technique (i.e. paradigm).
     -- functional programming is essentially about beaking up you code into single use peices.
     -- functional programming is about breaking your code into "verbs" (vs OOP which is about 'nouns').
