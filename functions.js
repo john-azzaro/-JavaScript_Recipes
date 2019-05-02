@@ -46,7 +46,7 @@
         -- A function is an OBJECT that is a FIRST-CLASS ENTTITY which is treated as a VALUE.
 
     ==ANALOGY==
-        -- Think of functions as a resuable recipe.
+        -- Think of a function as a resuable recipe for cooking.
         -- That recipe (e.g. "function") performs the same set of actions (i.e. "main block" of function) over and over again on 
            a set of ingredients (e.g. parameters).        
 */
@@ -57,11 +57,31 @@
 /*
 2. What is functional programming?
 //////////////////////////////////
-==TOP==
+    ==SHORT ANSWER==
+        -- Functional programming is a PROGRAMMING STYLE/TECHNIQUE (i.e. PARADIGM) that breaks code into SINGLE-USE peices and focuses
+           on DATA-FLOW rather than control-flow.
+
+    ==EXTENDED ANSWERS==
+        -- Functional programming stresses importance on the ORDER in which things run, specifically how the program progresses from 
+           statement to statement, in and out of for loops and in and out od sub-routines.
+
+    ==ANALOGY==
+        
+    
+    
+    
+    
+    -- Think about functional programming in terms of a house and verbs and nouns.
+        -- With object-oriented programming, we would talk about the properties of a house (e.g. walls, doors, windows).
+        -- With functional
+        
+        Think of functional programming in terms of a verb (as opposed to a noun).
+        -- A noun (object-oriented programming)
+        -- If you think of a chair in terms of Object
 
 
-    -- functional programming is programming technique (i.e. paradigm).
-    -- functional programming is essentially about beaking up you code into single use peices.
+
+
     -- functional programming is about breaking your code into "verbs" (vs OOP which is about 'nouns').
     -- In many ways, it is easier to think of the world in terms of nouns (and by extention objects).
         -- so if we were to build a house in OOP, we would talk about the walls, doors, and windows.
@@ -70,7 +90,7 @@
            on or off, opening or closing the doors, etc.
         -- functional programming uses many functions, passing functions to functions, returning functions, doing 
         things with the arguments and parameters. 
-    -- Functional programming is a style (like functional reactive programming with observable streams).
+    
 */
 
 
@@ -1064,4 +1084,10 @@ NOTE: This section is on functions in objects, but first a brief overview.
            In this case, the first pass where "I'm doing my math homework." is done...
            Now, when 'callback()' is invoked inside the function, the next bit of code can be executed.
         5. Once the callback is executed, the function's second paramter (a function itself) and prints "finished my homework!"
+*/
+
+
+/*
+resources
+http://www.lihaoyi.com/post/WhatsFunctionalProgrammingAllAbout.html
 */
