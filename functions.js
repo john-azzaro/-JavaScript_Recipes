@@ -839,7 +839,12 @@ NOTE: This section is on functions in objects, but first a brief overview.
         -- for example, if you run a .forEach on an array (i.e. something.forEach(function(key) {return `${key}`})), where we pass in
            "function" is a callback.  
             -- Note that that .forEach example is not asynchronous. 
-
+    -- A callback is a convention in JavaScript that is often used with asyncronous programming.
+    -- A callback is used when you want to do things asyncronously, or whenever you want to exectue a code, which may not necessarily be
+       in order, but at a certain point in time, or when an event takes place. 
+    -- A callback often uses the anonymous functions (i.e. functions without names like function() {...}) because they are
+       evoked immediately once the the event takes place.
+    -- A callback is often tied to events (i.e. to take care of tasks whenever an event is triggered).
     -- callbacks are also called "higher order functions".
     -- callbacks are a way to make sure certain code doesnt execute until other code has already finished execution.
     -- when you pass a function as an argument.
