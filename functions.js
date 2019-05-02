@@ -28,7 +28,6 @@
 //     1. Useful overview of information on functions taken from study, research, tutorials, 
 //        mentor meetings, peer discussions, and good ole' fashioned curiosity.  I've put the document in Question
 //        and Answer format for improved readability.
-//
 //     2. For more examples and rough idea for this page, see functionScratch.js
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -36,23 +35,23 @@
 
 /*
 1. What is a function?
-//////////////////////
-==SHORT==
-    -- A function is a repeatable process or behavior.
+/////////////////////////
+    ==SHORT ANSWER==
+        -- A function is a repeatable process or behavior.
 
-==LONG==
-    -- A function is a REPEATABLE (i.e. can be called multiple times) and DETERMINATE (i.e. predictable) PROCESS or BEHAVIOR.
-    -- A function is a series of STATEMENTS that are grouped into a special package.
-    -- A function is a MODULAR and fundamental BUILDING BLOCK of JavaScript that perform tasks or calculate values.
-    -- A function is an OBJECT that is a FIRST-CLASS ENTTITY which is treated as a VALUE.
+    ==EXTENDED ANSWERS==
+        -- A function is a REPEATABLE (i.e. can be called multiple times) and DETERMINATE (i.e. predictable) PROCESS or BEHAVIOR.
+        -- A function is a series of STATEMENTS that are grouped into a special package.
+        -- A function is a MODULAR and fundamental BUILDING BLOCK of JavaScript that perform tasks or calculate values.
+        -- A function is an OBJECT that is a FIRST-CLASS ENTTITY which is treated as a VALUE.
 
-==ANALOGY==
-
-==EXAMPLE==
-
-
-
+    ==ANALOGY==
+        -- Think of functions as a resuable recipe.
+        -- That recipe (e.g. "function") performs the same set of actions (i.e. "main block" of function) over and over again on 
+           a set of ingredients (e.g. parameters).        
 */
+
+
 
 
 /*
