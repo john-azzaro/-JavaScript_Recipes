@@ -233,7 +233,7 @@
 6. How do you define a function?
 ////////////////////////////////
     ==SHORT ANSWER==
-       -- A function can be defined as either a function declaration or a funtion expression.
+       -- A function can be defined as either a function declaration or a funtion expression. A function declaration can be accesse
 
 
     ==EXTENDED ANSWER==
@@ -254,18 +254,18 @@
 
 /*  What is a function expression?
     ==============================
-    -- Function expressions also go by the name "Definition Expression" and "Function literal".
-    -- Function expressions are a JavaScript pattern that lets you create a variable and execute it as a function.
-        -- Remember: a variable can be set to a number, a string, an object, or even a function (seen here). 
-    -- Function expressions are Not hoisted with contents, but the reference to it may be hoisted if we assign it as a variable.
-    -- Functions defined as arguments to functions ARE expressions.
-    -- Internal functions with no names are also known as an anonymous function because you dont need a name for it.
-    -- Function expressions are useful because we can use it everywhere a variable can go.
-    -- Since a function expression is a variable (or if it is a const), we need to terminate the function with a semi-colon.
-    -- If you DO NOT have a name for the function (seen below), you have an ANONYMOUS function.
-    -- If you add a name to the function (i.e. let run = function walk() {...}), it is a NAMED function expression.
-    -- IMPORTANT: Because of an issue with hoisting, if you invoke a function expression before the function itself, you will get an error.
-    -- You can also run the function through another declared variable.             
+        -- Function expressions also go by the name "Definition Expression" and "Function literal".
+        -- Function expressions are a JavaScript pattern that lets you create a variable and execute it as a function.
+            -- Remember: a variable can be set to a number, a string, an object, or even a function (seen here). 
+        -- Function expressions are Not hoisted with contents, but the reference to it may be hoisted if we assign it as a variable.
+        -- Functions defined as arguments to functions ARE expressions.
+        -- Internal functions with no names are also known as an anonymous function because you dont need a name for it.
+        -- Function expressions are useful because we can use it everywhere a variable can go.
+        -- Since a function expression is a variable (or if it is a const), we need to terminate the function with a semi-colon.
+        -- If you DO NOT have a name for the function (seen below), you have an ANONYMOUS function.
+        -- If you add a name to the function (i.e. let run = function walk() {...}), it is a NAMED function expression.
+        -- IMPORTANT: Because of an issue with hoisting, if you invoke a function expression before the function itself, you will get an error.
+        -- You can also run the function through another declared variable.             
  */                                 
         // function expression:
 
