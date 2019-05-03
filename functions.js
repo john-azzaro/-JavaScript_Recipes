@@ -101,41 +101,16 @@
             
 
 
-
-
-    
-    
-    
-  /*  
-    -- Think about functional programming in terms of a house and verbs and nouns.
-        -- With object-oriented programming, we would talk about the properties of a house (e.g. walls, doors, windows).
-        -- With functional
-        
-        Think of functional programming in terms of a verb (as opposed to a noun).
-        -- A noun (object-oriented programming)
-        -- If you think of a chair in terms of Object
-
-
-
-
-    -- functional programming is about breaking your code into "verbs" (vs OOP which is about 'nouns').
-    -- In many ways, it is easier to think of the world in terms of nouns (and by extention objects).
-        -- so if we were to build a house in OOP, we would talk about the walls, doors, and windows.
-    -- However, with functional programming we are thinking about the ACTIONS.
-        -- if we were buildign a house with functional programming, we would talk about turning the lights
-           on or off, opening or closing the doors, etc.
-        -- functional programming uses many functions, passing functions to functions, returning functions, doing 
-        things with the arguments and parameters. 
-    
-*/
-
-
-
 /* 
 3. What are the components of a function?
 ////////////////////////////////////////
- */
+    ==SHORT ANSWER==
+        -- A function is comprised of a function names "keyword", a name for that function (e.g. "myFunction"), a call signature with 
+           parameters (which are stipulated or passed in), a main block of the function.  The function is then called by calling the 
+           function name as well as any parameters.
 
+    ==EXAMPLE==
+*/          
             //    FUNCTION KEYWORD         NAME        CALL SIGNATURE (W/PARAMETER)
             //                   \           |         /
                                 function myFunction(str) {
@@ -144,39 +119,40 @@
                                 console.log(myFunction("Hello!"));  //- CALL (W/ARGUMENT)
 /*  
  
-function    > Keyword    - Functions are `DEFINED` with the function keyword (regardless of how they are used or invoked).
-                         - Defining a function is sometimes called "DECLARING" a function.
+        Component           ID              What it is and what it does
+        _________________   ___________     ________________________________________________________________________________________________
+            function        > Keyword       - Functions are `DEFINED` with the function keyword (regardless of how they are used or invoked).
+                                            - Defining a function is sometimes called "DECLARING" a function.
 
-myFunction     > NAME    - The `NAME` of the code that can be invoked or called elsewhere in our code.
-                         - Sometimesd the name can be `OPTIONAL`.
-                         - You can use the following to name a function:
-                            -- a to z (upper and lower case)
-                            -- 0 to 9
-                            -- _ (underscore)
-                            -- $ (cash sign)
-                            -- special characters
+            myFunction      > NAME          - The `NAME` of the code that can be invoked or called elsewhere in our code.
+                                            - Sometimesd the name can be `OPTIONAL`.
+                                            - You can use the following to name a function:
+                                                -- a to z (upper and lower case)
+                                                -- 0 to 9
+                                                -- _ (underscore)
+                                                -- $ (cash sign)
+                                                -- special characters
 
-(str)    > Parameters     - `PARAMETERS` go inside the call signature parentheses (i.e. (...) ).
-                          - Multiple parameters are seperated by commas (i.e. (num1, num2, num3) ).
-                          - You can have as many parameters as you want.
-                          - Parameters are variables that are local and ONLY available inside the function.
+            (str)           > Parameters    - `PARAMETERS` go inside the call signature parentheses (i.e. (...) ).
+                                            - Multiple parameters are seperated by commas (i.e. (num1, num2, num3) ).
+                                            - You can have as many parameters as you want.
+                                            - Parameters are variables that are local and ONLY available inside the function.
 
-{...}    > Main Block     - Since the function has to do something, the main block of the function has a series of `INSTRUCTIONS`.
-                          - Those instructions are called `STATEMENTS`.
-                          - Statements go inside curly braces (i.e. {...} ).
-                          - Statements are seperated by semicolons (i.e. ; ).
-                          - Also remember NOT to add a semicolon after the main block (i.e. {}; )
+            {...}           > Main Block    - Since the function has to do something, the main block of the function has a series of `INSTRUCTIONS`.
+                                            - Those instructions are called `STATEMENTS`.
+                                            - Statements go inside curly braces (i.e. {...} ).
+                                            - Statements are seperated by semicolons (i.e. ; ).
+                                            - Also remember NOT to add a semicolon after the main block (i.e. {}; )
 
-console.log  >  Invoke    - This invokes (or calls) the function to be used elsewhere in the code by name.
-                          - console.log will print the result of the function to the browser console.
-                          - myFunction("string") will call the function.
-
+            console.log     > Invoke        - This invokes (or calls) the function to be used elsewhere in the code by name.
+                                            - console.log will print the result of the function to the browser console.
+                                            - myFunction("string") will call the function.
 */
 
 
 
 
- /* 
+/* 
 4. What is the difference between arguments and parameters?
 //////////////////////////////////////////////////////////
       When talking about functions, the terms parameters and arguments are often interchangeably used as if it were one and the 
