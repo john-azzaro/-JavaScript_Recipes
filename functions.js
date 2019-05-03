@@ -232,7 +232,11 @@
 /*
 6. How do you define a function?
 ////////////////////////////////
+    ==SHORT ANSWER==
+       -- A function can be defined as either a function declaration or a funtion expression.
 
+
+    ==EXTENDED ANSWER==
     What is a function Declaration?
     ===============================
         -- A function declaration is hoisted with contents (hoisting is how the browser parses Javascript, reads through once 
@@ -250,7 +254,7 @@
 
 /*  What is a function expression?
     ==============================
-    -- Function expressions also go by the name Definition Expression and Function literal.
+    -- Function expressions also go by the name "Definition Expression" and "Function literal".
     -- Function expressions are a JavaScript pattern that lets you create a variable and execute it as a function.
         -- Remember: a variable can be set to a number, a string, an object, or even a function (seen here). 
     -- Function expressions are Not hoisted with contents, but the reference to it may be hoisted if we assign it as a variable.
