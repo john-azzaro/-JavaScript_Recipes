@@ -64,27 +64,38 @@
     ==EXTENDED ANSWERS==
         -- Functional programming stresses importance on the ORDER in which things run, specifically how the program progresses from 
            statement to statement, in-and-out of for loops and in-and-out of sub-routines.
+        -- Functional programming is about breaking your code into "verbs" (vs OOP which is about 'nouns').
+            -- In many ways, it is easier to think of the world in terms of nouns (and by extention objects).
+                -- So if we were to build a house in OOP, we would talk about the walls, doors, and windows.
+            -- However, with functional programming we are thinking about the ACTIONS.
+                -- So if we were building a house with functional programming, we would talk about turning the lights
+                   on or off, opening or closing the doors, etc.
+        -- Functional programming uses many functions, passing functions to functions, returning functions, doing 
+           things with the arguments and parameters. 
 
-    ==ANALOGY/EXAMPLE==
-        -- Think of functional programming in terms of cooking a chicken dinner.
+    ==EXAMPLE==
+       
+        Function                                                       Order                 What it does
+        _________________________________________________              ____________          ____________________________________
 */
-            function replaceIt(string) {
-                return string.replace("this", "that");
+            function replaceIt(string) {                              //    3.1              Replaces the word 'this' with the word 'that'.                       
+                return string.replace("this", "that");                //
             }
 
-            function capitalizeIt(string) {
-                return string.toUpperCase();
+            function capitalizeIt(string) {                           //    3.2              Capitalizes all the words in the string.
+                return string.toUpperCase();                          //
+            } 
+
+            function printIt(string) {                                //    3.3              Prints the string to console.
+                return console.log(string)                            //
             }
 
-            function printIt(string) {
-                return console.log(string)
-            }
+            function repAndCap(string) {                              //    2                ... we pass the string to repAndCap and executes
+                return printIt(capitalizeIt(replaceIt(string)));      //                     in order by first running replaceIt, then capitalizing
+            }                                                         //                     it by running capitalizeIt, then finally printing it. 
 
-            function repAndCap(string) {
-                return printIt(capitalizeIt(replaceIt(string)));
-            }
-
-            console.log(repAndCap("this is a test"))
+            console.log(repAndCap("this is a test"))                  //    1                When repAndRap is called with the argument 
+                                                                      //                     "this is a test"....
 
         
             
