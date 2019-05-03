@@ -155,8 +155,12 @@
 /* 
 4. What is the difference between arguments and parameters?
 //////////////////////////////////////////////////////////
-      When talking about functions, the terms parameters and arguments are often interchangeably used as if it were one and the 
-      same thing but there is a very subtle difference.  
+    ==SHORT ANSWER==
+        -- Parameters are variables passed to the call signature and Arguments are values passed when the function in invoked.
+
+    ==EXTENDED ANSWER==
+        -- When talking about functions, the terms parameters and arguments are often interchangeably used as if it were one and the 
+           same thing but there is a very subtle difference.  
 
            A. Parameters are variables listed as a part of the function definition 
                 -- i.e. function(num1, num2) {...} where num1 and num2 are the paramter
@@ -164,9 +168,9 @@
            B. Arguments are values passed to the function when it is invoked 
                 -- i.e. console.log(myFunction(1,2)) where 1 and 2 are the arguments.  
       
-           Its important to know the difference because JavaScript does not throw an error if the number of arguments passed during a function 
-           invocation are different than the number of parameters listed during function definition. This should make it clear that parameters 
-           and arguments should be treated as two different entities.
+           -- Its important to know the difference because JavaScript does not throw an error if the number of arguments passed during a function 
+              invocation are different than the number of parameters listed during function definition. This should make it clear that parameters 
+              and arguments should be treated as two different entities.
 */
 
 
@@ -175,7 +179,13 @@
 /*
 5. What is a default parameter?
 ////////////////////////////////
+    ==SHORT ANSWER==
         -- a default parameter is a specified parameter that we specify in the call signature parentheses of the function.
+        
+
+    ==EXTENDED ANSWER WITH EXAMPLE==
+        EXAMPLE WITHOUT DEFAULT PARAMETERS
+        ==================================
         -- below we have a normal function BEFORE default parameters:
 */
                 function interest(principal, rate, years) {
@@ -185,9 +195,12 @@
                 console.log(interest(10000, 3.5, 5));                     //-> 1750
 /*
 
+        EXAMPLE WITH DEFAULT PARAMETERS IN VARIABLES USING 'OR'
+        =======================================================
         -- However, we can use a variable to provide a default value with the or operator (i.e. ||).
         -- note that you DO NOT instantiate the default parameters as variables.
 */
+
                 function interest2(principal, rate, years) {
                     rate = rate || 3.5;
                     years = years || 5;
@@ -197,12 +210,15 @@
                 console.log(interest2(10000));                           //-> 1750
 /*
 
+        EXAMPLE WITH DEFAULT PARAMETERS IN THE CALL SIGNATURE
+        =====================================================
         -- With ES6, you can do it in amuch cleaner way by inserting it inside the call signature itself.
         -- Once you give a default parameter, every parameter after that should also have a default as well, otherwise
            you get a NaN (not a number).  
               -- HOWEVER, if you pass in undefined (i.e. console.log(interest3(principle, rate = 3.5, undefined))), you will be able
                  to use default parameters at whichever point you wish... but try not to because it is not good practice.
 */
+
                 function interest3(principal, rate = 3.5, years = 5) {
                     return principal * rate / 100 * years;
                 }
