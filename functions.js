@@ -65,16 +65,37 @@
         -- Functional programming stresses importance on the ORDER in which things run, specifically how the program progresses from 
            statement to statement, in-and-out of for loops and in-and-out of sub-routines.
 
+    ==ANALOGY/EXAMPLE==
+        -- Think of functional programming in terms of cooking a chicken dinner.
+*/
+            function replaceIt(string) {
+                return string.replace("this", "that");
+            }
 
-    ==ANALOGY==
-        -- Think of functional programming in terms a long chain.
-        -- AT one end of the
+            function capitalizeIt(string) {
+                return string.toUpperCase();
+            }
+
+            function printIt(string) {
+                return console.log(string)
+            }
+
+            function repAndCap(string) {
+                return printIt(capitalizeIt(replaceIt(string)));
+            }
+
+            console.log(repAndCap("this is a test"))
+
+        
+            
+
+
 
 
     
     
     
-    
+  /*  
     -- Think about functional programming in terms of a house and verbs and nouns.
         -- With object-oriented programming, we would talk about the properties of a house (e.g. walls, doors, windows).
         -- With functional
