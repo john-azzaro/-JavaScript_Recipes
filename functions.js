@@ -237,7 +237,7 @@
           hoisted (thus need to be placed where they are used), function declarations can be declared anywhere. 
 
 
-    ==EXTENDED ANSWER==
+    ==EXTENDED ANSWERS==
     What is a function Declaration?
     ===============================
         -- A function declaration is hoisted with contents (hoisting is how the browser parses Javascript, reads through once 
@@ -293,7 +293,30 @@
 
 /*
 7. How do you invoke a function?
-///////////////////////////////
+/////////////////////////////////
+==SHORT ANSWER==
+    -- You can invoke a function most commonly using the function name (i.e. myFunction) and passing in the ARGUMENTS in the call signature 
+       which occupy specific slots that translate to the function being called.
+       
+    
+==EXAMPLES== 
+    
+   
+
+
+
+
+
+                                
+        Function name        ___________|___________   __|___
+                    \        |                      |  |    |
+                    addText("This is a string of text", num1, num2)
+                           |__________________________|       |___|
+                                   |                            |
+
+
+
+
     -- There are 4 ways to invoke a function:
         1. Invoke as a function.
         2. Invoke as a method.
