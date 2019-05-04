@@ -318,27 +318,42 @@
  
           
                 Function name       first argument
-                            \        |
+                            \       |
                         multiplyIt( 2, 3 )
-                                /     \
-                    call signature      second argument
+                                /       \
+                  call signature         second argument
+
 
         -- It is important to note that when you pass arguments to the function, those are dedicated "SLOTS" for those arguments.
+        -- So in the multiplyIt example, we're passing two arguments:
+            -- when we pass "2" as an argument, it fills the FIRST"slot" as num1.
+            -- when we pass "3" as an argument, it fills the SECOND slot as num2.
+        
+        -- So this means that num1 will ALWAYS be 2 when the function is invoked as it was above.
+        -- And num1 will ALWAYS have the value of 2 inside the function body.
             
-        -- When the function is invoked in such a way, the arguments are then passed to the functions paramters.
 
-
+                                slot 1     slot 2
+                                    _\__ __/_
+                                    |  | |  | 
                          multiplyIt(  2,  3 )
-                                      |   |   
+                                      |   | 
+                                      |   |  
                 function multiplyIt(num1, num2) {          
                     return num1 * num2;
                 }           |      |
-                            2      3 
+                            2      3         => 6
+
+
+        -- Important to note that the slots simply transfer the arguments to the parameter SLOT.
+            -- 
+*/
 
 
 
-
-
+/*
+How many ways are there to invoke a function?
+/////////////////////////////////////////////
     -- There are 4 ways to invoke a function:
         1. Invoke as a function.
         2. Invoke as a method.
