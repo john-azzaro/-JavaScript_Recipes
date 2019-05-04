@@ -294,25 +294,45 @@
 /*
 7. How do you invoke a function?
 /////////////////////////////////
-==SHORT ANSWER==
-    -- You can invoke a function most commonly using the function name (i.e. myFunction) and passing in the ARGUMENTS in the call signature 
-       which occupy specific slots that translate to the function being called.
-       
+    ==SHORT ANSWER==
+        -- You can invoke a function most commonly using the function name (i.e. myFunction) and passing in the ARGUMENTS in the call signature 
+           which occupy specific slots that translate to the function being called.
     
-==EXAMPLES== 
-    
-   
+    ==EXAMPLES== 
+        -- In the following example, we will see how to invoke the function and pass the arguments as parameters. 
+*/     
+
+                function multiplyIt(num1, num2) {          // function
+                    return num1 * num2;
+                }
+
+                console.log(`multiply it result`);
+                console.log(multiplyIt(2, 3));             // invocation   (note that console.log is just so that the example prints to console)
 
 
+/*      -- In the example above, we have two specific components: the function and the invocation.
+        -- The function (i.e. multiplyIt) is a basic function declaration with two parameters, num1 and num2.
+        -- The objective of the function is to multiply num1 and num2 together and return the result.
+
+        -- To invoke the multiplyIt function, we simply CALL the function name AND pass in any parameters we need.
+ 
+          
+                Function name       first argument
+                            \        |
+                        multiplyIt( 2, 3 )
+                                /     \
+                    call signature      second argument
 
 
+        -- When the function is invoked in such a way, the arguments are then passed to the functions paramters.
 
-                                
-        Function name        ___________|___________   __|___
-                    \        |                      |  |    |
-                    addText("This is a string of text", num1, num2)
-                           |__________________________|       |___|
-                                   |                            |
+                                     2      3
+                                     |      |   
+                function multiplyIt(num1, num2) {          
+                    return num1 * num2;
+                }           |      |
+                            2      3 
+
 
 
 
