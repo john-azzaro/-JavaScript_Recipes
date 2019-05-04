@@ -302,12 +302,12 @@
         -- In the following example, we will see how to invoke the function and pass the arguments as parameters. 
 */     
 
-                function multiplyIt(num1, num2) {          // function
+                function multiplyIt(num1, num2) {               // function
                     return num1 * num2;
                 }
 
                 console.log(`multiply it result`);
-                console.log(multiplyIt(2, 3));             // invocation   (note that console.log is just so that the example prints to console)
+                console.log(multiplyIt(2, 3));          //=>6   // invocation   (note that console.log is just so that the example prints to console)
 
 
 /*      -- In the example above, we have two specific components: the function and the invocation.
@@ -323,11 +323,13 @@
                                 /     \
                     call signature      second argument
 
-
+        -- It is important to note that when you pass arguments to the function, those are dedicated "SLOTS" for those arguments.
+            
         -- When the function is invoked in such a way, the arguments are then passed to the functions paramters.
 
-                                     2      3
-                                     |      |   
+
+                         multiplyIt(  2,  3 )
+                                      |   |   
                 function multiplyIt(num1, num2) {          
                     return num1 * num2;
                 }           |      |
