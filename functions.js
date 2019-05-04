@@ -188,11 +188,11 @@
         ==================================
         -- below we have a normal function BEFORE default parameters:
 */
-                function interest(principal, rate, years) {
-                    return principal * rate / 100 * years;
+                function interest(principal, rate, years) {                         // note here that no default parameters are given, only inputs.
+                    return principal * rate / 100 * years;          
                 }
                 console.log(`default parameter example before default:`);
-                console.log(interest(10000, 3.5, 5));                     //-> 1750
+                console.log(interest(10000, 3.5, 5));                               //-> 1750
 /*
 
         EXAMPLE WITH DEFAULT PARAMETERS IN VARIABLES USING 'OR'
@@ -202,12 +202,12 @@
 */
 
                 function interest2(principal, rate, years) {
-                    rate = rate || 3.5;
+                    rate = rate || 3.5;                                            // the default parameter here is 3.5 (i.e. input OR 3.5 by default).
                     years = years || 5;
                     return principal * rate / 100 * years;
                 }
                 console.log(`default parameter example with default variable:`);
-                console.log(interest2(10000));                           //-> 1750
+                console.log(interest2(10000));                                     //-> 1750
 /*
 
         EXAMPLE WITH DEFAULT PARAMETERS IN THE CALL SIGNATURE
@@ -219,11 +219,11 @@
                  to use default parameters at whichever point you wish... but try not to because it is not good practice.
 */
 
-                function interest3(principal, rate = 3.5, years = 5) {
+                function interest3(principal, rate = 3.5, years = 5) {              // note here default parameters are INSIDE the call signature.
                     return principal * rate / 100 * years;
                 }
                 console.log(`default parameter example with default variable in call signature:`);
-                console.log(interest3(10000));                           //-> 1750
+                console.log(interest3(10000));                                       //-> 1750
 
 
 
