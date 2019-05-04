@@ -233,7 +233,8 @@
 6. How do you define a function?
 ////////////////////////////////
     ==SHORT ANSWER==
-       -- A function can be defined as either a function declaration or a funtion expression. A function declaration can be accesse
+       -- A function can be defined as either a function declaration or a funtion expression. Unlike function expressions which are NOT
+          hoisted (thus need to be placed where they are used), function declarations can be declared anywhere. 
 
 
     ==EXTENDED ANSWER==
