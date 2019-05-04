@@ -11,18 +11,19 @@
 //          + What is a function defintion?
 //          + What is a function expression?
 //     7. How do you invoke a function?
-//     8. How do you use functions in objects?
-//     9. How do you invoke a function through a constructor?
-//    10. How do you use prototypes?
-//    11. How do you invoke through Call and Apply?
-//    12. How do you use the arguments parameter?
-//    13. Can you explain the return statement?
-//    14. How do you use an anonymous closure (or self executing function)?
-//    15. What is variable hoisting and scope?
-//    16. How do you create and namespace modules?
-//    17. How do you chain method calls?
-//    18. What is a rest operator?
-//    19. What is a callback function?
+//     8. How many ways are there to invoke a function?
+//     9. How do you use functions in objects?
+//    10. How do you invoke a function through a constructor?
+//    11. How do you use prototypes?
+//    12. How do you invoke through Call and Apply?
+//    13. How do you use the arguments parameter?
+//    14. Can you explain the return statement?
+//    15. How do you use an anonymous closure (or self executing function)?
+//    16. What is variable hoisting and scope?
+//    17. How do you create and namespace modules?
+//    18. How do you chain method calls?
+//    19. What is a rest operator?
+//    20. What is a callback function?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on functions taken from study, research, tutorials, 
@@ -329,10 +330,7 @@
             -- when we pass "2" as an argument, it fills the FIRST"slot" as num1.
             -- when we pass "3" as an argument, it fills the SECOND slot as num2.
         
-        -- So this means that num1 will ALWAYS be 2 when the function is invoked as it was above.
-        -- And num1 will ALWAYS have the value of 2 inside the function body.
             
-
                                 slot 1     slot 2
                                     _\__ __/_
                                     |  | |  | 
@@ -345,14 +343,14 @@
                             2      3         => 6
 
 
-        -- Important to note that the slots simply transfer the arguments to the parameter SLOT.
-            -- 
+        -- So this means that num1 will ALWAYS be 2 when the function is invoked as it was above.
+        -- And num1 will ALWAYS have the value of 2 inside the function body.
 */
 
 
 
 /*
-How many ways are there to invoke a function?
+8. How many ways are there to invoke a function?
 /////////////////////////////////////////////
     -- There are 4 ways to invoke a function:
         1. Invoke as a function.
@@ -389,7 +387,7 @@ How many ways are there to invoke a function?
 
 
 /* 
-8. How do you use functions as objects?
+9. How do you use functions as objects?
 //////////////////////////////////////
 
 NOTE: This section is on functions in objects, but first a brief overview.
@@ -437,7 +435,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /*
-9. How do you invoke a function through a constructor?
+10. How do you invoke a function through a constructor?
 /////////////////////////////////////////////////////
         -- functions can construct objects as well.
         -- in other words, the function itself BECOMES the constructor.
@@ -482,7 +480,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /* 
-10. How do you expand objects through prototypes?
+11. How do you expand objects through prototypes?
 ///////////////////////////////////////////////
         -- JavaScript is known as a prototypal inheritance langauge, which means you can base the functionality of an
            object on ANOTHER object,
@@ -526,7 +524,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /*
-11. How do you invoke through Call & Apply?
+12. How do you invoke through Call & Apply?
 /////////////////////////////////////////
         -- Call & Apply is sometimes refered to as "indirect invocation".
         -- Call & Apply can define the value of `this` argument.
@@ -576,7 +574,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /*
-12. What is the arguments parameter?
+13. What is the arguments parameter?
 ///////////////////////////////
         -- Although we've been passing elements to functions, but often we dont know how many elements we will be needing.
         -- You want your function to be able to accept an number of elements.
@@ -616,7 +614,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /*
-13. Can you explain the return statement?
+14. Can you explain the return statement?
 ////////////////////////////////////////
         -- When you invoke a function, its like generating an equation, which usually have results.
         -- The 'RETURN' statement can return a result, object, or even another function.
@@ -655,7 +653,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /* 
-14. How do you use an anonymous closure (or self executing function)?
+15. How do you use an anonymous closure (or self executing function)?
 //////////////////////////////////////////////////////////////////////
         -- a typical function definition can be invoked by calling the function name anywhere in the code.  For example:
 */
@@ -699,7 +697,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /*
-15. What is variable hoisting and scope?
+16. What is variable hoisting and scope?
 ///////////////////////////////////////
         -- HOISTING is the process of moving the FUNCTION DECLARATIONS to the top of the file automatically.
 
@@ -744,7 +742,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /*
-16. How do you create and namespace modules?
+17. How do you create and namespace modules?
 ///////////////////////////////////////
     -- modules let you reuse code across apps.
         -- when you just start coding, you are coding just for that program.  However, when you start a new project you
@@ -843,7 +841,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /* 
-17. How do you chain method calls?
+18. How do you chain method calls?
 /////////////////////////////////
     -- CHAINING makes it easy to work with multiple methods and it allows one function to call another.
     -- similar to jQuery.
@@ -911,7 +909,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
 
 
 /*
-18. What is a Rest Operator?
+19. What is a Rest Operator?
 ////////////////////////////
     -- if you want a function with varying numbers of parameters, you can use the rest operator.
     -- this is not to be confused with the spread operator because it is used with arrays.
@@ -954,7 +952,7 @@ NOTE: This section is on functions in objects, but first a brief overview.
            
 
 /*
-19. What is a callback?
+20. What is a callback?
 //////////////////////
     -- A callback is a function that is passed into another function as a parameter to another function.
         -- for example, if you run a .forEach on an array (i.e. something.forEach(function(key) {return `${key}`})), where we pass in
