@@ -75,8 +75,7 @@
         -- Functional programming uses many functions, passing functions to functions, returning functions, doing 
            things with the arguments and parameters. 
 
-    ==EXAMPLE==
-       
+    ==EXAMPLE==      
         Function                                                       Order                 What it does
         _________________________________________________              ____________          ____________________________________
 */
@@ -106,8 +105,7 @@
 /* 
 3. What are the components of a function?
 ////////////////////////////////////////
- 
-    ==EXTENDED ANSWER==
+     ==ANSWER==
         -- A function is comprised of a function names "keyword", a name for that function (e.g. "myFunction"), a call signature with 
            parameters (which are stipulated or passed in), a main block of the function.  The function is then called by calling the 
            function name as well as any parameters.
@@ -170,15 +168,15 @@
         -- When talking about functions, the terms parameters and arguments are often interchangeably used as if it were one and the 
            same thing but there is a very subtle difference.  
 
-           A. Parameters are variables listed as a part of the function definition 
-                -- i.e. function(num1, num2) {...} where num1 and num2 are the paramter
+                A. Parameters are variables listed as a part of the function definition 
+                     -- i.e. function(num1, num2) {...} where num1 and num2 are the paramter
 
-           B. Arguments are values passed to the function when it is invoked 
-                -- i.e. console.log(myFunction(1,2)) where 1 and 2 are the arguments.  
+                B. Arguments are values passed to the function when it is invoked 
+                    -- i.e. console.log(myFunction(1,2)) where 1 and 2 are the arguments.  
       
-           -- Its important to know the difference because JavaScript does not throw an error if the number of arguments passed during a function 
-              invocation are different than the number of parameters listed during function definition. This should make it clear that parameters 
-              and arguments should be treated as two different entities.
+        -- Its important to know the difference because JavaScript does not throw an error if the number of arguments passed during a function 
+           invocation are different than the number of parameters listed during function definition. This should make it clear that parameters 
+           and arguments should be treated as two different entities.
 */
 
 
@@ -188,13 +186,13 @@
 5. What is a default parameter?
 ////////////////////////////////
     ==SHORT ANSWER==
-        -- A default parameter is a specified parameter that we specify in the call signature parentheses of the function.
+        -- A default parameter is a specified parameter that we put in the call signature parentheses of the function or in the code block.
 
     ==LONG ANSWER==
-        -- 
+        -- A default parameter can either be specified in a variable (i.e. let cake = ingredient || flour) or in the actual call signature of 
+           the function itself, meaning that we do not need to pass anything in because that slot is filled with the information we need.
         
-
-    ==EXTENDED ANSWER WITH EXAMPLE==
+    ==EXAMPLES==
         EXAMPLE WITHOUT DEFAULT PARAMETERS
         ==================================
         -- below we have a normal function BEFORE default parameters:
@@ -244,7 +242,7 @@
 6. How do you define a function?
 ////////////////////////////////
     ==SHORT ANSWER==
-       -- A function can be defined as either a function declaration or a funtion expression. Unlike function expressions which are NOT
+       -- A function can be defined as either a function declaration or a function expression. Unlike function expressions which are NOT
           hoisted (thus need to be placed where they are used), function declarations can be declared anywhere. 
 
 
@@ -400,23 +398,19 @@
 
 
 
-
-
 /* 
 9. How do you use functions as objects?
 //////////////////////////////////////
-==NOTE==
-    -- This section is on functions in objects, but first a brief overview.
+    ==SHORT ANSWER==
+        -- A function method is a property with a function assigned as its value, and invoked using dot notation.
+           
 
-==SHORT ANSWER==
-
-
-==LONG ANSWER==
+    ==LONG ANSWER==
         -- in addition ot calling functions using the Traditional way (i.e. call name and pass along parameters), we can also invoke them by METHODS.
         -- A METHOD is a function that has been assigned as a property of an OBJECT (i.e. myObject.firstName where .firstName is the method).
         -- An OBJECT is a complex data type that brings together properties and behaviors into a single entity.
         -- An OBJECT always begins and ends with curly braces.
-        -- Inside an object, we have name:value pairs.
+        -- Inside an object, we have key:value pairs.
         -- An OBJECT can have:
                 -- variables  -- (i.e. let car = "Honda"; ).
                 -- lists (aka arrays)  --   (i.e. let cars = ["Toyota", "BMW", "Mercedes"]; ).
