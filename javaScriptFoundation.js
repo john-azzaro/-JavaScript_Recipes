@@ -61,6 +61,23 @@ What is the history of JavaScript?
 */
 
 
+/*
+Problem solving
+////////////////
+    -- Problem solving is hard because learning programming syntax uses a different "mental muscle" or "mental hemesphere" than problem solving.
+      -- LEFT BRAIN activity involves programming syntax, readign programs, memorizing elements of an API which are analytical in nature.
+      -- RIGHT BRAIN activity involves using those left-brain analytical skills and applying them with right-brain creativity.
+    -- Problem solving is a creative activity
+        
+
+*/
+
+
+
+
+
+
+
 // useful problem solving strategies
 
 // 1. Always have a plan
