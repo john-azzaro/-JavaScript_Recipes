@@ -41,6 +41,7 @@
         -- A function is a repeatable process or behavior.
         
     ==EXTENDED ANSWERS==
+        -- A function is a reusable recipe that perfoms the same set of actions over and over again on a set of ingredients 
         -- A function is a REPEATABLE (i.e. can be called multiple times) and DETERMINATE (i.e. predictable) PROCESS or BEHAVIOR.
         -- A function is a series of STATEMENTS that are grouped into a special package.
         -- A function is a MODULAR and fundamental BUILDING BLOCK of JavaScript that perform tasks or calculate values.
@@ -105,7 +106,8 @@
 /* 
 3. What are the components of a function?
 ////////////////////////////////////////
-    ==SHORT ANSWER==
+ 
+    ==EXTENDED ANSWER==
         -- A function is comprised of a function names "keyword", a name for that function (e.g. "myFunction"), a call signature with 
            parameters (which are stipulated or passed in), a main block of the function.  The function is then called by calling the 
            function name as well as any parameters.
@@ -157,7 +159,12 @@
 4. What is the difference between arguments and parameters?
 //////////////////////////////////////////////////////////
     ==SHORT ANSWER==
-        -- Parameters are variables passed to the call signature and Arguments are values passed when the function in invoked.
+        -- Parameters are variables passed to the call signature while Arguments are values passed when the function in invoked.
+
+    ==LONG ANSWER==
+        -- When you define a function (i.e. function declaration or function expression), you provide parameter "slots".  When you 
+           invoke the function, you pass in the values as arguments to fill those slots so the function has ingredients to efectively 
+           "cook" the recipe in the function block of code.
 
     ==EXTENDED ANSWER==
         -- When talking about functions, the terms parameters and arguments are often interchangeably used as if it were one and the 
@@ -181,7 +188,10 @@
 5. What is a default parameter?
 ////////////////////////////////
     ==SHORT ANSWER==
-        -- a default parameter is a specified parameter that we specify in the call signature parentheses of the function.
+        -- A default parameter is a specified parameter that we specify in the call signature parentheses of the function.
+
+    ==LONG ANSWER==
+        -- 
         
 
     ==EXTENDED ANSWER WITH EXAMPLE==
@@ -239,6 +249,7 @@
 
 
     ==EXTENDED ANSWERS==
+
     What is a function Declaration?
     ===============================
         -- A function declaration is hoisted with contents (hoisting is how the browser parses Javascript, reads through once 
@@ -353,7 +364,8 @@
 8. How many ways are there to invoke a function?
 /////////////////////////////////////////////
 ==SHORT ANSWER==
-    
+    -- You can invoke a function most commonly by function (e.g. functional programming) and method (e.g. methods in objects).  
+       Constructors and call and apply methods 
 
 
 ==LONG ANSWER==
@@ -468,10 +480,11 @@
     
             2. Next, we'll create a new instance of this with a new constructor.
                    -- this creates a new object based on the `dog` function.
-                   -- the NEW keyword create a new instance of the object (like a copy or reproduction).
-                   -- 
+                   -- the NEW keyword create a new instance of the object (like a copy or reproduction). 
 
-                           firstDog = new Dog;       
+                            creates "new" object
+                                      \ 
+                            firstDog = new Dog;       
 
             3. Now that the new object has been created, we can assign a name and a breed.
 
