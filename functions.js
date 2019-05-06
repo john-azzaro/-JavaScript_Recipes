@@ -352,6 +352,11 @@
 /*
 8. How many ways are there to invoke a function?
 /////////////////////////////////////////////
+==SHORT ANSWER==
+    
+
+
+==LONG ANSWER==
     -- There are 4 ways to invoke a function:
         1. Invoke as a function.
         2. Invoke as a method.
@@ -360,12 +365,11 @@
 
     -- Invoking as a FUNCTION and METHOD are the most common.
     -- functions also get a few extra parameters, like arguments and THIS.
-            
     -- IMPORTANT: A property of functions is that invoking them passes control of the program to the function we are calling.
 
+==EXAMPLE==
     -- A common way to invoke a function is TRADITIONAL INVOCATION.
     -- so if a function has a name, you can call it by its name and pass along 0 to as many parameters as you need (i.e. myFunction(a,b,c); ).
-
 */                    
             function addItUp(num1, num2) {           // plus is passed two parameters, a and b.
                 return (                             // return is used as a function (return IS a function so it can be passed parameters).
@@ -389,9 +393,13 @@
 /* 
 9. How do you use functions as objects?
 //////////////////////////////////////
+==NOTE==
+    -- This section is on functions in objects, but first a brief overview.
 
-NOTE: This section is on functions in objects, but first a brief overview.
+==SHORT ANSWER==
 
+
+==LONG ANSWER==
         -- in addition ot calling functions using the Traditional way (i.e. call name and pass along parameters), we can also invoke them by METHODS.
         -- A METHOD is a function that has been assigned as a property of an OBJECT (i.e. myObject.firstName where .firstName is the method).
         -- An OBJECT is a complex data type that brings together properties and behaviors into a single entity.
@@ -405,12 +413,12 @@ NOTE: This section is on functions in objects, but first a brief overview.
         -- The example below is a normal function with key/value pairs:
 */                
                 let info = {
-                    firstName : 'John',                     // a name/value pair
+                    firstName : 'John',                        // a name/value pair
                     lastName : 'Smith',
                     occupation : 'soldier'
                 }
                 console.log(`result of normal function test:`)                                   
-                console.log(info.firstName);                 //-> John   ()
+                console.log(info.firstName);                    //-> John   ()
 /*        
         -- The example below shows a function as a property of an object
         -- Here we create an object called 'report' and add 2 properties, status and a method called plus (which is function).
