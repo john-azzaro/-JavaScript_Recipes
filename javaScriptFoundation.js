@@ -82,6 +82,24 @@ Problem solving
       -- performance.
       -- memory footprint.
 
+
+  Problem Solving Methdologies
+  ============================
+    -- First, list the constraints of your problem.
+      -- e.g. Farmer can only take one item in the boat at one time.
+
+    -- Second, list the order of operations.
+      -- e.g. Carry the fox to the far side of the river.
+      -- e.g. Carry the hen to the far side of the river.
+      -- e.g. Carry the grain to the far side of the river.
+      
+    -- Third, make those operations generic, or parameterized 
+      -- e.g. Row boat from the far side of the river.
+              IF boat is empty, load item on boat.
+              IF boat is NOT empty, unload item on shore. 
+
+
+
 */
 
 
