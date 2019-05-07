@@ -25,7 +25,9 @@
     ISSUE: Need to get a better idea (and example) of how private properties and methods work.
             -- current work location: objectOriProg  => Private Properties and Methods,
 
-       
+    ISSUE: Need to add section in function on destructuring
+    
+    
 
 ///// RESOLVED /////
 
