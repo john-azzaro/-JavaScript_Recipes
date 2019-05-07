@@ -112,15 +112,22 @@ Problem solving
     1. Always have a plan
       -- A plan lets you set intermediate goals and achieve them.
       -- Without a plan, you have only one goal... solve the whole problem which is difficult to do.
+
     2. Restate the problem
       -- Restating the problem sometimes show the goal isnt what we originally thought it was.
       -- Restatement can help you take a problem assigned to you to that person and confirm your understanding.
       -- Restatement is also a necessary prereqisite for thing slike reducing and dividng a problem.
+
     3. Divide the Problem
       -- Dividing a problem puts it into steps of phases that make the problem much easier.
       -- Dividing a problem can often lower the difficulty a great deal.
+
     5. Start with what you know
-      --
+      -- Start with what you know and work out from there.
+      -- Starting with a partial solution may spark ideas about the rest of the problem.
+      -- Starting with what you builds confidence and momentum towards your goal.
+      -- Starting with what you know can apply to cases where you havent divided the problem
+      
     6. Reduce the Problem
     7. Look for Analogies
     8. Experiment
