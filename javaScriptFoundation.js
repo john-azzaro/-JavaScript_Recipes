@@ -112,8 +112,12 @@ Problem solving
       -- A plan lets you set intermediate goals and achieve them.
       -- Without a plan, you have only one goal... solve the whole problem which is difficult to do.
     2. Restate the problem
-      -- Restating the problem 
+      -- Restating the problem sometimes show the goal isnt what we originally thought it was.
+      -- Restatement can help you take a problem assigned to you to that person and confirm your understanding.
+      -- Restatement is also a necessary prereqisite for thing slike reducing and dividng a problem.
     3. Divide the Problem
+      -- Dividing a problem puts it into steps of phases that make the problem much easier.
+      -- Dividing a problem
     5. Start with what you know
     6. Reduce the Problem
     7. Look for Analogies
