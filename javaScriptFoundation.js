@@ -67,8 +67,20 @@ Problem solving
     -- Problem solving is hard because learning programming syntax uses a different "mental muscle" or "mental hemesphere" than problem solving.
       -- LEFT BRAIN activity involves programming syntax, readign programs, memorizing elements of an API which are analytical in nature.
       -- RIGHT BRAIN activity involves using those left-brain analytical skills and applying them with right-brain creativity.
-    -- Problem solving is a creative activity
-        
+    -- Problem solving is a CREATIVE activity
+      -- For example, problem solving would be like figuring out how to get something on a high shelf without a ladder.
+    -- Problem solving is the systemac approach to OVERCOMING an issue rather than AVOIDING it.
+  
+  What is problem solving?
+  =======================
+    -- Problem solving is writing an orginal program that perfoms a particualr set of tasks and meets all stated constraints.
+
+  What are constraints?
+  ====================
+    -- Constraints include:
+      -- programming language.
+      -- performance.
+      -- memory footprint.
 
 */
 
