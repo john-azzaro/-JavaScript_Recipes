@@ -136,8 +136,13 @@ Problem solving
       -- Reducing a problem means we're not working on the FULL problem but problems that have enough in common to 
          with the full problem where we will make progress towards the ultimate solution.
       -- Reduction allows us to pinpoint exactly where the remaining difficulty lies.
-      
+
     7. Look for Analogies
+      -- An analogy is a similarity between a current problem and a problem already solved which can help solve
+         current problem.
+      -- Analogies are not always direct and similarities in problems are not always full, but sometimes partial.
+      -- Analogous comparison is often difficult 
+
     8. Experiment
     9. Dont get frustrated
     10.
