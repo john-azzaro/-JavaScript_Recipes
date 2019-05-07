@@ -109,8 +109,10 @@ Problem solving
   =================================
 
     1. Always have a plan
-       -- a plan is always possible
+      -- A plan lets you set intermediate goals and achieve them.
+      -- Without a plan, you have only one goal... solve the whole problem which is difficult to do.
     2. Restate the problem
+      -- Restating the problem 
     3. Divide the Problem
     5. Start with what you know
     6. Reduce the Problem
