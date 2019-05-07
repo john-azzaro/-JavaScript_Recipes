@@ -127,8 +127,16 @@ Problem solving
       -- Starting with a partial solution may spark ideas about the rest of the problem.
       -- Starting with what you builds confidence and momentum towards your goal.
       -- Starting with what you know can apply to cases where you havent divided the problem
-      
+
     6. Reduce the Problem
+      -- Reducing the problem means reducing the SCOPE of the problem by adding or removing constraints to produce a 
+         problem that you know you can solve.
+      -- Reductions simplify the problem so you can handle it more easily.
+      -- Reductions help solve a problem when we cant figure out how to divide a problem into steps into steps.
+      -- Reducing a problem means we're not working on the FULL problem but problems that have enough in common to 
+         with the full problem where we will make progress towards the ultimate solution.
+      -- Reduction allows us to pinpoint exactly where the remaining difficulty lies.
+      
     7. Look for Analogies
     8. Experiment
     9. Dont get frustrated
