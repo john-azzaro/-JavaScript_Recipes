@@ -92,11 +92,33 @@ Problem solving
       -- e.g. Carry the fox to the far side of the river.
       -- e.g. Carry the hen to the far side of the river.
       -- e.g. Carry the grain to the far side of the river.
-      
+
     -- Third, make those operations generic, or parameterized 
       -- e.g. Row boat from the far side of the river.
               IF boat is empty, load item on boat.
               IF boat is NOT empty, unload item on shore. 
+
+    -- Remember to think about the problem in the most general terms.'
+    -- Think about all the possible sequences of moves in a problem.
+    -- Restate the problem in a formal manner.
+    -- When faced with an onerous problem, experiment with a reduced version of the problem, which provide invaluble insights.
+    -- recognize analogies to solve problems (e.g. A solution in the lotto app could apply to a current issue as well).
+
+
+  Useful problem solving strategies
+  =================================
+
+    1. Always have a plan
+       -- a plan is always possible
+    2. Restate the problem
+    3. Divide the Problem
+    5. Start with what you know
+    6. Reduce the Problem
+    7. Look for Analogies
+    8. Experiment
+    9. Dont get frustrated
+    10.
+        
 
 
 
@@ -110,15 +132,7 @@ Problem solving
 
 // useful problem solving strategies
 
-// 1. Always have a plan
-// 2. Restate the problem
-// 3. Divide the Problem
-// 5. Start with what you know
-// 6. Reduce the Problem
-// 7. Look for Analogies
-// 8. Experiment
-// 9. Dont get frustrated
-// 10.
+
 
 /*
 Balance of active vs passive(conceptual) learning strategies
