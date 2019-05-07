@@ -4,6 +4,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. What is a program?
 //     2. What is JavaScript?
+//     3. What is problem solving?
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on establishing the foundations of JavaScript from study, research, tutorials, 
@@ -117,8 +118,9 @@ Problem solving
       -- Restatement is also a necessary prereqisite for thing slike reducing and dividng a problem.
     3. Divide the Problem
       -- Dividing a problem puts it into steps of phases that make the problem much easier.
-      -- Dividing a problem
+      -- Dividing a problem can often lower the difficulty a great deal.
     5. Start with what you know
+      --
     6. Reduce the Problem
     7. Look for Analogies
     8. Experiment
