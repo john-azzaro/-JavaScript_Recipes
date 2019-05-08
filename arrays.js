@@ -53,9 +53,27 @@
 
 
 /*
+Solving Array Problems
+///////////////////////
+    -- 
+
+
+
+
+*/
+
+
+
+
+
+
+
+/*
 1. What is an Array?
 /////////////////
     -- Arrays are used to store lists of items in JavaScript
+    -- An Array is a collection of variables of the same type organized under one name, where the individual variables
+       are denoted by numbers
     -- Arrays are collections of things, like items or even other lists.
     -- Arrays could be dealing with collections of emails, statistics, server logs, etc.
     -- you can perform many options on arrays such as .pop, .slice, etc. 
