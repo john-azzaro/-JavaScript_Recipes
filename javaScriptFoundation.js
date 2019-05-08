@@ -151,6 +151,14 @@ Problem solving
       -- Experimenting is to try something and observe the results.
       -- Experimenting is not the same as guessing and seeing if it works.
   
+
+
+
+
+
+    1. Break problem into components.
+    2. Write code to solve those components individually.
+    3. Use the knowledge from writing the programs or lines of codes to solve the orginal program.
  
         
 
