@@ -148,8 +148,10 @@ Problem solving
           -- Second, this is a potnetial analogy for future reference so understanding the solution is critical. 
 
     8. Experiment
-    9. Dont get frustrated
-    10.
+      -- Experimenting is to try something and observe the results.
+      -- Experimenting is not the same as guessing and seeing if it works.
+  
+ 
         
 
 
