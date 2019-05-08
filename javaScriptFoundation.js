@@ -141,7 +141,11 @@ Problem solving
       -- An analogy is a similarity between a current problem and a problem already solved which can help solve
          current problem.
       -- Analogies are not always direct and similarities in problems are not always full, but sometimes partial.
-      -- Analogous comparison is often difficult 
+      -- Reasoning by analogy is a difficult skill to develop because you cannot reason by analogy without a storehouse
+         of previous solutions for reference.
+      -- This is where many programmers cut corners, finding code similar to what they need and modifying it.
+          -- this is a mistake because without developing your own solution, you wont understand and internalize it.
+          -- Second, this is a potnetial analogy for future reference so understanding the solution is critical. 
 
     8. Experiment
     9. Dont get frustrated
