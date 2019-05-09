@@ -271,7 +271,7 @@
 ==EXTENDED ANSWER==   
      -- Since JavaScript passes an object by reference, when you change a property of that object from within the 
         function, the change will be REFLECTED in the outer scopes.
-        
+
     -- In the example below, when you pass in an object into a function, you are not passing in a reference, you 
        are passing in a copy, you are passing in something that POINTS to the (b) object.
          -- When you chnage a property of that object in the function you are changing a property of that (b) object in
@@ -290,8 +290,11 @@
 
 /* 
 11. What is NaN?
-////////////////
+/////////////////
+==SHORT ANSWER==
     -- NaN stands for "not a number" and its used to define a number that's not really a number, like a bad calculation.
+
+==EXTENDED ANSWER==
     -- NaN compared to any other value is FALSE.
     -- Confusingly, NaN compared to NaN (i.e. NaN == NaN) is also FALSE.
 */
@@ -302,22 +305,34 @@
              //-> "NaN"
 
 
+
 /* 
 12. How do you check for NaN?
 /////////////////////////////
-      -- There is an inbuilt function called "isNaN"
-            
-            // console.log(isNaN(NaN))      
-            //-> true  
+==SHORT ANSWER==
+    -- To check for NaN, you use an in-built function called "isNaN()".
 
-      -- However, there are some drawbacks, specifically if you pass "A" (i.e. isNaN("A")) you will get true.
+==EXTENDED ANSWER==
+    -- Although you can use the in-built function to check whether or not something is not a number, there are some drawbacks.
+    -- One drawback is if you pass "A" (i.e. isNaN("A")) you will get true.
+
+==EXAMPLE==
+                       in-built function
+                       /
+        console.log(isNaN(NaN))      
+        //-> true  
 */
-               
+          
+
+
 
 /*
 13. What is Coercion?
-////////////////////
-    -- Coercion is simply adding two variables together    
+/////////////////////
+==SHORT ANSWER==
+    -- Coercion is simply adding two variables together.  
+
+==EXTENDED ANSWER==
     -- Because JavaScript is dyamically types, the type associated with the runtime values and not the variables.
     -- We can concatenate multiple string values (i.e. add them together).
 */
@@ -325,8 +340,8 @@
             console.log(greeting);
 
 /* 
-    -- IMPORTANT: the JavaScript engine will coerce left to right. 
-                  if a string comes before the numbers, it will treat everything after as a string.  
+            IMPORTANT: the JavaScript engine will coerce left to right. 
+            -- If a string comes before the numbers, it will treat everything after as a string.  
 */ 
             let stringLast = 5 + 10 + 15 + 'howdy';
             console.log(stringLast);                 //-> 30howdy (this will add 5+10+15 and then add on 'howdy').
@@ -335,10 +350,14 @@
             console.log(stringFirst);                 //-> howdy51015 (this will coerce everything as a string).
 
 
+
 /*
 14. What are special characters and escape notation?
 ///////////////////////////////////////////////////
+==SHORT ANSWER==
     -- ESCAPE NOTATION is used when you want to eseacpe the quotation mark limiter by using a BACKSLASH.
+
+==EXAMPLES==    
 */
             let escNo = 'this is an example of a normal string'
             
@@ -347,25 +366,31 @@
             let escNoWithTab = 'example of a string with a \t tab in it';                         // creates a tab in the string.
 
 
+
+
 /*
 15. What is a template literal?
 ///////////////////////////////
-    -- a template literal is a set of backticks (i.e. ``) used instead of quotation marks.
+==SHORT ANSWER==
     -- template literals allow us to refer to variables and execute JavaScript INSIDE a string.
+
+==EXTENDED ANSWERS==
+    -- a template literal is a set of backticks (i.e. ``) used instead of quotation marks.
     -- inside the template literal, you can use ${} and insert any variable you want to refer insde the curly braces.
     -- introduced with es6.
 */
-            let myName = 'joe';
-            let myAge = '25';
+            let myName = 'joe';                      // variable we can refer to within our template literal example.
+            let myAge = '25';                        // variable we can refer to within our template literal example.
 
-            const nameAgeCombo = `Hello, my name is ${myName} and my age is ${myAge}`
+            const nameAgeCombo = `Hello, my name is ${myName} and my age is ${myAge}`     // within the backticks, we use ${} to refer to variables above.
 
             console.log(nameAgeCombo);      //-> Hello, my name is joe and my age is 25
 /*
     -- you can also format with template literals without needing to use escape notation
 */
             function emailGreeting() {
-                return `Hello Joe,
+                return `
+                Hello Joe,
 
                 Thank you for your gift of 100 chocodiles.
                 I enjoyed them very much!
@@ -373,7 +398,10 @@
                 Regards,
                 Bill`
             }
-            console.log(emailGreeting())
+
+            console.log(emailGreeting())           //=> Hello Joe,
+
+      
 
 
 
