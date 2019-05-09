@@ -41,7 +41,7 @@
         -- e.g. let clickCount = 2 
             -- the "state" of the program is "value" of the variable, specifically 2.
     -- A variable uses the equal sign (=) to assign a value to a variable.
-        -- i.e let name = 'john'
+        -- e.g. let name = 'john'
     -- A variable WITHOUT a value is called an empty variable.
     -- Javascript uses 'lexical scope'.
         -- lexical scope means that as the compiler runs through your code, the location is "frozen" by the lexer
@@ -58,28 +58,36 @@
 /*
 2. What is the basic structure of a variable?
 ////////////////////////////////////////////
+==SHORT ANSWER==
+    -- A Variable is comprised of a: keyword, name, assignment operator, and a value.
+
+
+==EXTENDED ANSWERS==
 
     What does a basic variable look like?
     =====================================
 
+        JavaScript Keyword      Variable Name     Assinment Operator        Value
+        __________________      _____________     __________________      ________
+            let                    name                  =                'john'
 
-    JavaScript Keyword      Variable Name     Assinment Operator        Value
-    __________________      _____________     __________________      ________
-         let                    name                  =                'john'
 
-
-    What are important things to remember about variables?
-    ======================================================
+    What can you NOT do with variables?
+    ====================================
     -- You CANNOT use a reserved word (i.e. let let, var var, let return, etc.).
     -- You CANNOT start with a number (i.e. 1name).
     -- you CANNOT use a space or a hyphen (i.e. -).
 
+    What should NOT you do with variables?
+    ======================================
     -- You SHOULD NOT declare multiple variables in the same .  
          -- you can use a shorthand method for declaring multiple variables in one statement but it is NOT best practice.
          --  var person = "john", 
                  place = "park", 
                  thing = "watermellon";
 
+    What SHOULD you do with variables?
+    ==================================
         -- You SHOULD use meaningful names.
         -- You SHOULD use camel casing (i.e. thisIsAnExample).
         -- You SHOULD either Uppercase, LowerCase, underscore, or cashsign for the first letter
@@ -355,7 +363,7 @@ The Answer:
 
 
 
-            
+
 /*
 RESOURCES
 =========
