@@ -98,13 +98,16 @@
 /*
 3. What are the THREE commands used to create variable?
 //////////////////////////////////////////////////////
-    -- var    -- value can be changed.
+==SHORT ANSWER==
+    -- The three commands to create a variable are: let, var, and const.
+
+==EXTENDED ANSWER==
+    -- var    -- value can be changed. 
+              -- HOWEVER, "var" has been depricated so use "let" instead.
     -- let    -- value can be changed.
-    -- const  -- value CANNOT be changed (i.e. const interestRate = 0.3 --then--> interestRate = 1 //-> error )
-                
-    For example: 
-    */
-        var redFruit = 'apple';
+    -- const  -- value CANNOT be changed (i.e. const interestRate = 0.3 --then--> interestRate = 1 //-> error )                
+*/
+        var redFruit = 'apple';       
             console.log(redFruit)     //-> apple
 
         let yellowFruit = 'banana';
@@ -118,18 +121,21 @@
 /* 
 4. What are the different types in JavaScript?
 //////////////////////////////////////////////
-    -- A data type is a kind of value that is assigned to a variable.
-    -- there are 6 (or really 7 if you count functions) data types
-    -- Types can either be mutable or immutable.
-        -- mutable means the type can change, like the values of an objects and arrays can be changed.
-        -- immutable means that the type cannot change.  This applies to: Numbers, booleans, null, undefined.
-        -- in javascript, strings are immutable since you can index them at any index in the string BUT
+==SHROT ANSWER==
+    The types of data that can be assigned to a variable include: strings, numbers, booleans, Objects, functions, Null, and undefined.
 
+==EXTENDED ANSWER==
+    -- A data type is a kind of value that is assigned to a variable.
+    -- There are 6 data types.
+    -- Types can either be MUTABLE or IMMUTABLE.
+        -- MUTABLE means the type can change, like the values of an objects and arrays can be changed.
+        -- IMMUTABLE means that the type cannot change.  This applies to: Numbers, booleans, null, undefined.
+        -- In javascript, strings are immutable since you can index them at any index in the string.
 */
 
 //    1. string     -     A string (literal) is a series of characters within single or double quotes.
-                          console.log(typeof('Hello'));    
-                          //-> "string"
+                          console.log(typeof('Hello'));   //-> "string" 
+                          
 
 //    2. number     -     A number (numeric literal) is used to represent numbers, both integers an floating point decimals numbers. 
                           console.log(typeof(23));
