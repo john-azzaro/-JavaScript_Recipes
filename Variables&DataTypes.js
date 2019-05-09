@@ -203,17 +203,17 @@
 
     What does undefined mean?
     =========================
-    -- Undefined is used by JavaScript to be NO VALUE.
-    -- Undefined is used for uninitialized variables (i.e. let a;) without a value.
-    -- Undefined is used for unknown variables, unknown properties, 
-    -- Undefined is a core JavaScript function that informs you it is either an uninitialized variable, a parameter
-       that is missing from the function parameter list, or an unknown property of an object.
+        -- Undefined is used by JavaScript to be NO VALUE.
+        -- Undefined is used for uninitialized variables (i.e. let a;) without a value.
+        -- Undefined is used for unknown variables, unknown properties, 
+        -- Undefined is a core JavaScript function that informs you it is either an uninitialized variable, a parameter
+           that is missing from the function parameter list, or an unknown property of an object.
 
     What does null mean?
     ====================
-    -- Null is used by programmers to indicate NO VALUE.
-    -- Null will never be used by JavaScript for you... it will always use undefined.
-    -- Only a programmer will ever set a variable to Null.
+        -- Null is used by programmers to indicate NO VALUE.
+        -- Null will never be used by JavaScript for you... it will always use undefined.
+        -- Only a programmer will ever set a variable to Null.
 */
 
 
@@ -235,23 +235,23 @@
 8. Does JavaScript pass parameters by value or reference?
 ////////////////////////////////////////////////////////
 ==SHORT ANSWER==
+    -- The answer depends on the data type: 
+        -- If the value is a PRIMITIVE (i.e. strings, numbers, booleans, etc.) then it is passed as a VALUE.
+        -- If the value is an OBJECT, then it is passed as a REFERENCE.
 
-==EXTENDED ANSWER==
-
-In the example below, we have a variable (a) and function with (a) as the parameter.
-The question here is whether you are pasing the variable (a) by its value OR reference?
-
-The Answer:
-    -- Passing PRIMITIVE types such as strings, numbers, booleans are passed by VALUE. 
-    -- Objects are passed by REFERENCE.
-*/
 
 
 
 /*
 9. What is pass-by value?
 ////////////////////////
+==SHORT ANSWER==
     -- pass-by value means that if you change the value in the function, it will NOT effect the outer scope.
+
+==EXTENDED ANSWER==
+    -- for primitive types, they are passed in by value. 
+    -- In the case below, we are passing in a copy of a.
+       -- Anything you do to (a) INSIDE the body of the function 
 */  
             var a = 1;
             function foo(a) {    
@@ -259,33 +259,32 @@ The Answer:
             }
             console.log(foo(a))   // 1
             console.log(a)
-/*
-    -- for primitive types, they are passed in by value... in this case they are passing in a copy of a.
-       Anything you do to (a) INSIDE the body of the function 
-*/
+
 
 
 /*
 10. What is pass-by reference?
-/////////////////////////////
-     -- pass-by reference means you are passing something that POINTS to something else (vs a copy of the object).
-     -- since JavaScript passes an object by reference, when you change a property of that object from within the 
-        function, the change will be REFLECTED in the outer scopes.
-*/
+///////////////////////////////
+==SHORT ANSWER==
+    -- Pass-by reference means you are passing something that POINTS to something else (vs a copy of the object).
 
+==EXTENDED ANSWER==   
+     -- Since JavaScript passes an object by reference, when you change a property of that object from within the 
+        function, the change will be REFLECTED in the outer scopes.
+        
+    -- In the example below, when you pass in an object into a function, you are not passing in a reference, you 
+       are passing in a copy, you are passing in something that POINTS to the (b) object.
+         -- When you chnage a property of that object in the function you are changing a property of that (b) object in
+            the outer scope.
+         -- You cant change what a points to, only a PROPERTY of (b). 
+*/
             var b = {};
             function bar(b) {    
                 b.moo = false;
             }
             console.log(bar(b))     // { moo: true}  a key of moo with a value of false.
             console.log(b)
-/*
-     -- so when you pass in an object into a function, you are not passing in a reference, you are passing in a copy,
-        you are passing in something that POINTS to the (b) object.
-     -- When you chnage a property of that object in the function you are changing a property of that (b) object in
-        the outer scope.
-     -- you cant change what a points to, only a PROPERTY of (b). 
-*/
+
 
 
 
