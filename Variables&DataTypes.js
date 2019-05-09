@@ -166,15 +166,18 @@
 /* 
 5. What is the difference between a dynamically typed language like JavaScript and a staticly typed language like Java?
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
+==SHORT ANSWER==
+    -- STATIC languages (like Java) CANNOT be changed but DYNAMIC languages (like JavaScript) can be changed.
+
+==EXTENDED ANSWER==
     What is a static language?
     ==========================
     -- In a STATIC language (like Java), the type of that variable is set and CANNOT be changed    
 
             String a = 'cat';  
 
-       In a statically typed language like Java we are saying that this varibale 'a' holes strings and ONLY strings.  
-       So in Java you have to specify what EXACT types each variable will hold.
+            -- In a statically typed language like Java we are saying that this varibale 'a' holes strings and ONLY strings.  
+            -- So in Java you have to specify what EXACT types each variable will hold.
     
 
     What is a dynamic language?
@@ -183,9 +186,9 @@
           
             let a = 'cat';
     
-        This will evaluate as 'string'.  
-        But if we then CHANGE the value from string to a number (i.e. 'point' the name to the value to a number), it will
-        evaluate as a 'number'.  It DYNAMICALLY changes at runtime.
+            -- This will evaluate as 'string'.  
+            -- But if we then CHANGE the value from string to a number (i.e. 'point' the name to the value to a number), it will
+               evaluate as a 'number'.  It DYNAMICALLY changes at runtime.
 */
 
 
