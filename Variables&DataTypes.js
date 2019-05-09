@@ -31,20 +31,26 @@
 /* 
 1. What is a variable?
 /////////////////////
+==SHORT ANSWER==
+    -- A variable is a name attached to a value.
+    -- A variable stores and keeps track of information within a program.
 
-    What is the definition of a variable?
-    =====================================
-    -- a variable is 'declared' with a key word (i.e. var, let, const).
-    -- a variable is a name attached to a variable.
-    -- a variable stores and keeps track of information within a program.
-    -- a variable manages the state of a program.
-        -- i.e. let clickCount = 2.
-    -- a variable uses the equal sign (=) to assign a value to a variable.
+==EXTENDED ANSWERS==
+    -- A variable is 'declared' with a key word (i.e. var, let, const).
+    -- A variable manages the state of a program.                                  
+        -- e.g. let clickCount = 2 
+            -- the "state" of the program is "value" of the variable, specifically 2.
+    -- A variable uses the equal sign (=) to assign a value to a variable.
         -- i.e let name = 'john'
-    -- a variable WITHOUT a value is called an empty variable.
-    -- Javascript uses 'lexical scope'
-    -- variables declared outside a function haved 'global variables'.
-    -- variable declared inside a function have 'function scope'
+    -- A variable WITHOUT a value is called an empty variable.
+    -- Javascript uses 'lexical scope'.
+        -- lexical scope means that as the compiler runs through your code, the location is "frozen" by the lexer
+           during compilation time.  
+        -- Then, as the compiler encounters the variable , it asks scope to see if the variable already exists.
+            -- If yes, then ignore and move forward.
+            -- if no, then the lexer asks scope to declare (create) a new variable called that name for that scope.
+    -- Variables declared outside a function haved 'global variables'.
+    -- Variable declared inside a function have 'function scope'
 */
 
 
@@ -340,3 +346,19 @@ The Answer:
                 Bill`
             }
             console.log(emailGreeting())
+
+
+
+
+
+
+
+
+
+            
+/*
+RESOURCES
+=========
+on variable lexical scope
+https://medium.com/@nickbalestra/javascripts-lexical-scope-hoisting-and-closures-without-mystery-c2324681d4be
+*/
