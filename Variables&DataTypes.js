@@ -61,15 +61,13 @@
 ==SHORT ANSWER==
     -- A Variable is comprised of a: keyword, name, assignment operator, and a value.
 
-
 ==EXTENDED ANSWERS==
-
     What does a basic variable look like?
     =====================================
 
         JavaScript Keyword      Variable Name     Assinment Operator        Value
         __________________      _____________     __________________      ________
-            let                    name                  =                'john'
+            let                    name                   =                'john'
 
 
     What can you NOT do with variables?
@@ -134,32 +132,32 @@
 */
 
 //    1. string     -     A string (literal) is a series of characters within single or double quotes.
-                          console.log(typeof('Hello'));   //-> "string" 
+                            console.log(typeof('Hello'));   //-> "string" 
                           
 
 //    2. number     -     A number (numeric literal) is used to represent numbers, both integers an floating point decimals numbers. 
-                          console.log(typeof(23));
-                          console.log(typeof(1.345));         
-                          //-> "number"
-                          //->  number
+                            console.log(typeof(23));
+                            console.log(typeof(1.345));         
+                            //-> "number"
+                            //->  number
 
 //    3. Boolean    -     A Boolean (literal) evaluates either true or false.
-                          console.log(typeof(true));       
-                          //-> "boolean"
+                            console.log(typeof(true));       
+                            //-> "boolean"
 
 //    4. Undedined  -     Special value that declares variable before assigning a value to them.
-                          console.log(typeof(undefined));       
-                          //-> "undefined"
+                            console.log(typeof(undefined));       
+                            //-> "undefined"
 
 //    5. Null       -     Null is a special value used to indicate that the variable has no value.
-                          console.log(typeof(null));      
-                          //-> "object" 
-                          //    BUT this is incorrect but the problem has existed for so long that it would be
-                          //    problematic to fix it so its stayed like that.  It should be "null"
+                            console.log(typeof(null));      
+                            //-> "object" 
+                            //    BUT this is incorrect but the problem has existed for so long that it would be
+                            //    problematic to fix it so its stayed like that.  It should be "null"
 
 //    6. Object     -    Objects are complex data types that combine primitive datat types like numbers, strings, booleans, null, undefined.
-                         console.log(typeof({}));      
-                          //-> "object"              
+                            console.log(typeof({}));      
+                            //-> "object"              
 
                         
                     
@@ -196,17 +194,23 @@
 /* 
 6. What is the difference between Null and Undefined?
 /////////////////////////////////////////////////////
+==SHORT ANSWER==
+    -- JavaScript will use Undefined by default for uninitialized variables.  Null is set by humans.
+
+==EXTENDED ANSWER==
     -- Null and Undefined seem to mean the same thing, that there is no value.  However, there is a subtle difference
        between the two.  What are the subtle differences?
 
-    SHORT ANSWER: JavaScript will use Undefined by default for uninitialized variables.  Null is set by humans.
-
+    What does undefined mean?
+    =========================
     -- Undefined is used by JavaScript to be NO VALUE.
     -- Undefined is used for uninitialized variables (i.e. let a;) without a value.
     -- Undefined is used for unknown variables, unknown properties, 
     -- Undefined is a core JavaScript function that informs you it is either an uninitialized variable, a parameter
        that is missing from the function parameter list, or an unknown property of an object.
 
+    What does null mean?
+    ====================
     -- Null is used by programmers to indicate NO VALUE.
     -- Null will never be used by JavaScript for you... it will always use undefined.
     -- Only a programmer will ever set a variable to Null.
@@ -214,11 +218,14 @@
 
 
 /* 
-7. What is strict mode and what does it do?
-//////////////////////////////////////////
-    -- strict mode allows you to place a program or a function in a strict operating context.
-    -- to enable strict mode, you simple put 'use strict'; at the beginning of your JavaScript document.
-    -- strict mode makes debugging easier, errors will be easier to find.
+7. What is "strict mode" and what does it do?
+//////////////////////////////////////////////
+==SHORT ANSWER==
+    -- Strict mode allows you to place a program or a function in a strict operating context.
+
+==EXTENDED ANSWERS==   
+    -- To enable strict mode, you simple put 'use strict'; at the beginning of your JavaScript document.
+    -- Strict mode makes debugging easier, errors will be easier to find.
     -- It is a string because when it was first implemented only new browsers supported it, so a string
        was used and when a new browser reads the string, it knows to turn itself into strict mode operating context.    
 */
@@ -227,6 +234,9 @@
 /* 
 8. Does JavaScript pass parameters by value or reference?
 ////////////////////////////////////////////////////////
+==SHORT ANSWER==
+
+==EXTENDED ANSWER==
 
 In the example below, we have a variable (a) and function with (a) as the parameter.
 The question here is whether you are pasing the variable (a) by its value OR reference?
@@ -276,6 +286,8 @@ The Answer:
         the outer scope.
      -- you cant change what a points to, only a PROPERTY of (b). 
 */
+
+
 
 /* 
 11. What is NaN?
