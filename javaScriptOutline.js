@@ -2,20 +2,14 @@
 // TOPIC /////////////////////////////////////////////////////////////////////////////////////////////////////
 //     JavaScript Outline
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//     1. 
+//     1. Study Outlines
+//     2. Data Structures and Algorithms Question Studies
 // NOTES ////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful outline of material studied for better context as well as notes on imporvement, etc. 
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
-
-
-•	
-        o	...
-
-
-
 CURRENT STUDIES
 ///////////////
 
@@ -25,42 +19,40 @@ STUDY OUTLINES
 •	JavaScript Foundations
         o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/javaScriptFoundation.js
 
-•	
-        o	...
+•	Varables and Data Types
+        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Variables%26DataTypes.js
+
+•	Application Logic
+        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/applicationLogic.js
+
+•	Control Flow
+        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/controlFlow.js
+
+•	Arrays
+        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/arrays.js
+
+•	Functions
+        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/functions.js
 
 •	Objects
         o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/objects.js
 
+•	Object Oriented Programming 
+        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/ObjOriProg.js
 
-•	Varables and Data Types
-        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Variables%26DataTypes.js
+•	jQuery
+        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/jQuery.js
 
 •	API's, AJAX, and JSON with jQuery
         o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/ApiAjaxJSon.js
         o   https://github.com/john-azzaro/JavaScript_Recipes/blob/master/apiAjaxJson.html
         o   https://github.com/john-azzaro/JavaScript_Recipes/blob/master/jquery.html
         o   https://github.com/john-azzaro/JavaScript_Recipes/blob/master/jqueryCSS.css
-
-•	Object Oriented Programming 
-        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/ObjOriProg.js
-
+      
 •	Basic Application Structure Guide
         o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/appStructure.js
 
-•	Application Logic
-        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/applicationLogic.js
 
-•	Arrays
-        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/arrays.js
-
-•	Control Flow
-        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/controlFlow.js
-
-•	Functions
-        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/functions.js
-
-•	jQuery
-        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/jQuery.js
 
 
 https://github.com/john-azzaro/JavaScript_Recipes/blob/master/funStru.js
@@ -107,5 +99,9 @@ DATA STRUCTURES AND ALGORITHMS OUTLINES
 
 •	How do you capitalize the first word in a given string?
         o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/sentenceCap.js
+
+•	How do you write a function that console logs n level of steps?
+        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/stepsQuest.js
+
 
 */
