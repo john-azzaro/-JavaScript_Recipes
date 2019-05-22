@@ -22,12 +22,24 @@ CURRENT STUDIES
 STUDY OUTLINES
 ///////////////
 
+•	JavaScript Foundations
+        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/javaScriptFoundation.js
+
+•	
+        o	...
+
+•	Objects
+        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/objects.js
+
+
 •	Varables and Data Types
         o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Variables%26DataTypes.js
 
 •	API's, AJAX, and JSON with jQuery
         o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/ApiAjaxJSon.js
         o   https://github.com/john-azzaro/JavaScript_Recipes/blob/master/apiAjaxJson.html
+        o   https://github.com/john-azzaro/JavaScript_Recipes/blob/master/jquery.html
+        o   https://github.com/john-azzaro/JavaScript_Recipes/blob/master/jqueryCSS.css
 
 •	Object Oriented Programming 
         o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/ObjOriProg.js
@@ -47,8 +59,8 @@ STUDY OUTLINES
 •	Functions
         o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/functions.js
 
-•	
-        o	...
+•	jQuery
+        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/jQuery.js
 
 
 https://github.com/john-azzaro/JavaScript_Recipes/blob/master/funStru.js
@@ -81,6 +93,19 @@ DATA STRUCTURES AND ALGORITHMS OUTLINES
 •	How do you rveerse a string of numbers?
         o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/integerReversal.js
 
-•	
-        o	...
+•	How do you return the most common character in a string?
+        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/maxCharacter.js
+
+•	How do you check to see if a string is a palindrome or not?
+        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/palindromeTOF.js
+
+•	How do you write a function that build out the shape of a pyramid?
+        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/pyramidQues.js
+
+•	How do you reverse a string?
+        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/reverseString.js
+
+•	How do you capitalize the first word in a given string?
+        o	https://github.com/john-azzaro/JavaScript_Recipes/blob/master/sentenceCap.js
+
 */
