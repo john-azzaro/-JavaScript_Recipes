@@ -4,7 +4,9 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     1. What is a program?
 //     2. What is JavaScript?
-//     3. What is problem solving?
+//     3. What is the history of JavaScript?
+//
+//
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
 //     1. Useful overview of information on establishing the foundations of JavaScript from study, research, tutorials, 
@@ -25,7 +27,7 @@
     •  The skill of a programmer is finding a solution to a problem and implementing those solutions with a programming language
        so the computer can execute it.
     •  programming is like learning a language, where you need to learn new words, punctuation, and putting all these things 
-      together to successfully communicate.
+       together to successfully communicate.
     •  Programming languages, like JavaScript, have thier own keywords an characters, as well as rules for putting them all together.
     •  This is called the 'syntax' of the programming language.
     •  A computer program (i.e. scripts) would be as simple as added a bit of javascript to your webpage.
@@ -55,7 +57,7 @@
 
 
 /*
-What is the history of JavaScript?
+3. What is the history of JavaScript?
 /////////////////////////////////
 ==SHORT ANSWER==
     •	 Created in 1995 by Brandon Eich to make it easier to add interactive and dynamic element to websites, .
@@ -78,12 +80,10 @@ What is the history of JavaScript?
         the point where that you may not even need to use jQuery because you are adding extra code for an enviroment that doesnt exist
         anymore.
     •	  ECMA standardizations are now used to reference version (e.g. ES5, ES6, etc.) and now year-based version (e.g. ES2017, ES2018, etc.).
-        
-
-    
-
-
 */
+
+
+
 
 
 
@@ -113,91 +113,91 @@ What are some types of programmers?
 /*
 Problem solving
 ////////////////
-    -- Problem solving is hard because learning programming syntax uses a different "mental muscle" or "mental hemesphere" than problem solving.
-      -- LEFT BRAIN activity involves programming syntax, readign programs, memorizing elements of an API which are analytical in nature.
-      -- RIGHT BRAIN activity involves using those left-brain analytical skills and applying them with right-brain creativity.
-    -- Problem solving is a CREATIVE activity
-      -- For example, problem solving would be like figuring out how to get something on a high shelf without a ladder.
-    -- Problem solving is the systemac approach to OVERCOMING an issue rather than AVOIDING it.
+    •	 Problem solving is hard because learning programming syntax uses a different "mental muscle" or "mental hemesphere" than problem solving.
+      •	 LEFT BRAIN activity involves programming syntax, readign programs, memorizing elements of an API which are analytical in nature.
+      •	 RIGHT BRAIN activity involves using those left-brain analytical skills and applying them with right-brain creativity.
+    •	 Problem solving is a CREATIVE activity
+      •	 For example, problem solving would be like figuring out how to get something on a high shelf without a ladder.
+    •	 Problem solving is the systemac approach to OVERCOMING an issue rather than AVOIDING it.
   
   What is problem solving?
   =======================
-    -- Problem solving is writing an orginal program that perfoms a particualr set of tasks and meets all stated constraints.
+    •	 Problem solving is writing an orginal program that perfoms a particualr set of tasks and meets all stated constraints.
 
   What are constraints?
   ====================
-    -- Constraints include:
-      -- programming language.
-      -- performance.
-      -- memory footprint.
+    •	 Constraints include:
+      •	 programming language.
+      •	 performance.
+      •	 memory footprint.
 
 
   Problem Solving Methdologies
   ============================
-    -- First, list the constraints of your problem.
-      -- e.g. Farmer can only take one item in the boat at one time.
+    •	 First, list the constraints of your problem.
+      •	 e.g. Farmer can only take one item in the boat at one time.
 
-    -- Second, list the order of operations.
-      -- e.g. Carry the fox to the far side of the river.
-      -- e.g. Carry the hen to the far side of the river.
-      -- e.g. Carry the grain to the far side of the river.
+    •	 Second, list the order of operations.
+      •	 e.g. Carry the fox to the far side of the river.
+      •	 e.g. Carry the hen to the far side of the river.
+      •	 e.g. Carry the grain to the far side of the river.
 
-    -- Third, make those operations generic, or parameterized 
-      -- e.g. Row boat from the far side of the river.
+    •	 Third, make those operations generic, or parameterized 
+      •	 e.g. Row boat from the far side of the river.
               IF boat is empty, load item on boat.
               IF boat is NOT empty, unload item on shore. 
 
-    -- Remember to think about the problem in the most general terms.'
-    -- Think about all the possible sequences of moves in a problem.
-    -- Restate the problem in a formal manner.
-    -- When faced with an onerous problem, experiment with a reduced version of the problem, which provide invaluble insights.
-    -- recognize analogies to solve problems (e.g. A solution in the lotto app could apply to a current issue as well).
+    •	 Remember to think about the problem in the most general terms.'
+    •	 Think about all the possible sequences of moves in a problem.
+    •	 Restate the problem in a formal manner.
+    •	 When faced with an onerous problem, experiment with a reduced version of the problem, which provide invaluble insights.
+    •	 recognize analogies to solve problems (e.g. A solution in the lotto app could apply to a current issue as well).
 
 
   Useful problem solving strategies
   =================================
 
     1. Always have a plan
-      -- A plan lets you set intermediate goals and achieve them.
-      -- Without a plan, you have only one goal... solve the whole problem which is difficult to do.
+      •	 A plan lets you set intermediate goals and achieve them.
+      •	 Without a plan, you have only one goal... solve the whole problem which is difficult to do.
 
     2. Restate the problem
-      -- Restating the problem sometimes show the goal isnt what we originally thought it was.
-      -- Restatement can help you take a problem assigned to you to that person and confirm your understanding.
-      -- Restatement is also a necessary prereqisite for thing slike reducing and dividng a problem.
+      •	 Restating the problem sometimes show the goal isnt what we originally thought it was.
+      •	 Restatement can help you take a problem assigned to you to that person and confirm your understanding.
+      •	 Restatement is also a necessary prereqisite for thing slike reducing and dividng a problem.
 
     3. Divide the Problem
-      -- Dividing a problem puts it into steps of phases that make the problem much easier.
-      -- Dividing a problem can often lower the difficulty a great deal.
+      •	 Dividing a problem puts it into steps of phases that make the problem much easier.
+      •	 Dividing a problem can often lower the difficulty a great deal.
 
     5. Start with what you know
-      -- Start with what you know and work out from there.
-      -- Starting with a partial solution may spark ideas about the rest of the problem.
-      -- Starting with what you builds confidence and momentum towards your goal.
-      -- Starting with what you know can apply to cases where you havent divided the problem
+      •	 Start with what you know and work out from there.
+      •	 Starting with a partial solution may spark ideas about the rest of the problem.
+      •	 Starting with what you builds confidence and momentum towards your goal.
+      •	 Starting with what you know can apply to cases where you havent divided the problem
 
     6. Reduce the Problem
-      -- Reducing the problem means reducing the SCOPE of the problem by adding or removing constraints to produce a 
+      •	 Reducing the problem means reducing the SCOPE of the problem by adding or removing constraints to produce a 
          problem that you know you can solve.
-      -- Reductions simplify the problem so you can handle it more easily.
-      -- Reductions help solve a problem when we cant figure out how to divide a problem into steps into steps.
-      -- Reducing a problem means we're not working on the FULL problem but problems that have enough in common to 
+      •	 Reductions simplify the problem so you can handle it more easily.
+      •	 Reductions help solve a problem when we cant figure out how to divide a problem into steps into steps.
+      •	 Reducing a problem means we're not working on the FULL problem but problems that have enough in common to 
          with the full problem where we will make progress towards the ultimate solution.
-      -- Reduction allows us to pinpoint exactly where the remaining difficulty lies.
+      •	 Reduction allows us to pinpoint exactly where the remaining difficulty lies.
 
     7. Look for Analogies
-      -- An analogy is a similarity between a current problem and a problem already solved which can help solve
+      •	 An analogy is a similarity between a current problem and a problem already solved which can help solve
          current problem.
-      -- Analogies are not always direct and similarities in problems are not always full, but sometimes partial.
-      -- Reasoning by analogy is a difficult skill to develop because you cannot reason by analogy without a storehouse
+      •	 Analogies are not always direct and similarities in problems are not always full, but sometimes partial.
+      •	 Reasoning by analogy is a difficult skill to develop because you cannot reason by analogy without a storehouse
          of previous solutions for reference.
-      -- This is where many programmers cut corners, finding code similar to what they need and modifying it.
-          -- this is a mistake because without developing your own solution, you wont understand and internalize it.
-          -- Second, this is a potnetial analogy for future reference so understanding the solution is critical. 
+      •	 This is where many programmers cut corners, finding code similar to what they need and modifying it.
+          •	 this is a mistake because without developing your own solution, you wont understand and internalize it.
+          •	 Second, this is a potnetial analogy for future reference so understanding the solution is critical. 
 
     8. Experiment
-      -- Experimenting is to try something and observe the results.
-      -- Experimenting is not the same as guessing and seeing if it works.
+      •	 Experimenting is to try something and observe the results.
+      •	 Experimenting is not the same as guessing and seeing if it works.
   
 
 
@@ -226,18 +226,18 @@ Problem solving
 
 /*
 Balance of active vs passive(conceptual) learning strategies
-  -- spend good time on conceptual learning, but never neglect practical application by coding
+  •	 spend good time on conceptual learning, but never neglect practical application by coding
 Applying spacing to learning
-  -- use effective memorization techniques or space the top out over a few days.
-  -- avoid cramming
+  •	 use effective memorization techniques or space the top out over a few days.
+  •	 avoid cramming
 teaching the concepts you learn
-  -- when you formulate an idea, you learn so much more.
-  -- you find grey areas while teaching
+  •	 when you formulate an idea, you learn so much more.
+  •	 you find grey areas while teaching
 keep track of questions
-  -- keeping track of your "why's".
-  -- if you dont track what you dont know, you have gaps that can be frustrating.
+  •	 keeping track of your "why's".
+  •	 if you dont track what you dont know, you have gaps that can be frustrating.
 pace yourself so you can recover
-  --
+  •	
 
 
 */
