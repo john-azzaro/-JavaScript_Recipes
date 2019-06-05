@@ -49,14 +49,29 @@
 /*
 What is the history of JavaScript?
 /////////////////////////////////
-    - when JavaScript first became a thing, resources seemed to be very limited (take JS code and alter).
-    - Initially, JavaScript was not properly standardized and browsers were problematic (IE, netscape) and all of them had different
-      ways of dealing with the langauge.
-    - when the web standardization movement came around (and html5 became accepted), browsers became standards-based and JavaScript 
-      language development did not need to chase after the browser standards. 
-    - jQuery initially became a way to level the playing field, but now browsers are good and standards have improved so much to
-      the point where that you may not even need to use jQuery because you are adding extra code for an enviroment that doesnt exist
-      anymore.
+==SHORT ANSWER==
+    •	 Created in 1995 by Brandon Eich to make it easier to add interactive and dynamic element to websites, .
+    
+  Why JavaScript?
+  ==============
+    •	  Initially, websites just existed as pages of HTML, CSS, and some plugins in Java.
+        o	  When JavaScript first became a thing, resources seemed to be very limited (take JS code and alter).
+    •	  JavaScript was first created in 10 days in 1995 by Brandan Eich to make it easier to add interactive and dynamic elements to websites.
+    •	  Orginally called "LiveScript", but was changed back to JavaScript as a marketing decision because Java was so popular at the time. 
+
+  Improvements in Standardization
+  ===============================
+    •	  Over time, competing versions of JavaScript emerged, so it was taken to ECMA International so an official standard could be formed.
+        o	  Initially, JavaScript was not properly standardized and browsers were problematic (IE, netscape) and all of them had different
+            ways of dealing with the langauge.
+    •	  When the web standardization movement came around (and html5 became accepted), browsers became standards-based and JavaScript 
+        language development did not need to chase after the browser standards. 
+    •	  jQuery initially became a way to level the playing field, but now browsers are good and standards have improved so much to
+        the point where that you may not even need to use jQuery because you are adding extra code for an enviroment that doesnt exist
+        anymore.
+    •	  ECMA standardizations are now used to reference version (e.g. ES6, etc.).
+    
+    
 
 
 */
@@ -76,7 +91,10 @@ What are some types of programmers?
      (i.e. responsive design), and translate design mockups and apply them to websites, and requests to API's.
      
 
-  What is 
+  What is a back-end progammer?
+  =============================
+  •	 A back-end developer manages the interactions between clients and servers.
+  •	 
 
 */
 
