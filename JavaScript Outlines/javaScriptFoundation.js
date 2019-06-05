@@ -62,6 +62,27 @@ What is the history of JavaScript?
 */
 
 
+
+
+
+/* 
+What are some types of programmers?
+////////////////////////////////////
+
+  What is a front-end programmer?
+  ================================
+  •  A front-end programmer takes designs from designers and use HTML, CSS, and JavaScript to create a website.
+  •	 Front-end programmers solve problems such as optimizing loading speeds, how the website fits on the screen 
+     (i.e. responsive design), and translate design mockups and apply them to websites, and requests to API's.
+     
+
+  What is 
+
+*/
+
+
+
+
 /*
 Problem solving
 ////////////////
