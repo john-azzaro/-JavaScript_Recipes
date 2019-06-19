@@ -12,7 +12,7 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
 ### Variables Questions:
   > This is a block quote with *italics* and **bold** examples
   This is a hint for the question.
-<details><summary>###What is a variable?</summary>
+<details><summary>**bold**</summary>
 <p> 
 <details><summary>Hint</summary>
   <p>
