@@ -13,6 +13,7 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
   > This is a block quote with *italics* and **bold** examples
   This is a hint for the question.
 
+<p>
 #### testing hidden code blocks!
 
 ```javascript
@@ -28,30 +29,27 @@ console.log(add(1,2))
 
 <br>
 
-<details><summary> root </summary><blockquote>
+<details><summary> ## Variable and Datatype Questions: </summary><blockquote>
 
-<details><summary> bin </summary><blockquote>
+<details><summary> ### What is a variable? </summary><blockquote>
 
-<details><summary> nest1 </summary><blockquote>
-
-~~~
-a
-b
-c
-~~~
+<details><summary> Answer: </summary><blockquote>
+<p>
+    * A variable is a name attached to a value.
+    * A variable stores and keeps track of information within a program.
+</p>
 </blockquote></details>
-<details><summary> nest2 </summary><blockquote>
+<details><summary> Example: </summary><blockquote>
 
-a
-b
-c
+```javascript
+function add(num1, num2) {
+  return num1 + num2;
+}
+
+console.log(add(1,2))
+```
+
 </blockquote></details>
-
-~~~
-file1
-file2
-file3
-~~~
 </blockquote></details>
 
 <details><summary> boot </summary><blockquote>
