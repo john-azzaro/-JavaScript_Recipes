@@ -12,19 +12,6 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
 ### Variables Questions:
   > This is a block quote with *italics* and **bold** examples
   This is a hint for the question.
-<details><summary>Alt-H1
-======</summary>
-<p> 
-<details><summary>Hint</summary>
-  <p>
-    this is some text
-  </p>
-</details>
-<details><summary>Hint</summary>
-  <p>
-    this is some text
-  </p>
-</details>
 <details><summary>Hint</summary>
   <p>
     this is some text
@@ -54,3 +41,66 @@ console.log(add(1,2))
   [a relative link](Variables&DataTypes.js)
 </p>  
 </details>
+
+<details><summary> root </summary><blockquote>
+
+<details><summary> bin </summary><blockquote>
+
+<details><summary> nest1 </summary><blockquote>
+
+~~~
+a
+b
+c
+~~~
+</blockquote></details>
+<details><summary> nest2 </summary><blockquote>
+
+a
+b
+c
+</blockquote></details>
+
+~~~
+file1
+file2
+file3
+~~~
+</blockquote></details>
+
+<details><summary> boot </summary><blockquote>
+
+x
+y
+z
+</blockquote></details>
+
+<details><summary> dev </summary><blockquote>
+
+p
+q
+r
+</blockquote></details>
+
+<details><summary> etc </summary><blockquote>
+
+e
+t
+c
+</blockquote></details>
+
+<details><summary> home </summary><blockquote>
+
+me
+you
+everyone
+</blockquote></details>
+
+<details><summary> lib </summary><blockquote>
+
+lib
+er
+ate
+</blockquote></details>
+
+</blockquote></details>
