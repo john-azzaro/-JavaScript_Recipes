@@ -10,9 +10,10 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
 
 
 ### What is a variable?
-> This is a block quote with *italics* and **bold** examples
+
 <details><summary>Hint</summary>
 <p> 
+  > This is a block quote with *italics* and **bold** examples
   This is a hint for the question.
 </p>
 </details>
@@ -31,4 +32,10 @@ console.log(add(1,2))
 ```
 
 </p>
+</details>
+
+<details><summary>More</summary>
+<p>
+  [Variables and Stuff](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/JavaScript%20Outlines/Variables%26DataTypes.js)
+</p>  
 </details>
