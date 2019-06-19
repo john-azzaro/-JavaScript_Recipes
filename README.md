@@ -29,16 +29,17 @@ console.log(add(1,2))
 
 <br>
 
-<details><summary> ## Variable and Datatype Questions: </summary><blockquote>
+<details><summary> <b>Variable and Datatype Questions</b> </summary><blockquote>
 
-<details><summary> <b>What is a variable? </b> </summary><blockquote>
+<details><summary> <b>What is a variable?</b> </summary><blockquote>
 
-<details><summary> Answer: </summary><blockquote>
-
+<details><summary> Click to see answer </summary>
+<p>
     * A variable is a name attached to a value.
     * A variable stores and keeps track of information within a program.
-</blockquote></details>
-<details><summary> Example: </summary><blockquote>
+<p>
+</details>
+<details><summary> Click to see example </summary><blockquote>
 
 ```javascript
 function add(num1, num2) {
