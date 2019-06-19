@@ -10,11 +10,15 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
 
 ---
 ### What is a variable?
-
-<details><summary>Hint</summary>
-<p> 
   > This is a block quote with *italics* and **bold** examples
   This is a hint for the question.
+<details><summary>Hint</summary>
+<p> 
+<details><summary>Hint</summary>
+  <p>
+    this is some text
+  </p>
+</details>
 </p>
 </details>
 
