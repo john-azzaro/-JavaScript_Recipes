@@ -52,39 +52,3 @@ console.log(add(1,2))
 </blockquote></details>
 </blockquote></details>
 
-<details><summary> boot </summary><blockquote>
-
-x
-y
-z
-</blockquote></details>
-
-<details><summary> dev </summary><blockquote>
-
-p
-q
-r
-</blockquote></details>
-
-<details><summary> etc </summary><blockquote>
-
-e
-t
-c
-</blockquote></details>
-
-<details><summary> home </summary><blockquote>
-
-me
-you
-everyone
-</blockquote></details>
-
-<details><summary> lib </summary><blockquote>
-
-lib
-er
-ate
-</blockquote></details>
-
-</blockquote></details>
