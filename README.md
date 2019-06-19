@@ -36,6 +36,6 @@ console.log(add(1,2))
 
 <details><summary>More</summary>
 <p>
-  [I'm a relative reference to a repository file](../blob/master/LICENSE))
+  [a relative link](Variables&DataTypes.js)
 </p>  
 </details>
