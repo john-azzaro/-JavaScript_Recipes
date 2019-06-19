@@ -8,7 +8,7 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
 
 <br>
 
-
+---
 ### What is a variable?
 
 <details><summary>Hint</summary>
