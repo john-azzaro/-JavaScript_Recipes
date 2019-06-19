@@ -6,11 +6,11 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
 ### Why JavaScript Recipes?
 
 
-
+<br>
 
 
 ### What is a variable?
-> This is a block quote
+> This is a block quote with *italics* and **bold** examples
 <details><summary>Hint</summary>
 <p> 
   This is a hint for the question.
