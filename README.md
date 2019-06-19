@@ -9,11 +9,21 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
 <br>
 
 ---
-### What is a variable?
+### Variables Questions:
   > This is a block quote with *italics* and **bold** examples
   This is a hint for the question.
-<details><summary>Hint</summary>
+<details><summary>###What is a variable?</summary>
 <p> 
+<details><summary>Hint</summary>
+  <p>
+    this is some text
+  </p>
+</details>
+<details><summary>Hint</summary>
+  <p>
+    this is some text
+  </p>
+</details>
 <details><summary>Hint</summary>
   <p>
     this is some text
