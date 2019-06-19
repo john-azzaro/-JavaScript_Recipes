@@ -5,7 +5,16 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
 
 ### Why JavaScript Recipes?
 
-## collapsible markdown?
+
+
+
+
+## What is a variable?
+<details><summary>Hint</summary>
+<p> 
+  This is a hint for the question.
+</p>
+</details>
 
 <details><summary>CLICK ME</summary>
 <p>
