@@ -16,7 +16,7 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
 </p>
 </details>
 
-<details><summary>CLICK ME</summary>
+<details><summary>Answer</summary>
 <p>
 
 #### yes, even hidden code blocks!
