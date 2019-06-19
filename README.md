@@ -31,13 +31,12 @@ console.log(add(1,2))
 
 <details><summary> ## Variable and Datatype Questions: </summary><blockquote>
 
-<details><summary> ### What is a variable? </summary><blockquote>
+<details><summary> <h4> What is a variable? </h4> </summary><blockquote>
 
 <details><summary> Answer: </summary><blockquote>
-<p>
+
     * A variable is a name attached to a value.
     * A variable stores and keeps track of information within a program.
-</p>
 </blockquote></details>
 <details><summary> Example: </summary><blockquote>
 
