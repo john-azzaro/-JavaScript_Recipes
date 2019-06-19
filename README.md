@@ -36,6 +36,6 @@ console.log(add(1,2))
 
 <details><summary>More</summary>
 <p>
-  [Variables and Stuff](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/JavaScript%20Outlines/Variables%26DataTypes.js)
+  [I'm a relative reference to a repository file](../blob/master/LICENSE))
 </p>  
 </details>
