@@ -31,7 +31,7 @@ console.log(add(1,2))
 
 <details><summary> ## Variable and Datatype Questions: </summary><blockquote>
 
-<details><summary> <h4> What is a variable? </h4> </summary><blockquote>
+<details><summary> <b>What is a variable? </b> </summary><blockquote>
 
 <details><summary> Answer: </summary><blockquote>
 
