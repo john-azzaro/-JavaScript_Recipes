@@ -12,7 +12,8 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
 ### Variables Questions:
   > This is a block quote with *italics* and **bold** examples
   This is a hint for the question.
-<details><summary>**bold**</summary>
+<details><summary>Alt-H1
+======</summary>
 <p> 
 <details><summary>Hint</summary>
   <p>
