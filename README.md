@@ -9,7 +9,7 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
 
 
 
-## What is a variable?
+### What is a variable?
 <details><summary>Hint</summary>
 <p> 
   This is a hint for the question.
