@@ -10,6 +10,7 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
 
 
 ### What is a variable?
+> This is a block quote
 <details><summary>Hint</summary>
 <p> 
   This is a hint for the question.
