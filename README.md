@@ -17,13 +17,12 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
 
 <details><summary> <b>What is a variable?</b> </summary><blockquote>
 
-<details><summary> Click to see answer </summary>
-  <dt>Definition list</dt>
+<details><summary> Click to see <b>answer</b> </summary>
   <dd><i>   A <b>variable</b> is a name attached to a value.   </i></dd>
   <dd><i>   A <b>variable</b> stores and keeps track of information within a program.   </i></dd>
    
 </details>
-<details><summary> Click to see example </summary><blockquote>
+<details><summary> Click to see <b>example</b> </summary><blockquote>
  
 ```javascript
 function add(num1, num2) {
