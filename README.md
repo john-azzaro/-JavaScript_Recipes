@@ -35,8 +35,8 @@ console.log(add(1,2))
 
 <details><summary> Click to see answer </summary>
   <dt>Definition list</dt>
-  <dd>* A variable is a name attached to a value.</dd>
-  <dd>* A variable stores and keeps track of information within a program.</dd>
+  <dd><i>A <b>variable</b> is a name attached to a value.</i></dd>
+  <dd>*A variable stores and keeps track of information within a program.*</dd>
    
 </details>
 <details><summary> Click to see example </summary><blockquote>
