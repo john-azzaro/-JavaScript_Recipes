@@ -19,8 +19,8 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
 
 <details><summary> Click to see answer </summary>
   <dt>Definition list</dt>
-  <dd><i>A <b>variable</b> is a name attached to a value.</i></dd>
-  <li><i>A <b>variable</b> stores and keeps track of information within a program.</i></li>
+  <dd><i>   A <b>variable</b> is a name attached to a value.   </i></dd>
+  <dd><i>   A <b>variable</b> stores and keeps track of information within a program.   </i></dd>
    
 </details>
 <details><summary> Click to see example </summary><blockquote>
