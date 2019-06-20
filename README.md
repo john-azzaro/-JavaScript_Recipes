@@ -31,24 +31,24 @@ console.log(add(1,2))
 
 <details><summary> <b>Variable and Datatype Questions</b> </summary><blockquote>
 
-  <details><summary> <b>What is a variable?</b> </summary><blockquote>
+<details><summary> <b>What is a variable?</b> </summary><blockquote>
 
-    <details><summary> Click to see answer </summary>
-      <dt>Definition list</dt>
-      <dd>* A variable is a name attached to a value.</dd>
-      <dd>* A variable stores and keeps track of information within a program.</dd>
+<details><summary> Click to see answer </summary>
+  <dt>Definition list</dt>
+  <dd>* A variable is a name attached to a value.</dd>
+  <dd>* A variable stores and keeps track of information within a program.</dd>
    
-    </details>
-    <details><summary> Click to see example </summary><blockquote>
+</details>
+<details><summary> Click to see example </summary><blockquote>
  
-    ```javascript
-    function add(num1, num2) {
-      return num1 + num2;
-    }
+```javascript
+function add(num1, num2) {
+  return num1 + num2;
+}
 
-    console.log(add(1,2))
-    ```
+console.log(add(1,2))
+```
 
-    </blockquote></details>
-    </blockquote></details>
+</blockquote></details>
+</blockquote></details>
 
