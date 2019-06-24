@@ -27,13 +27,13 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
 ```javascript
 
         var redFruit = 'apple';       
-            console.log(redFruit)     //-> apple
+        console.log(redFruit)       //-> apple
 
         let yellowFruit = 'banana';
-            console.log(yellowFruit)  //-> banana
+        console.log(yellowFruit)    //-> banana
 
         const greenFruit = 'kiwi'
-console.log(greenFruit) //-> kiwi
+        console.log(greenFruit)     //-> kiwi
 
 ```
 
