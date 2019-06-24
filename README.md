@@ -25,11 +25,16 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
 <details><summary> Click to see <b>example</b> </summary><blockquote>
  
 ```javascript
-function add(num1, num2) {
-  return num1 + num2;
-}
 
-console.log(add(1,2))
+        var redFruit = 'apple';       
+            console.log(redFruit)     //-> apple
+
+        let yellowFruit = 'banana';
+            console.log(yellowFruit)  //-> banana
+
+        const greenFruit = 'kiwi'
+console.log(greenFruit) //-> kiwi
+
 ```
 
 </blockquote></details>
