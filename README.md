@@ -22,6 +22,13 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
   <dd><i>   A <b>variable</b> stores and keeps track of information within a program.   </i></dd>
    
 </details>
+<details><summary> Click to see <b>additional questions</b> </summary>
+<details><summary> Is this an addtional question? </summary>
+  <dd><i>   Yes, this is an additional question!   </i></dd>
+   
+</details>
+   
+</details>
 <details><summary> Click to see <b>example</b> </summary><blockquote>
  
 ```javascript
