@@ -365,7 +365,27 @@ NOTE: EXAMPLE NEEDS MORE CLARIFICATION
 
                             circle.draw();
 
+                    
+/* 
+What are getters and setters?
+/////////////////////////////
+    •   
 
+
+*/
+
+                            function Circle2(radius) {
+                                this.radius = radius;
+
+                                let defaultLocation = { x:0, y:0 };
+
+                                this.draw = function() {
+                                    console.log('draw thats soooo cooool');
+                                };
+                            }
+
+                            const circle2 = new Circle2(10);
+                            circle2.draw();
 
 
                       
