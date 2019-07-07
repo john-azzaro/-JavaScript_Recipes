@@ -50,6 +50,7 @@ JavaScript Recipes interesting problems/concepts from research, tutorials, mento
 </blockquote></details>
 </blockquote></details>
 
+<br>
 
 <details><summary>stuff with *mark* **down**</summary><p>
 
