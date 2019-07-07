@@ -20,33 +20,33 @@
 /*
 1. What is Object Oriented Programming (OOP)?
 /////////////////////////////////////////////
-    -- Object oriented programing (OOP) is a programming paradigm centered around objects rather than functions.
-    -- Object oriented programming is not a programming language or tool.
-    -- Languages such as C#, Java, Ruby, Python, and JavaScript, and more.
-    -- Many frameworks are designed with object oriented programming concepts in mind (e.g. angular).
+    • Object oriented programing (OOP) is a programming paradigm centered around objects rather than functions.
+    • Object oriented programming is not a programming language or tool.
+    • Languages such as C#, Java, Ruby, Python, and JavaScript, and more.
+    • Many frameworks are designed with object oriented programming concepts in mind (e.g. angular).
 */
 
 /*
 2. What are the four core concepts of OOP?
 //////////////////////////////////////////
         
-        1. Encapsulation   -- group related variables and function together to reduce complexity.
-        2. Abstraction     -- hide details of complexity and show only essentials, reduces complexity, and isolates code impact.
-        3. Inheritance     -- eliminates redundant code.
-        4. Polymorphism    -- refactors if/else and switch/case statements.
+        1. Encapsulation   • group related variables and function together to reduce complexity.
+        2. Abstraction     • hide details of complexity and show only essentials, reduces complexity, and isolates code impact.
+        3. Inheritance     • eliminates redundant code.
+        4. Polymorphism    • refactors if/else and switch/case statements.
 
-    -- Before object oriented programming there was something called "procedural programming" where data was stored in a
+    • Before object oriented programming there was something called "procedural programming" where data was stored in a
        bunch of variables and function that operate on the data, which was very simple and straight forward.
-       -- but eventually these function will break and function will have duplicate lines of codes (i.e. spaghetti code).
-    -- Which object-oriented programming (OOP), you combine a group of related variables and function into a unit.
-        -- That unit is called an "Object".
-        -- variables are called "properties".
-        -- function are called "methods".     
+       • but eventually these function will break and function will have duplicate lines of codes (i.e. spaghetti code).
+    • Which object-oriented programming (OOP), you combine a group of related variables and function into a unit.
+        • That unit is called an "Object".
+        • variables are called "properties".
+        • function are called "methods".     
 
     Encapsulation
     =============
-    -- In object oriented programming, we group related variables and function on them into objects, which is called "ENCAPSULATION"
-        -- for example:
+    • In object oriented programming, we group related variables and function on them into objects, which is called "ENCAPSULATION"
+        • for example:
 */
             let salary = 30000;
             let overtime = 10;
@@ -56,9 +56,9 @@
                 return salary + (overtime * rate);
             }
 /*
-    -- the example above is a "procedural" implementation, with variables on the top and the function at the bottom.
+    • the example above is a "procedural" implementation, with variables on the top and the function at the bottom.
 
-    -- The OOP way to solve this problem would look something like this:
+    • The OOP way to solve this problem would look something like this:
 */
             let employee = {
                 salary: 30000,
@@ -70,47 +70,47 @@
             }; 
             employee.getWage();
 /*
-    -- Note that the getWage method above does not have parameters where the procedural example needs parameters passed in.
-            -- the getWage method does not need parameters because the parameters are modeled as properties of the object.
-            -- in other words, because they are related and part of one unit, it is more efficient.
+    • Note that the getWage method above does not have parameters where the procedural example needs parameters passed in.
+            • the getWage method does not need parameters because the parameters are modeled as properties of the object.
+            • in other words, because they are related and part of one unit, it is more efficient.
   
     Abstraction
     ===========
-    -- Think of a computer as an object, with a motherboard, a videocard, RAM, CPU, etc.
-        -- When you push the power, all the complexity of the computer is hidden from you.
-        -- This is abstraction in practice.
-    -- In objects, we have parts of the object, like properties and methods, which are hidden from the outside which has the 
+    • Think of a computer as an object, with a motherboard, a videocard, RAM, CPU, etc.
+        • When you push the power, all the complexity of the computer is hidden from you.
+        • This is abstraction in practice.
+    • In objects, we have parts of the object, like properties and methods, which are hidden from the outside which has the 
        benefit of:
             1. making the interface of those objects simpler.
             2. helps reduce the impact of change
-                -- for example, if we chnage the inner properties or methods, none of them will leak outside and cause problems.
+                • for example, if we chnage the inner properties or methods, none of them will leak outside and cause problems.
 
     Inheritance
     ===========
-    -- Inheritance is a mechanism that allows you to eliminate redundant code.
-    -- Inheretance helps eliminate redundant code. For exampleL
-        -- Suppose you have a variety of buttons (click buttons, drop-downs, checkboxes, etc.).
-        -- However, they have a few things in common.
-            -- they all have properties like hidden, innerHTML, click, focus, etc.
-        -- Instead of redefining all the properties and methods for each button, all we need to do is define them once 
+    • Inheritance is a mechanism that allows you to eliminate redundant code.
+    • Inheretance helps eliminate redundant code. For exampleL
+        • Suppose you have a variety of buttons (click buttons, drop-downs, checkboxes, etc.).
+        • However, they have a few things in common.
+            • they all have properties like hidden, innerHTML, click, focus, etc.
+        • Instead of redefining all the properties and methods for each button, all we need to do is define them once 
            in a generic element.
-        -- So what we do in this example is group all the properties together into something like "HTMLElement" and have
+        • So what we do in this example is group all the properties together into something like "HTMLElement" and have
            other objects inherit those properties and methods.
 
     Polymorphism
     ============
-    -- Polymorphism is a technique that lets you get rid of long if and else or switch and case statements.
+    • Polymorphism is a technique that lets you get rid of long if and else or switch and case statements.
 */
 
 
 /*
 What is an object?
 ///////////////////
-    -- objects are complex data types that bring together properties and elements into a single entity.
+    • objects are complex data types that bring together properties and elements into a single entity.
 
     What is object literal syntax?
     ==============================
-    -- an object literal is: 
+    • an object literal is: 
 
             defined variable        assignment operator
                             \          |
@@ -119,7 +119,7 @@ What is an object?
                             name    curly braces
 
 
-    -- inside the curly braces we can add key/value pairs.
+    • inside the curly braces we can add key/value pairs.
 
                          key         value inside "quotes"
                             \       /
@@ -128,7 +128,7 @@ What is an object?
                               colon        comma seperating key/value pairs
 
 
-    -- values can be a string, number, boolean, function, object, or array.
+    • values can be a string, number, boolean, function, object, or array.
 */
                             const car = {
                                 make: "honda",                                // string
@@ -145,7 +145,7 @@ What is an object?
                                 seats: ["driver", "passenger", "rear"]         // array
                             };
 /*
-    -- and to access the members of the object, we use "dot" notation.
+    • and to access the members of the object, we use "dot" notation.
 
                         object       member name
                             \         /
@@ -164,11 +164,11 @@ What is an object?
 /*
 What is a factory object?
 ///////////////////////////
-    -- A factory functions create an individual instance of some model.
-    -- We use factory functions because if we are duplicating an object with one or more methods (has a "bahavior"), it
+    • A factory functions create an individual instance of some model.
+    • We use factory functions because if we are duplicating an object with one or more methods (has a "bahavior"), it
        can be problematic if there become more duplicate of the same object.
-    -- To avoid that issue, we use a function to create an object and return the object.
-    -- Note here that with Es6 if the key and the value are the same, we can remove the noise and simple put a single name.
+    • To avoid that issue, we use a function to create an object and return the object.
+    • Note here that with Es6 if the key and the value are the same, we can remove the noise and simple put a single name.
     
 */
                             function createCar(make) {                      // using the function 'createCar' (passing in make)...
@@ -182,7 +182,7 @@ What is a factory object?
                             }
 
 /*
-    -- Once we have the factory function constructed, we simply need to create a new car:
+    • Once we have the factory function constructed, we simply need to create a new car:
 */
                             const makeAcura = createCar('acura');      // create a 'makeAcura' object from the createCar factory, 
 
@@ -193,12 +193,12 @@ What is a factory object?
 /*
 What is a constructor function?
 ///////////////////////////////
-    -- A constructor function is a little bit different than a factory function.
-    -- The choice between using a factory or constrcutor function is up to you since they both do the exact same thing.
-    -- One danger in using the contructor function method is that if you forget to use 'new', it will define the 'this'
+    • A constructor function is a little bit different than a factory function.
+    • The choice between using a factory or constrcutor function is up to you since they both do the exact same thing.
+    • One danger in using the contructor function method is that if you forget to use 'new', it will define the 'this'
        property on the GLOBAL object (i.e. the window object).
-    -- The first letter of a constrcutor function name should be upper case.
-    -- we also use 'this' to reference the object executing a particular peice of code.
+    • The first letter of a constrcutor function name should be upper case.
+    • we also use 'this' to reference the object executing a particular peice of code.
 */
 
                             function MakeAnotherCar(make) {              
@@ -210,12 +210,12 @@ What is a constructor function?
                             }
 
 /*
-    -- to create a car using the constructor function, it is mostly the same as a factory function EXCEPT for
+    • to create a car using the constructor function, it is mostly the same as a factory function EXCEPT for
        the inclusion of 'new' operator.
-    -- When you use 'new', a few things happen:
-        -- first, it will create an empty object (i.e. {}).
-        -- second, it will set 'this' to point to that NEW object (i.e. this.make ==> MakeAnotherCar).
-        -- third, it will return the object from the function.
+    • When you use 'new', a few things happen:
+        • first, it will create an empty object (i.e. {}).
+        • second, it will set 'this' to point to that NEW object (i.e. this.make ==> MakeAnotherCar).
+        • third, it will return the object from the function.
 */
 
                             const makeFord = new MakeAnotherCar('ford');
@@ -224,16 +224,16 @@ What is a constructor function?
 /*
 What is a constructor property?
 ///////////////////////////////
-    -- Main point, every object in javascript has a property called 'constructor' which references the function used to construct 
+    • Main point, every object in javascript has a property called 'constructor' which references the function used to construct 
        or create an object.
-    -- When we log 'makeFord.constructor', it will return the function used to create the object (i.e. MakeAnotherCar).
+    • When we log 'makeFord.constructor', it will return the function used to create the object (i.e. MakeAnotherCar).
 */
 
                             console.log(makeFord.constructor);         //=> [Function: MakeAnotherCar]
 
 /*
-    -- However, when we log 'makeAcura' from the factory function example, we get Object.  
-    -- Note that the first letter in Object is uppercase, meaning that this is a built-in constructor function in JavaScript.
+    • However, when we log 'makeAcura' from the factory function example, we get Object.  
+    • Note that the first letter in Object is uppercase, meaning that this is a built-in constructor function in JavaScript.
 */
 
                             console.log(makeAcura.constructor);         //=> [Function: Object]
@@ -242,28 +242,28 @@ What is a constructor property?
 /*
 Are functions objects?
 //////////////////////
-    -- in so many words, yes, function are objects
+    • in so many words, yes, function are objects
 
 */
 
 /*
 What is the difference between value(primitive) types and reference types?
 ////////////////////////////////////////////////////////////////////////////
-    -- Value types (primitives) are: numbers, strings, booleans, symbols, undefined, null.
-        -- value types are stored in the variable.
-        -- primitives are copied by thier value.
-    -- Reference types are: objects, functions, arrays.
-        -- reference types are NOT stored in the variable... it is stored somewhere else in memory
-        -- objects are copied by thier reference.
+    • Value types (primitives) are: numbers, strings, booleans, symbols, undefined, null.
+        • value types are stored in the variable.
+        • primitives are copied by thier value.
+    • Reference types are: objects, functions, arrays.
+        • reference types are NOT stored in the variable... it is stored somewhere else in memory
+        • objects are copied by thier reference.
 */
 
 /*
 How do you add or remove properties?
 /////////////////////////////////////
-    -- objects that are created in javascript are dynamic, meaning you can add or remove properties from them.
-    -- to ADD a property to an object, you can either use dot notation or bracket notation.
-        -- use dot notation for words that DONT have spaces or special characters.
-        -- use bracket notation if you DO have spaces or special characters.
+    • objects that are created in javascript are dynamic, meaning you can add or remove properties from them.
+    • to ADD a property to an object, you can either use dot notation or bracket notation.
+        • use dot notation for words that DONT have spaces or special characters.
+        • use bracket notation if you DO have spaces or special characters.
 */
 
                             function superCar() {                               
@@ -283,7 +283,7 @@ How do you add or remove properties?
 /*
 How do you Enumerate (i.e. iterate) over properties?
 /////////////////////////////////////////////////////
-    -- for more detailed 
+    • for more detailed 
 */
                             function carsClasses() {
                                 return {
@@ -311,10 +311,10 @@ How do you Enumerate (i.e. iterate) over properties?
 /*
 How does abstraction apply to OOP?
 ///////////////////////////////////
-    -- Abstraction means we should hide the details and show (i.e. expose) only the essentials.
-    -- using the computer as an example, we want to hide the complexity of the hardware on the outside and
+    • Abstraction means we should hide the details and show (i.e. expose) only the essentials.
+    • using the computer as an example, we want to hide the complexity of the hardware on the outside and
        expose only a button to power the computer on the outside.
-       -- note that understanding abstraction is ESSENTIAL to effectively apply object oriented programming.
+       • note that understanding abstraction is ESSENTIAL to effectively apply object oriented programming.
 */
 
                             function classicCar(name) {
@@ -341,10 +341,10 @@ What are private properties and methods?
 /////////////////////////////////////////
 NOTE: EXAMPLE NEEDS MORE CLARIFICATION
 /////////////////////////////////////////
-    -- So the goal of abstraction is to hide certain members from the outside.
-    -- to make a property or method private, you simply need to define them as local variables.
-    -- in the example below, defaultLocation and computeOptimumLocation are local variables in a function.
-        -- however, from the object-oriented point of view, we can refer to them as private members of the circle object.
+    • So the goal of abstraction is to hide certain members from the outside.
+    • to make a property or method private, you simply need to define them as local variables.
+    • in the example below, defaultLocation and computeOptimumLocation are local variables in a function.
+        • however, from the object-oriented point of view, we can refer to them as private members of the circle object.
 */
 
 
