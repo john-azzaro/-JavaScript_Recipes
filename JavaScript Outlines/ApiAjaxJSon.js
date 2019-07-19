@@ -123,9 +123,13 @@
 
 /* 
 How does the API request/response cycle work?
-/////////////////////////////////////////////
+/////////////////////////////////////////////'
+==SHORT ANSWER==
    •   An API request/response cycle begins with the developer sending a request to an API for information.  
    •   The API will forward the request to the application and if the request is allowed and send data back to the developer.
+
+==EXAMPLE==
+         [DEVELOPER]  ===(request)==>  [API]  ===(request approved)==> [APP APPROVES] ===(data returned) ==> [DEVELOPER]
 
 */
 
