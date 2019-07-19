@@ -7,6 +7,7 @@
 //        + What are common features and themes with API's?
 //        + What are some examples (and analogies) of API's?
 //     2. What is a web API?
+//     X. How does the API request/response cycle work?
 //     3. What is AJAX?
 //     4. What is JSON?
 //        + What kind of data types can JSON use?
@@ -118,6 +119,22 @@
     -- Most big websites have an API, like Twitter.  There are also many public API's like Todd Motto's list of public API's:
         -- https://github.com/toddmotto/public-apis
 */
+
+
+/* 
+How does the API request/response cycle work?
+/////////////////////////////////////////////
+   •   An API request/response cycle begins with the developer sending a request to an API for information.  
+   •   The API will forward the request to the application and if the request is allowed and send data back to the developer.
+
+*/
+
+
+
+
+
+
+
 
 
 /*
