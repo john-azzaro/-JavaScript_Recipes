@@ -254,7 +254,21 @@ Solving Programming Problems
           even numbers, return the empty array "evenNumbers".
 
           QUESTIONS ABOUT THE PROBLEM:
-          • 
+          • How would I setup the function:
+                --------------------------------------
+                  function selectEvenNumbers() {
+                      // code goes here
+                  }                
+                --------------------------------------
+          • How can a computer tell what an even number is?
+                • If you dont know, chances are the answer is on stack overflow or some other site.
+                • Best to get a few answers, write them down in case you need them later.
+                --------------------------------------
+                  num % 2 === 0
+                  if (n % 2) {...}
+                --------------------------------------
+                
+
 
 
 
