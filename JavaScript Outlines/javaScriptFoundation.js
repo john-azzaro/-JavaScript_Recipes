@@ -240,9 +240,33 @@ Solving Programming Problems
 
   1. Read the problem at least 3 times.
   =====================================  
-    • To understand a problem, read through it at least 3 times.block
-    • Try explaining the problem to someone else (or even communicate it on paper).block
-    
+    1.1 • UNDERSTAND THE PROBLEM: 
+            To understand a problem, read through it at least 3 times.block
+    1.2 • CREATE QUESTIONS ABOUT THE PROBLEM:
+            Create a small list of questions about the problem.
+    1.3 • EXPLAIN THE PROBLEM: 
+            Try explaining the problem to someone else (or even communicate it on paper).
+        ----------------------------------------------------------------------------------------
+
+          EXAMPLE PROBLEM:
+          Create a simple function "selectEvenNumbers" that will take in an array of numbers 
+          and return and return an array "evenNumbers" of only even numbers. If there are no 
+          even numbers, return the empty array "evenNumbers".
+
+          QUESTIONS ABOUT THE PROBLEM:
+          • 
+
+
+
+
+
+
+
+
+        ----------------------------------------------------------------------------------------
+
+        
+
 
 
 
