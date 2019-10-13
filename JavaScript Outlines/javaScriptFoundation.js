@@ -203,26 +203,16 @@ Problem solving
 
 
 
-
     1. Break problem into components.
     2. Write code to solve those components individually.
     3. Use the knowledge from writing the programs or lines of codes to solve the orginal program.
- 
-        
-
-
-
-*/
-
-
+ */
 
 
 
 
 
 // useful problem solving strategies
-
-
 
 /*
 Balance of active vs passive(conceptual) learning strategies
@@ -238,6 +228,22 @@ keep track of questions
   •	 if you dont track what you dont know, you have gaps that can be frustrating.
 pace yourself so you can recover
   •	
+
+*/
+
+
+
+
+/* 
+Solving Programming Problems
+-==-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+  1. Read the problem at least 3 times.
+  =====================================  
+    • To understand a problem, read through it at least 3 times.block
+    • Try explaining the problem to someone else (or even communicate it on paper).block
+    
+
 
 
 */
