@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 // TOPIC /////////////////////////////////////////////////////////////////////////////////////////////////////
 //     Foundations of JavaScript
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -9,7 +9,7 @@
 //
 //
 // NOTES ///////////////////////////////////////////////////////////////////////////////////////////////
-//     1. Useful overview of information on establishing the foundations of JavaScript from study, research, tutorials, 
+//     1. Useful overview of information on establishing the foundations of JavaScript from study, research, tutorials,
 //        mentor meetings, peer discussions, and good ole' fashioned curiosity.  I've put the document in Question
 //        and Answer format for improved readability.
 //
@@ -33,7 +33,6 @@
     •  A program retains a values in a variable, which is and allows that value to be refered to by name.
 */
 
-
 /*
 2. What is JavaScript?
 /////////////////////
@@ -52,7 +51,6 @@
        and the programmer does not need to worry about destruction or deallocation of those objects.  
           o  when the program has no way to refer to it (no longer reachable), the interpreter automatically reclaims the memory it occuiped.
 */
-
 
 /*
 3. What is the history of JavaScript?
@@ -80,13 +78,6 @@
     •	  ECMA standardizations are now used to reference version (e.g. ES5, ES6, etc.) and now year-based version (e.g. ES2017, ES2018, etc.).
 */
 
-
-
-
-
-
-
-
 /* 
 What are some types of programmers?
 ////////////////////////////////////
@@ -104,9 +95,6 @@ What are some types of programmers?
   •	 
 
 */
-
-
-
 
 /*
 Problem solving
@@ -206,8 +194,6 @@ Problem solving
     3. Use the knowledge from writing the programs or lines of codes to solve the orginal program.
  */
 
-
-
 // useful problem solving strategies
 
 /*
@@ -226,8 +212,6 @@ pace yourself so you can recover
   •	
 
 */
-
-
 
 /* 
 Solving Programming Problems
@@ -261,9 +245,10 @@ Solving Programming Problems
             4. If there are no even numbers, return the empty array "evenNumbers."       
 
 
+
         BREAK DOWN THE PROBLEM:
         =======================
-          "Create a simple function "selectEvenNumbers..." 
+          1. "Create a simple function "selectEvenNumbers..." 
                   • In this case, we'll just setup a simple function declaration named "selectEvenNumbers".
                         --------------------------------------
                           function selectEvenNumbers() {                          <== Created "selectEvenNumbers" function declaration.
@@ -271,7 +256,7 @@ Solving Programming Problems
                           }                                   
                         --------------------------------------
 
-          "...that will take in an array of numbers..."
+          2. "...that will take in an array of numbers..."
                   • This says that we need to PASS IN an array of numbers for the function to process.             
                         -------------------------------------------------
                           function selectEvenNumbers(arrayOfNumbers) {            <== Created "arrayOfNumbers" parameter.
@@ -279,7 +264,7 @@ Solving Programming Problems
                           }                                              
                         -------------------------------------------------
 
-          "...and return an array "evenNumbers" of only even numbers."
+          3. "...and return an array "evenNumbers" of only even numbers."
                   • So at this point, we actually get a hint of what to do next, which is how to store our even numbers in
                     an evenNumbers variable.
                         --------------------------------------------------
@@ -290,13 +275,17 @@ Solving Programming Problems
                           }                
                         --------------------------------------------------
 
-          "If there are no even numbers, return the empty array "evenNumbers."
+          4. "If there are no even numbers, return the empty array "evenNumbers."
                   • In this case, when we return evenNumbers and there are no even numbers in the data set, it
                     will return an empty array in any case!          
 
 
-  
 
+        CREATE QUESTIONS ABOUT THE PROBLEM
+        ==================================                  
+        At this point, think about what the problem is asking you. 
+            • How can your program tell what an even number is?
+            • 
 
 
 
@@ -314,7 +303,6 @@ Solving Programming Problems
                         --------------------------------------
         
         
-
 
 
 
