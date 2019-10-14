@@ -217,19 +217,17 @@ pace yourself so you can recover
 Solving Programming Problems
 -==-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-  1. Read the problem at least 3 times.
-  ===================================== 
     PHASE 1: UNDERSTAND THE PROBLEM:  
     
           1.1: READ THE PROBLEM AT LEAST 3 TIMES 
             • To understand a problem, read through it at least 3 times to make sure you catch all
-              the special requirements.
+              the special requirements and dont overlook something important.
 
-          1.2: REVERSE ENGINEER THE QUESTION
+          1.2: BREAK DOWN THE QUESTION
             • To get a better idea of the requirements of the problem/question, break down the 
-              problem/question into smaller components.
+              problem/question into smaller components that are expected (i.e. function names, etc).
 
-    1.3: CREATE QUESTIONS ABOUT THE PROBLEM:
+          1.3: CREATE QUESTIONS ABOUT THE PROBLEM:
             • Create a small list of questions about the problem.
     1.3: EXPLAIN THE PROBLEM: 
             • Try explaining the problem to someone else (or even communicate it on paper).
@@ -240,6 +238,9 @@ Solving Programming Problems
     Create a simple function "selectEvenNumbers" that will take in an array of numbers 
     and return an array "evenNumbers" of only even numbers. If there are no even numbers, 
     return the empty array "evenNumbers".
+
+
+
 
         1.1: READ THE PROBLEM AT LEAST 3 TIMES
         ======================================
@@ -256,22 +257,11 @@ Solving Programming Problems
           and return an array "evenNumbers" of only even numbers. If there are no even numbers, 
           return the empty array "evenNumbers".
 
-   
+        
 
 
-
-
-
-
-
-
-
-
-
-
-
-        1.2 IF YOU STILL DONT UNDERSTAND THE QUESTION, BREAK DOWN THE QUESTION:
-        ======================================================================
+        1.2 BREAK DOWN THE QUESTION
+        ============================
             1. Create a simple function "selectEvenNumbers...                            
             2. ...that will take in an array of numbers...                               
             3. ...and return an array "evenNumbers" of only even numbers.                
