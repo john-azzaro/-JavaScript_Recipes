@@ -240,9 +240,6 @@ Solving Programming Problems
     1.2: BREAK DOWN THE QUESTION:
             • To get a better idea of the requirements of the problem/question, break down the 
               problem/question into smaller components.
-    1.3: BREAK DOWN THE CONCEPTS IN THE QUESTION:
-            • 
-        
     1.3: CREATE QUESTIONS ABOUT THE PROBLEM:
             • Create a small list of questions about the problem.
     1.3: EXPLAIN THE PROBLEM: 
@@ -266,7 +263,7 @@ Solving Programming Problems
 
         BREAK DOWN THE PROBLEM:
         =======================
-            "Create a simple function "selectEvenNumbers..." 
+          "Create a simple function "selectEvenNumbers..." 
                   • In this case, we'll just setup a simple function declaration named "selectEvenNumbers".
                         --------------------------------------
                           function selectEvenNumbers() {                          <== Created "selectEvenNumbers" function declaration.
@@ -274,7 +271,7 @@ Solving Programming Problems
                           }                                   
                         --------------------------------------
 
-            "...that will take in an array of numbers..."
+          "...that will take in an array of numbers..."
                   • This says that we need to PASS IN an array of numbers for the function to process.             
                         -------------------------------------------------
                           function selectEvenNumbers(arrayOfNumbers) {            <== Created "arrayOfNumbers" parameter.
@@ -282,7 +279,7 @@ Solving Programming Problems
                           }                                              
                         -------------------------------------------------
 
-            "...and return an array "evenNumbers" of only even numbers."
+          "...and return an array "evenNumbers" of only even numbers."
                   • So at this point, we actually get a hint of what to do next, which is how to store our even numbers in
                     an evenNumbers variable.
                         --------------------------------------------------
@@ -293,15 +290,12 @@ Solving Programming Problems
                           }                
                         --------------------------------------------------
 
-            "If there are no even numbers, return the empty array "evenNumbers."
+          "If there are no even numbers, return the empty array "evenNumbers."
                   • In this case, when we return evenNumbers and there are no even numbers in the data set, it
                     will return an empty array in any case!          
 
 
-        BREAKDOWN THE CONCEPTS IN THE PROBLEM:
-        =====================================
-        • Now that you broke down the 
-
+  
 
 
 
