@@ -218,12 +218,17 @@ Solving Programming Problems
 -==-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
   1. Read the problem at least 3 times.
-  =====================================  
-    1.1: UNDERSTAND THE PROBLEM: 
-            • To understand a problem, read through it at least 3 times.block
-    1.2: BREAK DOWN THE QUESTION:
+  ===================================== 
+    PHASE 1: UNDERSTAND THE PROBLEM:  
+    
+          1.1: READ THE PROBLEM AT LEAST 3 TIMES 
+            • To understand a problem, read through it at least 3 times to make sure you catch all
+              the special requirements.
+
+          1.2: REVERSE ENGINEER THE QUESTION
             • To get a better idea of the requirements of the problem/question, break down the 
               problem/question into smaller components.
+
     1.3: CREATE QUESTIONS ABOUT THE PROBLEM:
             • Create a small list of questions about the problem.
     1.3: EXPLAIN THE PROBLEM: 
@@ -236,18 +241,43 @@ Solving Programming Problems
     and return an array "evenNumbers" of only even numbers. If there are no even numbers, 
     return the empty array "evenNumbers".
 
-    
-        PROBLEM BREAKDOWN
-        =================
+        1.1: READ THE PROBLEM AT LEAST 3 TIMES
+        ======================================
+
+          Create a simple function "selectEvenNumbers" that will take in an array of numbers 
+          and return an array "evenNumbers" of only even numbers. If there are no even numbers, 
+          return the empty array "evenNumbers".
+
+          Create a simple function "selectEvenNumbers" that will take in an array of numbers 
+          and return an array "evenNumbers" of only even numbers. If there are no even numbers, 
+          return the empty array "evenNumbers".
+
+          Create a simple function "selectEvenNumbers" that will take in an array of numbers 
+          and return an array "evenNumbers" of only even numbers. If there are no even numbers, 
+          return the empty array "evenNumbers".
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+        1.2 IF YOU STILL DONT UNDERSTAND THE QUESTION, BREAK DOWN THE QUESTION:
+        ======================================================================
             1. Create a simple function "selectEvenNumbers...                            
             2. ...that will take in an array of numbers...                               
             3. ...and return an array "evenNumbers" of only even numbers.                
             4. If there are no even numbers, return the empty array "evenNumbers."       
 
 
-
-        BREAK DOWN THE PROBLEM:
-        =======================
           1. "Create a simple function "selectEvenNumbers..." 
                   • In this case, we'll just setup a simple function declaration named "selectEvenNumbers".
                         --------------------------------------
