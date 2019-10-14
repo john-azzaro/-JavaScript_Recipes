@@ -15,8 +15,6 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// toolkit
-
 /*
 1. What is a program?
 ////////////////////
@@ -210,8 +208,6 @@ Problem solving
 
 
 
-
-
 // useful problem solving strategies
 
 /*
@@ -233,7 +229,6 @@ pace yourself so you can recover
 
 
 
-
 /* 
 Solving Programming Problems
 -==-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -251,39 +246,46 @@ Solving Programming Problems
             • Try explaining the problem to someone else (or even communicate it on paper).
         ----------------------------------------------------------------------------------------
 
-        EXAMPLE PROBLEM:
-        ================
-            Create a simple function "selectEvenNumbers" that will take in an array of numbers 
-            and return an array "evenNumbers" of only even numbers. If there are no even numbers, 
-            return the empty array "evenNumbers".
+    EXAMPLE PROBLEM:
+    ================
+    Create a simple function "selectEvenNumbers" that will take in an array of numbers 
+    and return an array "evenNumbers" of only even numbers. If there are no even numbers, 
+    return the empty array "evenNumbers".
+
+        PROBLEM BREAKDOWN
+        =================
+            1. Create a simple function "selectEvenNumbers...                            
+            2. ...that will take in an array of numbers...                               
+            3. ...and return an array "evenNumbers" of only even numbers.                
+            4. If there are no even numbers, return the empty array "evenNumbers."       
 
         BREAK DOWN THE PROBLEM:
         =======================
             "Create a simple function "selectEvenNumbers..." 
                   • In this case, we'll just setup a simple function declaration named "selectEvenNumbers".
                         --------------------------------------
-                        function selectEvenNumbers() {                          <== Created "selectEvenNumbers" function declaration.
-                          // code goes here
-                        }                
+                          function selectEvenNumbers() {                          <== Created "selectEvenNumbers" function declaration.
+                            // code goes here
+                          }                
                         --------------------------------------
 
             "...that will take in an array of numbers..."
                   • This says that we need to PASS IN an array of numbers for the function to process.             
                         ---------------------------------------------
-                        function selectEvenNumbers(arrayOfNumbers) {            <== Created "arrayOfNumbers" parameter.
-                          // code goes here
-                        }                
+                          function selectEvenNumbers(arrayOfNumbers) {            <== Created "arrayOfNumbers" parameter.
+                            // code goes here...
+                          }                
                         ---------------------------------------------
 
             "...and return an array "evenNumbers" of only even numbers."
                   • So at this point, we actually get a hint of what to do next, which is how to store our even numbers in
                     an evenNumbers variable.
                         ---------------------------------------------
-                        function selectEvenNumbers(arrayOfNumbers) { 
-                          let evenNumbers = [];                                 <== Create a variable called "evenNumbers" to store any even numbers we find. 
-                          
-                          return evenNumbers;                                   <== Return evenNumbers.
-                        }                
+                          function selectEvenNumbers(arrayOfNumbers) { 
+                            let evenNumbers = [];                                 <== Create a variable called "evenNumbers" to store any even numbers we find. 
+                            
+                            return evenNumbers;                                   <== Return evenNumbers.
+                          }                
                         ---------------------------------------------
 
             "If there are no even numbers, return the empty array "evenNumbers."
@@ -296,14 +298,14 @@ Solving Programming Problems
                 • How can a computer tell what an even number is?
                       • If you dont know, chances are the answer is on stack overflow or some other site.
                       • Best to get a few answers, write them down in case you need them later.
-                      --------------------------------------
-                        num % 2 === 0
-                        if (n % 2) {...}
-                      --------------------------------------
+                        --------------------------------------
+                          num % 2 === 0
+                          if (n % 2) {...}
+                        --------------------------------------
                 • How do you contain the even numbers?
-                      --------------------------------------
-                        
-                      --------------------------------------
+                        --------------------------------------
+                          
+                        --------------------------------------
                     
 
 
