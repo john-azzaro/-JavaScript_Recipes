@@ -38,6 +38,7 @@
 API in a nutshell
 /////////////////
     •	An API stands for Application Programming Interface, which is a fancy way of saying what one application exposes to another.
+    •   A better way to think about API's is that it is a CONTRACT between two things and how they interact with each other.
 
     •   Think of a restaurant as an analogy of an API.
         •   You dont go staight up to the chef to place your order, you need to look at the menu and order something from there because that
@@ -66,7 +67,24 @@ API in a nutshell
             and wants to let you modify. 
             •   For example, you could update a user through a REST API, but they will only let you update the password and email... not the name. 
             •   You could also get users from this API, but they will not return the passwords of those users. 
-            •   Again, the servers are secure because they only expose the information they want to expose. 
+            •   Again, the servers are secure because they only expose the information they want to expose through this API.
+            •   In other words, the API is the contract between the server and the client.
+
+        •   Libraries are another common form of API that pulls a specific code library into your own code.
+            •   Libraries have many methods definined in them that do specific things when you call them and return specific data when you call them.
+            •   This is an API as its a contract between the library code you've installed and your project that's using the library.
+            •   When using library API's, you have:
+                •   Different ways of accessing it (i.e. loading into your project, meta, etc.)
+                •   You can only use the methods that they expose (i.e. jquery library, etc)
+                •   You cannot access the internals of that library unless its through the methods of the API library exposed to you.
+
+        •   The common theme of API's is that they only expose what they want you to be able to acess and hide everything else to make it as secure as possible. 
+        •   Also common with API's is some sort of TOKEN to authenticate yourself with the API, which allows the application to know who's accessing it and limit
+            what that person can access based on specific permissions.
+
+
+
+
 
 
 
