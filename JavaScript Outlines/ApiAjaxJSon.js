@@ -34,10 +34,9 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-/*
-1. What is an API?
-///////////////////
+/* 
+API in a nutshell
+/////////////////
     •	An API stands for Application Programming Interface, which is a fancy way of saying what one application exposes to another.
 
     •   Think of a restaurant as an analogy of an API.
@@ -50,9 +49,39 @@
             whatever you want from that menu.
             •   So the API is going to give you back data.
 
-        •
+        •   When you access an API, you send a REQUEST for what you want, and then the API will send back the information you want back as a RESPONSE.
+
+        •   However, if you go to a Steak Restaurant and you order Seafood, they are going to throw an error at you... they'll say "sorry, we dont 
+            serve seafood here, you need to choose something from the menu".
+        •   This exchange is what makes API's secure because they will only EXPOSE what they want to expose to thier customers, a menu full of steaks.        
+        •   For example, a web application wont expose a database full of users and passwords, only th elogin and signin page... not the database itself.
+            By doing this, they only expose the parts they want to. 
+
+       •    What are some common forms of API's? 
+            •  REST API's (on the web).
+            •  Library API's (from code that you pull into your project) 
+
+        •   REST API's expose different ENDPOINTS (aka URL's) which you can access to get certain data (from that API).
+            These ENDPOINTS can also be accessed in order to modify data on those servers... but only applies to what the application exposes to you
+            and wants to let you modify. 
+            •   For example, you could update a user through a REST API, but they will only let you update the password and email... not the name. 
+            •   You could also get users from this API, but they will not return the passwords of those users. 
+            •   Again, the servers are secure because they only expose the information they want to expose. 
 
 
+
+
+        
+
+*/
+
+
+
+
+
+/*
+1. What is an API?
+///////////////////
     -- An API stands for Application Programming Interface. 
     -- An API is some kind of interface which has a set of functions that allow programmers to access specific features or data of an 
        application, operating system or other services.
