@@ -39,12 +39,18 @@
 1. What is an API?
 ///////////////////
     •	An API stands for Application Programming Interface, which is a fancy way of saying what one application exposes to another.
+
     •   Think of a restaurant as an analogy of an API.
         •   You dont go staight up to the chef to place your order, you need to look at the menu and order something from there because that
             tells you what the restaurant has to offer.
-        •   The API is the menu.
+            •   The API is the menu.
+
         •   The API essentially tells you what that certain application is giving to you and the things you can use from that application. 
-        •   
+        •   So when you go to the restaurant and then order something from the menu by telling them what you want, the restaurant will give you
+            whatever you want from that menu.
+            •   So the API is going to give you back data.
+
+        •
 
 
     -- An API stands for Application Programming Interface. 
