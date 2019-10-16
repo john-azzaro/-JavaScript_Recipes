@@ -213,6 +213,20 @@ pace yourself so you can recover
 
 */
 
+
+/* 
+Advice on learning to code
+//////////////////////////
+* You shouldnt take to classes from places like university or bootcamp or self-teaching expecting to learn all substantive programming.block
+* Substantive programming come from learning on your own when you go back and compile and synthesize all the information from notes, tutorials, mentors, etc with commerical
+  outlines into your own personal outline. This is where you being to learn and understand programming.
+* But classes do have particular spins on programming that you can benefit from.
+* Also, do your outlines as often as possible, it is a roadmap for yourself. So if you were doing your outlines every week, you start from there and then you iterate
+
+*/
+
+
+
 /* 
 Solving Programming Problems
 -==-=-=-=-=-=-=-=-=-=-=-=-=-=-
