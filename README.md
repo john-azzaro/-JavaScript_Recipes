@@ -1,65 +1,11 @@
 # JavaScript Recipes
 
-### What are JavaScript Recipes?
-JavaScript Recipes interesting problems/concepts from research, tutorials, mentor sessions, peer discussions, requested problem explainations, etc.
+### What is JavaScript Recipes?
+JavaScript Recipes is a semi-ordered collection of JavaScript studies, models, prototypes, reference documents, cheat sheets, etc. 
 
-### Why JavaScript Recipes?
-
-
-<br>
-
----
-
-
-<br>
-
-<details><summary> <b>Variable and Datatype Questions</b> </summary><blockquote>
-
-<details><summary> <b>What is a variable?</b> </summary><blockquote>
-
-<details><summary> Click to see <b>answer</b> </summary>
-  
-~~~
-<dd><i>   A <b>variable</b> is a name attached to a value.   </i></dd>
-<dd><i>   A <b>variable</b> stores and keeps track of information within a program.   </i></dd>
-~~~
-
-</details>
-<details><summary> Click to see <b>additional questions</b> </summary>
-<details><summary> Is this an addtional question? </summary>
-  <dd><i>   Yes, this is an additional question!   </i></dd>
-   
-</details>
-   
-</details>
-<details><summary> Click to see <b>example</b> </summary><blockquote>
+In **JavaScript Outlines**, you'll find a wide range of topics organized in question-and-answer format (good for study and memory retention). Topics include: *variables, datatypes, functions, control flow, objects, arrays, jQuery, loops, application logic, api's, ajax, etc.* 
  
-```javascript
+In **Coding Studies**, you'll find good walk-throughs and solutions to complex algorithm and data structure problems. 
 
-        var redFruit = 'apple';       
-        console.log(redFruit)       //-> apple
-
-        let yellowFruit = 'banana';
-        console.log(yellowFruit)    //-> banana
-
-        const greenFruit = 'kiwi'
-        console.log(greenFruit)     //-> kiwi
-
-```
-
-</blockquote></details>
-</blockquote></details>
-
-<br>
-
-<details><summary>stuff with *mark* **down**</summary><p>
-
-## _formatted_ **heading** with [a](link)
-
----
-{{standard 3-backtick code block omitted from here due to escaping issues}}
----
-
-Collapsible until here.
-</p></details>
+In **Array Methods**, you'll find individual studies on array methods including explainations, break-downs, use-cases, examples, etc.
 
