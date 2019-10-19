@@ -10,7 +10,13 @@
 // SUMMARY ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //      •   .copyWithin copies an array of elements to another position in the array, overwriting existing values.
-//      •   
+//      •   .copyWithin returns a NEW array containing the selected elements.
+//      •   .copyWithin takes INTEGERS (i.e. 1, 34, ...) as arguments.
+//      •   Target is required. Start and end are optional.
+//
+//      •   Think of copyWithin as "copying" the array "within" the array.
+//      •   This is a more advanced form of the .slice, but unlike slice (which does not overwrite the original array),
+//          copyWithin DOES overwrite the existing array.
 //
 //      •   The first argument is the TARGET, which is where the method will overwrite.
 //          •   If you have array.copyWithin(1, 0), the copied section will start at 1 (position 2 in the array) with
