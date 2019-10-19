@@ -10,9 +10,12 @@
 // SUMMARY ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //      •   .copyWithin copies an array of elements to another position in the array, overwriting existing values.
+//      •   
 //
 //      •   The first argument is the TARGET, which is where the method will overwrite.
-//          •   If you have array.copyWithin(1, 0):
+//          •   If you have array.copyWithin(1, 0), the copied section will start at 1 (position 2 in the array) with
+//              an array that starts at 0 (the very beginning of the array).
+//
 //              BEFORE: ["alpha", "beta", "charlie", "delta", "echo", "frank"]
 //              AFTER:  ['alpha', 'alpha', 'beta', 'charlie', 'delta', 'echo' ]
 //                                  ^^^
