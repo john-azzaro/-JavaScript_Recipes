@@ -5,7 +5,7 @@ List of array methods: https://www.tutorialrepublic.com/javascript-reference/jav
 
  
 
-copyWithin()	Copies part of an array to another location in the same array and returns it.
+
 entries()	Returns a key/value pair Array Iteration Object.
 every()	Checks if every element in an array pass a test in a testing function.
 fill()	Fill the elements in an array with a static value.
@@ -39,3 +39,4 @@ indexOf() — Returns the first position at which a given element appears in an 
 
 
 concat()  	Merge two or more arrays, and returns a new array.
+copyWithin()	Copies part of an array to another location in the same array and returns it.
