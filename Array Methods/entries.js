@@ -15,7 +15,8 @@
 //
 // EXAMPLES //////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      EXAMPLE 1:
+//      EXAMPLE 1: Create an entries iterator object using Object.entries
+//      EXAMPLE 2: entires iterator using for-loop
 //
 // RESOURCES /////////////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -23,17 +24,29 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// EXAMPLE 1: Create an entries iterator object using .entries
+// EXAMPLE 1: Create an entries iterator object using Object.entries
 
 const array = ['alpha', 'beta', 'charlie', 'delta', 'echo', 'frank', 'gold'];
 
-function createEntriesIterator(array) {
-   let myArray = array;
-
-   myArray.entries();
-   for (let i = 0; i < myArray.length; i++) {
-      console.log(i);
-   }
+function createEntriesIterator() {
+    const myArray = Object.entries(array);
+    return myArray;
 }
 
 console.log(createEntriesIterator());
+
+
+
+// EXAMPLE 2: entires iterator using for-loop
+
+const array2 = ["apple", "banana", "carrot", "dates", "eggs"];
+
+function createAnotherEntryIterator() {
+    let iterator = array2.entries();
+    for (let i of iterator) { 
+    console.log(i); 
+    } 
+}
+console.log(createAnotherEntryIterator());
+
+
