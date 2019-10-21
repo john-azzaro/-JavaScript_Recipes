@@ -13,10 +13,26 @@
 //
 // EXAMPLES //////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      EXAMPLE 1:
+//      EXAMPLE 1: 
 //
 // RESOURCES /////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//
+//      https://medium.com/@JeffLombardJr/when-and-why-to-use-the-every-array-method-in-javascript-29ff42a40522
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+// EXAMPLE 1: Determine if every number in an array is positive:
+
+let array1 = [1,2,3,4,5];
+let array2 = [6,7,8,9,10];
+let array3 = [-1,0,1,2,3];
+
+function isPositive(number) {
+    return number > 0;
+}
+
+console.log(array1.every(isPositive));
+console.log(array2.every(isPositive));
+console.log(array3.every(isPositive));
