@@ -23,6 +23,9 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+
+
+
 // EXAMPLE 1: 
 
 function findFirstVowel() {
@@ -35,3 +38,21 @@ function findFirstVowel() {
 }
 
 console.log(findFirstVowel());
+
+
+
+
+
+// EXAMPLE 2: Find a property in an object
+
+const nameList = [
+    { id: 1, name: 'Alan'},
+    { id: 2, name: 'Bob'},
+    { id: 3, name: 'Charlie'}
+];
+
+let found = nameList.find(function(nameList) {
+    return nameList.name === 'Bob'
+});
+
+console.log(found);
