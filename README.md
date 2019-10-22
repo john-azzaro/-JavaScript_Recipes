@@ -2,23 +2,34 @@
 
 <br>
 
-## What is JavaScript Recipes?
+## What is the purpose of JavaScript Recipes?
 <dl>
 <dd>
 
-**JavaScript Recipes** is a collection of JavaScript outlines, studies, models, prototypes, reference documents, cheat sheets, etc. in one convenient place! 
+The purpose of **JavaScript Recipes** is to serve as a general collection of JavaScript outlines, studies, models, prototypes, reference documents, cheat sheets, etc. in one convenient place!
+Much of the content in this repository is taken from personal notes and transcribed in the form of Q&A's which I'm hoping might help others in thier own study and research. 
 
-Why do I call these documents "recipes"? A *recipe* is defined as a set of instructions for making something. When you make a cake, you follow a recipe to get the right ingredients, the cooking time, etc. Same thing applies to programming! Each folder contains *recipes* examine a particular part of JavaScript, such as outlines of particular subjects in JavaScript like functions in *JavaScript Outlines*. Each and every document examines one subject (i.e. functions, arrays, fibonacci series solutions, concatentation methods, etc.) in either a step-by-step process with multiple solutions or Question-and-Answer formats. Hope you find these recipes  
+Why are these documents called "recipes"? A *recipe* is defined as a set of instructions for making something. When you make a cake, you follow a recipe to get the right ingredients, the cooking time, etc. Same thing applies to programming! Each folder contains a growing collection *recipes* that examine a particular part of JavaScript, such as outlines of particular subjects in JavaScript like functions in *JavaScript Outlines*. Each and every document examines one subject (i.e. functions, arrays, fibonacci series solutions, concatentation methods, etc.) in either a step-by-step process with multiple solutions or Question-and-Answer formats. Hope you find these recipes  
+
+*Please note that the outlines, studies, and extended studies are roughly organized and often repeat and overlap in content and context. Again, these are transcribed from personal notes and often one question or outline is a condensed version of a few pages of notes and research. In the end, the main objective of this repository is to provide at least a decent resource for others to learn and add to.*
+
+General topics in this repository include:
+
+* [JavaScript Outlines](#JavaScript-Outlines)
+* [Coding Studies](#)
+* [Array Methods Extended Study](#)
 
 </dd>
 </dl>
 
 <br>
 
-## What are some of the categories in JavaScript Recipes?
 <dl>
 <dd>
 
+<br>
+
+## JavaScript Outlines
 * In **JavaScript Outlines**, you'll find a wide range of topics organized in question-and-answer format (good for study and memory retention). Topics include: *variables, datatypes, functions, control flow, objects, arrays, jQuery, loops, application logic, api's, ajax, etc.* 
 
 Outline Example: *JavaScript_Recipes > JavaScript Outlines > **controlFlow.js***:
@@ -36,7 +47,7 @@ Outline Example: *JavaScript_Recipes > JavaScript Outlines > **controlFlow.js***
               statement (if..then) we add a VARIABLE.
             - this variable will be compared to each case statement in the code block.
             - inside the body of the switch statement, we have one or more CASE STATEMENTS.
-            - each case statement will be compared to the variable at the beginning of the case statement. */               
+            - each case statement will be compared to the variable at the beginning of the case statement. */
    
             function role(str) {
                     let user = str;                          // input assigned to `user`.
@@ -57,20 +68,25 @@ Outline Example: *JavaScript_Recipes > JavaScript Outlines > **controlFlow.js***
                 console.log(role("Tom"));                    // Unknown User!
 ```
  
+<br>
+
+## Coding Studies
 * In **Coding Studies**, you'll find walk-throughs and solutions to complex computer science, programming, algorithm and data structure problems for study and reference. Topics include: *runtime complexity, finding vowels, anagrams, etc*.
 
 Outline Example: *JavaScript_Recipes > JavaScript Outlines > **arrays.js***:
+
 ```JavaScript
-    // OBJECTIVE ////////////////////////////////////////////////////////////////////////////////////////////////
+    // OBJECTIVE //////////////////////////////////////////////////////////////////////////////////////////
     //    Given a string, return a new string with a reversed order of characters.
     //      -- Examples: reverse('hello') => 'olleh'
     //
-    // SUMMARY //////////////////////////////////////////////////////////////////////////////////////////////////
+    // SUMMARY ///////////////////////////////////////////////////////////////////////////////////////////
     // What is the problem?:  
     //    You need to take a string and reverse it. 
     //
     // What is the BEST solution? 
-    //     1. Solution 2 (and by extension solution 1) is the most preferable way since its short, simple, and concise.
+    //     1. Solution 2 (and by extension solution 1) is the most preferable way since its short, 
+    //        simple, and concise.
     //     2. Solution 5 uses the array spread operator which simplifies the process a great deal.
     //     3. Solutions 3 and 4 are more cumbersome but loops are helpful to use.
     //
@@ -85,7 +101,7 @@ Outline Example: *JavaScript_Recipes > JavaScript Outlines > **arrays.js***:
     // What needs work?
     //     1. Add commentary to solution 6 and 7.
     //
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // Solution 1: 
                 
