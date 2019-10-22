@@ -30,7 +30,7 @@ General topics in this repository include:
 <br>
 
 ## JavaScript Outlines
-* In **JavaScript Outlines**, you'll find a wide range of topics organized in question-and-answer format (good for study and memory retention). Topics include: *variables, datatypes, functions, control flow, objects, arrays, jQuery, loops, application logic, api's, ajax, etc.* 
+* In [JavaScript Outlines](https://github.com/john-azzaro/JavaScript_Recipes/tree/master/JavaScript%20Outlines "JavaScript outlines"), you'll find a wide range of topics organized in question-and-answer format (good for study and memory retention). Topics include: *variables, datatypes, functions, control flow, objects, arrays, jQuery, loops, application logic, api's, ajax, etc.* 
 
 Outline Example: *JavaScript_Recipes > JavaScript Outlines > [**controlFlow.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/JavaScript%20Outlines/controlFlow.js "control flow outline")*:
 ```JavaScript
@@ -71,7 +71,7 @@ Outline Example: *JavaScript_Recipes > JavaScript Outlines > [**controlFlow.js**
 <br>
 
 ## Coding Studies
-* In **Coding Studies**, you'll find walk-throughs and solutions to complex computer science, programming, algorithm and data structure problems for study and reference. Topics include: *runtime complexity, finding vowels, anagrams, etc*.
+* In [Coding Studies](https://github.com/john-azzaro/JavaScript_Recipes/tree/master/Coding%20Studies "Coding Studies"), you'll find walk-throughs and solutions to complex computer science, programming, algorithm and data structure problems for study and reference. Topics include: *runtime complexity, finding vowels, anagrams, etc*.
 
 Outline Example: *JavaScript_Recipes > Coding Studies > [**reverseString.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Coding%20Studies/reverseString.js "reverse string")*:
 
@@ -129,7 +129,7 @@ Outline Example: *JavaScript_Recipes > Coding Studies > [**reverseString.js**](h
 <br>
 
 ## Array Methods Extended Study
-In **Array Methods Extended Study**, you'll find extended studies on array methods that include additional explanations, break-downs, use-cases, etc. that are briefly dicussed in the arrays.js outline. Although some of the content overlaps, this collection of extended studies gives a little bit more breathing room to include multiple examples. Topics include: *concat, find, every, entries, etc.*
+In [Array Methods Extended Study](https://github.com/john-azzaro/JavaScript_Recipes/tree/master/Array%20Methods%20Extended%20Study "Array Methods Extended Study"), you'll find extended studies on array methods that include additional explanations, break-downs, use-cases, etc. that are briefly dicussed in the arrays.js outline. Although some of the content overlaps, this collection of extended studies gives a little bit more breathing room to include multiple examples. Topics include: *concat, find, every, entries, etc.*
 
 Outline Example: *JavaScript_Recipes > Array Methods Extended Study > [**entries.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Array%20Methods%20Extended%20Study/entries.js "entries array method")*:
 
@@ -168,7 +168,6 @@ Outline Example: *JavaScript_Recipes > Array Methods Extended Study > [**entries
         return myArray;
     }
     console.log(createEntriesIterator());
-
 
 
     // EXAMPLE 2: entires iterator using for-loop
