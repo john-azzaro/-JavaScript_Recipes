@@ -8,7 +8,7 @@ List of array methods: https://www.tutorialrepublic.com/javascript-reference/jav
 
 
 
-fill()	Fill the elements in an array with a static value.
+
 filter()	Creates a new array with all elements that pass the test in a testing function.
 find()	Returns the value of the first element in an array that pass the test in a testing function.
 findIndex()	Returns the index of the first element in an array that pass the test in a testing function.
@@ -42,7 +42,7 @@ concat()  	Merge two or more arrays, and returns a new array.
 copyWithin()	Copies part of an array to another location in the same array and returns it.
 entries()	Returns a key/value pair Array Iteration Object.
 every()	Checks if every element in an array pass a test in a testing function.
-
+fill()	Fill the elements in an array with a static value.
 
 
 resources
