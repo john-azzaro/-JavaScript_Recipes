@@ -16,8 +16,8 @@ Why are these documents called "recipes"? A *recipe* is defined as a set of inst
 General topics in this repository include:
 
 * [JavaScript Outlines](#JavaScript-Outlines)
-* [Coding Studies](#)
-* [Array Methods Extended Study](#)
+* [Coding Studies](#Coding-Studies)
+* [Array Methods Extended Study](#Array-Methods-Extended-Study)
 
 </dd>
 </dl>
@@ -32,14 +32,14 @@ General topics in this repository include:
 ## JavaScript Outlines
 * In **JavaScript Outlines**, you'll find a wide range of topics organized in question-and-answer format (good for study and memory retention). Topics include: *variables, datatypes, functions, control flow, objects, arrays, jQuery, loops, application logic, api's, ajax, etc.* 
 
-Outline Example: *JavaScript_Recipes > JavaScript Outlines > **controlFlow.js***:
+Outline Example: *JavaScript_Recipes > JavaScript Outlines > [**controlFlow.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/JavaScript%20Outlines/controlFlow.js "control flow outline")*:
 ```JavaScript
     /*
     3. What is a switch statement?
     //////////////////////////////
         • A SWITCH statement is a conditional statement that tests whether something is true or false. 
-        • a switch statement contains a collection of case blocks.
-        • when a switch statement runs, ONLY ONE will get hit and have thier code executed.
+        • A switch statement contains a collection of case blocks.
+        • When a switch statement runs, ONLY ONE will get hit and have thier code executed.
             
         • A switch statment works like this:
             - a switch statement starts with the statement itself (i.e. switch ).
@@ -73,7 +73,7 @@ Outline Example: *JavaScript_Recipes > JavaScript Outlines > **controlFlow.js***
 ## Coding Studies
 * In **Coding Studies**, you'll find walk-throughs and solutions to complex computer science, programming, algorithm and data structure problems for study and reference. Topics include: *runtime complexity, finding vowels, anagrams, etc*.
 
-Outline Example: *JavaScript_Recipes > JavaScript Outlines > **arrays.js***:
+Outline Example: *JavaScript_Recipes > Coding Studies > [**reverseString.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Coding%20Studies/reverseString.js "reverse string")*:
 
 ```JavaScript
     // OBJECTIVE //////////////////////////////////////////////////////////////////////////////////////////
@@ -126,7 +126,66 @@ Outline Example: *JavaScript_Recipes > JavaScript Outlines > **arrays.js***:
                 } 
 ```
 
-* In **Array Methods Extended Study**, you'll find individual studies on array methods that include explainations, break-downs, use-cases, etc. Additionally, there are more examples take fromexperience and research that might come in handy for beginners as well. Topics include: 
+<br>
+
+## Array Methods Extended Study
+In **Array Methods Extended Study**, you'll find extended studies on array methods that include additional explanations, break-downs, use-cases, etc. that are briefly dicussed in the arrays.js outline. Although some of the content overlaps, this collection of extended studies gives a little bit more breathing room to include multiple examples. Topics include: *concat, find, every, entries, etc.*
+
+Outline Example: *JavaScript_Recipes > Array Methods Extended Study > [**entries.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Array%20Methods%20Extended%20Study/entries.js "entries array method")*:
+
+```JavaScript
+    // TOPIC ////////////////////////////////////////////////////////////////////////////////
+    //
+    //     Array Method: .entries()
+    //
+    // SYNTAX //////////////////////////////////////////////////////////////////////////////
+    //
+    //     array.entries()
+    //
+    // SUMMARY /////////////////////////////////////////////////////////////////////////////
+    //
+    //      • .entries() method returns an array iterator object with key/value pairs.
+    //      • .entries() is an inbuilt function used to get a new array that contains 
+    //        key/value paris for each index of an array.
+    //
+    // EXAMPLES ////////////////////////////////////////////////////////////////////////////
+    //
+    //      EXAMPLE 1: Create an entries iterator object using Object.entries
+    //      EXAMPLE 2: entires iterator using for-loop
+    //
+    // RESOURCES ///////////////////////////////////////////////////////////////////////////
+    //
+    //      https://www.w3schools.com/jsref/jsref_entries.asp  -- entries w3school
+    //
+    ////////////////////////////////////////////////////////////////////////////////////////
+
+    // EXAMPLE 1: Create an entries iterator object using Object.entries
+
+    const array = ['alpha', 'beta', 'charlie', 'delta', 'echo', 'frank', 'gold'];
+
+    function createEntriesIterator() {
+        const myArray = Object.entries(array);
+        return myArray;
+    }
+    console.log(createEntriesIterator());
+
+
+
+    // EXAMPLE 2: entires iterator using for-loop
+
+    const array2 = ["apple", "banana", "carrot", "dates", "eggs"];
+
+    function createAnotherEntryIterator() {
+        let iterator = array2.entries();
+        for (let i of iterator) { 
+        console.log(i); 
+        } 
+    }
+    console.log(createAnotherEntryIterator());
+
+```
+
+
 
 </dd>
 </dl>
