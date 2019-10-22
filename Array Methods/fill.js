@@ -34,12 +34,23 @@
 
 function replaceElements() {
     let array = ["alpha", "beta", "charlie", "delta", "echo", ];
-    return array.fill("ALPHA");
+    return array.fill("*****");
 }
 
 console.log(replaceElements());
+// [ '*****', '*****', '*****', '*****', '*****' ]
 
-// EXAMPLE 2: 
+
+
+// EXAMPLE 2: Replace certain elements in an array with a given value
+
+function replaceElements2() {
+    let array = ["apple", "banana", "carrot", "dill", "egg", "fig", "ginger"];
+    return array.fill("*****", 1, 3);
+}
+
+console.log(replaceElements2());
+// [ 'apple', '*****', '*****', 'dill', 'egg', 'fig', 'ginger' ]
 
 
 
