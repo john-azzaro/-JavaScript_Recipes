@@ -24,8 +24,19 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-// EXAMPLE 1: Find all animals that start with the letter "A":
+// EXAMPLE 1: Find all positive values in an array:
 
-const animals = ["bobcat", "aardvark", "cat", "antelope", "dog", "tiger", "zebra", "Ant", ];
-const kids = ['andy', 'bobby', 'charlie'];
+const testArray = [1,-1, 2, 3, 4, 5, -4, -7];
+
+function filterPositives(testArray) {
+    const greater = testArray.filter(function(value) {
+         return value >= 0;
+    });
+    console.log(greater);
+}
+
+console.log(filterPositives(testArray));
+
+
+
 
