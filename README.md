@@ -51,7 +51,7 @@ General topics in this repository include:
 
 Each question asks about a given topic for a specific category, like "*What is a variable*". In any cases, there is a "short answer" Topics include: *variables, datatypes, functions, control flow, objects, arrays, jQuery, loops, application logic, api's, ajax, etc.* 
 
-JavaScript Outline Example: *JavaScript_Recipes > JavaScript Outlines > [**controlFlow.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/JavaScript%20Outlines/controlFlow.js "control flow outline")*:
+Example: *JavaScript_Recipes > JavaScript Outlines > [**controlFlow.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/JavaScript%20Outlines/controlFlow.js "control flow outline")*:
 ```JavaScript
     /*
     3. What is a switch statement?
@@ -92,7 +92,7 @@ JavaScript Outline Example: *JavaScript_Recipes > JavaScript Outlines > [**contr
 ## Coding Studies
 * In [Coding Studies](https://github.com/john-azzaro/JavaScript_Recipes/tree/master/Coding%20Studies "Coding Studies"), you'll find walk-throughs and solutions to complex computer science, programming, algorithm and data structure problems for study and reference. Topics include: *runtime complexity, finding vowels, anagrams, etc*.
 
-Coding Studies Example: *JavaScript_Recipes > Coding Studies > [**reverseString.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Coding%20Studies/reverseString.js "reverse string")*:
+Example: *JavaScript_Recipes > Coding Studies > [**reverseString.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Coding%20Studies/reverseString.js "reverse string")*:
 
 ```JavaScript
     // OBJECTIVE //////////////////////////////////////////////////////////////////////////////////////////
@@ -148,9 +148,9 @@ Coding Studies Example: *JavaScript_Recipes > Coding Studies > [**reverseString.
 <br>
 
 ## Methods Extended Study
-In [Methods Extended Study](https://github.com/john-azzaro/JavaScript_Recipes/tree/master/Array%20Methods%20Extended%20Study "Array Methods Extended Study"), you'll find extended studies on a variety of methods for arrays, Math, number, operators, strings, etc. that include additional explanations, break-downs, and use-cases. Although some of the content overlaps with JavaScript Outlines, this collection of extended studies gives a little bit more breathing room to include multiple examples. For example, topics in the Array Methods Extended Study include: *concat, find, every, entries, etc.*
+In [Methods Extended Study](https://github.com/john-azzaro/JavaScript_Recipes/tree/master/Methods%20Extended%20Studies "Methods Extended Study"), you'll find extended studies on a variety of methods such as arrays, Math, number, operators, strings, etc. that include additional explanations, break-downs, and use-cases. Although some of the content overlaps with JavaScript Outlines, these studies allow for more detail than in the general outline. 
 
-Methods Extended Study Example: *JavaScript_Recipes > Array Methods Extended Study > [**entries.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Array%20Methods%20Extended%20Study/entries.js "entries array method")*:
+Example: *JavaScript_Recipes > Methods Extended Studies > Array Methods Extended Study > [**entries.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Methods%20Extended%20Studies/Array%20Methods%20Extended%20Study/entries.js "entries array method")*:
 
 ```JavaScript
     // TOPIC ////////////////////////////////////////////////////////////////////////////////
