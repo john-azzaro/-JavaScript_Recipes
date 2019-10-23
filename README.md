@@ -22,7 +22,11 @@ Taking notes in Question/Answer format can help with memory retention *(e.g. do 
 
 A *recipe* is defined as a set of instructions for making something. When you make a cake, you follow a recipe to get the right ingredients, the cooking time, etc. Same thing applies to programming! Each *recipe* is a simple question with a variety of answers and practical examples to help you learn and retain that knowledge for future use. Each category folder contains a growing collection *recipes* that examine a particular part of JavaScript, such as outlines of particular subjects in JavaScript like functions in *JavaScript Outlines*. For each of those subjects (e.g. functions, arrays, fibonacci series solutions, concatentation methods, etc.), a variety of answers are available depending on the question, but can include short answers, extended answers, examples, prototypes, etc. to help you learn and retain!
 
-*Please note that the outlines, studies, and extended studies are roughly organized and often repeat and overlap in content and context. Again, these are transcribed from personal notes and often one question or outline is a condensed version of a few pages of notes and research. In the end, the main objective of this repository is to provide at least a decent resource for others to learn and add to.*
+### But please excuse the mess...
+
+Please note that the outlines, studies, and extended studies are roughly organized and often repeat and overlap in content and context or are sometimes incomplete. Again, these are transcribed from personal notes and often one question or outline is a condensed version of a few pages of notes and research. I've made it a long term project to add more questions and tidy up so please keep that in mind. In the end, the main objective of this repository is to provide at least a decent resource for others to learn from my own experience.
+
+### So what topics does JavaScript Recipes currently cover?
 
 General topics in this repository include:
 
