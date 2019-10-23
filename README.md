@@ -32,7 +32,7 @@ General topics in this repository include:
 
 * [JavaScript Outlines](#JavaScript-Outlines)
 * [Coding Studies](#Coding-Studies)
-* [Array Methods Extended Study](#Array-Methods-Extended-Study)
+* [Methods Extended Study](#Methods-Extended-Study)
 
 </dd>
 </dl>
@@ -147,10 +147,10 @@ Coding Studies Example: *JavaScript_Recipes > Coding Studies > [**reverseString.
 
 <br>
 
-## Array Methods Extended Study
-In [Array Methods Extended Study](https://github.com/john-azzaro/JavaScript_Recipes/tree/master/Array%20Methods%20Extended%20Study "Array Methods Extended Study"), you'll find extended studies on array methods that include additional explanations, break-downs, use-cases, etc. that are briefly dicussed in the arrays.js outline. Although some of the content overlaps, this collection of extended studies gives a little bit more breathing room to include multiple examples. Topics include: *concat, find, every, entries, etc.*
+## Methods Extended Study
+In [Methods Extended Study](https://github.com/john-azzaro/JavaScript_Recipes/tree/master/Array%20Methods%20Extended%20Study "Array Methods Extended Study"), you'll find extended studies on a variety of methods for arrays, Math, number, operators, strings, etc. that include additional explanations, break-downs, and use-cases. Although some of the content overlaps with JavaScript Outlines, this collection of extended studies gives a little bit more breathing room to include multiple examples. For example, topics in the Array Methods Extended Study include: *concat, find, every, entries, etc.*
 
-Array Methods Example: *JavaScript_Recipes > Array Methods Extended Study > [**entries.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Array%20Methods%20Extended%20Study/entries.js "entries array method")*:
+Methods Extended Study Example: *JavaScript_Recipes > Array Methods Extended Study > [**entries.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Array%20Methods%20Extended%20Study/entries.js "entries array method")*:
 
 ```JavaScript
     // TOPIC ////////////////////////////////////////////////////////////////////////////////

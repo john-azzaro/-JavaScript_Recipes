@@ -14,7 +14,8 @@
 //
 // EXAMPLES //////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      
+//      EXAMPLE 1: Find the first instance of owl in an array:
+//      EXAMPLE 2: Find a property in an object:
 //
 // RESOURCES /////////////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -24,26 +25,21 @@
 
 
 
+// EXAMPLE 1: Find the first instance of owl in an array:
 
-
-// EXAMPLE 1: 
-
-function findFirstVowel() {
-    const vowels = ["dog", "cat", "owl", "aardvark", "parrot"];
-    vowels.find(function(vowel) {
-        if (vowel === "owl") {
-            console.log(vowel);
+function findOwl() {
+    const animals = ["dog", "cat", "owl", "aardvark", "owl", "parrot"];
+    animals.find(function(animal) {
+        if (animal === "owl") {
+            console.log(animal);
         }
     });
 }
-
-console.log(findFirstVowel());
-
+console.log(findOwl());
 
 
 
-
-// EXAMPLE 2: Find a property in an object
+// EXAMPLE 2: Find a property in an object:
 
 const nameList = [
     { id: 1, name: 'Alan'},
@@ -54,5 +50,4 @@ const nameList = [
 let found = nameList.find(function(nameList) {
     return nameList.name === 'Bob'
 });
-
 console.log(found);
