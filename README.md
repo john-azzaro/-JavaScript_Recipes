@@ -1,28 +1,28 @@
 # JavaScript Recipes
 
-<br>
-
-## What is the purpose of JavaScript Recipes?
 <dl>
 <dd>
 
-### Learning any subject, especially JavaScript, can be a daunting task.
+### Notes are good, Q&A notes are better!
 
- The various tools, syntax, structures, and paradigms (just to name a few) involved in mastering JavaScript can be overwhelming at times. And without documenting your reasearch and studies in notes so you can refresh your memory, you might waste more time going back over the material looking for answers you previous found. This is exactly why we take notes. But often those notes fall by the wayside, either being stored away for the rest of eternity or even worse, simply thrown away. I like to think that if notes were composed in Question/Answer format, anyone can benefit from the hours of hard work you put into them. 
+ Learning any subject, especially JavaScript, can be a daunting task. Understanding a multitude of tools, concepts, syntax, structures, and paradigms (just to name a few) which are required to gain a solid understanding of JavaScript can be overwhelming at times. To keep track of these various elements, taking can be an effective way to document all of your research and help avoid spending time going back over material in search of answers previously found. While standard note taking is good, I believe that if notes were composed in a versatile format such as Question/Answer format, anyone can benefit from the hours of hard work you put into them. 
 
-### Science seems to back up taking notes in Question/Answer format as well. 
+### Science seems to back up Question/Answer format for learning. 
 
-Taking notes in Question/Answer format can help with memory retention *(e.g. do you remember the four key concepts of Object oriented programming?)*, revisons *(i.e. when you learn something new about the subject, you can add that to your answers)*, mind mapping *(how does this fit into the grander scheme of things?)*, and even gets you into the practice of objective technical writing. That's where *JavaScript Recipes* comes in.
+Taking notes in Question/Answer format can help with memory retention *(e.g. do you remember the four key concepts of Object oriented programming?)*, revisons *(i.e. when you learn something new about the subject, you can add that to your answers)*, mind mapping *(how does this fit into the grander scheme of things?)*, and even gets you into the practice of objective technical writing. 
+
+That's where *JavaScript Recipes* comes in.
 
 -----
 **The purpose of JavaScript Recipes is to serve as a collection of JavaScript outlines, studies, models, prototypes, reference documents, cheat sheets, etc. in the form of Q&A's to help learners learn and the learned stay refreshed.** 
+
 -----
 
 ### So what's so special about these question/answer recipes? 
 
 A *recipe* is defined as a set of instructions for making something. When you make a cake, you follow a recipe to get the right ingredients, the cooking time, etc. Same thing applies to programming! Each *recipe* is a simple question with a variety of answers and practical examples to help you learn and retain that knowledge for future use. Each category folder contains a growing collection *recipes* that examine a particular part of JavaScript, such as outlines of particular subjects in JavaScript like functions in *JavaScript Outlines*. For each of those subjects (e.g. functions, arrays, fibonacci series solutions, concatentation methods, etc.), a variety of answers are available depending on the question, but can include short answers, extended answers, examples, prototypes, etc. to help you learn and retain!
 
-### But please excuse the mess...
+### But please excuse the untidiness...
 
 Please note that the outlines, studies, and extended studies are roughly organized and often repeat and overlap in content and context or are sometimes incomplete. Again, these are transcribed from personal notes and often one question or outline is a condensed version of a few pages of notes and research. I've made it a long term project to add more questions and tidy up so please keep that in mind. In the end, the main objective of this repository is to provide at least a decent resource for others to learn from my own experience.
 
