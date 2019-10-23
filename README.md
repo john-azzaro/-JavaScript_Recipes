@@ -14,7 +14,9 @@
 
 Taking notes in Question/Answer format can help with memory retention *(e.g. do you remember the four key concepts of Object oriented programming?)*, revisons *(i.e. when you learn something new about the subject, you can add that to your answers)*, mind mapping *(how does this fit into the grander scheme of things?)*, and even gets you into the practice of objective technical writing. That's where *JavaScript Recipes* comes in.
 
+-----
 **The purpose of JavaScript Recipes is to serve as a collection of JavaScript outlines, studies, models, prototypes, reference documents, cheat sheets, etc. in the form of Q&A's to help learners learn and the learned stay refreshed. Each *recipe* is a simple question with a variety of answers and practical examples to help you learn and retain that knowledge for future use.** 
+-----
 
 ### So what's so special about these question/answer recipes? 
 
