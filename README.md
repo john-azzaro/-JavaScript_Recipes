@@ -6,10 +6,11 @@
 <dl>
 <dd>
 
-The purpose of **JavaScript Recipes** is to serve as a general collection of JavaScript outlines, studies, models, prototypes, reference documents, cheat sheets, etc. in one convenient place!
-Much of the content in this repository is taken from personal notes and transcribed in the form of Q&A's which I'm hoping might help others in thier own study and research. 
+Learning any subject, especially JavaScript, can be a daunting task. The various tools, syntax, structures, and paradigms (just to name a few) can be overwhelming without documenting your reasearch and studies in notes so you can refresh your memory. But often those notes fall by the wayside, either being stored away for the rest of eternity or even worse, simply thrown away. I like to think that if notes were composed in Question/Answer format, anyone can benefit from the hours of hard work you put into them. And science seems to back this up as well. Taking notes in Question/Answer format can help with memory retention *(e.g. do you remember the four key concepts of Object oriented programming?)*, revisons *(i.e. when you learn something new about the subject, you can add that to your answers)*, mind mapping *(how does this fit into the grander scheme of things?)*, and even gets you into the practice of objective technical writing. That's where *JavaScript Recipes* comes in.
 
-Why are these documents called "recipes"? A *recipe* is defined as a set of instructions for making something. When you make a cake, you follow a recipe to get the right ingredients, the cooking time, etc. Same thing applies to programming! Each folder contains a growing collection *recipes* that examine a particular part of JavaScript, such as outlines of particular subjects in JavaScript like functions in *JavaScript Outlines*. Each and every document examines one subject (i.e. functions, arrays, fibonacci series solutions, concatentation methods, etc.) in either a step-by-step process with multiple solutions or Question-and-Answer formats. Hope you find these recipes  
+The purpose of **JavaScript Recipes** is to serve as a collection of JavaScript outlines, studies, models, prototypes, reference documents, cheat sheets, etc. in the form of Q&A's to help learners learn and the learned stay refreshed. Each *recipe* is a simple question with a variety of answers and practical examples. 
+
+So why call these questions and answers recipes? A *recipe* is defined as a set of instructions for making something. When you make a cake, you follow a recipe to get the right ingredients, the cooking time, etc. Same thing applies to programming! Each category folder contains a growing collection *recipes* that examine a particular part of JavaScript, such as outlines of particular subjects in JavaScript like functions in *JavaScript Outlines*. For each of those subjects (e.g. functions, arrays, fibonacci series solutions, concatentation methods, etc.), a variety of answers are available depending on the question, but can include short answers, extended answers, examples, prototypes, etc. to help you learn and retain!
 
 *Please note that the outlines, studies, and extended studies are roughly organized and often repeat and overlap in content and context. Again, these are transcribed from personal notes and often one question or outline is a condensed version of a few pages of notes and research. In the end, the main objective of this repository is to provide at least a decent resource for others to learn and add to.*
 
@@ -30,7 +31,11 @@ General topics in this repository include:
 <br>
 
 ## JavaScript Outlines
-* In [JavaScript Outlines](https://github.com/john-azzaro/JavaScript_Recipes/tree/master/JavaScript%20Outlines "JavaScript outlines"), you'll find a wide range of topics organized in question-and-answer format (good for study and memory retention). Topics include: *variables, datatypes, functions, control flow, objects, arrays, jQuery, loops, application logic, api's, ajax, etc.* 
+* In [JavaScript Outlines](https://github.com/john-azzaro/JavaScript_Recipes/tree/master/JavaScript%20Outlines "JavaScript outlines"), you'll find a wide range of topics organized in question-and-answer format (good for study and memory retention). 
+
+
+
+Each question asks about a given topic for a specific category, like "*What is a variable*". In any cases, there is a "short answer" Topics include: *variables, datatypes, functions, control flow, objects, arrays, jQuery, loops, application logic, api's, ajax, etc.* 
 
 JavaScript Outline Example: *JavaScript_Recipes > JavaScript Outlines > [**controlFlow.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/JavaScript%20Outlines/controlFlow.js "control flow outline")*:
 ```JavaScript
