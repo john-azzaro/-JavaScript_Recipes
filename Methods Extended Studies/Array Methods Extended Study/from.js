@@ -17,7 +17,8 @@
 //        an array type objector an iterable object.
 //      • With Array.from, you can create an "Array" instance. An array-like object is a JavaScript object 
 //        which has a length property, whereas an iterable object is the one that implements @@iterator method 
-//        (Array, String, Map, Set)
+//        (Array, String, Map, Set).
+//      • Array.from() can also be used as an alternative to the string split method.
 //
 // EXAMPLES //////////////////////////////////////////////////////////////////////////////////////////////////
 //
