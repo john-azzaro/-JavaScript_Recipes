@@ -6,6 +6,7 @@
 // SYNTAX ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //     let myArr = Array.from("ABCDEFG");
+//     Array.from(object, mapFunction, thisValue)
 //
 // SUMMARY ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -26,7 +27,7 @@
 
 
 const myString = "This is a string";
-const myIntegers = [1,872,49,80,724];
+
 
 function testFrom(input) {
     let myArray = Array.from(input);
@@ -50,5 +51,5 @@ console.log(testFrom(myString));           /* [ 'T',
                                                 'n',
                                                 'g' ]    */
 
-console.log(testFrom(myIntegers));
+
 
