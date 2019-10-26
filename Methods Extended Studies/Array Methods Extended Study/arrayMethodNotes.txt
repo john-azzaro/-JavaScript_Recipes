@@ -5,15 +5,7 @@ List of array methods: https://www.tutorialrepublic.com/javascript-reference/jav
 
  
 
-
-
-
-
-
-
-
 forEach()	Calls a function once for each array element.
-from()	Creates an array from an object.
 includes()	Determines whether an array includes a certain element.
 indexOf()	Search the array for an element and returns its first index.
 isArray()	Determines whether the passed value is an array.
@@ -37,7 +29,7 @@ valueOf() — Returns the primitive value of the specified object
 values()	Returns a Array Iteration Object, containing the values of the original array.
 indexOf() — Returns the first position at which a given element appears in an array
 
-
+from()	Creates an array from an object.
 concat()  	Merge two or more arrays, and returns a new array.
 copyWithin()	Copies part of an array to another location in the same array and returns it.
 entries()	Returns a key/value pair Array Iteration Object.
