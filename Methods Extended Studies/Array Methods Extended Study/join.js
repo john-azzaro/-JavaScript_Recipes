@@ -15,10 +15,25 @@
 //
 // EXAMPLES //////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      EXAMPLE 1:
+//      EXAMPLE 1: Join the element in the array together
 //
 // RESOURCES /////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+const myArray = ['Alan', 'Bob', 'Charlie', 'Donald', 'Ellie', 'Frank', 'Greg', 'Hank'];
+
+function joinArrayElements(array) {
+    return array.join();
+}
+console.log(joinArrayElements(myArray));           // Alan,Bob,Charlie,Donald,Ellie,Frank,Greg,Hank
+
+
+function joinArrayElementsWithSpace(array) {
+    let joinedArray = array.join(" ");
+    return joinedArray;
+}
+console.log(joinArrayElementsWithSpace(myArray));        // Alan Bob Charlie Donald Ellie Frank Greg Hank
