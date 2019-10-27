@@ -23,3 +23,13 @@
 //      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+let myArray = ['Alan', 'Bob', 'Charlie', 'Dan', 'Edward', 'Frank', 'Greg', 'Hector', 'Ian', 'John', 'Kelly'];
+
+function findName(array, name) {
+    return array.includes(name);
+}
+
+console.log(findName(myArray, 'Kelly'));       // true
+console.log(findName(myArray, 'Larry'));       // false
