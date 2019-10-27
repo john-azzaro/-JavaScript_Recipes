@@ -1,35 +1,24 @@
 'use strict';
 // TOPIC /////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//     Array Method: .includes
+//     Array Method: .join
 //
 // SYNTAX ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//     array.includes(valueToFind[, fromIndex])
-//     array.includes("cat", 0)
+//     array.join([seperator])
 //
 // SUMMARY ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      • .includes() method determines if an array INCLUDES a certain value.
-//      • .includes() had two parameters: the value to find and the position in the array to start at.
-//      • .includes() will return a boolean value of either TRUE or FALSE.
+//      • .join() method creates and returns a new string by concatenating all the element in the array.
+//      • Optionally, inside the .join() parentheses, you can add a seperator (i.e. -, _, etc.)
+//      • By default, the .join() method will return with commas (i.e. apple,berry,carrot).
 //
 // EXAMPLES //////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      EXAMPLE 1: Find a specific name.
+//      EXAMPLE 1:
 //
 // RESOURCES /////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-let myArray = ['Alan', 'Bob', 'Charlie', 'Dan', 'Edward', 'Frank', 'Greg', 'Hector', 'Ian', 'John', 'Kelly'];
-
-function findName(array, name) {
-    return array.includes(name);
-}
-
-console.log(findName(myArray, 'Kelly'));       // true
-console.log(findName(myArray, 'Larry'));       // false
