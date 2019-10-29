@@ -1,15 +1,16 @@
 'use strict';
 // TOPIC /////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//     Array Method: .isArray()
+//     Array Method: Array.isArray()
 //
 // SYNTAX ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//     array.isArray(value)
+//     Array.isArray(value)
 //
 // SUMMARY ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      • .isArray determines whether the value passed is an array or not.
+//      • Array.isArray determines whether the value passed is an array or not.
+//      • Array.isArray will return either true or false.
 //
 // EXAMPLES //////////////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -30,5 +31,9 @@ const array2 = { arr: [1,2,3,4,5,6] };
 const array3 = ["alan", "bob", "charlie", "dan"];
 
 function isArray(input) {
-    return input.isArray()
+    return Array.isArray(input);
 }
+
+console.log(isArray(array1));      // false
+console.log(isArray(array2));      // false
+console.log(isArray(array3));      // true
