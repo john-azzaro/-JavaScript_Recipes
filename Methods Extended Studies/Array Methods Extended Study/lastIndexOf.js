@@ -19,3 +19,14 @@
 // RESOURCES /////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// EXAMPLE 1: Where is the last instance of a given element.
+
+const array = ['baseball', 'basketball', 'baseball', 'football', 'soccer'];
+
+function findLastLocation(input) {
+    return array.lastIndexOf(input)
+}
+
+console.log(findLastLocation('soccer'));             // 4   (only one instance at the end of the array)
+console.log(findLastLocation('baseball'));           // 4   (two instance, but the last is at 2)
