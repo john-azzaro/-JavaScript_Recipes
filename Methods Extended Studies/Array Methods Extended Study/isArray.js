@@ -20,3 +20,15 @@
 //
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// EXAMPLE 1: Check if the value is an Array.block
+
+
+const array1 = "This is a string, not an array";
+const array2 = { arr: [1,2,3,4,5,6] };
+const array3 = ["alan", "bob", "charlie", "dan"];
+
+function isArray(input) {
+    return input.isArray()
+}
