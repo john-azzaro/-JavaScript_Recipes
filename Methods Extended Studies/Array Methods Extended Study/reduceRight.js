@@ -11,14 +11,15 @@
 //
 //      • .reduceRight() is an inbuilt method used to convert elements of a given array from right to left to
 //        a single value.
+//      • .reduceRight() is like the .reduce() method, except it goes from the RIGHT to the LEFT.
 //
 // EXAMPLES //////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      EXAMPLE 1: Join the element in the array together
+//      EXAMPLE 1: Use reduceRight to find the multiplied sum of the total array. 
 //
 // RESOURCES /////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
+//      https://www.javascripttutorial.net/javascript-array-reduce/
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -27,9 +28,12 @@ const numbers = [1,2,3,4,5,6]
 
 function reduceIt() {
     let nums = numbers.reduceRight(function (prev, curr) {
-        return prev + curr;
+        return prev * curr;
     });
     console.log(nums)
 }
 
-reduceIt();                   // 21
+reduceIt();                   // 720   (i.e. 6 * 5 * 4 * 3 * 2 * 1)
+
+
+
