@@ -16,7 +16,7 @@ map()	Creates a new array with the results of calling a function for each array 
 pop()	Removes the last element of an array (i.e. Removes the last element from an array, and returns that element).
 push()	Add a new element at the end (Adds one or more elements to the end of an array, and returns the array's new length).
 reduce()	Reduce the values of an array to a single value (from left-to-right).
-reduceRight()	Reduce the values of an array to a single value (from right-to-left).
+
 reverse()	Sort elements in a descending order (Reverses the order of the elements in an array).
 shift()	Remove the first element of an array (Removes the first element from an array, and returns that element).
 slice()	Pulls a copy of a portion of an array into a new array (Selects a part of an array, and returns the new array).
@@ -30,7 +30,7 @@ values()	Returns a Array Iteration Object, containing the values of the original
 indexOf() — Returns the first position at which a given element appears in an array
 
 
-
+reduceRight()	Reduce the values of an array to a single value (from right-to-left).
 lastIndexOf()	Search the array for an element, starting at the end, and returns its last index.
 isArray()	Determines whether the passed value is an array.
 from()	Creates an array from an object.
