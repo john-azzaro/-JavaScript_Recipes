@@ -23,10 +23,13 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
+const numbers = [1,2,3,4,5,6]
 
 function reduceIt() {
-    Array.reduceRight(function() {
-
+    let nums = numbers.reduceRight(function (prev, curr) {
+        return prev + curr;
     });
+    console.log(nums)
 }
+
+reduceIt();                   // 21
