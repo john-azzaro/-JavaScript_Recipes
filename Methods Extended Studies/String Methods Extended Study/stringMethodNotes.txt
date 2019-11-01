@@ -23,3 +23,6 @@ toString()	Returns the value of a String object
 toUpperCase()	Converts a string to uppercase letters
 trim()	Removes whitespace from both ends of a string
 valueOf()	Returns the primitive value of a String object
+
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
