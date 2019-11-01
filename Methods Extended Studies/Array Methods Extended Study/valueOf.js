@@ -9,14 +9,15 @@
 //
 // SUMMARY ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      • .valueOf() returns a number representing the primitive valie of a specified number.
-//      • 
+//      • .valueOf() returns a number representing the primitive value of a specified number.
+//      • .valueOF() does NOT accept any parameters (i.e. nothing can be passed to it).
 //      • 
 //      • 
 //
 // EXAMPLES //////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      EXAMPLE 1: 
+//      EXAMPLE 1: Find the value of a number.
+//      EXAMPLE 2: Find the value of a string.
 //
 // RESOURCES /////////////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -25,8 +26,22 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+// EXAMPLE 1: Find the value of a number.
+
 function findValueOf(number) {
-    const value = number.valueOf(number);
+    const value = number.valueOf();
     console.log(value);
 }
 
+findValueOf(10);
+
+
+
+// EXAMPLE 2: Find the value of a string.
+
+function findValueOfString(string) {
+    const value = string.valueOf();
+    console.log(value);
+}
+
+findValueOfString("Hello");
