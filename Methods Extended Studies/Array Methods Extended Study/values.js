@@ -33,12 +33,19 @@ function findValues(arrayInput) {
     console.log(values);
 }
 
-console.log(findValues(array));
+console.log(findValues(array));            /*[ 'alan',
+                                                'bob',
+                                                'charlie',
+                                                'dan',
+                                                'ellie',
+                                                'frank',
+                                                'greg',
+                                                'hank',
+                                                'ian' ]  */
 
 
 
-
-// EXAMPLE 2: Fund the values in a string.
+// EXAMPLE 2: Find the values in a string.
 
 let theString = "puppy";
 
@@ -47,7 +54,21 @@ function findValuesInString(stringInput) {
     console.log(values);
 }
 
-console.log(findValuesInString(theString));
+console.log(findValuesInString(theString));         // [ 'p', 'u', 'p', 'p', 'y' ]
 
 
 
+// EXAMPLE 3: Find the values in an Object.
+
+let myBook = {
+    author: 'joe smith',
+    title: 'How to smith well',
+    pages: 456
+}
+
+function findValuesInObject(objectInput) {
+    const values = Object.values(objectInput);
+    console.log(values);
+}
+
+console.log(findValuesInObject(myBook));           // [ 'joe smith', 'How to smith well', 456 ]
