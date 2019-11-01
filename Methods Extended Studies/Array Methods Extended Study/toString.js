@@ -11,7 +11,8 @@
 //
 //      • .toString() returns a string representing the specified array and its elements.
 //      • .toString() essentially converts everything in an array to a string seperated by commas.
-//      •
+//      • .toString() is similar to .join() but you can specify something else instead a comma to 
+//         seperate the elements in the array. 
 //
 // EXAMPLES //////////////////////////////////////////////////////////////////////////////////////////////////
 //
