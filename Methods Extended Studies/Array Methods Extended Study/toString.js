@@ -9,14 +9,28 @@
 //
 // SUMMARY ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      •
-//      •
+//      • .toString() returns a string representing the specified array and its elements.
+//      • .toString() essentially converts everything in an array to a string seperated by commas.
 //      •
 //
 // EXAMPLES //////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      EXAMPLE 1:
+//      EXAMPLE 1: Convert an array into a string.
 //
 // RESOURCES /////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// EXAMPLE 1: Convert an array into a string.
+
+
+const myArray = ['adam', 'barry', 'charlie', 'dan', 'ellie', 'frank'];
+
+
+function convertToString(input) {
+    const convertedString = input.toString();    
+    console.log(convertedString);
+}
+
+convertToString(myArray);                          // adam,barry,charlie,dan,ellie,frank
