@@ -6,14 +6,11 @@ List of array methods: https://www.tutorialrepublic.com/javascript-reference/jav
  
 
 forEach()	Calls a function once for each array element.
-join()	Joins all elements of an array into a string.
 keys()	Returns a Array Iteration Object, containing the keys of the original array.
 map()	Creates a new array with the results of calling a function for each array element.
 pop()	Removes the last element of an array (i.e. Removes the last element from an array, and returns that element).
 push()	Add a new element at the end (Adds one or more elements to the end of an array, and returns the array's new length).
 reduce()	Reduce the values of an array to a single value (from left-to-right).
-
-shift()	Remove the first element of an array (Removes the first element from an array, and returns that element).
 slice()	Pulls a copy of a portion of an array into a new array (Selects a part of an array, and returns the new array).
 some()	Checks if any of the elements in an array passes the test in a testing function.
 sort()	Sorts elements alphabetically (Sorts the elements of an array).
@@ -22,8 +19,8 @@ unshift()	Adds a new element to the beginning (Adds new elements to the beginnin
 
 
 
-
-
+shift()	Remove the first element of an array (Removes the first element from an array, and returns that element).
+join()	Joins all elements of an array into a string.
 reverse()	Sort elements in a descending order (Reverses the order of the elements in an array).
 toString()	Converts elements to strings (Converts an array to a string, and returns the result).
 valueOf() — Returns the primitive value of the specified object
