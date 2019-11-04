@@ -11,17 +11,6 @@
 
 <br>
 
-## What topics does JavaScript Recipes currently cover?
-
-General topics in this handy collection of JavaScript recipes currently include:
-> Each of these general topics have multiple studies and extended studies, so be sure to browse through each folder for the subject you are interested in!
-
-* [JavaScript Outlines](#JavaScript-Outlines)
-* [Coding Studies](#Coding-Studies)
-* [Methods Extended Study](#Methods-Extended-Study)
-
-<br>
-
 ## How can JavaScript Recipes help me?
 
 <dl>
@@ -53,7 +42,16 @@ Please note that the outlines, studies, and extended studies are roughly organiz
 </dd>
 </dl>
 
+
 <br>
+
+## What topics does JavaScript Recipes currently cover?
+
+Below you'll find the the current list of general topics in this handy collection of JavaScript recipes. Note that each of these general topics have multiple studies and extended studies, so be sure to browse through each folder for the subject you are interested in!
+
+* [JavaScript Outlines](#JavaScript-Outlines)
+* [Coding Studies](#Coding-Studies)
+* [Methods Extended Study](#Methods-Extended-Study)
 
 <dl>
 <dd>
