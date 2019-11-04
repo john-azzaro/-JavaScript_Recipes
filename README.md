@@ -1,5 +1,16 @@
 # JavaScript Recipes
 
+## What's JavaScript Recipes all about?
+<dl>
+<dd>
+
+**JavaScript Recipes** is a collection of outlines, stuides, models, prototypes, reference docs, link lists, that examine the many tools and features of the JavaScript language. JavaScript Recipes cover basic topics such as JavaScritp variables, loops, and functions all the way to object oriented programming concepts, building express applications, and database management and beyond. 
+
+</dd>
+</dl>
+
+## How can JavaScript Recipes help me?
+
 <dl>
 <dd>
 
