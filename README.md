@@ -4,10 +4,21 @@
 <dl>
 <dd>
 
-**JavaScript Recipes** is a collection of outlines, stuides, models, prototypes, reference docs, link lists, that examine the many tools and features of the JavaScript language. JavaScript Recipes cover basic topics such as JavaScritp variables, loops, and functions all the way to object oriented programming concepts, building express applications, and database management and beyond. Please note that JavaScript Recipes is a work in progress, but I'm positive you'll find this humble collection pretty useful for study and refresh.
+**JavaScript Recipes** is a collection of outlines, stuides, models, prototypes, reference docs, link lists, that examine the many tools and features of the JavaScript language. JavaScript Recipes cover many things, from basic topics such as JavaScript variables, loops, and functions all the way to object oriented programming concepts, building express applications, and database management and beyond. Please note that JavaScript Recipes is a work in progress, but I'm positive you'll find this humble collection pretty useful for study and refresh.
 
 </dd>
 </dl>
+
+<br>
+
+## What topics does JavaScript Recipes currently cover?
+
+General topics in this handy collection of JavaScript recipes currently include:
+> Each of these general topics have multiple studies and extended studies, so be sure to browse through each folder for the subject you are interested in!
+
+* [JavaScript Outlines](#JavaScript-Outlines)
+* [Coding Studies](#Coding-Studies)
+* [Methods Extended Study](#Methods-Extended-Study)
 
 <br>
 
@@ -38,16 +49,6 @@ A *recipe* is defined as a set of instructions for making something. When you ma
 ### But please excuse the untidiness...
 
 Please note that the outlines, studies, and extended studies are roughly organized and often repeat and overlap in content and context or are sometimes incomplete. Again, these are transcribed from personal notes and often one question or outline is a condensed version of a few pages of notes and research. I've made it a long term project to add more questions and tidy up so please keep that in mind. In the end, the main objective of this repository is to provide at least a decent resource for others to learn from my own experience.
-
-<br>
-
-## What topics does JavaScript Recipes currently cover?
-
-General topics in this repository include:
-
-* [JavaScript Outlines](#JavaScript-Outlines)
-* [Coding Studies](#Coding-Studies)
-* [Methods Extended Study](#Methods-Extended-Study)
 
 </dd>
 </dl>
