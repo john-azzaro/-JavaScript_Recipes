@@ -18,10 +18,10 @@ splice()	Adds/Removes elements from an array (Adds elements in a specified way a
 
 flat() creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 flatMap() method first maps each element using a mapping function, then flattens the result into a new array.
+
+
+
 toLocalString()  returns a string representing the elements of the array.
-
-
-
 of() creates a new Array instance from a variable number of arguments, regardless of number or type of the arguments.
 unshift()	Adds a new element to the beginning (Adds new elements to the beginning of an array, and returns the array's new length).
 shift()	Remove the first element of an array (Removes the first element from an array, and returns that element).
