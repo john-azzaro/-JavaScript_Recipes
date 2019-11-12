@@ -14,12 +14,12 @@ reduce()	Reduce the values of an array to a single value (from left-to-right).
 slice()	Pulls a copy of a portion of an array into a new array (Selects a part of an array, and returns the new array).
 some()	Checks if any of the elements in an array passes the test in a testing function.
 sort()	Sorts elements alphabetically (Sorts the elements of an array).
+
+
+
+
+
 splice()	Adds/Removes elements from an array (Adds elements in a specified way and position).
-
-
-
-
-
 push()	Add a new element at the end (Adds one or more elements to the end of an array, and returns the array's new length).
 pop()	Removes the last element of an array (i.e. Removes the last element from an array, and returns that element).
 --flatMap() method first maps each element using a mapping function, then flattens the result into a new array.

@@ -5,20 +5,33 @@
 //
 // SYNTAX ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//     array.push()
+//     array.push(item1, item2, item3, ...)
 //
 // SUMMARY ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      • .push() adds one or more elements to the end of an array
-//      • .push() returns the new length of the array
-//      •
+//      • .push() adds one or more elements to the end of an array.
+//      • .push() returns the new length of the array (i.e. 8).
+//      • .push() takes the items to push to the end of the array.
 //
 // EXAMPLES //////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      EXAMPLE 1:
+//      EXAMPLE 1: Add an element to the end of an array.
 //
 // RESOURCES /////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+const myArray = ['alan', 'bob', 'charlie', 'dan', 'eliot', 'frank', 'greg'];
+
+function addItemToArray(array, item) {
+    const addItem = array.push(item);
+    console.log(addItem);
+}
+
+console.log(myArray);                     // [ 'alan', 'bob', 'charlie', 'dan', 'eliot', 'frank', 'greg' ]
+console.log(myArray.length);              // 7
+addItemToArray(myArray, 'FRANK');         // 8
+console.log(myArray);                     // [ 'alan', 'bob', 'charlie', 'dan', 'eliot', 'frank', 'greg', 'FRANK' ]
