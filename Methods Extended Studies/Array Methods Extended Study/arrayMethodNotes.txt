@@ -10,9 +10,12 @@ keys()	Returns a Array Iteration Object, containing the keys of the original arr
 map()	Creates a new array with the results of calling a function for each array element.
 reduce()	Reduce the values of an array to a single value (from left-to-right).
 
+
+
+
+
 sort()	Sorts elements alphabetically (Sorts the elements of an array).
-
-
+reverse()	Sort elements in a descending order (Reverses the order of the elements in an array).
 
 some()	Checks if any of the elements in an array passes the test in a testing function.
 slice()	Pulls a copy of a portion of an array into a new array (Selects a part of an array, and returns the new array).
@@ -28,7 +31,7 @@ shift()	Remove the first element of an array (Removes the first element from an 
 valueOf() — Returns the primitive value of the specified object
 values()	Returns a Array Iteration Object, containing the values of the original array.
 join()	Joins all elements of an array into a string.
-reverse()	Sort elements in a descending order (Reverses the order of the elements in an array).
+
 toString()	Converts elements to strings (Converts an array to a string, and returns the result).
 indexOf()	Search the array for an element and returns its first index.
 indexOf() — Returns the first position at which a given element appears in an array

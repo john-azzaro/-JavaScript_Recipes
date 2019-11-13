@@ -23,6 +23,12 @@ toString()	Returns the value of a String object
 toUpperCase()	Converts a string to uppercase letters
 trim()	Removes whitespace from both ends of a string
 valueOf()	Returns the primitive value of a String object
+endsWith()  determines whether a string ends with the characters of a specified string, returning true or false as appropriate
+matchAll()   returns an iterator of all results matching a string against a regular expression, including capturing groups
+padEnd()    method pads the current string with a given string (repeated, if needed) so that the resulting string reaches a given length. The padding is applied from the end of the current string
+padStart()   method pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length. The padding is applied from the start of the current string.
+trimEnd() method removes whitespace from the end of a string. trimRight() is an alias of this method.
+trimStart() method removes whitespace from the beginning of a string. trimLeft() is an alias of this method.
 
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
