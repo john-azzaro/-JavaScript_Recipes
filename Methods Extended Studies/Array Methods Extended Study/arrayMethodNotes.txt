@@ -9,45 +9,68 @@ forEach()	Calls a function once for each array element.
 keys()	Returns a Array Iteration Object, containing the keys of the original array.
 map()	Creates a new array with the results of calling a function for each array element.
 reduce()	Reduce the values of an array to a single value (from left-to-right).
+spread [...]  
 
 
 
 
+reduceRight()	Reduce the values of an array to a single value (from right-to-left).
 
 sort()	Sorts elements alphabetically (Sorts the elements of an array).
 reverse()	Sort elements in a descending order (Reverses the order of the elements in an array).
 
-some()	Checks if any of the elements in an array passes the test in a testing function.
 slice()	Pulls a copy of a portion of an array into a new array (Selects a part of an array, and returns the new array).
 splice()	Adds/Removes elements from an array (Adds elements in a specified way and position).
+copyWithin()	Copies part of an array to another location in the same array and returns it.
+fill()	Fill the elements in an array with a static value.
+
 push()	Add a new element at the end (Adds one or more elements to the end of an array, and returns the array's new length).
 pop()	Removes the last element of an array (i.e. Removes the last element from an array, and returns that element).
---flatMap() method first maps each element using a mapping function, then flattens the result into a new array.
-flat() creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
-toLocalString()  returns a string representing the elements of the array.
-of() creates a new Array instance from a variable number of arguments, regardless of number or type of the arguments.
 unshift()	Adds a new element to the beginning (Adds new elements to the beginning of an array, and returns the array's new length).
 shift()	Remove the first element of an array (Removes the first element from an array, and returns that element).
-valueOf() — Returns the primitive value of the specified object
-values()	Returns a Array Iteration Object, containing the values of the original array.
-join()	Joins all elements of an array into a string.
 
-toString()	Converts elements to strings (Converts an array to a string, and returns the result).
 indexOf()	Search the array for an element and returns its first index.
 indexOf() — Returns the first position at which a given element appears in an array
 lastIndexOf()	Search the array for an element, starting at the end, and returns its last index.
-reduceRight()	Reduce the values of an array to a single value (from right-to-left).
 includes()	Determines whether an array includes a certain element.
-isArray()	Determines whether the passed value is an array.
-from()	Creates an array from an object.
-concat()  	Merge two or more arrays, and returns a new array.
-copyWithin()	Copies part of an array to another location in the same array and returns it.
-entries()	Returns a key/value pair Array Iteration Object.
-every()	Checks if every element in an array pass a test in a testing function.
-fill()	Fill the elements in an array with a static value.
 filter()	Creates a new array with all elements that pass the test in a testing function.
 find()	Returns the value of the first element in an array that pass the test in a testing function.
 findIndex()	Returns the index of the first element in an array that pass the test in a testing function.
+entries()	Returns a key/value pair Array Iteration Object.
+
+
+
+
+every()	Checks if every element in an array pass a test in a testing function.
+some()	Checks if any of the elements in an array passes the test in a testing function.
+
+valueOf() — Returns the primitive value of the specified object
+values()	Returns a Array Iteration Object, containing the values of the original array.
+
+concat()  	Merge two or more arrays, and returns a new array.
+join()	Joins all elements of an array into a string.
+
+
+toString()	Converts elements to strings (Converts an array to a string, and returns the result).
+
+
+
+
+--flatMap() method first maps each element using a mapping function, then flattens the result into a new array.
+flat() creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+
+toLocalString()   returns a string representing the elements of the array.
+of()  creates a new Array instance from a variable number of arguments, regardless of number or type of the arguments.
+
+
+
+isArray()	Determines whether the passed value is an array.
+from()	Creates an array from an object.
+
+
+
+
+
 
 
 
