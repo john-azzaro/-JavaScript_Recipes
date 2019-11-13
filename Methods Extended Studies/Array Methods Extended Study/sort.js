@@ -37,3 +37,29 @@ function sortItOut(array) {
 
 console.log(myArray);           // [ 23, 55, 2, 8, 'carrot', 'apple', 'berry', 'watermelon' ]
 sortItOut(myArray);             // [ 2, 23, 55, 8, 'apple', 'berry', 'carrot', 'watermelon' ]
+
+
+// EXAMPLE 2: Sort an array from least to greatest using an anonymous function.
+
+const myArray2 = [3, 6, 2, 10, 5, 4, 8, 9];
+
+myArray2.sort(function(a, b) {
+    return a - b;
+}); 
+
+console.log(myArray2);
+
+
+
+
+
+
+
+// function sortIt2(array) {
+//     const sortGreat = array.sort(function(a,b) {
+//         return a - b;
+//     });
+//     console.log(sortGreat);
+// }
+
+// sortIt2(myArray2);
