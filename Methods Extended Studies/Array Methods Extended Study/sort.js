@@ -39,6 +39,8 @@ console.log(myArray);           // [ 23, 55, 2, 8, 'carrot', 'apple', 'berry', '
 sortItOut(myArray);             // [ 2, 23, 55, 8, 'apple', 'berry', 'carrot', 'watermelon' ]
 
 
+
+
 // EXAMPLE 2: Sort an array from least to greatest using an anonymous function.
 
 const myArray2 = [3, 6, 2, 10, 5, 4, 8, 9];
@@ -50,8 +52,26 @@ function sortItOut2(array) {
     console.log(sortIt); 
     }
 
+sortItOut2(myArray2);                  // [ 2, 3, 4, 5, 6, 8, 9, 10 ]
+ 
 
-sortItOut2(myArray2);
+
+
+
+// EXAMPLE 3: Sort an array from greatest to least using an anonymous function.
+
+const myArray3 = [3, 6, 2, 10, 5, 4, 8, 9];
+
+function sortItOut3(array) {
+    const sortIt = array.sort(function(a, b) {
+        return b - a;                                 // simply flip the values
+    });
+    console.log(sortIt); 
+    }
+
+sortItOut3(myArray3);                  // [ 10, 9, 8, 6, 5, 4, 3, 2 ]
+
+
 
 
 
