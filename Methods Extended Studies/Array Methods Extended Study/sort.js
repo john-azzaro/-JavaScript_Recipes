@@ -43,11 +43,15 @@ sortItOut(myArray);             // [ 2, 23, 55, 8, 'apple', 'berry', 'carrot', '
 
 const myArray2 = [3, 6, 2, 10, 5, 4, 8, 9];
 
-myArray2.sort(function(a, b) {
-    return a - b;
-}); 
+function sortItOut2(array) {
+    const sortIt = array.sort(function(a, b) {
+        return a - b;
+    });
+    console.log(sortIt); 
+    }
 
-console.log(myArray2);
+
+sortItOut2(myArray2);
 
 
 
