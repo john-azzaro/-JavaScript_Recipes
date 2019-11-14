@@ -30,10 +30,13 @@
 
 // EXAMPLE 1:
 
-const array1 = [1, 2, 3, 4];
-const reducer = (accumulator, currentValue) => accumulator + currentValue;
+const myArray = [1, 2, 3, 4];
 
-// 1 + 2 + 3 + 4
-console.log(array1.reduce(reducer));
+function reducerFunction(array) {
+  const reducer = function(accumulator, currentValue) {
+    return accumulator + currentValue;
+  };
+  console.log(array.reduce(reducer));
+}
 
-console.log(myArray.reduce(reducerFunction));
+reducerFunction(myArray);
