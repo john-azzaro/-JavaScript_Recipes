@@ -23,6 +23,7 @@ slice()	Pulls a copy of a portion of an array into a new array (Selects a part o
 splice()	Adds/Removes elements from an array (Adds elements in a specified way and position).
 copyWithin()	Copies part of an array to another location in the same array and returns it.
 fill()	Fill the elements in an array with a static value.
+from()	Creates an array from an object.
 
 push()	Add a new element at the end (Adds one or more elements to the end of an array, and returns the array's new length).
 pop()	Removes the last element of an array (i.e. Removes the last element from an array, and returns that element).
@@ -43,12 +44,15 @@ entries()	Returns a key/value pair Array Iteration Object.
 
 every()	Checks if every element in an array pass a test in a testing function.
 some()	Checks if any of the elements in an array passes the test in a testing function.
+isArray()	Determines whether the passed value is an array.
+
 
 valueOf() — Returns the primitive value of the specified object
 values()	Returns a Array Iteration Object, containing the values of the original array.
 
 concat()  	Merge two or more arrays, and returns a new array.
 join()	Joins all elements of an array into a string.
+>>>SPREAD GOES HERE<<<<
 
 
 toString()	Converts elements to strings (Converts an array to a string, and returns the result).
@@ -64,8 +68,8 @@ of()  creates a new Array instance from a variable number of arguments, regardle
 
 
 
-isArray()	Determines whether the passed value is an array.
-from()	Creates an array from an object.
+
+
 
 
 
