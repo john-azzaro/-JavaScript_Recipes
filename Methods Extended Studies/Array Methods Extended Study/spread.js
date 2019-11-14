@@ -42,3 +42,13 @@ spreadIt1(myArray1);                              // Hello there friend
 
 
 // EXAMPLE 2: 
+
+const myString = "Howdy there partner";
+
+function spreadIt2(array) {
+    let convertToArray = [...array];
+    console.log(convertToArray);
+}
+
+console.log(myString);                     // Howdy there partner
+spreadIt2(myString);                       //  [ 'H','o','w','d','y',' ','t','h','e','r','e',' ','p','a','r','t','n','e','r' ]
