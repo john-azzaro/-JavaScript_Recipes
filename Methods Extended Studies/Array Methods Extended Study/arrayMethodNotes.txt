@@ -8,12 +8,10 @@ List of array methods: https://www.tutorialrepublic.com/javascript-reference/jav
 forEach()	Calls a function once for each array element.
 keys()	Returns a Array Iteration Object, containing the keys of the original array.
 map()	Creates a new array with the results of calling a function for each array element.
+
+
+
 reduce()	Reduce the values of an array to a single value (from left-to-right).
-spread [...]  
-
-
-
-
 reduceRight()	Reduce the values of an array to a single value (from right-to-left).
 
 sort()	Sorts elements alphabetically (Sorts the elements of an array).
@@ -52,7 +50,7 @@ values()	Returns a Array Iteration Object, containing the values of the original
 
 concat()  	Merge two or more arrays, and returns a new array.
 join()	Joins all elements of an array into a string.
->>>SPREAD GOES HERE<<<<
+spread [...]  
 
 
 toString()	Converts elements to strings (Converts an array to a string, and returns the result).
