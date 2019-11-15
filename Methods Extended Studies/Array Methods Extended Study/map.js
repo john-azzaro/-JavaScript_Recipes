@@ -5,10 +5,9 @@
 //
 // SYNTAX ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      const mapIt = mapArray.map(function(value) {
-//          return '<li>' + value + '</li>'                  // maps the elements in the array to this schema...
-//      });                                                  // we are basically mapping the elements in an array 
-//                                                              to something else, in this case strings.
+//      const myVariable = array.map(function(value) {
+//          return value + 1                 
+//      });                                                
 //
 // SUMMARY ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -25,3 +24,19 @@
 //
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+// EXAMPLE 1: Apply
+
+const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function doMap(array) {
+    const mapIt = array.map(function(value) {
+        return value * 2;
+    });
+    console.log(mapIt);
+}
+
+console.log(myArray);                             // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+doMap(myArray);                                   // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
