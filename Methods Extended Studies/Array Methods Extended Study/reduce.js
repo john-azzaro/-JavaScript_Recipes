@@ -15,8 +15,6 @@
 //
 //      • .reduce() executes a reducer function on each element in the array resulting in a single output value.
 //      • .reduce() essentially reduces an array to a single number.
-//      •
-//      •
 //
 // EXAMPLES //////////////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -28,6 +26,8 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
 // EXAMPLE 1: Reduce an array to a single number:
 
 const myArray = [1, 2, 3, 4];
@@ -36,9 +36,11 @@ function reducerFunction(array) {
   const reducer = function(accumulator, currentValue) {
     return accumulator + currentValue;
   };
-  console.log(array.reduce(reducer));
+  console.log(array.reduce(reducer));                   // 10
+  console.log(array.reduce(reducer, 5));                // 15
 }
 
 reducerFunction(myArray);
 
-// EXAMPLE 2:
+
+

@@ -11,6 +11,9 @@ map()	Creates a new array with the results of calling a function for each array 
 
 
 
+
+
+
 reduce()	Reduce the values of an array to a single value (from left-to-right).
 reduceRight()	Reduce the values of an array to a single value (from right-to-left).
 
@@ -36,9 +39,6 @@ filter()	Creates a new array with all elements that pass the test in a testing f
 find()	Returns the value of the first element in an array that pass the test in a testing function.
 findIndex()	Returns the index of the first element in an array that pass the test in a testing function.
 entries()	Returns a key/value pair Array Iteration Object.
-
-
-
 
 every()	Checks if every element in an array pass a test in a testing function.
 some()	Checks if any of the elements in an array passes the test in a testing function.
