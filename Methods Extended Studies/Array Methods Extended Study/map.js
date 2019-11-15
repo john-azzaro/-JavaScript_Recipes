@@ -5,12 +5,16 @@
 //
 // SYNTAX ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//
+//      const mapIt = mapArray.map(function(value) {
+//          return '<li>' + value + '</li>'                  // maps the elements in the array to this schema...
+//      });                                                  // we are basically mapping the elements in an array 
+//                                                              to something else, in this case strings.
 //
 // SUMMARY ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      •
-//      •
+//      • .map() is used to generate a new a new array of items by applying the same function to each item 
+//        in the array. In other words, we can map each item in the array to something else.
+//      • 
 //
 // EXAMPLES //////////////////////////////////////////////////////////////////////////////////////////////////
 //
