@@ -4,13 +4,6 @@ List of array methods: https://www.tutorialrepublic.com/javascript-reference/jav
 =======================================================================
 
  
-
-
-keys()	Returns a Array Iteration Object, containing the keys of the original array.
-
-
-
-
 forEach()	Calls a function once for each array element.
 map()	Creates a new array with the results of calling a function for each array element.
 

@@ -1,0 +1,24 @@
+Object methods Extended Study
+=============================
+
+List of object methods: https://www.digitalocean.com/community/tutorials/how-to-use-object-methods-in-javascript
+MDN object method list: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+==================================================================================================================
+
+
+
+
+Object.keys()  --  method returns an array of a given object's own enumerable property names, in the same order as we get with a normal loop.
+
+Object.create()  --  method creates a new object, using an existing object as the prototype of the newly created object.
+Object.assign()  --  method is used to copy the values of all enumerable own properties from one or more source objects to a target object.
+Object.seal()  --  method seals an object, preventing new properties from being added to it and marking all existing properties as non-configurable.
+Object.values()  --  returns an array whose elements are the enumerable property values found on the object.
+Object.entries()  --  method returns an array of a given object's own enumerable string-keyed property [key, value] pairs, in the same order
+                      as that provided by a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
+Object.freeze()  --  method freezes an object.
+Object.fromEntries()  --  method transforms a list of key-value pairs into an object.
+Object.is()  --  method determines whether two values are the same value.
+Object.isFrozen()  --  determines if an object is frozen.
+Object.isSealed()  --  method determines if an object is sealed.
+Object.toString()  --  method returns a string representing the object.
