@@ -5,14 +5,14 @@ List of array methods: https://www.tutorialrepublic.com/javascript-reference/jav
 
  
 
-forEach()	Calls a function once for each array element.
+
 keys()	Returns a Array Iteration Object, containing the keys of the original array.
+
+
+
+
+forEach()	Calls a function once for each array element.
 map()	Creates a new array with the results of calling a function for each array element.
-
-
-
-
-
 
 reduce()	Reduce the values of an array to a single value (from left-to-right).
 reduceRight()	Reduce the values of an array to a single value (from right-to-left).
