@@ -13,12 +13,12 @@
 //
 //      • .map() is used to generate a new a new array of items by applying the same function to each item 
 //        in the array. In other words, we can map each item in the array to something else.
-//      • .map() 
+//      • .map() creates an array by calling a specific function on each element present in the array.
 //
 // EXAMPLES //////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //      EXAMPLE 1: Map an array of numbers using a function containing an argument
-//      
+//      EXAMPLE 2: Create an unordered list of items from an array:
 //
 //
 // RESOURCES /////////////////////////////////////////////////////////////////////////////////////////////////
