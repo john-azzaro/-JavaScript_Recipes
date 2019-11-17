@@ -22,16 +22,20 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 // EXAMPLE 1: Use the keys method to find the keys for items in an array:
 
+const myArray = ["alpha", "beta", "charlie", "delta", "echo"];
 
-const myArray = ['alpha', 'beta', 'charlie', 'delta', 'echo'];
+function findKeys(array) {
+  const iterator = array.keys();
 
-const iterator = myArray.keys();
-
-for (let key of iterator) {
+  for (let key of iterator) {
     console.log(key);
-}
+  }
+}             
 
-
+findKeys(myArray);       /*  0
+                             1
+                             2
+                             3
+                             4   */
