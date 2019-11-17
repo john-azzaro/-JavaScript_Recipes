@@ -1,4 +1,11 @@
-charAt()	Returns the character at the specified index (position)
+String Method Extended Studies
+==============================
+
+List of Sting Methods - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+===========================================================================================
+
+
+
 charCodeAt()	Returns the Unicode of the character at the specified index
 concat()	Joins two or more strings, and returns a new joined strings
 endsWith()	Checks whether a string ends with specified string/characters
@@ -31,4 +38,7 @@ trimEnd() method removes whitespace from the end of a string. trimRight() is an 
 trimStart() method removes whitespace from the beginning of a string. trimLeft() is an alias of this method.
 
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
+
+
+
+charAt()	Returns the character at the specified index (position)
