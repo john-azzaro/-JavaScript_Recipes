@@ -4,7 +4,9 @@
 <dl>
 <dd>
 
-**JavaScript Recipes** is a collection of outlines, stuides, models, prototypes, reference docs, link lists, that examine the many tools and features of the JavaScript language. JavaScript Recipes cover many things, from basic topics such as JavaScript variables, loops, and functions all the way to object oriented programming concepts, building express applications, and database management and beyond. Please note that JavaScript Recipes is a work in progress, but I'm positive you'll find this humble collection pretty useful for study and refresh.
+**JavaScript Recipes** is a collection of outlines, stuides, models, prototypes, resource lists, and reference documents that examine the many tools and features of my continuing study of the JavaScript language. JavaScript Recipes cover many things, from basic topics such as JavaScript variables, loops, and functions all the way to object oriented programming (OOP) and functional programming paradigms. 
+
+*Please note that JavaScript Recipes is a work in progress since these are distallations of notes and observations, but I'm positive you'll find this collection pretty useful for study and refresh.*
 
 </dd>
 </dl>
