@@ -6,8 +6,8 @@ List of Sting Methods - https://developer.mozilla.org/en-US/docs/Web/JavaScript/
 
 
 
-charCodeAt()	Returns the Unicode of the character at the specified index
-concat()	Joins two or more strings, and returns a new joined strings
+
+
 endsWith()	Checks whether a string ends with specified string/characters
 fromCharCode()	Converts Unicode values to characters
 includes()	Checks whether a string contains the specified string/characters
@@ -40,5 +40,5 @@ trimStart() method removes whitespace from the beginning of a string. trimLeft()
 
 
 
-
+concat()	Joins two or more strings, and returns a new joined strings
 charAt()	Returns the character at the specified index (position)
