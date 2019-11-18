@@ -253,9 +253,27 @@ Solving Programing problems - YT - How to solve problems fatser when programming
     • This is the HARDEST PART OF PROGRAMMING.
 
 3. Write pseudocode
+    • rough draft of your code BEFORE you code
+    • use common programming terminology and concepts (i.e. loops, conditionals, etc.)
+    • pseudocode allows for isolation of steps, which can be troubleshot via internet or whatever.
 
+  EXAMPLE:   function thisDoesSomething(takes-number) {
+                // If number is divisible by 2, return even. 
+                // If number is not, return odd.
+             }
 
+4. Debug from the top down
+    • Test solution looking for error messages and unexpected results. 
+    • check for spelling errors or mistaken characters. 
+    • if none of the above, might be an error in logic. 
 
+5. Refactor Refactor Refactor
+    • Never go for the perfect solution each time. 
+    • Work on it now and refactor later. 
+    • A successful refactor shortens or optimizes the code, looking for ways to correct the golden 
+      three: Readability, efficientcy, compatibility. 
+    • these three need to be kept in balance. 
+    • 
 
 */
 
