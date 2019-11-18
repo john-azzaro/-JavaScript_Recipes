@@ -8,7 +8,7 @@ List of Sting Methods - https://developer.mozilla.org/en-US/docs/Web/JavaScript/
 
 
 
-endsWith()	Checks whether a string ends with specified string/characters
+
 fromCharCode()	Converts Unicode values to characters
 includes()	Checks whether a string contains the specified string/characters
 indexOf()	Returns the position of the first found occurrence of a specified value in a string
@@ -39,6 +39,6 @@ trimStart() method removes whitespace from the beginning of a string. trimLeft()
 
 
 
-
+endsWith()	Checks whether a string ends with specified string/characters
 concat()	Joins two or more strings, and returns a new joined strings
 charAt()	Returns the character at the specified index (position)
