@@ -28,11 +28,7 @@
 let mySentence = "The cat and the dog ran up the hill";
 
 function sentenceChecker(string, word) {
-  console.log(
-    `The word "${word}" ${
-      string.includes(word) ? "is" : "is not"
-    } in the sentence`
-  );
+  console.log(`The word "${word}" ${string.includes(word) ? "is" : "is not"} in the sentence`);
 }
 
 sentenceChecker(mySentence, "dog");
