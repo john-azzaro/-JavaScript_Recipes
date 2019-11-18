@@ -32,14 +32,14 @@ matchAll()     returns an iterator of all results matching a string against a re
 padEnd()    method pads the current string with a given string (repeated, if needed) so that the resulting string reaches a given length. The padding is applied from the end of the current string
 padStart()   method pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length. The padding is applied from the start of the current string.
 trimEnd()  method removes whitespace from the end of a string. trimRight() is an alias of this method.
+
+
+
+
+
+
+
 trimStart()   method removes whitespace from the beginning of a string. trimLeft() is an alias of this method.
-
-
-
-
-
-
-
 includes()  	Checks whether a string contains the specified string/characters
 endsWith()  	Checks whether a string ends with specified string/characters
 concat()  	Joins two or more strings, and returns a new joined strings
