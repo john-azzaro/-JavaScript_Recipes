@@ -229,6 +229,43 @@ Advice on learning to code
 
 
 /* 
+Solving Programing problems - YT - How to solve problems fatser when programming
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+1. Try to think of example of the problem and what they might yield. 
+    • What goes in and out, what if you use x, y, or z?
+    • Doing this allows ou to gain insight into the problem.
+
+    EXAMPLE: Write a function called oddOrEven that takes one number and returns whether it is even or odd?
+    • This is essentially invoking the function at the END with the arguments FIRST!!!
+    • MAIN THING: be able to plug in examples and try to start figuring out the dynamic of the problem
+
+      oddOrEven(5);                  // "odd"
+      oddOrEven(2);                  // "even"
+      oddOrEven(06782543);           // "odd"
+      oddOrEven('hello');            // error   (edgecase)
+
+2. Visualization
+    • Imagine what you have to do in orfder to reach the solution.  
+    • use flow charts, diagrams, sketches, whiteboarding, etc. 
+    • REMEMBER: this is not a detailed plan. 
+    • This is the HARDEST PART OF PROGRAMMING.
+
+3. Write pseudocode
+
+
+
+
+*/
+
+
+
+
+
+
+
+/* 
 Solving Programming Problems
 -==-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
