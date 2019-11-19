@@ -10,8 +10,6 @@ List of Sting Methods - https://developer.mozilla.org/en-US/docs/Web/JavaScript/
 
 indexOf()	    Returns the position of the first found occurrence of a specified value in a string
 lastIndexOf()   	Returns the position of the last found occurrence of a specified value in a string
-localeCompare()	  Compares two strings in the current locale
-
 repeat()  	Returns a new string with a specified number of copies of an existing string
 replace()	  Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced
 search()  	Searches a string for a specified value, or regular expression, and returns the position of the match
@@ -20,8 +18,6 @@ split()	  Splits a string into an array of substrings
 startsWith()	  Checks whether a string begins with specified characters
 substr()	  Extracts the characters from a string, beginning at a specified start position, and through the specified number of character
 substring()	  Extracts the characters from a string, between two specified indices
-toLocaleLowerCase() 	Converts a string to lowercase letters, according to the host's locale
-toLocaleUpperCase() 	Converts a string to uppercase letters, according to the host's locale
 toString()  	Returns the value of a String object
 valueOf()	  Returns the primitive value of a String object
 endsWith()    determines whether a string ends with the characters of a specified string, returning true or false as appropriate
@@ -52,4 +48,7 @@ charAt()	Returns the character at the specified index (position)
 ---------
 match() 	Searches a string for a match against a regular expression, and returns the matches  -- uses regx
 matchAll()     returns an iterator of all results matching a string against a regular expression, including capturing groups   -- uses regex
+toLocaleLowerCase() 	Converts a string to lowercase letters, according to the host's locale
+toLocaleUpperCase() 	Converts a string to uppercase letters, according to the host's locale
+localeCompare()	  Compares two strings in the current locale
 ---------
