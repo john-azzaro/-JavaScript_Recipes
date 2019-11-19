@@ -25,7 +25,7 @@ toLocaleUpperCase() 	Converts a string to uppercase letters, according to the ho
 toLowerCase()	  Converts a string to lowercase letters
 toString()  	Returns the value of a String object
 toUpperCase()	  Converts a string to uppercase letters
-trim()	  Removes whitespace from both ends of a string
+
 valueOf()	  Returns the primitive value of a String object
 endsWith()    determines whether a string ends with the characters of a specified string, returning true or false as appropriate
 matchAll()     returns an iterator of all results matching a string against a regular expression, including capturing groups
@@ -35,7 +35,7 @@ padStart()   method pads the current string with another string (multiple times,
 
 
 
-
+trim()	  Removes whitespace from both ends of a string
 trimRight()  method removes whitespace from the end of a string.
 trimLeft()   method removes whitespace from the beginning of a string. 
 includes()  	Checks whether a string contains the specified string/characters
