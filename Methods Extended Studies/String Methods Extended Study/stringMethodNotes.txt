@@ -20,16 +20,10 @@ substr()	  Extracts the characters from a string, beginning at a specified start
 substring()	  Extracts the characters from a string, between two specified indices
 toString()  	Returns the value of a String object
 valueOf()	  Returns the primitive value of a String object
+
+
+
 endsWith()    determines whether a string ends with the characters of a specified string, returning true or false as appropriate
-
-
-
-
-
-
-
-
-
 
 toLowerCase()	  Converts a string to lowercase letters
 toUpperCase()	  Converts a string to uppercase letters
