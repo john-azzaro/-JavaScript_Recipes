@@ -5,16 +5,17 @@
 //
 // SYNTAX ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//     string.substring();
+//     string.substring(indexStart, IndexEnd);
 //
 // SUMMARY ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //      • .substring() methos returns the part of the string between the start and end indexes or to the end 
 //        of the string. 
+//      • 
 //
 // EXAMPLES //////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//      EXAMPLE 1:
+//      EXAMPLE 1: Create a function that returns a specified part of a string. 
 //
 // RESOURCES /////////////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -22,13 +23,13 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// EXAMPLE 1: Create a function that returns a specified part of a string. 
+// EXAMPLE 1: Create a function that returns the section of the string "CALI". 
 
-const myString = "supercalifragilisticexpedalidocious";
+const myString = "superCALIfragilisticexpedalidocious";
 
 function getPartOfString(string) {
-  const getSubString = string.substring(string);
+  const getSubString = string.substring(5, 9);
   console.log(getSubString);
 }
 
-getPartOfString(myString);
+getPartOfString(myString);                   // CALI
