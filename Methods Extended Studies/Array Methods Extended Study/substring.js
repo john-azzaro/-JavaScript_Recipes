@@ -22,3 +22,13 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// EXAMPLE 1: Create a function that returns a specified part of a string. 
+
+const myString = "supercalifragilisticexpedalidocious";
+
+function getPartOfString(string) {
+  const getSubString = string.substring(string);
+  console.log(getSubString);
+}
+
+getPartOfString(myString);
