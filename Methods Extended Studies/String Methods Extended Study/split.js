@@ -22,9 +22,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-// EXAMPLE 1: 
-
+// EXAMPLE 1: Create a function that splits a string into seperate instance in an array. 
 
 const myString = "This is a string";
 
@@ -33,3 +31,5 @@ function splitString(string, seperator, limit) {
   console.log(splitIt);
 }
 
+splitString(myString); // [ 'This is a string' ]
+splitString(myString, " "); // [ 'This', 'is', 'a', 'string' ]
