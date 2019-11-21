@@ -21,3 +21,15 @@
 //
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// EXAMPLE 1: 
+
+
+const myString = "This is a string";
+
+function splitString(string, seperator, limit) {
+  const splitIt = string.split(seperator, limit);
+  console.log(splitIt);
+}
+
