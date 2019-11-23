@@ -31,3 +31,6 @@ function findFirstLetters(string, input) {
   console.log(firstLetters);
 }
 
+
+findFirstLetters(myString, 'This');          // true
+findFirstLetters(myString, 'is');            // false
