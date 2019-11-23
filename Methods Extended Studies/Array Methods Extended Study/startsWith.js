@@ -26,11 +26,12 @@
 
 const myString = "This is a string";
 
-function findFirstLetters(string, input) {
-  const firstLetters = string.startsWith(input);
+function findFirstLetters(string, input, posStart) {
+  const firstLetters = string.startsWith(input, posStart);
   console.log(firstLetters);
 }
 
 
 findFirstLetters(myString, 'This');          // true
 findFirstLetters(myString, 'is');            // false
+findFirstLetters(myString, 'is', 5);         // true
