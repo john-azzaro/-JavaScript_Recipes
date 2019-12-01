@@ -38,7 +38,7 @@
     • Before object oriented programming there was something called "procedural programming" where data was stored in a
        bunch of variables and function that operate on the data, which was very simple and straight forward.
        • but eventually these function will break and function will have duplicate lines of codes (i.e. spaghetti code).
-    • Which object-oriented programming (OOP), you combine a group of related variables and function into a unit.
+    • With object-oriented programming (OOP), you combine a group of related variables and functions into a unit.
         • That unit is called an "Object".
         • variables are called "properties".
         • function are called "methods".     
