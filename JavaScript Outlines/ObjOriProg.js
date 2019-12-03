@@ -165,7 +165,7 @@ What is an object?
 What is a factory object?
 ///////////////////////////
     • A factory functions create an individual instance of some model.
-    • We use factory functions because if we are duplicating an object with one or more methods (has a "bahavior"), it
+    • We use factory functions because if we are duplicating an object with one or more methods (has a "behavior"), it
        can be problematic if there become more duplicate of the same object.
     • To avoid that issue, we use a function to create an object and return the object.
     • Note here that with Es6 if the key and the value are the same, we can remove the noise and simple put a single name.
