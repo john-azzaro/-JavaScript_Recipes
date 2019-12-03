@@ -249,22 +249,61 @@ Are functions objects?
 /*
 What is the difference between value(primitive) types and reference types?
 ////////////////////////////////////////////////////////////////////////////
-    • VUnderstanding value and refrence types is important for understanding prototypes.
+    • Understanding value and refrence types is important for understanding prototypes.
+
     • Value types (primitives) are: numbers, strings, booleans, symbols, undefined, null.
-        • value types are stored in the variable.
-        • primitives are copied by thier value.
-    • Reference types are: objects, functions, arrays.
-        • primtives are independent 
+        • primtives are independent         
+        • primtives are COPIED BY VALUE         
+        • primitive value types are stored in the variable.  */
+
+
+        let x = 10;         // the value of 10 is stored inside x
+        let y = x;          // when x is copied into y, it is copied exactly as 10 into the new variable... it is indpendant now.
+
+        x = 20;             // so if you change the value of x to 20...
+
+        console.log(x)      // 20 is the the value of x because we changed it...
+        console.log(y)      // 10 is the value of y because when we copied it it was 10 and it is independant.
+
+ /* • Reference types are: objects, functions, arrays.
+        • Reference types are copied by thier reference (i.e. thier value sotred somewhere in memory)
+        • When Reference types are used, the program is pointed to the address location of where it is stored.
         • reference types are NOT stored in the variable... it is stored somewhere else in memory
         • objects are copied by thier reference.
 */
-                            let x = 10;         // the value of 10 is stored inside x
-                            let y = x;          // when x is copied into y, it is copied exactly as 10 into the new variable... it is indpendant now.
+        let x = { value: 10};      // 1. since an object is not stored in the variable, but somewhere else in memory.
+        let y = x;                 // 3. So when x is copied into y, it is the ADDRESS that is copied, which will have the updated number.
 
-                            x = 20;             // so if you change the value of x to 20...
+        x.value = 20;              // 2. when you change a value in that object, the value in that address is changed,
 
-                            console.log(x)      // 20 is the 
-                            console.log(y)      // 10
+        console.log(x)             // 20   Both x and y are pointed to the same address, the same object in memory.
+        console.log(y)             // 20
+
+/* Additional example: */
+
+        let number = 10;
+
+        function increment(number) {
+            number++;
+        }
+
+       increment(number);       
+       console.log(number);                // 10... because primitives are copied by value, and when you copy number into increment it will 
+                                           // be independent... which is still 10.
+
+    // However, when dealing with reference types:
+
+        let number = { value: 10 };
+
+        function increment(number) {
+            number.value++;
+        }
+
+        increment(number);
+        console.log(number);              // 11... because the number is stored elsewhere in memory and passed by reference. In this case there is NOT
+                                          //  two independent copies but one address
+    
+
 
 
 /*
