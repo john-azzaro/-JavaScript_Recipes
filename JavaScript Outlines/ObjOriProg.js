@@ -249,13 +249,23 @@ Are functions objects?
 /*
 What is the difference between value(primitive) types and reference types?
 ////////////////////////////////////////////////////////////////////////////
+    • VUnderstanding value and refrence types is important for understanding prototypes.
     • Value types (primitives) are: numbers, strings, booleans, symbols, undefined, null.
         • value types are stored in the variable.
         • primitives are copied by thier value.
     • Reference types are: objects, functions, arrays.
+        • primtives are independent 
         • reference types are NOT stored in the variable... it is stored somewhere else in memory
         • objects are copied by thier reference.
 */
+                            let x = 10;         // the value of 10 is stored inside x
+                            let y = x;          // when x is copied into y, it is copied exactly as 10 into the new variable... it is indpendant now.
+
+                            x = 20;             // so if you change the value of x to 20...
+
+                            console.log(x)      // 20 is the 
+                            console.log(y)      // 10
+
 
 /*
 How do you add or remove properties?
