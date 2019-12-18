@@ -197,3 +197,17 @@ gradeQuote(theGrade(90));
 
 // gradeQuote(theGrade(90))
 // gradeQuote(theGrade(85))
+
+
+
+
+
+function increment(x) {
+    return sum(x, 1);
+  }
+  
+  function sum(x,y) {
+    return x + y;
+  }
+  
+  console.log(increment(4))
