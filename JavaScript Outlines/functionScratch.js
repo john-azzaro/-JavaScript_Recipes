@@ -211,3 +211,17 @@ function increment(x) {
   }
   
   console.log(increment(4))
+
+
+
+  // NESTED functions example
+
+  function addMore(num1) {
+    return function add(num2, num3) {
+      return function makeItNice(greeting) {
+        return `${greeting} is: ${num1 + num2 + num3}`;
+      }
+    };
+  }
+  
+  console.log(addMore(1)(2,3)("the sum of addMore"));
