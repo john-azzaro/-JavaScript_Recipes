@@ -225,3 +225,21 @@ function increment(x) {
   }
   
   console.log(addMore(1)(2,3)("the sum of addMore"));
+
+  function fizzBuzz(countTo) {
+    const result = [];
+    for (let i = 0; i < countTo; i++) {
+      if (i % 15 === 0) {
+        result.push('fizzbuzz');
+      } else if (i % 5 === 0) {
+        result.push('fizz');
+      } else if (i % 3 === 0) {
+        result.push('bizz')
+      } else {
+        result.push(i);
+      }
+    }
+    return result.join(', ');
+  }
+  
+  console.log(fizzBuzz(15));
