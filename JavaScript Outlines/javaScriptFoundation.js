@@ -228,6 +228,33 @@ Advice on learning to code
 
 
 
+
+
+/* 
+Computational Thinking
+=-=-=-=-=-=-=-=-=-=-=-=-=- https://www.youtube.com/watch?v=azcrPFhaY9k
+1. Programming isnt about languages.
+  * coding has 8 universal main concepts:
+    1. 
+
+
+    * write out the concepts first, then convert to code.
+    * most beginners think they dont understand what code to write... but the 
+      the answer is that they dont understand the problem. they're trying to solve.
+    * comments are code.
+
+2. 
+
+
+*/
+
+
+
+
+
+
+
+
 /* 
 Solving Programing problems - YT - How to solve problems fatser when programming
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
