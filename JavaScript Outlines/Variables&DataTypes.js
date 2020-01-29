@@ -486,6 +486,62 @@ let a = 12345;
 */
 
 
+/* 
+What is the difference between null and undefined?
+
+•	Null and undefined mean the same thing in that they have no value, but null is set by programmers and undefined is set by JavaScript.
+
+
+o	Null is used by programmers to indicate NO VALUE.
+	Null will never be used by JavaScript for you… variables with no value will always be undefined. Only the programmer will set a variable to null.
+
+o	Undefined is used by JavaScript to be NO VALUE.
+	Undefined is used for uninitialized variables with no value ( let a; ) and is also used in the case of missing parameters or unknown properties.
+
+What is NaN?
+
+•	NaN stands for “not a number” and is used to define a number that’s not really a number but like a bad calculation.
+
+
+
+The typeof of NaN is number.
+	
+console.log(typeof(NaN))    // "number"
+
+NaN compared to any other number is FALSE.
+	
+console.log("abc"/4);       // "NaN"
+
+NaN compared to NaN is also FALSE.
+	
+console.log(NaN === NaN);   // "false"
+
+
+How do you check for NaN?
+
+•	To check for NaN or check whether or not something is a number, you can use an inbuilt function called isNan().
+
+
+o	Using Nan has some drawbacks.
+	For example, if you pass a string to the inbuilt function, you will get true.
+JavaScript	Output
+console.log(isNaN(NaN))	 true
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 RESOURCES
 =========
