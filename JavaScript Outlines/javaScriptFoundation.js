@@ -420,6 +420,72 @@ Solving Programming Problems
                         --------------------------------------
         
         
+/* 
+What is a browser and how does a webpage render?
+
+•	A browser is a piece of software made up of several components responsible for specific pieces of work.
+
+o	The browser is an orchestration of a bunch of little engines.
+    	HTML, CSS, JS, HTTP, Events, and other engines that are manipulating the DOM, which is an in-memory representation of what your web page looks like.
+
+o	A browser renders website by sending a request, getting and processing it, displaying it, and updating it.     
+    	When you type in an address in your browser, the bowser uses an http engine to access the internet and make a request from the user to get the website.
+    	The server accepts that request and sends back all the files the user requested.
+    	Now that the bowser has all the files (e.g. HTML, CSS, JavaScript), those engines process those files to build up the DOM and displays it on the page.
+    	When you interact with the page (i.e. event) will alter the DOM and update (i.e. re-renders) the display.
+
+o	The browsers HTTP engine handles requests and Reponses.
+    	The browser sends a request, the server sends a response if it is valid.
+
+o	The browser only understands JavaScript as the scripting language here.
+    	The bowser does not understand angular or react, it only understands JavaScript.
+
+*/
+
+
+/* 
+How does a browser handle a JS file when it hits the JavaScript engine?
+
+•	A browser handles JS by allocating chunks of memory, creating a global object, process it in 2 phases (creation and execution), assign values to variables, and set aside memory for calls.
+
+
+o	The JavaScript engine is in control even before you feed it any JavaScript.
+	JavaScript will reach the browser via the JS.  In fact, the JavaScript will reach the browser even if the there is no code in the JS file. This is because only the JavaScript engine reaches the DOM. The code that you write only goes as far as the JavaScript file. In a way, the engine rewrites the code. 
+	The JavaScript engine creates the window object before any JS is fed to it.
+
+The Process for executing JavaScript:
+
+
+o	 First , a chunk of memory is created by the JavaScript engine to execute code in it.
+	This is called an execution context and is known as global execution.
+	However, the best way to think of this is as a chunk of memory.
+
+o	 Second , the JavaScript engine creates an global object.
+	This global object is created inside the execution context and creates a variable called this which is set to a window object. (this = obj    obj: window).
+•	So if you type “this” in your browser, you will see the window object.
+•	This is what will happen every time you feed a JavaScript file to a JavaScript engine.
+
+o	 Third , if there is code to process, the JavaScript completes 2 phases in the first pass.
+	The first phase is the creation phase.
+•	In the creation phase, where the engine looks for variables and functions.
+o	If the JavaScript engine passes a variable, it sets aside some memory and hoists the variable up-top to refer to later. Initially, a variable is set to undefined as all variables are.
+o	If the JavaScript engine passes a function, it will grab the whole value and put that into memory.
+	The second phase is the execution phase.
+•	In the execution phase, the engine processes all the code.
+
+Window.a = undefined;
+Window.foo = function foo() {…};
+
+o	 Fourth , on the second pass, the engine assigns values to variables.
+	The variable that memory was set aside for is now assigned a value ( let foo = ‘Hi’ ) 
+Window.a = ‘Hi’;
+Window.foo = function foo() {…};
+
+
+o	 Fifth , function calls set aside a piece of memory
+	The chunk of memory is created using the execution context with the value of “foo”.
+	Then, the JavaScript engine creates an object with the value of foo ( obj: foo ) and also a context for this called foo ( this = foo ).
+	The engine will also reference the outer environment (i.e. scope), which is pointing to the global context in this case.
 
 
 
