@@ -455,7 +455,6 @@ o	The JavaScript engine is in control even before you feed it any JavaScript.
 
 The Process for executing JavaScript:
 
-
 o	 First , a chunk of memory is created by the JavaScript engine to execute code in it.
 	This is called an execution context and is known as global execution.
 	However, the best way to think of this is as a chunk of memory.
@@ -488,6 +487,15 @@ o	 Fifth , function calls set aside a piece of memory
 	The engine will also reference the outer environment (i.e. scope), which is pointing to the global context in this case.
 
 
+
+What is strict mode?
+
+•	Strict mode allows you to place a program or a function in a strict operating context.
+o	To enable strict mode, put 'use strict';  at the beginning of your JavaScript document.
+	Strict mode makes debugging easier, errors will be easier to find. It is a string because when it was first implemented only new browsers supported it, so a string was used and when a new browser reads the string, it knows to turn itself into strict mode operating context.
+
+
+“use strict”;
 
 
 
