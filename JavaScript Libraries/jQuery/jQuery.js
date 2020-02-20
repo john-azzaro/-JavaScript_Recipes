@@ -428,41 +428,42 @@
 
             
 /*
-7. What is an Event Listener?
-/////////////////////////////
-    • An Event Listener listens for a specific event to happen (i.e. submit, click, etc.) and does something (i.e. callback function).
-
-    • To take advantage of DOM manipulation, you need to be able to alter the DOM when EVENTS happen.
+7. How do you use event listeners with jQuery?
+//////////////////////////////////////////////
+    • An Event Listener listens for a specific event to happen (i.e. submit, click, etc.) and does 
+      something (i.e. callback function).
     • In order to update the DOM, you need to 'listen' for specific events happening.
         • For example:
-             • an app LISTENS when the user submits a form
-             • an app LISTENS for when the user inputs a search term.
-             • an app LISTENS for when the user clicks on an element in the page to launch an animation.
-    
+             • An app LISTENS when the user submits a form.
+             • An app LISTENS for when the user inputs a search term.
+             • An app LISTENS for when the user clicks on an element in the page to launch an animation.
     • So an EVENT LISTENER has 2 parts:
         1. Specify what event to listen for.
-        2. provide a CALLBACK FUNCTION that runs when the event occurs.
-*/
-   
+        2. provide a CALLBACK FUNCTION that runs when the event occurs. 
 
-            function handleClicks() {
-                let clickCount = 0;                                          // Stores click count.
-                $('.click-counter').text(clickCount);                        // show current click count.
-                $('main').on('click', '#clicker', function(event) {          // On click...
-                    clickCount += 1;                                         // ... increment by 1...
-                    $('.click-counter').text(clickCount);                    // ... show new click count.
-                });
-            }
+    • Use the ".on" method with the event and the callback to implement an event listener.
+        • In the example below, the user listens on main (see event delegation) and, on "click"
+          (of the only button in this study) runs a callback function that increments the counter
+          by one and displays the updated clickCount.
+   */
+  function handleClicks() {
+    let clickCount = 0;                                          // Stores click count.
+    $('.click-counter').text(clickCount);                        // show current click count.
+    $('main').on('click', '#clicker', function(event) {          // On click...
+        clickCount += 1;                                         // ... increment by 1...
+        $('.click-counter').text(clickCount);                    // ... show new click count.
+    });
+}
 
-            function setUpEventHandlers3() {
-                handleClicks();
-            }
+function setUpEventHandlers() {
+    handleClicks();
+}
 
-            function initialize3() {
-                setUpEventHandlers3();
-            }
+function initialize() {
+    setUpEventHandlers();
+}
 
-            $(initialize3);
+$(initialize);
 
  
 /*
