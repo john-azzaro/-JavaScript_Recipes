@@ -44,8 +44,11 @@ Taking notes in Question/Answer format can help with memory retention *(e.g. do 
 
 That's where *JavaScript Recipes* comes in.
 
-### JavaScript Recipes is a collection of useful information.
-The purpose of JavaScript Recipes is to serve as a collection of JavaScript outlines, studies, models, prototypes, reference documents, cheat sheets, etc. in the form of Q&A's to help learners learn and the learned stay refreshed. 
+<br>
+
+### JavaScript Recipes is a handy collection of Q&A's!
+**The purpose of JavaScript Recipes is to serve as a collection of JavaScript outlines, studies, models, prototypes, reference documents, cheat sheets, etc. in the form of Q&A's to help learners learn and the learned stay refreshed.** 
+<br>
 
 ### So what's so special about these question/answer recipes? 
 
