@@ -70,7 +70,7 @@ Please note that the outlines, studies, and extended studies are roughly organiz
 
 Each question asks about a given topic for a specific category, like "*What is a variable*". In any cases, there is a "short answer" Topics include: *variables, datatypes, functions, control flow, objects, arrays, jQuery, loops, application logic, api's, ajax, etc.* 
 
-Example: *JavaScript_Recipes > JavaScript Outlines > [**controlFlow.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/JavaScript%20Outlines/controlFlow.js "control flow outline")*:
+**Example:** *JavaScript_Recipes > JavaScript Outlines > [**controlFlow.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/JavaScript%20Outlines/controlFlow.js "control flow outline")*:
 ```JavaScript
     /*
     3. What is a switch statement?
@@ -111,17 +111,18 @@ Example: *JavaScript_Recipes > JavaScript Outlines > [**controlFlow.js**](https:
 ## JavaScript Libraries
 * In [JavaScript Libraries](https://github.com/john-azzaro/JavaScript_Recipes/tree/master/JavaScript%20Libraries "JavaScript Libraries"), you'll find outlines of a growing number of JavaScript libraries organized in question-and-answer format (good for study and memory retention). 
 
-Example: *JavaScript_Recipes > JavaScript Libraries > jQuery > [**jQuery.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/JavaScript%20Libraries/jQuery/jQuery.js "jQuery.js")*:
+**Example:** *JavaScript_Recipes > JavaScript Libraries > jQuery > [**jQuery.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/JavaScript%20Libraries/jQuery/jQuery.js "jQuery.js")*:
 
 ```JavaScript
 /*
 7. What is an Event Listener?
 /////////////////////////////
-    • An Event Listener listens for a specific event to happen (i.e. submit, click, etc.) and does something (i.e. callback function).
+    • An Event Listener listens for a specific event to happen (i.e. submit, click, etc.) and does 
+      something (i.e. callback function).
     • To take advantage of DOM manipulation, you need to be able to alter the DOM when EVENTS happen.
     • In order to update the DOM, you need to 'listen' for specific events happening.
         • For example:
-             • an app LISTENS when the user submits a form
+             • an app LISTENS when the user submits a form.
              • an app LISTENS for when the user inputs a search term.
              • an app LISTENS for when the user clicks on an element in the page to launch an animation.
     
@@ -155,7 +156,7 @@ Example: *JavaScript_Recipes > JavaScript Libraries > jQuery > [**jQuery.js**](h
 ## Coding Studies
 * In [Coding Studies](https://github.com/john-azzaro/JavaScript_Recipes/tree/master/Coding%20Studies "Coding Studies"), you'll find walk-throughs and solutions to complex computer science, programming, algorithm and data structure problems for study and reference. Topics include: *runtime complexity, finding vowels, anagrams, etc*.
 
-Example: *JavaScript_Recipes > Coding Studies > [**reverseString.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Coding%20Studies/reverseString.js "reverse string")*:
+**Example:** *JavaScript_Recipes > Coding Studies > [**reverseString.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Coding%20Studies/reverseString.js "reverse string")*:
 
 ```JavaScript
     // OBJECTIVE //////////////////////////////////////////////////////////////////////////////////////////
@@ -213,7 +214,7 @@ Example: *JavaScript_Recipes > Coding Studies > [**reverseString.js**](https://g
 ## Methods Extended Study
 In [Methods Extended Study](https://github.com/john-azzaro/JavaScript_Recipes/tree/master/Methods%20Extended%20Studies "Methods Extended Study"), you'll find extended studies on a variety of methods such as arrays, Math, number, operators, strings, etc. that include additional explanations, break-downs, and use-cases. Although some of the content overlaps with JavaScript Outlines, these studies allow for more detail than in the general outline. 
 
-Example: *JavaScript_Recipes > Methods Extended Studies > Array Methods Extended Study > [**entries.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Methods%20Extended%20Studies/Array%20Methods%20Extended%20Study/entries.js "entries array method")*:
+**Example:** *JavaScript_Recipes > Methods Extended Studies > Array Methods Extended Study > [**entries.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Methods%20Extended%20Studies/Array%20Methods%20Extended%20Study/entries.js "entries array method")*:
 
 ```JavaScript
     // TOPIC ////////////////////////////////////////////////////////////////////////////////
