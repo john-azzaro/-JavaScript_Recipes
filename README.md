@@ -44,10 +44,8 @@ Taking notes in Question/Answer format can help with memory retention *(e.g. do 
 
 That's where *JavaScript Recipes* comes in.
 
------
-**The purpose of JavaScript Recipes is to serve as a collection of JavaScript outlines, studies, models, prototypes, reference documents, cheat sheets, etc. in the form of Q&A's to help learners learn and the learned stay refreshed.** 
-
------
+### JavaScript Recipes is a collection of useful information.
+The purpose of JavaScript Recipes is to serve as a collection of JavaScript outlines, studies, models, prototypes, reference documents, cheat sheets, etc. in the form of Q&A's to help learners learn and the learned stay refreshed. 
 
 ### So what's so special about these question/answer recipes? 
 
@@ -215,7 +213,7 @@ Each question asks about a given topic for a specific category, like "*What is a
 <br>
 
 ## Methods Extended Study
-In [Methods Extended Study](https://github.com/john-azzaro/JavaScript_Recipes/tree/master/Methods%20Extended%20Studies "Methods Extended Study"), you'll find extended studies on a variety of methods such as arrays, Math, number, operators, strings, etc. that include additional explanations, break-downs, and use-cases. Although some of the content overlaps with JavaScript Outlines, these studies allow for more detail than in the general outline. 
+* In [Methods Extended Study](https://github.com/john-azzaro/JavaScript_Recipes/tree/master/Methods%20Extended%20Studies "Methods Extended Study"), you'll find extended studies on a variety of methods such as arrays, Math, number, operators, strings, etc. that include additional explanations, break-downs, and use-cases. Although some of the content overlaps with JavaScript Outlines, these studies allow for more detail than in the general outline. 
 
 **Example:** *JavaScript_Recipes > Methods Extended Studies > Array Methods Extended Study > [**entries.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/Methods%20Extended%20Studies/Array%20Methods%20Extended%20Study/entries.js "entries array method")*:
 
