@@ -20,6 +20,7 @@
 Below you'll find the the current list of general topics in this handy collection of JavaScript recipes. Note that each of these general topics have multiple studies and extended studies, so be sure to browse through each folder for the subject you are interested in!
 
 * [JavaScript Outlines](#JavaScript-Outlines)
+* [JavaScript Libraries](#JavaScript-Libraries)
 * [Coding Studies](#Coding-Studies)
 * [Methods Extended Study](#Methods-Extended-Study)
 
@@ -105,6 +106,50 @@ Example: *JavaScript_Recipes > JavaScript Outlines > [**controlFlow.js**](https:
                 console.log(role("Tom"));                    // Unknown User!
 ```
  
+<br>
+
+## JavaScript Libraries
+* In [JavaScript Libraries](https://github.com/john-azzaro/JavaScript_Recipes/tree/master/JavaScript%20Libraries "JavaScript Libraries"), you'll find outlines of a growing number of JavaScript libraries organized in question-and-answer format (good for study and memory retention). 
+
+Example: *JavaScript_Recipes > JavaScript Libraries > jQuery > [**jQuery.js**](https://github.com/john-azzaro/JavaScript_Recipes/blob/master/JavaScript%20Libraries/jQuery/jQuery.js "jQuery.js")*:
+
+```JavaScript
+/*
+7. What is an Event Listener?
+/////////////////////////////
+    • An Event Listener listens for a specific event to happen (i.e. submit, click, etc.) and does something (i.e. callback function).
+    • To take advantage of DOM manipulation, you need to be able to alter the DOM when EVENTS happen.
+    • In order to update the DOM, you need to 'listen' for specific events happening.
+        • For example:
+             • an app LISTENS when the user submits a form
+             • an app LISTENS for when the user inputs a search term.
+             • an app LISTENS for when the user clicks on an element in the page to launch an animation.
+    
+    • So an EVENT LISTENER has 2 parts:
+        1. Specify what event to listen for.
+        2. provide a CALLBACK FUNCTION that runs when the event occurs. */
+   
+            function handleClicks() {
+                let clickCount = 0;                                          // Stores click count.
+                $('.click-counter').text(clickCount);                        // show current click count.
+                $('main').on('click', '#clicker', function(event) {          // On click...
+                    clickCount += 1;                                         // ... increment by 1...
+                    $('.click-counter').text(clickCount);                    // ... show new click count.
+                });
+            }
+
+            function setUpEventHandlers3() {
+                handleClicks();
+            }
+
+            function initialize3() {
+                setUpEventHandlers3();
+            }
+
+            $(initialize3);
+```
+
+
 <br>
 
 ## Coding Studies
