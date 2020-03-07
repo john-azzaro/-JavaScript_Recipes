@@ -28,6 +28,7 @@ function isLastCharacterN(word) {
 }
 
 
+
 /*
 Check String for Spaces
 Create a function that returns true if a string contains any spaces.
@@ -42,6 +43,7 @@ function hasSpaces(str) {
 }
 
 
+
 /*
 Multiply Every Array Item by Two
 Create a function that takes an array with numbers and return an array with the elements multiplied by two.
@@ -53,6 +55,7 @@ function getMultipliedArr(arr) {
 	});
 	return multi;
 }
+
 
 
 /*
@@ -70,6 +73,7 @@ function cityFacts(city) {
 }
 
 
+
 /*
 Add a Consecutive List of Numbers
 Write a function that takes the last number of a consecutive list of numbers and returns the total of all numbers up to and including it.
@@ -78,6 +82,7 @@ Write a function that takes the last number of a consecutive list of numbers and
 function addUpTo(n) {
 	return n * (n + 1) / 2;
 }
+
 
 
 /*
@@ -100,4 +105,16 @@ function nSidedShape(n) {
 		10:	"decagon",
 	}
 	return shapes[n];
+}
+
+
+
+/*
+Return the Total Number of Parameters
+Create a function that returns the total number of parameters passed in.
+Note: How can you express the input parameter so it takes a variable number of arguments?
+////////////////////////////////////////////////////////////////////
+*/
+function numberArgs(...args) {
+	return arguments.length;
 }
