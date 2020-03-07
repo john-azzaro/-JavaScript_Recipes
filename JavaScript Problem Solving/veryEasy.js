@@ -13,6 +13,36 @@
 //        reference.      
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+/* 
+Things learned:
+1. Make sure you really understand .map
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 
 Is the Last Character an N?
 Create a function that takes a string (a random name). If the last character of the name is an "n", return true, otherwise return false.
@@ -127,7 +157,11 @@ ES6: Destructuring Arrays III
 You can assign variables from arrays with destructuring like this:
 const arr = ["eyes", "nose", "lips", "ears"]
 let [eyes, nose, lips, ears] = arr
+NOTE: I used ",," to skip over items in the array being destrcutured: https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/
+NOTE: Each comma means equals one index (i.e. ",," equals index[1] and ",,," equals index[2])
 */
+const arr = ["eyes", "nose", "lips", "ears"]
+var [,,lips] = arr                                  // skips over items
 
 
 
@@ -142,6 +176,7 @@ function stackBoxes(n) {
 }
 
 
+
 /* 
 Array of Word Lengths
 Create a function that takes an array of words and transforms it into an array of each word's length.
@@ -149,5 +184,29 @@ Create a function that takes an array of words and transforms it into an array o
 function wordLengths(arr) {
 	return arr.map(function(word) {
 		return word.length;
+	});
+}
+
+
+
+/* 
+Count the Syllables
+Create a function that returns the number of syllables in a simple string. The string is made up of short repeated words like "Lalalalalalala" (which would have 7 syllables).
+countSyllables("Hehehehehehe") ➞ 6
+*/
+function countSyllables(str) {
+	return str.length/2;
+}
+
+
+/* 
+Add the Index
+Given an array of numbers, create a function which returns the same array but with each element's index in the array added to itself. This means you add 0 to the number at index 0, add 1 to the number at index 1, etc...
+addIndexes([0, 0, 0, 0, 0]) ➞ [0, 1, 2, 3, 4]
+addIndexes([1, 2, 3, 4, 5]) ➞ [1, 3, 5, 7, 9]
+*/
+function addIndexes(arr) {
+	return arr.map(function(currentVal, indexVal) {
+		return currentVal + indexVal;
 	});
 }
