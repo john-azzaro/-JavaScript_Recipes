@@ -1,0 +1,18 @@
+"use strict";
+// TOPIC /////////////////////////////////////////////////////////////////////////////////////////////////////
+//   
+//   Investigation Notes.
+//   
+// NOTES /////////////////////////////////////////////////////////////////////////////////////////////////////
+//     1. A handy list of concepts, tools, and skills to look further into as I investigate JavaScript recipes.  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+1. Destructuring arrays and objects.
+=================
+Used this a few times with arrays and objects, but I'd like to get a better grasp of it. Last time I used it investigate
+when I cam across a question in edabits.
+
+
+* https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/
+

@@ -113,8 +113,41 @@ function nSidedShape(n) {
 Return the Total Number of Parameters
 Create a function that returns the total number of parameters passed in.
 Note: How can you express the input parameter so it takes a variable number of arguments?
+Note: Used the spread
 ////////////////////////////////////////////////////////////////////
 */
 function numberArgs(...args) {
 	return arguments.length;
+}
+
+
+
+/* 
+ES6: Destructuring Arrays III
+You can assign variables from arrays with destructuring like this:
+const arr = ["eyes", "nose", "lips", "ears"]
+let [eyes, nose, lips, ears] = arr
+*/
+
+
+
+
+/* 
+Stack the Boxes
+Here's an image of four models. Some of the cubes are hidden behind other cubes. Model one consists of one cube. Model two consists of four cubes, and so on...
+Write a function that takes a number n and returns the number of stacked boxes in a model n levels high, visible and invisible.
+*/
+function stackBoxes(n) {
+	return Math.pow(n, 2);
+}
+
+
+/* 
+Array of Word Lengths
+Create a function that takes an array of words and transforms it into an array of each word's length.
+*/
+function wordLengths(arr) {
+	return arr.map(function(word) {
+		return word.length;
+	});
 }
