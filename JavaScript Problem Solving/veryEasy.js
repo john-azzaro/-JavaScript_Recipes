@@ -16,8 +16,12 @@
 
 /* 
 Things learned:
-1. Make sure you really understand .map
-
+////////////////
+1. BETTER UNDERSTAND MAP: Make sure you really understand .map, especially the current value, index value, etc. that you can pass
+   in: See: Multiply Every Array Item by Two, Add the Index. 
+2. USE OBJECT INSTEAD OF IF/ELSE STATEMENTS IN SOME CASES: Really neat trick instead of if/else statements.block. 
+   See: Shapes With N Sides.
+3. 
 
 
 
@@ -136,6 +140,25 @@ function nSidedShape(n) {
 	}
 	return shapes[n];
 }
+
+// or //
+function nSidedShape(n) {
+	let shapes = {
+		1:	"circle",
+		2:	"semi-circle",
+		3:	"triangle",
+		4:	"square",
+		5:	"pentagon",
+		6:	"hexagon",
+		7:	"heptagon",
+		8:	"octagon",
+		9:	"nonagon",
+		10:	"decagon",
+	}
+  return `the key is ${n} and the value is ${shapes[n]}`
+  // return shapes[n];
+}
+console.log(nSidedShape(1));  // the key is 1 and the value is circle
 
 
 
