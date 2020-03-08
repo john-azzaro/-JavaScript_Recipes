@@ -233,3 +233,16 @@ function addIndexes(arr) {
 		return currentVal + indexVal;
 	});
 }
+
+/* 
+Get the Sum of All Array Elements
+Create a function that takes an array and returns the sum of all numbers in the array.
+Examples
+getSumOfItems([2, 7, 4]) ➞ 13
+*/
+function getSumOfItems(arr) {
+	let reducer = function(acc, red) {
+		return acc + red;
+	}
+	return arr.reduce(reducer);
+}
