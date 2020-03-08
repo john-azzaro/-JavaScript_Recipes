@@ -234,6 +234,8 @@ function addIndexes(arr) {
 	});
 }
 
+
+
 /* 
 Get the Sum of All Array Elements
 Create a function that takes an array and returns the sum of all numbers in the array.
